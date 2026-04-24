@@ -1,0 +1,4565 @@
+// Generated automatically from nba_carreira.xlsx
+export const seasonStatsMap: Record<string, any> = {
+  "Abel": {
+    "1": {
+      "regular": {
+        "gp": 81,
+        "pts": 18.5,
+        "reb": 3.8,
+        "ast": 7.4,
+        "stl": 1.8,
+        "blk": 0.3,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 22.3,
+        "reb": 4,
+        "ast": 8.6,
+        "stl": 1.6,
+        "blk": 0.2,
+        "topg": 2.5
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 20,
+        "reb": 3.8,
+        "ast": 7.8,
+        "stl": 1.5,
+        "blk": 0.3,
+        "topg": 1.5
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 40,
+        "pts": 22,
+        "reb": 5.8,
+        "ast": 8.1,
+        "stl": 1.7,
+        "blk": 0.5,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 20.6,
+        "reb": 3.6,
+        "ast": 7.4,
+        "stl": 2.3,
+        "blk": 0.3,
+        "topg": 2.6
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 69,
+        "pts": 24.8,
+        "reb": 5.1,
+        "ast": 9.3,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 24.8,
+        "reb": 5.3,
+        "ast": 9.7,
+        "stl": 1.7,
+        "blk": 0.3,
+        "topg": 3.1
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 23.7,
+        "reb": 6,
+        "ast": 9.3,
+        "stl": 1.1,
+        "blk": 0.4,
+        "topg": 4.9
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 22.4,
+        "reb": 5.2,
+        "ast": 9.1,
+        "stl": 1.6,
+        "blk": 0.3,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 25.8,
+        "reb": 4.3,
+        "ast": 8.8,
+        "stl": 2,
+        "blk": 0.3,
+        "topg": 2.7
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 73,
+        "pts": 27,
+        "reb": 5.9,
+        "ast": 9.6,
+        "stl": 1.8,
+        "blk": 0.2,
+        "topg": 3.3
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 27.4,
+        "reb": 4.8,
+        "ast": 10.5,
+        "stl": 2.3,
+        "blk": 0.6,
+        "topg": 3.6
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 21.1,
+        "reb": 4.9,
+        "ast": 7.5,
+        "stl": 1.7,
+        "blk": 0.4,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 21.5,
+        "reb": 5.7,
+        "ast": 7.5,
+        "stl": 0.7,
+        "blk": 0,
+        "topg": 3.5
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 44,
+        "pts": 17.7,
+        "reb": 5.7,
+        "ast": 7.1,
+        "stl": 1.4,
+        "blk": 0.5,
+        "topg": 2.7
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 82,
+        "pts": 17.2,
+        "reb": 5,
+        "ast": 7.7,
+        "stl": 1.5,
+        "blk": 0.4,
+        "topg": 2.7
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 82,
+        "pts": 21.1,
+        "reb": 5,
+        "ast": 8,
+        "stl": 1.5,
+        "blk": 0.4,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 24,
+        "reb": 5.7,
+        "ast": 9,
+        "stl": 2.5,
+        "blk": 0.2,
+        "topg": 1.8
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 82,
+        "pts": 20.1,
+        "reb": 5.9,
+        "ast": 9.5,
+        "stl": 1.7,
+        "blk": 0.4,
+        "topg": 3.3
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 61,
+        "pts": 17.2,
+        "reb": 4.4,
+        "ast": 7.8,
+        "stl": 1.8,
+        "blk": 0.2,
+        "topg": 3
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 69,
+        "pts": 15.2,
+        "reb": 4.4,
+        "ast": 8.8,
+        "stl": 1.8,
+        "blk": 0.3,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 17.2,
+        "reb": 4.1,
+        "ast": 7.6,
+        "stl": 2.2,
+        "blk": 0.2,
+        "topg": 2.2
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 78,
+        "pts": 12.7,
+        "reb": 4.3,
+        "ast": 8.4,
+        "stl": 1.9,
+        "blk": 0.2,
+        "topg": 2.4
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 81,
+        "pts": 15.3,
+        "reb": 4.2,
+        "ast": 8.2,
+        "stl": 1.4,
+        "blk": 0.3,
+        "topg": 2.7
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 66,
+        "pts": 13.3,
+        "reb": 4.2,
+        "ast": 7.7,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 2.2
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 77,
+        "pts": 13.2,
+        "reb": 4.7,
+        "ast": 6.6,
+        "stl": 1.6,
+        "blk": 0.3,
+        "topg": 2.1
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 79,
+        "pts": 10.4,
+        "reb": 4.6,
+        "ast": 6.7,
+        "stl": 1.2,
+        "blk": 0.2,
+        "topg": 2.1
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 80,
+        "pts": 10.8,
+        "reb": 3.7,
+        "ast": 6.3,
+        "stl": 1.5,
+        "blk": 0.4,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 15.2,
+        "reb": 4.6,
+        "ast": 7.6,
+        "stl": 1.7,
+        "blk": 0.5,
+        "topg": 3
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 67,
+        "pts": 12.2,
+        "reb": 4.5,
+        "ast": 8.2,
+        "stl": 1.4,
+        "blk": 0.1,
+        "topg": 2.8
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 72,
+        "pts": 9.3,
+        "reb": 4.4,
+        "ast": 8.2,
+        "stl": 1.6,
+        "blk": 0.4,
+        "topg": 2.3
+      }
+    },
+    "21": {
+      "regular": {
+        "gp": 59,
+        "pts": 8.2,
+        "reb": 3.1,
+        "ast": 7.4,
+        "stl": 1.4,
+        "blk": 0.3,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 4.3,
+        "reb": 3.1,
+        "ast": 6.6,
+        "stl": 1.6,
+        "blk": 0.3,
+        "topg": 1.7
+      }
+    }
+  },
+  "Marco": {
+    "1": {
+      "regular": {
+        "gp": 60,
+        "pts": 16,
+        "reb": 3.7,
+        "ast": 8.1,
+        "stl": 1.2,
+        "blk": 0.2,
+        "topg": 2.6
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 80,
+        "pts": 17.6,
+        "reb": 4.7,
+        "ast": 8.3,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 3
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 18.5,
+        "reb": 4.5,
+        "ast": 8.8,
+        "stl": 1.1,
+        "blk": 0.2,
+        "topg": 2.6
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 18.2,
+        "reb": 2.4,
+        "ast": 10.2,
+        "stl": 0.8,
+        "blk": 0,
+        "topg": 2.6
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 82,
+        "pts": 22.5,
+        "reb": 4.9,
+        "ast": 8.5,
+        "stl": 1.3,
+        "blk": 0.1,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 26.7,
+        "reb": 3.9,
+        "ast": 9.4,
+        "stl": 1.4,
+        "blk": 0,
+        "topg": 2.9
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 77,
+        "pts": 23.6,
+        "reb": 5.6,
+        "ast": 8.8,
+        "stl": 1.5,
+        "blk": 0.4,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 22,
+        "reb": 5.4,
+        "ast": 9.2,
+        "stl": 1.7,
+        "blk": 0.2,
+        "topg": 2.8
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 27.3,
+        "reb": 6,
+        "ast": 10.2,
+        "stl": 1.9,
+        "blk": 0.2,
+        "topg": 3.1
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 20.3,
+        "reb": 6.8,
+        "ast": 10.3,
+        "stl": 1.3,
+        "blk": 0.3,
+        "topg": 2.8
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 73,
+        "pts": 18.7,
+        "reb": 5.2,
+        "ast": 8.5,
+        "stl": 1.7,
+        "blk": 0.2,
+        "topg": 2.6
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 76,
+        "pts": 19.7,
+        "reb": 5.2,
+        "ast": 8,
+        "stl": 1.7,
+        "blk": 0.3,
+        "topg": 2.9
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 77,
+        "pts": 18.9,
+        "reb": 4.9,
+        "ast": 8.5,
+        "stl": 1.3,
+        "blk": 0.2,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 19.6,
+        "reb": 4.4,
+        "ast": 9.2,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 2.4
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 81,
+        "pts": 17.8,
+        "reb": 4.9,
+        "ast": 10,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 18.9,
+        "reb": 6.3,
+        "ast": 11.8,
+        "stl": 2.9,
+        "blk": 0.6,
+        "topg": 3.8
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 71,
+        "pts": 16.5,
+        "reb": 4.7,
+        "ast": 8.6,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 16.8,
+        "reb": 5.4,
+        "ast": 8.8,
+        "stl": 0.8,
+        "blk": 0,
+        "topg": 3.2
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 82,
+        "pts": 14,
+        "reb": 5.2,
+        "ast": 7.7,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 15.3,
+        "reb": 5,
+        "ast": 8,
+        "stl": 1.2,
+        "blk": 0,
+        "topg": 2.5
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 66,
+        "pts": 12,
+        "reb": 4.9,
+        "ast": 7.7,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 2.5
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 80,
+        "pts": 12.8,
+        "reb": 4.6,
+        "ast": 8,
+        "stl": 1.3,
+        "blk": 0.2,
+        "topg": 2.4
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 60,
+        "pts": 13.9,
+        "reb": 5,
+        "ast": 10,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 17.4,
+        "reb": 6.3,
+        "ast": 10.7,
+        "stl": 2.3,
+        "blk": 0.3,
+        "topg": 2.7
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 78,
+        "pts": 9.9,
+        "reb": 4.6,
+        "ast": 9,
+        "stl": 1.3,
+        "blk": 0.2,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 13.3,
+        "reb": 4.5,
+        "ast": 9.2,
+        "stl": 1.7,
+        "blk": 0.2,
+        "topg": 2.8
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.7,
+        "reb": 4.6,
+        "ast": 8.8,
+        "stl": 1.2,
+        "blk": 0.3,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14.6,
+        "reb": 4.4,
+        "ast": 9.6,
+        "stl": 2.4,
+        "blk": 0.2,
+        "topg": 2.4
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 47,
+        "pts": 11.9,
+        "reb": 4.5,
+        "ast": 9.1,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 2.3
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 61,
+        "pts": 8.8,
+        "reb": 5.2,
+        "ast": 8.9,
+        "stl": 1.3,
+        "blk": 0.2,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 9.6,
+        "reb": 5.3,
+        "ast": 8.6,
+        "stl": 1.8,
+        "blk": 0.1,
+        "topg": 2.2
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 80,
+        "pts": 8.3,
+        "reb": 4.3,
+        "ast": 8.4,
+        "stl": 1.2,
+        "blk": 0.2,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 11,
+        "pts": 9.5,
+        "reb": 4.6,
+        "ast": 11,
+        "stl": 1.5,
+        "blk": 0.2,
+        "topg": 3.2
+      }
+    }
+  },
+  "Tailan": {
+    "1": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.8,
+        "reb": 3.7,
+        "ast": 5.3,
+        "stl": 1.4,
+        "blk": 0.2,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 16.3,
+        "reb": 3,
+        "ast": 4.7,
+        "stl": 1.5,
+        "blk": 0.5,
+        "topg": 3.8
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 82,
+        "pts": 21.3,
+        "reb": 4.7,
+        "ast": 6.2,
+        "stl": 1.4,
+        "blk": 0.3,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 15.4,
+        "reb": 4.4,
+        "ast": 5.8,
+        "stl": 0.6,
+        "blk": 0.6,
+        "topg": 2.8
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 71,
+        "pts": 24,
+        "reb": 5.3,
+        "ast": 6.2,
+        "stl": 1.2,
+        "blk": 0.2,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 12,
+        "pts": 29.2,
+        "reb": 4.7,
+        "ast": 6.7,
+        "stl": 1.2,
+        "blk": 0,
+        "topg": 2.6
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 79,
+        "pts": 21,
+        "reb": 5,
+        "ast": 5.8,
+        "stl": 1.3,
+        "blk": 0.5,
+        "topg": 2.2
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 23.7,
+        "reb": 5.2,
+        "ast": 6,
+        "stl": 1.3,
+        "blk": 0.4,
+        "topg": 2.4
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 75,
+        "pts": 27.3,
+        "reb": 5.4,
+        "ast": 6.6,
+        "stl": 1.5,
+        "blk": 0.6,
+        "topg": 2.6
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 79,
+        "pts": 19.6,
+        "reb": 4.2,
+        "ast": 5.7,
+        "stl": 1.5,
+        "blk": 0.3,
+        "topg": 2.1
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 81,
+        "pts": 20.3,
+        "reb": 4.3,
+        "ast": 6,
+        "stl": 1.2,
+        "blk": 0.3,
+        "topg": 2.6
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.9,
+        "reb": 3.9,
+        "ast": 6.5,
+        "stl": 1.4,
+        "blk": 0.1,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 17.2,
+        "reb": 3.2,
+        "ast": 6.7,
+        "stl": 1.8,
+        "blk": 0,
+        "topg": 3.8
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 72,
+        "pts": 15.5,
+        "reb": 4.1,
+        "ast": 5.9,
+        "stl": 1.1,
+        "blk": 0.3,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 15.6,
+        "reb": 3.2,
+        "ast": 7.6,
+        "stl": 1.8,
+        "blk": 0.4,
+        "topg": 3
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 58,
+        "pts": 15,
+        "reb": 4.1,
+        "ast": 6.1,
+        "stl": 1.1,
+        "blk": 0.3,
+        "topg": 2.2
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 71,
+        "pts": 14.7,
+        "reb": 4,
+        "ast": 6,
+        "stl": 1.2,
+        "blk": 0.3,
+        "topg": 2
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 82,
+        "pts": 12.8,
+        "reb": 4.1,
+        "ast": 6.2,
+        "stl": 1.2,
+        "blk": 0.3,
+        "topg": 2.1
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.6,
+        "reb": 4,
+        "ast": 6.7,
+        "stl": 1.1,
+        "blk": 0.3,
+        "topg": 2
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 82,
+        "pts": 14.8,
+        "reb": 4.6,
+        "ast": 5.8,
+        "stl": 1.1,
+        "blk": 0.3,
+        "topg": 2.3
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 57,
+        "pts": 13.6,
+        "reb": 3.8,
+        "ast": 5.5,
+        "stl": 1.3,
+        "blk": 0.2,
+        "topg": 1.9
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.5,
+        "reb": 4.1,
+        "ast": 5.8,
+        "stl": 1.1,
+        "blk": 0.4,
+        "topg": 1.7
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 81,
+        "pts": 11.2,
+        "reb": 4.3,
+        "ast": 5.3,
+        "stl": 1.1,
+        "blk": 0.3,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 14.4,
+        "reb": 4.4,
+        "ast": 5.9,
+        "stl": 1,
+        "blk": 0.1,
+        "topg": 1.6
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 73,
+        "pts": 12.1,
+        "reb": 4.2,
+        "ast": 7.4,
+        "stl": 1.5,
+        "blk": 0.3,
+        "topg": 2.7
+      }
+    }
+  },
+  "Gam": {
+    "1": {
+      "regular": {
+        "gp": 76,
+        "pts": 22.2,
+        "reb": 6.9,
+        "ast": 6.3,
+        "stl": 1.4,
+        "blk": 1,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 26.1,
+        "reb": 8.4,
+        "ast": 6.9,
+        "stl": 1.8,
+        "blk": 0.9,
+        "topg": 3.9
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 82,
+        "pts": 23.1,
+        "reb": 7.1,
+        "ast": 7.6,
+        "stl": 1.7,
+        "blk": 1.3,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 28.8,
+        "reb": 7.3,
+        "ast": 9.7,
+        "stl": 2.3,
+        "blk": 1.3,
+        "topg": 3.2
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 75,
+        "pts": 24,
+        "reb": 7.3,
+        "ast": 9.2,
+        "stl": 1.7,
+        "blk": 1.2,
+        "topg": 3
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 29.8,
+        "reb": 6.8,
+        "ast": 9.5,
+        "stl": 1.2,
+        "blk": 2.3,
+        "topg": 2.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 80,
+        "pts": 25.1,
+        "reb": 7.4,
+        "ast": 9.4,
+        "stl": 1.5,
+        "blk": 0.9,
+        "topg": 3.2
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 28.7,
+        "reb": 7,
+        "ast": 10.5,
+        "stl": 2.7,
+        "blk": 0.7,
+        "topg": 5
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 24,
+        "reb": 8.1,
+        "ast": 9.1,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 25.8,
+        "reb": 8.5,
+        "ast": 12.3,
+        "stl": 1.7,
+        "blk": 1.7,
+        "topg": 2.5
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 22.6,
+        "reb": 7.6,
+        "ast": 10.3,
+        "stl": 1.7,
+        "blk": 1.1,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 21.2,
+        "reb": 6,
+        "ast": 11.2,
+        "stl": 1.4,
+        "blk": 0.7,
+        "topg": 2.8
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 78,
+        "pts": 22.4,
+        "reb": 7,
+        "ast": 9.1,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 21.4,
+        "reb": 6.9,
+        "ast": 10.1,
+        "stl": 1.5,
+        "blk": 1.1,
+        "topg": 3.2
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 82,
+        "pts": 20,
+        "reb": 7,
+        "ast": 9.3,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 24,
+        "reb": 7.5,
+        "ast": 10.5,
+        "stl": 2.5,
+        "blk": 1.1,
+        "topg": 3.5
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 82,
+        "pts": 21.3,
+        "reb": 7.3,
+        "ast": 9.3,
+        "stl": 1.6,
+        "blk": 1,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 1,
+        "pts": 9,
+        "reb": 2,
+        "ast": 4,
+        "stl": 0,
+        "blk": 0,
+        "topg": 2
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.3,
+        "reb": 7.1,
+        "ast": 9.4,
+        "stl": 1.8,
+        "blk": 1,
+        "topg": 3.3
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 81,
+        "pts": 19.1,
+        "reb": 6.5,
+        "ast": 8.7,
+        "stl": 1.6,
+        "blk": 0.9,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 17.5,
+        "reb": 8,
+        "ast": 12.5,
+        "stl": 1.3,
+        "blk": 0,
+        "topg": 3
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 72,
+        "pts": 18.2,
+        "reb": 6.8,
+        "ast": 9.5,
+        "stl": 1.2,
+        "blk": 0.9,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 19.3,
+        "reb": 5.8,
+        "ast": 10.6,
+        "stl": 3.3,
+        "blk": 0.6,
+        "topg": 3.3
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 82,
+        "pts": 17.7,
+        "reb": 6.2,
+        "ast": 9,
+        "stl": 1.6,
+        "blk": 0.7,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 19.5,
+        "reb": 5.2,
+        "ast": 9.4,
+        "stl": 2.2,
+        "blk": 0.8,
+        "topg": 2.9
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 67,
+        "pts": 17.2,
+        "reb": 5.2,
+        "ast": 7.8,
+        "stl": 1.5,
+        "blk": 0.6,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 21.8,
+        "reb": 5.1,
+        "ast": 7.8,
+        "stl": 1.8,
+        "blk": 0.8,
+        "topg": 2.3
+      },
+      "finals": {
+        "gp": 6,
+        "pts": 27.5,
+        "reb": 5.5,
+        "ast": 8.8,
+        "stl": 1.5,
+        "blk": 0.8,
+        "topg": 1.5
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 63,
+        "pts": 22,
+        "reb": 6.2,
+        "ast": 7.5,
+        "stl": 1.6,
+        "blk": 0.8,
+        "topg": 2.9
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 19.8,
+        "reb": 4.7,
+        "ast": 7.3,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.4
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 79,
+        "pts": 23.1,
+        "reb": 6.5,
+        "ast": 7.2,
+        "stl": 1.6,
+        "blk": 0.6,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 21,
+        "pts": 24.3,
+        "reb": 6.4,
+        "ast": 7,
+        "stl": 2.1,
+        "blk": 0.5,
+        "topg": 2.5
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 25.8,
+        "reb": 6.4,
+        "ast": 6.6,
+        "stl": 0.2,
+        "blk": 0.4,
+        "topg": 2
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 75,
+        "pts": 24.7,
+        "reb": 6.1,
+        "ast": 6.4,
+        "stl": 1.6,
+        "blk": 0.8,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 29.1,
+        "reb": 6,
+        "ast": 7.6,
+        "stl": 2.1,
+        "blk": 0.9,
+        "topg": 3
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 24.3,
+        "reb": 6.1,
+        "ast": 8.6,
+        "stl": 2.1,
+        "blk": 1.3,
+        "topg": 4.3
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 82,
+        "pts": 28.4,
+        "reb": 5.9,
+        "ast": 7.7,
+        "stl": 1.9,
+        "blk": 0.9,
+        "topg": 2.8
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 52,
+        "pts": 24.5,
+        "reb": 6.3,
+        "ast": 7.1,
+        "stl": 1.5,
+        "blk": 0.6,
+        "topg": 3.3
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 28.8,
+        "reb": 6.7,
+        "ast": 8.7,
+        "stl": 2.7,
+        "blk": 0.9,
+        "topg": 3.3
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 31.8,
+        "reb": 5.6,
+        "ast": 9,
+        "stl": 5.2,
+        "blk": 1,
+        "topg": 2.6
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 74,
+        "pts": 22,
+        "reb": 5.4,
+        "ast": 7.3,
+        "stl": 1.4,
+        "blk": 0.6,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 25,
+        "reb": 5.8,
+        "ast": 7.2,
+        "stl": 1,
+        "blk": 0.6,
+        "topg": 3.4
+      }
+    }
+  },
+  "Jonas": {
+    "1": {
+      "regular": {
+        "gp": 79,
+        "pts": 11.4,
+        "reb": 7.3,
+        "ast": 3.7,
+        "stl": 1.6,
+        "blk": 1.9,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 13.6,
+        "reb": 8,
+        "ast": 2.4,
+        "stl": 0.8,
+        "blk": 1.2,
+        "topg": 2.6
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 73,
+        "pts": 14,
+        "reb": 8,
+        "ast": 4.6,
+        "stl": 1.7,
+        "blk": 1.7,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14.8,
+        "reb": 7.6,
+        "ast": 5.4,
+        "stl": 1,
+        "blk": 2.4,
+        "topg": 1.6
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 76,
+        "pts": 12.1,
+        "reb": 8.7,
+        "ast": 4.1,
+        "stl": 1.5,
+        "blk": 1.8,
+        "topg": 2.5
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 13.5,
+        "reb": 8.7,
+        "ast": 4,
+        "stl": 2,
+        "blk": 1.7,
+        "topg": 2.7
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 11.9,
+        "reb": 6.8,
+        "ast": 4.4,
+        "stl": 1.6,
+        "blk": 1.9,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 11,
+        "pts": 11.4,
+        "reb": 6.1,
+        "ast": 5.4,
+        "stl": 1.8,
+        "blk": 2.2,
+        "topg": 2
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 77,
+        "pts": 12.6,
+        "reb": 8.3,
+        "ast": 4.1,
+        "stl": 1.7,
+        "blk": 1.8,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 13.2,
+        "reb": 7,
+        "ast": 4.2,
+        "stl": 1.6,
+        "blk": 2.3,
+        "topg": 2
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 10.2,
+        "reb": 5,
+        "ast": 3.6,
+        "stl": 1.4,
+        "blk": 2.2,
+        "topg": 1.8
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 82,
+        "pts": 13,
+        "reb": 7.9,
+        "ast": 4.3,
+        "stl": 1.5,
+        "blk": 1.8,
+        "topg": 2.5
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 79,
+        "pts": 11,
+        "reb": 7.1,
+        "ast": 4.8,
+        "stl": 1.4,
+        "blk": 1.6,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 10.8,
+        "reb": 6.8,
+        "ast": 5.7,
+        "stl": 0.7,
+        "blk": 0.8,
+        "topg": 1.5
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 76,
+        "pts": 11.1,
+        "reb": 7.6,
+        "ast": 5.3,
+        "stl": 1.8,
+        "blk": 1.4,
+        "topg": 2.9
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 67,
+        "pts": 9.9,
+        "reb": 7.2,
+        "ast": 4.5,
+        "stl": 1.6,
+        "blk": 1.5,
+        "topg": 2.2
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 68,
+        "pts": 9.4,
+        "reb": 7.1,
+        "ast": 4.5,
+        "stl": 1.4,
+        "blk": 1.4,
+        "topg": 2.2
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 72,
+        "pts": 10.1,
+        "reb": 6.5,
+        "ast": 3.9,
+        "stl": 1.5,
+        "blk": 1.4,
+        "topg": 2.2
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 69,
+        "pts": 12.2,
+        "reb": 6.9,
+        "ast": 4.2,
+        "stl": 1.5,
+        "blk": 1.6,
+        "topg": 2.1
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 79,
+        "pts": 13.7,
+        "reb": 6.3,
+        "ast": 4.1,
+        "stl": 1.3,
+        "blk": 1.4,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 13.2,
+        "reb": 8.2,
+        "ast": 5.2,
+        "stl": 0.8,
+        "blk": 1.5,
+        "topg": 2.5
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 77,
+        "pts": 14.1,
+        "reb": 5.9,
+        "ast": 3.5,
+        "stl": 1.3,
+        "blk": 1,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 11,
+        "pts": 15,
+        "reb": 4.4,
+        "ast": 4.1,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 2.4
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 14.9,
+        "reb": 5.8,
+        "ast": 3.7,
+        "stl": 1.3,
+        "blk": 1.1,
+        "topg": 2.2
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 79,
+        "pts": 13.4,
+        "reb": 5.6,
+        "ast": 3.8,
+        "stl": 1.2,
+        "blk": 1,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 13.4,
+        "reb": 4.8,
+        "ast": 3.6,
+        "stl": 1.4,
+        "blk": 1.4,
+        "topg": 2.6
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 61,
+        "pts": 10.8,
+        "reb": 5.2,
+        "ast": 3.6,
+        "stl": 1,
+        "blk": 1.2,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 12.6,
+        "reb": 6.2,
+        "ast": 3.5,
+        "stl": 1.1,
+        "blk": 1.3,
+        "topg": 2.9
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 56,
+        "pts": 11.2,
+        "reb": 5.2,
+        "ast": 3,
+        "stl": 0.8,
+        "blk": 0.8,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 11,
+        "reb": 4.7,
+        "ast": 3.1,
+        "stl": 1.4,
+        "blk": 1.2,
+        "topg": 2
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 9.3,
+        "reb": 3.3,
+        "ast": 2.6,
+        "stl": 1,
+        "blk": 1.4,
+        "topg": 1.9
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 62,
+        "pts": 11,
+        "reb": 5.8,
+        "ast": 4,
+        "stl": 1.2,
+        "blk": 1.2,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 12,
+        "pts": 12.3,
+        "reb": 5.5,
+        "ast": 3.4,
+        "stl": 1.2,
+        "blk": 1.7,
+        "topg": 2.5
+      }
+    }
+  },
+  "Matheus Germano": {
+    "1": {
+      "regular": {
+        "gp": 82,
+        "pts": 14.7,
+        "reb": 0.9,
+        "ast": 6.4,
+        "stl": 2.1,
+        "blk": 1,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14.6,
+        "reb": 1.6,
+        "ast": 4.8,
+        "stl": 1.2,
+        "blk": 1,
+        "topg": 2
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 75,
+        "pts": 17.1,
+        "reb": 2.2,
+        "ast": 6.2,
+        "stl": 2.2,
+        "blk": 1.1,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 20.8,
+        "reb": 1.4,
+        "ast": 6.8,
+        "stl": 0.8,
+        "blk": 1.2,
+        "topg": 3.2
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 80,
+        "pts": 18.8,
+        "reb": 3.4,
+        "ast": 7.2,
+        "stl": 2.3,
+        "blk": 1.4,
+        "topg": 2.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 75,
+        "pts": 23.8,
+        "reb": 3.1,
+        "ast": 7.2,
+        "stl": 2.4,
+        "blk": 1.3,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 24.8,
+        "reb": 3.6,
+        "ast": 8.6,
+        "stl": 2.8,
+        "blk": 0.8,
+        "topg": 3.2
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 73,
+        "pts": 21.5,
+        "reb": 3,
+        "ast": 7.1,
+        "stl": 2.1,
+        "blk": 1.1,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 14,
+        "reb": 1,
+        "ast": 7.2,
+        "stl": 0.7,
+        "blk": 1.7,
+        "topg": 4.2
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 79,
+        "pts": 22.7,
+        "reb": 3.1,
+        "ast": 8,
+        "stl": 2.4,
+        "blk": 0.9,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 20,
+        "reb": 2.5,
+        "ast": 6.5,
+        "stl": 3.8,
+        "blk": 1,
+        "topg": 3.3
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.9,
+        "reb": 3,
+        "ast": 9.1,
+        "stl": 2.2,
+        "blk": 0.8,
+        "topg": 2.8
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 75,
+        "pts": 17.7,
+        "reb": 3,
+        "ast": 8.8,
+        "stl": 2.2,
+        "blk": 0.8,
+        "topg": 3
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 18.4,
+        "reb": 2.8,
+        "ast": 8.3,
+        "stl": 2.2,
+        "blk": 1.2,
+        "topg": 3.4
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 76,
+        "pts": 15.7,
+        "reb": 3.6,
+        "ast": 7.6,
+        "stl": 2.1,
+        "blk": 1.3,
+        "topg": 2.7
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 74,
+        "pts": 15.4,
+        "reb": 3.2,
+        "ast": 8.7,
+        "stl": 2.3,
+        "blk": 1.1,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 12.9,
+        "reb": 2.9,
+        "ast": 9.1,
+        "stl": 1.7,
+        "blk": 1.1,
+        "topg": 2.4
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.2,
+        "reb": 3.3,
+        "ast": 7,
+        "stl": 1.9,
+        "blk": 0.8,
+        "topg": 2.9
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 64,
+        "pts": 12.7,
+        "reb": 3,
+        "ast": 6.6,
+        "stl": 1.7,
+        "blk": 0.8,
+        "topg": 2.4
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 62,
+        "pts": 13.1,
+        "reb": 3,
+        "ast": 7.4,
+        "stl": 1.9,
+        "blk": 0.9,
+        "topg": 2.2
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 73,
+        "pts": 12.3,
+        "reb": 2.8,
+        "ast": 8.1,
+        "stl": 1.8,
+        "blk": 0.8,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 12.8,
+        "reb": 3.2,
+        "ast": 6.4,
+        "stl": 2,
+        "blk": 1,
+        "topg": 2.4
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 79,
+        "pts": 10,
+        "reb": 2.4,
+        "ast": 7.6,
+        "stl": 1.6,
+        "blk": 0.7,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 12,
+        "pts": 8.2,
+        "reb": 3.3,
+        "ast": 8.3,
+        "stl": 2.4,
+        "blk": 1.1,
+        "topg": 3.5
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 61,
+        "pts": 8.9,
+        "reb": 2.5,
+        "ast": 7.4,
+        "stl": 2.1,
+        "blk": 0.7,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 8.7,
+        "reb": 2.3,
+        "ast": 8.8,
+        "stl": 3.2,
+        "blk": 0.5,
+        "topg": 2.3
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 68,
+        "pts": 9.4,
+        "reb": 2.4,
+        "ast": 7.8,
+        "stl": 2.3,
+        "blk": 0.7,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 6.3,
+        "reb": 2.3,
+        "ast": 6.7,
+        "stl": 2.4,
+        "blk": 0.2,
+        "topg": 2.7
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 6.4,
+        "reb": 1.8,
+        "ast": 5,
+        "stl": 3.4,
+        "blk": 0.4,
+        "topg": 3
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 79,
+        "pts": 7.3,
+        "reb": 2.8,
+        "ast": 8.3,
+        "stl": 1.9,
+        "blk": 0.7,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 9.4,
+        "reb": 1.8,
+        "ast": 7.8,
+        "stl": 2.8,
+        "blk": 0.8,
+        "topg": 2.4
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 72,
+        "pts": 9,
+        "reb": 2.5,
+        "ast": 8.6,
+        "stl": 2,
+        "blk": 0.7,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 8.5,
+        "reb": 2.4,
+        "ast": 8.4,
+        "stl": 2,
+        "blk": 1,
+        "topg": 2.9
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 7.9,
+        "reb": 2.6,
+        "ast": 7.6,
+        "stl": 2.1,
+        "blk": 1.6,
+        "topg": 3.6
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 82,
+        "pts": 6.8,
+        "reb": 2.2,
+        "ast": 8.3,
+        "stl": 1.7,
+        "blk": 0.5,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 9.2,
+        "reb": 2.6,
+        "ast": 8,
+        "stl": 1.6,
+        "blk": 0.2,
+        "topg": 2.4
+      }
+    }
+  },
+  "Medeiros": {
+    "1": {
+      "regular": {
+        "gp": 77,
+        "pts": 16.6,
+        "reb": 7.3,
+        "ast": 5.8,
+        "stl": 1.5,
+        "blk": 1.8,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 20.7,
+        "reb": 6.9,
+        "ast": 5.3,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 2.9
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 24.5,
+        "reb": 6,
+        "ast": 6,
+        "stl": 1.7,
+        "blk": 2.3,
+        "topg": 2.3
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 74,
+        "pts": 22.9,
+        "reb": 10.1,
+        "ast": 6.4,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 2.6
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 82,
+        "pts": 22.1,
+        "reb": 10.6,
+        "ast": 6.5,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 2.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 77,
+        "pts": 26.9,
+        "reb": 11.9,
+        "ast": 6.2,
+        "stl": 1.8,
+        "blk": 2.1,
+        "topg": 2.7
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 55,
+        "pts": 23.3,
+        "reb": 10.6,
+        "ast": 6.9,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 2.5
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 26.1,
+        "reb": 8.9,
+        "ast": 7.5,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 34.4,
+        "reb": 10,
+        "ast": 6.8,
+        "stl": 2.6,
+        "blk": 1,
+        "topg": 3.6
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 80,
+        "pts": 21.7,
+        "reb": 8.9,
+        "ast": 7.2,
+        "stl": 1.6,
+        "blk": 1.6,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 15,
+        "pts": 22.8,
+        "reb": 9.8,
+        "ast": 7,
+        "stl": 1.4,
+        "blk": 2.1,
+        "topg": 3.2
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 19.5,
+        "reb": 8.8,
+        "ast": 7,
+        "stl": 1.7,
+        "blk": 1.3,
+        "topg": 3.5
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 73,
+        "pts": 20,
+        "reb": 10.1,
+        "ast": 7.2,
+        "stl": 1.6,
+        "blk": 1.6,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 19.4,
+        "reb": 7.9,
+        "ast": 7.8,
+        "stl": 1.7,
+        "blk": 2.5,
+        "topg": 2.6
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 23,
+        "reb": 10,
+        "ast": 8.4,
+        "stl": 1.3,
+        "blk": 3,
+        "topg": 2.8
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 62,
+        "pts": 19.1,
+        "reb": 8.7,
+        "ast": 8.4,
+        "stl": 1.5,
+        "blk": 1.8,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 22.6,
+        "reb": 9.3,
+        "ast": 6.6,
+        "stl": 2,
+        "blk": 1.8,
+        "topg": 2.7
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 18.3,
+        "reb": 9,
+        "ast": 6.4,
+        "stl": 2.1,
+        "blk": 1.3,
+        "topg": 3.3
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.4,
+        "reb": 8.6,
+        "ast": 8.2,
+        "stl": 1.7,
+        "blk": 1.7,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 18.6,
+        "reb": 8.1,
+        "ast": 7.6,
+        "stl": 2.2,
+        "blk": 1.8,
+        "topg": 1.8
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 73,
+        "pts": 19.3,
+        "reb": 9.4,
+        "ast": 7.7,
+        "stl": 1.8,
+        "blk": 1.6,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 9,
+        "pts": 15.3,
+        "reb": 8.7,
+        "ast": 7.3,
+        "stl": 1.6,
+        "blk": 1.9,
+        "topg": 2.8
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 71,
+        "pts": 18.1,
+        "reb": 9.3,
+        "ast": 7.2,
+        "stl": 1.4,
+        "blk": 1.3,
+        "topg": 7.4
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 18.3,
+        "reb": 9.2,
+        "ast": 8.8,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 2.5
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 76,
+        "pts": 16,
+        "reb": 9.6,
+        "ast": 7,
+        "stl": 1.5,
+        "blk": 1.3,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 19.7,
+        "reb": 7.6,
+        "ast": 8.1,
+        "stl": 2.7,
+        "blk": 1.4,
+        "topg": 3
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 61,
+        "pts": 18.5,
+        "reb": 9,
+        "ast": 8,
+        "stl": 1.9,
+        "blk": 1.5,
+        "topg": 2.7
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 74,
+        "pts": 20.2,
+        "reb": 8.6,
+        "ast": 7,
+        "stl": 1.6,
+        "blk": 1.2,
+        "topg": 2.1
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 73,
+        "pts": 16,
+        "reb": 9,
+        "ast": 7.4,
+        "stl": 1.6,
+        "blk": 1.6,
+        "topg": 2.4
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 82,
+        "pts": 13.6,
+        "reb": 7.9,
+        "ast": 6.9,
+        "stl": 1.3,
+        "blk": 1.1,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14.4,
+        "reb": 8.2,
+        "ast": 6,
+        "stl": 1.2,
+        "blk": 2,
+        "topg": 2.2
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 78,
+        "pts": 12.5,
+        "reb": 7.6,
+        "ast": 6.6,
+        "stl": 1.6,
+        "blk": 1.3,
+        "topg": 2.2
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 81,
+        "pts": 12.7,
+        "reb": 7.7,
+        "ast": 7.1,
+        "stl": 1.7,
+        "blk": 1.4,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 8,
+        "reb": 6.6,
+        "ast": 8.8,
+        "stl": 1.6,
+        "blk": 1.8,
+        "topg": 2
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 79,
+        "pts": 10.2,
+        "reb": 8.5,
+        "ast": 7.1,
+        "stl": 1.5,
+        "blk": 1.3,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 15,
+        "reb": 7,
+        "ast": 5.9,
+        "stl": 2.3,
+        "blk": 1.1,
+        "topg": 2.4
+      }
+    },
+    "21": {
+      "regular": {
+        "gp": 77,
+        "pts": 10,
+        "reb": 7.5,
+        "ast": 7.1,
+        "stl": 1.6,
+        "blk": 1,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 12,
+        "pts": 9.5,
+        "reb": 7.8,
+        "ast": 8.4,
+        "stl": 1.7,
+        "blk": 1.6,
+        "topg": 2.3
+      }
+    },
+    "22": {
+      "regular": {
+        "gp": 76,
+        "pts": 9.4,
+        "reb": 7,
+        "ast": 7,
+        "stl": 1.5,
+        "blk": 1.3,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 7.5,
+        "reb": 6.8,
+        "ast": 7,
+        "stl": 1,
+        "blk": 1.5,
+        "topg": 2.3
+      }
+    }
+  },
+  "Nando": {
+    "1": {
+      "regular": {
+        "gp": 78,
+        "pts": 14.5,
+        "reb": 9.4,
+        "ast": 7.1,
+        "stl": 1.4,
+        "blk": 0.9,
+        "topg": 2.8
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 18.2,
+        "reb": 8,
+        "ast": 8.4,
+        "stl": 1.8,
+        "blk": 1,
+        "topg": 3.4
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 73,
+        "pts": 15.8,
+        "reb": 11.1,
+        "ast": 8.1,
+        "stl": 1.4,
+        "blk": 1.1,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 13,
+        "reb": 8.6,
+        "ast": 6.7,
+        "stl": 1,
+        "blk": 1.6,
+        "topg": 1.6
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 80,
+        "pts": 16.1,
+        "reb": 10.1,
+        "ast": 7.3,
+        "stl": 1.4,
+        "blk": 1,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 17.3,
+        "reb": 7.6,
+        "ast": 8.6,
+        "stl": 2.1,
+        "blk": 0.6,
+        "topg": 2.9
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 16.4,
+        "reb": 12.3,
+        "ast": 9.2,
+        "stl": 1.7,
+        "blk": 1.1,
+        "topg": 2.7
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 76,
+        "pts": 19.9,
+        "reb": 10.6,
+        "ast": 8.2,
+        "stl": 1.7,
+        "blk": 0.7,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 21,
+        "pts": 19.9,
+        "reb": 10.4,
+        "ast": 9,
+        "stl": 1.4,
+        "blk": 1,
+        "topg": 2.2
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 17.5,
+        "reb": 15,
+        "ast": 8.8,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 1.5
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 76,
+        "pts": 19.2,
+        "reb": 11.3,
+        "ast": 8.2,
+        "stl": 2.1,
+        "blk": 0.7,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 17.6,
+        "reb": 11.9,
+        "ast": 7.5,
+        "stl": 2.2,
+        "blk": 1.1,
+        "topg": 3.1
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 79,
+        "pts": 19.1,
+        "reb": 11.3,
+        "ast": 8,
+        "stl": 1.9,
+        "blk": 0.8,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 11,
+        "pts": 20,
+        "reb": 12.7,
+        "ast": 8.6,
+        "stl": 1.1,
+        "blk": 0.6,
+        "topg": 1.6
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 81,
+        "pts": 18.5,
+        "reb": 11.5,
+        "ast": 8.6,
+        "stl": 1.6,
+        "blk": 0.6,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 15.2,
+        "reb": 12,
+        "ast": 6.8,
+        "stl": 2,
+        "blk": 1.2,
+        "topg": 2.6
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 79,
+        "pts": 18.9,
+        "reb": 12.3,
+        "ast": 7.5,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.9
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 77,
+        "pts": 22.1,
+        "reb": 10.5,
+        "ast": 7.1,
+        "stl": 1.7,
+        "blk": 0.6,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 23.5,
+        "reb": 9.6,
+        "ast": 7.8,
+        "stl": 1.3,
+        "blk": 0.4,
+        "topg": 2.2
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 82,
+        "pts": 17.1,
+        "reb": 9.4,
+        "ast": 7.9,
+        "stl": 1.3,
+        "blk": 0.9,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 18.8,
+        "reb": 10.8,
+        "ast": 10.6,
+        "stl": 1.9,
+        "blk": 0.5,
+        "topg": 2.5
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 21.5,
+        "reb": 11.8,
+        "ast": 11.3,
+        "stl": 2.8,
+        "blk": 0.5,
+        "topg": 2.3
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 82,
+        "pts": 17.4,
+        "reb": 9.4,
+        "ast": 8.5,
+        "stl": 1.5,
+        "blk": 0.7,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 18.7,
+        "reb": 11.7,
+        "ast": 9.7,
+        "stl": 2.1,
+        "blk": 0.5,
+        "topg": 2.7
+      },
+      "finals": {
+        "gp": 6,
+        "pts": 21.8,
+        "reb": 11.3,
+        "ast": 8.3,
+        "stl": 1.8,
+        "blk": 1,
+        "topg": 1.2
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 69,
+        "pts": 17.6,
+        "reb": 10.4,
+        "ast": 8.3,
+        "stl": 1.7,
+        "blk": 0.6,
+        "topg": 3
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 16,
+        "reb": 11.9,
+        "ast": 7.7,
+        "stl": 3,
+        "blk": 0.7,
+        "topg": 2.4
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 74,
+        "pts": 15.8,
+        "reb": 9.6,
+        "ast": 9.8,
+        "stl": 1.4,
+        "blk": 0.7,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 15.2,
+        "reb": 11.1,
+        "ast": 10.1,
+        "stl": 1.7,
+        "blk": 0.9,
+        "topg": 2.8
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 76,
+        "pts": 18.2,
+        "reb": 9.7,
+        "ast": 7.6,
+        "stl": 1.8,
+        "blk": 0.8,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 19.6,
+        "reb": 7.9,
+        "ast": 7.1,
+        "stl": 1.5,
+        "blk": 0.8,
+        "topg": 2.4
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 15.2,
+        "reb": 7.5,
+        "ast": 7.2,
+        "stl": 1.5,
+        "blk": 0.7,
+        "topg": 2
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.6,
+        "reb": 9.1,
+        "ast": 7,
+        "stl": 1.5,
+        "blk": 0.6,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 19.6,
+        "reb": 7.9,
+        "ast": 7.1,
+        "stl": 1.5,
+        "blk": 0.8,
+        "topg": 2.4
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 81,
+        "pts": 16,
+        "reb": 7.6,
+        "ast": 8.5,
+        "stl": 1.4,
+        "blk": 0.6,
+        "topg": 2.1
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 79,
+        "pts": 17.2,
+        "reb": 8.4,
+        "ast": 6.9,
+        "stl": 1.4,
+        "blk": 0.5,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 22.3,
+        "reb": 10.2,
+        "ast": 6.5,
+        "stl": 0.7,
+        "blk": 0.7,
+        "topg": 4.2
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 74,
+        "pts": 18.1,
+        "reb": 7.5,
+        "ast": 6.7,
+        "stl": 1.5,
+        "blk": 0.7,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 21.5,
+        "reb": 9.7,
+        "ast": 7.7,
+        "stl": 2.7,
+        "blk": 0.4,
+        "topg": 3.6
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 81,
+        "pts": 17.2,
+        "reb": 7.8,
+        "ast": 6.2,
+        "stl": 1.2,
+        "blk": 0.7,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 21.4,
+        "reb": 9.4,
+        "ast": 7.8,
+        "stl": 1.7,
+        "blk": 0.4,
+        "topg": 3
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 26.2,
+        "reb": 8.6,
+        "ast": 7.6,
+        "stl": 2,
+        "blk": 0,
+        "topg": 3.4
+      }
+    },
+    "21": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.9,
+        "reb": 8.4,
+        "ast": 5.9,
+        "stl": 1.3,
+        "blk": 0.6,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 23,
+        "reb": 9.3,
+        "ast": 4.3,
+        "stl": 0.9,
+        "blk": 0.4,
+        "topg": 3.3
+      }
+    },
+    "22": {
+      "regular": {
+        "gp": 67,
+        "pts": 15.2,
+        "reb": 9.1,
+        "ast": 6.4,
+        "stl": 1.5,
+        "blk": 0.5,
+        "topg": 2.2
+      }
+    }
+  },
+  "Guilherme": {
+    "1": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.1,
+        "reb": 9.8,
+        "ast": 2.4,
+        "stl": 1.5,
+        "blk": 2.2,
+        "topg": 2.3
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 80,
+        "pts": 20.3,
+        "reb": 12.3,
+        "ast": 2.9,
+        "stl": 1.6,
+        "blk": 2.4,
+        "topg": 2.5
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 75,
+        "pts": 23.3,
+        "reb": 14.9,
+        "ast": 3,
+        "stl": 2.1,
+        "blk": 2.2,
+        "topg": 2.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 20.4,
+        "reb": 12.8,
+        "ast": 3.3,
+        "stl": 1.8,
+        "blk": 2.5,
+        "topg": 2.6
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.3,
+        "reb": 11.4,
+        "ast": 3.5,
+        "stl": 1.6,
+        "blk": 1.8,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 21,
+        "pts": 18.6,
+        "reb": 11.1,
+        "ast": 3.8,
+        "stl": 2,
+        "blk": 2.4,
+        "topg": 2
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 15.5,
+        "reb": 13.2,
+        "ast": 4,
+        "stl": 1.5,
+        "blk": 2,
+        "topg": 2.8
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.7,
+        "reb": 13.3,
+        "ast": 3.8,
+        "stl": 1.9,
+        "blk": 2,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 18.8,
+        "reb": 12.7,
+        "ast": 4.2,
+        "stl": 1.6,
+        "blk": 2.4,
+        "topg": 3.2
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.1,
+        "reb": 11.2,
+        "ast": 4.2,
+        "stl": 1.8,
+        "blk": 2,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 13,
+        "pts": 15.6,
+        "reb": 13.8,
+        "ast": 3.8,
+        "stl": 1.6,
+        "blk": 2.4,
+        "topg": 2.4
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 70,
+        "pts": 19,
+        "reb": 12.7,
+        "ast": 3.5,
+        "stl": 1.7,
+        "blk": 2,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 16.4,
+        "reb": 13.4,
+        "ast": 4.8,
+        "stl": 1.8,
+        "blk": 2.8,
+        "topg": 2.4
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 79,
+        "pts": 16.9,
+        "reb": 11.9,
+        "ast": 3.7,
+        "stl": 1.6,
+        "blk": 2,
+        "topg": 2.4
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 82,
+        "pts": 17.8,
+        "reb": 10.9,
+        "ast": 3.5,
+        "stl": 1.7,
+        "blk": 1.7,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 17.7,
+        "reb": 10.6,
+        "ast": 4,
+        "stl": 1.8,
+        "blk": 2.2,
+        "topg": 2.5
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 82,
+        "pts": 12.3,
+        "reb": 9.9,
+        "ast": 4.3,
+        "stl": 1.7,
+        "blk": 1.7,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 12.8,
+        "reb": 11.8,
+        "ast": 5.9,
+        "stl": 2.4,
+        "blk": 2.4,
+        "topg": 1.6
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 13.2,
+        "reb": 13.8,
+        "ast": 5.7,
+        "stl": 2.5,
+        "blk": 2.8,
+        "topg": 1.3
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 82,
+        "pts": 13.5,
+        "reb": 9.7,
+        "ast": 4.6,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 16,
+        "reb": 10.8,
+        "ast": 5,
+        "stl": 1.9,
+        "blk": 1.9,
+        "topg": 2.8
+      },
+      "finals": {
+        "gp": 6,
+        "pts": 15.3,
+        "reb": 11.7,
+        "ast": 5,
+        "stl": 2.2,
+        "blk": 1.2,
+        "topg": 1.7
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 76,
+        "pts": 13.4,
+        "reb": 9.9,
+        "ast": 4.6,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 12,
+        "reb": 9.1,
+        "ast": 4.6,
+        "stl": 2.9,
+        "blk": 1.3,
+        "topg": 3.3
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 76,
+        "pts": 10.7,
+        "reb": 9.4,
+        "ast": 5.3,
+        "stl": 1.6,
+        "blk": 1.5,
+        "topg": 2.7
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 12.3,
+        "reb": 11.1,
+        "ast": 5.1,
+        "stl": 2.5,
+        "blk": 1.9,
+        "topg": 2.8
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 81,
+        "pts": 14.2,
+        "reb": 9.9,
+        "ast": 4.5,
+        "stl": 1.5,
+        "blk": 1.6,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 17,
+        "pts": 15.2,
+        "reb": 10.8,
+        "ast": 4.6,
+        "stl": 1.7,
+        "blk": 1.9,
+        "topg": 1.7
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 14.5,
+        "reb": 8,
+        "ast": 3.5,
+        "stl": 2,
+        "blk": 2.3,
+        "topg": 1.3
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 13.1,
+        "reb": 9.2,
+        "ast": 3.9,
+        "stl": 1.8,
+        "blk": 1.7,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14.6,
+        "reb": 8.2,
+        "ast": 3,
+        "stl": 2.6,
+        "blk": 0.8,
+        "topg": 3.2
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 80,
+        "pts": 10.5,
+        "reb": 8.2,
+        "ast": 3.8,
+        "stl": 1.4,
+        "blk": 1.4,
+        "topg": 2.1
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.5,
+        "reb": 8.6,
+        "ast": 3.7,
+        "stl": 1.6,
+        "blk": 1.5,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 10.5,
+        "reb": 10.2,
+        "ast": 5.3,
+        "stl": 2.3,
+        "blk": 0.7,
+        "topg": 1.7
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.3,
+        "reb": 8.4,
+        "ast": 3.7,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 20,
+        "pts": 12.5,
+        "reb": 8.9,
+        "ast": 4.8,
+        "stl": 2.6,
+        "blk": 1.6,
+        "topg": 2.3
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.2,
+        "reb": 7.8,
+        "ast": 3.8,
+        "stl": 1.4,
+        "blk": 1.3,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 10.3,
+        "reb": 9.6,
+        "ast": 4.7,
+        "stl": 1.6,
+        "blk": 1.2,
+        "topg": 1.8
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 8.8,
+        "reb": 9.8,
+        "ast": 5.4,
+        "stl": 2,
+        "blk": 1,
+        "topg": 0.6
+      }
+    },
+    "21": {
+      "regular": {
+        "gp": 82,
+        "pts": 9.1,
+        "reb": 7.9,
+        "ast": 3.4,
+        "stl": 1.1,
+        "blk": 1.3,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 8.6,
+        "reb": 9.3,
+        "ast": 5,
+        "stl": 1.7,
+        "blk": 1.1,
+        "topg": 0.9
+      }
+    }
+  },
+  "Cristiano Ronaldo": {
+    "1": {
+      "regular": {
+        "gp": 76,
+        "pts": 9.9,
+        "reb": 8.6,
+        "ast": 6.6,
+        "stl": 1.5,
+        "blk": 2.1,
+        "topg": 2.3
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 77,
+        "pts": 11,
+        "reb": 10.9,
+        "ast": 7.3,
+        "stl": 1.5,
+        "blk": 1.9,
+        "topg": 2.2
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 80,
+        "pts": 12,
+        "reb": 11.5,
+        "ast": 7,
+        "stl": 1.5,
+        "blk": 2,
+        "topg": 2.3
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 63,
+        "pts": 11.6,
+        "reb": 10.6,
+        "ast": 7.3,
+        "stl": 1.3,
+        "blk": 1.9,
+        "topg": 2.7
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 61,
+        "pts": 14.6,
+        "reb": 10.8,
+        "ast": 7,
+        "stl": 1.8,
+        "blk": 2,
+        "topg": 2.3
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.7,
+        "reb": 10.2,
+        "ast": 7.5,
+        "stl": 1.9,
+        "blk": 2,
+        "topg": 2.2
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 9.3,
+        "reb": 9.8,
+        "ast": 2.3,
+        "stl": 1.2,
+        "blk": 2.5,
+        "topg": 3.3
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 77,
+        "pts": 10.5,
+        "reb": 12.6,
+        "ast": 9.2,
+        "stl": 1.8,
+        "blk": 2.4,
+        "topg": 2.6
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 79,
+        "pts": 9.5,
+        "reb": 10.4,
+        "ast": 8.6,
+        "stl": 1.8,
+        "blk": 2.1,
+        "topg": 2.3
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 81,
+        "pts": 9.1,
+        "reb": 10,
+        "ast": 8.7,
+        "stl": 1.7,
+        "blk": 2,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 12.5,
+        "reb": 10.3,
+        "ast": 11,
+        "stl": 2.3,
+        "blk": 2,
+        "topg": 3.2
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 70,
+        "pts": 9.1,
+        "reb": 10.5,
+        "ast": 8.8,
+        "stl": 1.7,
+        "blk": 2.2,
+        "topg": 2.3
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 12.8,
+        "reb": 11.2,
+        "ast": 8.8,
+        "stl": 0.4,
+        "blk": 1.6,
+        "topg": 2.8
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 77,
+        "pts": 9.9,
+        "reb": 10.7,
+        "ast": 8.8,
+        "stl": 1.8,
+        "blk": 1.9,
+        "topg": 2.6
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 81,
+        "pts": 8.5,
+        "reb": 9.1,
+        "ast": 7.8,
+        "stl": 1.7,
+        "blk": 1.8,
+        "topg": 2.1
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 82,
+        "pts": 9.9,
+        "reb": 10.7,
+        "ast": 8.8,
+        "stl": 1.8,
+        "blk": 1.9,
+        "topg": 2.6
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 8.8,
+        "reb": 9.1,
+        "ast": 8,
+        "stl": 1.8,
+        "blk": 1.7,
+        "topg": 2.1
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 5,
+        "pts": 8.6,
+        "reb": 11.4,
+        "ast": 7.4,
+        "stl": 2.2,
+        "blk": 1.4,
+        "topg": 1.4
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 82,
+        "pts": 8,
+        "reb": 8.6,
+        "ast": 7.8,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 12,
+        "reb": 9,
+        "ast": 8.4,
+        "stl": 1.9,
+        "blk": 1.5,
+        "topg": 1.2
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 12.7,
+        "reb": 10,
+        "ast": 7.8,
+        "stl": 2,
+        "blk": 1.3,
+        "topg": 2.3
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 78,
+        "pts": 8.8,
+        "reb": 9.3,
+        "ast": 8.1,
+        "stl": 1.6,
+        "blk": 1.5,
+        "topg": 2.5
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 9.6,
+        "reb": 9.4,
+        "ast": 7.7,
+        "stl": 1.8,
+        "blk": 1.5,
+        "topg": 2.3
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 74,
+        "pts": 10.4,
+        "reb": 10.5,
+        "ast": 7.3,
+        "stl": 1.8,
+        "blk": 1.9,
+        "topg": 2.4
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 9.8,
+        "reb": 11,
+        "ast": 8.6,
+        "stl": 2,
+        "blk": 1.9,
+        "topg": 2.7
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 82,
+        "pts": 6.5,
+        "reb": 9,
+        "ast": 6.6,
+        "stl": 1.7,
+        "blk": 1.4,
+        "topg": 1.7
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 74,
+        "pts": 8.2,
+        "reb": 7.4,
+        "ast": 7.1,
+        "stl": 1.3,
+        "blk": 1.1,
+        "topg": 1.9
+      }
+    }
+  },
+  "Dias": {
+    "1": {
+      "regular": {
+        "gp": 81,
+        "pts": 19.2,
+        "reb": 11.5,
+        "ast": 4.4,
+        "stl": 0.9,
+        "blk": 3.1,
+        "topg": 1.9
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 74,
+        "pts": 21.4,
+        "reb": 12.7,
+        "ast": 5.1,
+        "stl": 1,
+        "blk": 2.9,
+        "topg": 1.9
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 81,
+        "pts": 23,
+        "reb": 15.1,
+        "ast": 5.6,
+        "stl": 0.9,
+        "blk": 2.9,
+        "topg": 1.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 26.7,
+        "reb": 14.5,
+        "ast": 5.5,
+        "stl": 1,
+        "blk": 2.9,
+        "topg": 2.1
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 75,
+        "pts": 21.4,
+        "reb": 12,
+        "ast": 4.8,
+        "stl": 0.9,
+        "blk": 2.3,
+        "topg": 2.1
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 82,
+        "pts": 20.5,
+        "reb": 10.8,
+        "ast": 5.5,
+        "stl": 0.9,
+        "blk": 2.1,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 22.9,
+        "reb": 9,
+        "ast": 4.9,
+        "stl": 0.3,
+        "blk": 2.1,
+        "topg": 1.4
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 74,
+        "pts": 17.1,
+        "reb": 11.3,
+        "ast": 6.1,
+        "stl": 0.9,
+        "blk": 2.2,
+        "topg": 2.2
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.8,
+        "reb": 11,
+        "ast": 5.3,
+        "stl": 0.9,
+        "blk": 2,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 16.3,
+        "reb": 11,
+        "ast": 6,
+        "stl": 1.1,
+        "blk": 2.4,
+        "topg": 1.8
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 13.6,
+        "reb": 13.2,
+        "ast": 5.6,
+        "stl": 1.8,
+        "blk": 2.4,
+        "topg": 2.4
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 80,
+        "pts": 17.7,
+        "reb": 11.4,
+        "ast": 6.6,
+        "stl": 1,
+        "blk": 1.9,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 18.1,
+        "reb": 11,
+        "ast": 6,
+        "stl": 1,
+        "blk": 2,
+        "topg": 1.8
+      },
+      "finals": {
+        "gp": 7,
+        "pts": 18.1,
+        "reb": 11.3,
+        "ast": 5.3,
+        "stl": 1,
+        "blk": 1.9,
+        "topg": 2.4
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.3,
+        "reb": 10.8,
+        "ast": 6,
+        "stl": 0.9,
+        "blk": 2,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 22.1,
+        "reb": 12.7,
+        "ast": 6.3,
+        "stl": 1.4,
+        "blk": 2.5,
+        "topg": 1.8
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 80,
+        "pts": 16.8,
+        "reb": 10.7,
+        "ast": 6.3,
+        "stl": 0.8,
+        "blk": 1.8,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 10,
+        "pts": 15.6,
+        "reb": 10.8,
+        "ast": 5.5,
+        "stl": 1,
+        "blk": 1.8,
+        "topg": 1.8
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 76,
+        "pts": 16.1,
+        "reb": 10.4,
+        "ast": 6.4,
+        "stl": 0.9,
+        "blk": 1.8,
+        "topg": 1.7
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 82,
+        "pts": 14.2,
+        "reb": 9.7,
+        "ast": 5.6,
+        "stl": 0.8,
+        "blk": 1.6,
+        "topg": 1.8
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 74,
+        "pts": 13.8,
+        "reb": 9.5,
+        "ast": 5.2,
+        "stl": 0.8,
+        "blk": 1.4,
+        "topg": 1.5
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.6,
+        "reb": 10.3,
+        "ast": 5.7,
+        "stl": 1,
+        "blk": 1.5,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 15.6,
+        "reb": 8.9,
+        "ast": 7.3,
+        "stl": 1.6,
+        "blk": 1.1,
+        "topg": 1.4
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 14.1,
+        "reb": 10.1,
+        "ast": 5.6,
+        "stl": 1,
+        "blk": 1.8,
+        "topg": 1.7
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 78,
+        "pts": 13.4,
+        "reb": 8.6,
+        "ast": 5.6,
+        "stl": 0.9,
+        "blk": 1.6,
+        "topg": 1.2
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 17.5,
+        "reb": 9.7,
+        "ast": 5.3,
+        "stl": 0.7,
+        "blk": 1.8,
+        "topg": 1.6
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 62,
+        "pts": 11.7,
+        "reb": 8.5,
+        "ast": 5.8,
+        "stl": 0.6,
+        "blk": 1.8,
+        "topg": 1.4
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 81,
+        "pts": 11.8,
+        "reb": 8.4,
+        "ast": 6.3,
+        "stl": 0.6,
+        "blk": 1.6,
+        "topg": 1.3
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 11.5,
+        "reb": 9,
+        "ast": 7.2,
+        "stl": 0.5,
+        "blk": 3.3,
+        "topg": 0.7
+      }
+    }
+  },
+  "Binho": {
+    "1": {
+      "regular": {
+        "gp": 80,
+        "pts": 13.8,
+        "reb": 7.5,
+        "ast": 7,
+        "stl": 0.6,
+        "blk": 1.4,
+        "topg": 1.5
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 15.2,
+        "reb": 8,
+        "ast": 5.7,
+        "stl": 0.7,
+        "blk": 1,
+        "topg": 2
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 80,
+        "pts": 15.8,
+        "reb": 8.6,
+        "ast": 7,
+        "stl": 0.8,
+        "blk": 1.5,
+        "topg": 1.9
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 82,
+        "pts": 18.9,
+        "reb": 9.9,
+        "ast": 7.8,
+        "stl": 0.9,
+        "blk": 1.5,
+        "topg": 1.7
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.9,
+        "reb": 10,
+        "ast": 8,
+        "stl": 0.8,
+        "blk": 1.6,
+        "topg": 1.5
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.6,
+        "reb": 10.7,
+        "ast": 7.6,
+        "stl": 1,
+        "blk": 1.8,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 22.5,
+        "reb": 8.8,
+        "ast": 5.5,
+        "stl": 0.5,
+        "blk": 1.7,
+        "topg": 0.5
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 77,
+        "pts": 21.4,
+        "reb": 12.6,
+        "ast": 8.7,
+        "stl": 1.4,
+        "blk": 2.6,
+        "topg": 2.3
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 75,
+        "pts": 19.1,
+        "reb": 9.8,
+        "ast": 7.6,
+        "stl": 0.9,
+        "blk": 1.6,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 12,
+        "pts": 19.2,
+        "reb": 10.7,
+        "ast": 7.2,
+        "stl": 0.7,
+        "blk": 2,
+        "topg": 2.1
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 82,
+        "pts": 19.9,
+        "reb": 10.6,
+        "ast": 6.9,
+        "stl": 1,
+        "blk": 1.7,
+        "topg": 1.5
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 63,
+        "pts": 16.6,
+        "reb": 10.4,
+        "ast": 8.4,
+        "stl": 0.9,
+        "blk": 1.5,
+        "topg": 1.3
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 74,
+        "pts": 15.2,
+        "reb": 10,
+        "ast": 8,
+        "stl": 0.7,
+        "blk": 1.5,
+        "topg": 1.1
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 75,
+        "pts": 12.3,
+        "reb": 8.2,
+        "ast": 7.6,
+        "stl": 0.4,
+        "blk": 1.4,
+        "topg": 1.3
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 15,
+        "pts": 15.3,
+        "reb": 8.4,
+        "ast": 8.9,
+        "stl": 0.4,
+        "blk": 1.4,
+        "topg": 1.3
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 76,
+        "pts": 12.9,
+        "reb": 8.4,
+        "ast": 7.3,
+        "stl": 0.8,
+        "blk": 1.7,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 16.4,
+        "reb": 11.1,
+        "ast": 7.3,
+        "stl": 1.3,
+        "blk": 1.2,
+        "topg": 1.4
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 71,
+        "pts": 10.7,
+        "reb": 7.6,
+        "ast": 6.6,
+        "stl": 1,
+        "blk": 1.8,
+        "topg": 1.5
+      },
+      "playoffs": {
+        "gp": 14,
+        "pts": 12.1,
+        "reb": 7.6,
+        "ast": 7.7,
+        "stl": 1,
+        "blk": 1.5,
+        "topg": 1.7
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 81,
+        "pts": 11.6,
+        "reb": 7.3,
+        "ast": 6.5,
+        "stl": 0.9,
+        "blk": 1.4,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 9,
+        "pts": 14,
+        "reb": 10.6,
+        "ast": 7.1,
+        "stl": 1.7,
+        "blk": 2,
+        "topg": 2
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 13,
+        "reb": 7.3,
+        "ast": 7.2,
+        "stl": 0.9,
+        "blk": 1.4,
+        "topg": 1.5
+      },
+      "playoffs": {
+        "gp": 21,
+        "pts": 13,
+        "reb": 7.6,
+        "ast": 7.1,
+        "stl": 1.5,
+        "blk": 1.5,
+        "topg": 1.5
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 12.6,
+        "reb": 9.2,
+        "ast": 8.6,
+        "stl": 0.2,
+        "blk": 1,
+        "topg": 2
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 82,
+        "pts": 10.5,
+        "reb": 7.6,
+        "ast": 6.8,
+        "stl": 0.7,
+        "blk": 1.3,
+        "topg": 1.2
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 77,
+        "pts": 11.4,
+        "reb": 7.5,
+        "ast": 7.4,
+        "stl": 0.7,
+        "blk": 1.2,
+        "topg": 1.5
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 77,
+        "pts": 9.2,
+        "reb": 7.2,
+        "ast": 7.3,
+        "stl": 0.8,
+        "blk": 1.1,
+        "topg": 1.1
+      },
+      "playoffs": {
+        "gp": 11,
+        "pts": 9,
+        "reb": 7.3,
+        "ast": 7.5,
+        "stl": 1.6,
+        "blk": 1.5,
+        "topg": 1.3
+      }
+    },
+    "20": {
+      "regular": {
+        "gp": 77,
+        "pts": 8.3,
+        "reb": 7.8,
+        "ast": 7.7,
+        "stl": 0.7,
+        "blk": 1.1,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 19,
+        "pts": 8.2,
+        "reb": 7.4,
+        "ast": 8.2,
+        "stl": 0.7,
+        "blk": 1.6,
+        "topg": 1.8
+      },
+      "finals": {
+        "gp": 5,
+        "pts": 6.4,
+        "reb": 5.8,
+        "ast": 9.2,
+        "stl": 0,
+        "blk": 1.4,
+        "topg": 1.4
+      }
+    }
+  },
+  "Enzo": {
+    "1": {
+      "regular": {
+        "gp": 77,
+        "pts": 13.3,
+        "reb": 8.9,
+        "ast": 1.3,
+        "stl": 0.9,
+        "blk": 2.3,
+        "topg": 2
+      }
+    },
+    "2": {
+      "regular": {
+        "gp": 75,
+        "pts": 16.1,
+        "reb": 11.5,
+        "ast": 1.9,
+        "stl": 0.9,
+        "blk": 2.3,
+        "topg": 2
+      }
+    },
+    "3": {
+      "regular": {
+        "gp": 81,
+        "pts": 17.6,
+        "reb": 12.1,
+        "ast": 2.3,
+        "stl": 1,
+        "blk": 2.6,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 21.3,
+        "reb": 12.7,
+        "ast": 3.2,
+        "stl": 0.8,
+        "blk": 2.3,
+        "topg": 2
+      }
+    },
+    "4": {
+      "regular": {
+        "gp": 69,
+        "pts": 17.1,
+        "reb": 10.2,
+        "ast": 2.5,
+        "stl": 1.2,
+        "blk": 2,
+        "topg": 1.8
+      },
+      "playoffs": {
+        "gp": 9,
+        "pts": 20,
+        "reb": 9,
+        "ast": 2.1,
+        "stl": 1.9,
+        "blk": 2.2,
+        "topg": 2
+      }
+    },
+    "5": {
+      "regular": {
+        "gp": 75,
+        "pts": 19.4,
+        "reb": 12,
+        "ast": 2.7,
+        "stl": 1.1,
+        "blk": 2.6,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 6,
+        "pts": 19.3,
+        "reb": 13.2,
+        "ast": 2.7,
+        "stl": 1,
+        "blk": 1.8,
+        "topg": 1.3
+      }
+    },
+    "6": {
+      "regular": {
+        "gp": 61,
+        "pts": 17.3,
+        "reb": 11.3,
+        "ast": 2.8,
+        "stl": 1.3,
+        "blk": 2.1,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 4,
+        "pts": 14.3,
+        "reb": 12,
+        "ast": 2.8,
+        "stl": 2.3,
+        "blk": 3.5,
+        "topg": 3.3
+      }
+    },
+    "7": {
+      "regular": {
+        "gp": 74,
+        "pts": 19.6,
+        "reb": 13.8,
+        "ast": 3,
+        "stl": 1.3,
+        "blk": 2.7,
+        "topg": 2.3
+      }
+    },
+    "8": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.9,
+        "reb": 10.8,
+        "ast": 2.7,
+        "stl": 1.2,
+        "blk": 2.1,
+        "topg": 2
+      },
+      "playoffs": {
+        "gp": 7,
+        "pts": 19,
+        "reb": 10.4,
+        "ast": 3.7,
+        "stl": 0.9,
+        "blk": 1.9,
+        "topg": 1.6
+      }
+    },
+    "9": {
+      "regular": {
+        "gp": 67,
+        "pts": 15.1,
+        "reb": 11.7,
+        "ast": 3.3,
+        "stl": 1.1,
+        "blk": 1.7,
+        "topg": 2
+      }
+    },
+    "10": {
+      "regular": {
+        "gp": 73,
+        "pts": 16.8,
+        "reb": 12.4,
+        "ast": 3.2,
+        "stl": 1.2,
+        "blk": 2.4,
+        "topg": 2.1
+      },
+      "playoffs": {
+        "gp": 16,
+        "pts": 17,
+        "reb": 13.4,
+        "ast": 4.6,
+        "stl": 1.1,
+        "blk": 2.7,
+        "topg": 1.9
+      }
+    },
+    "11": {
+      "regular": {
+        "gp": 82,
+        "pts": 13.1,
+        "reb": 10,
+        "ast": 2.8,
+        "stl": 1.1,
+        "blk": 2.2,
+        "topg": 1.9
+      }
+    },
+    "12": {
+      "regular": {
+        "gp": 67,
+        "pts": 12.8,
+        "reb": 9.7,
+        "ast": 2.7,
+        "stl": 1.1,
+        "blk": 1.8,
+        "topg": 1.8
+      }
+    },
+    "13": {
+      "regular": {
+        "gp": 82,
+        "pts": 12.3,
+        "reb": 9.6,
+        "ast": 2.5,
+        "stl": 1,
+        "blk": 1.6,
+        "topg": 1.4
+      }
+    },
+    "14": {
+      "regular": {
+        "gp": 77,
+        "pts": 15.1,
+        "reb": 9.7,
+        "ast": 3.2,
+        "stl": 1,
+        "blk": 1.6,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 17,
+        "reb": 11.6,
+        "ast": 5,
+        "stl": 0.6,
+        "blk": 2.2,
+        "topg": 2.6
+      }
+    },
+    "15": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.6,
+        "reb": 8.9,
+        "ast": 3,
+        "stl": 1.1,
+        "blk": 1.4,
+        "topg": 1.9
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 19.1,
+        "reb": 9.7,
+        "ast": 3.6,
+        "stl": 1.2,
+        "blk": 1.6,
+        "topg": 2.3
+      },
+      "finals": {
+        "gp": 4,
+        "pts": 15,
+        "reb": 8.8,
+        "ast": 3,
+        "stl": 1,
+        "blk": 1.7,
+        "topg": 2.3
+      }
+    },
+    "16": {
+      "regular": {
+        "gp": 82,
+        "pts": 15.2,
+        "reb": 8.1,
+        "ast": 3,
+        "stl": 1,
+        "blk": 1.7,
+        "topg": 1.6
+      },
+      "playoffs": {
+        "gp": 18,
+        "pts": 16.2,
+        "reb": 9.6,
+        "ast": 3.1,
+        "stl": 1.2,
+        "blk": 1.6,
+        "topg": 2.3
+      }
+    },
+    "17": {
+      "regular": {
+        "gp": 61,
+        "pts": 11.9,
+        "reb": 8.5,
+        "ast": 2.3,
+        "stl": 1.1,
+        "blk": 1.5,
+        "topg": 1.3
+      },
+      "playoffs": {
+        "gp": 5,
+        "pts": 14,
+        "reb": 8.2,
+        "ast": 2.8,
+        "stl": 1.2,
+        "blk": 3,
+        "topg": 2
+      }
+    },
+    "18": {
+      "regular": {
+        "gp": 77,
+        "pts": 14.5,
+        "reb": 10,
+        "ast": 2.7,
+        "stl": 1.2,
+        "blk": 1.7,
+        "topg": 1.7
+      },
+      "playoffs": {
+        "gp": 9,
+        "pts": 12.9,
+        "reb": 8.3,
+        "ast": 2.6,
+        "stl": 1.6,
+        "blk": 2.6,
+        "topg": 1.4
+      }
+    },
+    "19": {
+      "regular": {
+        "gp": 67,
+        "pts": 11.5,
+        "reb": 10.2,
+        "ast": 2.5,
+        "stl": 1,
+        "blk": 1.5,
+        "topg": 1.6
+      }
+    }
+  }
+};
