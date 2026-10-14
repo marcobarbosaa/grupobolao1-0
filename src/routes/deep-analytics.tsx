@@ -22,7 +22,7 @@ import {
 export const Route = createFileRoute("/deep-analytics")({
   head: () => ({
     meta: [
-      { title: "Deep Analytics — Central da Liga" },
+      { title: "Comparar — Grupo Bolão 2.0" },
       { name: "description", content: "Análise avançada de performance e métricas dos jogadores" },
     ],
   }),

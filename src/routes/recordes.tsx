@@ -5,7 +5,7 @@ import { players } from "../lib/mock-data";
 export const Route = createFileRoute("/recordes")({
   head: () => ({
     meta: [
-      { title: "Recordes — Central da Liga" },
+      { title: "Recordes — Grupo Bolão 2.0" },
       { name: "description", content: "Líderes históricos em todas as categorias estatísticas" },
     ],
   }),

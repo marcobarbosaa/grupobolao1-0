@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TemporadasRouteImport } from './routes/temporadas'
 import { Route as RecordesRouteImport } from './routes/recordes'
+import { Route as HallDaFamaRouteImport } from './routes/hall-da-fama'
 import { Route as DeepAnalyticsRouteImport } from './routes/deep-analytics'
 import { Route as BiografiasRouteImport } from './routes/biografias'
 import { Route as IndexRouteImport } from './routes/index'
@@ -24,6 +25,11 @@ const TemporadasRoute = TemporadasRouteImport.update({
 const RecordesRoute = RecordesRouteImport.update({
   id: '/recordes',
   path: '/recordes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HallDaFamaRoute = HallDaFamaRouteImport.update({
+  id: '/hall-da-fama',
+  path: '/hall-da-fama',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DeepAnalyticsRoute = DeepAnalyticsRouteImport.update({
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/biografias': typeof BiografiasRoute
   '/deep-analytics': typeof DeepAnalyticsRoute
+  '/hall-da-fama': typeof HallDaFamaRoute
   '/recordes': typeof RecordesRoute
   '/temporadas': typeof TemporadasRoute
   '/jogadores/$id': typeof JogadoresIdRoute
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/biografias': typeof BiografiasRoute
   '/deep-analytics': typeof DeepAnalyticsRoute
+  '/hall-da-fama': typeof HallDaFamaRoute
   '/recordes': typeof RecordesRoute
   '/temporadas': typeof TemporadasRoute
   '/jogadores/$id': typeof JogadoresIdRoute
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/biografias': typeof BiografiasRoute
   '/deep-analytics': typeof DeepAnalyticsRoute
+  '/hall-da-fama': typeof HallDaFamaRoute
   '/recordes': typeof RecordesRoute
   '/temporadas': typeof TemporadasRoute
   '/jogadores/$id': typeof JogadoresIdRoute
@@ -78,6 +87,7 @@ export interface FileRouteTypes {
     | '/'
     | '/biografias'
     | '/deep-analytics'
+    | '/hall-da-fama'
     | '/recordes'
     | '/temporadas'
     | '/jogadores/$id'
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/biografias'
     | '/deep-analytics'
+    | '/hall-da-fama'
     | '/recordes'
     | '/temporadas'
     | '/jogadores/$id'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/biografias'
     | '/deep-analytics'
+    | '/hall-da-fama'
     | '/recordes'
     | '/temporadas'
     | '/jogadores/$id'
@@ -103,6 +115,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BiografiasRoute: typeof BiografiasRoute
   DeepAnalyticsRoute: typeof DeepAnalyticsRoute
+  HallDaFamaRoute: typeof HallDaFamaRoute
   RecordesRoute: typeof RecordesRoute
   TemporadasRoute: typeof TemporadasRoute
   JogadoresIdRoute: typeof JogadoresIdRoute
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/recordes'
       fullPath: '/recordes'
       preLoaderRoute: typeof RecordesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hall-da-fama': {
+      id: '/hall-da-fama'
+      path: '/hall-da-fama'
+      fullPath: '/hall-da-fama'
+      preLoaderRoute: typeof HallDaFamaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/deep-analytics': {
@@ -159,6 +179,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BiografiasRoute: BiografiasRoute,
   DeepAnalyticsRoute: DeepAnalyticsRoute,
+  HallDaFamaRoute: HallDaFamaRoute,
   RecordesRoute: RecordesRoute,
   TemporadasRoute: TemporadasRoute,
   JogadoresIdRoute: JogadoresIdRoute,

@@ -20,7 +20,7 @@ import {
 export const Route = createFileRoute("/biografias")({
   head: () => ({
     meta: [
-      { title: "Biografias — Central da Liga" },
+      { title: "Jogadores — Grupo Bolão 2.0" },
       { name: "description", content: "Conheça a história dos maiores jogadores da liga" },
     ],
   }),

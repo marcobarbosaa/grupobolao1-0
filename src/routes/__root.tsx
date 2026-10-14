@@ -1,11 +1,15 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { AppSidebar } from "../components/AppSidebar";
-import { MobileNav } from "../components/MobileNav";
+import {
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+  useLocation,
+} from "@tanstack/react-router";
+import { SiteHeader } from "../components/site/SiteHeader";
+import { SiteFooter } from "../components/site/SiteFooter";
 
 import appCss from "../styles.css?url";
-
-const interFont =
-  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 
 function NotFoundComponent() {
   return (
@@ -14,7 +18,7 @@ function NotFoundComponent() {
         <h1 className="text-7xl font-bold neon-text">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Página não encontrada</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          A página que procuras não existe ou foi movida.
+          A página que você procura não existe ou foi movida.
         </p>
         <div className="mt-6">
           <Link
@@ -34,21 +38,39 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Central da Liga — NBA 2K Dashboard" },
+      { title: "Grupo Bolão 2.0 — Nossa liga, nosso legado" },
       {
         name: "description",
-        content: "Dashboard premium de análise desportiva para a liga NBA 2K",
+        content:
+          "A liga é nossa. A história também. Conheça os jogadores, as temporadas e o legado do Grupo Bolão, nossa liga de NBA 2K26 no PC.",
       },
-      { property: "og:title", content: "Central da Liga — NBA 2K Dashboard" },
+      { property: "og:title", content: "Grupo Bolão 2.0 — Nossa liga, nosso legado" },
       {
         property: "og:description",
-        content: "Dashboard premium de análise desportiva para a liga NBA 2K",
+        content:
+          "Lendas são construídas. Recordes são quebrados. Histórias permanecem. Explore o universo do Grupo Bolão.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
+      { name: "theme-color", content: "#0B0D11" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "stylesheet", href: interFont },
+      {
+        rel: "preload",
+        href: "/fonts/barlow-condensed-800.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: "/fonts/inter-latin.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],
   }),
   shellComponent: RootShell,
@@ -58,7 +80,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
@@ -71,15 +93,17 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const { pathname } = useLocation();
   return (
-    <div className="min-h-screen bg-background">
-      <AppSidebar />
-      <MobileNav />
-      <main className="lg:ml-64">
-        <div className="min-h-screen pt-14 lg:pt-0">
-          <Outlet />
-        </div>
+    <div className="site-shell">
+      <a className="skip-link" href="#conteudo">
+        Pular para o conteúdo
+      </a>
+      <SiteHeader />
+      <main id="conteudo" tabIndex={-1} className={pathname === "/" ? "" : "legacy-page"}>
+        <Outlet />
       </main>
+      <SiteFooter />
     </div>
   );
 }

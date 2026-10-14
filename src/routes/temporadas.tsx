@@ -5,7 +5,7 @@ import { seasons } from "../lib/mock-data";
 export const Route = createFileRoute("/temporadas")({
   head: () => ({
     meta: [
-      { title: "Temporadas — Central da Liga" },
+      { title: "Temporadas — Grupo Bolão 2.0" },
       { name: "description", content: "Histórico de todas as temporadas da liga NBA 2K" },
     ],
   }),
