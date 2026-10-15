@@ -121,7 +121,8 @@ try {
     const response = await page.goto(baseURL + route, { waitUntil: "networkidle" });
     assert.equal(response.status(), 200, route);
     assert.equal(await page.locator(".site-header").count(), 1);
-    assert.equal(await page.locator("aside").count(), 0);
+    // Editorial complementary content is allowed; the legacy sidebar is not.
+    assert.equal(await page.locator("aside nav").count(), 0);
     assert.equal(await page.getByText("Algo deu errado", { exact: true }).count(), 0);
     assert.equal(await page.getByText("Jogador não encontrado", { exact: true }).count(), 0);
     const active = page.locator('.desktop-navigation [aria-current="page"]');

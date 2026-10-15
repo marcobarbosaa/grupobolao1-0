@@ -1,6 +1,6 @@
 export const siteNavigation = [
   { label: "Início", to: "/" },
-  { label: "Jogadores", to: "/biografias" },
+  { label: "Jogadores", to: "/jogadores" },
   { label: "Temporadas", to: "/temporadas" },
   { label: "Hall da Fama", to: "/hall-da-fama" },
   { label: "Recordes", to: "/recordes" },
@@ -8,5 +8,8 @@ export const siteNavigation = [
 ] as const;
 
 export function isNavigationActive(pathname: string, to: string) {
-  return pathname === to || (to === "/biografias" && pathname.startsWith("/jogadores/"));
+  return (
+    pathname === to ||
+    (to === "/jogadores" && (pathname.startsWith("/jogadores/") || pathname === "/biografias"))
+  );
 }

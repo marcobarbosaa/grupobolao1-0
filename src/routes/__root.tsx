@@ -100,7 +100,11 @@ function RootComponent() {
         Pular para o conteúdo
       </a>
       <SiteHeader />
-      <main id="conteudo" tabIndex={-1} className={pathname === "/" ? "" : "legacy-page"}>
+      <main
+        id="conteudo"
+        tabIndex={-1}
+        className={pathname === "/" || /^\/jogadores(?:\/|$)/.test(pathname) ? "" : "legacy-page"}
+      >
         <Outlet />
       </main>
       <SiteFooter />

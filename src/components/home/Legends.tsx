@@ -30,7 +30,7 @@ export function Legends({ players }: { players: HomePlayer[] }) {
             Personalidades diferentes.
             <br />A mesma vontade de fazer história.
           </p>
-          <Link to="/biografias" className="text-link">
+          <Link to="/jogadores" className="text-link">
             Todos os jogadores <ArrowUpRight size={17} aria-hidden="true" />
           </Link>
         </div>

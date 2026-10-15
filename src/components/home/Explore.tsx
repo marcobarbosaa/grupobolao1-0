@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
 const destinations = [
-  { to: "/biografias", title: "Jogadores", caption: "Os rostos da nossa liga" },
+  { to: "/jogadores", title: "Jogadores", caption: "Os rostos da nossa liga" },
   { to: "/temporadas", title: "Temporadas", caption: "Cada ano, um capítulo" },
   { to: "/recordes", title: "Recordes", caption: "Os números que ficam" },
   { to: "/deep-analytics", title: "Comparações", caption: "O jogo por outros ângulos" },

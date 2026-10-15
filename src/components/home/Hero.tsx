@@ -36,7 +36,7 @@ export function Hero({
           <p className="hero-description">
             Lendas são construídas. Recordes são quebrados. Histórias permanecem.
           </p>
-          <Link className="editorial-button" to="/biografias">
+          <Link className="editorial-button" to="/jogadores">
             Conheça os jogadores <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
         </div>
