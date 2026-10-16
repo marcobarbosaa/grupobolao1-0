@@ -56,71 +56,13 @@ try {
     }
   }
 
-  await page.setViewportSize({ width: 1440, height: 1000 });
-  await visit("/jogadores");
-  assert.equal(await page.locator(".roster-player").count(), 13);
+  // The Etapa 2.1 selection is covered by holographic.browser.mjs.
+  // Keep regression coverage for all existing profiles through the Home roster.
+  await visit("/");
   const profileURLs = await page
-    .locator(".roster-player-link")
+    .locator(".legends-gallery a")
     .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
   assert.equal(new Set(profileURLs).size, 13);
-  const search = page.getByRole("searchbox", { name: "Buscar jogador por nome" });
-  await search.fill("nÁnDo");
-  await page.waitForFunction(() => document.querySelectorAll(".roster-player").length === 1);
-  assert.match(await page.locator(".roster-player-caption h2").textContent(), /Nando/);
-  await page.getByRole("combobox", { name: "Equipe", exact: true }).selectOption("Orlando Magic");
-  await page.locator(".roster-empty").waitFor();
-  await page.getByRole("button", { name: "Ver todos os jogadores" }).click();
-  await page.waitForFunction(() => document.querySelectorAll(".roster-player").length === 13);
-  await page.getByRole("combobox", { name: "Posição", exact: true }).selectOption("PG");
-  assert.equal(await page.locator(".roster-player").count(), 4);
-  await page.getByRole("combobox", { name: "Ordenação", exact: true }).selectOption("az");
-  assert.equal(await page.locator(".roster-player-caption h2").first().textContent(), "Abel");
-  await page.getByRole("combobox", { name: "Ordenação", exact: true }).selectOption("za");
-  assert.equal(await page.locator(".roster-player-caption h2").first().textContent(), "Tailan");
-  await page.getByRole("button", { name: "Limpar filtros" }).click();
-  await page.getByRole("button", { name: "Destacar Gam", exact: true }).click();
-  assert.equal(await page.locator(".gallery-feature-caption h2").textContent(), "Gam");
-  assert.equal(
-    await page
-      .getByRole("button", { name: "Destacar Gam", exact: true })
-      .getAttribute("aria-pressed"),
-    "true",
-  );
-  result.checks.push(
-    "13 profiles; accent-insensitive search; combined filters; empty/reset; position; A–Z/Z–A; player highlighting",
-  );
-
-  await page.evaluate(() => {
-    window.playerTransitionCount = 0;
-    if (document.startViewTransition) {
-      const original = document.startViewTransition.bind(document);
-      document.startViewTransition = (...args) => {
-        window.playerTransitionCount++;
-        return original(...args);
-      };
-    }
-  });
-  await search.fill("Gam");
-  const profileLink = page.getByRole("link", { name: "Conhecer Gam", exact: true });
-  await profileLink.focus();
-  await page.keyboard.press("Enter");
-  await page.waitForURL("**/jogadores/4");
-  await page.locator("#profile-name").waitFor();
-  assert.match(await page.locator("#profile-name").textContent(), /Gam/);
-  assert.equal(await page.evaluate(() => window.playerTransitionCount), 1);
-  await page.goBack({ waitUntil: "networkidle" });
-  assert.equal(await page.getByRole("searchbox").inputValue(), "Gam");
-  assert.equal(await page.locator(".roster-player").count(), 1);
-  result.checks.push("Keyboard gallery-to-profile native transition; browser back retains search");
-
-  await visit("/biografias?q=Medeiros");
-  assert.match(page.url(), /\/jogadores\/?\?q=Medeiros/);
-  assert.equal(await page.locator(".roster-player").count(), 1);
-  const redirect = await context.request.get(baseURL + "/biografias", { maxRedirects: 0 });
-  assert.equal(redirect.status(), 301);
-  result.checks.push(
-    "Legacy gallery HTTP 301 redirects to canonical gallery and preserves filters",
-  );
 
   await visit("/jogadores/8");
   assert.equal(await page.locator(".career-main-stat strong").textContent(), "14,5");
@@ -242,18 +184,9 @@ try {
   );
   await noOverflow("Scrollable statistics do not widen the document");
   await page.screenshot({ path: `${output}/mobile-statistics.png`, animations: "disabled" });
-  await visit("/jogadores");
-  await page.getByRole("button", { name: "Filtros", exact: true }).click();
-  await page.getByRole("combobox", { name: "Equipe", exact: true }).selectOption("Orlando Magic");
-  assert.equal(await page.locator(".roster-player").count(), 1);
-  await page.screenshot({ path: `${output}/mobile-filters.png`, animations: "disabled" });
-  result.checks.push(
-    "Mobile filter disclosure, long names and contained horizontal statistics scrolling",
-  );
-
+  result.checks.push("Mobile long names and contained horizontal statistics scrolling");
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.getByRole("link", { name: "Conhecer Medeiros", exact: true }).click();
-  await page.waitForURL("**/jogadores/7");
+  await visit("/jogadores/7");
   assert.equal(
     await page
       .locator(".profile-hero-image")
@@ -272,7 +205,7 @@ try {
       configurable: true,
     }),
   );
-  await page.getByRole("link", { name: "Conhecer Nando", exact: true }).click();
+  await page.locator(".holo-career-cta").click();
   await page.waitForURL("**/jogadores/8");
   result.checks.push("Reduced motion and navigation without View Transitions API");
 
@@ -282,10 +215,10 @@ try {
     hasTouch: true,
   });
   const touch = await touchContext.newPage();
-  await touch.goto(baseURL + "/jogadores?q=Gam", { waitUntil: "networkidle" });
-  await touch.getByRole("link", { name: "Conhecer Gam", exact: true }).tap();
-  await touch.waitForURL("**/jogadores/4");
-  assert.match(await touch.locator("#profile-name").textContent(), /Gam/);
+  await touch.goto(baseURL + "/jogadores", { waitUntil: "networkidle" });
+  await touch.locator(".holo-career-cta").tap();
+  await touch.waitForURL("**/jogadores/8");
+  assert.match(await touch.locator("#profile-name").textContent(), /Nando/);
   await touchContext.close();
   result.checks.push("Touch gallery-to-profile navigation");
 

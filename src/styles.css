@@ -3,6 +3,7 @@
 @import "./fonts.css";
 @import "./styles/site.css";
 @import "./styles/players.css";
+@import "./styles/holographic.css";
 
 @custom-variant dark (&:is(.dark *));
 

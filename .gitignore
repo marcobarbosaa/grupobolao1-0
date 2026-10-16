@@ -18,6 +18,7 @@ dist-ssr
 *.local.png
 artifacts/home-review/
 artifacts/players-review/
+artifacts/holographic-review/
 
 # Wrangler / Cloudflare
 .wrangler/

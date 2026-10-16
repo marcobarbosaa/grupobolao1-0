@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PlayerGallery } from "../components/players/PlayerGallery";
+import { HolographicSelection } from "../components/holographic/HolographicSelection";
 import { PlayerPageState } from "../components/players/PlayerPageState";
 import { playerRoster } from "../lib/player-data";
 import { validatePlayerFilters } from "../lib/player-adapter";
+import { createHolographicRoster } from "../lib/holographic-player";
+
+const holographicRoster = createHolographicRoster(playerRoster);
 
 export const Route = createFileRoute("/jogadores/")({
   validateSearch: validatePlayerFilters,
@@ -12,7 +15,7 @@ export const Route = createFileRoute("/jogadores/")({
       {
         name: "description",
         content:
-          "Cada jogador tem uma história. Explore o elenco, filtre por nome, equipe ou posição e conheça as carreiras do Grupo Bolão.",
+          "Os protagonistas da nossa liga. Explore Nando na sala de seleção de atletas e entre na sua carreira no Grupo Bolão.",
       },
       { property: "og:title", content: "Os protagonistas — Grupo Bolão 2.0" },
     ],
@@ -22,15 +25,5 @@ export const Route = createFileRoute("/jogadores/")({
 });
 
 function PlayersRoute() {
-  const filters = Route.useSearch();
-  const navigate = Route.useNavigate();
-  return (
-    <PlayerGallery
-      players={playerRoster}
-      filters={filters}
-      onFilterChange={(search) => {
-        void navigate({ search, replace: true, resetScroll: false });
-      }}
-    />
-  );
+  return <HolographicSelection players={holographicRoster} />;
 }

@@ -1,0 +1,657 @@
+.holo-page {
+  padding-top: calc(var(--header-height) + 34px);
+  padding-bottom: 36px;
+  color: var(--ivory);
+  background: var(--obsidian);
+}
+.holo-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.holo-heading .eyebrow {
+  color: var(--ink-muted);
+  margin-bottom: 9px;
+}
+.holo-heading .eyebrow > span {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: var(--signal-red);
+  margin: 0 9px 3px 0;
+}
+.holo-heading h1 {
+  font: 700 clamp(36px, 4.25vw, 70px)/0.95 var(--font-display);
+  letter-spacing: -0.015em;
+}
+.holo-heading h1 > span {
+  color: var(--signal-red);
+}
+.holo-heading > p {
+  color: var(--ink-muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+.holo-chamber {
+  position: relative;
+  isolation: isolate;
+  min-height: 590px;
+  height: clamp(590px, 68svh, 800px);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 65% 45%, #2a202138, transparent 65%),
+    linear-gradient(125deg, #12151a, #0b0d11 57%, #101217);
+}
+.holo-chamber::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(transparent, #000);
+}
+.holo-chamber::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  transition: border-color 300ms;
+}
+.holo-chamber.is-engaged::after {
+  border-color: #e34b3d50;
+}
+.holo-chamber-top {
+  position: absolute;
+  inset: 25px 30px auto;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.holo-chamber-top > .eyebrow {
+  color: var(--ink-muted);
+  font-size: 9px;
+}
+.holo-slash {
+  margin-inline: 10px;
+  color: var(--signal-red);
+}
+.holo-mode-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 32px;
+  font-size: 10px;
+  color: var(--ink-muted);
+}
+.holo-mode-button > span {
+  padding: 5px 8px;
+  border: 1px solid var(--hairline);
+  color: var(--ivory);
+}
+.holo-mode-button[aria-pressed="true"] > span {
+  border-color: var(--champagne);
+  color: var(--champagne);
+}
+.holo-visual {
+  position: absolute;
+  top: 48px;
+  bottom: 55px;
+  left: 34%;
+  right: 0;
+}
+.holo-visual::before {
+  content: "";
+  position: absolute;
+  inset: 15% 15% 1%;
+  background: radial-gradient(ellipse at 50% 82%, #e34b3d12, transparent 65%);
+  pointer-events: none;
+}
+.holo-backdrop-word {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 800 clamp(110px, 13vw, 220px)/1 var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff0d;
+  user-select: none;
+}
+.holo-canvas,
+.holo-flat {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.holo-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.holo-player-target {
+  position: absolute;
+  top: 9%;
+  bottom: 18%;
+  left: 36%;
+  right: 36%;
+  border-radius: 48% 48% 12% 12%;
+}
+.holo-target-label {
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  display: flex;
+  gap: 13px;
+  white-space: nowrap;
+  padding: 10px 14px;
+  font-size: 10px;
+  background: #14171be8;
+  border: 1px solid var(--hairline);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 200ms,
+    transform 200ms;
+}
+.holo-player-target:hover .holo-target-label,
+.holo-player-target:focus-visible .holo-target-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+.holo-target-label > span {
+  color: var(--signal-red);
+}
+.holo-render-label {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 9px;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+.holo-render-label > span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 7px 2px 0;
+  border-radius: 50%;
+  background: var(--champagne);
+}
+.holo-player-info {
+  position: absolute;
+  left: 4.4%;
+  width: 31%;
+  top: 50%;
+  transform: translateY(-48%);
+  z-index: 2;
+}
+.holo-selected-label {
+  color: var(--champagne);
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.holo-selected-label > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--champagne);
+}
+.holo-player-info h2 {
+  font: 800 clamp(66px, 8vw, 126px)/0.95 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 12px 0 20px;
+}
+.holo-player-info h2 > span {
+  color: var(--signal-red);
+}
+.holo-identity {
+  border-left: 2px solid var(--signal-red);
+  padding-left: 14px;
+}
+.holo-identity > span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--champagne);
+}
+.holo-identity > p {
+  font: 500 22px/1.15 var(--font-display);
+  margin-top: 5px;
+}
+.holo-teams {
+  margin-top: 15px;
+  max-width: 245px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--ink-muted);
+}
+.holo-invitation {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #c3c2c0;
+  margin-block: 28px 22px;
+}
+.holo-career-cta {
+  width: min(100%, 250px);
+  box-shadow: 0 8px 35px #e34b3d08;
+}
+.is-engaged .holo-career-cta {
+  box-shadow: 0 8px 35px #e34b3d25;
+}
+.holo-profile-caption {
+  font-size: 9px;
+  color: var(--ink-muted);
+  margin-top: 11px;
+}
+.holo-angle-controls {
+  position: absolute;
+  bottom: 18px;
+  left: 34%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  z-index: 3;
+}
+.holo-angle-controls > p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink-muted);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+.holo-angle-buttons {
+  display: flex;
+  gap: 2px;
+}
+.holo-angle-buttons > button {
+  min-height: 35px;
+  padding: 8px 12px;
+  color: var(--ink-muted);
+  border-bottom: 1px solid #ffffff16;
+  font-size: 10px;
+  transition:
+    color 200ms,
+    background 200ms;
+}
+.holo-angle-buttons > button[aria-pressed="true"] {
+  color: var(--ivory);
+  border-color: var(--signal-red);
+  background: #e34b3d0b;
+}
+.holo-angle-buttons > button:not(:disabled):hover {
+  color: var(--ivory);
+  background: #ffffff09;
+}
+.holo-asset-notice {
+  position: absolute;
+  bottom: 16px;
+  left: 4.4%;
+  width: 27%;
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  z-index: 3;
+}
+.holo-flat-platform {
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  width: 54%;
+  height: 10%;
+  border: 1px solid #e34b3d9c;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, #292930, #15171c 65%);
+  box-shadow:
+    0 7px 0 #181a1f,
+    0 8px 0 #55545b,
+    0 15px 40px #e34b3d13;
+}
+.holo-flat-platform::after {
+  content: "";
+  position: absolute;
+  inset: -30% -15%;
+  border-radius: 50%;
+  border: 1px solid #ffffff12;
+}
+.holo-flat-figure {
+  position: absolute;
+  height: 96%;
+  left: 50%;
+  bottom: 8.7%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 3px #7eabb01a);
+}
+.holo-flat-figure img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+.holo-flat-figure.is-portrait {
+  height: 77%;
+  bottom: 18%;
+  width: 50%;
+  mask-image: linear-gradient(#000 75%, transparent);
+}
+.holo-flat-figure.is-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+.is-engaged .holo-flat-figure {
+  filter: drop-shadow(1px 0 2px #73b6be70);
+}
+.holo-initials {
+  position: absolute;
+  inset: 25% 0;
+  text-align: center;
+  font: 700 120px/1 var(--font-display);
+  color: #76757a;
+}
+.holo-selector {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-height: 92px;
+  border-bottom: 1px solid var(--hairline);
+}
+.holo-counter {
+  display: flex;
+  gap: 9px;
+  align-items: baseline;
+}
+.holo-counter > strong {
+  font: 600 28px/1 var(--font-display);
+}
+.holo-counter > span {
+  font-size: 10px;
+  color: var(--ink-muted);
+}
+.holo-roster {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 30px;
+}
+.holo-roster > button {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 10px;
+  font-size: 11px;
+}
+.holo-roster > button > span {
+  width: 24px;
+  height: 2px;
+  background: var(--graphite);
+}
+.holo-roster > button[aria-pressed="true"] > span {
+  background: var(--signal-red);
+}
+.holo-coming-soon {
+  color: var(--ink-muted);
+  font-size: 10px;
+  padding-left: 30px;
+  border-left: 1px solid var(--hairline);
+}
+.holo-arrows {
+  display: flex;
+  gap: 6px;
+}
+.holo-edition-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--ink-muted);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  margin-top: 18px;
+}
+.holo-edition-note > span {
+  letter-spacing: 0;
+}
+.holo-empty {
+  padding: 100px 20px;
+  border: 1px solid var(--hairline);
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  .holo-player-info {
+    left: 6%;
+  }
+}
+@media (max-width: 1050px) {
+  .holo-chamber-top {
+    inset-inline: 22px;
+  }
+  .holo-angle-controls {
+    gap: 5px;
+  }
+  .holo-angle-controls > p {
+    display: none;
+  }
+  .holo-player-info {
+    width: 34%;
+  }
+  .holo-visual {
+    left: 30%;
+  }
+}
+@media (max-width: 700px) {
+  .holo-page {
+    padding-top: calc(var(--header-height) + 25px);
+    padding-bottom: 25px;
+  }
+  .holo-heading {
+    display: block;
+    margin-bottom: 22px;
+  }
+  .holo-heading h1 {
+    font-size: clamp(35px, 8.8vw, 60px);
+  }
+  .holo-heading > p {
+    font-size: 10px;
+    margin-top: 13px;
+  }
+  .holo-heading > p br {
+    display: none;
+  }
+  .holo-chamber {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .holo-chamber-top {
+    position: relative;
+    inset: auto;
+    padding: 16px 16px 0;
+    gap: 6px;
+  }
+  .holo-chamber-top > .eyebrow {
+    font-size: 7px;
+    letter-spacing: 0.06em;
+  }
+  .holo-chamber-top .holo-slash {
+    margin-inline: 5px;
+  }
+  .holo-mode-button {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .holo-mode-button > span {
+    padding: 4px;
+  }
+  .holo-visual {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    height: clamp(365px, 95vw, 490px);
+    flex: none;
+  }
+  .holo-backdrop-word {
+    font-size: clamp(100px, 29vw, 175px);
+    top: 20%;
+  }
+  .holo-player-target {
+    left: 27%;
+    right: 27%;
+    top: 10%;
+  }
+  .holo-target-label {
+    display: none;
+  }
+  .holo-render-label {
+    font-size: 8px;
+    bottom: 1px;
+  }
+  .holo-angle-controls {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    order: 1;
+    margin: 8px 15px 0;
+  }
+  .holo-angle-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  .holo-angle-buttons > button {
+    min-height: 44px;
+    flex: 1;
+    max-width: 90px;
+  }
+  .holo-player-info {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    transform: none;
+    padding: 24px;
+    order: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 16px;
+  }
+  .holo-player-info > :not(h2):not(.holo-identity) {
+    grid-column: 1 / -1;
+  }
+  .holo-player-info h2 {
+    font-size: clamp(42px, 12vw, 54px);
+    margin-block: 10px 17px;
+    overflow-wrap: anywhere;
+  }
+  .holo-identity {
+    position: static;
+    align-self: center;
+    margin-bottom: 7px;
+    padding-left: 12px;
+  }
+  .holo-identity > p {
+    font-size: 19px;
+  }
+  .holo-identity > span {
+    font-size: 8px;
+  }
+  .holo-teams {
+    max-width: none;
+    margin-top: 0;
+    font-size: 9px;
+  }
+  .holo-invitation {
+    display: none;
+  }
+  .holo-career-cta {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .holo-profile-caption {
+    text-align: center;
+  }
+  .holo-asset-notice {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    margin: 0 24px 18px;
+    order: 3;
+  }
+  .holo-selector {
+    gap: 15px;
+    min-height: 92px;
+  }
+  .holo-counter > strong {
+    font-size: 24px;
+  }
+  .holo-roster {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .holo-roster > button {
+    min-height: 32px;
+    font-size: 10px;
+    width: 100%;
+  }
+  .holo-roster > button > span {
+    width: 14px;
+  }
+  .holo-coming-soon {
+    border: 0;
+    padding: 0;
+    font-size: 8px;
+  }
+  .holo-arrows .icon-button {
+    width: 38px;
+    height: 42px;
+  }
+  .holo-edition-note {
+    font-size: 7px;
+  }
+  .holo-edition-note > span {
+    max-width: 160px;
+    text-align: right;
+  }
+  .holo-flat-platform {
+    width: 68%;
+  }
+  .holo-flat-figure {
+    height: 91%;
+    bottom: 9.5%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .holo-page *,
+  .holo-page *::before,
+  .holo-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .holo-page .editorial-button:hover {
+    transform: none;
+  }
+}
