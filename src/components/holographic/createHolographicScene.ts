@@ -1,17 +1,27 @@
 import * as THREE from "three";
+import { chamberEase, chamberSlot, CHAMBER_MOTION } from "../../lib/chamber-layout";
 import type { LoadedPlayerAsset } from "./usePlayerAssets";
+import { createChamberAthlete, createChamberResources } from "./createChamberAthlete";
 
 export interface HolographicScene {
-  setAsset: (asset: LoadedPlayerAsset) => void;
+  setRoster: (ids: string[], selectedIndex: number) => void;
+  setAsset: (id: string, asset: LoadedPlayerAsset) => void;
   setHovered: (hovered: boolean) => void;
+  setOpening: (opening: boolean) => void;
   setPointer: (x: number, y: number) => void;
+  inspect: () => {
+    selectedId: string;
+    camera: number[];
+    nodes: { id: string; position: number[] }[];
+  };
   dispose: () => void;
 }
 
-/** Real 3D stage + camera-facing, silhouette-shaped image mesh (not a body model). */
+/** One persistent environment, real spatial slots, and fixed photographic silhouettes. */
 export function createHolographicScene(
   host: HTMLDivElement,
   onFailure: () => void,
+  hitTarget: HTMLAnchorElement,
 ): HolographicScene {
   const renderer = new THREE.WebGLRenderer({
     alpha: true,
@@ -20,57 +30,27 @@ export function createHolographicScene(
     failIfMajorPerformanceCaveat: true,
   });
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 50);
-  const geometry = new Set<THREE.BufferGeometry>();
-  const materials = new Set<THREE.Material>();
-  const textures = new Map<string, THREE.Texture>();
-  let frame = 0;
-  let disposed = false;
-  let visible = true;
-  let hovered = false;
-  let pointerX = 0;
-  let pointerY = 0;
-  let emphasis = 0;
-  let lastFrame = 0;
-  let elapsed = 0;
+  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 70);
+  const resources = createChamberResources(renderer);
+  const nodes = new Map<string, ReturnType<typeof createChamberAthlete>>();
+  let ids: string[] = [];
+  let selectedIndex = 0;
+  let frame = 0,
+    lastFrame = 0,
+    elapsed = 0,
+    transition = 0;
+  let disposed = false,
+    visible = true,
+    hovered = false,
+    opening = false;
+  let pointerX = 0,
+    pointerY = 0,
+    openingAmount = 0,
+    travelDirection = 0;
   let resize: ResizeObserver | undefined;
   let intersection: IntersectionObserver | undefined;
-  const actor = new THREE.Group();
-  const actorMaterial = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, toneMapped: false });
-  const projectionMaterial = new THREE.ShaderMaterial({
-    transparent: true,
-    depthWrite: false,
-    side: THREE.DoubleSide,
-    uniforms: { time: { value: 0 }, emphasis: { value: 0 } },
-    vertexShader: `varying float height; void main() {
-      height = position.y;
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }`,
-    fragmentShader: `varying float height; uniform float time; uniform float emphasis;
-      void main() {
-        float lines = smoothstep(0.92, 1.0, sin(height * 185.0));
-        float sweep = 1.0 - smoothstep(0.0, 0.055, abs(height - mod(time * 0.28, 3.6)));
-        gl_FragColor = vec4(0.48, 0.72, 0.74, lines * 0.025 + sweep * (0.035 + emphasis * 0.06));
-      }`,
-  });
-  const edgeMaterial = new THREE.MeshBasicMaterial({
-    color: "#73b6be",
-    transparent: true,
-    opacity: 0.06,
-    depthWrite: false,
-    side: THREE.DoubleSide,
-  });
-  materials.add(actorMaterial);
-  materials.add(projectionMaterial);
-  materials.add(edgeMaterial);
-  let body: THREE.Mesh | undefined;
-  let edge: THREE.Mesh | undefined;
-  let projection: THREE.Mesh | undefined;
-  const trackMesh = <G extends THREE.BufferGeometry, M extends THREE.Material>(g: G, m: M) => {
-    geometry.add(g);
-    materials.add(m);
-    return new THREE.Mesh(g, m);
-  };
+  const projected = new THREE.Vector3();
+  const look = new THREE.Vector3(0, 1.92, 0);
   const stop = () => {
     cancelAnimationFrame(frame);
     frame = 0;
@@ -92,12 +72,11 @@ export function createHolographicScene(
     intersection?.disconnect();
     document.removeEventListener("visibilitychange", visibility);
     renderer.domElement.removeEventListener("webglcontextlost", contextLost);
-    geometry.forEach((item) => item.dispose());
-    materials.forEach((item) => item.dispose());
-    textures.forEach((item) => item.dispose());
+    resources.dispose();
     renderer.dispose();
     renderer.forceContextLoss();
     renderer.domElement.remove();
+    nodes.clear();
   };
   function start() {
     if (!frame && !disposed && visible && !document.hidden) {
@@ -105,7 +84,29 @@ export function createHolographicScene(
       frame = requestAnimationFrame(render);
     }
   }
-  let rim: THREE.Mesh<THREE.TorusGeometry, THREE.MeshBasicMaterial>;
+  // Project the actual concave silhouette into the native link's clip path. Browser
+  // hit testing excludes the empty space between legs/arms, even while the camera moves.
+  function alignHitTarget() {
+    const node = nodes.get(ids[selectedIndex]);
+    if (!node?.contour.length) return;
+    const points = node.contour.map((point) => {
+      projected.copy(point).applyMatrix4(node.actor.matrixWorld).project(camera);
+      return [
+        (projected.x * 0.5 + 0.5) * host.clientWidth,
+        (0.5 - projected.y * 0.5) * host.clientHeight,
+      ];
+    });
+    const left = Math.min(...points.map(([x]) => x));
+    const top = Math.min(...points.map(([, y]) => y));
+    const width = Math.max(...points.map(([x]) => x)) - left;
+    const height = Math.max(...points.map(([, y]) => y)) - top;
+    hitTarget.style.inset = "auto";
+    hitTarget.style.left = `${left}px`;
+    hitTarget.style.top = `${top}px`;
+    hitTarget.style.width = `${width}px`;
+    hitTarget.style.height = `${height}px`;
+    hitTarget.style.clipPath = `polygon(${points.map(([x, y]) => `${x - left}px ${y - top}px`).join(",")})`;
+  }
   function render(now: number) {
     if (disposed || !visible || document.hidden) {
       frame = 0;
@@ -116,120 +117,147 @@ export function createHolographicScene(
     const dt = lastFrame ? Math.min((now - lastFrame) / 1000, 0.1) : 1 / 30;
     lastFrame = now;
     elapsed += dt;
-    projectionMaterial.uniforms.time.value = elapsed;
-    projectionMaterial.uniforms.emphasis.value = emphasis;
-    emphasis = THREE.MathUtils.damp(emphasis, hovered ? 1 : 0, 6, dt);
-    camera.position.x = THREE.MathUtils.damp(camera.position.x, pointerX * 0.22, 3, dt);
-    camera.position.y = THREE.MathUtils.damp(camera.position.y, 2.65 + pointerY * 0.08, 3, dt);
-    camera.lookAt(0, 1.76, 0);
-    actor.rotation.y = Math.atan2(camera.position.x, camera.position.z);
-    actor.position.y = 0.17 + Math.sin(elapsed * 0.95) * 0.009;
-    edgeMaterial.opacity = 0.035 + emphasis * 0.2;
-    rim.material.opacity = 0.64 + Math.sin(elapsed * 1.2) * 0.09 + emphasis * 0.18;
+    transition += dt;
+    const entrance = chamberEase(elapsed / CHAMBER_MOTION.entrance);
+    const progress = chamberEase(transition / CHAMBER_MOTION.selection);
+    openingAmount = THREE.MathUtils.damp(openingAmount, opening ? 1 : 0, 12, dt);
+    nodes.forEach((node, id) => {
+      node.group.position.lerpVectors(node.from, node.destination, progress);
+      node.emphasis = THREE.MathUtils.damp(
+        node.emphasis,
+        id === ids[selectedIndex] ? (hovered ? 1 : 0.4) : 0,
+        8,
+        dt,
+      );
+      node.update(node.emphasis, elapsed / CHAMBER_MOTION.entrance);
+    });
+    // Limited lateral travel exposes the room's perspective without orbiting a flat body.
+    const cameraTravel =
+      Math.sin(Math.min(1, transition / CHAMBER_MOTION.selection) * Math.PI) *
+      travelDirection *
+      0.48;
+    camera.position.x = THREE.MathUtils.damp(
+      camera.position.x,
+      pointerX * 0.52 + cameraTravel + (1 - entrance) * 0.7,
+      5,
+      dt,
+    );
+    camera.position.y = THREE.MathUtils.damp(
+      camera.position.y,
+      2.35 + pointerY * 0.14 + (1 - entrance) * 0.25,
+      5,
+      dt,
+    );
+    const distance = camera.aspect < 0.65 ? 8.15 : 7.35;
+    camera.position.z = distance + (1 - entrance) * 1.15 - openingAmount * 0.65;
+    look.set(cameraTravel * 0.2, 1.92 + openingAmount * 0.12, 0);
+    camera.lookAt(look);
     try {
       renderer.render(scene, camera);
+      alignHitTarget();
     } catch {
       stop();
       onFailure();
     }
   }
   try {
-    renderer.setClearColor(0x000000, 0);
+    renderer.setClearColor(0x0b0d11, 0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.setPixelRatio(
-      Math.min(window.devicePixelRatio || 1, host.clientWidth < 600 ? 1.25 : 1.75),
-    );
     renderer.domElement.setAttribute("aria-hidden", "true");
     host.appendChild(renderer.domElement);
     renderer.domElement.addEventListener("webglcontextlost", contextLost);
-    camera.position.set(0, 2.65, 8.4);
-    camera.lookAt(0, 1.76, 0);
-    scene.fog = new THREE.FogExp2("#0b0d11", 0.045);
-    scene.add(new THREE.HemisphereLight("#c7d0dd", "#121318", 2.4));
-    const key = new THREE.SpotLight("#efdbcb", 65, 18, 0.6, 0.8, 2);
-    key.position.set(-2, 6, 3);
+    camera.position.set(0.7, 2.6, 8.5);
+    camera.lookAt(look);
+    scene.fog = new THREE.FogExp2("#0b0d11", 0.048);
+    scene.add(new THREE.HemisphereLight("#d4d0cb", "#13161c", 1.6));
+    const key = new THREE.SpotLight("#f1e4d3", 100, 22, 0.65, 0.85, 2);
+    key.position.set(-3, 7, 4);
     scene.add(key);
-    const red = new THREE.PointLight("#e34b3d", 12, 7, 2);
-    red.position.set(0, 0.7, -1.1);
+    const fill = new THREE.PointLight("#c7a66a", 22, 12, 2);
+    fill.position.set(3, 4, -2);
+    scene.add(fill);
+    const red = new THREE.PointLight("#e34b3d", 3, 8, 2);
+    red.position.set(-3, 0.6, -1);
     scene.add(red);
-    const platform = trackMesh(
-      new THREE.CylinderGeometry(1.35, 1.42, 0.16, 96),
-      new THREE.MeshStandardMaterial({ color: "#252930", roughness: 0.55, metalness: 0.7 }),
+    const floor = resources.mesh(
+      new THREE.PlaneGeometry(80, 80),
+      new THREE.MeshStandardMaterial({ color: "#101319", roughness: 0.75, metalness: 0.48 }),
     );
-    platform.position.y = 0.06;
-    scene.add(platform);
-    const top = trackMesh(
-      new THREE.CircleGeometry(1.27, 96),
-      new THREE.MeshStandardMaterial({ color: "#15191e", roughness: 0.72, metalness: 0.35 }),
-    );
-    top.rotation.x = -Math.PI / 2;
-    top.position.y = 0.145;
-    scene.add(top);
-    rim = trackMesh(
-      new THREE.TorusGeometry(1.35, 0.012, 8, 96),
-      new THREE.MeshBasicMaterial({ color: "#e34b3d", transparent: true, opacity: 0.8 }),
-    );
-    rim.rotation.x = Math.PI / 2;
-    rim.position.y = 0.105;
-    scene.add(rim);
-    for (const radius of [1.19, 1.62, 2.25, 3.4]) {
-      const ring = trackMesh(
-        new THREE.RingGeometry(radius, radius + 0.008, 96),
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -0.03;
+    scene.add(floor);
+    for (const radius of [1.65, 2.45, 5.6, 8.5]) {
+      const ring = resources.mesh(
+        new THREE.RingGeometry(radius, radius + 0.009, 120),
         new THREE.MeshBasicMaterial({
-          color: radius < 1.3 ? "#64636a" : "#393c43",
+          color: "#78716a",
           transparent: true,
-          opacity: 0.48,
+          opacity: radius < 3 ? 0.23 : 0.12,
           side: THREE.DoubleSide,
         }),
       );
       ring.rotation.x = -Math.PI / 2;
-      ring.position.y = radius < 1.3 ? 0.15 : -0.03;
+      ring.position.y = -0.018;
       scene.add(ring);
     }
-    const tickGeometry = new THREE.BoxGeometry(0.008, 0.005, 0.06);
-    geometry.add(tickGeometry);
-    const tickMaterial = new THREE.MeshBasicMaterial({ color: "#5a5050" });
-    materials.add(tickMaterial);
-    for (let i = 0; i < 60; i++) {
-      const theta = (i / 60) * Math.PI * 2;
-      const tick = new THREE.Mesh(tickGeometry, tickMaterial);
-      tick.position.set(Math.sin(theta) * 1.53, -0.02, Math.cos(theta) * 1.53);
-      tick.rotation.y = theta;
-      scene.add(tick);
-    }
-    // Sparse, fixed stage lights. No particle system or postprocessing passes.
-    for (const x of [-2.7, 2.7]) {
-      const light = trackMesh(
-        new THREE.BoxGeometry(0.012, 3.3, 0.012),
-        new THREE.MeshBasicMaterial({ color: "#e34b3d", transparent: true, opacity: 0.17 }),
+    // Arena terraces, dark structural bays and overhead light strips establish scale.
+    const metal = new THREE.MeshStandardMaterial({
+      color: "#20242c",
+      roughness: 0.6,
+      metalness: 0.6,
+    });
+    for (let row = 0; row < 4; row++) {
+      const tier = resources.mesh(new THREE.BoxGeometry(30, 0.23, 0.85), metal);
+      tier.position.set(0, row * 0.24, -5.4 - row * 1.05);
+      scene.add(tier);
+      const line = resources.mesh(
+        new THREE.BoxGeometry(30, 0.012, 0.015),
+        new THREE.MeshBasicMaterial({ color: "#c7a66a", transparent: true, opacity: 0.09 }),
       );
-      light.position.set(x, 1.65, -1.7);
+      line.position.set(0, row * 0.24 + 0.12, -4.97 - row * 1.05);
+      scene.add(line);
+    }
+    for (const x of [-9, -6, -3.6, 3.6, 6, 9]) {
+      const column = resources.mesh(new THREE.BoxGeometry(0.18, 7, 0.35), metal);
+      column.position.set(x, 3.5, -6.5);
+      scene.add(column);
+      const light = resources.mesh(
+        new THREE.BoxGeometry(0.025, 3.4, 0.025),
+        new THREE.MeshBasicMaterial({ color: "#b4b6b6", transparent: true, opacity: 0.28 }),
+      );
+      light.position.set(x - Math.sign(x) * 0.11, 3.8, -6.3);
       scene.add(light);
     }
-    const shadow = trackMesh(
-      new THREE.CircleGeometry(0.65, 48),
-      new THREE.ShaderMaterial({
-        transparent: true,
-        depthWrite: false,
-        vertexShader: `varying vec2 point; void main() { point = uv - 0.5;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
-        fragmentShader: `varying vec2 point; void main() {
-        gl_FragColor = vec4(0.015, 0.018, 0.025, (1.0 - smoothstep(0.05, 0.5, length(point))) * 0.5); }`,
-      }),
-    );
-    shadow.rotation.x = -Math.PI / 2;
-    shadow.scale.y = 0.5;
-    shadow.position.set(0, 0.152, 0.04);
-    scene.add(shadow);
-    scene.add(actor);
+    for (const side of [-1, 1]) {
+      const rail = resources.mesh(new THREE.BoxGeometry(0.07, 0.06, 15), metal);
+      rail.position.set(side * 3.8, 4.6, -2.5);
+      scene.add(rail);
+      for (let i = 0; i < 3; i++) {
+        const strip = resources.mesh(
+          new THREE.BoxGeometry(1.8, 0.035, 0.14),
+          new THREE.MeshBasicMaterial({
+            color: "#f1efe9",
+            transparent: true,
+            opacity: 0.65 - i * 0.12,
+          }),
+        );
+        strip.position.set(side * 3.1, 4.4, -1.5 - i * 2.6);
+        scene.add(strip);
+      }
+      const lane = resources.mesh(
+        new THREE.BoxGeometry(0.035, 0.004, 12),
+        new THREE.MeshBasicMaterial({ color: "#e34b3d", transparent: true, opacity: 0.16 }),
+      );
+      lane.position.set(side * 3.4, -0.015, 0);
+      scene.add(lane);
+    }
     resize = new ResizeObserver(() => {
-      const width = host.clientWidth;
-      const height = host.clientHeight;
+      const width = host.clientWidth,
+        height = host.clientHeight;
       if (!width || !height) return;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, width < 600 ? 1.25 : 1.75));
       renderer.setSize(width, height);
       camera.aspect = width / height;
-      // Keep the whole platform inside narrow phones without shrinking the athlete excessively.
-      camera.position.z = camera.aspect < 0.75 ? 9.1 : 8.4;
       camera.updateProjectionMatrix();
     });
     resize.observe(host);
@@ -242,58 +270,64 @@ export function createHolographicScene(
     document.addEventListener("visibilitychange", visibility);
     start();
     return {
-      setAsset(asset) {
-        if (disposed || !asset.view) return;
-        const view = asset.view;
-        let texture = textures.get(asset.src);
-        if (!texture) {
-          texture = new THREE.Texture(asset.image);
-          texture.colorSpace = THREE.SRGBColorSpace;
-          texture.needsUpdate = true;
-          texture.anisotropy = Math.min(4, renderer.capabilities.getMaxAnisotropy());
-          textures.set(asset.src, texture);
-        }
-        const scale = 3.4 / (view.bottom - view.top);
-        const shape = new THREE.Shape(
-          view.outline.map(
-            ([x, y]) => new THREE.Vector2((x - view.center) * scale, (view.bottom - y) * scale),
-          ),
-        );
-        const meshGeometry = new THREE.ShapeGeometry(shape);
-        const positions = meshGeometry.getAttribute("position");
-        const uv = meshGeometry.getAttribute("uv");
-        for (let i = 0; i < positions.count; i++) {
-          uv.setXY(
-            i,
-            (positions.getX(i) / scale + view.center) / view.width,
-            1 - (view.bottom - positions.getY(i) / scale) / view.height,
-          );
-        }
-        uv.needsUpdate = true;
-        geometry.add(meshGeometry);
-        if (body) {
-          actor.remove(body);
-          geometry.delete(body.geometry);
-          body.geometry.dispose();
-        }
-        if (edge) actor.remove(edge);
-        if (projection) actor.remove(projection);
-        actorMaterial.map = texture;
-        actorMaterial.needsUpdate = true;
-        body = new THREE.Mesh(meshGeometry, actorMaterial);
-        edge = new THREE.Mesh(meshGeometry, edgeMaterial);
-        edge.scale.set(1.025, 1.005, 1);
-        edge.position.z = -0.018;
-        projection = new THREE.Mesh(meshGeometry, projectionMaterial);
-        projection.position.z = 0.003;
-        actor.add(edge, body, projection);
+      setRoster(nextIds, nextIndex) {
+        if (disposed) return;
+        if (
+          selectedIndex === nextIndex &&
+          ids.length === nextIds.length &&
+          ids.every((id, i) => id === nextIds[i])
+        )
+          return;
+        const initial = ids.length === 0;
+        travelDirection = Math.sign(nextIndex - selectedIndex);
+        ids = [...nextIds];
+        selectedIndex = nextIndex;
+        transition = 0;
+        nodes.forEach((node, id) => {
+          if (!ids.includes(id)) {
+            scene.remove(node.group);
+            nodes.delete(id);
+          }
+        });
+        ids.forEach((id, index) => {
+          let node = nodes.get(id);
+          const slot = chamberSlot(index, selectedIndex);
+          if (!node) {
+            node = createChamberAthlete(id, resources);
+            node.group.position.set(
+              slot.x + (initial ? 0.8 : 0),
+              slot.y,
+              slot.z - (initial ? 1.3 : 0),
+            );
+            nodes.set(id, node);
+            scene.add(node.group);
+          }
+          node.from.copy(node.group.position);
+          node.destination.set(slot.x, slot.y, slot.z);
+        });
+      },
+      setAsset(id, asset) {
+        if (!disposed) nodes.get(id)?.setAsset(asset);
       },
       setHovered(value) {
         hovered = value;
       },
+      setOpening(value) {
+        opening = value;
+      },
       setPointer(x, y) {
-        pointerX = x;
-        pointerY = y;
+        pointerX = THREE.MathUtils.clamp(x, -1, 1);
+        pointerY = THREE.MathUtils.clamp(y, -1, 1);
+      },
+      inspect() {
+        return {
+          selectedId: ids[selectedIndex],
+          camera: camera.position.toArray(),
+          nodes: [...nodes.values()].map((node) => ({
+            id: node.id,
+            position: node.group.position.toArray(),
+          })),
+        };
       },
       dispose,
     };

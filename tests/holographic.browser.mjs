@@ -4,10 +4,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || "playwright");
 const baseURL = process.env.BASE_URL || "http://127.0.0.1:8080";
-const output = "artifacts/holographic-review";
+const output = "artifacts/chamber-review";
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || "msedge" });
-const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 const page = await context.newPage();
 const errors = [];
 const result = { viewports: [], checks: [], errors };
@@ -18,11 +18,12 @@ page.on("console", (message) => {
 async function visit(target = page) {
   const response = await target.goto(`${baseURL}/jogadores`, { waitUntil: "networkidle" });
   assert.equal(response.status(), 200);
-  await target.getByRole("button", { name: "Frente", exact: true }).waitFor();
+  await target.locator(".holo-angle-controls").waitFor();
   await target.waitForFunction(
     () => !document.querySelector(".holo-render-label")?.textContent.includes("Preparando"),
   );
   await target.evaluate(() => document.fonts.ready);
+  await target.waitForTimeout(1400);
 }
 async function flatCase(name, options, setup, expectation) {
   const fallbackContext = await browser.newContext({
@@ -35,7 +36,9 @@ async function flatCase(name, options, setup, expectation) {
   if (setup) await setup(target);
   await visit(target);
   assert.equal(await target.locator(".holo-visual").getAttribute("data-render-mode"), "2d", name);
+  await target.locator(".holo-angle-controls summary").click();
   if (expectation) await expectation(target);
+  await target.locator(".holo-discover-button").click();
   assert.equal(await target.locator(".holo-career-cta").getAttribute("href"), "/jogadores/8");
   assert.deepEqual(failures, []);
   await target.screenshot({ path: `${output}/${name}.png`, fullPage: true });
@@ -44,7 +47,10 @@ async function flatCase(name, options, setup, expectation) {
 }
 try {
   for (const width of [360, 390, 768, 1024, 1440, 1920]) {
-    await page.setViewportSize({ width, height: width < 768 ? 844 : 1000 });
+    await page.setViewportSize({
+      width,
+      height: width < 768 ? 844 : width === 768 ? 1024 : width === 1920 ? 1080 : 900,
+    });
     await visit();
     assert.equal(await page.locator(".holo-visual").getAttribute("data-render-mode"), "3d");
     assert.equal(
@@ -54,9 +60,24 @@ try {
     );
     assert.equal(await page.locator(".holo-angle-buttons button:disabled").count(), 0);
     await page.screenshot({ path: `${output}/selection-${width}.png`, fullPage: true });
-    result.viewports.push(width);
+    const metrics = await page.evaluate(() => {
+      const room = document.querySelector(".holo-visual").getBoundingClientRect();
+      const athlete = document.querySelector(".holo-player-target").getBoundingClientRect();
+      return {
+        ratio: athlete.height / room.height,
+        top: athlete.top - room.top,
+        bottom: room.bottom - athlete.bottom,
+        scroll: document.documentElement.scrollHeight > innerHeight,
+      };
+    });
+    assert.ok(metrics.ratio >= 0.65 && metrics.ratio <= 0.8, JSON.stringify({ width, ...metrics }));
+    assert.ok(metrics.top >= 0 && metrics.bottom >= 0);
+    if (width >= 768) assert.equal(metrics.scroll, false);
+    assert.equal(await page.locator("#athlete-information").getAttribute("aria-hidden"), "true");
+    result.viewports.push({ width, ...metrics });
   }
-  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.locator(".holo-angle-controls summary").click();
   for (const label of ["Esquerda", "Costas", "Direita", "Frente"]) {
     const button = page.getByRole("button", { name: label, exact: true });
     await button.click();
@@ -64,7 +85,16 @@ try {
     await page.waitForTimeout(100);
     await page.screenshot({ path: `${output}/angle-${label}.png` });
   }
+  await page.locator(".holo-angle-controls summary").click();
+  await page.mouse.move(30, 300);
+  await page.waitForTimeout(450);
+  assert.equal(
+    await page.locator(".holo-chamber.is-engaged").count(),
+    0,
+    "empty room does not hover",
+  );
   await page.locator(".holo-player-target").hover();
+  await page.waitForTimeout(350);
   assert.equal(await page.locator(".holo-chamber.is-engaged").count(), 1);
   await page.screenshot({ path: `${output}/hover.png` });
   assert.equal(await page.getByRole("button", { name: "Atleta anterior" }).isDisabled(), true);
@@ -78,6 +108,7 @@ try {
   await page.waitForURL("**/jogadores/8");
   assert.match(await page.locator("#profile-name").textContent(), /^Nando\.?$/);
   await page.goBack({ waitUntil: "networkidle" });
+  await page.locator(".holo-discover-button").click();
   await page.locator(".holo-career-cta").click();
   await page.waitForURL("**/jogadores/8");
   result.checks.push(
@@ -87,6 +118,7 @@ try {
   await page.getByRole("button", { name: "Modo leve" }).click();
   assert.equal(await page.locator(".holo-canvas canvas").count(), 0);
   assert.equal(await page.locator(".holo-visual").getAttribute("data-render-mode"), "2d");
+  await page.locator(".holo-angle-controls summary").click();
   await page.getByRole("button", { name: "Costas", exact: true }).click();
   assert.match(await page.locator(".holo-flat img").getAttribute("src"), /back-full/);
   await page.screenshot({ path: `${output}/manual-2d.png` });

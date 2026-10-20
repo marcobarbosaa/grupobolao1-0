@@ -56,7 +56,7 @@ try {
     }
   }
 
-  // The Etapa 2.1 selection is covered by holographic.browser.mjs.
+  // The Etapa 2.2 selection is covered by holographic.browser.mjs.
   // Keep regression coverage for all existing profiles through the Home roster.
   await visit("/");
   const profileURLs = await page
@@ -205,6 +205,7 @@ try {
       configurable: true,
     }),
   );
+  await page.locator(".holo-discover-button").click();
   await page.locator(".holo-career-cta").click();
   await page.waitForURL("**/jogadores/8");
   result.checks.push("Reduced motion and navigation without View Transitions API");
@@ -216,6 +217,7 @@ try {
   });
   const touch = await touchContext.newPage();
   await touch.goto(baseURL + "/jogadores", { waitUntil: "networkidle" });
+  await touch.locator(".holo-discover-button").tap();
   await touch.locator(".holo-career-cta").tap();
   await touch.waitForURL("**/jogadores/8");
   assert.match(await touch.locator("#profile-name").textContent(), /Nando/);

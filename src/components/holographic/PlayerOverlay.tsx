@@ -1,12 +1,26 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
+import type { MouseEvent } from "react";
 import type { HolographicPlayer } from "../../lib/holographic-player";
 
-export function PlayerOverlay({ player }: { player: HolographicPlayer }) {
+export function PlayerOverlay({
+  player,
+  revealed,
+  onOpen,
+}: {
+  player: HolographicPlayer;
+  revealed: boolean;
+  onOpen: (event: MouseEvent<HTMLAnchorElement>) => void;
+}) {
   return (
-    <div className="holo-player-info">
+    <div
+      id="athlete-information"
+      className="holo-player-info"
+      inert={!revealed}
+      aria-hidden={!revealed}
+    >
       <p className="eyebrow holo-selected-label">
-        <span /> Atleta selecionado
+        <span /> A carreira começa aqui
       </p>
       <h2 id="selected-athlete">
         {player.name}
@@ -17,18 +31,14 @@ export function PlayerOverlay({ player }: { player: HolographicPlayer }) {
         {player.archetype && <p>{player.archetype}</p>}
       </div>
       {player.teams && <p className="holo-teams">{player.teams}</p>}
-      <p className="holo-invitation">
-        O atleta em cena.
-        <br />A história vai além.
-      </p>
       <Link
         to="/jogadores/$id"
         params={{ id: player.id }}
-        className="editorial-button holo-career-cta"
+        onClick={onOpen}
+        className="holo-career-cta"
       >
         Abrir carreira <ArrowUpRight size={19} aria-hidden="true" />
       </Link>
-      <p className="holo-profile-caption">Trajetória, conquistas e identidade.</p>
     </div>
   );
 }
