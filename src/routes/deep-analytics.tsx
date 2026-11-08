@@ -1,8 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Brain, Crosshair, Lightbulb, BarChart3, Users } from "lucide-react";
 import { players, getArchetypeColor } from "../lib/mock-data";
 import { useState, useEffect } from "react";
 import { RankingEngine } from "../lib/engine";
+import { SectionHeader } from "../components/sports/SectionHeader";
+import { VersusPanel } from "../components/sports/VersusPanel";
+import { usePlayerMotion } from "../components/players/usePlayerMotion";
 import {
   Radar,
   RadarChart,
@@ -22,7 +25,7 @@ import {
 export const Route = createFileRoute("/deep-analytics")({
   head: () => ({
     meta: [
-      { title: "Deep Analytics — Central da Liga" },
+      { title: "Comparar — Grupo Bolão 2.0" },
       { name: "description", content: "Análise avançada de performance e métricas dos jogadores" },
     ],
   }),
@@ -112,10 +115,9 @@ function getRadarData(p1: (typeof players)[0], p2: (typeof players)[0]) {
   ];
 }
 
-const NEON_RED = "#ef4444";
-const CHART_BLUE = "#3b82f6";
-const CHART_GOLD = "#eab308";
-const CHART_EMERALD = "#10b981";
+const NEON_RED = "var(--primary)";
+const CHART_BLUE = "var(--chart-opponent)";
+const CHART_GOLD = "var(--gold)";
 
 function CustomTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
@@ -132,6 +134,7 @@ function CustomTooltip({ active, payload, label }: any) {
 }
 
 function DeepAnalytics() {
+  const motion = usePlayerMotion();
   const [selectedPlayer, setSelectedPlayer] = useState(players[0]);
   const [comparePlayer, setComparePlayer] = useState(players[1]);
   const [evolutionPhase, setEvolutionPhase] = useState<string>("all");
@@ -147,73 +150,42 @@ function DeepAnalytics() {
 
   const radarData = getRadarData(selectedPlayer, comparePlayer);
   const allEvolutionData = getSeasonEvolution(selectedPlayer);
-  
+
   const evolutionData = allEvolutionData
     .filter((d) => {
-      const sNum = parseInt(d.name.replace('T', ''));
+      const sNum = parseInt(d.name.replace("T", ""));
       return sNum >= startSeason && sNum <= endSeason;
     })
-    .map(d => {
-      // If a specific phase is selected, we might want to hide others, 
-      // but the Bar components already handle this. 
+    .map((d) => {
+      // If a specific phase is selected, we might want to hide others,
+      // but the Bar components already handle this.
       // However, we ensure the data exists.
       return d;
     });
 
   return (
-    <div className="space-y-8 p-4 lg:p-8">
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl neon-border">
-          <Brain className="h-5 w-5 text-neon" />
-        </div>
-        <div>
-          <h1 className="text-2xl font-extrabold tracking-tight">Deep Analytics</h1>
-          <p className="text-sm text-muted-foreground">Métricas avançadas de performance</p>
-        </div>
-      </div>
-
-      {/* Player selectors */}
-      <div className="glass rounded-2xl p-5">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Jogador Principal
-            </label>
-            <select
-              value={selectedPlayer.id}
-              onChange={(e) =>
-                setSelectedPlayer(players.find((p) => p.id === Number(e.target.value))!)
-              }
-              className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm font-medium text-foreground focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon"
-            >
-              {players.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name} — {p.archetype}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              <Users className="mr-1 inline h-3 w-3" /> Comparar com
-            </label>
-            <select
-              value={comparePlayer.id}
-              onChange={(e) =>
-                setComparePlayer(players.find((p) => p.id === Number(e.target.value))!)
-              }
-              className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm font-medium text-foreground focus:border-neon focus:outline-none focus:ring-1 focus:ring-neon"
-            >
-              {players.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name} — {p.archetype}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </div>
-
+    <div className="sports-page analytics-page space-y-8">
+      <SectionHeader
+        eyebrow="DEEP ANALYTICS / FRENTE A FRENTE"
+        title="DOIS NOMES. UMA ARENA."
+        description="Compare trajetórias, explore os números e encontre o que faz cada jogador único."
+      />
+      <VersusPanel
+        left={selectedPlayer}
+        right={comparePlayer}
+        onLeft={setSelectedPlayer}
+        onRight={setComparePlayer}
+        onSwap={() => {
+          setSelectedPlayer(comparePlayer);
+          setComparePlayer(selectedPlayer);
+        }}
+      />
+      <p className="sports-data-notice">
+        Métricas derivadas da liga, não atributos oficiais do NBA 2K. Radar normalizado: PTS / 35,
+        REB / 18, AST / 13, STL / 3,5, BLK / 5 e QI / 5, multiplicados por 100. Clutch usa o índice
+        existente. A evolução mantém o motor original, incluindo estimativas quando faltam dados.
+        Ausência de fase permanece representada por zero no cálculo legado.
+      </p>
       {/* Charts row */}
       <div className="grid gap-4 lg:grid-cols-2">
         {/* Radar comparison */}
@@ -235,10 +207,11 @@ function DeepAnalytics() {
               <PolarGrid stroke="rgba(255,255,255,0.08)" />
               <PolarAngleAxis
                 dataKey="stat"
-                tick={{ fill: "#9ca3af", fontSize: 11, fontWeight: 600 }}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 11, fontWeight: 600 }}
               />
               <PolarRadiusAxis tick={false} axisLine={false} domain={[0, 100]} />
               <Radar
+                isAnimationActive={motion}
                 name={selectedPlayer.name}
                 dataKey="A"
                 stroke={NEON_RED}
@@ -247,6 +220,7 @@ function DeepAnalytics() {
                 strokeWidth={2}
               />
               <Radar
+                isAnimationActive={motion}
                 name={comparePlayer.name}
                 dataKey="B"
                 stroke={CHART_BLUE}
@@ -267,7 +241,8 @@ function DeepAnalytics() {
                 Evolução por Temporada
               </h3>
               <p className="text-[11px] text-muted-foreground">
-                Notas de <span className="font-semibold text-foreground">{selectedPlayer.name}</span> ao
+                Notas de{" "}
+                <span className="font-semibold text-foreground">{selectedPlayer.name}</span> ao
                 longo das temporadas selecionadas
               </p>
             </div>
@@ -275,21 +250,24 @@ function DeepAnalytics() {
             <div className="flex flex-wrap items-center gap-4">
               {/* Phase Filter */}
               <div className="space-y-1.5">
-                <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Fase</label>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                  Fase
+                </label>
                 <div className="flex gap-1 rounded-lg bg-muted/30 p-1">
                   {[
-                    { id: 'all', label: 'Todas' },
-                    { id: 'Regular', label: 'Regular' },
-                    { id: 'Playoffs', label: 'Playoffs' },
-                    { id: 'Finals', label: 'Finais' }
+                    { id: "all", label: "Todas" },
+                    { id: "Regular", label: "Regular" },
+                    { id: "Playoffs", label: "Playoffs" },
+                    { id: "Finals", label: "Finais" },
                   ].map((p) => (
                     <button
                       key={p.id}
                       onClick={() => setEvolutionPhase(p.id)}
+                      aria-pressed={evolutionPhase === p.id}
                       className={`rounded-md px-2 py-1 text-[10px] font-bold transition-all ${
-                        evolutionPhase === p.id 
-                          ? 'bg-background text-foreground shadow-sm ring-1 ring-border' 
-                          : 'text-muted-foreground hover:text-foreground'
+                        evolutionPhase === p.id
+                          ? "bg-background text-foreground shadow-sm ring-1 ring-border"
+                          : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
                       {p.label}
@@ -300,25 +278,41 @@ function DeepAnalytics() {
 
               {/* Season Range Filter */}
               <div className="space-y-1.5">
-                <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Intervalo</label>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                  Intervalo
+                </label>
                 <div className="flex items-center gap-2">
-                  <select 
-                    value={startSeason} 
-                    onChange={(e) => setStartSeason(Number(e.target.value))}
+                  <select
+                    value={startSeason}
+                    onChange={(e) => {
+                      const value = Number(e.target.value);
+                      setStartSeason(value);
+                      setEndSeason(Math.max(value, endSeason));
+                    }}
+                    aria-label="Temporada inicial"
                     className="rounded-lg border border-border bg-background/50 px-2 py-1 text-[10px] font-bold focus:outline-none focus:ring-1 focus:ring-neon"
                   >
                     {Array.from({ length: selectedPlayer.seasons }, (_, i) => (
-                      <option key={i+1} value={i+1}>T{i+1}</option>
+                      <option key={i + 1} value={i + 1}>
+                        T{i + 1}
+                      </option>
                     ))}
                   </select>
                   <span className="text-[10px] font-bold text-muted-foreground">/</span>
-                  <select 
-                    value={endSeason} 
-                    onChange={(e) => setEndSeason(Number(e.target.value))}
+                  <select
+                    value={endSeason}
+                    onChange={(e) => {
+                      const value = Number(e.target.value);
+                      setEndSeason(value);
+                      setStartSeason(Math.min(value, startSeason));
+                    }}
+                    aria-label="Temporada final"
                     className="rounded-lg border border-border bg-background/50 px-2 py-1 text-[10px] font-bold focus:outline-none focus:ring-1 focus:ring-neon"
                   >
                     {Array.from({ length: selectedPlayer.seasons }, (_, i) => (
-                      <option key={i+1} value={i+1}>T{i+1}</option>
+                      <option key={i + 1} value={i + 1}>
+                        T{i + 1}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -328,50 +322,57 @@ function DeepAnalytics() {
 
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={evolutionData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" vertical={false} />
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="rgba(255,255,255,0.06)"
+                vertical={false}
+              />
               <XAxis
                 dataKey="name"
-                tick={{ fill: "#9ca3af", fontSize: 11 }}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
               />
               <YAxis
                 domain={[0, 10]}
-                tick={{ fill: "#9ca3af", fontSize: 11 }}
+                tick={{ fill: "var(--muted-foreground)", fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
               />
-              <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
+              <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(255,255,255,0.04)" }} />
               <Legend
                 wrapperStyle={{ fontSize: 11, fontWeight: 600, paddingTop: 20 }}
                 iconType="circle"
                 iconSize={8}
               />
-              {(evolutionPhase === 'all' || evolutionPhase === 'Regular') && (
+              {(evolutionPhase === "all" || evolutionPhase === "Regular") && (
                 <Bar
                   dataKey="Regular"
                   fill={CHART_BLUE}
                   radius={[4, 4, 0, 0]}
                   maxBarSize={40}
-                  animationDuration={1000}
+                  isAnimationActive={motion}
+                  animationDuration={500}
                 />
               )}
-              {(evolutionPhase === 'all' || evolutionPhase === 'Playoffs') && (
+              {(evolutionPhase === "all" || evolutionPhase === "Playoffs") && (
                 <Bar
                   dataKey="Playoffs"
                   fill={CHART_GOLD}
                   radius={[4, 4, 0, 0]}
                   maxBarSize={40}
-                  animationDuration={1000}
+                  isAnimationActive={motion}
+                  animationDuration={500}
                 />
               )}
-              {(evolutionPhase === 'all' || evolutionPhase === 'Finals') && (
+              {(evolutionPhase === "all" || evolutionPhase === "Finals") && (
                 <Bar
                   dataKey="Finals"
                   fill={NEON_RED}
                   radius={[4, 4, 0, 0]}
                   maxBarSize={40}
-                  animationDuration={1000}
+                  isAnimationActive={motion}
+                  animationDuration={500}
                 />
               )}
             </BarChart>
@@ -432,7 +433,7 @@ function DeepAnalytics() {
 
         {/* Advanced metrics */}
         <div className="space-y-4">
-          <div className="neon-border animate-pulse-neon rounded-2xl p-6 text-center">
+          <div className="border border-border rounded-2xl p-6 text-center">
             <Crosshair className="mx-auto mb-2 h-6 w-6 text-neon" />
             <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
               Índice Clutch
@@ -462,16 +463,34 @@ function DeepAnalytics() {
             Ranking Clutch Comparativo
           </h3>
         </div>
-        <div className="overflow-x-auto">
+        <div
+          className="overflow-x-auto"
+          role="region"
+          tabIndex={0}
+          aria-label="Ranking Clutch com rolagem horizontal"
+        >
           <table className="w-full text-sm">
+            <caption className="sr-only">Ranking Clutch da liga</caption>
             <thead>
               <tr className="border-b border-border text-left text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                <th className="px-4 py-3">#</th>
-                <th className="px-4 py-3">Jogador</th>
-                <th className="px-4 py-3">Arquétipo</th>
-                <th className="px-4 py-3">Clutch</th>
-                <th className="px-4 py-3">QI</th>
-                <th className="px-4 py-3">Score</th>
+                <th scope="col" className="px-4 py-3">
+                  #
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Jogador
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Arquétipo
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Clutch
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  QI
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Score
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -483,7 +502,11 @@ function DeepAnalytics() {
                   }`}
                 >
                   <td className="px-4 py-3 font-bold text-muted-foreground">{i + 1}</td>
-                  <td className="px-4 py-3 font-semibold">{player.name}</td>
+                  <th scope="row" className="px-4 py-3 text-left font-semibold">
+                    <Link to="/jogadores/$id" params={{ id: String(player.id) }}>
+                      {player.name}
+                    </Link>
+                  </th>
                   <td className="px-4 py-3">
                     <span
                       className={`inline-flex rounded-full border px-2 py-0.5 text-[11px] font-semibold ${getArchetypeColor(player.archetype)}`}

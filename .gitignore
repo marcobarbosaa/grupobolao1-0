@@ -15,6 +15,10 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
+*.local.png
+artifacts/home-review/
+artifacts/players-review/
+artifacts/holographic-review/
 
 # Wrangler / Cloudflare
 .wrangler/
@@ -30,3 +34,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+artifacts/chamber-review/
+artifacts/redesign-review/
