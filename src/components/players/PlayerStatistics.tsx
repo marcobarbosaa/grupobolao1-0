@@ -48,7 +48,7 @@ export function PlayerStatistics({
     >
       <div className="section-heading">
         <div>
-          <p className="eyebrow section-kicker">04 / ESTATÍSTICAS COMPLETAS</p>
+          <p className="eyebrow section-kicker">Estatísticas</p>
           <h2 id="statistics-title">
             A HISTÓRIA
             <br />

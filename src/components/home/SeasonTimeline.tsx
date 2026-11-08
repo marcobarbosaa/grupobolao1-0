@@ -32,7 +32,7 @@ export function SeasonTimeline({ seasons }: { seasons: Season[] }) {
       <div className="site-container">
         <div className="section-heading">
           <div>
-            <p className="eyebrow section-kicker">03 / O TEMPO CONTA</p>
+            <p className="eyebrow section-kicker">Temporadas</p>
             <h2 id="timeline-title">
               UMA HISTÓRIA
               <br />

@@ -170,7 +170,7 @@ export function HolographicStage({
             : failure
               ? "Apresentação 2D · 3D indisponível"
               : is3d
-                ? "Sala de atletas / Grupo Bolão"
+                ? "Sala de atletas / Central do Bolão"
                 : "Preparando palco 3D";
   return (
     <div

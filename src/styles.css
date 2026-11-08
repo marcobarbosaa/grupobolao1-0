@@ -4,6 +4,7 @@
 @import "./styles/site.css";
 @import "./styles/players.css";
 @import "./styles/sports.css";
+@import "./styles/foundation.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -61,30 +62,49 @@
 
 :root {
   --radius: 0.25rem;
+  --site-max: 1440px;
+  --site-gutter: clamp(20px, 4vw, 64px);
+  --section-space: clamp(48px, 6vw, 88px);
+  --page-space: clamp(32px, 4vw, 60px);
+  --heading-xl: clamp(48px, 6vw, 88px);
+  --heading-lg: clamp(34px, 4vw, 60px);
+  --primary-hover: #ff6651;
+  --border-strong: #48566c;
+  --shadow-raised: 0 16px 40px #00000026;
+  --shadow-brand: 0 6px 22px #f04b351c;
+  --shadow-achievement: 0 6px 22px #f2c36514;
+  --motion-fast: 180ms;
+  --motion-scene: 400ms;
+  --ease-scene: cubic-bezier(0.22, 1, 0.36, 1);
+  --graphite: var(--surface-elevated);
+  --hairline: var(--border);
+  --team-portland: #a03931;
+  --team-minnesota: #326a79;
+  --team-orlando: #3467a1;
   --background: #090c12;
   --foreground: #f2f4f8;
-  --card: oklch(0.19 0.005 260);
-  --card-foreground: oklch(0.9 0.005 250);
-  --popover: oklch(0.19 0.005 260);
-  --popover-foreground: oklch(0.9 0.005 250);
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface-elevated);
+  --popover-foreground: var(--foreground);
   --primary: #f04b35;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.25 0.005 260);
-  --secondary-foreground: oklch(0.85 0.005 250);
-  --muted: oklch(0.22 0.005 260);
-  --muted-foreground: #9fa8b8;
-  --accent: oklch(0.25 0.01 260);
-  --accent-foreground: oklch(0.9 0.005 250);
+  --primary-foreground: var(--background);
+  --secondary: var(--surface-elevated);
+  --secondary-foreground: var(--foreground);
+  --muted: #202733;
+  --muted-foreground: #a9b2c2;
+  --accent: #252e3c;
+  --accent-foreground: var(--foreground);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.28 0.005 260);
-  --input: oklch(0.25 0.005 260);
-  --ring: oklch(0.62 0.24 20);
-  --chart-1: oklch(0.62 0.24 20);
-  --chart-2: oklch(0.65 0.18 250);
-  --chart-3: oklch(0.7 0.15 145);
-  --chart-4: oklch(0.75 0.15 55);
-  --chart-5: oklch(0.6 0.2 300);
+  --border: #2b3443;
+  --input: var(--border);
+  --ring: var(--gold);
+  --chart-1: var(--primary);
+  --chart-2: var(--chart-opponent);
+  --chart-3: var(--chart-positive);
+  --chart-4: var(--gold);
+  --chart-5: var(--silver);
   --sidebar: oklch(0.16 0.005 260);
   --sidebar-foreground: oklch(0.85 0.005 250);
   --sidebar-primary: oklch(0.62 0.24 20);
@@ -94,7 +114,7 @@
   --sidebar-border: oklch(0.28 0.005 260);
   --sidebar-ring: oklch(0.62 0.24 20);
   --neon: var(--primary);
-  --neon-foreground: oklch(1 0 0);
+  --neon-foreground: var(--primary-foreground);
   --surface: #11151d;
   --surface-elevated: #191f2b;
   --gold: #f2c365;
@@ -105,9 +125,20 @@
   --ink-muted: var(--muted-foreground);
   --chart-opponent: #7bb8f2;
   --chart-positive: #70c3a5;
-  --header-height: 76px;
+  --header-height: 88px;
   --silver: oklch(0.75 0.01 260);
   --bronze: oklch(0.65 0.1 55);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --header-height: 76px;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --header-height: 72px;
+  }
 }
 
 @layer base {
@@ -123,68 +154,36 @@
 }
 
 @layer utilities {
+  /* Compatibility utilities use the same opaque surfaces as the new foundation. */
   .glass {
-    background: oklch(0.19 0.005 260 / 60%);
-    backdrop-filter: blur(16px);
-    border: 1px solid oklch(1 0 0 / 8%);
+    background: var(--surface);
+    border: 1px solid var(--border);
   }
-
   .glass-elevated {
-    background: oklch(0.23 0.005 260 / 50%);
-    backdrop-filter: blur(20px);
-    border: 1px solid oklch(1 0 0 / 10%);
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
   }
-
   .neon-border {
-    border: 1px solid oklch(0.62 0.24 20 / 50%);
-    box-shadow:
-      0 0 15px oklch(0.62 0.24 20 / 15%),
-      inset 0 0 15px oklch(0.62 0.24 20 / 5%);
+    border: 1px solid color-mix(in srgb, var(--primary) 55%, var(--border));
   }
-
   .neon-glow {
-    box-shadow:
-      0 0 20px oklch(0.62 0.24 20 / 25%),
-      0 0 40px oklch(0.62 0.24 20 / 10%);
+    box-shadow: var(--shadow-brand);
   }
-
   .neon-text {
-    color: var(--color-neon);
-    text-shadow:
-      0 0 10px oklch(0.62 0.24 20 / 40%),
-      0 0 20px oklch(0.62 0.24 20 / 20%);
+    color: var(--primary);
   }
-
   .gold-glow {
-    box-shadow: 0 0 20px oklch(0.82 0.15 80 / 25%);
+    box-shadow: var(--shadow-achievement);
   }
-
-  .silver-glow {
-    box-shadow: 0 0 20px oklch(0.75 0.01 260 / 25%);
-  }
-
+  .silver-glow,
   .bronze-glow {
-    box-shadow: 0 0 20px oklch(0.65 0.1 55 / 25%);
+    box-shadow: var(--shadow-raised);
   }
-
   .stat-gradient {
-    background: linear-gradient(135deg, oklch(0.19 0.005 260) 0%, oklch(0.23 0.01 260) 100%);
+    background: var(--surface-elevated);
   }
-
   .animate-pulse-neon {
-    animation: pulseNeon 2s ease-in-out infinite;
-  }
-
-  @keyframes pulseNeon {
-    0%,
-    100% {
-      box-shadow: 0 0 15px oklch(0.62 0.24 20 / 20%);
-    }
-    50% {
-      box-shadow:
-        0 0 30px oklch(0.62 0.24 20 / 40%),
-        0 0 60px oklch(0.62 0.24 20 / 15%);
-    }
+    animation: none;
   }
 
   @keyframes fadeInUp {

@@ -30,7 +30,7 @@ export function PlayerAnalysis({ id }: { id: string }) {
     >
       <div className="sports-section-title">
         <div>
-          <p className="eyebrow sports-kicker">05 / LEITURA DE JOGO</p>
+          <p className="eyebrow sports-kicker">Análise</p>
           <h2 id="analysis-title">ALÉM DO PLACAR.</h2>
         </div>
         <p>

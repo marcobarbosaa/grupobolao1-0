@@ -147,7 +147,7 @@ export function CareerTimeline({
       <div className="site-container">
         <div className="section-heading">
           <div>
-            <p className="eyebrow section-kicker">03 / EVOLUÇÃO DA CARREIRA</p>
+            <p className="eyebrow section-kicker">Evolução por temporada</p>
             <h2 id="evolution-title">
               ANO A ANO.
               <br />

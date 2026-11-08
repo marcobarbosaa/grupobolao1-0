@@ -1,0 +1,364 @@
+/* Shared brand and layout foundation. Page-specific compositions stay in their own files. */
+.app-main {
+  padding-top: var(--header-height);
+  min-height: 80svh;
+}
+.site-shell {
+  min-width: 0;
+}
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  height: var(--header-height);
+  background: var(--background);
+}
+.site-header {
+  border-top: 3px solid var(--primary);
+  border-bottom: 1px solid var(--border);
+}
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  height: 100%;
+  max-width: var(--site-max);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+}
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 44px;
+}
+.brand-logo {
+  display: block;
+  object-fit: contain;
+}
+.brand-logo--horizontal {
+  width: 300px;
+  height: 48px;
+}
+.brand-logo--symbol {
+  width: 48px;
+  height: 48px;
+}
+.desktop-navigation {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  height: 100%;
+}
+.desktop-navigation a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  transition:
+    color var(--motion-fast),
+    background var(--motion-fast);
+  white-space: nowrap;
+}
+.desktop-navigation a:hover {
+  color: var(--foreground);
+  background: var(--surface);
+}
+.desktop-navigation a[aria-current] {
+  color: var(--foreground);
+}
+.desktop-navigation a[aria-current]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  inset-inline: 16px;
+  height: 3px;
+  background: var(--primary);
+}
+.mobile-menu-trigger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+.mobile-menu-trigger:hover {
+  background: var(--surface-elevated);
+}
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: var(--background);
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 61;
+  padding: 20px var(--site-gutter) max(32px, env(safe-area-inset-bottom));
+  background: var(--background);
+  overflow-y: auto;
+  border-top: 3px solid var(--primary);
+  animation: sports-enter var(--motion-scene) var(--ease-scene);
+}
+.mobile-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.mobile-menu-top .brand-logo {
+  max-width: calc(100% - 60px);
+}
+.mobile-navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--border);
+  font: 700 clamp(32px, 6vw, 48px)/1.15 var(--font-display);
+  transition: color var(--motion-fast);
+}
+.mobile-navigation a[aria-current] {
+  color: var(--primary);
+}
+.mobile-navigation a:hover {
+  color: var(--gold);
+}
+.mobile-navigation svg {
+  width: 22px;
+  height: 22px;
+}
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid var(--border);
+  padding-block: 36px;
+}
+.site-footer .brand-logo {
+  width: 250px;
+  height: 40px;
+}
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+.site-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.site-footer nav a:hover {
+  color: var(--foreground);
+}
+.page-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: none;
+  margin-bottom: 40px;
+}
+.page-context {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  margin-bottom: 16px;
+}
+.page-header h1 {
+  font: 800 var(--heading-xl)/0.96 var(--font-display);
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  max-width: 1100px;
+  text-wrap: balance;
+}
+.page-description {
+  max-width: 660px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted-foreground);
+}
+.page-header-actions {
+  flex-shrink: 0;
+}
+.section-space {
+  padding-block: var(--section-space);
+}
+.eyebrow {
+  letter-spacing: 0.08em;
+}
+.sports-button,
+.editorial-button {
+  min-height: 48px;
+  border-radius: var(--radius);
+  color: var(--primary-foreground);
+  box-shadow: none;
+}
+.sports-button:focus-visible,
+.editorial-button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 5px;
+}
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 5px;
+}
+select:focus-visible,
+input:focus-visible {
+  outline-offset: 3px;
+}
+.league-hero {
+  min-height: 620px;
+  border-bottom: 1px solid var(--border);
+}
+.league-hero::before {
+  display: none;
+}
+.league-hero-copy {
+  padding-block: 62px 48px;
+}
+.league-hero h1 {
+  margin-top: 0;
+  font-size: clamp(70px, 7.8vw, 112px);
+}
+.hero-intro {
+  max-width: 420px;
+  font-size: 15px;
+}
+.hero-photo-caption {
+  bottom: 40px;
+}
+.hero-photo-caption > p.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.sports-section-title h2 {
+  font-size: var(--heading-lg);
+}
+.sports-section-title .sports-kicker,
+.section-heading .section-kicker,
+.chapter-heading .section-kicker {
+  color: var(--muted-foreground);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.profile-breadcrumb {
+  padding-block: 24px;
+}
+.profile-hero-copy > .text-link {
+  margin-top: 24px;
+}
+.not-found-page {
+  min-height: 70svh;
+  display: grid;
+  place-items: center;
+  padding-block: var(--section-space);
+}
+.not-found-page .brand-logo {
+  margin: 0 auto 32px;
+  max-width: 100%;
+}
+.not-found-page h1 {
+  font: 800 clamp(96px, 15vw, 180px)/1 var(--font-display);
+  color: var(--primary);
+}
+.not-found-page h2 {
+  font-family: var(--font-display);
+  font-size: 32px;
+}
+@media (max-width: 1199px) {
+  .site-header .brand-logo {
+    width: 260px;
+  }
+  .desktop-navigation a {
+    padding-inline: 12px;
+  }
+  .desktop-navigation a[aria-current]::after {
+    inset-inline: 12px;
+  }
+}
+@media (max-width: 1023px) {
+  .desktop-navigation {
+    display: none;
+  }
+  .mobile-menu-trigger {
+    display: inline-flex;
+  }
+}
+@media (max-width: 700px) {
+  .site-header-inner {
+    gap: 16px;
+  }
+  .site-header .brand-logo,
+  .mobile-menu-top .brand-logo {
+    width: clamp(190px, 61vw, 260px);
+    height: 42px;
+  }
+  .page-header {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .page-context {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+  .page-header h1 {
+    font-size: clamp(42px, 11vw, 64px);
+    margin-bottom: 16px;
+  }
+  .page-description {
+    font-size: 14px;
+  }
+  .page-header-actions {
+    margin-top: 20px;
+  }
+  .league-hero {
+    min-height: 0;
+  }
+  .league-hero-copy {
+    padding: 36px var(--site-gutter) 28px;
+  }
+  .league-hero h1 {
+    font-size: clamp(56px, 13vw, 90px);
+  }
+  .hero-intro {
+    font-size: 14px;
+  }
+  .hero-photo-caption {
+    bottom: 28px;
+  }
+  .site-footer {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .site-footer .site-brand {
+    width: auto;
+  }
+  .site-footer .brand-logo {
+    width: 230px;
+  }
+  .site-footer nav {
+    gap: 6px 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    animation: none;
+  }
+}

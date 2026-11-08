@@ -31,7 +31,6 @@ export function PlayerGallery({
     <div className="players-page player-gallery">
       <section className="gallery-opening site-container" aria-labelledby="gallery-title">
         <div className="gallery-opening-copy">
-          <p className="eyebrow section-kicker">O ELENCO / GRUPO BOLÃO</p>
           <h1 id="gallery-title">
             OS
             <br />

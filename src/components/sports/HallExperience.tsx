@@ -16,7 +16,6 @@ export function HallExperience() {
     <div className="sports-hall">
       <section className="league-hero" aria-labelledby="hall-title">
         <div className="league-hero-copy">
-          <p className="eyebrow sports-kicker">NBA DOS CRIAS / CENTRAL DA LIGA</p>
           <h1 id="hall-title">
             O JOGO PASSA.
             <br />
@@ -25,7 +24,8 @@ export function HallExperience() {
             FICA.
           </h1>
           <p className="hero-intro">
-            Uma quadra. Muitas histórias. O lugar de quem fez da nossa liga algo maior que o jogo.
+            Conheça os jogadores, revisite as conquistas e compare as trajetórias que construíram a
+            nossa liga.
           </p>
           <div className="sports-actions">
             <a href="#lendas" className="sports-button">
@@ -59,9 +59,6 @@ export function HallExperience() {
             priority
             sizes="(max-width: 700px) 100vw, 55vw"
           />
-          <span className="hero-photo-index" aria-hidden="true">
-            01
-          </span>
           <div className="hero-photo-caption">
             <p className="eyebrow">LÍDER DA NOTA DE LEGADO / {leader.scoreTotal.toFixed(2)}</p>
             <Link to="/jogadores/$id" params={{ id: String(leader.id) }}>
@@ -73,15 +70,11 @@ export function HallExperience() {
             </p>
           </div>
         </div>
-        <div className="hero-bottom-line">
-          <span>SPORTS GAMING EXPERIENCE</span>
-          <span>HISTÓRIAS REAIS. NOSSA LIGA.</span>
-        </div>
       </section>
       <section id="lendas" className="sports-section" aria-labelledby="legends-title">
         <div className="sports-section-title">
           <div>
-            <p className="eyebrow sports-kicker">01 / HALL DA FAMA</p>
+            <p className="eyebrow sports-kicker">Hall da Fama</p>
             <h2 id="legends-title">
               CONSTRUÍDOS PARA
               <br />
@@ -130,7 +123,7 @@ export function HallExperience() {
       <section className="sports-section league-ranking" aria-labelledby="ranking-title">
         <div className="sports-section-title">
           <div>
-            <p className="eyebrow sports-kicker">02 / O JOGO EM NÚMEROS</p>
+            <p className="eyebrow sports-kicker">Classificação</p>
             <h2 id="ranking-title">
               CADA NOME.
               <br />

@@ -108,9 +108,6 @@ export function HolographicSelection({ players }: { players: HolographicPlayer[]
       >
         <header className="holo-chamber-top">
           <div className="holo-heading">
-            <p className="eyebrow">
-              <span /> Grupo Bolão / NBA 2K26
-            </p>
             <h1>
               OS PROTAGONISTAS<span>.</span>
             </h1>

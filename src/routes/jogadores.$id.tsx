@@ -19,18 +19,18 @@ export const Route = createFileRoute("/jogadores/$id")({
     meta: [
       {
         title: loaderData
-          ? `${loaderData.player.name} — A carreira | Central da Liga`
-          : "Jogador não encontrado — Central da Liga",
+          ? `${loaderData.player.name} — A carreira | Central do Bolão`
+          : "Jogador não encontrado — Central do Bolão",
       },
       {
         name: "description",
         content: loaderData
-          ? `Conheça a trajetória de ${loaderData.player.name}: biografia, conquistas e estatísticas por temporada no Grupo Bolão.`
-          : "Explore os jogadores do Grupo Bolão.",
+          ? `Conheça a trajetória de ${loaderData.player.name}: biografia, conquistas e estatísticas por temporada na Central do Bolão.`
+          : "Explore os jogadores da Central do Bolão.",
       },
       {
         property: "og:title",
-        content: loaderData ? `${loaderData.player.name} — Central da Liga` : "Central da Liga",
+        content: loaderData ? `${loaderData.player.name} — Central do Bolão` : "Central do Bolão",
       },
     ],
   }),

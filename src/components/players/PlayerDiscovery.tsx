@@ -13,7 +13,7 @@ export function PlayerDiscovery({ next }: { next?: PlayerPresentation }) {
       aria-labelledby="discovery-title"
     >
       <div>
-        <p className="eyebrow section-kicker">05 / A TRAJETÓRIA CONTINUA</p>
+        <p className="eyebrow section-kicker">Explore outros jogadores</p>
         <h2 id="discovery-title">
           OUTRO NOME.
           <br />

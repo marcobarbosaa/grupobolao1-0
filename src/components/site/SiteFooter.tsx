@@ -1,17 +1,14 @@
+import { Link } from "@tanstack/react-router";
 import { Brand } from "./Brand";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer site-container">
       <Brand />
-      <p>
-        Uma liga. Muitas histórias.
-        <br />
-        <span>NBA 2K26 · MyNBA / MyLeague · PC</span>
-      </p>
-      <span className="footer-edition">
-        NBA DOS CRIAS <b>CL</b>
-      </span>
+      <nav aria-label="Explorar a Central do Bolão">
+        <Link to="/biografias">Conheça os jogadores</Link>
+        <Link to="/temporadas">Explore as temporadas</Link>
+      </nav>
     </footer>
   );
 }

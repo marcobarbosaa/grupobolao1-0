@@ -1,21 +1,3 @@
-:root {
-  --obsidian: #0b0d11;
-  --graphite: #242830;
-  --ivory: #f1efe9;
-  --signal-red: #e34b3d;
-  --champagne: #c7a66a;
-  --ink-muted: #a6a7aa;
-  --hairline: #ffffff21;
-  --team-portland: #a03931;
-  --team-minnesota: #326a79;
-  --team-orlando: #3467a1;
-  --site-gutter: clamp(1.25rem, 4.5vw, 6rem);
-  --site-max: 1800px;
-  --header-height: 90px;
-  --motion-fast: 200ms;
-  --motion-scene: 600ms;
-  --ease-scene: cubic-bezier(0.22, 1, 0.36, 1);
-}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 20px);
@@ -82,143 +64,6 @@ button:disabled {
   line-height: 1.7;
   text-transform: uppercase;
 }
-.site-header {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 40;
-  height: var(--header-height);
-  transition:
-    background var(--motion-fast),
-    border-color var(--motion-fast);
-  border-bottom: 1px solid transparent;
-}
-.site-header.is-solid {
-  background: var(--obsidian);
-  border-color: var(--hairline);
-}
-.site-header-inner {
-  height: 100%;
-  max-width: var(--site-max);
-  margin-inline: auto;
-  padding-inline: var(--site-gutter);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
-}
-.site-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-.brand-mark {
-  color: var(--signal-red);
-  width: 38px;
-  height: 42px;
-}
-.site-brand > span {
-  font: 700 23px/1 var(--font-display);
-  letter-spacing: 0.055em;
-}
-.site-brand small {
-  display: block;
-  margin-top: 7px;
-  color: var(--ink-muted);
-  font: 500 7px/1.3 var(--font-sans);
-  letter-spacing: 0.16em;
-}
-.desktop-navigation {
-  display: flex;
-  align-items: center;
-  gap: clamp(18px, 2.1vw, 38px);
-}
-.desktop-navigation a {
-  position: relative;
-  padding-block: 34px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #c0c0c2;
-  transition: color var(--motion-fast);
-  white-space: nowrap;
-}
-.desktop-navigation a:hover,
-.desktop-navigation a[aria-current] {
-  color: var(--ivory);
-}
-.desktop-navigation a[aria-current]::after {
-  content: "";
-  position: absolute;
-  bottom: 23px;
-  left: 0;
-  width: 18px;
-  height: 2px;
-  background: var(--signal-red);
-}
-.header-edition {
-  font-size: 9px;
-  white-space: nowrap;
-  letter-spacing: 0.1em;
-  color: var(--ink-muted);
-}
-.header-edition span {
-  margin-inline: 6px;
-  color: var(--signal-red);
-}
-.mobile-menu-trigger {
-  display: none;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-}
-.mobile-menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: var(--obsidian);
-  z-index: 60;
-}
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-  z-index: 61;
-  padding: 22px var(--site-gutter) max(32px, env(safe-area-inset-bottom));
-  overflow-y: auto;
-  background: var(--obsidian);
-  animation: scene-enter 400ms var(--ease-scene);
-}
-.mobile-menu-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 26px;
-}
-.mobile-menu nav a {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding-block: 15px;
-  border-bottom: 1px solid var(--hairline);
-  font: 600 clamp(32px, 7vw, 58px)/1.2 var(--font-display);
-  animation: scene-enter 400ms var(--ease-scene) both;
-}
-.mobile-menu nav a[aria-current] {
-  color: var(--signal-red);
-}
-.menu-number {
-  font: 400 10px var(--font-sans);
-  color: var(--ink-muted);
-}
-.mobile-menu nav svg {
-  width: 21px;
-  margin-left: auto;
-}
-.mobile-menu-signoff {
-  margin-top: 35px;
-  color: var(--ink-muted);
-  font: 600 26px/1.1 var(--font-display);
-  text-transform: uppercase;
-}
 .icon-button {
   display: inline-flex;
   align-items: center;
@@ -245,7 +90,7 @@ button:disabled {
   gap: 28px;
   padding: 16px 22px;
   background: var(--signal-red);
-  color: var(--ivory);
+  color: var(--primary-foreground);
   font-size: 11px;
   font-weight: 600;
   transition:
@@ -253,7 +98,7 @@ button:disabled {
     transform var(--motion-fast);
 }
 .editorial-button:hover {
-  background: #ba382d;
+  background: var(--primary-hover);
   transform: translateY(-2px);
 }
 .text-link {

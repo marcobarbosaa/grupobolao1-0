@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import { players } from "../lib/mock-data";
 import { adaptPlayer } from "../lib/home-data";
 import { PlayerPortrait } from "../components/home/PlayerPortrait";
-import { SectionHeader } from "../components/sports/SectionHeader";
+import { PageHeader } from "../components/site/PageHeader";
 export const Route = createFileRoute("/recordes")({
-  head: () => ({ meta: [{ title: "Recordes — Central da Liga" }] }),
+  head: () => ({ meta: [{ title: "Recordes — Central do Bolão" }] }),
   component: Recordes,
 });
 const categories = [
@@ -35,8 +35,8 @@ function Recordes() {
   const observed = category.key === "rings";
   return (
     <div className="sports-page record-museum">
-      <SectionHeader
-        eyebrow="O MUSEU / MARCAS DA LIGA"
+      <PageHeader
+        context="Recordes"
         title="O LIMITE É HISTÓRIA."
         description="Os nomes que levaram os números mais longe. Explore os líderes de cada categoria."
       />

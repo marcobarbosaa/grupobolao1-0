@@ -21,7 +21,7 @@ export function Immortals({ players }: { players: HomePlayer[] }) {
             Nunca uma história.
           </p>
           <p className="immortals-description">
-            As conquistas, os nomes e as trajetórias que fazem parte da memória do Grupo Bolão.
+            As conquistas, os nomes e as trajetórias que fazem parte da memória da Central do Bolão.
           </p>
           <Link to="/hall-da-fama" className="editorial-button button-gold">
             Entre no Hall da Fama <ArrowUpRight size={18} aria-hidden="true" />

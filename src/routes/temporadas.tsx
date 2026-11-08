@@ -2,12 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { players, seasons } from "../lib/mock-data";
-import { SectionHeader } from "../components/sports/SectionHeader";
+import { PageHeader } from "../components/site/PageHeader";
 import { PlayerPortrait } from "../components/home/PlayerPortrait";
 import { adaptPlayer } from "../lib/home-data";
 
 export const Route = createFileRoute("/temporadas")({
-  head: () => ({ meta: [{ title: "Temporadas — Central da Liga" }] }),
+  head: () => ({ meta: [{ title: "Temporadas — Central do Bolão" }] }),
   component: Temporadas,
 });
 function AwardName({ name }: { name: string }) {
@@ -26,8 +26,8 @@ function Temporadas() {
   const mvp = players.find((p) => p.name === season.finalsMvp);
   return (
     <div className="sports-page season-archive">
-      <SectionHeader
-        eyebrow="O ACERVO / 22 CAPÍTULOS"
+      <PageHeader
+        context="Temporadas"
         title="O TEMPO. OS TÍTULOS."
         description="Cada temporada deixa uma marca. Percorra os capítulos da nossa liga."
       />

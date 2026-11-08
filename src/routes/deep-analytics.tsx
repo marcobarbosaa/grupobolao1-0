@@ -3,7 +3,7 @@ import { Brain, Crosshair, Lightbulb, BarChart3, Users } from "lucide-react";
 import { players, getArchetypeColor } from "../lib/mock-data";
 import { useState, useEffect } from "react";
 import { RankingEngine } from "../lib/engine";
-import { SectionHeader } from "../components/sports/SectionHeader";
+import { PageHeader } from "../components/site/PageHeader";
 import { VersusPanel } from "../components/sports/VersusPanel";
 import { usePlayerMotion } from "../components/players/usePlayerMotion";
 import {
@@ -25,7 +25,7 @@ import {
 export const Route = createFileRoute("/deep-analytics")({
   head: () => ({
     meta: [
-      { title: "Comparar — Grupo Bolão 2.0" },
+      { title: "Comparar — Central do Bolão" },
       { name: "description", content: "Análise avançada de performance e métricas dos jogadores" },
     ],
   }),
@@ -165,8 +165,8 @@ function DeepAnalytics() {
 
   return (
     <div className="sports-page analytics-page space-y-8">
-      <SectionHeader
-        eyebrow="DEEP ANALYTICS / FRENTE A FRENTE"
+      <PageHeader
+        context="Comparar jogadores"
         title="DOIS NOMES. UMA ARENA."
         description="Compare trajetórias, explore os números e encontre o que faz cada jogador único."
       />

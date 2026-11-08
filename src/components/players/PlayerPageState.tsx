@@ -14,7 +14,6 @@ export function PlayerPageState({
       role={kind === "error" ? "alert" : "status"}
       aria-busy={kind === "loading"}
     >
-      <p className="eyebrow section-kicker">GRUPO BOLÃO / JOGADORES</p>
       <h1>
         {kind === "loading"
           ? "A HISTÓRIA JÁ VAI COMEÇAR."

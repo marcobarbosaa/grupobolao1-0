@@ -12,7 +12,6 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
         <Link to="/jogadores" className="text-link">
           <ArrowLeft size={16} aria-hidden="true" /> Todos os protagonistas
         </Link>
-        <span className="eyebrow">O ACERVO / PERFIL {player.id.padStart(2, "0")}</span>
       </div>
       <section
         className={`profile-hero site-container tone-${player.tone}`}
@@ -23,7 +22,6 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
           style={{ viewTransitionName: `player-portrait-${player.id}` }}
         >
           <PlayerPortrait player={player} priority sizes="(max-width: 767px) 100vw, 55vw" />
-          <span className="profile-photo-stamp eyebrow">CENTRAL DA LIGA / ACERVO</span>
         </div>
         <div className="profile-hero-copy">
           <p className="eyebrow section-kicker">
@@ -50,11 +48,6 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
               </div>
             )}
           </div>
-          <p className="profile-hero-invitation">
-            O nome você conhece.
-            <br />
-            Agora, descubra a trajetória.
-          </p>
           <a href="#o-atleta" className="text-link">
             Entre na história <ArrowDown size={17} aria-hidden="true" />
           </a>

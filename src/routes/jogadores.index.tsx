@@ -3,7 +3,7 @@ import { validatePlayerFilters } from "../lib/player-adapter";
 import { PlayerSelection } from "../components/sports/PlayerSelection";
 export const Route = createFileRoute("/jogadores/")({
   validateSearch: validatePlayerFilters,
-  head: () => ({ meta: [{ title: "Jogadores — Central da Liga" }] }),
+  head: () => ({ meta: [{ title: "Jogadores — Central do Bolão" }] }),
   component: Jogadores,
 });
 function Jogadores() {

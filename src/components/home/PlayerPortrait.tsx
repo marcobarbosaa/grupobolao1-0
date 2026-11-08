@@ -30,7 +30,7 @@ export function PlayerPortrait({
       src={failed ? player.originalPortrait : player.portrait}
       srcSet={failed ? undefined : player.portraitSet}
       sizes={sizes}
-      alt={decorative ? "" : `${player.name}, jogador do Grupo Bolão`}
+      alt={decorative ? "" : `${player.name}, jogador da Central do Bolão`}
       width={896}
       height={1200}
       loading={priority ? "eager" : "lazy"}

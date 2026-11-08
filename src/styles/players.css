@@ -1,6 +1,6 @@
 /* Stage 2 extends the shared editorial tokens; all page rules are scoped. */
 .players-page {
-  padding-top: var(--header-height);
+  padding-top: 0;
 }
 .players-page h1,
 .players-page h2,

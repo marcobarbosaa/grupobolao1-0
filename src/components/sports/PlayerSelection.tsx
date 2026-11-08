@@ -7,7 +7,7 @@ import { playerRoster } from "../../lib/player-data";
 import { filterPlayers } from "../../lib/player-adapter";
 import type { PlayerFilters } from "../../lib/player-types";
 import { PlayerPortrait } from "../home/PlayerPortrait";
-import { SectionHeader } from "./SectionHeader";
+import { PageHeader } from "../site/PageHeader";
 
 export function PlayerSelection({
   filters,
@@ -40,8 +40,8 @@ export function PlayerSelection({
   const positions = [...new Set(playerRoster.flatMap((p) => p.positions))].sort();
   return (
     <div className="sports-page player-selection">
-      <SectionHeader
-        eyebrow="O ELENCO / NBA DOS CRIAS"
+      <PageHeader
+        context="Jogadores"
         title="ESCOLHA SUA LENDA."
         description="Treze protagonistas. Nenhuma trajetória igual. Entre na história de quem fez a liga."
       />

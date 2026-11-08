@@ -46,7 +46,9 @@ export function Legends({ players }: { players: HomePlayer[] }) {
             <PlayerPortrait player={player} />
             <span className="legend-position eyebrow">{player.position}</span>
             <div className="legend-caption">
-              <span className="eyebrow">{String(index + 1).padStart(2, "0")} / GRUPO BOLÃO</span>
+              <span className="eyebrow">
+                {String(index + 1).padStart(2, "0")} / CENTRAL DO BOLÃO
+              </span>
               <h3>{player.name}</h3>
               <span className="legend-profile">
                 Explorar trajetória <ArrowUpRight size={18} aria-hidden="true" />

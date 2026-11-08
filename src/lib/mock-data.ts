@@ -210,7 +210,7 @@ const RAW_PLAYERS = [
     clutchIndex: 85,
     basketballIQ: 4.9,
     awards: ["NBA Champion"],
-    bio: "Binho trouxe uma nova dimensão à posição de pivô como o 'Stretch 5' mais técnico da liga. Em 20 temporadas, passando por Utah, Pelicans e Hornets, ele desafiou as convenções ao apresentar uma visão de jogo e um passe dignos de um armador de elite, registrando médias impressionantes de 7.5 assistências por jogo. Com um QI de basquete quase perfeito (4.9), Binho não apenas pontuava (14.8 pts) e pegava rebotes (8.9), mas ditava o ritmo de todo o ataque. Campeão da NBA e maestro por natureza, sua habilidade de abrir a quadra e encontrar companheiros em ângulos impossíveis mudou a forma como os pivôs são avaliados na Central da Liga.",
+    bio: "Binho trouxe uma nova dimensão à posição de pivô como o 'Stretch 5' mais técnico da liga. Em 20 temporadas, passando por Utah, Pelicans e Hornets, ele desafiou as convenções ao apresentar uma visão de jogo e um passe dignos de um armador de elite, registrando médias impressionantes de 7.5 assistências por jogo. Com um QI de basquete quase perfeito (4.9), Binho não apenas pontuava (14.8 pts) e pegava rebotes (8.9), mas ditava o ritmo de todo o ataque. Campeão da NBA e maestro por natureza, sua habilidade de abrir a quadra e encontrar companheiros em ângulos impossíveis mudou a forma como os pivôs são avaliados na Central do Bolão.",
     imageUrl: "/jogadores/Binho.jpeg",
     teamHistory: {
       1: "Utah Jazz",
