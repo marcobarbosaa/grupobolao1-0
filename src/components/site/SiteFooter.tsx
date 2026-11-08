@@ -10,7 +10,7 @@ export function SiteFooter() {
         <span>NBA 2K26 · MyNBA / MyLeague · PC</span>
       </p>
       <span className="footer-edition">
-        GRUPO BOLÃO <b>2.0</b>
+        NBA DOS CRIAS <b>CL</b>
       </span>
     </footer>
   );

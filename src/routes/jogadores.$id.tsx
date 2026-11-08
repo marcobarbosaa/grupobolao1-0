@@ -19,8 +19,8 @@ export const Route = createFileRoute("/jogadores/$id")({
     meta: [
       {
         title: loaderData
-          ? `${loaderData.player.name} — A carreira | Grupo Bolão 2.0`
-          : "Jogador não encontrado — Grupo Bolão 2.0",
+          ? `${loaderData.player.name} — A carreira | Central da Liga`
+          : "Jogador não encontrado — Central da Liga",
       },
       {
         name: "description",
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/jogadores/$id")({
       },
       {
         property: "og:title",
-        content: loaderData ? `${loaderData.player.name} — Grupo Bolão 2.0` : "Grupo Bolão 2.0",
+        content: loaderData ? `${loaderData.player.name} — Central da Liga` : "Central da Liga",
       },
     ],
   }),

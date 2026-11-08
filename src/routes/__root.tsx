@@ -38,13 +38,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Grupo Bolão 2.0 — Nossa liga, nosso legado" },
+      { title: "Central da Liga — Nossa liga, nosso legado" },
       {
         name: "description",
         content:
           "A liga é nossa. A história também. Conheça os jogadores, as temporadas e o legado do Grupo Bolão, nossa liga de NBA 2K26 no PC.",
       },
-      { property: "og:title", content: "Grupo Bolão 2.0 — Nossa liga, nosso legado" },
+      { property: "og:title", content: "Central da Liga — Nossa liga, nosso legado" },
       {
         property: "og:description",
         content:
@@ -103,7 +103,7 @@ function RootComponent() {
       <main
         id="conteudo"
         tabIndex={-1}
-        className={pathname === "/" || /^\/jogadores(?:\/|$)/.test(pathname) ? "" : "legacy-page"}
+        className={/^\/jogadores\/.+/.test(pathname) ? "" : "sports-main"}
       >
         <Outlet />
       </main>

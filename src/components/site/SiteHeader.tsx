@@ -54,7 +54,7 @@ export function SiteHeader() {
             <Dialog.Overlay className="mobile-menu-overlay" />
             <Dialog.Content className="mobile-menu">
               <div className="mobile-menu-top">
-                <Dialog.Title className="eyebrow">Grupo Bolão / Navegação</Dialog.Title>
+                <Dialog.Title className="eyebrow">Central da Liga / Navegação</Dialog.Title>
                 <Dialog.Close className="icon-button" aria-label="Fechar menu">
                   <X aria-hidden="true" />
                 </Dialog.Close>

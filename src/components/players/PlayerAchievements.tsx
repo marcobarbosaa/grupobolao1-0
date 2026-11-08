@@ -17,7 +17,7 @@ export function PlayerAchievements({
       <div className="site-container">
         <div className="section-heading">
           <div>
-            <p className="eyebrow section-kicker">02 / O LEGADO</p>
+            <p className="eyebrow section-kicker">01 / O LEGADO</p>
             <h2 id="legacy-title">
               O QUE O TEMPO
               <br />

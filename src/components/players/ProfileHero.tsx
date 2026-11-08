@@ -2,8 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowLeft } from "lucide-react";
 import type { PlayerPresentation } from "../../lib/player-types";
 import { PlayerPortrait } from "../home/PlayerPortrait";
+import { players } from "../../lib/mock-data";
 
 export function ProfileHero({ player }: { player: PlayerPresentation }) {
+  const grade = players.find((p) => String(p.id) === player.id)?.scoreTotal;
   return (
     <>
       <div className="profile-breadcrumb site-container">
@@ -21,7 +23,7 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
           style={{ viewTransitionName: `player-portrait-${player.id}` }}
         >
           <PlayerPortrait player={player} priority sizes="(max-width: 767px) 100vw, 55vw" />
-          <span className="profile-photo-stamp eyebrow">GRUPO BOLÃO / ACERVO DA LIGA</span>
+          <span className="profile-photo-stamp eyebrow">CENTRAL DA LIGA / ACERVO</span>
         </div>
         <div className="profile-hero-copy">
           <p className="eyebrow section-kicker">
@@ -33,6 +35,10 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
           </h1>
           <p className="profile-teams">{player.teams}</p>
           <div className="profile-headline-facts">
+            <div className="fact-gold">
+              <strong>{grade?.toFixed(2) ?? "—"}</strong>
+              <span>LEGADO DA LIGA / 10</span>
+            </div>
             <div>
               <strong>{String(player.seasons).padStart(2, "0")}</strong>
               <span>TEMPORADAS</span>
@@ -57,10 +63,11 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
       <nav className="profile-chapters" aria-label="Capítulos da carreira">
         <div className="site-container">
           {[
-            { id: "o-atleta", label: "O atleta" },
             { id: "o-legado", label: "O legado" },
+            { id: "o-atleta", label: "O atleta" },
             { id: "evolucao", label: "Evolução" },
             { id: "estatisticas", label: "Estatísticas" },
+            { id: "analise", label: "Análise" },
             { id: "a-trajetoria-continua", label: "Continue explorando" },
           ].map((chapter, index) => (
             <a href={`#${chapter.id}`} key={chapter.id}>

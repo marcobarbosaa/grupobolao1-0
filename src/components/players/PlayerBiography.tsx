@@ -10,7 +10,7 @@ export function PlayerBiography({ player }: { player: PlayerPresentation }) {
       aria-labelledby="athlete-title"
     >
       <div className="chapter-heading">
-        <p className="eyebrow section-kicker">01 / O ATLETA</p>
+        <p className="eyebrow section-kicker">02 / O ATLETA</p>
         <h2 id="athlete-title">
           POR TRÁS
           <br />

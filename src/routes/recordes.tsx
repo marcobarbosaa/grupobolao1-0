@@ -1,109 +1,103 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Crown, TrendingUp } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import { players } from "../lib/mock-data";
-
+import { adaptPlayer } from "../lib/home-data";
+import { PlayerPortrait } from "../components/home/PlayerPortrait";
+import { SectionHeader } from "../components/sports/SectionHeader";
 export const Route = createFileRoute("/recordes")({
-  head: () => ({
-    meta: [
-      { title: "Recordes — Grupo Bolão 2.0" },
-      { name: "description", content: "Líderes históricos em todas as categorias estatísticas" },
-    ],
-  }),
+  head: () => ({ meta: [{ title: "Recordes — Central da Liga" }] }),
   component: Recordes,
 });
-
-interface LeaderCardProps {
-  category: string;
-  abbreviation: string;
-  players: { name: string; value: number }[];
-  unit?: string;
-}
-
-function LeaderCard({ category, abbreviation, players: leaders, unit = "" }: LeaderCardProps) {
+const categories = [
+  { key: "pts", label: "Pontos", abbr: "PTS" },
+  { key: "reb", label: "Rebotes", abbr: "REB" },
+  { key: "ast", label: "Assistências", abbr: "AST" },
+  { key: "stl", label: "Roubos", abbr: "STL" },
+  { key: "blk", label: "Tocos", abbr: "BLK" },
+  { key: "rings", label: "Campeonatos", abbr: "TÍTULOS" },
+] as const;
+function Recordes() {
+  const [active, setActive] = useState(0);
+  const category = categories[active];
+  // Preserve the existing ranking exactly. Career totals are estimates, not observed counts.
+  const leaders = players
+    .map((player) => ({
+      player,
+      value:
+        category.key === "rings"
+          ? player.rings
+          : Math.round(player[category.key] * player.seasons * 82),
+    }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 5);
+  const leader = leaders[0];
+  const observed = category.key === "rings";
   return (
-    <div className="glass-elevated rounded-2xl p-5 transition-transform hover:scale-[1.01]">
-      <div className="mb-4 flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-extrabold tracking-tight">{abbreviation}</h3>
-          <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-            {category}
-          </p>
-        </div>
-        <TrendingUp className="h-5 w-5 text-neon" />
-      </div>
-      <div className="space-y-2.5">
-        {leaders.map((p, i) => (
-          <div key={p.name} className="flex items-center gap-3">
-            <span
-              className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-bold ${
-                i === 0 ? "bg-neon/20 text-neon" : "bg-muted text-muted-foreground"
-              }`}
-            >
-              {i + 1}
-            </span>
-            <span
-              className={`flex-1 text-sm ${i === 0 ? "font-bold" : "font-medium text-muted-foreground"}`}
-            >
-              {p.name}
-            </span>
-            <span className={`text-sm font-extrabold ${i === 0 ? "neon-text" : ""}`}>
-              {p.value}
-              {unit}
-            </span>
-          </div>
+    <div className="sports-page record-museum">
+      <SectionHeader
+        eyebrow="O MUSEU / MARCAS DA LIGA"
+        title="O LIMITE É HISTÓRIA."
+        description="Os nomes que levaram os números mais longe. Explore os líderes de cada categoria."
+      />
+      <div className="record-categories" role="group" aria-label="Categoria de recordes">
+        {categories.map((cat, i) => (
+          <button
+            key={cat.key}
+            onClick={() => setActive(i)}
+            aria-pressed={i === active}
+            aria-controls="record-display"
+          >
+            <strong>{cat.abbr}</strong>
+            <span>{cat.label}</span>
+          </button>
         ))}
       </div>
-    </div>
-  );
-}
-
-function Recordes() {
-  const categories = [
-    { key: "pts" as const, label: "Pontos Totais", abbr: "PTS" },
-    { key: "reb" as const, label: "Ressaltos Totais", abbr: "REB" },
-    { key: "ast" as const, label: "Assistências Totais", abbr: "AST" },
-    { key: "stl" as const, label: "Roubos Totais", abbr: "STL" },
-    { key: "blk" as const, label: "Tocos Totais", abbr: "BLK" },
-    { key: "rings" as const, label: "Campeonatos", abbr: "RINGS" },
-  ];
-
-  const calculateTotal = (player: (typeof players)[0], key: string) => {
-    if (key === "rings") return player.rings;
-    // Assuming 82 games per season to calculate the career total based on per-game averages
-    const total = (player[key as keyof typeof player] as number) * player.seasons * 82;
-    return Math.round(total);
-  };
-
-  return (
-    <div className="space-y-8 p-4 lg:p-8">
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl neon-border">
-          <Crown className="h-5 w-5 text-neon" />
+      <section id="record-display" className="record-display" key={category.key} aria-live="polite">
+        <div className="record-photo">
+          <PlayerPortrait player={adaptPlayer(leader.player)} priority />
+          <span className="record-stamp">
+            01 <small>LÍDER / {category.abbr}</small>
+          </span>
         </div>
-        <div>
-          <h1 className="text-2xl font-extrabold tracking-tight">Recordes</h1>
-          <p className="text-sm text-muted-foreground">Líderes históricos em números absolutos</p>
+        <div className="record-copy">
+          <p className="eyebrow sports-kicker">
+            {observed ? "CONQUISTAS REGISTRADAS" : "TOTAL ESTIMADO DE CARREIRA"}
+          </p>
+          <h2>{leader.player.name}</h2>
+          <div className="record-value">
+            {leader.value.toLocaleString("pt-BR")}
+            <span>{category.label}</span>
+          </div>
+          <p>{leader.player.archetype}</p>
+          <Link className="text-link" to="/jogadores/$id" params={{ id: String(leader.player.id) }}>
+            Conheça a trajetória <ArrowUpRight size={17} />
+          </Link>
         </div>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {categories.map((cat, i) => {
-          const sorted = [...players]
-            .map((p) => ({ name: p.name, value: calculateTotal(p, cat.key) }))
-            .sort((a, b) => b.value - a.value)
-            .slice(0, 5);
-
-          return (
-            <div
-              key={cat.key}
-              className="animate-fade-in-up"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <LeaderCard category={cat.label} abbreviation={cat.abbr} players={sorted} />
-            </div>
-          );
-        })}
-      </div>
+        <div className="record-chasers">
+          <p className="eyebrow">NA DISPUTA / TOP 5</p>
+          <ol start={2}>
+            {leaders.slice(1).map(({ player, value }, i) => (
+              <li key={player.id}>
+                <span>0{i + 2}</span>
+                <Link to="/jogadores/$id" params={{ id: String(player.id) }}>
+                  {player.name}
+                  <ArrowUpRight size={12} />
+                </Link>
+                <strong>{value.toLocaleString("pt-BR")}</strong>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+      <aside className="sports-data-notice">
+        <strong>{observed ? "Títulos registrados no acervo" : "Como ler estes números"}</strong>
+        <p>
+          {observed
+            ? "A quantidade de campeonatos vem dos registros individuais dos atletas. Não é uma estimativa."
+            : "Estimativa = média de carreira × 82 jogos × temporadas, arredondada ao inteiro mais próximo. Não representa a soma de partidas observadas. O critério e a ordem do ranking original foram preservados; empates mantém a ordem do acervo."}
+        </p>
+      </aside>
     </div>
   );
 }

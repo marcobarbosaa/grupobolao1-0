@@ -1,9 +1,18 @@
-﻿import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { validatePlayerFilters } from "../lib/player-adapter";
-
+import { PlayerSelection } from "../components/sports/PlayerSelection";
 export const Route = createFileRoute("/biografias")({
   validateSearch: validatePlayerFilters,
-  beforeLoad: ({ search }) => {
-    throw redirect({ to: "/jogadores", search, replace: true, statusCode: 301 });
-  },
+  head: () => ({ meta: [{ title: "Biografias — Central da Liga" }] }),
+  component: Biografias,
 });
+function Biografias() {
+  const filters = Route.useSearch();
+  const navigate = Route.useNavigate();
+  return (
+    <PlayerSelection
+      filters={filters}
+      onFilterChange={(search) => navigate({ search, replace: true, resetScroll: false })}
+    />
+  );
+}

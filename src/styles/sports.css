@@ -1,0 +1,1365 @@
+/* Sports Gaming Experience. Colors inherit semantic tokens in styles.css. */
+.sports-main {
+  padding-top: var(--header-height);
+}
+.site-header {
+  background: var(--background);
+  border-color: var(--hairline);
+}
+.site-header-inner {
+  gap: 20px;
+}
+.desktop-navigation a {
+  padding-block: 27px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.desktop-navigation a[aria-current]::after {
+  bottom: 16px;
+  width: 100%;
+}
+.sports-page,
+.sports-section {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+}
+.sports-page {
+  padding-block: 56px 90px;
+}
+.sports-section {
+  padding-block: 72px;
+}
+.sports-heading {
+  margin-bottom: 38px;
+  max-width: 1100px;
+}
+.sports-heading .eyebrow,
+.sports-kicker {
+  color: var(--primary);
+}
+.sports-heading h1 {
+  margin: 12px 0 16px;
+  font: 800 clamp(48px, 6.2vw, 94px)/0.94 var(--font-display);
+  letter-spacing: -0.025em;
+}
+.sports-heading > p:last-child {
+  max-width: 620px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+}
+.sports-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.sports-section-title h2 {
+  font: 700 clamp(34px, 4vw, 60px)/1 var(--font-display);
+  margin-top: 12px;
+}
+.sports-section-title h2 span {
+  color: var(--muted-foreground);
+}
+.sports-main .timeline-section .section-heading h2 {
+  font: 700 clamp(34px, 4vw, 60px)/1 var(--font-display);
+  margin-top: 12px;
+}
+.sports-main .timeline-section .section-heading h2 span {
+  color: var(--muted-foreground);
+}
+.sports-section-title > p {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.sports-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.sports-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 17px 24px;
+  min-height: 48px;
+  background: var(--primary);
+  color: var(--background);
+  font: 700 12px var(--font-sans);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.sports-button:hover {
+  background: var(--gold);
+  transform: translateY(-2px);
+}
+.sports-note {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+  margin-top: 20px;
+  max-width: 1000px;
+}
+.sports-data-notice {
+  padding: 20px 24px;
+  border-left: 2px solid var(--gold);
+  background: var(--surface);
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.sports-data-notice strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--foreground);
+}
+.league-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1800px;
+  margin: auto;
+  min-height: 690px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.league-hero::before {
+  content: "";
+  position: absolute;
+  width: 630px;
+  height: 630px;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  left: -340px;
+  top: 80px;
+  pointer-events: none;
+}
+.league-hero-copy {
+  position: relative;
+  padding: 60px 0 74px var(--site-gutter);
+  z-index: 2;
+}
+.league-hero h1 {
+  position: relative;
+  width: 115%;
+  margin: 26px 0 24px;
+  font: 800 clamp(66px, 7.8vw, 118px)/0.88 var(--font-display);
+  letter-spacing: -0.025em;
+}
+.league-hero h1 span {
+  color: var(--primary);
+}
+.hero-intro {
+  max-width: 380px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+}
+.league-facts {
+  display: flex;
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: 42px;
+}
+.league-facts dt {
+  color: var(--muted-foreground);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.league-facts dd {
+  font: 700 38px var(--font-display);
+}
+.league-facts dd span {
+  color: var(--muted-foreground);
+}
+.league-hero-portrait {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+}
+.league-hero-portrait img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.league-hero-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--surface), transparent 32%),
+    linear-gradient(0deg, var(--background), transparent 65%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-photo-index {
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  font: 800 180px/0.9 var(--font-display);
+  opacity: 0.18;
+  z-index: 2;
+}
+.hero-photo-caption {
+  position: absolute;
+  bottom: 65px;
+  left: 12%;
+  z-index: 2;
+}
+.hero-photo-caption > a {
+  font: 800 64px/1 var(--font-display);
+  text-transform: uppercase;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 10px 0;
+}
+.hero-photo-caption > a svg {
+  width: 30px;
+  height: 30px;
+}
+.hero-photo-caption p {
+  font-size: 12px;
+  color: var(--gold);
+}
+.hero-photo-caption p:last-child {
+  color: var(--foreground);
+}
+.hero-bottom-line {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px var(--site-gutter);
+  border-top: 1px solid var(--hairline);
+  z-index: 3;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: var(--muted-foreground);
+}
+.ranking-podium {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+.podium-player {
+  display: block;
+  position: relative;
+  height: 430px;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--surface);
+  border-bottom: 3px solid var(--muted-foreground);
+  transition: transform 0.3s;
+}
+.podium-player:hover {
+  transform: translateY(-5px);
+}
+.podium-1 {
+  height: 510px;
+  border-color: var(--gold);
+}
+.podium-3 {
+  height: 390px;
+}
+.podium-player img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.podium-player:hover img {
+  transform: scale(1.025);
+}
+.podium-player::after,
+.athlete-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, var(--background) 4%, transparent 85%);
+  z-index: 1;
+}
+.podium-rank {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  font: 800 60px/0.9 var(--font-display);
+  z-index: 2;
+  text-shadow: 0 2px 12px var(--background);
+}
+.podium-1 .podium-rank {
+  color: var(--gold);
+}
+.podium-rank small {
+  display: block;
+  font: 600 8px var(--font-sans);
+  letter-spacing: 0.1em;
+  margin-top: 9px;
+}
+.podium-caption {
+  position: absolute;
+  inset: auto 24px 22px;
+  z-index: 2;
+}
+.podium-caption h3 {
+  font: 700 56px/1 var(--font-display);
+  text-transform: uppercase;
+  margin: 8px 0 18px;
+}
+.podium-caption > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+.podium-caption strong {
+  font: 700 27px var(--font-display);
+  color: var(--gold);
+}
+.podium-profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  padding-top: 14px;
+  margin-top: 17px;
+  font-size: 11px;
+}
+.league-ranking {
+  border-top: 1px solid var(--border);
+}
+.sports-chart {
+  min-width: 0;
+  padding: 24px 20px;
+  background: var(--surface);
+}
+.sports-chart h3,
+.performance-report h3 {
+  font: 600 12px var(--font-sans);
+  margin-bottom: 20px;
+}
+.sports-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 24px;
+}
+.sports-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+.sports-table caption {
+  text-align: left;
+  padding: 12px 0;
+  font-size: 11px;
+  color: var(--muted-foreground);
+}
+.sports-table th,
+.sports-table td {
+  padding: 18px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.sports-table thead {
+  color: var(--muted-foreground);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.sports-table td:nth-child(3),
+.sports-table td:nth-child(4) {
+  min-width: 160px;
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+.sports-table a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.sports-table a:hover {
+  color: var(--gold);
+}
+.sports-table tbody tr:hover {
+  background: var(--surface);
+}
+.score-cell {
+  color: var(--gold);
+  font-weight: 700;
+}
+.sports-select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted-foreground);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.sports-select select,
+.sports-select input {
+  min-width: 0;
+  min-height: 46px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--foreground);
+  font: 500 12px var(--font-sans);
+}
+.season-browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+.season-browser select {
+  min-width: 260px;
+}
+.season-browser .sports-actions {
+  font-size: 11px;
+}
+.season-chapter {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.7fr;
+  min-height: 350px;
+  background: var(--surface);
+  border-top: 2px solid var(--gold);
+  animation: sports-enter 0.35s ease both;
+}
+.season-chapter-year {
+  padding: 36px;
+  border-right: 1px solid var(--hairline);
+}
+.season-chapter-year strong {
+  display: block;
+  font: 700 clamp(64px, 8vw, 120px)/0.95 var(--font-display);
+  margin-top: 30px;
+}
+.season-chapter-year strong span {
+  display: block;
+  color: var(--muted-foreground);
+}
+.season-chapter-story {
+  padding: 36px;
+  align-self: center;
+}
+.season-chapter-story h2 {
+  font: 700 clamp(36px, 4vw, 62px)/1 var(--font-display);
+  text-transform: uppercase;
+  margin: 16px 0 30px;
+}
+.season-chapter dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+}
+.season-chapter dt,
+.season-ledger dt {
+  font-size: 10px;
+  color: var(--muted-foreground);
+  margin-bottom: 8px;
+}
+.season-chapter dd,
+.season-ledger dd {
+  font-size: 13px;
+}
+.season-chapter dd a,
+.season-ledger dd a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+}
+.season-chapter-photo {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+.season-chapter-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.season-chapter-photo > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px;
+  background: linear-gradient(transparent, var(--background));
+  font-size: 8px;
+}
+.season-chapter:not(:has(.season-chapter-photo)) {
+  grid-template-columns: 1fr 2fr;
+}
+.archive-title {
+  margin-top: 70px;
+}
+.season-ledger details {
+  border-top: 1px solid var(--border);
+}
+.season-ledger details:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.season-ledger summary {
+  display: grid;
+  grid-template-columns: 60px 130px 1fr 30px;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 18px;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.2s;
+}
+.season-ledger summary::-webkit-details-marker {
+  display: none;
+}
+.season-ledger summary:hover,
+.season-ledger details[open] {
+  background: var(--surface);
+}
+.chapter-number {
+  font: 700 28px var(--font-display);
+  color: var(--muted-foreground);
+}
+.season-ledger summary > span:nth-child(2) {
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.season-ledger summary strong {
+  font: 600 24px var(--font-display);
+  text-transform: uppercase;
+}
+.chapter-expand {
+  font-size: 24px;
+  color: var(--gold);
+}
+.season-ledger details[open] .chapter-expand {
+  transform: rotate(45deg);
+}
+.season-ledger dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 70px;
+  padding: 0 24px 26px 98px;
+}
+.season-ledger .is-current .chapter-number {
+  color: var(--gold);
+}
+.record-categories {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 26px;
+  border-block: 1px solid var(--border);
+}
+.record-categories button {
+  padding: 20px 12px;
+  text-align: left;
+  border-bottom: 3px solid transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.record-categories button:hover {
+  background: var(--surface);
+}
+.record-categories button[aria-pressed="true"] {
+  background: var(--surface-elevated);
+  border-color: var(--primary);
+}
+.record-categories strong {
+  display: block;
+  font: 700 30px var(--font-display);
+}
+.record-categories span {
+  color: var(--muted-foreground);
+  font-size: 10px;
+}
+.record-display {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  background: var(--surface);
+  min-height: 450px;
+  animation: sports-enter 0.4s ease both;
+}
+.record-photo {
+  position: relative;
+  min-height: 450px;
+}
+.record-photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.record-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, var(--background), transparent 55%);
+}
+.record-stamp {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font: 800 76px/1 var(--font-display);
+  z-index: 1;
+  color: var(--gold);
+}
+.record-stamp small {
+  font: 600 9px var(--font-sans);
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+.record-copy {
+  padding: 42px 32px;
+}
+.record-copy h2 {
+  font: 800 64px/1 var(--font-display);
+  text-transform: uppercase;
+  margin: 16px 0 26px;
+}
+.record-value {
+  font: 700 clamp(54px, 5.5vw, 82px)/1 var(--font-display);
+  color: var(--gold);
+}
+.record-value span {
+  display: block;
+  font: 600 11px var(--font-sans);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.record-copy > p:not(.eyebrow) {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  margin: 22px 0;
+}
+.record-chasers {
+  border-left: 1px solid var(--border);
+  padding: 42px 24px;
+  align-content: center;
+}
+.record-chasers ol {
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+}
+.record-chasers li {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.record-chasers li > span {
+  color: var(--muted-foreground);
+}
+.record-chasers a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.record-chasers a:hover {
+  color: var(--gold);
+}
+.record-chasers strong {
+  font-variant-numeric: tabular-nums;
+}
+.selection-filters {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.7fr;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+.selection-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.selection-toolbar > p {
+  color: var(--muted-foreground);
+}
+.selection-viewport {
+  overflow: hidden;
+  padding: 6px;
+  margin: -6px;
+}
+.selection-track {
+  display: flex;
+  gap: 18px;
+  touch-action: pan-y pinch-zoom;
+}
+.athlete-card {
+  position: relative;
+  isolation: isolate;
+  flex: 0 0 calc(25% - 14px);
+  min-width: 0;
+  aspect-ratio: 0.64;
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+.athlete-card.is-selected {
+  border-color: var(--gold);
+}
+.athlete-card:hover {
+  border-color: var(--foreground);
+}
+.athlete-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.athlete-card:hover img {
+  transform: scale(1.025);
+}
+.athlete-grade {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  font: 800 38px/1 var(--font-display);
+  text-shadow: 0 2px 10px var(--background);
+}
+.athlete-grade small {
+  display: block;
+  font: 600 8px var(--font-sans);
+  margin-top: 4px;
+  letter-spacing: 0.12em;
+}
+.athlete-card-copy {
+  position: absolute;
+  inset: auto 18px 22px;
+  z-index: 2;
+}
+.athlete-card-copy h2 {
+  font: 800 clamp(30px, 3.5vw, 52px)/1 var(--font-display);
+  text-transform: uppercase;
+  margin-block: 5px 8px;
+}
+.athlete-card-copy > p {
+  font-size: 10px;
+  line-height: 1.5;
+  min-height: 30px;
+  color: var(--muted-foreground);
+}
+.athlete-card-award {
+  display: block;
+  font-size: 9px;
+  color: var(--gold);
+  border-top: 1px solid var(--hairline);
+  padding-top: 13px;
+  margin-top: 13px;
+}
+.selected-athlete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 36px;
+  padding: 36px 0;
+  border-block: 1px solid var(--border);
+  animation: sports-enter 0.35s ease both;
+}
+.selected-athlete h2 {
+  font: 800 66px/1 var(--font-display);
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+.selected-athlete > div > p:not(.eyebrow) {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.selection-facts {
+  display: flex;
+  gap: 34px;
+  margin-top: 24px;
+}
+.selection-facts dt {
+  color: var(--muted-foreground);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+.selection-facts dd {
+  font: 700 34px var(--font-display);
+  color: var(--gold);
+}
+.selection-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 20px 0 24px;
+  padding: 0;
+  font-size: 11px;
+  color: var(--gold);
+}
+.selection-empty {
+  padding: 50px 0;
+}
+.selection-empty h2 {
+  margin-bottom: 24px;
+  font: 700 36px var(--font-display);
+}
+.versus-arena {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  align-items: stretch;
+}
+.vs-contender {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 0;
+  background: var(--surface);
+  border-bottom: 2px solid var(--primary);
+}
+.vs-contender:last-child {
+  border-color: var(--chart-opponent);
+}
+.vs-photo {
+  position: relative;
+  min-height: 330px;
+}
+.vs-photo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vs-photo > span {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 5px 8px;
+  background: var(--background);
+}
+.vs-copy {
+  padding: 24px 20px;
+  min-width: 0;
+}
+.vs-copy > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+.vs-copy h2 {
+  font: 800 clamp(32px, 3vw, 52px)/1 var(--font-display);
+  text-transform: uppercase;
+}
+.vs-copy > p {
+  font-size: 11px;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.vs-copy dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 26px;
+}
+.vs-copy dt {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.vs-copy dd {
+  font: 700 26px var(--font-display);
+}
+.vs-center {
+  align-self: center;
+  text-align: center;
+}
+.vs-center > strong {
+  font: italic 800 60px var(--font-display);
+}
+.vs-center button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 60px;
+  margin-top: 20px;
+  color: var(--muted-foreground);
+  font-size: 8px;
+}
+.vs-center button:hover {
+  color: var(--gold);
+}
+.analytics-page .glass,
+.analytics-page .glass-elevated {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: none;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.analytics-page .neon-text {
+  color: var(--primary);
+  text-shadow: none;
+}
+.analytics-page .grid > div {
+  min-width: 0;
+}
+.analytics-page table {
+  min-width: 540px;
+}
+.analytics-page select {
+  min-height: 44px;
+}
+.analytics-page button {
+  min-height: 40px;
+}
+.profile-analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.performance-report {
+  padding: 28px;
+  background: var(--surface);
+}
+.performance-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  font-size: 12px;
+  margin-block: 22px;
+}
+.performance-row strong {
+  color: var(--gold);
+}
+.performance-row meter {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 6px;
+  accent-color: var(--gold);
+}
+.legacy-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 25px;
+  margin-top: 30px;
+}
+.legacy-final > span {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.legacy-final strong {
+  font: 700 54px var(--font-display);
+  color: var(--gold);
+}
+.legacy-final small {
+  font-size: 18px;
+  color: var(--muted-foreground);
+  margin-left: 8px;
+}
+.profile-headline-facts {
+  flex-wrap: wrap;
+}
+@keyframes sports-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1100px) {
+  .header-edition {
+    display: none;
+  }
+  .league-hero {
+    min-height: 640px;
+  }
+  .league-hero-copy {
+    padding-top: 50px;
+  }
+  .league-hero h1 {
+    font-size: 8.6vw;
+  }
+  .league-hero-copy .sports-actions {
+    gap: 18px;
+  }
+  .record-display {
+    grid-template-columns: 1fr 1.3fr;
+  }
+  .record-chasers {
+    grid-column: 1/-1;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    padding: 24px;
+  }
+  .record-chasers ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 35px;
+  }
+  .vs-contender {
+    grid-template-columns: 1fr;
+  }
+  .vs-photo {
+    min-height: 240px;
+  }
+  .vs-photo img {
+    object-position: 50% 22% !important;
+  }
+  .vs-copy {
+    padding: 22px;
+  }
+  .vs-copy > a {
+    margin-top: 20px;
+  }
+  .athlete-card {
+    flex-basis: calc(33.333% - 12px);
+  }
+  .season-chapter {
+    grid-template-columns: 0.8fr 1.4fr;
+  }
+  .season-chapter-photo {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .sports-page {
+    padding-block: 32px 55px;
+  }
+  .sports-section {
+    padding-block: 48px;
+  }
+  .sports-heading {
+    margin-bottom: 28px;
+  }
+  .sports-heading h1 {
+    font-size: 50px;
+  }
+  .sports-section-title {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .sports-section-title h2 {
+    font-size: 38px;
+  }
+  .league-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .league-hero-copy {
+    padding: 34px var(--site-gutter) 24px;
+  }
+  .league-hero h1 {
+    width: auto;
+    font-size: clamp(58px, 13vw, 90px);
+    margin-block: 20px;
+  }
+  .hero-intro {
+    max-width: 350px;
+    font-size: 12px;
+  }
+  .sports-actions {
+    gap: 18px;
+  }
+  .sports-button {
+    padding: 15px 20px;
+    font-size: 11px;
+  }
+  .league-facts {
+    margin-top: 26px;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .league-facts dd {
+    font-size: 32px;
+  }
+  .league-facts dt {
+    font-size: 8px;
+  }
+  .league-hero-portrait {
+    height: 400px;
+  }
+  .league-hero-portrait img {
+    object-position: 50% 22% !important;
+  }
+  .league-hero-portrait::after {
+    background: linear-gradient(0deg, var(--background), transparent 70%);
+  }
+  .hero-photo-index {
+    font-size: 130px;
+    top: 18px;
+    right: 20px;
+  }
+  .hero-photo-caption {
+    left: var(--site-gutter);
+    bottom: 64px;
+  }
+  .hero-photo-caption > a {
+    font-size: 56px;
+  }
+  .hero-bottom-line {
+    font-size: 6px;
+    gap: 15px;
+  }
+  .ranking-podium {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .podium-1 {
+    grid-column: 1/-1;
+    height: 460px;
+  }
+  .podium-2,
+  .podium-3 {
+    height: 320px;
+  }
+  .podium-caption {
+    inset-inline: 13px;
+    bottom: 16px;
+  }
+  .podium-caption h3 {
+    font-size: 36px;
+  }
+  .podium-1 .podium-caption h3 {
+    font-size: 52px;
+  }
+  .podium-caption .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.02em;
+  }
+  .podium-caption > div {
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+  .podium-profile {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .podium-rank {
+    font-size: 45px;
+    left: 13px;
+  }
+  .podium-rank small {
+    font-size: 6px;
+  }
+  .sports-chart {
+    padding: 20px 8px;
+  }
+  .season-browser {
+    gap: 14px;
+  }
+  .season-browser select {
+    min-width: 0;
+  }
+  .season-browser .sports-select {
+    flex: 1;
+  }
+  .season-browser .sports-actions {
+    gap: 8px;
+  }
+  .season-browser .sports-actions > span {
+    display: none;
+  }
+  .season-chapter,
+  .season-chapter:not(:has(.season-chapter-photo)) {
+    grid-template-columns: 1fr;
+  }
+  .season-chapter-year {
+    padding: 24px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .season-chapter-year strong {
+    font-size: 68px;
+    margin-top: 16px;
+  }
+  .season-chapter-year strong span {
+    display: inline;
+    font-size: 48px;
+    margin-left: 10px;
+  }
+  .season-chapter-story {
+    padding: 28px 24px;
+  }
+  .season-chapter-story h2 {
+    font-size: 44px;
+  }
+  .season-ledger summary {
+    grid-template-columns: 30px 70px 1fr 16px;
+    gap: 12px;
+    padding: 20px 4px;
+  }
+  .season-ledger summary strong {
+    font-size: 20px;
+  }
+  .season-ledger summary > span:nth-child(2) {
+    font-size: 10px;
+  }
+  .season-ledger dl {
+    padding: 0 14px 24px 44px;
+    gap: 18px 26px;
+  }
+  .record-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .record-categories button {
+    padding: 14px;
+  }
+  .record-categories strong {
+    font-size: 26px;
+  }
+  .record-display {
+    grid-template-columns: 1fr;
+  }
+  .record-photo {
+    min-height: 370px;
+  }
+  .record-copy {
+    padding: 28px;
+  }
+  .record-copy h2 {
+    font-size: 58px;
+    margin-block: 12px 20px;
+  }
+  .record-chasers ol {
+    grid-template-columns: 1fr;
+  }
+  .selection-filters {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .selection-search {
+    grid-column: 1/-1;
+  }
+  .selection-toolbar > p {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+  .selection-toolbar .sports-actions {
+    gap: 8px;
+  }
+  .athlete-card {
+    flex-basis: 76%;
+    aspect-ratio: 0.65;
+  }
+  .athlete-card-copy h2 {
+    font-size: 48px;
+  }
+  .selected-athlete {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 24px;
+  }
+  .selected-athlete h2 {
+    font-size: 58px;
+  }
+  .versus-arena {
+    grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+  }
+  .vs-photo {
+    min-height: 180px;
+  }
+  .vs-copy {
+    padding: 14px 10px;
+  }
+  .vs-copy h2 {
+    font-size: 29px;
+    overflow-wrap: anywhere;
+  }
+  .vs-copy > a svg {
+    display: none;
+  }
+  .vs-copy .sports-select select {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+  .vs-copy > p {
+    font-size: 10px;
+    min-height: 50px;
+  }
+  .vs-copy dl {
+    gap: 12px;
+  }
+  .vs-copy dd {
+    font-size: 24px;
+  }
+  .vs-copy dt {
+    font-size: 7px;
+  }
+  .vs-photo > span {
+    font-size: 7px;
+    left: 5px;
+    padding: 4px;
+  }
+  .vs-center > strong {
+    font-size: 28px;
+  }
+  .vs-center button {
+    gap: 8px;
+  }
+  .vs-center button span {
+    font-size: 5px;
+  }
+  .analytics-page .p-6 {
+    padding: 18px 12px;
+  }
+  .sports-data-notice {
+    padding: 16px;
+    font-size: 11px;
+  }
+  .profile-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+  .performance-report {
+    padding: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,15 +1,15 @@
 export const siteNavigation = [
-  { label: "Início", to: "/" },
-  { label: "Jogadores", to: "/jogadores" },
+  { label: "Hall da Fama", to: "/" },
   { label: "Temporadas", to: "/temporadas" },
-  { label: "Hall da Fama", to: "/hall-da-fama" },
   { label: "Recordes", to: "/recordes" },
   { label: "Comparar", to: "/deep-analytics" },
+  { label: "Biografias", to: "/biografias" },
 ] as const;
 
 export function isNavigationActive(pathname: string, to: string) {
   return (
     pathname === to ||
-    (to === "/jogadores" && (pathname.startsWith("/jogadores/") || pathname === "/biografias"))
+    (to === "/" && pathname === "/hall-da-fama") ||
+    (to === "/biografias" && /^\/jogadores(?:\/|$)/.test(pathname))
   );
 }
