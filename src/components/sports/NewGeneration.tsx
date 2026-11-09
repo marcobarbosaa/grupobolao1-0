@@ -3,10 +3,20 @@ import { useState } from "react";
 import { ArrowDown, ArrowUpRight, Trophy } from "lucide-react";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 
-export function NewPortrait({ player, priority = false }: { player: BolaoPlayer; priority?: boolean }) {
+type PortraitVariant = "card" | "hero" | "profile";
+
+export function NewPortrait({
+  player,
+  priority = false,
+  variant = "card",
+}: {
+  player: BolaoPlayer;
+  priority?: boolean;
+  variant?: PortraitVariant;
+}) {
   const [failed, setFailed] = useState(false);
   return (
-    <div className="generation-portrait">
+    <div className={`generation-portrait generation-portrait--${variant}`}>
       {failed ? (
         <span className="generation-initials" role="img" aria-label={player.name}>
           {player.name.split(" ").map((word) => word[0]).slice(0, 2).join("")}
@@ -35,7 +45,7 @@ export function GenerationHome() {
           </div>
         </div>
         <Link to="/jogadores/$id" params={{ id: feature.id }} className="generation-hero-feature">
-          <NewPortrait player={feature} priority />
+          <NewPortrait player={feature} priority variant="hero" />
           <div className="generation-hero-caption"><strong>{feature.name}</strong><span>{feature.team}</span></div>
         </Link>
       </section>
@@ -59,7 +69,7 @@ export function GenerationRoster({ compact = false }: { compact?: boolean }) {
       <div className="generation-grid">
         {newRoster.map((player) => (
           <Link key={player.id} to="/jogadores/$id" params={{ id: player.id }} className="generation-card">
-            <NewPortrait player={player} />
+            <NewPortrait player={player} variant="card" />
             <div className="generation-card-info"><h2>{player.name}</h2><p>{player.team}</p></div>
             <ArrowUpRight className="generation-card-arrow" size={18} aria-hidden="true" />
           </Link>
@@ -74,7 +84,7 @@ export function GenerationProfile({ player }: { player: BolaoPlayer }) {
     <div className="generation-profile">
       <Link to="/jogadores" className="text-link">← Voltar aos jogadores</Link>
       <section className="generation-profile-hero">
-        <NewPortrait player={player} priority />
+        <NewPortrait player={player} priority variant="profile" />
         <div className="generation-profile-copy">
           <h1>{player.name}</h1>
           <p className="generation-team">{player.team}</p>
