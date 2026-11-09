@@ -20,7 +20,7 @@ test("new-generation gallery actually uses the card framing variant", () => {
   const component = readFileSync(new URL("../src/components/sports/NewGeneration.tsx", import.meta.url), "utf8");
   const styles = readFileSync(new URL("../src/styles/new-generation.css", import.meta.url), "utf8");
   assert.match(component, /<NewPortrait player=\{player\} variant="card"\s*\/>/);
-  assert.match(component, /<NewPortrait player=\{feature\} priority variant="hero"\s*\/>/);
+  assert.match(component, /<NewPortrait key=\{feature.id\} player=\{feature\} priority=\{activeIndex === 0\} variant="hero"\s*\/>/);
   assert.match(component, /<NewPortrait player=\{player\} priority variant="profile"\s*\/>/);
   assert.match(styles, /\.generation-portrait--card img\s*\{[^}]*object-fit:\s*contain/);
   assert.match(styles, /\.generation-portrait--hero img:not\(\.generation-portrait-backdrop\)\s*\{[^}]*object-fit:\s*contain/);
