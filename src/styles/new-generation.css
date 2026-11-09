@@ -1,0 +1,44 @@
+
+/* Nova geração: sem informações herdadas ou classificação fictícia. */
+.generation-page,.generation-profile,.generation-pending{background:var(--background);color:var(--foreground)}
+.generation-hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);min-height:610px;background:var(--surface);max-width:var(--site-max);margin:0 auto;overflow:hidden}
+.generation-hero-copy{padding:clamp(40px,7vw,115px) var(--site-gutter);z-index:2;align-self:center}
+.generation-hero-copy h1,.generation-heading h1,.generation-profile h1,.generation-pending h1{font:800 clamp(60px,8vw,125px)/.9 var(--font-display);text-transform:uppercase;letter-spacing:-.025em}
+.generation-hero-copy h1 span{color:var(--primary)}
+.generation-hero-copy>p{max-width:390px;line-height:1.8;margin:24px 0;color:var(--muted-foreground)}
+.generation-hero-feature{position:relative;display:block;min-width:0;min-height:500px}
+.generation-portrait{position:relative;width:100%;height:100%;min-height:250px;overflow:hidden;background:linear-gradient(140deg,#29303b,#101319)}
+.generation-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.generation-initials{display:grid;place-items:center;height:100%;min-height:250px;font:800 clamp(50px,8vw,110px)/1 var(--font-display);color:#8c919f}
+.generation-hero-feature .generation-portrait{position:absolute;inset:0}
+.generation-hero-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090c12ec,transparent 45%),linear-gradient(90deg,var(--surface),transparent 40%);pointer-events:none}
+.generation-hero-caption{position:absolute;bottom:30px;left:40px;z-index:2;display:grid;gap:6px}
+.generation-hero-caption strong{font:800 clamp(38px,5vw,76px)/1 var(--font-display);text-transform:uppercase}
+.generation-hero-caption span{font-size:14px;color:#ddd}
+.generation-roster{padding-top:65px;padding-bottom:90px}
+.generation-heading h1{font-size:clamp(42px,5vw,78px)}
+.generation-heading p{margin:15px 0 30px;color:var(--muted-foreground)}
+.generation-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.generation-card{position:relative;display:block;background:var(--surface);min-width:0;overflow:hidden;transition:transform .24s ease}
+.generation-card:hover{transform:translateY(-5px)}
+.generation-card .generation-portrait{height:390px}
+.generation-card-info{padding:18px 18px 25px}
+.generation-card-info h2{font:800 clamp(22px,2.1vw,34px)/1 var(--font-display);text-transform:uppercase}
+.generation-card-info p{font-size:12px;color:var(--muted-foreground);margin-top:9px}
+.generation-card-arrow{position:absolute;right:14px;bottom:16px;color:var(--primary)}
+.generation-empty{max-width:var(--site-max);margin:45px auto 90px;padding:65px var(--site-gutter);border-top:1px solid var(--hairline);display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.generation-empty h2{font:800 clamp(36px,4.5vw,70px)/1 var(--font-display);text-transform:uppercase}
+.generation-empty>p{font-size:14px;line-height:1.8;color:var(--muted-foreground);max-width:580px}
+.generation-profile{max-width:var(--site-max);margin:0 auto;padding:40px var(--site-gutter)}
+.generation-profile-hero{margin-top:24px;display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);align-items:center;gap:clamp(30px,6vw,90px)}
+.generation-profile-hero .generation-portrait{height:650px}
+.generation-profile-copy h1{overflow-wrap:anywhere}
+.generation-profile-copy>p{margin-top:18px;color:var(--muted-foreground);font-size:15px}
+.generation-profile-copy .generation-team{color:var(--foreground);font-size:22px}
+.generation-pending h1{font-size:clamp(60px,7vw,105px)}
+.generation-pending>p{color:var(--muted-foreground);font-size:15px;margin:30px 0}
+.generation-pending .generation-empty{margin:40px 0;padding-left:0;padding-right:0}
+@media(max-width:1000px){.generation-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.generation-card .generation-portrait{height:320px}}
+@media(max-width:700px){.generation-hero,.generation-profile-hero{grid-template-columns:1fr}.generation-hero-copy{padding:45px var(--site-gutter)}.generation-hero-feature{min-height:420px}.generation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.generation-card .generation-portrait{height:290px}.generation-profile-hero .generation-portrait{height:450px}.generation-hero-caption{left:20px}.generation-roster{padding-top:40px}}
+@media(max-width:400px){.generation-grid{gap:9px}.generation-card-info{padding:12px}.generation-card .generation-portrait{height:220px}}
+@media(prefers-reduced-motion:reduce){.generation-card{transition:none}.generation-card:hover{transform:none}}
