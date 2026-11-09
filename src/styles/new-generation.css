@@ -6,14 +6,29 @@
 .generation-hero-copy h1,.generation-heading h1,.generation-profile h1,.generation-pending h1{font:800 clamp(60px,8vw,125px)/.9 var(--font-display);text-transform:uppercase;letter-spacing:-.025em}
 .generation-hero-copy h1 span{color:var(--primary)}
 .generation-hero-copy>p{max-width:390px;line-height:1.8;margin:24px 0;color:var(--muted-foreground)}
-.generation-hero-feature{position:relative;display:block;min-width:0;min-height:500px}
+.generation-hero-carousel{position:relative;min-width:0;min-height:610px;isolation:isolate}
+.generation-hero-feature{position:absolute;inset:0;display:block;min-width:0;overflow:hidden}
+.generation-hero-feature:focus-visible{outline:2px solid var(--primary);outline-offset:-4px}
+.generation-hero-controls{position:absolute;bottom:20px;left:36px;right:30px;z-index:4;display:flex;align-items:center;gap:8px}
+.generation-hero-controls button{display:grid;place-items:center;width:42px;height:42px;border:1px solid #ffffff46;background:#090c12bd;color:#fff;cursor:pointer;transition:background .2s}
+.generation-hero-controls button:hover,.generation-hero-controls button:focus-visible{background:var(--primary);color:#090c12}
+.generation-hero-count{font:700 15px var(--font-sans);font-variant-numeric:tabular-nums;color:#fff;letter-spacing:.08em;margin-right:10px}
 .generation-portrait{position:relative;width:100%;height:100%;min-height:250px;overflow:hidden;background:linear-gradient(140deg,#29303b,#101319)}
-.generation-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.generation-portrait img{display:block;width:100%;height:100%}
+/* Gallery cards: show the entire photographed athlete without cropping. */
+.generation-portrait--card{display:flex;align-items:center;justify-content:center;background:#171b23}
+.generation-portrait--card img{object-fit:contain;object-position:center center}
+/* Preserve the editorial crop for the home hero. */
+.generation-portrait--hero{background:#131820;isolation:isolate}
+.generation-portrait--hero img:not(.generation-portrait-backdrop){position:relative;z-index:1;object-fit:contain;object-position:center center;filter:drop-shadow(0 12px 18px #0007)}
+.generation-portrait--hero .generation-portrait-backdrop{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;object-position:center;filter:blur(28px) brightness(.42) saturate(.65);transform:scale(1.06);z-index:0}
+/* Full-height profiles should also avoid cropping the athlete. */
+.generation-portrait--profile img{object-fit:contain;object-position:center bottom}
 .generation-initials{display:grid;place-items:center;height:100%;min-height:250px;font:800 clamp(50px,8vw,110px)/1 var(--font-display);color:#8c919f}
 .generation-hero-feature .generation-portrait{position:absolute;inset:0}
 .generation-hero-feature:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090c12ec,transparent 45%),linear-gradient(90deg,var(--surface),transparent 40%);pointer-events:none}
-.generation-hero-caption{position:absolute;bottom:30px;left:40px;z-index:2;display:grid;gap:6px}
-.generation-hero-caption strong{font:800 clamp(38px,5vw,76px)/1 var(--font-display);text-transform:uppercase}
+.generation-hero-caption{position:absolute;bottom:88px;left:36px;right:26px;z-index:2;display:grid;gap:6px;text-shadow:0 2px 10px #000b}
+.generation-hero-caption strong{font:800 clamp(31px,4.1vw,61px)/.97 var(--font-display);text-transform:uppercase;overflow-wrap:anywhere}
 .generation-hero-caption span{font-size:14px;color:#ddd}
 .generation-roster{padding-top:65px;padding-bottom:90px}
 .generation-heading h1{font-size:clamp(42px,5vw,78px)}
@@ -42,3 +57,11 @@
 @media(max-width:700px){.generation-hero,.generation-profile-hero{grid-template-columns:1fr}.generation-hero-copy{padding:45px var(--site-gutter)}.generation-hero-feature{min-height:420px}.generation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.generation-card .generation-portrait{height:290px}.generation-profile-hero .generation-portrait{height:450px}.generation-hero-caption{left:20px}.generation-roster{padding-top:40px}}
 @media(max-width:400px){.generation-grid{gap:9px}.generation-card-info{padding:12px}.generation-card .generation-portrait{height:220px}}
 @media(prefers-reduced-motion:reduce){.generation-card{transition:none}.generation-card:hover{transform:none}}
+
+/* Keep hero media fully visible while preserving enough space for controls. */
+@media(max-width:700px){
+ .generation-hero-carousel{min-height:485px}
+ .generation-hero-controls{left:20px;right:20px;bottom:16px}
+ .generation-hero-caption{left:20px;right:20px;bottom:82px}
+ .generation-hero-feature{min-height:0}
+}
