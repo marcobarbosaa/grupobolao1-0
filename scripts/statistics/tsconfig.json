@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./*.ts", "../../src/lib/statistics/**/*.ts", "../../src/lib/new-roster.ts"],
+  "compilerOptions": { "types": ["node"] }
+}
