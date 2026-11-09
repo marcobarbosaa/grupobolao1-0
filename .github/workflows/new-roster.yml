@@ -1,0 +1,23 @@
+name: Nova geração — verificações
+on:
+  push:
+    branches: [feat/novo-elenco-2026]
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # O lint global legado contém erros preexistentes de Prettier em scripts antigos.
+      # Verificar as rotas e módulos migrados sem alterar o código legado.
+      - run: |
+          npx eslint src/lib/new-roster.ts src/components/sports/NewGeneration.tsx src/routes/index.tsx src/routes/hall-da-fama.tsx src/routes/temporadas.tsx src/routes/recordes.tsx src/routes/deep-analytics.tsx src/routes/biografias.tsx src/routes/jogadores.index.tsx 'src/routes/jogadores.$id.tsx' --rule 'prettier/prettier: off'
+      - run: npx tsc --noEmit
+      - run: npm run build
+      - run: node --test tests/new-roster.test.mjs

@@ -1,18 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { validatePlayerFilters } from "../lib/player-adapter";
-import { PlayerSelection } from "../components/sports/PlayerSelection";
+import { GenerationRoster } from "../components/sports/NewGeneration";
 export const Route = createFileRoute("/biografias")({
-  validateSearch: validatePlayerFilters,
-  head: () => ({ meta: [{ title: "Biografias — Central do Bolão" }] }),
-  component: Biografias,
+  head: () => ({ meta: [{ title: "Jogadores — Central do Bolão" }] }),
+  component: GenerationRoster,
 });
-function Biografias() {
-  const filters = Route.useSearch();
-  const navigate = Route.useNavigate();
-  return (
-    <PlayerSelection
-      filters={filters}
-      onFilterChange={(search) => navigate({ search, replace: true, resetScroll: false })}
-    />
-  );
-}
