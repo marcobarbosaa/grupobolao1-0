@@ -36,3 +36,7 @@ artifacts/holographic-review/
 *.sw?
 artifacts/chamber-review/
 artifacts/redesign-review/
+
+# Private import review artifacts and transaction scratch files
+artifacts/statistics-imports/
+src/data/statistics/.import-*

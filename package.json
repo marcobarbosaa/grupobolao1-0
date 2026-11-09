@@ -12,7 +12,12 @@
     "format": "prettier --write .",
     "stats:validate": "node scripts/statistics/validate-data.ts",
     "stats:typecheck": "tsc --noEmit -p scripts/statistics/tsconfig.json",
-    "stats:test": "node --test tests/statistics/*.test.mjs"
+    "stats:test": "node --test tests/statistics/*.test.mjs",
+    "stats:import:prepare": "node scripts/statistics/imports/cli.ts prepare",
+    "stats:import:review": "node scripts/statistics/imports/cli.ts review",
+    "stats:import:approve": "node scripts/statistics/imports/cli.ts approve",
+    "stats:import:publish": "node scripts/statistics/imports/cli.ts publish",
+    "stats:import:recover": "node scripts/statistics/imports/cli.ts recover"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
