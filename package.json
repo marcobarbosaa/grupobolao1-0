@@ -9,7 +9,10 @@
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "stats:validate": "node scripts/statistics/validate-data.ts",
+    "stats:typecheck": "tsc --noEmit -p scripts/statistics/tsconfig.json",
+    "stats:test": "node --test tests/statistics/*.test.mjs"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
