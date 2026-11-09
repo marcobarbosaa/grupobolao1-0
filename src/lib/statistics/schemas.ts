@@ -2,6 +2,7 @@ import { z } from "zod";
 import { newRoster } from "../new-roster.ts";
 import { identifierSchema as id, playerIdSchema, seasonIdSchema } from "./identifiers.ts";
 import { phaseIdSchema, seasonPhasesSchema } from "./phases.ts";
+import { coverageEvidenceSchema, displayPrecisionSchema } from "./coverage.ts";
 import { statisticsSchema } from "./metrics.ts";
 import {
   availabilityStatusSchema,
@@ -104,14 +105,39 @@ const recordFields = {
   id,
   playerId: playerIdSchema,
   stats: statisticsSchema,
+  displayPrecision: displayPrecisionSchema.optional(),
   availability: availabilityStatusSchema,
   sourceIds: publishedSources,
   revision: revisionNumber,
 };
 function availability(
-  value: { availability: string; stats: z.infer<typeof statisticsSchema> },
+  value: {
+    availability: string;
+    stats: z.infer<typeof statisticsSchema>;
+    displayPrecision?: z.infer<typeof displayPrecisionSchema>;
+  },
   ctx: z.RefinementCtx,
 ) {
+  for (const [metric, decimals] of Object.entries(value.displayPrecision ?? {})) {
+    const observed = { ...value.stats.averages, ...value.stats.percentages }[
+      metric as keyof z.infer<typeof displayPrecisionSchema>
+    ];
+    if (observed === undefined) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["displayPrecision", metric],
+        message: "Precision requires an observed metric",
+      });
+    } else if (decimals !== undefined) {
+      const rounded = Number(observed.toFixed(decimals));
+      if (Math.abs(observed - rounded) > Number.EPSILON * Math.max(1, observed) * 8)
+        ctx.addIssue({
+          code: "custom",
+          path: ["displayPrecision", metric],
+          message: "Observed value exceeds declared display precision",
+        });
+    }
+  }
   const hasValues = Object.values(value.stats).some(
     (group) => group && Object.keys(group).length > 0,
   );
@@ -146,12 +172,49 @@ export const playerPhaseStatsSchema = z
     kind: z.literal("phase"),
     seasonId: seasonIdSchema,
     phaseId: phaseIdSchema,
+    coverage: coverageEvidenceSchema.optional(),
     scope: z.enum(["all-teams", "team"]),
     teamId: id.optional(),
   })
   .strict()
   .superRefine((record, ctx) => {
     availability(record, ctx);
+    if (record.coverage) {
+      if (record.coverage.sourceIds.some((sourceId) => !record.sourceIds.includes(sourceId)))
+        ctx.addIssue({
+          code: "custom",
+          path: ["coverage", "sourceIds"],
+          message: "Coverage evidence must be included in reviewed record sources",
+        });
+      const expected = record.coverage.expectedGames;
+      const gp = record.stats.totals?.gp;
+      if (
+        expected !== undefined &&
+        gp !== undefined &&
+        (gp > expected || (record.coverage.status === "complete" && gp !== expected))
+      )
+        ctx.addIssue({
+          code: "custom",
+          path: ["coverage", "expectedGames"],
+          message: "Expected games contradict reported games",
+        });
+      if (record.coverage.status === "complete" && record.availability === "not-imported")
+        ctx.addIssue({
+          code: "custom",
+          path: ["coverage"],
+          message: "Unimported period cannot be certified complete",
+        });
+      if (
+        ["not-played", "not-qualified", "no-games"].includes(record.availability) &&
+        expected !== undefined &&
+        expected !== 0
+      )
+        ctx.addIssue({
+          code: "custom",
+          path: ["coverage"],
+          message: "Unplayed period cannot certify appearances",
+        });
+    }
     if ((record.scope === "team") !== (record.teamId !== undefined))
       ctx.addIssue({
         code: "custom",

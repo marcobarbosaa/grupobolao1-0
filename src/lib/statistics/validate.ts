@@ -103,6 +103,23 @@ export function validateDataset(input: unknown): ValidationResult {
     } else {
       checkPhase(record.seasonId, record.phaseId, path);
       if (record.teamId) ref(teams, record.teamId, path + ".teamId");
+      record.coverage?.expectedGameIds?.forEach((gameId) => {
+        const expected = games.get(gameId);
+        if (
+          expected &&
+          (expected.seasonId !== record.seasonId ||
+            (record.phaseId === "playoffs"
+              ? expected.phaseId === "regular"
+              : expected.phaseId !== record.phaseId) ||
+            (record.teamId &&
+              expected.homeTeamId !== record.teamId &&
+              expected.awayTeamId !== record.teamId))
+        )
+          fail(
+            path + ".coverage.expectedGameIds",
+            "Coverage game contradicts the period or team scope",
+          );
+      });
     }
   });
   data.awards.forEach((award, i) => {

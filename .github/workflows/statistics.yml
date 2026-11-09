@@ -1,9 +1,9 @@
-name: Statistical foundation
+name: Statistical domain
 on:
   pull_request:
     branches: [main]
   push:
-    branches: [main, feat/statistics-foundation-v1]
+    branches: [main, feat/statistics-foundation-v1, feat/statistics-engine-v1]
 jobs:
   validate-statistics:
     runs-on: ubuntu-latest
