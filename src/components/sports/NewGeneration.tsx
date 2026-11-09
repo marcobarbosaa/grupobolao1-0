@@ -9,6 +9,7 @@ import { ExploreUniverse } from "../home/ExploreUniverse";
 import { VersusShowcase } from "../home/VersusShowcase";
 import { LeagueJourney } from "../home/LeagueJourney";
 import "../../styles/home-portal.css";
+import { ProfileStatistics } from "./PublishedStatistics";
 
 type PortraitVariant = "card" | "profile";
 
@@ -111,12 +112,7 @@ export function GenerationProfile({ player }: { player: BolaoPlayer }) {
           <p>Nova geração da Central do Bolão.</p>
         </div>
       </section>
-      <section className="generation-empty">
-        <h2>TRAJETÓRIA EM CONSTRUÇÃO.</h2>
-        <p>
-          As informações de carreira, estatísticas por fase e premiações ainda não foram importadas.
-        </p>
-      </section>
+      <ProfileStatistics player={player} />
     </div>
   );
 }

@@ -1,0 +1,381 @@
+[
+  {
+    "id": "src-gam-s01-1",
+    "kind": "screenshot",
+    "fileName": "gam-season-001-screenshot-1.png",
+    "contentHash": "b8bf0ea9c63791bdc6ade9a1316a83da80599f35dad6784ff53e3ba9516fe2fa",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-gam-s01-2",
+    "kind": "screenshot",
+    "fileName": "gam-season-001-screenshot-2.png",
+    "contentHash": "adeba653b2bde927ced9d88f6a3967baddbb82a4c3788109a988acbde9f93c33",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-gam-s01-3",
+    "kind": "screenshot",
+    "fileName": "gam-season-001-screenshot-3.png",
+    "contentHash": "2921ed360d439877dad44e0d512ba1cd8e3a5080e9ddf943f718f45a86971dea",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-gam-s01-4",
+    "kind": "screenshot",
+    "fileName": "gam-season-001-screenshot-4.png",
+    "contentHash": "7e3236c67e8e4834f2468c448b0a6590fce91e4fcf7b24e3b09c2d8b9b120d0f",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-gam-s01-5",
+    "kind": "screenshot",
+    "fileName": "gam-season-001-screenshot-5.png",
+    "contentHash": "45a7ead97a33d2a27b88d66b4255f733135058e21e3c31d65c4b59616b3d93a3",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-binho-s01-1",
+    "kind": "screenshot",
+    "fileName": "binho-season-001-screenshot-1.png",
+    "contentHash": "efa8e79a53446b72b89b07bbca9d702c270f11313f6ab3e2737e195a244a3d43",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "binho",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-binho-s01-2",
+    "kind": "screenshot",
+    "fileName": "binho-season-001-screenshot-2.png",
+    "contentHash": "d7e66f8b6364791fbfd561182f269f45085a38b29b5281cdc9886dc7a6a2b909",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "binho",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-binho-s01-3",
+    "kind": "screenshot",
+    "fileName": "binho-season-001-screenshot-3.png",
+    "contentHash": "e32c604d38150ecd2589f3db81d8674508a9173821491988438c14c4664ed630",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "binho",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-abel-s01-1",
+    "kind": "screenshot",
+    "fileName": "abel-season-001-screenshot-1.png",
+    "contentHash": "dfe55873d6f7c733be2211b1fa7350ba49f518dedd70a72c9e9989f278ae8c4c",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "abel",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-abel-s01-2",
+    "kind": "screenshot",
+    "fileName": "abel-season-001-screenshot-2.png",
+    "contentHash": "b09383d3cc60d9fa848fedef1895325e3705a34176629658ae9f61f6e1ce96cc",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "abel",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-abel-s01-3",
+    "kind": "screenshot",
+    "fileName": "abel-season-001-screenshot-3.png",
+    "contentHash": "0626f5a757bf124935bbbce2861980aa3e392b029d68fa96509828607471dc62",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "abel",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-jonas-s01-1",
+    "kind": "screenshot",
+    "fileName": "jonas-season-001-screenshot-1.png",
+    "contentHash": "2367f9cdec801f4738a56639aa246b2c59d1ffd8aa12d5e2c82f55a9fdf7dced",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "jonas",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-jonas-s01-2",
+    "kind": "screenshot",
+    "fileName": "jonas-season-001-screenshot-2.png",
+    "contentHash": "280402aacd0ab3aeaed1f089001b20d2f7fc4317b121cc7040e77d0d1a967857",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "jonas",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-jonas-s01-3",
+    "kind": "screenshot",
+    "fileName": "jonas-season-001-screenshot-3.png",
+    "contentHash": "f8a761e0a88ced81608bebca41671d837233eedf755ff68ebce16da8d73442e2",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "jonas",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-marco-s01-1",
+    "kind": "screenshot",
+    "fileName": "marco-season-001-screenshot-1.png",
+    "contentHash": "8430418587a340b76003d922fca224a32c9464e414f5384b05bf50d04ff4dae0",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "marco",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-marco-s01-2",
+    "kind": "screenshot",
+    "fileName": "marco-season-001-screenshot-2.png",
+    "contentHash": "2a37bb53cac9491352ea9923a104bef84b78e84a5e851ad4ab1e5069923c07ec",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "marco",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-marco-s01-3",
+    "kind": "screenshot",
+    "fileName": "marco-season-001-screenshot-3.png",
+    "contentHash": "0b80af329949a0b8175ff71b320be7df6242b79d8764e453f88254f56d96f03e",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "marco",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-tailan-s01-1",
+    "kind": "screenshot",
+    "fileName": "tailan-season-001-screenshot-1.png",
+    "contentHash": "86e4081f7b715579aa08770523b50dc256079e1d85e906ffa7184b87bc5e623f",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "tailan",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-tailan-s01-2",
+    "kind": "screenshot",
+    "fileName": "tailan-season-001-screenshot-2.png",
+    "contentHash": "8c72bac7bce25c5fd13062c3f8ece9dd2ce09950533e240cf0bc10557622c208",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "tailan",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-tailan-s01-3",
+    "kind": "screenshot",
+    "fileName": "tailan-season-001-screenshot-3.png",
+    "contentHash": "8258e40497515fa6de1459415dfc4af4ff075e6f5769dd55efc3c1844ae85e66",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "tailan",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-medeiros-s01-1",
+    "kind": "screenshot",
+    "fileName": "medeiros-season-001-screenshot-1.png",
+    "contentHash": "a6b955a72a6236973110521a24e856c1737e90f422187b15d3da4a911204acb0",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "medeiros",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-medeiros-s01-2",
+    "kind": "screenshot",
+    "fileName": "medeiros-season-001-screenshot-2.png",
+    "contentHash": "3eb3d5a700beb746fd649f020f3e8f6eb0f9e738c014236e28e0f25c680c9f38",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "medeiros",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-medeiros-s01-3",
+    "kind": "screenshot",
+    "fileName": "medeiros-season-001-screenshot-3.png",
+    "contentHash": "5a390d286ecf70bca41445704ac4cb00a7f9a78bfbb15847c520d43ff6924af6",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "medeiros",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-dias-s01-1",
+    "kind": "screenshot",
+    "fileName": "dias-season-001-screenshot-1.png",
+    "contentHash": "a54a15953b9c451aeb67e39d967f9f99fe34c37c94c758b84439ee7e60b32673",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "dias",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-dias-s01-2",
+    "kind": "screenshot",
+    "fileName": "dias-season-001-screenshot-2.png",
+    "contentHash": "55cab3264d6c9f79da23579545879f36334d3dcc8c7944522c1e0f8496a29a6c",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "dias",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-dias-s01-3",
+    "kind": "screenshot",
+    "fileName": "dias-season-001-screenshot-3.png",
+    "contentHash": "02d3189e0605605576036663944412e2fc511b49c973c5bdbe367774169dd035",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "dias",
+      "season": "season-001",
+      "phase": "regular",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository"
+    }
+  },
+  {
+    "id": "src-gam-3pa-confirmation",
+    "kind": "manual-record",
+    "fileName": "gam-mori-3pa-user-confirmation.txt",
+    "contentHash": "8c61dbde2c6fed80d0b29688dd336740883a6cb22ab4e26a619651688f475859",
+    "receivedAt": "2026-11-09T20:10:00Z",
+    "metadata": {
+      "player": "gam",
+      "season": "season-001",
+      "phase": "regular",
+      "metric": "threePa",
+      "value": 59,
+      "note": "User explicitly confirmed 59 3PA in chat; value not visible in screenshots"
+    }
+  }
+]

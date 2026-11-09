@@ -1,0 +1,51 @@
+[
+  {
+    "id": "season-001",
+    "edition": 1,
+    "label": "2005–06 · Temporada 01",
+    "sport": "basquete",
+    "status": "in-progress",
+    "phases": [
+      {
+        "id": "regular",
+        "name": "Temporada regular",
+        "order": 0,
+        "type": "stage"
+      },
+      {
+        "id": "playoffs",
+        "name": "Playoffs",
+        "order": 1,
+        "type": "aggregate"
+      },
+      {
+        "id": "first-round",
+        "name": "Primeira rodada",
+        "order": 2,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "quarterfinals",
+        "name": "Quartas de final",
+        "order": 3,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "conference-finals",
+        "name": "Finais de conferência",
+        "order": 4,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "nba-finals",
+        "name": "Finais da NBA",
+        "order": 5,
+        "type": "stage",
+        "parentId": "playoffs"
+      }
+    ]
+  }
+]

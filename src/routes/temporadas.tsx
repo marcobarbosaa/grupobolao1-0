@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { GenerationPending } from "../components/sports/NewGeneration";
+import { SeasonStatistics } from "../components/sports/PublishedStatistics";
+
 export const Route = createFileRoute("/temporadas")({
-  head: () => ({ meta: [{ title: "Temporadas — Central do Bolão" }] }),
-  component: () => <GenerationPending title="TEMPORADAS" description="O novo calendário e os resultados ainda não foram importados." />,
+  head: () => ({ meta: [{ title: "Temporada 01 — Central do Bolão" }] }),
+  component: SeasonStatistics,
 });

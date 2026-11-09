@@ -1,0 +1,38 @@
+[
+  {
+    "id": "batch-s01-regular-first-eight",
+    "sourceIds": [
+      "src-gam-s01-1",
+      "src-gam-s01-2",
+      "src-gam-s01-3",
+      "src-gam-s01-4",
+      "src-gam-s01-5",
+      "src-binho-s01-1",
+      "src-binho-s01-2",
+      "src-binho-s01-3",
+      "src-abel-s01-1",
+      "src-abel-s01-2",
+      "src-abel-s01-3",
+      "src-jonas-s01-1",
+      "src-jonas-s01-2",
+      "src-jonas-s01-3",
+      "src-marco-s01-1",
+      "src-marco-s01-2",
+      "src-marco-s01-3",
+      "src-tailan-s01-1",
+      "src-tailan-s01-2",
+      "src-tailan-s01-3",
+      "src-medeiros-s01-1",
+      "src-medeiros-s01-2",
+      "src-medeiros-s01-3",
+      "src-dias-s01-1",
+      "src-dias-s01-2",
+      "src-dias-s01-3",
+      "src-gam-3pa-confirmation"
+    ],
+    "status": "published",
+    "createdAt": "2026-11-09T20:10:00Z",
+    "approvedAt": "2026-11-09T20:18:03.018Z",
+    "approvedBy": "Aprovação explícita do usuário na conversa: publicar oito jogadores na main"
+  }
+]
