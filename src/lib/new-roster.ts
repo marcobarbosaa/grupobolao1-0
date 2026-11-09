@@ -5,99 +5,97 @@ export interface BolaoPlayer {
   team: string;
   sport: "basquete";
   portrait: string;
-  portraitSet: string;
+  portraitSet?: string;
   dataStatus: "not-imported";
   biography: null;
   seasons: [];
   awards: [];
   positions: [];
 }
-const picture = (stem: string, size: 480 | 960) =>
-  `/jogadores/novo-elenco/${stem}-${size}.webp`;
+const picture = (fileName: string) => `/jogadores/novo-elenco/${fileName}`;
 export const newRoster: BolaoPlayer[] = [
   {
     "id": "fabio-carvalho",
     "name": "Fábio Carvalho",
     "team": "New Orleans Hornets",
-    "stem": "fabio-carvalho"
+    "stem": "Binho_NOHornets.png"
   },
   {
     "id": "abel",
     "name": "Abel",
     "team": "Sacramento Kings",
-    "stem": "abel"
+    "stem": "Abel_Kings.png"
   },
   {
     "id": "gam-mori",
     "name": "Gam Mori",
     "team": "Atlanta Hawks",
-    "stem": "gam-mori"
+    "stem": "Gam_Hawks.png"
   },
   {
     "id": "marco-barbosa",
     "name": "Marco Barbosa",
     "team": "Denver Nuggets",
-    "stem": "marco-barbosa"
+    "stem": "Marco_Nuggets.png"
   },
   {
     "id": "cristiano-ronaldo",
     "name": "Cristiano Ronaldo",
     "team": "Indiana Pacers",
-    "stem": "cristiano-ronaldo"
+    "stem": "Cerrote_Pacers.png"
   },
   {
     "id": "dias",
     "name": "Dias",
     "team": "Detroit Pistons",
-    "stem": "dias"
+    "stem": "Dias_Pistons.png"
   },
   {
     "id": "russo",
     "name": "Russo",
     "team": "Toronto Raptors",
-    "stem": "russo"
+    "stem": "Russo_Raptors.png"
   },
   {
     "id": "jonas",
     "name": "Jonas",
     "team": "New York Knicks",
-    "stem": "jonas"
+    "stem": "Jonas_Knicks.png"
   },
   {
     "id": "enzo",
     "name": "Enzo",
     "team": "San Antonio Spurs",
-    "stem": "enzo"
+    "stem": "Enzo_Spurs.png"
   },
   {
     "id": "tailan",
     "name": "Tailan",
     "team": "Minnesota Timberwolves",
-    "stem": "tailan"
+    "stem": "Tailan_Minnesota.png"
   },
   {
     "id": "matheus-medeiros",
     "name": "Matheus Medeiros",
     "team": "Philadelphia 76ers",
-    "stem": "matheus-medeiros"
+    "stem": "Medeiros_76ers.png"
   },
   {
     "id": "nando",
     "name": "Nando",
     "team": "Houston Rockets",
-    "stem": "nando"
+    "stem": "Nando_Rockets.png"
   },
   {
     "id": "guilherme",
     "name": "Guilherme",
     "team": "Chicago Bulls",
-    "stem": "guilherme"
+    "stem": "Guilherme_Bulls.png"
   }
 ]
   .map(({ id, name, team, stem }) => ({
     id, name, team, sport: "basquete",
-    portrait: picture(stem, 960),
-    portraitSet: `${picture(stem, 480)} 480w, ${picture(stem, 960)} 960w`,
+    portrait: picture(stem),
     dataStatus: "not-imported",
     biography: null, seasons: [], awards: [], positions: [],
   }));
