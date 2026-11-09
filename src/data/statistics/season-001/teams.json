@@ -1,0 +1,58 @@
+[
+  {
+    "id": "atlanta-hawks",
+    "name": "Atlanta Hawks",
+    "abbreviation": "ATL",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "new-orleans-hornets",
+    "name": "New Orleans Hornets",
+    "abbreviation": "NO",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "sacramento-kings",
+    "name": "Sacramento Kings",
+    "abbreviation": "SAC",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "new-york-knicks",
+    "name": "New York Knicks",
+    "abbreviation": "NY",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "denver-nuggets",
+    "name": "Denver Nuggets",
+    "abbreviation": "DEN",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "minnesota-timberwolves",
+    "name": "Minnesota Timberwolves",
+    "abbreviation": "MIN",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "philadelphia-76ers",
+    "name": "Philadelphia 76ers",
+    "abbreviation": "PHI",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "detroit-pistons",
+    "name": "Detroit Pistons",
+    "abbreviation": "DET",
+    "sport": "basquete",
+    "status": "active"
+  }
+]
