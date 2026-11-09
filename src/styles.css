@@ -201,3 +201,5 @@
     animation: fadeInUp 0.5s ease-out forwards;
   }
 }
+
+@import "./styles/new-generation.css";
