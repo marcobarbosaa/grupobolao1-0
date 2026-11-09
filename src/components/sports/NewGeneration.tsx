@@ -1,9 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, Trophy } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 
 import { GenerationHero } from "../home/GenerationHero";
+import { SeasonSpotlight } from "../home/SeasonSpotlight";
+import { ExploreUniverse } from "../home/ExploreUniverse";
+import { VersusShowcase } from "../home/VersusShowcase";
+import { LeagueJourney } from "../home/LeagueJourney";
+import "../../styles/home-portal.css";
 
 type PortraitVariant = "card" | "profile";
 
@@ -47,15 +52,10 @@ export function GenerationHome() {
   return (
     <div className="generation-page">
       <GenerationHero />
-      <GenerationRoster compact />
-      <section className="generation-empty" aria-label="Estatísticas da nova geração">
-        <Trophy size={28} aria-hidden="true" />
-        <h2>O LEGADO AINDA SERÁ ESCRITO.</h2>
-        <p>
-          Estatísticas, temporadas, recordes e conquistas serão exibidos quando forem importados
-          oficialmente.
-        </p>
-      </section>
+      <SeasonSpotlight />
+      <ExploreUniverse />
+      <VersusShowcase />
+      <LeagueJourney />
     </div>
   );
 }

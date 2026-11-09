@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "sections": 5,
+      "galleryDuplicated": false,
+      "headerStable": true,
+      "links": 6
+    }
+  ],
+  "profiles": 13,
+  "heroPreserved": true,
+  "errors": []
+}
