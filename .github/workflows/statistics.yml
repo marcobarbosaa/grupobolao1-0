@@ -1,23 +1,45 @@
 name: Statistical domain
+
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - main
   push:
-    branches: [main, feat/statistics-foundation-v1, feat/statistics-engine-v1]
+    branches:
+      - main
+      - 'feat/statistics-*'
+      - 'fix/statistics-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   validate-statistics:
+    name: Validate statistical domain
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: '24'
           cache: npm
-      - run: npm ci
-      - run: npx eslint src/lib/statistics scripts/statistics tests/statistics
-      - run: npm run stats:typecheck
-      - run: npm run stats:validate
-      - run: npm run stats:test
-      - run: node --test tests/*.test.mjs
-      - run: npx tsc --noEmit
-      - run: npm run build
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint statistics modules
+        run: npx eslint src/lib/statistics scripts/statistics tests/statistics
+      - name: Type-check statistics scripts
+        run: npm run stats:typecheck
+      - name: Validate statistics manifest
+        run: npm run stats:validate
+      - name: Run statistical tests
+        run: npm run stats:test
+      - name: Run existing unit tests
+        run: node --test tests/*.test.mjs
+      - name: Type-check frontend
+        run: npx tsc --noEmit
+      - name: Build production bundle
+        run: npm run build
