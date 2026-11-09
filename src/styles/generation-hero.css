@@ -1,0 +1,158 @@
+/* Keep the opaque original scene intact. Only empty outer margins fade;
+   the environmental layer blends its lighting into the surrounding graphite. */
+.generation-opening {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(28px, 3vw, 48px) 0 40px;
+  background: var(--background);
+}
+.generation-opening-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 12px;
+  max-width: 90%;
+  color: var(--primary);
+  font: 800 clamp(76px, 12.8vw, 210px) / 1 var(--font-display);
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  text-align: center;
+  animation: generation-title-in 650ms ease-out both;
+}
+.generation-opening-scene {
+  position: relative;
+  isolation: isolate;
+  width: min(96%, 1600px);
+  aspect-ratio: 1672 / 941;
+  animation: generation-scene-in 800ms ease-out both;
+}
+/* Same URL as the foreground: the browser reuses the image request.
+   This blurred, dim layer is scenery only, never the displayed athletes. */
+.generation-opening-scene::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -12% -2% -7%;
+  background: url("/jogadores/elenco-junto/Elenco_Unido.webp") center / 100% 100% no-repeat;
+  filter: blur(28px) brightness(0.45);
+  mask-image: radial-gradient(ellipse, #000 35%, transparent 72%);
+  pointer-events: none;
+}
+/* Extend only the last source row (floor, below all shoes) into a short
+   ambient falloff. 94100% maps the 941px image to one source row here. */
+.generation-opening-scene::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 98.5%;
+  left: 0;
+  right: 0;
+  height: clamp(28px, 4vw, 64px);
+  background: url("/jogadores/elenco-junto/Elenco_Unido.webp") center bottom / 100% 94100% no-repeat;
+  filter: blur(8px) brightness(0.7);
+  mask-image:
+    linear-gradient(to bottom, #000, transparent 85%),
+    linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-composite: intersect;
+  pointer-events: none;
+}
+.generation-opening-scene img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
+  /* Hair begins after 6%; hands and shoes remain inside the opaque region. */
+  mask-image:
+    linear-gradient(to bottom, transparent, #000 5.5%, #000 99%, transparent),
+    linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+  mask-composite: intersect;
+}
+.generation-opening-action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 22px var(--site-gutter) 0;
+  text-align: center;
+  animation: generation-action-in 650ms 150ms ease-out both;
+}
+.generation-opening-action p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.generation-opening-action .sports-button {
+  min-height: 52px;
+}
+.generation-opening-action a:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 5px;
+}
+@keyframes generation-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes generation-scene-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes generation-action-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 700px) {
+  .generation-opening {
+    padding: 30px 0 36px;
+  }
+  .generation-opening-title {
+    font-size: clamp(64px, 22vw, 140px);
+    line-height: 0.9;
+    white-space: normal;
+    margin-bottom: 18px;
+  }
+  .generation-opening-title span {
+    display: block;
+  }
+  .generation-opening-scene {
+    width: 100%;
+  }
+  .generation-opening-scene::before {
+    inset: -10% 0 -10%;
+    filter: blur(18px) brightness(0.4);
+  }
+  .generation-opening-action {
+    gap: 18px;
+    padding-top: 22px;
+  }
+  .generation-opening-action p {
+    max-width: 270px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .generation-opening-title,
+  .generation-opening-scene,
+  .generation-opening-action {
+    animation: none;
+  }
+}

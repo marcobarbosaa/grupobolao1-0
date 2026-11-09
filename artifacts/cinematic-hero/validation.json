@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 354.984375,
+        "right": 1565,
+        "y": 292.1875,
+        "bottom": 973.171875,
+        "ratio": 1.7768625381456071,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 237.03125,
+        "right": 1202.96875,
+        "y": 242.359375,
+        "bottom": 785.984375,
+        "ratio": 1.7768452517820188,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 115.921875,
+        "right": 908.078125,
+        "y": 203.53125,
+        "bottom": 649.34375,
+        "ratio": 1.776882097294266,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 23.046875,
+        "right": 744.953125,
+        "y": 339.890625,
+        "bottom": 746.171875,
+        "ratio": 1.7768633182062918,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 0,
+        "right": 390,
+        "y": 277.46875,
+        "bottom": 496.953125,
+        "ratio": 1.7768918630312522,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 0,
+        "right": 360,
+        "y": 263.21875,
+        "bottom": 465.8125,
+        "ratio": 1.7769551133734383,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    }
+  ],
+  "profiles": 13,
+  "errors": []
+}
