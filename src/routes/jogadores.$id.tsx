@@ -8,8 +8,10 @@ export const Route = createFileRoute("/jogadores/$id")({
     return { player };
   },
   head: ({ loaderData }) => ({ meta: [{ title: loaderData ? `${loaderData.player.name} — Central do Bolão` : "Jogador não encontrado — Central do Bolão" }] }),
-  component: () => {
-    const { player } = Route.useLoaderData();
-    return <GenerationProfile player={player} />;
-  },
+  component: NewProfileRoute,
 });
+
+function NewProfileRoute() {
+  const { player } = Route.useLoaderData();
+  return <GenerationProfile player={player} />;
+}
