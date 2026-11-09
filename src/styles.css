@@ -5,6 +5,7 @@
 @import "./styles/players.css";
 @import "./styles/sports.css";
 @import "./styles/foundation.css";
+@import "./styles/new-generation.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -201,5 +202,3 @@
     animation: fadeInUp 0.5s ease-out forwards;
   }
 }
-
-@import "./styles/new-generation.css";
