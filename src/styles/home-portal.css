@@ -1,0 +1,338 @@
+.portal-section {
+  padding-block: clamp(64px, 8vw, 120px);
+}
+.portal-section h2 {
+  font: 800 clamp(42px, 5.6vw, 84px)/0.95 var(--font-display);
+  letter-spacing: -0.02em;
+}
+.portal-section h2 span {
+  color: var(--muted-foreground);
+}
+.portal-section a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 6px;
+}
+.portal-season {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(36px, 7vw, 100px);
+  align-items: center;
+}
+.portal-editorial > p {
+  max-width: 360px;
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  margin: 24px 0 32px;
+}
+.season-broadcast {
+  position: relative;
+  padding: clamp(24px, 4vw, 54px);
+  background: linear-gradient(135deg, #262a33, var(--background));
+  border-left: 3px solid var(--primary);
+}
+.season-status {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-bottom: 22px;
+}
+.season-broadcast h3 {
+  font: 700 clamp(30px, 3.2vw, 48px)/1.02 var(--font-display);
+  max-width: 430px;
+}
+.season-broadcast dl {
+  margin-top: 32px;
+  display: grid;
+  gap: 20px;
+}
+.season-broadcast dl > div {
+  border-top: 1px solid var(--hairline);
+  padding-top: 16px;
+}
+.season-broadcast dt {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-bottom: 6px;
+}
+.season-broadcast dd {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.season-broadcast time {
+  display: block;
+}
+.season-records {
+  margin-top: 24px;
+}
+.season-records h4 {
+  font-weight: 600;
+}
+.season-records ul {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+.portal-explore {
+  padding-top: 30px;
+}
+.portal-explore h2 {
+  margin-bottom: 40px;
+}
+.universe-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 18px;
+}
+.universe-door {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 230px;
+  display: flex;
+  align-items: flex-end;
+  padding: 36px;
+  background: var(--surface);
+  transition: background 0.2s ease;
+}
+.universe-door--seasons {
+  grid-row: span 2;
+  min-height: 478px;
+  background: linear-gradient(145deg, #262b36, #12151c 70%);
+}
+.universe-door--hall {
+  background: linear-gradient(115deg, #28251c, #12151c 70%);
+}
+.universe-door--records {
+  background: linear-gradient(115deg, #281b1c, #12151c 70%);
+}
+.universe-door:hover {
+  background: var(--surface-elevated);
+}
+.universe-door h3 {
+  font: 800 clamp(32px, 3.5vw, 56px)/1 var(--font-display);
+  position: relative;
+  z-index: 1;
+}
+.universe-door p {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 340px;
+  padding-right: 20px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+.universe-symbol {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 160px;
+  height: 160px;
+  color: #ffffff15;
+  transform: rotate(-9deg);
+  transition: transform 0.25s ease;
+  z-index: -1;
+}
+.universe-door--seasons .universe-symbol {
+  width: 280px;
+  height: 280px;
+  right: 28px;
+  top: 30px;
+}
+.universe-door--hall .universe-symbol {
+  color: #e4bd5b24;
+}
+.universe-door--records .universe-symbol {
+  color: #f04b3526;
+}
+.universe-door:hover .universe-symbol {
+  transform: rotate(-4deg);
+}
+.universe-arrow {
+  position: absolute;
+  top: 28px;
+  left: 36px;
+  color: var(--primary);
+}
+.portal-versus {
+  background: radial-gradient(ellipse at 50% 55%, #23252f, var(--background) 70%);
+  padding-top: 40px;
+}
+.portal-versus h2 {
+  text-align: center;
+}
+.versus-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 8vw, 150px);
+  max-width: 1050px;
+  margin: 42px auto 0;
+}
+.versus-player {
+  min-width: 0;
+  margin: 0;
+}
+.versus-player img {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 36vw, 520px);
+  object-fit: contain;
+  object-position: center bottom;
+}
+.versus-player figcaption {
+  text-align: center;
+  padding-top: 20px;
+}
+.versus-player h3 {
+  font: 700 clamp(26px, 3vw, 44px)/1 var(--font-display);
+  text-transform: uppercase;
+}
+.versus-player p {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.versus-mark {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  color: var(--primary);
+  font: 800 clamp(54px, 8vw, 110px)/1 var(--font-display);
+  font-style: italic;
+}
+.versus-action {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 40px;
+  text-align: center;
+}
+.versus-action p {
+  max-width: 440px;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  font-size: 13px;
+}
+.portal-journey {
+  padding-top: 40px;
+}
+.journey-track {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+}
+.journey-track li {
+  position: relative;
+  border-top: 1px solid var(--border);
+  padding: 32px 24px 0 0;
+}
+.journey-track li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--background);
+  border: 2px solid var(--muted-foreground);
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+}
+.journey-track li[data-status="available"]::before {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.journey-track h3 {
+  font: 700 25px/1.1 var(--font-display);
+}
+.journey-track p {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  font-size: 13px;
+  margin-top: 12px;
+  max-width: 230px;
+}
+@media (max-width: 1000px) {
+  .portal-season {
+    gap: 32px;
+  }
+  .universe-door {
+    padding: 26px;
+  }
+  .universe-arrow {
+    left: 26px;
+  }
+}
+@media (max-width: 700px) {
+  .portal-section {
+    padding-block: 56px;
+  }
+  .portal-season {
+    grid-template-columns: 1fr;
+  }
+  .portal-explore {
+    padding-top: 16px;
+  }
+  .universe-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .universe-door,
+  .universe-door--seasons {
+    grid-row: auto;
+    min-height: 230px;
+  }
+  .universe-door--seasons .universe-symbol {
+    width: 180px;
+    height: 180px;
+    top: 12px;
+  }
+  .portal-versus {
+    padding-top: 20px;
+  }
+  .versus-stage {
+    gap: 40px;
+    margin-top: 28px;
+  }
+  .versus-player img {
+    height: 260px;
+  }
+  .versus-mark {
+    font-size: 48px;
+  }
+  .versus-player p {
+    font-size: 11px;
+  }
+  .versus-action {
+    margin-top: 28px;
+  }
+  .journey-track {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+  .journey-track li {
+    border-top: 0;
+    border-left: 1px solid var(--border);
+    padding: 0 0 34px 26px;
+  }
+  .journey-track li::before {
+    top: 4px;
+    left: -5px;
+  }
+  .journey-track li:last-child {
+    padding-bottom: 0;
+  }
+  .journey-track p {
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .universe-door,
+  .universe-symbol {
+    transition: none;
+  }
+}

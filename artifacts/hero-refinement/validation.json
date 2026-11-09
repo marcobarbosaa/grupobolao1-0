@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 160,
+        "right": 1760,
+        "y": 358,
+        "bottom": 1258.46875,
+        "ratio": 1.7768523338538955,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 28.796875,
+        "right": 1411.1875,
+        "y": 327.5,
+        "bottom": 1105.5,
+        "ratio": 1.776851703084833,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 20.484375,
+        "right": 1003.515625,
+        "y": 261.796875,
+        "bottom": 815.03125,
+        "ratio": 1.7768802779111474,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 15.359375,
+        "right": 752.625,
+        "y": 214.296875,
+        "bottom": 629.21875,
+        "ratio": 1.7768781773677274,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 0,
+        "right": 390,
+        "y": 274.40625,
+        "bottom": 493.890625,
+        "ratio": 1.7768918630312522,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "image": {
+        "loaded": true,
+        "w": 1672,
+        "h": 941,
+        "x": 0,
+        "right": 360,
+        "y": 262.5625,
+        "bottom": 465.15625,
+        "ratio": 1.7769551133734383,
+        "fit": "contain"
+      },
+      "photoRequests": 1,
+      "gallery": 13,
+      "cta": true
+    }
+  ],
+  "profiles": 13,
+  "errors": []
+}
