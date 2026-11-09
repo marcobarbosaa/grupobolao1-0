@@ -718,8 +718,9 @@
   object-fit: cover;
   transition: transform 0.4s;
 }
-.athlete-card:hover img {
-  transform: scale(1.025);
+/* Keep the complete portrait inside its frame, including on hover. */
+.athlete-card:hover img[data-portrait-variant="card"] {
+  transform: none;
 }
 .athlete-grade {
   position: absolute;

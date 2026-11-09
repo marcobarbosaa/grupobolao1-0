@@ -1,16 +1,20 @@
 import { useState } from "react";
 import type { HomePlayer } from "../../lib/home-data";
 
+export type PortraitVariant = "card" | "hero" | "profile";
+
 export function PlayerPortrait({
   player,
   priority = false,
   sizes = "(max-width: 767px) 80vw, 30vw",
   decorative = false,
+  variant,
 }: {
   player: HomePlayer;
   priority?: boolean;
   sizes?: string;
   decorative?: boolean;
+  variant?: PortraitVariant;
 }) {
   const [failed, setFailed] = useState(false);
   const [unavailable, setUnavailable] = useState(false);
@@ -36,7 +40,12 @@ export function PlayerPortrait({
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
-      style={{ objectPosition: player.focalPoint }}
+      data-portrait-variant={variant}
+      style={{
+        objectFit: variant === "hero" ? "cover" : variant ? "contain" : undefined,
+        objectPosition:
+          variant === "hero" ? "center 18%" : variant ? "center bottom" : player.focalPoint,
+      }}
       onError={() => (failed ? setUnavailable(true) : setFailed(true))}
     />
   );

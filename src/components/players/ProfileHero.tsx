@@ -21,7 +21,12 @@ export function ProfileHero({ player }: { player: PlayerPresentation }) {
           className="profile-hero-image"
           style={{ viewTransitionName: `player-portrait-${player.id}` }}
         >
-          <PlayerPortrait player={player} priority sizes="(max-width: 767px) 100vw, 55vw" />
+          <PlayerPortrait
+            variant="profile"
+            player={player}
+            priority
+            sizes="(max-width: 767px) 100vw, 55vw"
+          />
         </div>
         <div className="profile-hero-copy">
           <p className="eyebrow section-kicker">

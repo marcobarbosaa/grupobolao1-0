@@ -152,6 +152,7 @@ export function PlayerSelection({
                   >
                     <PlayerPortrait
                       player={p}
+                      variant="card"
                       priority={i === 0}
                       sizes="(max-width: 700px) 75vw, 25vw"
                       decorative

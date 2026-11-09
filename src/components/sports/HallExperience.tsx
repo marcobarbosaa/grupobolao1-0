@@ -55,6 +55,7 @@ export function HallExperience() {
         </div>
         <div className="league-hero-portrait">
           <PlayerPortrait
+            variant="hero"
             player={adaptPlayer(leader)}
             priority
             sizes="(max-width: 700px) 100vw, 55vw"
