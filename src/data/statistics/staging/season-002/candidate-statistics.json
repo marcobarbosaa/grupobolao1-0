@@ -1,0 +1,962 @@
+[
+  {
+    "id": "draft-stat-s02-regular-abel",
+    "playerId": "abel",
+    "teamId": "sacramento-kings",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Abel",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1FKBEJx2fqql4fSVXhXq8x5p2lwz7Qh7a",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 34,
+        "gs": 34,
+        "minutes": 916,
+        "points": 638,
+        "rebounds": 335,
+        "assists": 39,
+        "steals": 14,
+        "blocks": 61,
+        "turnovers": 57,
+        "fgm": 291,
+        "fga": 514,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 56,
+        "fta": 90
+      },
+      "averages": {
+        "mpg": 26.9,
+        "ppg": 18.8,
+        "rpg": 9.9,
+        "apg": 1.1,
+        "spg": 0.4,
+        "bpg": 1.8,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 56.6,
+        "threePct": 0,
+        "ftPct": 62.2
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-matheus-medeiros",
+    "playerId": "matheus-medeiros",
+    "teamId": "philadelphia-76ers",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Medeiros",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1afmFsjwHrztNEWhiPz534ZXpkLRmi9Sz",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 74,
+        "gs": 74,
+        "minutes": 2132,
+        "points": 1128,
+        "rebounds": 631,
+        "assists": 88,
+        "steals": 58,
+        "blocks": 93,
+        "turnovers": 106,
+        "fgm": 472,
+        "fga": 1064,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 184,
+        "fta": 265
+      },
+      "averages": {
+        "mpg": 28.8,
+        "ppg": 15.2,
+        "rpg": 8.5,
+        "apg": 1.2,
+        "spg": 0.8,
+        "bpg": 1.3,
+        "topg": 1.4
+      },
+      "percentages": {
+        "fgPct": 44.4,
+        "threePct": 0,
+        "ftPct": 69.4
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-guilherme",
+    "playerId": "guilherme",
+    "teamId": "chicago-bulls",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Guilherme",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1DMuDR_H-aHHD9ERXcdgu4heE7BqQLzZV",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 81,
+        "gs": 43,
+        "minutes": 2528,
+        "points": 1630,
+        "rebounds": 572,
+        "assists": 245,
+        "steals": 109,
+        "blocks": 59,
+        "turnovers": 189,
+        "fgm": 565,
+        "fga": 1189,
+        "threePm": 117,
+        "threePa": 429,
+        "ftm": 383,
+        "fta": 500
+      },
+      "averages": {
+        "mpg": 31.2,
+        "ppg": 20.1,
+        "rpg": 7.1,
+        "apg": 3,
+        "spg": 1.3,
+        "bpg": 0.7,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 47.5,
+        "threePct": 27.3,
+        "ftPct": 76.6
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-nando",
+    "playerId": "nando",
+    "teamId": "houston-rockets",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Nando",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1H5vxZEFKZiXsKeM7RBjVKmHkhMr8_Nep",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 82,
+        "minutes": 2571,
+        "points": 1453,
+        "rebounds": 742,
+        "assists": 158,
+        "steals": 70,
+        "blocks": 120,
+        "turnovers": 160,
+        "fgm": 588,
+        "fga": 1292,
+        "threePm": 31,
+        "threePa": 71,
+        "ftm": 246,
+        "fta": 309
+      },
+      "averages": {
+        "mpg": 31.4,
+        "ppg": 17.7,
+        "rpg": 9,
+        "apg": 1.9,
+        "spg": 0.9,
+        "bpg": 1.5,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 45.5,
+        "threePct": 43.7,
+        "ftPct": 79.6
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-gam-mori",
+    "playerId": "gam-mori",
+    "teamId": "atlanta-hawks",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Gam",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/18CNNGVnIBPm-b3M8Pm3amp6X_U_BZScY",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 82,
+        "minutes": 2627,
+        "points": 1605,
+        "rebounds": 446,
+        "assists": 181,
+        "steals": 96,
+        "blocks": 37,
+        "turnovers": 195,
+        "fgm": 654,
+        "fga": 1412,
+        "threePm": 38,
+        "threePa": 89,
+        "ftm": 259,
+        "fta": 325
+      },
+      "averages": {
+        "mpg": 32,
+        "ppg": 19.6,
+        "rpg": 5.4,
+        "apg": 2.2,
+        "spg": 1.2,
+        "bpg": 0.5,
+        "topg": 2.4
+      },
+      "percentages": {
+        "fgPct": 46.3,
+        "threePct": 42.7,
+        "ftPct": 79.7
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-marco-barbosa",
+    "playerId": "marco-barbosa",
+    "teamId": "denver-nuggets",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Marco",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1GI4_1IhZ2JxPkU4_Oao_Zxo9PF5-5Ekg",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 75,
+        "gs": 44,
+        "minutes": 2167,
+        "points": 1282,
+        "rebounds": 372,
+        "assists": 152,
+        "steals": 74,
+        "blocks": 52,
+        "turnovers": 166,
+        "fgm": 492,
+        "fga": 1126,
+        "threePm": 93,
+        "threePa": 253,
+        "ftm": 205,
+        "fta": 298
+      },
+      "averages": {
+        "mpg": 28.9,
+        "ppg": 17.1,
+        "rpg": 5,
+        "apg": 2,
+        "spg": 1,
+        "bpg": 0.7,
+        "topg": 2.2
+      },
+      "percentages": {
+        "fgPct": 43.7,
+        "threePct": 36.8,
+        "ftPct": 68.8
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-fabio-carvalho",
+    "playerId": "fabio-carvalho",
+    "teamId": "new-orleans-hornets",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Binho",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/11K8yWtzVwFRwgl60x39ufuSuXmBHXlh6",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 79,
+        "minutes": 2209,
+        "points": 1180,
+        "rebounds": 746,
+        "assists": 94,
+        "steals": 64,
+        "blocks": 152,
+        "turnovers": 122,
+        "fgm": 490,
+        "fga": 990,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 200,
+        "fta": 287
+      },
+      "averages": {
+        "mpg": 26.9,
+        "ppg": 14.4,
+        "rpg": 9.1,
+        "apg": 1.1,
+        "spg": 0.8,
+        "bpg": 1.9,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 49.5,
+        "threePct": 0,
+        "ftPct": 69.7
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-cristiano-ronaldo",
+    "playerId": "cristiano-ronaldo",
+    "teamId": "indiana-pacers",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Cerrote",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1zTLLZDffARg_wB1XGs9ck6x7siSwhPyq",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 32,
+        "gs": 32,
+        "minutes": 972,
+        "points": 402,
+        "rebounds": 118,
+        "assists": 155,
+        "steals": 29,
+        "blocks": 4,
+        "turnovers": 59,
+        "fgm": 160,
+        "fga": 331,
+        "threePm": 33,
+        "threePa": 93,
+        "ftm": 49,
+        "fta": 55
+      },
+      "averages": {
+        "mpg": 30.4,
+        "ppg": 12.6,
+        "rpg": 3.7,
+        "apg": 4.8,
+        "spg": 0.9,
+        "bpg": 0.1,
+        "topg": 1.8
+      },
+      "percentages": {
+        "fgPct": 48.3,
+        "threePct": 35.5,
+        "ftPct": 89.1
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-dias",
+    "playerId": "dias",
+    "teamId": "detroit-pistons",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Dias",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 77,
+        "gs": 12,
+        "minutes": 1899,
+        "points": 1306,
+        "rebounds": 159,
+        "assists": 356,
+        "steals": 47,
+        "blocks": 5,
+        "turnovers": 145,
+        "fgm": 472,
+        "fga": 1033,
+        "threePm": 106,
+        "threePa": 268,
+        "ftm": 256,
+        "fta": 349
+      },
+      "averages": {
+        "mpg": 24.7,
+        "ppg": 17,
+        "rpg": 2.1,
+        "apg": 4.6,
+        "spg": 0.6,
+        "bpg": 0.1,
+        "topg": 1.9
+      },
+      "percentages": {
+        "fgPct": 45.7,
+        "threePct": 39.6,
+        "ftPct": 73.4
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-enzo",
+    "playerId": "enzo",
+    "teamId": "san-antonio-spurs",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Enzo",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 76,
+        "gs": 76,
+        "minutes": 2252,
+        "points": 1369,
+        "rebounds": 427,
+        "assists": 153,
+        "steals": 92,
+        "blocks": 59,
+        "turnovers": 158,
+        "fgm": 544,
+        "fga": 1070,
+        "threePm": 94,
+        "threePa": 227,
+        "ftm": 187,
+        "fta": 235
+      },
+      "averages": {
+        "mpg": 29.6,
+        "ppg": 18,
+        "rpg": 5.6,
+        "apg": 2,
+        "spg": 1.2,
+        "bpg": 0.8,
+        "topg": 2.1
+      },
+      "percentages": {
+        "fgPct": 50.8,
+        "threePct": 41.4,
+        "ftPct": 79.6
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-russo",
+    "playerId": "russo",
+    "teamId": "toronto-raptors",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Russo",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 0,
+        "minutes": 2231,
+        "points": 1348,
+        "rebounds": 270,
+        "assists": 267,
+        "steals": 103,
+        "blocks": 14,
+        "turnovers": 189,
+        "fgm": 504,
+        "fga": 1092,
+        "threePm": 97,
+        "threePa": 359,
+        "ftm": 243,
+        "fta": 302
+      },
+      "averages": {
+        "mpg": 27.2,
+        "ppg": 16.4,
+        "rpg": 3.3,
+        "apg": 3.3,
+        "spg": 1.3,
+        "bpg": 0.2,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 46.2,
+        "threePct": 27,
+        "ftPct": 80.5
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-tailan",
+    "playerId": "tailan",
+    "teamId": "minnesota-timberwolves",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Tailan",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 71,
+        "gs": 71,
+        "minutes": 2173,
+        "points": 1435,
+        "rebounds": 242,
+        "assists": 157,
+        "steals": 101,
+        "blocks": 28,
+        "turnovers": 166,
+        "fgm": 528,
+        "fga": 1094,
+        "threePm": 78,
+        "threePa": 288,
+        "ftm": 301,
+        "fta": 416
+      },
+      "averages": {
+        "mpg": 30.6,
+        "ppg": 20.2,
+        "rpg": 3.4,
+        "apg": 2.2,
+        "spg": 1.4,
+        "bpg": 0.4,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 48.3,
+        "threePct": 27.1,
+        "ftPct": 72.4
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-regular-jonas",
+    "playerId": "jonas",
+    "teamId": "new-york-knicks",
+    "phaseId": "regular",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Jonas",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "row": "06-07",
+      "notes": null
+    },
+    "stats": {
+      "totals": {
+        "gp": 77,
+        "gs": 77,
+        "minutes": 2365,
+        "points": 1537,
+        "rebounds": 556,
+        "assists": 143,
+        "steals": 51,
+        "blocks": 58,
+        "turnovers": 131,
+        "fgm": 599,
+        "fga": 1300,
+        "threePm": 122,
+        "threePa": 404,
+        "ftm": 217,
+        "fta": 291
+      },
+      "averages": {
+        "mpg": 30.7,
+        "ppg": 20,
+        "rpg": 7.2,
+        "apg": 1.9,
+        "spg": 0.7,
+        "bpg": 0.8,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 46.1,
+        "threePct": 30.2,
+        "ftPct": 74.6
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-guilherme",
+    "playerId": "guilherme",
+    "teamId": "chicago-bulls",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Guilherme",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1DMuDR_H-aHHD9ERXcdgu4heE7BqQLzZV",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4,
+        "minutes": 127,
+        "points": 72,
+        "rebounds": 26,
+        "assists": 11,
+        "steals": 3,
+        "blocks": 2,
+        "turnovers": 11,
+        "fgm": 25,
+        "fga": 57,
+        "threePm": 6,
+        "threePa": 27,
+        "ftm": 16,
+        "fta": 20
+      },
+      "averages": {
+        "mpg": 31.7,
+        "ppg": 18,
+        "rpg": 6.5,
+        "apg": 2.8,
+        "spg": 0.7,
+        "bpg": 0.5,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 43.9,
+        "threePct": 22.2,
+        "ftPct": 80
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-fabio-carvalho",
+    "playerId": "fabio-carvalho",
+    "teamId": "new-orleans-hornets",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Binho",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/11K8yWtzVwFRwgl60x39ufuSuXmBHXlh6",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6,
+        "minutes": 171,
+        "points": 77,
+        "rebounds": 59,
+        "assists": 5,
+        "steals": 5,
+        "blocks": 17,
+        "turnovers": 5,
+        "fgm": 31,
+        "fga": 66,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 15,
+        "fta": 18
+      },
+      "averages": {
+        "mpg": 28.5,
+        "ppg": 12.8,
+        "rpg": 9.8,
+        "apg": 0.8,
+        "spg": 0.8,
+        "bpg": 2.8,
+        "topg": 0.8
+      },
+      "percentages": {
+        "fgPct": 47,
+        "threePct": 0,
+        "ftPct": 83.3
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-dias",
+    "playerId": "dias",
+    "teamId": "detroit-pistons",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Dias",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 20,
+        "gs": 0,
+        "minutes": 429,
+        "points": 296,
+        "rebounds": 27,
+        "assists": 73,
+        "steals": 14,
+        "blocks": 0,
+        "turnovers": 35,
+        "fgm": 113,
+        "fga": 237,
+        "threePm": 22,
+        "threePa": 48,
+        "ftm": 48,
+        "fta": 63
+      },
+      "averages": {
+        "mpg": 21.5,
+        "ppg": 14.8,
+        "rpg": 1.4,
+        "apg": 3.7,
+        "spg": 0.7,
+        "bpg": 0,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 47.7,
+        "threePct": 45.8,
+        "ftPct": 76.2
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-enzo",
+    "playerId": "enzo",
+    "teamId": "san-antonio-spurs",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Enzo",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 13,
+        "gs": 13,
+        "minutes": 412,
+        "points": 258,
+        "rebounds": 66,
+        "assists": 29,
+        "steals": 14,
+        "blocks": 12,
+        "turnovers": 32,
+        "fgm": 102,
+        "fga": 204,
+        "threePm": 18,
+        "threePa": 42,
+        "ftm": 36,
+        "fta": 45
+      },
+      "averages": {
+        "mpg": 31.7,
+        "ppg": 19.8,
+        "rpg": 5.1,
+        "apg": 2.2,
+        "spg": 1.1,
+        "bpg": 0.9,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 50,
+        "threePct": 42.9,
+        "ftPct": 80
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-russo",
+    "playerId": "russo",
+    "teamId": "toronto-raptors",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Russo",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 13,
+        "gs": 0,
+        "minutes": 345,
+        "points": 201,
+        "rebounds": 43,
+        "assists": 44,
+        "steals": 26,
+        "blocks": 0,
+        "turnovers": 27,
+        "fgm": 79,
+        "fga": 157,
+        "threePm": 17,
+        "threePa": 48,
+        "ftm": 26,
+        "fta": 32
+      },
+      "averages": {
+        "mpg": 26.5,
+        "ppg": 15.5,
+        "rpg": 3.3,
+        "apg": 3.4,
+        "spg": 2,
+        "bpg": 0,
+        "topg": 2.1
+      },
+      "percentages": {
+        "fgPct": 50.3,
+        "threePct": 35.4,
+        "ftPct": 81.2
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-tailan",
+    "playerId": "tailan",
+    "teamId": "minnesota-timberwolves",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Tailan",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 22,
+        "gs": 22,
+        "minutes": 678,
+        "points": 469,
+        "rebounds": 70,
+        "assists": 63,
+        "steals": 17,
+        "blocks": 14,
+        "turnovers": 60,
+        "fgm": 173,
+        "fga": 331,
+        "threePm": 33,
+        "threePa": 93,
+        "ftm": 90,
+        "fta": 115
+      },
+      "averages": {
+        "mpg": 30.8,
+        "ppg": 21.3,
+        "rpg": 3.2,
+        "apg": 2.9,
+        "spg": 0.8,
+        "bpg": 0.6,
+        "topg": 2.7
+      },
+      "percentages": {
+        "fgPct": 52.3,
+        "threePct": 35.5,
+        "ftPct": 78.3
+      }
+    }
+  },
+  {
+    "id": "draft-stat-s02-playoffs-jonas",
+    "playerId": "jonas",
+    "teamId": "new-york-knicks",
+    "phaseId": "playoffs",
+    "seasonId": "season-002",
+    "status": "pending-user-review",
+    "provenance": {
+      "sourceType": "screenshots",
+      "folder": "Bolão/Temporada 2006-2007/Jonas",
+      "driveFolderUrl": "https://drive.google.com/drive/folders/1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "row": "Playoffs",
+      "notes": "Playoff aggregate already includes all rounds; do not add to individual rounds"
+    },
+    "stats": {
+      "totals": {
+        "gp": 23,
+        "gs": 23,
+        "minutes": 759,
+        "points": 562,
+        "rebounds": 198,
+        "assists": 51,
+        "steals": 16,
+        "blocks": 20,
+        "turnovers": 44,
+        "fgm": 220,
+        "fga": 443,
+        "threePm": 53,
+        "threePa": 123,
+        "ftm": 69,
+        "fta": 90
+      },
+      "averages": {
+        "mpg": 33,
+        "ppg": 24.4,
+        "rpg": 8.6,
+        "apg": 2.2,
+        "spg": 0.7,
+        "bpg": 0.9,
+        "topg": 1.9
+      },
+      "percentages": {
+        "fgPct": 49.7,
+        "threePct": 43.1,
+        "ftPct": 76.7
+      }
+    }
+  }
+]

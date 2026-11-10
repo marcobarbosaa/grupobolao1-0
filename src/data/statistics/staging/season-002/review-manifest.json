@@ -1,0 +1,51 @@
+{
+  "status": "pending-user-review",
+  "seasonId": "season-002",
+  "year": "2006-07",
+  "sourceFolder": "https://drive.google.com/drive/folders/1dXG1O6uQwl6-e-KfBz-7eHNoS-6fxWWD",
+  "scope": "Only player folders. Extras explicitly excluded.",
+  "filesCount": 69,
+  "playerCount": 13,
+  "regularRecords": 13,
+  "playoffAggregateRecords": 7,
+  "phaseProgression": {
+    "Dias": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals"
+    ],
+    "Enzo": [
+      "first-round",
+      "quarterfinals"
+    ],
+    "Russo": [
+      "first-round",
+      "quarterfinals"
+    ],
+    "Tailan": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals",
+      "nba-finals"
+    ],
+    "Jonas": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals",
+      "nba-finals"
+    ],
+    "Binho": [
+      "round-unverified"
+    ],
+    "Guilherme": [
+      "round-unverified"
+    ]
+  },
+  "notes": [
+    "06-07 row is distinct from 05-06 and Career",
+    "No awards, champions or team standing claims used",
+    "Round-specific screenshots require separate normalization; no rounded averages multiplied to fabricate totals",
+    "All figures remain unpublished until user's review and approval",
+    "This is a staging format, not the published statistics schema"
+  ]
+}
