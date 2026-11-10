@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "src-s02-abel-1",
+    "kind": "screenshot",
+    "fileName": "beabfe98-21e8-4c8b-ad65-f350a49065e1.jpg",
+    "contentHash": "ff02b6a6471e65cecb76d5c34238c90bd425ba286d5148a8f3829ecbe0a619fc",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1TTc6bYgfdBr2Yn8ktDRpbrxTu-HBtili",
+      "driveFolderId": "1FKBEJx2fqql4fSVXhXq8x5p2lwz7Qh7a",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Abel",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-abel-2",
+    "kind": "screenshot",
+    "fileName": "d1d5b4f1-282c-4928-9a56-b40e83a97dee.jpg",
+    "contentHash": "dbe4dffed803fa2f97d58a61debdd1a46ce78ba7ea27ea225bebe5d91570850f",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1X80-H-FHZvApQG0gQZn_2HcfBtBEW-20",
+      "driveFolderId": "1FKBEJx2fqql4fSVXhXq8x5p2lwz7Qh7a",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Abel",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-abel-3",
+    "kind": "screenshot",
+    "fileName": "5053c155-80dc-46d1-91d8-751591d5c797.jpg",
+    "contentHash": "e5f9621af2ee263749b5346c0d3102cfc623f7362929d27f30901c383fd54fe9",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1Ju3clz3QyNAepy99grl7XQY8FU9RQ_57",
+      "driveFolderId": "1FKBEJx2fqql4fSVXhXq8x5p2lwz7Qh7a",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Abel",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-medeiros-1",
+    "kind": "screenshot",
+    "fileName": "0ccd565d-beef-40cb-b5a7-fa6cd25f12b8.jpg",
+    "contentHash": "6f07cf0c1f5179de41be58f7a6c630f5689554a303a0051326487187f5d19a7e",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1S5a1EWM1tQgDtmnSAO9FoJk0C7oZAtYI",
+      "driveFolderId": "1afmFsjwHrztNEWhiPz534ZXpkLRmi9Sz",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-medeiros-2",
+    "kind": "screenshot",
+    "fileName": "5d445109-2ecf-407c-a4cd-121519fb862f.jpg",
+    "contentHash": "6b1733677f053cb2a25923ae81628cee08a8ba092f3b6e59288182f8b7bcbcca",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1DvHXiL6c3NtGsg4gZ-McVPEouUTqPFZ2",
+      "driveFolderId": "1afmFsjwHrztNEWhiPz534ZXpkLRmi9Sz",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-medeiros-3",
+    "kind": "screenshot",
+    "fileName": "4f030f3a-c0a7-4fa6-89de-2fd5269175ce.jpg",
+    "contentHash": "6d48eae718d6dacdc255e0aaf2b4e6c29a520328a622595f427bb7a67b479f98",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "15umTHSRcF2SRXoslyjfmnL0PNzZ-8w9f",
+      "driveFolderId": "1afmFsjwHrztNEWhiPz534ZXpkLRmi9Sz",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-guilherme-1",
+    "kind": "screenshot",
+    "fileName": "9c0f1404-c1a3-4e2d-8777-8807634a7e16.jpg",
+    "contentHash": "b64b493469d917cb2f52c761d0b8e01981ea8beca5b303b714b7efb6f68809fa",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1THUMC_P8e-qdHeDFWtpZHi9ARzf7LVI2",
+      "driveFolderId": "1DMuDR_H-aHHD9ERXcdgu4heE7BqQLzZV",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-guilherme-2",
+    "kind": "screenshot",
+    "fileName": "62319eab-6f8f-4a37-8961-49dc0f4f142f.jpg",
+    "contentHash": "ad47098149a17d8539783d891c40d06afc5eaac0512c7f2ec39296c4293083e0",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1NFmKRikWxcGOfF5iCaU44AUI9Bh6q2qs",
+      "driveFolderId": "1DMuDR_H-aHHD9ERXcdgu4heE7BqQLzZV",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-guilherme-3",
+    "kind": "screenshot",
+    "fileName": "73e4c62c-2127-4014-9e08-3461c6869673.jpg",
+    "contentHash": "806c015e82b30d7f818ed396c508771c2221eac601bc0f71d23978dc3a022b2b",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1mWj_OQ1KSW6hfEzxsT6b3GzN1Ps2Hn0C",
+      "driveFolderId": "1DMuDR_H-aHHD9ERXcdgu4heE7BqQLzZV",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-nando-1",
+    "kind": "screenshot",
+    "fileName": "f654f35d-3e3d-4a7a-af60-655b9da3b4fd.jpg",
+    "contentHash": "cc923538bf4e0a79cb0e1542b4ffad09ac1c8a33747dd70a803207db34bf8b86",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1daCwrQClJmiIlTnOvPmucfqFbB1K4rkc",
+      "driveFolderId": "1H5vxZEFKZiXsKeM7RBjVKmHkhMr8_Nep",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-nando-2",
+    "kind": "screenshot",
+    "fileName": "e85f73fd-726b-47da-89e0-eeaa48849240.jpg",
+    "contentHash": "093b2a188b6169de43893d02bd7fc919c446c27e9a8edd9ca8d2f32e24ee63cc",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1bi_On5UNOxZUX1g-AW9R4CYg8FHIZHw0",
+      "driveFolderId": "1H5vxZEFKZiXsKeM7RBjVKmHkhMr8_Nep",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-nando-3",
+    "kind": "screenshot",
+    "fileName": "6c45ecf5-0165-4c1a-82dc-bb4047ce7907.jpg",
+    "contentHash": "6c15d6158a8fd8bbd6f04b5edec7b2f046624f0799c6c86a6838c8855b91621b",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1X86qzgVLu_0nS1SiVJ9WI4qpmhXyr07Z",
+      "driveFolderId": "1H5vxZEFKZiXsKeM7RBjVKmHkhMr8_Nep",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-1",
+    "kind": "screenshot",
+    "fileName": "495434f1-80b0-4f9f-9835-98631fa62122.jpg",
+    "contentHash": "3030b9d9743cd9c8e9812a20ac976e5684052f00f74f9ef9b62f74debc66dc60",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1GmZgq4s3CYrnWabpipGmAGEoQGAvQY2W",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-2",
+    "kind": "screenshot",
+    "fileName": "135c9764-9987-459e-a3f3-bf4145c32efd.jpg",
+    "contentHash": "b0c90533527a63dc051f9ea97847b8bbc57872aae45fe11a63aa6aab2ba4e9f9",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1Rzw0dCNwkdx48q9t8KazwhIX1CpYKc90",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-3",
+    "kind": "screenshot",
+    "fileName": "2951ea77-f714-43d7-a216-aa871970acc1.jpg",
+    "contentHash": "29090c24e3ff867fa53e3d8461435224e0a7f20e3ce531aa58407c8f187bd304",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1-H2zw-CPMdZEr7qMVk2p_FWfPJpqb07p",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-4",
+    "kind": "screenshot",
+    "fileName": "a2bcbbf1-299f-4732-b991-7d04aaeabd48.jpg",
+    "contentHash": "39c0187a12e5d963503ac39a5cc032bc26decf5bc9cd09d429c07d2bae0fbdc0",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1_ERnFGW7QGqYsc2gpzTiJO_m2s2t0QBT",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-5",
+    "kind": "screenshot",
+    "fileName": "8bf04d95-c918-413a-a826-95f0d0b16d77.jpg",
+    "contentHash": "7a4ade76db2a7f74283df31faad4357f34a62c7f1785c043449079df546e051c",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1c91KHEK6U632Ly-YilYIqesLs32C9bI1",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-6",
+    "kind": "screenshot",
+    "fileName": "7e89fde6-be75-4af7-aa66-0b03835b6f6c.jpg",
+    "contentHash": "86fc83d2e37fd3a33dcda3a9c3dfc7dba038fef29fb6e7ed305752541140f8d8",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1qQY36YIHe23qMxH_cqgD8PuUaNG46Rgf",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-7",
+    "kind": "screenshot",
+    "fileName": "009a223f-e300-4a24-bdb7-579993c8d7af.jpg",
+    "contentHash": "15f6e8d7db128c743202ffb1648ef310b940aaa1ad64c7268dcb49995496e6af",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1aGtgOFVlQAo-uNN6yah_LxM6qqDBqq_p",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-8",
+    "kind": "screenshot",
+    "fileName": "33d13f38-1186-4e16-96ea-2c92e6d9ccbb.jpg",
+    "contentHash": "0d874d24b70473a241243f14e75f79db47d76f63d1afc2e5e1f3210fe3a39855",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1temsw1CTFDVRGagSQZlknZMEuK68pBqo",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-dias-9",
+    "kind": "screenshot",
+    "fileName": "a32726bd-3c91-424c-b077-947a0623eb94.jpg",
+    "contentHash": "5e6b2fa308a09d0bad60c58e87d14b6472347b7353c54e5f2d7a10a1c8141640",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1m6ewJw6LWOUYdaiEVQ9ZQ-EkgKHhAUL1",
+      "driveFolderId": "1IZPuahhpBnCuYXIhGJ05xuHUkWh9Z-eu",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Dias",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-1",
+    "kind": "screenshot",
+    "fileName": "f2b8ef64-234f-448e-b683-42f86cb6f6c2.jpg",
+    "contentHash": "3a9d43d1105464e8f2a4402314a45caf1ae2626ab0d6ab3d453dc23f0175a264",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1jRZCqrHbcyBJh-UGb-Bot8QkCq6N6wHH",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-2",
+    "kind": "screenshot",
+    "fileName": "00deb364-6c97-4a76-b8aa-e15aa61318e9.jpg",
+    "contentHash": "466452a43aebbed2354ed77cda483ff1d91717cb860049c60bf71601b321eb30",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1p11WSFYG1wS1QghIAqGCwNC32jUabftz",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-3",
+    "kind": "screenshot",
+    "fileName": "395feac2-b4ae-4c2c-8ce1-2cb92ed13c1c.jpg",
+    "contentHash": "286f86181b5f36181da0f9954c33a03201ffe70100b588a6e503cbf58c3da740",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1J0uFcT_n8NBbZcweNFAs8jBDj69_pVs_",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-4",
+    "kind": "screenshot",
+    "fileName": "9810e442-d7aa-4422-8938-fd517cb757fe.jpg",
+    "contentHash": "2d927b4ad62a96193a5040f0a20ba982bf3ed97bf2f3e09e14254172396f1f54",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1SIAKhhPei2XfTdTRJfIpVZeNq2J9mEA4",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-5",
+    "kind": "screenshot",
+    "fileName": "db5de76b-a6de-4f7b-b3dc-c5498052ecc1.jpg",
+    "contentHash": "f289d2029f140c1849379d2ae8e7a9b0ce9a7d44fbcb31ce25af3de868955539",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1vrQwwnxg5Tyo-t3eETjYmMJ_zVNLuWDh",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-6",
+    "kind": "screenshot",
+    "fileName": "50c497ef-3d6c-4335-82e5-6798aa99341d.jpg",
+    "contentHash": "c430919f99bc3b88180162e5e4b6f578bfa3494a162090c2d1885a5bbe9845d4",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1wY7v75sABwddAiPtpi2W3JHhYNot8nDt",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-enzo-7",
+    "kind": "screenshot",
+    "fileName": "a23df06e-b2d2-4f56-9b39-089fe2e43659.jpg",
+    "contentHash": "ba0af64f4e80276264d851b22dbc0e28352706ba9ce769460975b0cf78f8792a",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "12chqkCWFsszm6v0pW8DN1wMADeR_Qtf6",
+      "driveFolderId": "1nAAvCygkHp3ylwzCsN7fZHJ6kUiC2lYs",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Enzo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-gam-1",
+    "kind": "screenshot",
+    "fileName": "391e3638-b580-4a4e-8228-f98ab6a2b804.jpg",
+    "contentHash": "1c1a6b45a2cec1084523647097d37cfe5fcd5a545f95ccd5834242920c837f88",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1i6MgM5iv7iMKMJ5HwB4zNZZS_fqcUY50",
+      "driveFolderId": "18CNNGVnIBPm-b3M8Pm3amp6X_U_BZScY",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Gam",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-gam-2",
+    "kind": "screenshot",
+    "fileName": "6334bbcc-6eb8-4a6a-9afa-21a168518c5d.jpg",
+    "contentHash": "20950536b87ffa01b42e25041b7fd3639e2229790f073ae4cd8d7f7767a4eaf6",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1eDIN2P9Ib9JlsGp8p7cl6eRWfeK5HUOU",
+      "driveFolderId": "18CNNGVnIBPm-b3M8Pm3amp6X_U_BZScY",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Gam",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-gam-3",
+    "kind": "screenshot",
+    "fileName": "68d41344-2c7d-4271-843c-5163565bba02.jpg",
+    "contentHash": "807ddc5d3bdb3f8cde62fa04a72c8a4120d6427019c7e34758941e835a371999",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1EquDeXO6eYgtXOUjH-o6zule8kTvOC6z",
+      "driveFolderId": "18CNNGVnIBPm-b3M8Pm3amp6X_U_BZScY",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Gam",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-marco-1",
+    "kind": "screenshot",
+    "fileName": "881abd1a-28fe-40bb-b196-d2f8d68f74d5.jpg",
+    "contentHash": "63970232a1a4861d6fdc8f93a08de93ed039de8fd5c2a7e75da4d02ae74d7b6d",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1nyFKy8RmMdet26jKvgajQWixNp-_OGhz",
+      "driveFolderId": "1GI4_1IhZ2JxPkU4_Oao_Zxo9PF5-5Ekg",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Marco",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-marco-2",
+    "kind": "screenshot",
+    "fileName": "db399570-03d4-425e-9b28-53392b8dbe77.jpg",
+    "contentHash": "3ddc8051d57c60e08f476fcd00a241c34de8e650717d0915d1965082d609fde2",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1-dZ6y7ti38WO4HqYVTPUJQ_T58Ap0LBH",
+      "driveFolderId": "1GI4_1IhZ2JxPkU4_Oao_Zxo9PF5-5Ekg",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Marco",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-marco-3",
+    "kind": "screenshot",
+    "fileName": "823b2289-44fc-41ce-8681-f94e57b31c8b.jpg",
+    "contentHash": "93ba96e61901258a02508a49f7bf2b3b0834c8fae2e4bd75d132e6f82635db87",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1fZgFT9NZVi344jjhkmROF1tf1XlE_v95",
+      "driveFolderId": "1GI4_1IhZ2JxPkU4_Oao_Zxo9PF5-5Ekg",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Marco",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-1",
+    "kind": "screenshot",
+    "fileName": "b70cf362-763e-4ae3-a853-c8c834550d7a.jpg",
+    "contentHash": "b27ff485729cea18254a42e0092f73daaa6d285326039f9b6fa6357b5d4c63c2",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1NSTbA4eI-moZ-priMdCwXb5oxJ0Mq_vJ",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-2",
+    "kind": "screenshot",
+    "fileName": "d06073ee-2334-4ffd-8c84-172234a3706f.jpg",
+    "contentHash": "6a13e1b8121b49bffdfa36857e04fb53156b72781a9e3c20553eea31cb640997",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1S0nslaF8y1jLsonsxsNWS6d41t3Z1R7y",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-3",
+    "kind": "screenshot",
+    "fileName": "1d799ba8-35ef-4109-aad2-24f1372abbf6.jpg",
+    "contentHash": "e4252e452352cccf10821f97b267e6124bf4cd986df36768a7f8ec85a41f5871",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1fInFfACBV2krJ47emb3xHw3pPBBTvS6C",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-4",
+    "kind": "screenshot",
+    "fileName": "35197338-4b1e-4d6c-91b2-886b4b1fac48.jpg",
+    "contentHash": "43b477ba9cda22d0e5ffa999d1c85f6ba0415c6d384e52f4a121d1a2d703ef43",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1U5l0aL4iRIpog1DIv8seVAWNfUAk3Q4p",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-5",
+    "kind": "screenshot",
+    "fileName": "6d6bdf32-7117-42ca-af33-f965843c9da6.jpg",
+    "contentHash": "ac3dfa9ba9abb739b6d9d9df504ae5bd9c17f1dec996a2f89b369076fc7479aa",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1pttiFvE-TZS5RheCuBDKr84Nof5cUze5",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-6",
+    "kind": "screenshot",
+    "fileName": "2dc7029b-30af-4cbc-8a4e-0dcdf2771b92.jpg",
+    "contentHash": "cdb0f16b5e1c30577f56c02b5484ba408599a5fd053096065ef2c780a41827d8",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1Ky0wl7tqxbjnWPKzCosgv6MPGxoscsA3",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-russo-7",
+    "kind": "screenshot",
+    "fileName": "427b053f-3d8e-42e8-a6fc-260f2d2397ba.jpg",
+    "contentHash": "e04669ef2883dec5d498c57fb4fc022ac4ffc0fe6972cb821d93924f0a0d1117",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "12aqMM3x1x-X-5J21oSk2gwx0gprL5rbp",
+      "driveFolderId": "1PHaZOcYMVLjy97uwCOGLTk74Atj91H2A",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Russo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-binho-1",
+    "kind": "screenshot",
+    "fileName": "96ea95d9-7d74-453c-b2e5-216baad43ead.jpg",
+    "contentHash": "2211ca65b206871dc04ce7849c42498d3284a9304e0409ce6b4958c35a2f8052",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1iDo8XojsHX86PGo97c9Ad_pmokgGXAQL",
+      "driveFolderId": "11K8yWtzVwFRwgl60x39ufuSuXmBHXlh6",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Binho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-binho-2",
+    "kind": "screenshot",
+    "fileName": "3c832641-306d-4f6d-b485-ecca2559db12.jpg",
+    "contentHash": "a44e4d98500fdef3ca43891503c4e6ff01d5a358bb4a7fa9a8cbcafa2ddb602c",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1jM6SRIvdS-KJqVz2E08eTZdH8JjOWYLT",
+      "driveFolderId": "11K8yWtzVwFRwgl60x39ufuSuXmBHXlh6",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Binho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-binho-3",
+    "kind": "screenshot",
+    "fileName": "04e44a10-ff7c-49c4-836a-54cee5f8368a.jpg",
+    "contentHash": "2c0cfe833c7b5be6024261d630c088c843bc87793eccd050663d7dcff7c6b579",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "11DjGmKLWslcuo5O5fYKehBWh2xLND3J3",
+      "driveFolderId": "11K8yWtzVwFRwgl60x39ufuSuXmBHXlh6",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Binho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-cerrote-1",
+    "kind": "screenshot",
+    "fileName": "78370b02-bf41-4701-b04a-3ee5f93482b6.jpg",
+    "contentHash": "6248c9b36dcd1ab2430b6edf1ae666aea59da71bee7d626a649e3fc901a6140e",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1iowAfE-2W__PclZU6auzrlMz-DAPyrIO",
+      "driveFolderId": "1zTLLZDffARg_wB1XGs9ck6x7siSwhPyq",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Cerrote",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-cerrote-2",
+    "kind": "screenshot",
+    "fileName": "3f3830b7-5b77-404f-89e8-2db0747742e9.jpg",
+    "contentHash": "9f387fa4fb727147ac7631bc5f969a6806a080978ab154078eac40b74f60679f",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "17RVToXBig0iyjq1q42TD87Cv2ruwSV4g",
+      "driveFolderId": "1zTLLZDffARg_wB1XGs9ck6x7siSwhPyq",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Cerrote",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-cerrote-3",
+    "kind": "screenshot",
+    "fileName": "8c3a28fc-4a77-45db-8fb8-6e26eb996d08.jpg",
+    "contentHash": "b3fe60040938db98b59ddbf5f4d8da9203953e405ab6acdda0f773c6e3bb704a",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1lXoidCKWJbXT9t7q69NjvsYpk1fW_j3w",
+      "driveFolderId": "1zTLLZDffARg_wB1XGs9ck6x7siSwhPyq",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Cerrote",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-1",
+    "kind": "screenshot",
+    "fileName": "72baf6e1-892d-4e05-b665-9faa2f92634a.jpg",
+    "contentHash": "680df53161c33669cb099f0c41c935c8505f268cdf1d7837825866685aaf7ee5",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1uk0A2jyvkjU3o4XoROlAY5IdN8FM_HV4",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-2",
+    "kind": "screenshot",
+    "fileName": "a8def59b-be37-4eb2-a0ce-8acf54b84b7f.jpg",
+    "contentHash": "a7f34b3dae6f481c4a0d023043fc7f0453a534e0551c9d268e75e144ea9445b1",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1QXRdADBmkGsFzYka4RcnoUcw1igCxVVR",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-3",
+    "kind": "screenshot",
+    "fileName": "0958afe2-80e9-4185-9114-974082e07170.jpg",
+    "contentHash": "4ffcbd3713e342ee1dda305a6b38cfd097b262f2c148672c371082beb2585447",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1yPKcs6yW1sRK-kVdiI_hPoTpa0LTDa7o",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-4",
+    "kind": "screenshot",
+    "fileName": "a1fb29f9-411b-4d5f-b0a4-507ace8837a4.jpg",
+    "contentHash": "004d93064cf9a09093b66d77907caa54e4aec951cf3d9a0b3b4e7663b4b523dc",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "17yaQfPARbNOfPrEeH_ZqYRl8mNSuhmAO",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-5",
+    "kind": "screenshot",
+    "fileName": "c5c441aa-05dc-47bb-93bb-08c701a09c3a.jpg",
+    "contentHash": "d6cee897a00e10a6486a7dc1df56718e9be376d042f104c71fa944b57e11626b",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1TFJe9KyfBi0gx_swouZiRdqAXBHcKr7B",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-6",
+    "kind": "screenshot",
+    "fileName": "5d1b4a38-5b5f-4b6b-be19-0479448b5d84.jpg",
+    "contentHash": "77c26cff108ea90ae948e1a98c37dd9efbfa8d2070e4c43bdb843b9313999803",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1P4rstNfxpwIHTGQEU2Rz0tWC5BuEZHwn",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-7",
+    "kind": "screenshot",
+    "fileName": "8795eb49-5ade-40a2-8eaa-6cea194ea0ad.jpg",
+    "contentHash": "237c4bc59d84fb4505100e65d7be78fd0af43b3699739b436a297b186c52ea63",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1pYXl-W0Fyk2miuMSNPwbAyqxU2pJmTk6",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-8",
+    "kind": "screenshot",
+    "fileName": "4ff83625-0823-4231-af8a-0e840d4e4ce4.jpg",
+    "contentHash": "d2cfdbeb6907d05fc28ee55a0c7d83deedd42b21b109c3887d1063c4609af801",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1j7skSGuB1gc7c0kWZzNPlmh06XP-jTSg",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-9",
+    "kind": "screenshot",
+    "fileName": "1d228153-26ca-472e-92ae-a791ed3d6c08.jpg",
+    "contentHash": "da7f147f345eb6bdfab8378cb25745cb00bab37261980fbf3055178fc3babcc0",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "19AS_XomOytBsnGZ1XtyOr5yXTvyjo0zZ",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-10",
+    "kind": "screenshot",
+    "fileName": "2a2de9e7-6828-4c9a-be97-2cb3a7e42177.jpg",
+    "contentHash": "342fc94e3c3276d1eb69c8871d52f23caf056f8565abf5e0f35be516188f5c7a",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1X1d218IR-C4hjgnrGhuYYZexcO1l_d5E",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-tailan-11",
+    "kind": "screenshot",
+    "fileName": "9e4aec99-0bcb-4e1c-8479-06d8461422f4.jpg",
+    "contentHash": "5c2d4690cac52fdccade83210461e9feb10f5316ff1133231ebf8e08ad535b9e",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1iH1x6cjqHrEiVEfNGnKTBcF7vx-3bGDl",
+      "driveFolderId": "1bR3wY8Zoh8VcagGbfz1_NVwOlrYwQJLD",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-1",
+    "kind": "screenshot",
+    "fileName": "482ee4fc-f672-47d6-b658-c638cf5b1f8a.jpg",
+    "contentHash": "48408d9532a8778719f86447508bb3f230cfab6305cbf6f853c7ad798b2ca12d",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1ENQLGF5EdddH85pFO9y2a0fa3E9YYmje",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-2",
+    "kind": "screenshot",
+    "fileName": "d7c6c3d1-12de-494c-a5a6-1408f4848481.jpg",
+    "contentHash": "949458c60c3a5d38ba144ef3bdd5d9e9b900e6eb852c8c29fb2a3a55386f1e5e",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1rt04mEpXD2UdUzXZT5vBWX-QpddsU-WX",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-3",
+    "kind": "screenshot",
+    "fileName": "881ff4f7-b668-4eb2-9985-4f3f014c9377.jpg",
+    "contentHash": "e7f7185a13ee6b8d3535b039be0e60070c984068f2cc3ee9fb26cff860db9c80",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "11vIVZ4aN-rwYmMOcDd8nXJytcH7GwbfP",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-4",
+    "kind": "screenshot",
+    "fileName": "3a4fc87d-3ea3-45c3-a23f-20b38c1a8e3f.jpg",
+    "contentHash": "6c04661d3579231c70d0ef57c16fdbe0a759ad6cbd6e833101509278fc17a7f3",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1v3Oh5oDN9C5BERB4Wk7S33cN-34gR4L7",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-5",
+    "kind": "screenshot",
+    "fileName": "8cac311f-1c44-487e-891d-d162c2468154.jpg",
+    "contentHash": "54d8fc9992c6c96cc976ab423ea3bc7caaa9127107fe61420b9ec2cc28820cd4",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "123xemJgYfB7Lhd9mZEd12W8kIB7jBKfh",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-6",
+    "kind": "screenshot",
+    "fileName": "8d4f82fc-55b1-4820-b9d6-c0bc2b3674f0.jpg",
+    "contentHash": "23ff8a99b98f5dd8fb77eddb6320a92ff9e358b1ccc2f366f8ac05167abf9d42",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1TvebcWRUui8ASQ2yfiFCxS4VJD6v_zww",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-7",
+    "kind": "screenshot",
+    "fileName": "73b9df6f-58fe-4ca1-a433-0b8153518d3e.jpg",
+    "contentHash": "3f61607f8d96f5e596c61933900075e62c56d3ad051f2fcdf1f08d8bb28ba35b",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1pqT6G1_17w5AGR5OtmcY7KRVwmbH_iZM",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-8",
+    "kind": "screenshot",
+    "fileName": "8a2e9a24-e6f7-4362-a383-8d0ef32f7030.jpg",
+    "contentHash": "ede06ec83ff820e4ed5b3694fdb8296a71c277c825d8caab07c4de4beac62678",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1wpRHiPk0KUY6IGrfAfC3hRSUO1Im6inF",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-9",
+    "kind": "screenshot",
+    "fileName": "506c807b-fcdf-44a5-9dbb-00e9f537d74e.jpg",
+    "contentHash": "b021f53fd2d75aa90eb612a1638780d94ad8089c5c4cecfa50459f47b2f980ea",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1HjCW9vpBXktMZU5Yn6FgYdar1_3QJkn3",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-10",
+    "kind": "screenshot",
+    "fileName": "6c675839-fe42-45be-99ca-337129f8947f.jpg",
+    "contentHash": "b946ff26ba12ecfcf246597c5bc999ae9d1567c1957a2b0778e2485ac6bce768",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1B573RXvtNfq0zPlWjskpR0fQmkwq_McT",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s02-jonas-11",
+    "kind": "screenshot",
+    "fileName": "26ce0943-bcb9-4848-9605-b9acc849539d.jpg",
+    "contentHash": "322b83b4a0b26a9c865e804a36b67260ca90c2cb695e0d023c0f38b4ee61a655",
+    "receivedAt": "2026-11-10T19:58:44.808Z",
+    "metadata": {
+      "driveFileId": "1Rs_5PGfpwnvzjU6gfO_7FCWcJbx3HUHv",
+      "driveFolderId": "1ArOSBjx8kVV2EyRrnF18yy7BFaS3u4pX",
+      "source": "Google Drive; original bytes kept private",
+      "season": "season-002",
+      "folder": "Jonas",
+      "originalStoredPublicly": false
+    }
+  }
+]
