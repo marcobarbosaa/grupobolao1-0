@@ -6,7 +6,7 @@ Os dados aqui são **candidatos**, não foram aprovados e NÃO estão referencia
 
 Dados preliminares: 13 temporadas regulares + 7 consolidados de playoffs. As linhas 05–06 e Career nas capturas não pertencem a este lote.
 
-Progressão verificada pelos filtros das capturas específicas: Dias até Conference Finals; Russo e Enzo até Conference Semifinals; Tailan e Jonas até NBA Finals. Binho e Guilherme têm agregado de playoffs, mas a rodada ainda não foi verificada. A classificação por rodada não equivale a títulos ou resultados de série.
+Progressão verificada pelos filtros das capturas específicas: Dias até Conference Finals; Russo e Enzo até Conference Semifinals; Tailan e Jonas até NBA Finals. Binho (6 jogos) e Guilherme (4 jogos) foram eliminados no First Round, conforme regra explicitamente confirmada pelo usuário: envio somente do consolidado dos playoffs, sem capturas de fases posteriores, indica eliminação na primeira rodada. A classificação por rodada não equivale a títulos ou resultados de série.
 
 As estatísticas separadas por rodada (médias e percentuais) serão acrescentadas em uma revisão posterior do lote de conferência; os totais por rodada só serão preenchidos quando explicitamente observados, não inferidos de médias arredondadas.
 

@@ -35,10 +35,10 @@
       "nba-finals"
     ],
     "Binho": [
-      "round-unverified"
+      "first-round"
     ],
     "Guilherme": [
-      "round-unverified"
+      "first-round"
     ]
   },
   "notes": [
@@ -46,6 +46,7 @@
     "No awards, champions or team standing claims used",
     "Round-specific screenshots require separate normalization; no rounded averages multiplied to fabricate totals",
     "All figures remain unpublished until user's review and approval",
-    "This is a staging format, not the published statistics schema"
+    "This is a staging format, not the published statistics schema",
+    "User-confirmed convention on 2026-11-10: screenshots containing only playoff totals (without later-round screens) indicate First Round elimination. Applied to Binho (6 games) and Guilherme (4 games)."
   ]
 }
