@@ -39,7 +39,45 @@ const eastern: Team[] = [
 ].map(row => fromRow(row));
 function fromRow(row: (string | number)[]): Team { const [code,name,wins,losses,pct,gb,home,away,conf,div,ppg,opp,diff,streak]=row; return {code:String(code),name:String(name),wins:Number(wins),losses:Number(losses),pct:Number(pct),gb:String(gb),home:String(home),away:String(away),conf:String(conf),div:String(div),ppg:Number(ppg),opp:Number(opp),diff:Number(diff),streak:String(streak)}; }
 const names = Object.fromEntries([...western,...eastern].map(t=>[t.code,t.name]));
-const logoCodes: Record<string,string> = {PHX:"phx",SA:"sa",MIN:"min",LAL:"lal",NO:"no",SEA:"sea",LAC:"lac",POR:"por",MEM:"mem",DAL:"dal",SAC:"sac",GS:"gs",HOU:"hou",DEN:"den",UTAH:"utah",DET:"det",ORL:"orl",NY:"ny",CHI:"chi",WAS:"wsh",BOS:"bos",TOR:"tor",MIL:"mil",CLE:"cle",CHA:"cha",PHI:"phi",MIA:"mia",NJN:"bkn",ATL:"atl",IND:"ind"};
+// Historical 2006–07 identity: first year each emblem was in use.
+// Source: https://www.logocdn.com/nba/ (era-by-era logo archive).
+// Do not reuse modern NBA IDs: relocations/rebrands change the artwork.
+const historicalLogos2006: Record<string, { year: number; slug: string }> = {
+  ATL: { year: 1995, slug: "atlanta-hawks" },
+  BOS: { year: 1996, slug: "boston-celtics" },
+  CHA: { year: 2004, slug: "charlotte-bobcats" },
+  CHI: { year: 1966, slug: "chicago-bulls" },
+  CLE: { year: 2003, slug: "cleveland-cavaliers" },
+  DAL: { year: 2001, slug: "dallas-mavericks" },
+  DEN: { year: 2003, slug: "denver-nuggets" },
+  DET: { year: 2005, slug: "detroit-pistons" },
+  GS: { year: 1997, slug: "golden-state-warriors" },
+  HOU: { year: 2003, slug: "houston-rockets" },
+  IND: { year: 2005, slug: "indiana-pacers" },
+  LAC: { year: 1984, slug: "los-angeles-clippers" },
+  LAL: { year: 2001, slug: "los-angeles-lakers" },
+  MEM: { year: 2004, slug: "memphis-grizzlies" },
+  MIA: { year: 1999, slug: "miami-heat" },
+  MIL: { year: 2006, slug: "milwaukee-bucks" },
+  MIN: { year: 1996, slug: "minnesota-timberwolves" },
+  NJN: { year: 1997, slug: "new-jersey-nets" },
+  NO: { year: 2005, slug: "new-orleans-oklahoma-city-hornets" },
+  NY: { year: 1995, slug: "new-york-knicks" },
+  ORL: { year: 2000, slug: "orlando-magic" },
+  PHI: { year: 1997, slug: "philadelphia-76ers" },
+  PHX: { year: 2000, slug: "phoenix-suns" },
+  POR: { year: 2004, slug: "portland-trail-blazers" },
+  SAC: { year: 1994, slug: "sacramento-kings" },
+  SA: { year: 2002, slug: "san-antonio-spurs" },
+  SEA: { year: 2001, slug: "seattle-supersonics" },
+  TOR: { year: 1995, slug: "toronto-raptors" },
+  UTAH: { year: 2004, slug: "utah-jazz" },
+  WAS: { year: 1997, slug: "washington-wizards" },
+};
+function historicalLogoSrc(code: string): string | undefined {
+  const logo = historicalLogos2006[code];
+  return logo ? `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png"}` : undefined;
+}
 const west: Matchup[][] = [
 [{a:"PHX",b:"POR",sa:4,sb:0},{a:"LAL",b:"NO",sa:4,sb:2},{a:"MIN",b:"SEA",sa:4,sb:1},{a:"SA",b:"LAC",sa:4,sb:3}],
 [{a:"PHX",b:"LAL",sa:4,sb:2},{a:"MIN",b:"SA",sa:4,sb:2}],
@@ -50,7 +88,7 @@ const east: Matchup[][] = [
 [{a:"DET",b:"WAS",sa:4,sb:3},{a:"NY",b:"TOR",sa:4,sb:2}],
 [{a:"DET",b:"NY",sa:2,sb:4}]
 ];
-function Logo({code}:{code:string}){ const [failed,setFailed]=useState(false);return <span className="seasonextras-logo">{failed?<span aria-hidden="true">{code}</span>:<img loading="lazy" alt="" src={`https://a.espncdn.com/i/teamlogos/nba/500/${logoCodes[code]}.png`} onError={()=>setFailed(true)}/>}</span>;}
+function Logo({code}:{code:string}){ const [failed,setFailed]=useState(false); const src=historicalLogoSrc(code);return <span className="seasonextras-logo">{!src||failed?<span aria-hidden="true">{code}</span>:<img loading="lazy" alt="" src={src} onError={()=>setFailed(true)}/>}</span>;}
 const columns: {key:keyof Team; label:string}[]=[{key:"wins",label:"V"},{key:"losses",label:"D"},{key:"pct",label:"%"},{key:"gb",label:"GB"},{key:"home",label:"Casa"},{key:"away",label:"Fora"},{key:"conf",label:"Conf."},{key:"div",label:"Div."},{key:"ppg",label:"PPG"},{key:"opp",label:"PAPG"},{key:"diff",label:"Saldo"},{key:"streak",label:"Seq."}];
 function Standings(){const [conference,setConference]=useState<"west"|"east">("west");const teams=conference==="west"?western:eastern;return <section className="seasonextras-panel" aria-label="Classificação 2006–07"><div className="seasonextras-header"><div><p className="seasonextras-kicker">2006–07 / temporada regular</p><h2>Classificação da liga</h2><p>As 30 franquias, com os dados registrados na temporada do Bolão.</p></div><div className="seasonextras-toggle" role="group" aria-label="Conferência"><button type="button" aria-pressed={conference==="west"} onClick={()=>setConference("west")}>Oeste</button><button type="button" aria-pressed={conference==="east"} onClick={()=>setConference("east")}>Leste</button></div></div><div className="seasonextras-tablewrap" role="region" tabIndex={0} aria-label="Classificação: deslize para ver todas as estatísticas"><table className="seasonextras-table"><thead><tr><th scope="col">#</th><th scope="col">Time</th>{columns.map(c=><th scope="col" key={c.key}>{c.label}</th>)}</tr></thead><tbody>{teams.map((team,index)=><tr key={team.code} className={index<8?"seasonextras-qualified":""}><td>{index+1}</td><th scope="row"><div className="seasonextras-team"><Logo code={team.code}/><span>{team.name}</span>{index<8&&<span className="seasonextras-playoff-label" title="Classificado aos playoffs">P</span>}</div></th>{columns.map(c=><td key={c.key}>{c.key==="pct"?team.pct.toFixed(3).replace(/^0/,""):["ppg","opp","diff"].includes(c.key)?Number(team[c.key]).toFixed(1):String(team[c.key])}</td>)}</tr>)}</tbody></table></div><p className="seasonextras-note">P = classificado aos playoffs. A ordem segue a classificação oficial do save no NBA 2K (incluindo critérios de divisão), não apenas o número de vitórias. Dados extraídos das capturas do Bolão.</p></section>}
 function Series({match}:{match:Matchup}){return <div className="seasonextras-series" aria-label={`${names[match.a]} ${match.sa}, ${names[match.b]} ${match.sb}`}>{([["a","sa"],["b","sb"]] as const).map(([key,score])=>{const code=match[key];const winner=match[score]>match[score==="sa"?"sb":"sa"];return <div className={`seasonextras-side ${winner?"is-winner":""}`} key={code}><Logo code={code}/><span className="seasonextras-side-name">{names[code]}</span><strong>{match[score]}</strong></div>})}</div>}
