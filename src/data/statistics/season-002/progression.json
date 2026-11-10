@@ -1,0 +1,38 @@
+{
+  "seasonId": "season-002",
+  "stagesByPlayer": {
+    "dias": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals"
+    ],
+    "enzo": [
+      "first-round",
+      "quarterfinals"
+    ],
+    "russo": [
+      "first-round",
+      "quarterfinals"
+    ],
+    "tailan": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals",
+      "nba-finals"
+    ],
+    "jonas": [
+      "first-round",
+      "quarterfinals",
+      "conference-finals",
+      "nba-finals"
+    ],
+    "fabio-carvalho": [
+      "first-round"
+    ],
+    "guilherme": [
+      "first-round"
+    ]
+  },
+  "source": "NBA 2K26 playoff round filter screens; Binho/Guilherme first-round exit explicitly confirmed by user",
+  "description": "Stage reach only. Aggregate playoff statistics are not additive to rounds; detailed per-round statistics pending separate verified transcription."
+}

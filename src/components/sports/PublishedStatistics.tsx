@@ -1,193 +1,244 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import rawStatistics from "../../data/statistics/season-001/statistics.json";
-import secondBatch from "../../data/statistics/season-001/statistics-02.json";
+import firstEight from "../../data/statistics/season-001/statistics.json";
+import secondFive from "../../data/statistics/season-001/statistics-02.json";
+import seasonTwo from "../../data/statistics/season-002/statistics.json";
+import phaseProgression from "../../data/statistics/season-002/progression.json";
 import { playerPhaseStatsSchema } from "../../lib/statistics/schemas";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 import "../../styles/published-statistics.css";
 
-// The approved and audited season-001 snapshot is intentionally independent of
-// the old league's season-stats/RankingEngine modules.
-const published = playerPhaseStatsSchema.array().parse([...rawStatistics, ...secondBatch]).filter(
-  (record) => record.seasonId === "season-001" && record.phaseId === "regular" && record.revision === 1,
-);
-const byPlayer = new Map(published.map((record) => [record.playerId, record]));
-const playoffRecords = playerPhaseStatsSchema.array().parse(secondBatch).filter(
-  (record) => record.seasonId === "season-001" && record.phaseId !== "regular" && record.availability === "available",
-);
-const playoffByPlayer = (playerId: string) => playoffRecords.filter((record) => record.playerId === playerId);
-
-const avg = (value: number | undefined) => value === undefined ? "—" : value.toFixed(1).replace(".", ",");
-const integer = (value: number | undefined) => value === undefined ? "—" : new Intl.NumberFormat("pt-BR").format(value);
-const percentage = (value: number | undefined) => value === undefined ? "—" : avg(value) + "%";
-
-export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
-  const record = byPlayer.get(player.id);
-  if (!record) {
-    return (
-      <section className="generation-empty">
-        <h2>ESTATÍSTICAS EM BREVE.</h2>
-        <p>Os dados da temporada regular deste jogador ainda não foram importados. As fases de playoffs serão cadastradas separadamente.</p>
-      </section>
-    );
-  }
-  const a = record.stats.averages ?? {};
-  const t = record.stats.totals ?? {};
-  const p = record.stats.percentages ?? {};
-  const top = [
-    ["PONTOS", avg(a.ppg), "PPG"],
-    ["REBOTES", avg(a.rpg), "RPG"],
-    ["ASSISTÊNCIAS", avg(a.apg), "APG"],
-    ["MINUTOS", avg(a.mpg), "MPG"],
-  ];
-  const rows: [string, string][] = [
-    ["Jogos disputados (GP)", integer(t.gp)], ["Jogos como titular (GS)", integer(t.gs)],
-    ["Minutos (MIN)", integer(t.minutes)], ["Pontos (PTS)", integer(t.points)],
-    ["Rebotes (REB)", integer(t.rebounds)], ["Assistências (AST)", integer(t.assists)],
-    ["Roubos (STL)", integer(t.steals)], ["Bloqueios (BLK)", integer(t.blocks)],
-    ["Turnovers (TO)", integer(t.turnovers)], ["Cestas convertidas (FGM)", integer(t.fgm)],
-    ["Arremessos tentados (FGA)", integer(t.fga)], ["3 pontos convertidos (3PM)", integer(t.threePm)],
-    ["3 pontos tentados (3PA)", integer(t.threePa)], ["Lances livres convertidos (FTM)", integer(t.ftm)],
-    ["Lances livres tentados (FTA)", integer(t.fta)],
-  ];
-  return (
-    <section className="published-stats" aria-labelledby="published-stats-heading">
-      <div className="published-stats-head">
-        <div>
-          <span className="published-eyebrow">TEMPORADA 01 · 2005–06</span>
-          <h2 id="published-stats-heading">TEMPORADA REGULAR.</h2>
-          <p>Estatísticas conferidas no NBA 2K26 · {integer(t.gp)} jogos</p>
-        </div>
-        <Link to="/temporadas" className="published-season-link">Ver temporada completa ↗</Link>
-      </div>
-      <div className="published-key-metrics">
-        {top.map(([label, value, unit]) => (
-          <div className="published-key-card" key={unit}>
-            <span>{label}</span>
-            <strong>{value}</strong>
-            <small>{unit}</small>
-          </div>
-        ))}
-      </div>
-      <div className="published-stats-sections">
-        <div className="published-stats-card">
-          <h3>EFICIÊNCIA E DEFESA</h3>
-          <dl className="published-stats-list">
-            {([
-              ["Roubos por jogo", avg(a.spg)], ["Bloqueios por jogo", avg(a.bpg)],
-              ["Turnovers por jogo", avg(a.topg)], ["FG%", percentage(p.fgPct)],
-              ["3P%", percentage(p.threePct)], ["FT%", percentage(p.ftPct)],
-            ] as const).map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
-          </dl>
-          {t.threePa === 0 && <p className="published-note">3P%: o jogo exibe 0,0% sem tentativas; a razão matemática é indefinida.</p>}
-        </div>
-        <div className="published-stats-card">
-          <h3>TOTAIS DA TEMPORADA</h3>
-          <dl className="published-stats-list">
-            {rows.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
-          </dl>
-        </div>
-      </div>
-      <p className="published-footnote">Médias e porcentagens reproduzem os valores exibidos pelo jogo; totais foram conferidos separadamente. Sem pontuação artificial ou ranking geral. As estatísticas dos playoffs estão exibidas abaixo quando disponíveis.</p>
-      <PlayoffStatistics playerId={player.id} />
-    </section>
-  );
-}
-
-
-const phaseTitle: Record<string, string> = {
-  "playoffs": "Playoffs · Consolidado",
-  "first-round": "First Round · 1ª rodada",
-  "quarterfinals": "Conference Semifinals · 2ª rodada",
+// Separate seasons and preserve the original, manually approved records.
+const approved = playerPhaseStatsSchema.array().parse([
+  ...firstEight,
+  ...secondFive,
+  ...seasonTwo,
+]);
+const years = [
+  { id: "season-001", title: "Temporada 01", year: "2005–06" },
+  { id: "season-002", title: "Temporada 02", year: "2006–07" },
+] as const;
+type SeasonId = (typeof years)[number]["id"];
+type PhaseRecord = (typeof approved)[number];
+const phaseOrder = ["playoffs", "first-round", "quarterfinals", "conference-finals", "nba-finals"];
+const phaseName: Record<string, string> = {
+  playoffs: "Playoffs · Consolidado",
+  "first-round": "First Round",
+  quarterfinals: "Conference Semifinals",
+  "conference-finals": "Conference Finals",
+  "nba-finals": "NBA Finals",
 };
-const playoffsOrder = ["playoffs", "first-round", "quarterfinals"];
-function PlayoffStatistics({ playerId }: { playerId: string }) {
-  const rounds = playoffByPlayer(playerId).sort((a,b)=>playoffsOrder.indexOf(a.phaseId)-playoffsOrder.indexOf(b.phaseId));
-  if (!rounds.length) return null;
-  // The consolidated playoffs line is a VIEW. First-round-only players have one
-  // stage record. Enzo has a separate 10-game aggregate plus two 5-game stage
-  // summaries; these must never be added to each other as independent games.
-  const summary = rounds.find(record=>record.phaseId==="playoffs") ?? rounds[0];
-  const stages = rounds.filter(record=>record.phaseId!=="playoffs");
-  const formatRow=(record: typeof summary) => {
-    const a=record.stats.averages ?? {}, t=record.stats.totals ?? {}, p=record.stats.percentages ?? {};
-    return [
-      ["Jogos (GP)",integer(t.gp)],["Titular (GS)",integer(t.gs)],
-      ["Minutos (MIN)",integer(t.minutes)],["Pontos (PTS)",integer(t.points)],
-      ["Rebotes (REB)",integer(t.rebounds)],["Assistências (AST)",integer(t.assists)],
-      ["Roubos (STL)",integer(t.steals)],["Bloqueios (BLK)",integer(t.blocks)],
-      ["Turnovers (TO)",integer(t.turnovers)],["FGM",integer(t.fgm)],
-      ["FGA",integer(t.fga)],["3PM",integer(t.threePm)],["3PA",integer(t.threePa)],
-      ["FTM",integer(t.ftm)],["FTA",integer(t.fta)],
-      ["PPG",avg(a.ppg)],["RPG",avg(a.rpg)],["APG",avg(a.apg)],
-      ["SPG",avg(a.spg)],["BPG",avg(a.bpg)],["TOPG",avg(a.topg)],
-      ["MPG",avg(a.mpg)],["FG%",percentage(p.fgPct)],
-      ["3P%",percentage(p.threePct)],["FT%",percentage(p.ftPct)],
-    ] as [string,string][];
-  };
+const averages = (value: number | undefined) => value === undefined ? "—" : value.toFixed(1).replace(".", ",");
+const integers = (value: number | undefined) => value === undefined ? "—" : new Intl.NumberFormat("pt-BR").format(value);
+const percents = (value: number | undefined) => value === undefined ? "—" : averages(value) + "%";
+
+function recordsFor(playerId: string, seasonId: SeasonId) {
+  return approved.filter((record) => record.playerId === playerId && record.seasonId === seasonId);
+}
+function reachedStages(playerId: string, seasonId: SeasonId): string[] {
+  if (seasonId === "season-002") {
+    return phaseProgression.stagesByPlayer[playerId as keyof typeof phaseProgression.stagesByPlayer] ?? [];
+  }
+  const rounds = recordsFor(playerId, seasonId).filter(record => record.phaseId !== "regular" && record.phaseId !== "playoffs");
+  return rounds.map(record => record.phaseId);
+}
+function ChooseSeason({ value, onChange }: { value: SeasonId; onChange: (id: SeasonId) => void }) {
   return (
-    <div className="published-playoffs" aria-label="Estatísticas dos playoffs">
-      <div className="published-stats-head">
-        <div>
-          <span className="published-eyebrow">TEMPORADA 01 · PÓS-TEMPORADA</span>
-          <h2>PLAYOFFS.</h2>
-          <p>{integer(summary.stats.totals?.gp)} jogos disputados · {playerId === "enzo" ? "até as semifinais de conferência" : "eliminado na primeira rodada"}</p>
-        </div>
-      </div>
-      <div className="published-key-metrics">
-        {([["PONTOS",summary.stats.averages?.ppg,"PPG"],["REBOTES",summary.stats.averages?.rpg,"RPG"],["ASSISTÊNCIAS",summary.stats.averages?.apg,"APG"],["MINUTOS",summary.stats.averages?.mpg,"MPG"]] as const).map(([label,value,unit])=>(
-          <div className="published-key-card" key={unit}><span>{label}</span><strong>{avg(value)}</strong><small>{unit}</small></div>
-        ))}
-      </div>
-      <div className="published-stats-card published-playoffs-summary">
-        <h3>TOTAIS E MÉDIAS DOS PLAYOFFS</h3>
-        <dl className="published-stats-list">
-          {formatRow(summary).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
-        </dl>
-      </div>
-      <div className="published-rounds">
-        <h3>RODADAS DISPUTADAS</h3>
-        {stages.map(record=>(
-          <section className="published-round-card" key={record.id}>
-            <h4>{phaseTitle[record.phaseId] ?? record.phaseId}</h4>
-            <p>{integer(record.stats.totals?.gp)} jogos · {avg(record.stats.averages?.ppg)} PPG</p>
-            <dl className="published-stats-list">
-              {formatRow(record).filter(([label,value])=>value!=="—").map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
-            </dl>
-            {record.playerId==="enzo" && <p className="published-note">Totais não exibidos nas capturas específicas desta rodada; médias preservadas como fornecidas pelo NBA 2K26.</p>}
-          </section>
-        ))}
-      </div>
-      <p className="published-footnote">Consolidado de playoffs é uma visualização da campanha, não jogos adicionais. No caso do Enzo, 5 + 5 = 10 partidas de playoffs; os totais por rodada não foram inferidos a partir de médias arredondadas.</p>
+    <div className="published-season-toggle" role="group" aria-label="Selecionar temporada">
+      {years.map(year => (
+        <button
+          key={year.id}
+          type="button"
+          aria-pressed={value === year.id}
+          className={value === year.id ? "is-active" : ""}
+          onClick={() => onChange(year.id)}
+        >
+          {year.title} <span>{year.year}</span>
+        </button>
+      ))}
     </div>
   );
 }
-
+function StatList({ record, includeAverages = false }: { record: PhaseRecord; includeAverages?: boolean }) {
+  const a = record.stats.averages ?? {};
+  const t = record.stats.totals ?? {};
+  const p = record.stats.percentages ?? {};
+  const entries: [string, string][] = [
+    ["Jogos disputados (GP)", integers(t.gp)],
+    ["Jogos como titular (GS)", integers(t.gs)],
+    ["Minutos (MIN)", integers(t.minutes)],
+    ["Pontos (PTS)", integers(t.points)],
+    ["Rebotes (REB)", integers(t.rebounds)],
+    ["Assistências (AST)", integers(t.assists)],
+    ["Roubos (STL)", integers(t.steals)],
+    ["Bloqueios (BLK)", integers(t.blocks)],
+    ["Turnovers (TO)", integers(t.turnovers)],
+    ["Arremessos convertidos (FGM)", integers(t.fgm)],
+    ["Arremessos tentados (FGA)", integers(t.fga)],
+    ["Três pontos convertidos (3PM)", integers(t.threePm)],
+    ["Três pontos tentados (3PA)", integers(t.threePa)],
+    ["Lances livres convertidos (FTM)", integers(t.ftm)],
+    ["Lances livres tentados (FTA)", integers(t.fta)],
+  ];
+  if (includeAverages) entries.push(
+    ["PPG", averages(a.ppg)], ["RPG", averages(a.rpg)], ["APG", averages(a.apg)],
+    ["SPG", averages(a.spg)], ["BPG", averages(a.bpg)], ["TOPG", averages(a.topg)],
+    ["MPG", averages(a.mpg)], ["FG%", percents(p.fgPct)],
+    ["3P%", percents(p.threePct)], ["FT%", percents(p.ftPct)]
+  );
+  return (
+    <dl className="published-stats-list">
+      {entries.filter(([,value])=>value !== "—").map(([label,value]) => (
+        <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
+      ))}
+    </dl>
+  );
+}
+function KeyMetrics({ record }: { record: PhaseRecord }) {
+  const a = record.stats.averages ?? {};
+  const cards = [
+    ["PONTOS", a.ppg, "PPG"],["REBOTES", a.rpg, "RPG"],
+    ["ASSISTÊNCIAS", a.apg, "APG"],["MINUTOS", a.mpg, "MPG"]
+  ] as const;
+  return (
+    <div className="published-key-metrics">
+      {cards.map(([title,value,abbr]) => (
+        <div className="published-key-card" key={abbr}>
+          <span>{title}</span><strong>{averages(value)}</strong><small>{abbr}</small>
+        </div>
+      ))}
+    </div>
+  );
+}
+export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
+  const [seasonId, setSeasonId] = useState<SeasonId>("season-002");
+  const year = years.find(y=>y.id===seasonId)!;
+  const records = recordsFor(player.id, seasonId);
+  const regular = records.find(record=>record.phaseId==="regular");
+  const stages = reachedStages(player.id, seasonId);
+  const rounds = records.filter(record=>record.phaseId!=="regular").sort(
+    (a,b)=>phaseOrder.indexOf(a.phaseId)-phaseOrder.indexOf(b.phaseId)
+  );
+  const summary = rounds.find(record=>record.phaseId==="playoffs")
+    ?? rounds.find(record=>record.phaseId==="first-round");
+  return (
+    <section className="published-stats" aria-label="Estatísticas do jogador">
+      <ChooseSeason value={seasonId} onChange={setSeasonId}/>
+      {!regular ? (
+        <div className="generation-empty">
+          <h2>ESTATÍSTICAS EM BREVE.</h2>
+          <p>Os registros dessa temporada ainda não foram importados.</p>
+        </div>
+      ) : (
+        <>
+          <div className="published-stats-head">
+            <div>
+              <span className="published-eyebrow">{year.title.toUpperCase()} · {year.year}</span>
+              <h2>TEMPORADA REGULAR.</h2>
+              <p>{integers(regular.stats.totals?.gp)} jogos · Estatísticas conferidas no NBA 2K26</p>
+            </div>
+            <Link to="/temporadas" className="published-season-link">Ver temporada completa ↗</Link>
+          </div>
+          <KeyMetrics record={regular}/>
+          <div className="published-stats-sections">
+            <div className="published-stats-card">
+              <h3>EFICIÊNCIA E DEFESA</h3>
+              <dl className="published-stats-list">
+                {([
+                  ["Roubos por jogo", averages(regular.stats.averages?.spg)],
+                  ["Bloqueios por jogo", averages(regular.stats.averages?.bpg)],
+                  ["Turnovers por jogo", averages(regular.stats.averages?.topg)],
+                  ["FG%", percents(regular.stats.percentages?.fgPct)],
+                  ["3P%", percents(regular.stats.percentages?.threePct)],
+                  ["FT%", percents(regular.stats.percentages?.ftPct)],
+                ] as const).map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+              </dl>
+              {regular.stats.totals?.threePa===0 && <p className="published-note">3P% exibido pelo jogo como 0,0% com zero tentativas; matematicamente, a razão é indefinida.</p>}
+            </div>
+            <div className="published-stats-card">
+              <h3>TOTAIS DA TEMPORADA</h3>
+              <StatList record={regular}/>
+            </div>
+          </div>
+          <p className="published-footnote">Médias e percentuais apresentados pelo jogo, totais conferidos separadamente. Sem rankings ou pontuações artificiais.</p>
+        </>
+      )}
+      {summary && (
+        <div className="published-playoffs" aria-label="Campanha de playoffs">
+          <div className="published-stats-head">
+            <div>
+              <span className="published-eyebrow">{year.title.toUpperCase()} · PÓS-TEMPORADA</span>
+              <h2>PLAYOFFS.</h2>
+              <p>{integers(summary.stats.totals?.gp)} jogos disputados no total</p>
+            </div>
+          </div>
+          <KeyMetrics record={summary}/>
+          <section className="published-stats-card published-playoffs-summary">
+            <h3>TOTAIS E MÉDIAS DOS PLAYOFFS</h3>
+            <StatList record={summary} includeAverages/>
+          </section>
+          <section className="published-rounds">
+            <h3>RODADAS DISPUTADAS</h3>
+            <div className="published-stage-list">
+              {stages.map(phase=>{
+                const stageRecord = rounds.find(record=>record.phaseId===phase);
+                return (
+                  <article className="published-round-card" key={phase}>
+                    <h4>{phaseName[phase] ?? phase}</h4>
+                    {stageRecord ? (
+                      <>
+                        <p>{integers(stageRecord.stats.totals?.gp)} jogos · {averages(stageRecord.stats.averages?.ppg)} PPG</p>
+                        <StatList record={stageRecord} includeAverages/>
+                      </>
+                    ) : (
+                      <p>Rodada disputada. Os totais e as médias específicos desta fase ainda não foram individualmente consolidados.</p>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
+            <p className="published-footnote">O consolidado de playoffs representa a campanha inteira: não deve ser somado novamente às rodadas. Não são estimados totais por rodada a partir de médias arredondadas.</p>
+          </section>
+        </div>
+      )}
+    </section>
+  );
+}
 export function SeasonStatistics() {
+  const [seasonId, setSeasonId] = useState<SeasonId>("season-002");
+  const year = years.find(y=>y.id===seasonId)!;
+  const regularRecords = approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="regular");
+  const playoffPlayerCount = new Set(approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="playoffs").map(record=>record.playerId));
+  // For season 01, four First-Round-only players have no additional
+  // aggregate record. Count them once; each campaign is one postseason.
+  const playoffSet = new Set([...playoffPlayerCount,...approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="first-round").map(record=>record.playerId)]);
+  const byPlayer = new Map(regularRecords.map(record=>[record.playerId,record]));
   return (
     <main className="published-season-page sports-page">
       <header className="published-season-heading">
         <span className="published-eyebrow">CENTRAL DO BOLÃO · ARQUIVO ESTATÍSTICO</span>
-        <h1>TEMPORADA 01.</h1>
-        <p>2005–06 · Temporada regular · 13 jogadores com estatísticas conferidas. Cinco também possuem registros dos playoffs.</p>
+        <h1>{year.title.toUpperCase()}.</h1>
+        <p>{year.year} · Temporada regular · {regularRecords.length} jogadores com estatísticas conferidas. {playoffSet.size} jogadores com campanha de playoffs registrada.</p>
       </header>
+      <ChooseSeason value={seasonId} onChange={setSeasonId}/>
       <div className="published-season-grid">
-        {newRoster.map((player) => {
-          const record = byPlayer.get(player.id);
-          const a = record?.stats.averages;
+        {newRoster.map(player=>{
+          const record=byPlayer.get(player.id);
+          const a=record?.stats.averages;
           return (
-            <Link to="/jogadores/$id" params={{ id: player.id }} key={player.id} className={"published-season-player" + (record ? "" : " published-season-player--pending")}>
-              <img src={player.portrait} alt="" loading="lazy" />
+            <Link to="/jogadores/$id" params={{id:player.id}} key={player.id} className={"published-season-player"+(record?"":" published-season-player--pending")}>
+              <img src={player.portrait} alt="" loading="lazy"/>
               <div className="published-season-player-copy">
                 <span>{player.team}</span>
                 <h2>{player.name}</h2>
-                {record ? <p>{avg(a?.ppg)} PPG · {avg(a?.rpg)} RPG · {avg(a?.apg)} APG{playoffByPlayer(player.id).length ? " · Playoffs" : ""}</p> : <p>Estatísticas ainda não importadas</p>}
+                {record?<p>{averages(a?.ppg)} PPG · {averages(a?.rpg)} RPG · {averages(a?.apg)} APG{playoffSet.has(player.id)?" · Playoffs":""}</p>:<p>Dados não importados</p>}
               </div>
               <span className="published-season-player-arrow" aria-hidden="true">↗</span>
             </Link>
           );
         })}
       </div>
-      <p className="published-footnote">Os playoffs aparecem nos perfis dos cinco jogadores que disputaram a pós-temporada. Premiações serão exibidas quando importadas.</p>
+      <p className="published-footnote">Os dados da Temporada 01 permanecem preservados. Nenhum dado da pasta Extras, de premiações ou classificações foi incluído nesta importação.</p>
     </main>
   );
 }
