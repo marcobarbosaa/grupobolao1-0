@@ -1,0 +1,32 @@
+[
+  {
+    "id": "history-s01-cristiano-ronaldo",
+    "playerId": "cristiano-ronaldo",
+    "teamId": "indiana-pacers",
+    "seasonId": "season-001"
+  },
+  {
+    "id": "history-s01-russo",
+    "playerId": "russo",
+    "teamId": "toronto-raptors",
+    "seasonId": "season-001"
+  },
+  {
+    "id": "history-s01-nando",
+    "playerId": "nando",
+    "teamId": "houston-rockets",
+    "seasonId": "season-001"
+  },
+  {
+    "id": "history-s01-enzo",
+    "playerId": "enzo",
+    "teamId": "san-antonio-spurs",
+    "seasonId": "season-001"
+  },
+  {
+    "id": "history-s01-guilherme",
+    "playerId": "guilherme",
+    "teamId": "chicago-bulls",
+    "seasonId": "season-001"
+  }
+]

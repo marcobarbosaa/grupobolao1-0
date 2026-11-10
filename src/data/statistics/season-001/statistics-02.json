@@ -1,0 +1,710 @@
+[
+  {
+    "id": "stat-s01-regular-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-001",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "indiana-pacers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-cerrote-s01-02-1",
+      "src-cerrote-s01-02-2",
+      "src-cerrote-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 78,
+        "gs": 78,
+        "minutes": 2465,
+        "points": 664,
+        "rebounds": 204,
+        "assists": 330,
+        "steals": 75,
+        "blocks": 14,
+        "turnovers": 161,
+        "fgm": 233,
+        "fga": 598,
+        "threePm": 63,
+        "threePa": 168,
+        "ftm": 135,
+        "fta": 159
+      },
+      "averages": {
+        "mpg": 31.6,
+        "ppg": 8.5,
+        "rpg": 2.6,
+        "apg": 4.2,
+        "spg": 1,
+        "bpg": 0.2,
+        "topg": 2.1
+      },
+      "percentages": {
+        "fgPct": 39,
+        "threePct": 37.5,
+        "ftPct": 84.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-first-round-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-001",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "indiana-pacers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-cerrote-s01-02-1",
+      "src-cerrote-s01-02-2",
+      "src-cerrote-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4,
+        "minutes": 134,
+        "points": 50,
+        "rebounds": 5,
+        "assists": 19,
+        "steals": 5,
+        "blocks": 1,
+        "turnovers": 5,
+        "fgm": 20,
+        "fga": 57,
+        "threePm": 2,
+        "threePa": 13,
+        "ftm": 8,
+        "fta": 9
+      },
+      "averages": {
+        "mpg": 33.5,
+        "ppg": 12.5,
+        "rpg": 1.3,
+        "apg": 4.7,
+        "spg": 1.3,
+        "bpg": 0.3,
+        "topg": 1.3
+      },
+      "percentages": {
+        "fgPct": 35.1,
+        "threePct": 15.4,
+        "ftPct": 88.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-regular-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-001",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "toronto-raptors",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-russo-s01-02-1",
+      "src-russo-s01-02-2",
+      "src-russo-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 64,
+        "gs": 58,
+        "minutes": 1829,
+        "points": 1021,
+        "rebounds": 88,
+        "assists": 207,
+        "steals": 70,
+        "blocks": 11,
+        "turnovers": 163,
+        "fgm": 387,
+        "fga": 986,
+        "threePm": 83,
+        "threePa": 313,
+        "ftm": 164,
+        "fta": 220
+      },
+      "averages": {
+        "mpg": 28.6,
+        "ppg": 16,
+        "rpg": 1.4,
+        "apg": 3.2,
+        "spg": 1.1,
+        "bpg": 0.2,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 39.2,
+        "threePct": 26.5,
+        "ftPct": 74.5
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-first-round-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-001",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "toronto-raptors",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-russo-s01-02-1",
+      "src-russo-s01-02-2",
+      "src-russo-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6,
+        "minutes": 179,
+        "points": 73,
+        "rebounds": 17,
+        "assists": 19,
+        "steals": 8,
+        "blocks": 0,
+        "turnovers": 18,
+        "fgm": 28,
+        "fga": 96,
+        "threePm": 5,
+        "threePa": 29,
+        "ftm": 12,
+        "fta": 15
+      },
+      "averages": {
+        "mpg": 29.8,
+        "ppg": 12.2,
+        "rpg": 2.8,
+        "apg": 3.2,
+        "spg": 1.3,
+        "bpg": 0,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 29.2,
+        "threePct": 17.2,
+        "ftPct": 80
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-regular-nando",
+    "kind": "phase",
+    "playerId": "nando",
+    "seasonId": "season-001",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "houston-rockets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-nando-s01-02-1",
+      "src-nando-s01-02-2",
+      "src-nando-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 78,
+        "minutes": 2476,
+        "points": 1174,
+        "rebounds": 572,
+        "assists": 150,
+        "steals": 53,
+        "blocks": 88,
+        "turnovers": 164,
+        "fgm": 468,
+        "fga": 1187,
+        "threePm": 29,
+        "threePa": 88,
+        "ftm": 209,
+        "fta": 272
+      },
+      "averages": {
+        "mpg": 30.2,
+        "ppg": 14.3,
+        "rpg": 7,
+        "apg": 1.8,
+        "spg": 0.6,
+        "bpg": 1.1,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 39.4,
+        "threePct": 33,
+        "ftPct": 76.8
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-first-round-nando",
+    "kind": "phase",
+    "playerId": "nando",
+    "seasonId": "season-001",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "houston-rockets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-nando-s01-02-1",
+      "src-nando-s01-02-2",
+      "src-nando-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 4,
+        "minutes": 128,
+        "points": 67,
+        "rebounds": 29,
+        "assists": 6,
+        "steals": 3,
+        "blocks": 5,
+        "turnovers": 5,
+        "fgm": 28,
+        "fga": 70,
+        "threePm": 1,
+        "threePa": 5,
+        "ftm": 10,
+        "fta": 12
+      },
+      "averages": {
+        "mpg": 25.6,
+        "ppg": 13.4,
+        "rpg": 5.8,
+        "apg": 1.2,
+        "spg": 0.6,
+        "bpg": 1,
+        "topg": 1
+      },
+      "percentages": {
+        "fgPct": 40,
+        "threePct": 20,
+        "ftPct": 83.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-regular-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-001",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-enzo-s01-02-1",
+      "src-enzo-s01-02-2",
+      "src-enzo-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 81,
+        "gs": 1,
+        "minutes": 1613,
+        "points": 994,
+        "rebounds": 249,
+        "assists": 96,
+        "steals": 44,
+        "blocks": 44,
+        "turnovers": 96,
+        "fgm": 381,
+        "fga": 868,
+        "threePm": 56,
+        "threePa": 187,
+        "ftm": 176,
+        "fta": 259
+      },
+      "averages": {
+        "mpg": 19.9,
+        "ppg": 12.3,
+        "rpg": 3.1,
+        "apg": 1.2,
+        "spg": 0.5,
+        "bpg": 0.5,
+        "topg": 1.2
+      },
+      "percentages": {
+        "fgPct": 43.9,
+        "threePct": 29.9,
+        "ftPct": 68
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-playoffs-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-001",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-enzo-s01-02-1",
+      "src-enzo-s01-02-2",
+      "src-enzo-s01-02-3",
+      "src-enzo-s01-02-4",
+      "src-enzo-s01-02-5",
+      "src-enzo-s01-02-6",
+      "src-enzo-s01-02-7"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 10,
+        "gs": 0,
+        "minutes": 198,
+        "points": 122,
+        "rebounds": 43,
+        "assists": 12,
+        "steals": 10,
+        "blocks": 7,
+        "turnovers": 12,
+        "fgm": 51,
+        "fga": 121,
+        "threePm": 8,
+        "threePa": 29,
+        "ftm": 12,
+        "fta": 16
+      },
+      "averages": {
+        "mpg": 19.8,
+        "ppg": 12.2,
+        "rpg": 4.3,
+        "apg": 1.2,
+        "spg": 1,
+        "bpg": 0.7,
+        "topg": 1.2
+      },
+      "percentages": {
+        "fgPct": 42.1,
+        "threePct": 27.6,
+        "ftPct": 75
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-first-round-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-001",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-enzo-s01-02-4",
+      "src-enzo-s01-02-5"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 0
+      },
+      "averages": {
+        "mpg": 20.6,
+        "ppg": 14.8,
+        "rpg": 4.4,
+        "apg": 1.6,
+        "spg": 1.6,
+        "bpg": 1,
+        "topg": 1.6
+      },
+      "percentages": {
+        "fgPct": 47.5,
+        "threePct": 33.3,
+        "ftPct": 71.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-quarterfinals-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-001",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-enzo-s01-02-6",
+      "src-enzo-s01-02-7"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 0
+      },
+      "averages": {
+        "mpg": 19,
+        "ppg": 9.6,
+        "rpg": 4.2,
+        "apg": 0.8,
+        "spg": 0.4,
+        "bpg": 0.4,
+        "topg": 0.8
+      },
+      "percentages": {
+        "fgPct": 36.7,
+        "threePct": 18.2,
+        "ftPct": 100
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-regular-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-001",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-guilherme-s01-02-1",
+      "src-guilherme-s01-02-2",
+      "src-guilherme-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 60,
+        "gs": 11,
+        "minutes": 1380,
+        "points": 812,
+        "rebounds": 322,
+        "assists": 87,
+        "steals": 40,
+        "blocks": 35,
+        "turnovers": 92,
+        "fgm": 309,
+        "fga": 766,
+        "threePm": 41,
+        "threePa": 234,
+        "ftm": 153,
+        "fta": 203
+      },
+      "averages": {
+        "mpg": 23,
+        "ppg": 13.5,
+        "rpg": 5.4,
+        "apg": 1.5,
+        "spg": 0.7,
+        "bpg": 0.6,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 40.3,
+        "threePct": 17.5,
+        "ftPct": 75.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s01-first-round-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-001",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-guilherme-s01-02-1",
+      "src-guilherme-s01-02-2",
+      "src-guilherme-s01-02-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 0,
+        "minutes": 120,
+        "points": 76,
+        "rebounds": 24,
+        "assists": 15,
+        "steals": 4,
+        "blocks": 1,
+        "turnovers": 9,
+        "fgm": 32,
+        "fga": 66,
+        "threePm": 4,
+        "threePa": 17,
+        "ftm": 8,
+        "fta": 16
+      },
+      "averages": {
+        "mpg": 20,
+        "ppg": 12.7,
+        "rpg": 4,
+        "apg": 2.5,
+        "spg": 0.7,
+        "bpg": 0.2,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 48.5,
+        "threePct": 23.5,
+        "ftPct": 50
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  }
+]

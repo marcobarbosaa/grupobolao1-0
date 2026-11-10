@@ -1,0 +1,30 @@
+[
+  {
+    "id": "batch-s01-second-five",
+    "sourceIds": [
+      "src-cerrote-s01-02-1",
+      "src-cerrote-s01-02-2",
+      "src-cerrote-s01-02-3",
+      "src-russo-s01-02-1",
+      "src-russo-s01-02-2",
+      "src-russo-s01-02-3",
+      "src-nando-s01-02-1",
+      "src-nando-s01-02-2",
+      "src-nando-s01-02-3",
+      "src-enzo-s01-02-1",
+      "src-enzo-s01-02-2",
+      "src-enzo-s01-02-3",
+      "src-enzo-s01-02-4",
+      "src-enzo-s01-02-5",
+      "src-enzo-s01-02-6",
+      "src-enzo-s01-02-7",
+      "src-guilherme-s01-02-1",
+      "src-guilherme-s01-02-2",
+      "src-guilherme-s01-02-3"
+    ],
+    "status": "published",
+    "createdAt": "2026-11-10T16:58:00Z",
+    "approvedAt": "2026-11-10T16:58:02Z",
+    "approvedBy": "Usuário aprovou a inclusão do segundo lote na conversa (2026-11-10)"
+  }
+]
