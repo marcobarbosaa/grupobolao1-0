@@ -76,7 +76,7 @@ const historicalLogos2006: Record<string, { year: number; slug: string }> = {
 };
 function historicalLogoSrc(code: string): string | undefined {
   const logo = historicalLogos2006[code];
-  return logo ? `https://i.logocdn.com/nba/${logo.year}/${logo.slug}@3x.png` : undefined;
+  return logo ? `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png"}` : undefined;
 }
 const west: Matchup[][] = [
 [{a:"PHX",b:"POR",sa:4,sb:0},{a:"LAL",b:"NO",sa:4,sb:2},{a:"MIN",b:"SEA",sa:4,sb:1},{a:"SA",b:"LAC",sa:4,sb:3}],
