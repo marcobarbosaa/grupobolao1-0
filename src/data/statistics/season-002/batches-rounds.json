@@ -1,0 +1,41 @@
+[
+  {
+    "id": "batch-s02-playoff-rounds",
+    "status": "published",
+    "sourceIds": [
+      "src-s02-dias-1",
+      "src-s02-dias-2",
+      "src-s02-dias-3",
+      "src-s02-dias-4",
+      "src-s02-dias-5",
+      "src-s02-dias-6",
+      "src-s02-enzo-1",
+      "src-s02-enzo-2",
+      "src-s02-enzo-3",
+      "src-s02-enzo-4",
+      "src-s02-russo-1",
+      "src-s02-russo-2",
+      "src-s02-russo-3",
+      "src-s02-russo-4",
+      "src-s02-tailan-1",
+      "src-s02-tailan-2",
+      "src-s02-tailan-3",
+      "src-s02-tailan-4",
+      "src-s02-tailan-5",
+      "src-s02-tailan-6",
+      "src-s02-tailan-7",
+      "src-s02-tailan-8",
+      "src-s02-jonas-1",
+      "src-s02-jonas-2",
+      "src-s02-jonas-3",
+      "src-s02-jonas-4",
+      "src-s02-jonas-5",
+      "src-s02-jonas-6",
+      "src-s02-jonas-7",
+      "src-s02-jonas-8"
+    ],
+    "createdAt": "2026-11-10T20:58:18.981Z",
+    "approvedAt": "2026-11-10T20:58:18.981Z",
+    "approvedBy": "Usuário autorizou implementar os números específicos dos playoffs por rodada, na conversa de 2026-11-10"
+  }
+]
