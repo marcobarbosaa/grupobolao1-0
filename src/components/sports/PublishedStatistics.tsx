@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import firstEight from "../../data/statistics/season-001/statistics.json";
 import secondFive from "../../data/statistics/season-001/statistics-02.json";
 import seasonTwo from "../../data/statistics/season-002/statistics.json";
+import secondSeasonRounds from "../../data/statistics/season-002/statistics-rounds.json";
 import phaseProgression from "../../data/statistics/season-002/progression.json";
 import { playerPhaseStatsSchema } from "../../lib/statistics/schemas";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
@@ -13,6 +14,7 @@ const approved = playerPhaseStatsSchema.array().parse([
   ...firstEight,
   ...secondFive,
   ...seasonTwo,
+  ...secondSeasonRounds,
 ]);
 const years = [
   { id: "season-001", title: "Temporada 01", year: "2005–06" },
