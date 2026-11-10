@@ -1,27 +1,33 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-11-09T20:18:03.018Z",
+  "generatedAt": "2026-11-10T16:58:02Z",
   "seasons": [
     "season-001/seasons.json"
   ],
   "statistics": [
-    "season-001/statistics.json"
+    "season-001/statistics.json",
+    "season-001/statistics-02.json"
   ],
   "games": [],
   "awards": [],
   "teams": [
-    "season-001/teams.json"
+    "season-001/teams.json",
+    "season-001/teams-02.json"
   ],
   "teamHistory": [
-    "season-001/teamHistory.json"
+    "season-001/teamHistory.json",
+    "season-001/teamHistory-02.json"
   ],
   "sources": [
-    "season-001/sources.json"
+    "season-001/sources.json",
+    "season-001/sources-02.json"
   ],
   "batches": [
-    "season-001/batches.json"
+    "season-001/batches.json",
+    "season-001/batches-02.json"
   ],
   "revisions": [
-    "season-001/revisions.json"
+    "season-001/revisions.json",
+    "season-001/revisions-02.json"
   ]
 }

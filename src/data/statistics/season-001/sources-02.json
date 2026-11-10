@@ -1,0 +1,249 @@
+[
+  {
+    "id": "src-cerrote-s01-02-1",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163333).png",
+    "contentHash": "4fbcec9904d7de9e168775e25903dce5a6a7ca0e062adaa099c74f8d153841f0",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "cerrote",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-cerrote-s01-02-2",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163348).png",
+    "contentHash": "09debffb382f8ad24f72a476815cf0637dbc8e0d33249836b9ae91e95ebd9e7d",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "cerrote",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-cerrote-s01-02-3",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163407).png",
+    "contentHash": "d7908d0b9684b0c18b5078af03134220d680440b4b3984373a88e5ebd88b201a",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "cerrote",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-russo-s01-02-1",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163816).png",
+    "contentHash": "4211e02a0f7834ba922341ae26a48670a2d1b0844a89c52815c2df8fce7ede15",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "russo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-russo-s01-02-2",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163829).png",
+    "contentHash": "ab873c00a3ac1d93e06a02e78b43aa1a3523219989fc27c0944755e3509e1937",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "russo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-russo-s01-02-3",
+    "kind": "screenshot",
+    "fileName": "image(20261110-163840).png",
+    "contentHash": "6088ecff8f1812219cec35896690d5802a5c736b6cf1cad6f716af85a6e38785",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "russo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-nando-s01-02-1",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164003).png",
+    "contentHash": "eedd80675730a584e984254245986b0e65550dfc28f691b032774cd8f28afab9",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "nando",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-nando-s01-02-2",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164018).png",
+    "contentHash": "ff55ad9e497272f12f2f6301bbdd71027be772e0d5777e3058710ab0101e82ce",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "nando",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-nando-s01-02-3",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164043).png",
+    "contentHash": "a481b1299df90dcc969a178f019c821e660ed837fe1ae8cfece65441326ce8ef",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "nando",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-1",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164454).png",
+    "contentHash": "998479b87b83bde1192cc882e30459548717f6f5af232f9ac165cb07d4462f2a",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-2",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164517).png",
+    "contentHash": "4d29ecaa066afb85ba158cf6b7e2f3146fccd6cedcaf42bba5ab5a54aa283c9d",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-3",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164526).png",
+    "contentHash": "6cf1ac8aa909cc9d7e64e6b32287452cbedd9052efa107295320138a13560d3c",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-4",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164554).png",
+    "contentHash": "d9a21f5e6bbb6e9d8b477d0a2712a143336e59aa84dcc19461df9a4e7f653fa6",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-5",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164611).png",
+    "contentHash": "6056075881233d6b180bec6eb04c1733b4c9cd3d3d6227bd95e73fcd6824587e",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-6",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164637).png",
+    "contentHash": "90e9f0403cacc15d46cc20977ba52b1727ea6a5c4872533ecde8a4c1eb231899",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-enzo-s01-02-7",
+    "kind": "screenshot",
+    "fileName": "image(20261110-164649).png",
+    "contentHash": "53cfd3e89d03efc31cf1323384bdcdb5e706012cc3616c4c3d053c055d4910f8",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "enzo",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-guilherme-s01-02-1",
+    "kind": "screenshot",
+    "fileName": "image(20261110-165300).png",
+    "contentHash": "6e79b22829537f8acee8d490283e76721290667f493af4fed2f5005b9dfe02bc",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "guilherme",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-guilherme-s01-02-2",
+    "kind": "screenshot",
+    "fileName": "image(20261110-165308).png",
+    "contentHash": "c2ede18c22d5ae2870de8e584b6358b69f9c69262693402771b76a85600f4af1",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "guilherme",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  },
+  {
+    "id": "src-guilherme-s01-02-3",
+    "kind": "screenshot",
+    "fileName": "image(20261110-165332).png",
+    "contentHash": "8e9ed319acf7762b4adb6a3287d7f13515a2aa23ecd6b238bfa9e032f7631e92",
+    "receivedAt": "2026-11-10T16:58:00Z",
+    "metadata": {
+      "player": "guilherme",
+      "season": "season-001",
+      "evidenceStorage": "conversation-upload-private",
+      "note": "Original image not committed to public repository; SHA256 verified from attached image"
+    }
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "id": "rev-stat-s01-regular-cristiano-ronaldo-1",
+    "recordId": "stat-s01-regular-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-cerrote-s01-02-1",
+      "src-cerrote-s01-02-2",
+      "src-cerrote-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-first-round-cristiano-ronaldo-1",
+    "recordId": "stat-s01-first-round-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-cerrote-s01-02-1",
+      "src-cerrote-s01-02-2",
+      "src-cerrote-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-regular-russo-1",
+    "recordId": "stat-s01-regular-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-russo-s01-02-1",
+      "src-russo-s01-02-2",
+      "src-russo-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-first-round-russo-1",
+    "recordId": "stat-s01-first-round-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-russo-s01-02-1",
+      "src-russo-s01-02-2",
+      "src-russo-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-regular-nando-1",
+    "recordId": "stat-s01-regular-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-nando-s01-02-1",
+      "src-nando-s01-02-2",
+      "src-nando-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-first-round-nando-1",
+    "recordId": "stat-s01-first-round-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-nando-s01-02-1",
+      "src-nando-s01-02-2",
+      "src-nando-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-regular-enzo-1",
+    "recordId": "stat-s01-regular-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-enzo-s01-02-1",
+      "src-enzo-s01-02-2",
+      "src-enzo-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-playoffs-enzo-1",
+    "recordId": "stat-s01-playoffs-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-enzo-s01-02-1",
+      "src-enzo-s01-02-2",
+      "src-enzo-s01-02-3",
+      "src-enzo-s01-02-4",
+      "src-enzo-s01-02-5",
+      "src-enzo-s01-02-6",
+      "src-enzo-s01-02-7"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-first-round-enzo-1",
+    "recordId": "stat-s01-first-round-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-enzo-s01-02-4",
+      "src-enzo-s01-02-5"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-quarterfinals-enzo-1",
+    "recordId": "stat-s01-quarterfinals-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-enzo-s01-02-6",
+      "src-enzo-s01-02-7"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-regular-guilherme-1",
+    "recordId": "stat-s01-regular-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-guilherme-s01-02-1",
+      "src-guilherme-s01-02-2",
+      "src-guilherme-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  },
+  {
+    "id": "rev-stat-s01-first-round-guilherme-1",
+    "recordId": "stat-s01-first-round-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s01-second-five",
+    "sourceIds": [
+      "src-guilherme-s01-02-1",
+      "src-guilherme-s01-02-2",
+      "src-guilherme-s01-02-3"
+    ],
+    "createdAt": "2026-11-10T16:58:00Z"
+  }
+]

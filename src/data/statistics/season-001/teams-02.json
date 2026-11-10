@@ -1,0 +1,37 @@
+[
+  {
+    "id": "indiana-pacers",
+    "name": "Indiana Pacers",
+    "abbreviation": "IND",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "toronto-raptors",
+    "name": "Toronto Raptors",
+    "abbreviation": "TOR",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "houston-rockets",
+    "name": "Houston Rockets",
+    "abbreviation": "HOU",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "san-antonio-spurs",
+    "name": "San Antonio Spurs",
+    "abbreviation": "SA",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "chicago-bulls",
+    "name": "Chicago Bulls",
+    "abbreviation": "CHI",
+    "sport": "basquete",
+    "status": "active"
+  }
+]
