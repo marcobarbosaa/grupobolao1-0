@@ -10,7 +10,6 @@ import thirdSeasonRounds from "../../data/statistics/season-003/statistics-round
 import { playerPhaseStatsSchema } from "../../lib/statistics/schemas";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 import "../../styles/published-statistics.css";
-import { SeasonExtras } from "./SeasonExtras";
 
 // Separate seasons and preserve the original, manually approved records.
 const approved = playerPhaseStatsSchema.array().parse([
@@ -212,8 +211,10 @@ export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
     </section>
   );
 }
-export function SeasonStatistics() {
-  const [seasonId, setSeasonId] = useState<SeasonId>("season-003");
+export function SeasonStatistics({ seasonId: selectedSeasonId, onSeasonChange }: { seasonId?: SeasonId; onSeasonChange?: (id: SeasonId) => void } = {}) {
+  const [localSeasonId, setLocalSeasonId] = useState<SeasonId>("season-003");
+  const seasonId = selectedSeasonId ?? localSeasonId;
+  const setSeasonId = onSeasonChange ?? setLocalSeasonId;
   const year = years.find(y=>y.id===seasonId)!;
   const regularRecords = approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="regular");
   const playoffPlayerCount = new Set(approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="playoffs").map(record=>record.playerId));
@@ -228,7 +229,7 @@ export function SeasonStatistics() {
         <h1>{year.title.toUpperCase()}.</h1>
         <p>{year.year} · Temporada regular · {regularRecords.length} jogadores com estatísticas conferidas. {playoffSet.size} jogadores com campanha de playoffs registrada.</p>
       </header>
-      <ChooseSeason value={seasonId} onChange={setSeasonId}/>
+      {selectedSeasonId === undefined && <ChooseSeason value={seasonId} onChange={setSeasonId}/>}
       <div className="published-season-grid">
         {newRoster.map(player=>{
           const record=byPlayer.get(player.id);
@@ -246,7 +247,6 @@ export function SeasonStatistics() {
           );
         })}
       </div>
-      <SeasonExtras seasonId={seasonId}/>
       <p className="published-footnote">Arquivo estatístico histórico · Classificações e chave dos playoffs separadas por temporada. Dados individuais e coletivos preservados sem extrapolações.</p>
     </main>
   );
