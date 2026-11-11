@@ -5,6 +5,8 @@ import secondFive from "../../data/statistics/season-001/statistics-02.json";
 import seasonTwo from "../../data/statistics/season-002/statistics.json";
 import secondSeasonRounds from "../../data/statistics/season-002/statistics-rounds.json";
 import phaseProgression from "../../data/statistics/season-002/progression.json";
+import seasonThree from "../../data/statistics/season-003/statistics.json";
+import thirdSeasonRounds from "../../data/statistics/season-003/statistics-rounds.json";
 import { playerPhaseStatsSchema } from "../../lib/statistics/schemas";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 import "../../styles/published-statistics.css";
@@ -15,10 +17,13 @@ const approved = playerPhaseStatsSchema.array().parse([
   ...secondFive,
   ...seasonTwo,
   ...secondSeasonRounds,
+  ...seasonThree,
+  ...thirdSeasonRounds,
 ]);
 const years = [
   { id: "season-001", title: "Temporada 01", year: "2005–06" },
   { id: "season-002", title: "Temporada 02", year: "2006–07" },
+  { id: "season-003", title: "Temporada 03", year: "2007–08" },
 ] as const;
 type SeasonId = (typeof years)[number]["id"];
 type PhaseRecord = (typeof approved)[number];
@@ -113,7 +118,7 @@ function KeyMetrics({ record }: { record: PhaseRecord }) {
   );
 }
 export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
-  const [seasonId, setSeasonId] = useState<SeasonId>("season-002");
+  const [seasonId, setSeasonId] = useState<SeasonId>("season-003");
   const year = years.find(y=>y.id===seasonId)!;
   const records = recordsFor(player.id, seasonId);
   const regular = records.find(record=>record.phaseId==="regular");
@@ -207,7 +212,7 @@ export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
   );
 }
 export function SeasonStatistics() {
-  const [seasonId, setSeasonId] = useState<SeasonId>("season-002");
+  const [seasonId, setSeasonId] = useState<SeasonId>("season-003");
   const year = years.find(y=>y.id===seasonId)!;
   const regularRecords = approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="regular");
   const playoffPlayerCount = new Set(approved.filter(record=>record.seasonId===seasonId&&record.phaseId==="playoffs").map(record=>record.playerId));

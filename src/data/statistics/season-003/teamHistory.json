@@ -1,0 +1,80 @@
+[
+  {
+    "id": "history-s03-jonas",
+    "playerId": "jonas",
+    "teamId": "new-york-knicks",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-tailan",
+    "playerId": "tailan",
+    "teamId": "minnesota-timberwolves",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-cristiano-ronaldo",
+    "playerId": "cristiano-ronaldo",
+    "teamId": "indiana-pacers",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-fabio-carvalho",
+    "playerId": "fabio-carvalho",
+    "teamId": "new-orleans-hornets",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-russo",
+    "playerId": "russo",
+    "teamId": "toronto-raptors",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-marco-barbosa",
+    "playerId": "marco-barbosa",
+    "teamId": "denver-nuggets",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-gam-mori",
+    "playerId": "gam-mori",
+    "teamId": "atlanta-hawks",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-enzo",
+    "playerId": "enzo",
+    "teamId": "san-antonio-spurs",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-dias",
+    "playerId": "dias",
+    "teamId": "detroit-pistons",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-nando",
+    "playerId": "nando",
+    "teamId": "houston-rockets",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-guilherme",
+    "playerId": "guilherme",
+    "teamId": "chicago-bulls",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-matheus-medeiros",
+    "playerId": "matheus-medeiros",
+    "teamId": "philadelphia-76ers",
+    "seasonId": "season-003"
+  },
+  {
+    "id": "history-s03-abel",
+    "playerId": "abel",
+    "teamId": "sacramento-kings",
+    "seasonId": "season-003"
+  }
+]
