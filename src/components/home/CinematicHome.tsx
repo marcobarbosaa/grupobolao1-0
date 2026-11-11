@@ -75,7 +75,9 @@ export function CinematicHome() {
   const groups = seasonId === "season-002" ? season2007 : season2006;
   const group = groups[groupIndex % groups.length];
   const player = newRoster[playerIndex];
-  const missingPortrait = brokenPortraits.includes(player.id);
+  const landingImage = `/jogadores/landing/${player.id}.png`;
+  const portraitSource = brokenPortraits.includes(`${player.id}:landing`) ? player.portrait : landingImage;
+  const missingPortrait = brokenPortraits.includes(`${player.id}:original`);
 
   useEffect(() => {
     if (paused || interacting || reduceMotion || groups.length < 2) return;
@@ -98,14 +100,11 @@ export function CinematicHome() {
         {missingPortrait ? (
           <span className="arena-home__figure-fallback" role="img" aria-label={player.name}>{player.name.slice(0, 2).toUpperCase()}</span>
         ) : (
-          <img src={player.portrait} alt={`${player.name}, atleta do ${player.team}`} width={1024} height={1536}
-            decoding="async" fetchPriority="high" onError={() => setBrokenPortraits((current) => [...current, player.id])} />
+          <img src={portraitSource} alt={`${player.name}, atleta do ${player.team}`} width={1024} height={1536}
+            decoding="async" fetchPriority="high" onError={() => setBrokenPortraits((current) => [...current, `${player.id}:${portraitSource === landingImage ? "landing" : "original"}`])} />
         )}
       </div>
 
-      <div className="arena-home__side-copy" aria-hidden="true">
-        <span>BASQUETE</span><span>ESTATÍSTICAS</span><span>LEGADO</span>
-      </div>
       <div className="arena-home__player-info" aria-live="polite">
         <span className="arena-home__label">PROTAGONISTA / {String(playerIndex + 1).padStart(2, "0")}</span>
         <strong>{player.name}</strong>
