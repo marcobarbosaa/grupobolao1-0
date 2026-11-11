@@ -3,10 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(
-  readFileSync(
-    new URL("../../src/data/statistics/season-extras.json", import.meta.url),
-    "utf8",
-  ),
+  readFileSync(new URL("../../src/data/statistics/season-extras.json", import.meta.url), "utf8"),
 );
 const refs = JSON.parse(
   readFileSync(
@@ -44,8 +41,7 @@ for (const [seasonId, expectedChampion] of [
 
       const inRound = (round) =>
         season.playoffs.matches.filter(
-          (match) =>
-            match.conference === conference && match.round === round,
+          (match) => match.conference === conference && match.round === round,
         );
 
       const first = inRound("first-round");
@@ -65,19 +61,11 @@ for (const [seasonId, expectedChampion] of [
           .map((row) => row.team)
           .sort(),
       );
-      assert.deepEqual(
-        teamsInRound(quarter),
-        first.map((match) => match.winner).sort(),
-      );
-      assert.deepEqual(
-        teamsInRound(conferenceFinals),
-        quarter.map((match) => match.winner).sort(),
-      );
+      assert.deepEqual(teamsInRound(quarter), first.map((match) => match.winner).sort());
+      assert.deepEqual(teamsInRound(conferenceFinals), quarter.map((match) => match.winner).sort());
     }
 
-    const finals = season.playoffs.matches.filter(
-      (match) => match.round === "nba-finals",
-    );
+    const finals = season.playoffs.matches.filter((match) => match.round === "nba-finals");
     assert.equal(finals.length, 1);
     assert.equal(finals[0].winner, expectedChampion);
 
@@ -90,9 +78,7 @@ for (const [seasonId, expectedChampion] of [
 }
 
 test("2006–07 NBA Finals: New York Knicks 4–0 Minnesota", () => {
-  const final = data["season-002"].playoffs.matches.find(
-    (match) => match.round === "nba-finals",
-  );
+  const final = data["season-002"].playoffs.matches.find((match) => match.round === "nba-finals");
   assert.equal(final.homeTeam, "NY");
   assert.equal(final.awayTeam, "MIN");
   assert.equal(final.homeWins, 4);
