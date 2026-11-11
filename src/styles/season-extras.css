@@ -1,32 +1,84 @@
-.season-extras{margin-top:70px;padding-top:38px;border-top:1px solid rgba(255,255,255,.16);color:#f6f6f8}
-.extras-heading h2{font:800 clamp(29px,4vw,56px)/1 var(--font-display);letter-spacing:-.035em}
-.extras-muted{color:#adb4c1;font-size:13px;line-height:1.7;margin-top:12px}
-.extras-integrity{margin:22px 0;padding:18px 20px;border:1px solid rgba(245,180,92,.45);background:#29251e;color:#f4d9ac;font-size:13px;line-height:1.65}
-.extras-integrity strong{display:block;color:#ffe3ae;letter-spacing:.06em;margin-bottom:4px}
-.extras-standings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
-.extras-standings-card{background:#161a22;border:1px solid rgba(255,255,255,.12);min-width:0;padding:20px}
-.extras-standings-card h3{font-size:19px;letter-spacing:.04em;margin-bottom:18px;font-weight:800}
-.extras-table-scroll{overflow-x:auto}
-.extras-table-scroll table{width:100%;border-collapse:collapse;text-align:right;font-size:11px;white-space:nowrap}
-.extras-table-scroll th{font-size:10px;color:#9ca5b4;letter-spacing:.04em;padding:12px 6px;border-bottom:1px solid rgba(255,255,255,.18)}
-.extras-table-scroll th:nth-child(2),.extras-table-scroll td:nth-child(2){text-align:left}
-.extras-table-scroll td{padding:11px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:#d4d7df}
-.extras-table-scroll .extras-qualified td{background:rgba(89,121,176,.09);color:#fff}
-.extras-team-code{font-weight:900;letter-spacing:.04em;margin-right:7px}
-.extras-table-scroll .extras-team-name{display:none}
-.extras-key{color:#8f98a8;font-size:10px;margin-top:12px}
-.extras-bracket-heading{margin:55px 0 24px}.extras-bracket-heading h3{font:800 clamp(26px,3.5vw,46px)/1 var(--font-display)}
-.extras-conference-bracket{padding:20px;background:#111620;border:1px solid rgba(255,255,255,.1);margin:16px 0}
-.extras-conference-bracket>h4{color:#f28c7e;font-weight:900;letter-spacing:.18em;margin-bottom:17px}
-.extras-round-grid{display:grid;grid-template-columns:2fr 1.1fr .9fr;gap:14px}
-.extras-round{min-width:0}.extras-round h5{font-size:10px;letter-spacing:.08em;color:#aab2c4;text-transform:uppercase;margin-bottom:10px;min-height:25px}
-.extras-match{background:#212735;border:1px solid rgba(255,255,255,.12);margin-bottom:10px}
-.extras-match-team{display:flex;gap:8px;padding:9px 11px;color:#9ca4b3;align-items:center;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;min-width:0}
-.extras-match-team:last-child{border-bottom:0}.extras-match-team.is-winner{color:#fff;background:rgba(97,132,185,.18)}
-.extras-match-team .extras-team-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
-.extras-match-team strong{margin-left:auto;font-size:16px;color:inherit}
-.extras-finals{max-width:420px;margin:28px auto 4px;text-align:center}.extras-finals>span{display:block;color:#f28c7e;font-size:12px;letter-spacing:.22em;font-weight:900;margin-bottom:15px}
-.extras-finals>p{font:800 20px/1.2 var(--font-display);margin-top:18px}
-.extras-source-note{margin:28px 0 0}
-@media(max-width:1100px){.extras-standings-grid{grid-template-columns:1fr}.extras-table-scroll .extras-team-name{display:inline}.extras-round-grid{grid-template-columns:1fr 1fr 1fr}}
-@media(max-width:680px){.extras-standings-card{padding:12px}.extras-table-scroll .extras-team-name{display:none}.extras-round-grid{display:flex;overflow-x:auto;scroll-snap-type:x proximity}.extras-round{flex:0 0 230px;scroll-snap-align:start}.extras-round h5{min-height:32px}.extras-conference-bracket{padding:13px}}
+/* Central do Bolão · arquivo de classificação e playoffs.
+   Todas as regras são locais: não alteram o layout geral ou as fichas dos atletas. */
+.season-extras,.season-extras *{box-sizing:border-box}
+.season-extras{width:100%;max-width:1480px;margin:24px auto 100px;padding:0 24px;color:#f4f6fa;font-size:16px;line-height:1.45}
+.season-extras button{font:inherit}
+.extras-hero{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 325px;gap:28px;align-items:center;min-height:275px;padding:clamp(28px,5vw,60px);border-radius:20px;border:1px solid #304153;background:radial-gradient(ellipse at 78% 30%,rgba(234,68,53,.21),transparent 43%),linear-gradient(130deg,#1e2837 0%,#111923 55%,#0e121a 100%);box-shadow:0 24px 60px rgba(0,0,0,.15)}
+.extras-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.12;background:repeating-linear-gradient(110deg,transparent,transparent 28px,rgba(255,255,255,.22) 29px,transparent 30px)}
+.extras-kicker{display:block;font-size:12px;font-weight:800;letter-spacing:.18em;color:#f47f70}
+.extras-kicker span{color:#728096;margin:0 6px}
+.extras-year{display:block;font-size:13px;font-weight:750;letter-spacing:.13em;color:#bac6d4;margin:25px 0 11px}
+.extras-hero h2{font:900 clamp(42px,5vw,75px)/.98 var(--font-display,Impact,sans-serif);letter-spacing:-.025em;margin:0;overflow-wrap:anywhere}
+.extras-head-accent{color:#f45346}
+.extras-hero-copy>p{font-size:15px;color:#b9c4d1;line-height:1.65;margin:18px 0 0;max-width:650px}
+.extras-hero-champion{padding:23px 24px;background:rgba(6,11,18,.68);border:1px solid rgba(244,110,84,.35);border-radius:15px;min-height:185px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px}
+.extras-hero-champion>span{font-size:11px;letter-spacing:.14em;color:#f4b0a5;font-weight:800}
+.extras-hero-champion>strong{font-size:21px;line-height:1.3;font-weight:900;color:#fff}
+.extras-hero-champion>small{font-size:12px;color:#9eaebf}
+.extras-champion-badge{border:1px solid rgba(255,255,255,.18);color:#fff;background:linear-gradient(135deg,#e95443,#a82b26);padding:6px 12px;line-height:1;font:900 17px/1.2 var(--font-display,Impact,sans-serif);border-radius:5px;margin:8px 0 3px}
+.extras-standings-section,.extras-bracket-section{margin-top:58px}
+.extras-section-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}
+.extras-section-index{display:block;color:#f47a6a;font-weight:850;letter-spacing:.16em;font-size:12px;margin-bottom:12px}
+.extras-section-heading h3{font:900 clamp(27px,3.5vw,43px)/1.07 var(--font-display,Impact,sans-serif);margin:0;color:#fff;letter-spacing:-.015em}
+.extras-section-meta{color:#899aaf;font-size:12px;font-weight:750;letter-spacing:.12em;text-align:right}
+.extras-standings-panel{background:linear-gradient(170deg,#192231,#101822);border:1px solid #324052;border-radius:18px;overflow:hidden;box-shadow:0 15px 32px rgba(0,0,0,.12)}
+.extras-standings-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:18px 20px;background:rgba(15,22,32,.82);border-bottom:1px solid #344151}
+.extras-conference-tabs{display:inline-flex;gap:5px;flex-wrap:wrap;background:#0a101a;border:1px solid #364456;padding:5px;border-radius:11px}
+.extras-conference-tabs button{background:transparent;border:1px solid transparent;color:#b4c0d0;padding:12px 18px;font-size:14px;font-weight:800;cursor:pointer;border-radius:7px;transition:background .18s,color .18s}
+.extras-conference-tabs button:hover{color:#fff;background:#222f42}
+.extras-conference-tabs button[aria-pressed=true]{background:#e74f40;color:#fff;border-color:#ff8576}
+.extras-conference-tabs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.extras-standings-toolbar>p{font-size:12px;color:#b6c0d0;margin:0}
+.extras-qualification-dot{display:inline-block;height:8px;width:8px;border-radius:50%;background:#ea634e;box-shadow:0 0 0 4px rgba(234,99,78,.14);margin-right:8px;vertical-align:middle}
+.extras-table-scroll{overflow-x:auto;max-width:100%;outline-offset:2px}
+.extras-table-scroll:focus-visible{outline:2px solid #e95443}
+.extras-table{border-collapse:collapse;width:100%;min-width:800px;font-size:15px;font-variant-numeric:tabular-nums}
+.extras-table thead{background:#101722}
+.extras-table thead th{font-size:12px;font-weight:800;letter-spacing:.1em;color:#9eacc1;text-align:right;padding:17px 18px;border-bottom:1px solid #364458;white-space:nowrap}
+.extras-table thead th:nth-child(2){text-align:left}
+.extras-table thead th:first-child{text-align:center}
+.extras-table tbody tr{transition:background .15s}
+.extras-table tbody tr:hover{background:#263449}
+.extras-table tbody td,.extras-table tbody th{border-bottom:1px solid rgba(185,205,232,.095);padding:12px 18px;white-space:nowrap}
+.extras-table tbody tr:last-child td,.extras-table tbody tr:last-child th{border-bottom:0}
+.extras-table tbody td{text-align:right;color:#dce3eb;font-weight:600}
+.extras-table tbody th{text-align:left;color:#e9edf5;font-weight:700}
+.extras-table .extras-position{text-align:center;font-weight:850;color:#8192a9}
+.extras-table .extras-playoff-qualified{background:rgba(47,80,113,.15)}
+.extras-table .extras-playoff-qualified .extras-position{color:#f48d7a}
+.extras-table .extras-playoff-qualified .extras-position span{display:inline-grid;place-items:center;background:rgba(230,82,66,.16);border:1px solid rgba(230,82,66,.33);border-radius:6px;min-width:32px;padding:4px}
+.extras-table .extras-positive{color:#9ee0bc}
+.extras-table .extras-negative{color:#ee9f9e}
+.extras-team{display:inline-flex;align-items:center;gap:12px;min-width:0}
+.extras-team-icon{display:inline-grid;place-items:center;flex:none;min-width:40px;height:30px;border-radius:6px;background:#2c3b50;color:#e8edf8;border:1px solid #43546b;font-size:11px;font-weight:900;letter-spacing:.04em}
+.extras-team-full{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.extras-data-caption{font-size:12px;line-height:1.7;color:#8998ac;margin-top:13px}
+.extras-bracket-intro{color:#a7b6c7;font-size:14px;margin:0 0 25px}
+.extras-bracket-conference{background:linear-gradient(145deg,#192333,#111925);border:1px solid #354257;border-radius:18px;padding:26px;margin-top:20px}
+.extras-bracket-label{display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:18px;margin-bottom:20px}
+.extras-bracket-dot{height:11px;width:11px;border-radius:50%;background:#f05847;box-shadow:0 0 0 5px rgba(240,88,71,.13)}
+.extras-bracket-label h4{font-size:18px;font-weight:850;letter-spacing:.13em;color:#fff;margin:0}
+.extras-bracket-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.extras-bracket-round{min-width:0;display:flex;flex-direction:column}
+.extras-round-heading{min-height:62px;margin-bottom:7px}
+.extras-round-heading>span{color:#f18e7e;letter-spacing:.16em;font-weight:800;font-size:10px;display:block}
+.extras-round-heading h5{margin:7px 0 0;color:#d5dce7;font-size:15px;line-height:1.3;font-weight:750}
+.extras-round-matches{flex:1;display:flex;flex-direction:column;justify-content:space-around;gap:16px}
+.extras-series{overflow:hidden;background:#0d1520;border:1px solid #3c5066;border-radius:10px;box-shadow:0 5px 14px rgba(0,0,0,.1)}
+.extras-series-side{display:flex;justify-content:space-between;align-items:center;gap:13px;padding:12px 13px;min-height:48px;color:#a3b0c0}
+.extras-series-side+.extras-series-side{border-top:1px solid rgba(255,255,255,.09)}
+.extras-series-side.is-winner{background:linear-gradient(90deg,rgba(70,122,163,.3),rgba(35,61,87,.22));color:#fff}
+.extras-series-side .extras-team{flex:1;font-size:13px;min-width:0}
+.extras-series-side .extras-team-icon{min-width:34px;height:28px;border-radius:4px;font-size:10px}
+.extras-series-side>strong{font-size:19px;line-height:1;font-variant-numeric:tabular-nums;color:inherit}
+.extras-finals-card{max-width:570px;margin:32px auto 0;padding:32px;background:radial-gradient(ellipse at top,rgba(238,86,66,.15),transparent 70%),#141c28;border:1px solid rgba(241,126,103,.55);border-radius:18px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.extras-finals-overline{color:#f4a69a;font-size:11px;letter-spacing:.17em;font-weight:800}
+.extras-finals-card h4{font:900 clamp(29px,3.5vw,46px)/1 var(--font-display,Impact,sans-serif);letter-spacing:.015em;margin:12px 0 22px}
+.extras-finals-match{max-width:390px;margin:auto;text-align:left}
+.extras-finals-card>p{display:flex;flex-direction:column;align-items:center;gap:5px;margin:21px 0 0}
+.extras-finals-card>p span{font-size:10px;letter-spacing:.2em;color:#e9a697;font-weight:800}
+.extras-finals-card>p strong{font-size:23px;font-weight:850;color:#fff}
+.extras-provenance{font-size:12px;color:#91a0b2;line-height:1.7;max-width:830px;margin-top:35px;padding-top:18px;border-top:1px solid #354051}
+@media(max-width:1050px){.extras-hero{grid-template-columns:1fr}.extras-hero-champion{max-width:420px;min-height:auto}.extras-bracket-grid{gap:12px}.extras-bracket-conference{padding:17px}.extras-series-side .extras-team-full{font-size:12px}}
+@media(max-width:760px){.season-extras{padding:0 14px;margin-top:16px}.extras-hero{padding:24px;border-radius:14px;gap:20px}.extras-hero h2{font-size:clamp(35px,9vw,50px)}.extras-year{margin-top:18px}.extras-standings-section,.extras-bracket-section{margin-top:40px}.extras-section-heading{align-items:start;flex-direction:column;gap:8px}.extras-section-meta{text-align:left}.extras-standings-toolbar{padding:12px}.extras-conference-tabs{width:100%}.extras-conference-tabs button{flex:1;min-width:0;padding:12px 8px;font-size:12px}.extras-standings-toolbar>p{margin:5px}.extras-table{min-width:770px}.extras-table tbody td,.extras-table tbody th,.extras-table thead th{padding-left:12px;padding-right:12px}.extras-bracket-conference{padding:17px 13px}.extras-bracket-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;gap:12px}.extras-bracket-round{flex:0 0 255px;scroll-snap-align:start}.extras-round-matches{justify-content:flex-start;gap:12px}.extras-finals-card{padding:21px 16px}.extras-finals-card>p strong{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.extras-table tbody tr,.extras-conference-tabs button{transition:none}}

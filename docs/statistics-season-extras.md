@@ -1,17 +1,19 @@
-# Arquivo coletivo — Temporadas 01 e 03
+# Classificações e playoffs: correção de temporadas (2026-11-11)
 
-## Origem e escopo
+## Atribuição histórica
 
-- Temporada 01 (2005–06): 5 imagens anexadas pelo usuário na conversa em 11/11/2026 (uma árvore de playoffs, quatro telas de classificação).
-- Temporada 03 (2007–08): cinco imagens da pasta Google Drive `Bolão / Temporada 2007-2008 / Extras`, pasta `1U90f0769L4ulBVuf2rOi3ZU3t9w47A26` (uma árvore de playoffs, quatro telas de classificação).
-- Dados separados em `src/data/statistics/season-extras.json`; 30 equipes, 15 séries de playoffs por temporada. Fontes rastreadas em `season-extras-sources.json`; não se republicam os arquivos de imagem.
-- Campos importados das classificações: posição exibida (não recalculada), equipe, vitórias, derrotas, percentual calculado, pontos por jogo, pontos cedidos por jogo e diferença. Outros campos presentes nos screenshots não foram transcritos nesta entrega.
-- Caminhos dos playoffs mantêm as vitórias de cada série e o campeão exibido.
+- **2005/06 — Temporada 01:** somente playoffs. A classificação anteriormente incluída foi enviada para o ano errado; removida do arquivo desta edição. O playoff da Temporada 01 permanece inalterado.
+- **2006/07 — Temporada 02:** a classificação anteriormente associada a 2005/06 pertence a esta edição. A posição dos 30 times é compatível com a chave na pasta `Bolão/Temporada 2006-2007/Extras` do Google Drive. Foram importadas as 15 séries. Final: **New York Knicks 4–0 Minnesota Timberwolves**.
+- **2007/08 — Temporada 03:** classificação e playoffs mantidos, sem mudanças nos resultados. Campeão: Atlanta Hawks, 4–1 sobre San Antonio Spurs.
 
-## Conflito verificável na Temporada 01
+## Procedência
 
-A árvore de playoffs enviada como 2005–06 exibe San Antonio como cabeça de chave 1 no Oeste, enquanto a classificação anexa exibe Phoenix em primeiro. No Leste, a árvore lista Milwaukee como 6º cabeça de chave, mas a classificação mostra Milwaukee em 8º. Há outras divergências inclusive entre classificados e não classificados (exemplo: Memphis aparece em 7º na árvore, mas 9º na classificação). **Não presumir que as fontes são do mesmo estado da liga.** A interface mantém ambos os documentos e exibe uma nota de divergência. Não substituir a ordem de classificação, nem alterar placares para forçar concordância.
+As cinco fontes da Temporada 02 estão descritas em `season-extras-sources.json` (quatro telas de classificação e a chave dos playoffs). A fonte única da Temporada 01 continua sendo a árvore de playoffs anexada na conversa; nenhum print de classificação da Temporada 01 foi mantido. Temporada 03 permanece ligada às cinco imagens da pasta Extras da temporada correspondente. Imagens não são publicadas no repositório.
 
-## Verificações
+## Apresentação
 
-O formato do arquivo coletivo não é parte dos contratos estatísticos de jogadores: é uma coleção complementar declarativa usada apenas pelo componente `SeasonExtras`. Cada conferência contém 15 linhas, registros W+L=82, e cada temporada contém 15 séries até as finais, com o vencedor determinável por quatro vitórias. A temporada 02 permanece sem dados coletivos. Necessária execução de `npm run build` e demais testes no ambiente do projeto.
+`SeasonExtras` recebe o ID da temporada do seletor compartilhado em `src/routes/temporadas.tsx`. O arquivo `src/styles/season-extras.css` define o layout encapsulado, com largura máxima, hero de campeão, conferências selecionáveis, tabela legível em desktop/mobile e rodadas de playoffs com placares de série. Os dados dos jogadores em `PublishedStatistics` e as demais rotas não são alterados.
+
+## Verificação
+
+O teste `tests/statistics/season-extras.test.mjs` verifica: ausência de classificação da Temporada 01; 30 equipes nas Temporadas 02/03, 15 séries cada, vitórias/derrotas, correspondência dos classificados da primeira rodada com o top 8 de cada conferência, progressão entre rodadas e resultados das finais. Executar `npm run stats:test` e `npm run build` na CI ou em ambiente Node com dependências.

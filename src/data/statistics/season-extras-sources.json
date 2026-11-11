@@ -5,30 +5,6 @@
       "filename": "649bdb58-2054-4604-bb2a-e6032f2f1df2.jpg",
       "sha256": "b33cea7cac330aea5b8ebdbd134532ba29b62641f97fe479f84e283b3ab2ea56",
       "kind": "chat-upload"
-    },
-    {
-      "id": "attachment-2005-west-upper",
-      "filename": "86ff51d0-4cb1-4295-970d-81adf116dcdb.jpg",
-      "sha256": "84f05ec9cc27802600d8a39a47822676b8100a14343f9307aad2f6f0ecdd6ca1",
-      "kind": "chat-upload"
-    },
-    {
-      "id": "attachment-2005-west-lower",
-      "filename": "7a08462f-9e83-4492-9a54-d8c955d5e391.jpg",
-      "sha256": "f4febd2d802cbf5892a514b433b478f3963b26c0599d9d14edcd16ad772d2e08",
-      "kind": "chat-upload"
-    },
-    {
-      "id": "attachment-2005-east-upper",
-      "filename": "34287159-11c8-477b-ac28-a3f74347ed2f.jpg",
-      "sha256": "00db1213ce7eef8df5afebfe01f6e216bcc70eefd4e6cfbddd6c852f94e2cdd4",
-      "kind": "chat-upload"
-    },
-    {
-      "id": "attachment-2005-east-lower",
-      "filename": "7acaf12a-08c8-43ac-9503-1ea3b9d71aa8.jpg",
-      "sha256": "c489f0b792c9e779b0a80d846880c2e90bfdbffc1928c2341f562fae1cdf7e5f",
-      "kind": "chat-upload"
     }
   ],
   "season-003": [
@@ -60,6 +36,38 @@
       "id": "drive-2007-playoff-tree",
       "filename": "e792a889-ef33-4ace-8bd0-fbc841289899.jpg",
       "driveFileId": "1nEZOY3jhPh7tBGM-29otzAzYR5B_yvEO",
+      "kind": "drive-image"
+    }
+  ],
+  "season-002": [
+    {
+      "id": "drive-2006-playoff-tree",
+      "filename": "cb7ecc26-fdd2-4ac0-a73b-189e3327f04d.jpg",
+      "driveFileId": "1vISPmxSzKbjfy0f9YNdTgRVMLV00lRGg",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2006-east-lower",
+      "filename": "440d9547-fd6b-4168-b4bf-ebe973c3c691.jpg",
+      "driveFileId": "1XFlAh2JDP0K-kL6jWaM0CV0NrnNnbd9f",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2006-east-upper",
+      "filename": "4e36d800-35b4-4304-883d-e03b6f479fd1.jpg",
+      "driveFileId": "1Vkye0lOPIk8ofwnlbbcvaeJfJH5YWyWu",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2006-west-lower",
+      "filename": "4a2615b5-f1e4-486c-8c2d-d88da219abc0.jpg",
+      "driveFileId": "1wg4UFiapT56Z7EK7pDfheXR1Va5hto7A",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2006-west-upper",
+      "filename": "d56f3c6c-3793-4503-ba57-f1df60c920ab.jpg",
+      "driveFileId": "1qGmZpRJQJmuFgxASZ_KGpLmnpKEeXFRj",
       "kind": "drive-image"
     }
   ]
