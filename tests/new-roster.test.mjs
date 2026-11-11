@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 const source = readFileSync(new URL("../src/lib/new-roster.ts", import.meta.url), "utf8");
 const names = [
   "Fábio Carvalho",
@@ -74,4 +74,21 @@ test("home uses the cinematic viewport rather than stacked portal sections", () 
   assert.match(home, /aria-pressed/);
   assert.match(css, /height:\s*calc\(100dvh - var\(--header-height\)\)/);
   assert.match(css, /\.site-shell:has\(\.arena-home\) \.site-footer \{ display: none; \}/);
+});
+
+test("all thirteen landing portraits are packaged and the old side copy is removed", () => {
+  const landing = readFileSync(new URL("../src/components/home/CinematicHome.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../src/components/home/CinematicHome.css", import.meta.url), "utf8");
+  const ids = [
+    "fabio-carvalho", "abel", "gam-mori", "marco-barbosa", "cristiano-ronaldo",
+    "dias", "russo", "jonas", "enzo", "tailan", "matheus-medeiros", "nando", "guilherme",
+  ];
+  for (const id of ids) {
+    assert.ok(existsSync(new URL(`../public/jogadores/landing/${id}.png`, import.meta.url)), id);
+  }
+  assert.match(landing, /\/jogadores\/landing\/\$\{player\.id\}\.png/);
+  assert.doesNotMatch(landing, /arena-home__side-copy|BASQUETE<\/span>|ESTATÍSTICAS<\/span>|LEGADO<\/span>/);
+  assert.doesNotMatch(css, /arena-home__side-copy/);
+  assert.match(css, /object-fit:\s*contain/);
+  assert.match(css, /\.site-shell:has\(\.arena-home\) \.site-header/);
 });
