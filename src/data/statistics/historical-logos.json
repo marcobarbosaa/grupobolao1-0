@@ -1,0 +1,151 @@
+{
+  "base": {
+    "ATL": {
+      "year": 1995,
+      "slug": "atlanta-hawks"
+    },
+    "BOS": {
+      "year": 1996,
+      "slug": "boston-celtics"
+    },
+    "CHA": {
+      "year": 2004,
+      "slug": "charlotte-bobcats"
+    },
+    "CHI": {
+      "year": 1966,
+      "slug": "chicago-bulls"
+    },
+    "CLE": {
+      "year": 2003,
+      "slug": "cleveland-cavaliers"
+    },
+    "DAL": {
+      "year": 2001,
+      "slug": "dallas-mavericks"
+    },
+    "DEN": {
+      "year": 2003,
+      "slug": "denver-nuggets"
+    },
+    "DET": {
+      "year": 2005,
+      "slug": "detroit-pistons"
+    },
+    "GS": {
+      "year": 1997,
+      "slug": "golden-state-warriors"
+    },
+    "HOU": {
+      "year": 2003,
+      "slug": "houston-rockets"
+    },
+    "IND": {
+      "year": 2005,
+      "slug": "indiana-pacers"
+    },
+    "LAC": {
+      "year": 1984,
+      "slug": "los-angeles-clippers"
+    },
+    "LAL": {
+      "year": 2001,
+      "slug": "los-angeles-lakers"
+    },
+    "MEM": {
+      "year": 2004,
+      "slug": "memphis-grizzlies"
+    },
+    "MIA": {
+      "year": 1999,
+      "slug": "miami-heat"
+    },
+    "MIL": {
+      "year": 2006,
+      "slug": "milwaukee-bucks"
+    },
+    "MIN": {
+      "year": 1996,
+      "slug": "minnesota-timberwolves"
+    },
+    "NJN": {
+      "year": 1997,
+      "slug": "new-jersey-nets"
+    },
+    "NO": {
+      "year": 2005,
+      "slug": "new-orleans-oklahoma-city-hornets"
+    },
+    "NY": {
+      "year": 1995,
+      "slug": "new-york-knicks"
+    },
+    "ORL": {
+      "year": 2000,
+      "slug": "orlando-magic"
+    },
+    "PHI": {
+      "year": 1997,
+      "slug": "philadelphia-76ers"
+    },
+    "PHX": {
+      "year": 2000,
+      "slug": "phoenix-suns"
+    },
+    "POR": {
+      "year": 2004,
+      "slug": "portland-trail-blazers"
+    },
+    "SAC": {
+      "year": 1994,
+      "slug": "sacramento-kings"
+    },
+    "SA": {
+      "year": 2002,
+      "slug": "san-antonio-spurs"
+    },
+    "SEA": {
+      "year": 2001,
+      "slug": "seattle-supersonics"
+    },
+    "TOR": {
+      "year": 1995,
+      "slug": "toronto-raptors"
+    },
+    "UTA": {
+      "year": 2004,
+      "slug": "utah-jazz"
+    },
+    "WAS": {
+      "year": 1997,
+      "slug": "washington-wizards"
+    }
+  },
+  "seasonOverrides": {
+    "season-001": {
+      "MIL": {
+        "year": 1993,
+        "slug": "milwaukee-bucks"
+      }
+    },
+    "season-002": {},
+    "season-003": {
+      "ATL": {
+        "year": 2007,
+        "slug": "atlanta-hawks"
+      },
+      "CHA": {
+        "year": 2007,
+        "slug": "charlotte-bobcats"
+      },
+      "NO": {
+        "year": 2007,
+        "slug": "new-orleans-hornets"
+      },
+      "WAS": {
+        "year": 2007,
+        "slug": "washington-wizards"
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "PHX": {
+    "gb": "—",
+    "home": "32-9",
+    "away": "31-10",
+    "conference": "39-13",
+    "division": "11-5",
+    "streak": "L2"
+  },
+  "SA": {
+    "gb": "60.0",
+    "home": "28-13",
+    "away": "29-12",
+    "conference": "35-17",
+    "division": "11-5",
+    "streak": "W2"
+  },
+  "MIN": {
+    "gb": "120.0",
+    "home": "29-12",
+    "away": "22-19",
+    "conference": "36-16",
+    "division": "12-4",
+    "streak": "W4"
+  },
+  "LAL": {
+    "gb": "100.0",
+    "home": "30-11",
+    "away": "23-18",
+    "conference": "36-16",
+    "division": "11-5",
+    "streak": "L1"
+  },
+  "NO": {
+    "gb": "170.0",
+    "home": "25-16",
+    "away": "21-20",
+    "conference": "29-23",
+    "division": "7-9",
+    "streak": "L2"
+  },
+  "SEA": {
+    "gb": "170.0",
+    "home": "26-15",
+    "away": "20-21",
+    "conference": "33-19",
+    "division": "13-3",
+    "streak": "L1"
+  },
+  "LAC": {
+    "gb": "180.0",
+    "home": "29-12",
+    "away": "16-25",
+    "conference": "28-24",
+    "division": "7-9",
+    "streak": "W6"
+  },
+  "POR": {
+    "gb": "200.0",
+    "home": "23-18",
+    "away": "20-21",
+    "conference": "24-28",
+    "division": "8-8",
+    "streak": "W2"
+  },
+  "MEM": {
+    "gb": "210.0",
+    "home": "23-18",
+    "away": "19-22",
+    "conference": "28-24",
+    "division": "9-7",
+    "streak": "W3"
+  },
+  "DAL": {
+    "gb": "300.0",
+    "home": "16-25",
+    "away": "17-24",
+    "conference": "22-30",
+    "division": "8-8",
+    "streak": "L1"
+  },
+  "SAC": {
+    "gb": "310.0",
+    "home": "16-25",
+    "away": "16-25",
+    "conference": "21-31",
+    "division": "7-9",
+    "streak": "L2"
+  },
+  "GS": {
+    "gb": "320.0",
+    "home": "16-25",
+    "away": "15-26",
+    "conference": "21-31",
+    "division": "4-12",
+    "streak": "W2"
+  },
+  "HOU": {
+    "gb": "340.0",
+    "home": "18-23",
+    "away": "11-30",
+    "conference": "21-31",
+    "division": "5-11",
+    "streak": "W1"
+  },
+  "DEN": {
+    "gb": "450.0",
+    "home": "12-29",
+    "away": "6-35",
+    "conference": "10-42",
+    "division": "3-13",
+    "streak": "L2"
+  },
+  "UTA": {
+    "gb": "500.0",
+    "home": "5-36",
+    "away": "8-33",
+    "conference": "7-45",
+    "division": "4-12",
+    "streak": "L8"
+  },
+  "DET": {
+    "gb": "—",
+    "home": "26-15",
+    "away": "30-11",
+    "conference": "35-17",
+    "division": "11-5",
+    "streak": "L3"
+  },
+  "ORL": {
+    "gb": "10.0",
+    "home": "30-11",
+    "away": "25-16",
+    "conference": "36-16",
+    "division": "11-5",
+    "streak": "W3"
+  },
+  "NY": {
+    "gb": "90.0",
+    "home": "27-14",
+    "away": "20-21",
+    "conference": "28-24",
+    "division": "6-10",
+    "streak": "W2"
+  },
+  "CHI": {
+    "gb": "110.0",
+    "home": "26-15",
+    "away": "19-22",
+    "conference": "28-24",
+    "division": "8-8",
+    "streak": "W2"
+  },
+  "WAS": {
+    "gb": "120.0",
+    "home": "26-15",
+    "away": "18-23",
+    "conference": "28-24",
+    "division": "9-7",
+    "streak": "W1"
+  },
+  "BOS": {
+    "gb": "130.0",
+    "home": "23-18",
+    "away": "20-21",
+    "conference": "28-24",
+    "division": "8-8",
+    "streak": "W1"
+  },
+  "TOR": {
+    "gb": "130.0",
+    "home": "25-16",
+    "away": "18-23",
+    "conference": "27-25",
+    "division": "10-6",
+    "streak": "L4"
+  },
+  "MIL": {
+    "gb": "130.0",
+    "home": "27-14",
+    "away": "16-25",
+    "conference": "25-27",
+    "division": "9-7",
+    "streak": "W1"
+  },
+  "CLE": {
+    "gb": "130.0",
+    "home": "23-18",
+    "away": "20-21",
+    "conference": "28-24",
+    "division": "8-8",
+    "streak": "L1"
+  },
+  "CHA": {
+    "gb": "160.0",
+    "home": "22-19",
+    "away": "18-23",
+    "conference": "23-29",
+    "division": "4-12",
+    "streak": "L4"
+  },
+  "PHI": {
+    "gb": "180.0",
+    "home": "21-20",
+    "away": "17-24",
+    "conference": "24-28",
+    "division": "7-9",
+    "streak": "W2"
+  },
+  "MIA": {
+    "gb": "190.0",
+    "home": "23-18",
+    "away": "14-27",
+    "conference": "25-27",
+    "division": "8-8",
+    "streak": "L3"
+  },
+  "NJN": {
+    "gb": "200.0",
+    "home": "19-22",
+    "away": "17-24",
+    "conference": "24-28",
+    "division": "9-7",
+    "streak": "L8"
+  },
+  "ATL": {
+    "gb": "210.0",
+    "home": "22-19",
+    "away": "13-28",
+    "conference": "18-34",
+    "division": "8-8",
+    "streak": "W3"
+  },
+  "IND": {
+    "gb": "330.0",
+    "home": "11-30",
+    "away": "12-29",
+    "conference": "13-39",
+    "division": "4-12",
+    "streak": "L1"
+  }
+}

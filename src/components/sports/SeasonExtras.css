@@ -1,21 +1,32 @@
 .seasonextras{color:#f5f7fc;max-width:1480px;margin:0 auto;padding:48px 20px 100px}.seasonextras-nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}.seasonextras-nav button,.seasonextras-toggle button{border:1px solid #34445d;background:#111b2b;color:#cad5e7;padding:12px 18px;border-radius:12px;font:inherit;cursor:pointer;transition:background .2s,border-color .2s}.seasonextras-nav button[aria-pressed=true],.seasonextras-toggle button[aria-pressed=true]{background:#dfeaff;color:#101c2d;border-color:#dfeaff}.seasonextras-panel{padding:clamp(18px,3vw,38px);border:1px solid #304058;border-radius:22px;background:linear-gradient(145deg,#111b2c,#0b1321)}.seasonextras-header{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px}.seasonextras-header h2{font-size:clamp(30px,4vw,52px);text-transform:uppercase;letter-spacing:-.02em;line-height:1.04;margin:4px 0 12px}.seasonextras-header p{color:#aebdd1;margin:0}.seasonextras-kicker{font-size:12px!important;letter-spacing:.15em;text-transform:uppercase;color:#e5b76a!important;font-weight:800}.seasonextras-toggle{display:flex;gap:8px}.seasonextras-tablewrap{overflow-x:auto;border-radius:12px;border:1px solid #2e3a4f}.seasonextras-table{width:100%;border-collapse:collapse;min-width:1160px;font-variant-numeric:tabular-nums;font-size:13px}.seasonextras-table th,.seasonextras-table td{padding:11px 10px;border-bottom:1px solid #25344a;white-space:nowrap;text-align:right}.seasonextras-table thead{background:#1d2a3f;color:#d3dded}.seasonextras-table thead th{font-size:11px;text-transform:uppercase;letter-spacing:.04em}.seasonextras-table thead th:nth-child(2),.seasonextras-table tbody th{text-align:left}.seasonextras-table tbody th{font-weight:600}.seasonextras-table tr:hover{background:#213149}.seasonextras-table tbody tr:last-child td,.seasonextras-table tbody tr:last-child th{border-bottom:0}.seasonextras-qualified{background:rgba(55,109,156,.12)}.seasonextras-team{display:flex;gap:10px;align-items:center}.seasonextras-logo{display:inline-grid;width:30px;height:30px;place-items:center;flex-shrink:0}.seasonextras-logo img{width:100%;height:100%;object-fit:contain}.seasonextras-logo span{font-size:10px;font-weight:800}.seasonextras-playoff-label{border-radius:3px;background:#336551;color:#e7ffef;font-size:9px;padding:2px 5px;margin-left:auto}.seasonextras-note{font-size:12px;color:#9aacc4;margin:18px 0 0;line-height:1.65}.seasonextras-champion{text-align:center;margin:0 auto 28px;padding:22px;background:radial-gradient(ellipse at top,rgba(212,168,88,.2),transparent 75%);border:1px solid #6e5736;border-radius:16px;max-width:420px}.seasonextras-champion>div{display:flex;align-items:center;justify-content:center;gap:12px;margin:12px 0;font-size:22px}.seasonextras-champion .seasonextras-logo{width:55px;height:55px}.seasonextras-champion>span:last-child{font-size:13px;color:#aab8c9}.seasonextras-bracket{display:grid;grid-template-columns:minmax(670px,1fr) 175px minmax(670px,1fr);gap:24px;overflow-x:auto;padding-bottom:20px}.seasonextras-conference h3,.seasonextras-final h3{text-align:center;color:#f4d3a0;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin:0 0 18px}.seasonextras-rounds{display:grid;grid-template-columns:repeat(3,minmax(190px,1fr));gap:12px}.seasonextras-rounds-east{direction:rtl}.seasonextras-rounds-east>*{direction:ltr}.seasonextras-round h4{font-size:11px;color:#9caec4;text-align:center;margin:0 0 12px}.seasonextras-matches{display:flex;flex-direction:column;justify-content:space-around;gap:14px;height:480px}.seasonextras-series{border:1px solid #3a4a62;background:#19263a;border-radius:9px;overflow:hidden;min-width:0}.seasonextras-side{display:flex;align-items:center;gap:5px;padding:7px 8px;color:#9aa9bc;min-width:0}.seasonextras-side+.seasonextras-side{border-top:1px solid #33425a}.seasonextras-side.is-winner{background:#263c55;color:#fff}.seasonextras-side .seasonextras-logo{width:20px;height:20px}.seasonextras-side-name{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.seasonextras-side strong{font-size:15px}.seasonextras-final{align-self:center}.seasonextras-final h3{margin-bottom:12px}.seasonextras:focus-within .seasonextras-tablewrap:focus-visible,.seasonextras-bracket:focus-visible{outline:2px solid #f4d3a0;outline-offset:3px}@media(max-width:700px){.seasonextras{padding:30px 12px 70px}.seasonextras-panel{padding:16px}.seasonextras-nav button{flex:1;font-size:12px;padding:10px 6px}.seasonextras-header h2{font-size:29px}.seasonextras-bracket{grid-template-columns:650px 170px 650px;gap:14px}.seasonextras-champion>div{font-size:18px}}
-/* Shared season selector: accessible from either archive tab. */
-.season-archive-controls{max-width:1480px;margin:28px auto 0;padding:0 20px;display:grid;gap:18px}
+/* PR #15 visual identity: navy sports panels, real historical emblems and
+   both conferences feeding the NBA Finals in the middle. */
+.seasonextras{width:100%;box-sizing:border-box}
+.seasonextras-panel{margin-bottom:24px}
+.seasonextras-panel .seasonextras-header h2{font-weight:850}
+.seasonextras-panel .seasonextras-header p:not(.seasonextras-kicker){line-height:1.6}
+.seasonextras-logo img{display:block}
+.seasonextras-logo>span{display:grid;place-items:center;width:100%;height:100%;border:1px solid #4b5e77;border-radius:4px;background:#28394d;color:#e3eaf5;font-size:10px}
+.seasonextras-nav button:focus-visible,
+.seasonextras-toggle button:focus-visible{outline:2px solid #f4d3a0;outline-offset:3px}
+.seasonextras-table tbody td,
+.seasonextras-table tbody th{font-variant-numeric:tabular-nums}
+.seasonextras-table tbody th .seasonextras-team{white-space:nowrap}
+.seasonextras-note{max-width:1120px}
+.seasonextras-bracket{scrollbar-width:thin;scrollbar-color:#677a96 #101928}
+.seasonextras-final{min-width:175px}
+.seasonextras-final .seasonextras-series{max-width:220px}
+.seasonextras-champion .seasonextras-logo{width:55px;height:55px}
+.seasonextras-champion .seasonextras-logo img{object-fit:contain}
+.seasonextras-bracket:focus-visible,.seasonextras-tablewrap:focus-visible{outline:2px solid #f4d3a0;outline-offset:3px}
+.season-archive-controls{max-width:1480px;margin:28px auto 0;padding:0 20px;display:grid;gap:16px}
 .season-archive-controls .seasonextras-nav{margin:0}
-.season-archive-controls .seasonextras-toggle{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
-.season-archive-controls .seasonextras-toggle button[aria-pressed=true]{border-color:#e75141;background:#32201f;color:#fff}
-.season-archive-controls .seasonextras-toggle button span{font-size:12px;margin-left:5px;opacity:.85}
-@media(max-width:700px){.season-archive-controls{margin-top:16px;padding:0 12px}.season-archive-controls .seasonextras-toggle button{flex:1 1 140px}}
-
-/* Consolida os controles de temporada e abas na identidade da Central do Bolão. */
-.season-archive-controls{max-width:1480px;padding:0 24px;margin:30px auto 0;gap:16px}
-.season-archive-controls .seasonextras-nav{margin:0}
-.season-archive-controls .seasonextras-nav button,
-.season-archive-controls .seasonextras-toggle button{color:#bcc7d7;background:#151d29;border:1px solid #374255;border-radius:10px;padding:13px 20px;font-size:14px;font-weight:700;line-height:1.4}
-.season-archive-controls .seasonextras-nav button[aria-pressed=true],
-.season-archive-controls .seasonextras-toggle button[aria-pressed=true]{background:#e55042;color:#fff;border-color:#f67c6e}
-.season-archive-controls button:hover{border-color:#f17d6b}
-.season-archive-controls button:focus-visible{outline:2px solid #fff;outline-offset:3px}
-.season-archive-controls .seasonextras-toggle{margin:0 0 14px;gap:10px}
-.season-archive-controls .seasonextras-toggle button span{font-size:12px;opacity:.85;margin-left:7px}
-@media(max-width:700px){.season-archive-controls{padding:0 14px;margin-top:18px}.season-archive-controls .seasonextras-toggle button{flex:1 1 145px}.season-archive-controls .seasonextras-nav{display:grid;grid-template-columns:1fr 1fr}.season-archive-controls .seasonextras-nav button{font-size:12px;padding:12px 8px}}
+.season-archive-controls .seasonextras-toggle{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 12px}
+.season-archive-controls .seasonextras-toggle button{font-weight:700}
+.season-archive-controls .seasonextras-toggle button span{font-size:12px;opacity:.85;margin-left:5px}
+@media(max-width:700px){
+  .season-archive-controls{margin:16px auto 0;padding:0 12px}
+  .season-archive-controls .seasonextras-toggle button{flex:1 1 135px}
+  .seasonextras{padding:26px 12px 70px}
+  .seasonextras-bracket{grid-template-columns:650px 165px 650px}
+}
