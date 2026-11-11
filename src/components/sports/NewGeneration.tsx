@@ -3,12 +3,7 @@ import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 
-import { GenerationHero } from "../home/GenerationHero";
-import { SeasonSpotlight } from "../home/SeasonSpotlight";
-import { ExploreUniverse } from "../home/ExploreUniverse";
-import { VersusShowcase } from "../home/VersusShowcase";
-import { LeagueJourney } from "../home/LeagueJourney";
-import "../../styles/home-portal.css";
+import { CinematicHome } from "../home/CinematicHome";
 import { ProfileStatistics } from "./PublishedStatistics";
 
 type PortraitVariant = "card" | "profile";
@@ -50,15 +45,7 @@ export function NewPortrait({
 }
 
 export function GenerationHome() {
-  return (
-    <div className="generation-page">
-      <GenerationHero />
-      <SeasonSpotlight />
-      <ExploreUniverse />
-      <VersusShowcase />
-      <LeagueJourney />
-    </div>
-  );
+  return <CinematicHome />;
 }
 
 export function GenerationRoster({ compact = false }: { compact?: boolean }) {

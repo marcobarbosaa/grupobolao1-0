@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { Brand } from "./Brand";
 import { MainNavigation } from "./MainNavigation";
 import { MobileMenu } from "./MobileMenu";
@@ -18,6 +19,7 @@ export function SiteHeader() {
       <div className="site-header-inner">
         <Brand />
         <MainNavigation />
+        {pathname === "/" && <Link className="arena-header-cta" to="/temporadas">EXPLORAR A LIGA <ArrowUpRight size={17} aria-hidden="true" /></Link>}
         <MobileMenu />
       </div>
     </header>

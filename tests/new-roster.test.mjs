@@ -51,11 +51,27 @@ test("new-generation gallery actually uses the card framing variant", () => {
   assert.match(styles, /\.generation-portrait--profile img\s*\{[^}]*object-fit:\s*contain/);
 });
 
-test("home uses the collective hero without carousel timers", () => {
+test("home uses the cinematic viewport rather than stacked portal sections", () => {
   const component = readFileSync(
     new URL("../src/components/sports/NewGeneration.tsx", import.meta.url),
     "utf8",
   );
-  assert.match(component, /<GenerationHero \/>/);
-  assert.doesNotMatch(component, /activeIndex|setInterval|manualPause|generation-hero-controls/);
+  const home = readFileSync(
+    new URL("../src/components/home/CinematicHome.tsx", import.meta.url),
+    "utf8",
+  );
+  const css = readFileSync(
+    new URL("../src/components/home/CinematicHome.css", import.meta.url),
+    "utf8",
+  );
+  assert.match(component, /<CinematicHome \/>/);
+  assert.doesNotMatch(component, /<GenerationHero|<SeasonSpotlight|<ExploreUniverse|<VersusShowcase|<LeagueJourney/);
+  assert.match(home, /newRoster/);
+  assert.match(home, /prefers-reduced-motion/);
+  assert.match(home, /setSeasonId/);
+  assert.match(home, /setGroupIndex/);
+  assert.match(home, /onMouseEnter/);
+  assert.match(home, /aria-pressed/);
+  assert.match(css, /height:\s*calc\(100dvh - var\(--header-height\)\)/);
+  assert.match(css, /\.site-shell:has\(\.arena-home\) \.site-footer \{ display: none; \}/);
 });
