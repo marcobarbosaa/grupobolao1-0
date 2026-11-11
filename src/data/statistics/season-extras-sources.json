@@ -1,0 +1,66 @@
+{
+  "season-001": [
+    {
+      "id": "attachment-2005-playoff-tree",
+      "filename": "649bdb58-2054-4604-bb2a-e6032f2f1df2.jpg",
+      "sha256": "b33cea7cac330aea5b8ebdbd134532ba29b62641f97fe479f84e283b3ab2ea56",
+      "kind": "chat-upload"
+    },
+    {
+      "id": "attachment-2005-west-upper",
+      "filename": "86ff51d0-4cb1-4295-970d-81adf116dcdb.jpg",
+      "sha256": "84f05ec9cc27802600d8a39a47822676b8100a14343f9307aad2f6f0ecdd6ca1",
+      "kind": "chat-upload"
+    },
+    {
+      "id": "attachment-2005-west-lower",
+      "filename": "7a08462f-9e83-4492-9a54-d8c955d5e391.jpg",
+      "sha256": "f4febd2d802cbf5892a514b433b478f3963b26c0599d9d14edcd16ad772d2e08",
+      "kind": "chat-upload"
+    },
+    {
+      "id": "attachment-2005-east-upper",
+      "filename": "34287159-11c8-477b-ac28-a3f74347ed2f.jpg",
+      "sha256": "00db1213ce7eef8df5afebfe01f6e216bcc70eefd4e6cfbddd6c852f94e2cdd4",
+      "kind": "chat-upload"
+    },
+    {
+      "id": "attachment-2005-east-lower",
+      "filename": "7acaf12a-08c8-43ac-9503-1ea3b9d71aa8.jpg",
+      "sha256": "c489f0b792c9e779b0a80d846880c2e90bfdbffc1928c2341f562fae1cdf7e5f",
+      "kind": "chat-upload"
+    }
+  ],
+  "season-003": [
+    {
+      "id": "drive-2007-east-lower",
+      "filename": "933b45d9-6430-443b-b3fd-f3f5440478c6.jpg",
+      "driveFileId": "1fKLRpgeq_Kw7M3T6ENOYf7010kqlHqF7",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2007-east-upper",
+      "filename": "55b34ec2-4e93-46a3-ad45-af221cb92107.jpg",
+      "driveFileId": "1DLeQqCjlFjK5od3s2fnVTe1B3ipmKuL2",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2007-west-lower",
+      "filename": "9b60f0ce-669f-48d1-953c-51f73f93d203.jpg",
+      "driveFileId": "1kEkkyypRdepA0jNxAQPR58bAVJRnX7zJ",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2007-west-upper",
+      "filename": "3d9062e9-9ca6-4293-8a0a-d01e67f7817f.jpg",
+      "driveFileId": "1U_9bCGRuxuVOh2qT4szQVhtUL-gsH-VC",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2007-playoff-tree",
+      "filename": "e792a889-ef33-4ace-8bd0-fbc841289899.jpg",
+      "driveFileId": "1nEZOY3jhPh7tBGM-29otzAzYR5B_yvEO",
+      "kind": "drive-image"
+    }
+  ]
+}

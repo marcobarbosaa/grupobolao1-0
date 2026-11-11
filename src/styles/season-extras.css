@@ -1,0 +1,32 @@
+.season-extras{margin-top:70px;padding-top:38px;border-top:1px solid rgba(255,255,255,.16);color:#f6f6f8}
+.extras-heading h2{font:800 clamp(29px,4vw,56px)/1 var(--font-display);letter-spacing:-.035em}
+.extras-muted{color:#adb4c1;font-size:13px;line-height:1.7;margin-top:12px}
+.extras-integrity{margin:22px 0;padding:18px 20px;border:1px solid rgba(245,180,92,.45);background:#29251e;color:#f4d9ac;font-size:13px;line-height:1.65}
+.extras-integrity strong{display:block;color:#ffe3ae;letter-spacing:.06em;margin-bottom:4px}
+.extras-standings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.extras-standings-card{background:#161a22;border:1px solid rgba(255,255,255,.12);min-width:0;padding:20px}
+.extras-standings-card h3{font-size:19px;letter-spacing:.04em;margin-bottom:18px;font-weight:800}
+.extras-table-scroll{overflow-x:auto}
+.extras-table-scroll table{width:100%;border-collapse:collapse;text-align:right;font-size:11px;white-space:nowrap}
+.extras-table-scroll th{font-size:10px;color:#9ca5b4;letter-spacing:.04em;padding:12px 6px;border-bottom:1px solid rgba(255,255,255,.18)}
+.extras-table-scroll th:nth-child(2),.extras-table-scroll td:nth-child(2){text-align:left}
+.extras-table-scroll td{padding:11px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:#d4d7df}
+.extras-table-scroll .extras-qualified td{background:rgba(89,121,176,.09);color:#fff}
+.extras-team-code{font-weight:900;letter-spacing:.04em;margin-right:7px}
+.extras-table-scroll .extras-team-name{display:none}
+.extras-key{color:#8f98a8;font-size:10px;margin-top:12px}
+.extras-bracket-heading{margin:55px 0 24px}.extras-bracket-heading h3{font:800 clamp(26px,3.5vw,46px)/1 var(--font-display)}
+.extras-conference-bracket{padding:20px;background:#111620;border:1px solid rgba(255,255,255,.1);margin:16px 0}
+.extras-conference-bracket>h4{color:#f28c7e;font-weight:900;letter-spacing:.18em;margin-bottom:17px}
+.extras-round-grid{display:grid;grid-template-columns:2fr 1.1fr .9fr;gap:14px}
+.extras-round{min-width:0}.extras-round h5{font-size:10px;letter-spacing:.08em;color:#aab2c4;text-transform:uppercase;margin-bottom:10px;min-height:25px}
+.extras-match{background:#212735;border:1px solid rgba(255,255,255,.12);margin-bottom:10px}
+.extras-match-team{display:flex;gap:8px;padding:9px 11px;color:#9ca4b3;align-items:center;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;min-width:0}
+.extras-match-team:last-child{border-bottom:0}.extras-match-team.is-winner{color:#fff;background:rgba(97,132,185,.18)}
+.extras-match-team .extras-team-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.extras-match-team strong{margin-left:auto;font-size:16px;color:inherit}
+.extras-finals{max-width:420px;margin:28px auto 4px;text-align:center}.extras-finals>span{display:block;color:#f28c7e;font-size:12px;letter-spacing:.22em;font-weight:900;margin-bottom:15px}
+.extras-finals>p{font:800 20px/1.2 var(--font-display);margin-top:18px}
+.extras-source-note{margin:28px 0 0}
+@media(max-width:1100px){.extras-standings-grid{grid-template-columns:1fr}.extras-table-scroll .extras-team-name{display:inline}.extras-round-grid{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:680px){.extras-standings-card{padding:12px}.extras-table-scroll .extras-team-name{display:none}.extras-round-grid{display:flex;overflow-x:auto;scroll-snap-type:x proximity}.extras-round{flex:0 0 230px;scroll-snap-align:start}.extras-round h5{min-height:32px}.extras-conference-bracket{padding:13px}}

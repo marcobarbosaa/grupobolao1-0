@@ -10,6 +10,7 @@ import thirdSeasonRounds from "../../data/statistics/season-003/statistics-round
 import { playerPhaseStatsSchema } from "../../lib/statistics/schemas";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 import "../../styles/published-statistics.css";
+import { SeasonExtras } from "./SeasonExtras";
 
 // Separate seasons and preserve the original, manually approved records.
 const approved = playerPhaseStatsSchema.array().parse([
@@ -245,7 +246,8 @@ export function SeasonStatistics() {
           );
         })}
       </div>
-      <p className="published-footnote">Os dados da Temporada 01 permanecem preservados. Nenhum dado da pasta Extras, de premiações ou classificações foi incluído nesta importação.</p>
+      <SeasonExtras seasonId={seasonId}/>
+      <p className="published-footnote">Arquivo estatístico histórico · Classificações e chave dos playoffs separadas por temporada. Dados individuais e coletivos preservados sem extrapolações.</p>
     </main>
   );
 }
