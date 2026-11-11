@@ -1,0 +1,161 @@
+@property --team-primary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-secondary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-background {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-background-deep {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-surface {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-surface-hover {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-border {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-text {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffffff;
+}
+@property --team-text-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-glow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-shadow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #090c12;
+}
+@property --team-focus {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffffff;
+}
+/* Only the home owner interpolates colors; descendants and its Radix portal inherit each frame. */
+.site-shell[data-landing-team] {
+  --primary: var(--team-focus);
+  --primary-hover: var(--team-accent);
+  --background: var(--team-background-deep);
+  --foreground: var(--team-text);
+  --muted-foreground: var(--team-text-muted);
+  --surface: var(--team-surface);
+  --surface-elevated: var(--team-surface-hover);
+  --border: var(--team-border);
+  --hairline: color-mix(in srgb, var(--team-border) 35%, transparent);
+  --gold: var(--team-focus);
+  --champagne: var(--team-focus);
+  --signal-red: var(--team-primary);
+  --arena-scene-duration: 1200ms;
+  transition:
+    --team-primary var(--arena-scene-duration) ease,
+    --team-secondary var(--arena-scene-duration) ease,
+    --team-accent var(--arena-scene-duration) ease,
+    --team-background var(--arena-scene-duration) ease,
+    --team-background-deep var(--arena-scene-duration) ease,
+    --team-surface var(--arena-scene-duration) ease,
+    --team-surface-hover var(--arena-scene-duration) ease,
+    --team-border var(--arena-scene-duration) ease,
+    --team-text var(--arena-scene-duration) ease,
+    --team-text-muted var(--arena-scene-duration) ease,
+    --team-glow var(--arena-scene-duration) ease,
+    --team-shadow var(--arena-scene-duration) ease,
+    --team-focus var(--arena-scene-duration) ease;
+}
+.site-shell[data-landing-team] :focus-visible {
+  outline-color: var(--team-focus);
+}
+.site-shell[data-landing-team] ::selection {
+  background: var(--team-primary);
+  color: var(--team-text);
+}
+.site-shell[data-landing-team] .site-header,
+.site-shell[data-landing-team] .desktop-navigation a,
+.site-shell[data-landing-team] .mobile-navigation a,
+.site-shell[data-landing-team] .icon-button {
+  transition: none;
+}
+.site-shell[data-landing-team] .mobile-menu-overlay {
+  background: var(--team-background-deep);
+}
+.site-shell[data-landing-team] .mobile-menu {
+  background: linear-gradient(135deg, var(--team-background), var(--team-background-deep));
+  border-color: var(--team-focus);
+  color: var(--team-text);
+}
+.site-shell[data-landing-team] .mobile-menu-trigger,
+.site-shell[data-landing-team] .icon-button {
+  border-color: var(--team-border);
+  color: var(--team-text);
+  background: var(--team-surface);
+}
+.site-shell[data-landing-team] .mobile-menu-trigger:hover,
+.site-shell[data-landing-team] .icon-button:not(:disabled):hover {
+  background: var(--team-surface-hover);
+  color: var(--team-focus);
+}
+.site-shell[data-landing-team] .mobile-navigation a {
+  color: var(--team-text);
+  border-color: color-mix(in srgb, var(--team-border) 40%, transparent);
+}
+.site-shell[data-landing-team] .mobile-navigation a[aria-current],
+.site-shell[data-landing-team] .mobile-navigation a:hover,
+.site-shell[data-landing-team] .mobile-navigation a:focus-visible {
+  color: var(--team-focus);
+}
+.site-shell[data-landing-team] .skip-link {
+  background: var(--team-text);
+  color: var(--team-background-deep);
+}
+.site-shell[data-landing-team] .arena-home__archive-controls select:hover {
+  background: var(--team-surface-hover);
+  border-color: var(--team-focus);
+}
+.site-shell[data-landing-team] .arena-home__card:focus-visible {
+  /* clip-path clips an external outline, so keep keyboard focus inside each panel. */
+  outline-offset: -4px;
+}
+.site-shell[data-landing-team] .arena-home__card-top svg,
+.site-shell[data-landing-team] .arena-home__editorial-title svg {
+  color: var(--team-focus);
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-shell[data-landing-team] {
+    transition: none;
+    --arena-scene-duration: 0ms;
+  }
+  .site-shell[data-landing-team] .mobile-menu {
+    animation: none;
+  }
+}

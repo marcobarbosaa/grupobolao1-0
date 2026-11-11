@@ -1,4 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { SiteShell } from "../components/home/LandingThemeShell";
 import { SiteHeader } from "../components/site/SiteHeader";
 import { SiteFooter } from "../components/site/SiteFooter";
 
@@ -85,7 +86,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="site-shell">
+    <SiteShell>
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
@@ -94,6 +95,6 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
-    </div>
+    </SiteShell>
   );
 }

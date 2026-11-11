@@ -5,7 +5,7 @@ import { brand } from "../../lib/brand";
 export function Brand({ symbolOnly = false }: { symbolOnly?: boolean }) {
   return (
     <Link to="/" className="site-brand" aria-label={`${brand.name} — início`}>
-      <BrandLogo variant={symbolOnly ? "symbol" : "horizontal"} decorative />
+      <BrandLogo variant={symbolOnly ? "symbol" : "horizontal"} decorative themed={symbolOnly} />
     </Link>
   );
 }

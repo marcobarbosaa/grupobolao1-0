@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { newRoster } from "../../lib/new-roster";
 import "./CinematicHome.css";
+import { useLandingTheme } from "./LandingThemeShell";
 
 type Highlight = {
   label: string;
@@ -153,11 +154,7 @@ const seasons = [
 ] as const;
 
 export function CinematicHome() {
-  const firstPlayer = Math.max(
-    newRoster.findIndex((player) => player.id === "nando"),
-    0,
-  );
-  const [playerIndex, setPlayerIndex] = useState(firstPlayer);
+  const { playerIndex, setPlayerIndex, firstPlayer } = useLandingTheme()!;
   const [seasonId, setSeasonId] = useState<(typeof seasons)[number]["id"]>("season-002");
   const [groupIndex, setGroupIndex] = useState(0);
   const [interacting, setInteracting] = useState(false);
@@ -192,7 +189,7 @@ export function CinematicHome() {
       }
     }, 6000);
     return () => window.clearInterval(timer);
-  }, [reduceMotion]);
+  }, [reduceMotion, setPlayerIndex]);
 
   return (
     <section className="arena-home" aria-label="Central do Bolão, página inicial">
