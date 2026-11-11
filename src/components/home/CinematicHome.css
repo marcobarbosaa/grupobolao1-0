@@ -182,3 +182,14 @@
   .arena-home__figure,.arena-home__cards { animation:none; }
   .arena-home__card { transition:none; }
 }
+
+/* Functional call-to-action in the header; not a decorative dead end. */
+.site-shell:has(.arena-home) .arena-header-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 44px; padding: 10px 17px; flex-shrink: 0;
+  background: #8d0b1c; border: 1px solid #ff7f87; color: #fff; font: italic 800 11px var(--font-display);
+  letter-spacing: .07em; box-shadow: 0 0 19px #e51d2d38;
+  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+}
+.site-shell:has(.arena-home) .arena-header-cta:hover { background: #cb1128; }
+@media(max-width: 1399px) { .site-shell:has(.arena-home) .arena-header-cta { display:none; } }
