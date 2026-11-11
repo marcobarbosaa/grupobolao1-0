@@ -86,10 +86,7 @@ test("2006–07 NBA Finals: New York Knicks 4–0 Minnesota", () => {
 });
 
 const logoData = JSON.parse(
-  readFileSync(
-    new URL("../../src/data/statistics/historical-logos.json", import.meta.url),
-    "utf8",
-  ),
+  readFileSync(new URL("../../src/data/statistics/historical-logos.json", import.meta.url), "utf8"),
 );
 const details2006 = JSON.parse(
   readFileSync(
@@ -137,11 +134,17 @@ test("Detailed home, away, conference and division records match both standings"
       assert.equal(homeWins + awayWins, row.wins);
       assert.equal(homeLosses + awayLosses, row.losses);
       assert.equal(
-        extra.conference.split("-").map(Number).reduce((a, b) => a + b, 0),
+        extra.conference
+          .split("-")
+          .map(Number)
+          .reduce((a, b) => a + b, 0),
         52,
       );
       assert.equal(
-        extra.division.split("-").map(Number).reduce((a, b) => a + b, 0),
+        extra.division
+          .split("-")
+          .map(Number)
+          .reduce((a, b) => a + b, 0),
         16,
       );
     }
