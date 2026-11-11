@@ -1,5 +1,5 @@
 /* Landing 3.0 – scoped to home only. All secondary routes retain their original layout. */
-.site-shell:has(.arena-home) { background: linear-gradient(112deg, #350007 2%, #880914 51%, #280005 100%); }
+.site-shell:has(.arena-home) { --header-height: 64px; background: linear-gradient(112deg, #350007 2%, #880914 51%, #280005 100%); }
 .site-shell:has(.arena-home) .site-footer { display: none; }
 .site-shell:has(.arena-home) .app-main { min-height: 0; }
 .site-shell:has(.arena-home) .site-header {
@@ -7,8 +7,8 @@
   border-bottom: 0;
   box-shadow: none;
 }
-.site-shell:has(.arena-home) .site-header .brand-logo { width: clamp(190px, 22vw, 330px); height: auto; }
-.site-shell:has(.arena-home) .site-header-inner { max-width: none; padding-inline: clamp(18px, 3vw, 58px); }
+.site-shell:has(.arena-home) .site-header .brand-logo { width: 44px; height: 44px; }
+.site-shell:has(.arena-home) .site-header-inner { max-width: 1600px; gap: 24px; padding-inline: clamp(18px, 3vw, 58px); }
 .site-shell:has(.arena-home) .desktop-navigation { gap: clamp(6px, 1.5vw, 28px); }
 .site-shell:has(.arena-home) .desktop-navigation a {
   font-size: 11px; font-weight: 800; letter-spacing: .045em; text-transform: uppercase;
@@ -54,14 +54,16 @@
 .arena-home__diagonal { position: absolute; z-index: 0; pointer-events:none; background: #fc182b; opacity: .65; transform: skew(-41deg); }
 .arena-home__diagonal--left { left: -6vw; width: 12vw; height: 37%; bottom: 0; }
 .arena-home__diagonal--right { right: -8vw; width: 14vw; height: 38%; top: 44%; }
+/* Keep both portraits mounted while opacity blends the outgoing and incoming player. */
+.arena-home__slide { position: absolute; inset: 0; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .8s ease, visibility 0s .8s; }
+.arena-home__slide[data-active="true"] { opacity: 1; visibility: visible; transition-delay: 0s; }
 .arena-home__figure {
-  position: absolute; z-index: 1; left: 24%; width: 56%; top: -2.5%; bottom: -12%;
+  position: absolute; z-index: 1; left: 24%; width: 56%; top: 48px; bottom: -8%;
   overflow: visible; pointer-events: none;
-  animation: arena-enter .65s cubic-bezier(.2,.72,.2,1) both;
 }
 .arena-home__figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 43%, #a20d171e 65%, #54000e2b); pointer-events: none; }
 .arena-home__figure img {
-  display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom;
+  display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top;
   filter: contrast(1.04) saturate(.96) drop-shadow(15px 9px 28px #16000788);
 }
 .arena-home__figure-fallback { display:grid; place-items:center; height:100%; font:900 15vw var(--font-display); color:#ff8190; }
@@ -76,11 +78,6 @@
   text-wrap: balance;
 }
 .arena-home__player-team { font-size: 11px; letter-spacing: .06em; color: #fff2f2; }
-.arena-home__player-nav { display: inline-flex; align-items: center; gap: 8px; margin-top: 11px; }
-.arena-home__player-nav button { display: grid; place-items: center; border: 1px solid #ffffff5b; width: 38px; height: 38px; background: #2e000c90; }
-.arena-home__player-nav button:hover { background: #f32335; }
-.arena-home__player-link { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 900; letter-spacing: .11em; padding: 10px 13px; min-height: 38px; border: 1px solid #ed4456; background: #5b0a17a8; }
-.arena-home__player-link:hover { background: #dd1327; }
 .arena-home__archive-controls {
   position: absolute; z-index: 3; right: 6%; top: 12px; display: flex; align-items: center; gap: 10px;
 }
@@ -93,10 +90,6 @@
 .arena-home__bottom { position: absolute; z-index: 5; left: clamp(14px, 2.5vw, 55px); right: clamp(14px, 2.5vw, 55px); bottom: clamp(16px, 3vh, 36px); }
 .arena-home__editorial-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 11px; }
 .arena-home__editorial-title { display: inline-flex; align-items: center; gap: 9px; font-size: 10px; letter-spacing: .17em; font-weight: 900; }
-.arena-home__editorial-actions { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
-.arena-home__editorial-actions button { min-height: 32px; color: #ffd1d6; border: 1px solid #ee626d70; background: #45031196; font-size: 10px; font-weight: 700; padding: 6px 11px; }
-.arena-home__editorial-actions button[aria-pressed="true"], .arena-home__editorial-actions button:hover { background: #fae9e8; color: #47030b; }
-.arena-home__editorial-actions .arena-home__pause { display:grid;place-items:center;width:34px;padding:4px; }
 .arena-home__cards { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; animation: arena-cards-enter .35s ease both; }
 .arena-home__card {
   position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 7px; min-width: 0;
@@ -115,7 +108,6 @@
 .arena-home__card strong { font: italic 800 clamp(18px, 2vw, 32px)/1.02 var(--font-display); text-transform: uppercase; max-width: 95%; overflow-wrap: anywhere; }
 .arena-home__card p { font-size: clamp(10px, .9vw, 13px); line-height:1.35; color: #fce1e2; max-width: 92%; margin-top:auto; }
 .arena-home__card-arrow { position: absolute; right: 10px; bottom: 9px; color: #fff; }
-@keyframes arena-enter { from { opacity:0;transform:translateX(35px) scale(1.025); } to { opacity:1;transform:translateX(0) scale(1); } }
 @keyframes arena-cards-enter { from { opacity:.35;transform:translateY(9px); } to { opacity:1;transform:translateY(0); } }
 @media (max-width: 1100px) {
   .arena-home__type { left:4%; top:9%; }
@@ -126,27 +118,22 @@
   .arena-home__card strong { font-size:20px; }
 }
 @media (max-width: 700px) {
-  .site-shell:has(.arena-home) .site-header .brand-logo { width: min(56vw,250px); }
-  .arena-home { height:calc(100dvh - var(--header-height)); min-height: 0; }
+  .site-shell:has(.arena-home) { --header-height: 56px; }
+  .arena-home { height:calc(100dvh - var(--header-height)); min-height: 700px; }
   .arena-home__type { top: 15%; left: 2%; right:2%; }
   .arena-home__type span { font-size:clamp(40px,10vw,77px); letter-spacing:-.05em; }
   .arena-home__type strong { font-size:clamp(100px,24vw,190px); }
-  .arena-home__figure { top:8%; bottom:21%; left:2%; width:96%; }
+  .arena-home__figure { top:48px; bottom:220px; left:2%; width:96%; }
   .arena-home__archive-controls { top:8px; right:4%; }
   .arena-home__archive-controls label { display:none; }
-  .arena-home__player-info { right:4%; top:45%; max-width:52%; gap:5px; }
+  .arena-home__player-info { right:4%; top:auto; bottom:260px; max-width:52%; gap:5px; }
   .arena-home__player-info strong { font-size:clamp(26px,7vw,42px); }
   .arena-home__player-team { font-size:10px; }
-  .arena-home__player-nav { gap:3px; margin-top:3px; }
-  .arena-home__player-nav button { width:30px;height:30px; }
-  .arena-home__player-link { min-height:30px;font-size:8px;padding:6px;gap:4px; }
   .arena-home__bottom { left:8px;right:8px;bottom:8px; }
   .arena-home__editorial-head { margin-bottom:5px; }
   .arena-home__editorial-title { font-size:8px; letter-spacing:.06em; }
-  .arena-home__editorial-actions { gap:3px; }
-  .arena-home__editorial-actions button { min-height:26px; padding:3px 6px; font-size:8px; }
   .arena-home__cards { grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px; }
-  .arena-home__card { min-height: min(13vh,104px); padding:8px 9px; gap:2px; }
+  .arena-home__card { min-height: 100px; padding:8px 9px; gap:2px; }
   .arena-home__card-top { min-height:17px;gap:5px; }
   .arena-home__card-top svg { width:15px;height:15px; }
   .arena-home__card-top small { font-size:8px; }
@@ -158,29 +145,13 @@
   .arena-home__type { top:3%; }
   .arena-home__type span { font-size:clamp(50px,6.5vw,112px); }
   .arena-home__type strong { font-size:clamp(125px,19vw,330px); }
-  .arena-home__figure { top:-4%; bottom:-17%; }
+  .arena-home__figure { top:48px; bottom:-8%; }
   .arena-home__player-info { top:42%; }
   .arena-home__card { min-height:105px; padding:10px 13px; }
   .arena-home__card strong { font-size:clamp(17px,1.7vw,25px); }
 }
-@media (max-height: 590px) and (max-width:700px) {
-  .arena-home { height:auto; min-height:calc(100dvh - var(--header-height)); padding-bottom:340px; }
-  .arena-home__figure { top:7%; bottom:30%; }
-  .arena-home__player-info { top:38%; }
-  .arena-home__bottom { bottom:8px; }
-}
 @media (prefers-reduced-motion:reduce) {
   .arena-home__figure,.arena-home__cards { animation:none; }
-  .arena-home__card { transition:none; }
+  .arena-home__card, .arena-home__slide { transition:none !important; }
+  .arena-home__card:hover, .arena-home__card:focus-visible { transform:none; }
 }
-
-/* Functional call-to-action in the header; not a decorative dead end. */
-.site-shell:has(.arena-home) .arena-header-cta {
-  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-  min-height: 44px; padding: 10px 17px; flex-shrink: 0;
-  background: #8d0b1c; border: 1px solid #ff7f87; color: #fff; font: italic 800 11px var(--font-display);
-  letter-spacing: .07em; box-shadow: 0 0 19px #e51d2d38;
-  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
-}
-.site-shell:has(.arena-home) .arena-header-cta:hover { background: #cb1128; }
-@media(max-width: 1399px) { .site-shell:has(.arena-home) .arena-header-cta { display:none; } }

@@ -71,7 +71,7 @@ test("home uses the cinematic viewport rather than stacked portal sections", () 
   assert.match(home, /setSeasonId/);
   assert.match(home, /setGroupIndex/);
   assert.match(home, /onMouseEnter/);
-  assert.match(home, /aria-pressed/);
+  assert.doesNotMatch(home, /arena-home__player-nav|arena-home__editorial-actions|arena-home__pause/);
   assert.match(css, /height:\s*calc\(100dvh - var\(--header-height\)\)/);
   assert.match(css, /\.site-shell:has\(\.arena-home\) \.site-footer \{ display: none; \}/);
 });

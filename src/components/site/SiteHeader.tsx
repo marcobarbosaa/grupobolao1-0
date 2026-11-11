@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { useLocation } from "@tanstack/react-router";
 import { Brand } from "./Brand";
 import { MainNavigation } from "./MainNavigation";
 import { MobileMenu } from "./MobileMenu";
@@ -17,9 +16,8 @@ export function SiteHeader() {
   return (
     <header className="site-header" data-integrated={pathname === "/" && !scrolled}>
       <div className="site-header-inner">
-        <Brand />
+        <Brand symbolOnly={pathname === "/"} />
         <MainNavigation />
-        {pathname === "/" && <Link className="arena-header-cta" to="/temporadas">EXPLORAR A LIGA <ArrowUpRight size={17} aria-hidden="true" /></Link>}
         <MobileMenu />
       </div>
     </header>
