@@ -4,6 +4,7 @@ import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
 import details2007 from "../../data/statistics/season-003/standings-details.json";
+import details2008 from "../../data/statistics/season-004/standings-details.json";
 import "./SeasonExtras.css";
 
 type SeasonId = string;
@@ -57,6 +58,7 @@ for (const [seasonId, data] of Object.entries(publishedCatalog.extras)) {
 const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-002": details2006,
   "season-003": details2007,
+  "season-004": details2008,
 };
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
 const logoOverrides: Record<
@@ -88,6 +90,7 @@ const teamNames: Record<string, string> = Object.fromEntries(
           MIL: "Milwaukee Bucks",
           MIN: "Minnesota Timberwolves",
           NJN: "New Jersey Nets",
+          OKC: "Oklahoma City Thunder",
           NO: "New Orleans Hornets",
           NY: "New York Knicks",
           ORL: "Orlando Magic",
@@ -119,7 +122,7 @@ function historicalLogoSrc(code: string, seasonId: SeasonId): string | undefined
   const logo =
     publishedCatalog.extras[seasonId]?.logos?.[code] ??
     logoOverrides[seasonId]?.[code] ??
-    (Number(seasonId.slice(-3)) <= 3 ? baseLogos[code] : undefined);
+    (Number(seasonId.slice(-3)) <= 4 ? baseLogos[code] : undefined);
   if (!logo) return undefined;
   const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
   return `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${extension}`;

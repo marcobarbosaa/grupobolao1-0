@@ -1114,5 +1114,489 @@
       "status": "consistent",
       "description": "Classificação e confrontos extraídos da pasta Extras 2006–07; os cabeças de chave coincidem com as posições da tabela."
     }
+  },
+  "season-004": {
+    "seasonId": "season-004",
+    "year": "2008–09",
+    "standings": {
+      "west": [
+        {
+          "rank": 1,
+          "conference": "west",
+          "team": "DAL",
+          "wins": 58,
+          "losses": 24,
+          "pct": 0.707,
+          "ppg": 110.7,
+          "papg": 103.4,
+          "diff": 7.3
+        },
+        {
+          "rank": 2,
+          "conference": "west",
+          "team": "LAC",
+          "wins": 49,
+          "losses": 33,
+          "pct": 0.598,
+          "ppg": 110.3,
+          "papg": 106.3,
+          "diff": 4.1
+        },
+        {
+          "rank": 3,
+          "conference": "west",
+          "team": "POR",
+          "wins": 48,
+          "losses": 34,
+          "pct": 0.585,
+          "ppg": 107.9,
+          "papg": 105.9,
+          "diff": 2.1
+        },
+        {
+          "rank": 4,
+          "conference": "west",
+          "team": "SA",
+          "wins": 55,
+          "losses": 27,
+          "pct": 0.671,
+          "ppg": 115.8,
+          "papg": 107.5,
+          "diff": 8.3
+        },
+        {
+          "rank": 5,
+          "conference": "west",
+          "team": "HOU",
+          "wins": 45,
+          "losses": 37,
+          "pct": 0.549,
+          "ppg": 112.3,
+          "papg": 110,
+          "diff": 2.4
+        },
+        {
+          "rank": 6,
+          "conference": "west",
+          "team": "OKC",
+          "wins": 45,
+          "losses": 37,
+          "pct": 0.549,
+          "ppg": 113.5,
+          "papg": 110.6,
+          "diff": 3
+        },
+        {
+          "rank": 7,
+          "conference": "west",
+          "team": "NO",
+          "wins": 41,
+          "losses": 41,
+          "pct": 0.5,
+          "ppg": 109.5,
+          "papg": 108.9,
+          "diff": 0.6
+        },
+        {
+          "rank": 8,
+          "conference": "west",
+          "team": "GS",
+          "wins": 41,
+          "losses": 41,
+          "pct": 0.5,
+          "ppg": 108.4,
+          "papg": 108.1,
+          "diff": 0.2
+        },
+        {
+          "rank": 9,
+          "conference": "west",
+          "team": "MIN",
+          "wins": 39,
+          "losses": 43,
+          "pct": 0.476,
+          "ppg": 107.6,
+          "papg": 107,
+          "diff": 0.6
+        },
+        {
+          "rank": 10,
+          "conference": "west",
+          "team": "MEM",
+          "wins": 36,
+          "losses": 46,
+          "pct": 0.439,
+          "ppg": 103.8,
+          "papg": 105.4,
+          "diff": -1.6
+        },
+        {
+          "rank": 11,
+          "conference": "west",
+          "team": "LAL",
+          "wins": 36,
+          "losses": 46,
+          "pct": 0.439,
+          "ppg": 106.5,
+          "papg": 108.4,
+          "diff": -2
+        },
+        {
+          "rank": 12,
+          "conference": "west",
+          "team": "DEN",
+          "wins": 34,
+          "losses": 48,
+          "pct": 0.415,
+          "ppg": 106.3,
+          "papg": 110.5,
+          "diff": -4.2
+        },
+        {
+          "rank": 13,
+          "conference": "west",
+          "team": "SAC",
+          "wins": 32,
+          "losses": 50,
+          "pct": 0.39,
+          "ppg": 104.9,
+          "papg": 109.3,
+          "diff": -4.4
+        },
+        {
+          "rank": 14,
+          "conference": "west",
+          "team": "UTA",
+          "wins": 29,
+          "losses": 53,
+          "pct": 0.354,
+          "ppg": 102.8,
+          "papg": 109.8,
+          "diff": -6.9
+        },
+        {
+          "rank": 15,
+          "conference": "west",
+          "team": "PHX",
+          "wins": 11,
+          "losses": 71,
+          "pct": 0.134,
+          "ppg": 99.3,
+          "papg": 117.7,
+          "diff": -18.4
+        }
+      ],
+      "east": [
+        {
+          "rank": 1,
+          "conference": "east",
+          "team": "ORL",
+          "wins": 55,
+          "losses": 27,
+          "pct": 0.671,
+          "ppg": 115.7,
+          "papg": 109.8,
+          "diff": 5.9
+        },
+        {
+          "rank": 2,
+          "conference": "east",
+          "team": "ATL",
+          "wins": 55,
+          "losses": 27,
+          "pct": 0.671,
+          "ppg": 117.2,
+          "papg": 108.6,
+          "diff": 8.6
+        },
+        {
+          "rank": 3,
+          "conference": "east",
+          "team": "CHI",
+          "wins": 50,
+          "losses": 32,
+          "pct": 0.61,
+          "ppg": 112.2,
+          "papg": 109.8,
+          "diff": 2.4
+        },
+        {
+          "rank": 4,
+          "conference": "east",
+          "team": "PHI",
+          "wins": 51,
+          "losses": 31,
+          "pct": 0.622,
+          "ppg": 112.3,
+          "papg": 106.4,
+          "diff": 5.9
+        },
+        {
+          "rank": 5,
+          "conference": "east",
+          "team": "TOR",
+          "wins": 51,
+          "losses": 31,
+          "pct": 0.622,
+          "ppg": 112.4,
+          "papg": 108.3,
+          "diff": 4.1
+        },
+        {
+          "rank": 6,
+          "conference": "east",
+          "team": "MIA",
+          "wins": 48,
+          "losses": 34,
+          "pct": 0.585,
+          "ppg": 108.8,
+          "papg": 106,
+          "diff": 2.8
+        },
+        {
+          "rank": 7,
+          "conference": "east",
+          "team": "NY",
+          "wins": 45,
+          "losses": 37,
+          "pct": 0.549,
+          "ppg": 104.1,
+          "papg": 102.8,
+          "diff": 1.3
+        },
+        {
+          "rank": 8,
+          "conference": "east",
+          "team": "CLE",
+          "wins": 43,
+          "losses": 39,
+          "pct": 0.524,
+          "ppg": 110,
+          "papg": 110.6,
+          "diff": -0.6
+        },
+        {
+          "rank": 9,
+          "conference": "east",
+          "team": "CHA",
+          "wins": 39,
+          "losses": 43,
+          "pct": 0.476,
+          "ppg": 107.7,
+          "papg": 111,
+          "diff": -3.3
+        },
+        {
+          "rank": 10,
+          "conference": "east",
+          "team": "MIL",
+          "wins": 36,
+          "losses": 46,
+          "pct": 0.439,
+          "ppg": 110.1,
+          "papg": 110.5,
+          "diff": -0.3
+        },
+        {
+          "rank": 11,
+          "conference": "east",
+          "team": "DET",
+          "wins": 35,
+          "losses": 47,
+          "pct": 0.427,
+          "ppg": 109.3,
+          "papg": 108.8,
+          "diff": 0.5
+        },
+        {
+          "rank": 12,
+          "conference": "east",
+          "team": "BOS",
+          "wins": 35,
+          "losses": 47,
+          "pct": 0.427,
+          "ppg": 106.9,
+          "papg": 110.1,
+          "diff": -3.3
+        },
+        {
+          "rank": 13,
+          "conference": "east",
+          "team": "WAS",
+          "wins": 33,
+          "losses": 49,
+          "pct": 0.402,
+          "ppg": 103.6,
+          "papg": 108.4,
+          "diff": -4.8
+        },
+        {
+          "rank": 14,
+          "conference": "east",
+          "team": "IND",
+          "wins": 30,
+          "losses": 52,
+          "pct": 0.366,
+          "ppg": 108.3,
+          "papg": 111.4,
+          "diff": -3.1
+        },
+        {
+          "rank": 15,
+          "conference": "east",
+          "team": "NJN",
+          "wins": 25,
+          "losses": 57,
+          "pct": 0.305,
+          "ppg": 102.3,
+          "papg": 109.4,
+          "diff": -7.1
+        }
+      ]
+    },
+    "playoffs": {
+      "matches": [
+        {
+          "conference": "west",
+          "round": "first-round",
+          "homeTeam": "DAL",
+          "homeWins": 4,
+          "awayTeam": "GS",
+          "awayWins": 1,
+          "winner": "DAL"
+        },
+        {
+          "conference": "west",
+          "round": "first-round",
+          "homeTeam": "SA",
+          "homeWins": 4,
+          "awayTeam": "HOU",
+          "awayWins": 2,
+          "winner": "SA"
+        },
+        {
+          "conference": "west",
+          "round": "first-round",
+          "homeTeam": "POR",
+          "homeWins": 4,
+          "awayTeam": "OKC",
+          "awayWins": 2,
+          "winner": "POR"
+        },
+        {
+          "conference": "west",
+          "round": "first-round",
+          "homeTeam": "LAC",
+          "homeWins": 4,
+          "awayTeam": "NO",
+          "awayWins": 1,
+          "winner": "LAC"
+        },
+        {
+          "conference": "west",
+          "round": "quarterfinals",
+          "homeTeam": "DAL",
+          "homeWins": 2,
+          "awayTeam": "SA",
+          "awayWins": 4,
+          "winner": "SA"
+        },
+        {
+          "conference": "west",
+          "round": "quarterfinals",
+          "homeTeam": "POR",
+          "homeWins": 2,
+          "awayTeam": "LAC",
+          "awayWins": 4,
+          "winner": "LAC"
+        },
+        {
+          "conference": "west",
+          "round": "conference-finals",
+          "homeTeam": "SA",
+          "homeWins": 2,
+          "awayTeam": "LAC",
+          "awayWins": 4,
+          "winner": "LAC"
+        },
+        {
+          "conference": "east",
+          "round": "first-round",
+          "homeTeam": "ORL",
+          "homeWins": 4,
+          "awayTeam": "CLE",
+          "awayWins": 0,
+          "winner": "ORL"
+        },
+        {
+          "conference": "east",
+          "round": "first-round",
+          "homeTeam": "PHI",
+          "homeWins": 1,
+          "awayTeam": "TOR",
+          "awayWins": 4,
+          "winner": "TOR"
+        },
+        {
+          "conference": "east",
+          "round": "first-round",
+          "homeTeam": "CHI",
+          "homeWins": 4,
+          "awayTeam": "MIA",
+          "awayWins": 2,
+          "winner": "CHI"
+        },
+        {
+          "conference": "east",
+          "round": "first-round",
+          "homeTeam": "ATL",
+          "homeWins": 4,
+          "awayTeam": "NY",
+          "awayWins": 0,
+          "winner": "ATL"
+        },
+        {
+          "conference": "east",
+          "round": "quarterfinals",
+          "homeTeam": "ORL",
+          "homeWins": 3,
+          "awayTeam": "TOR",
+          "awayWins": 4,
+          "winner": "TOR"
+        },
+        {
+          "conference": "east",
+          "round": "quarterfinals",
+          "homeTeam": "CHI",
+          "homeWins": 4,
+          "awayTeam": "ATL",
+          "awayWins": 0,
+          "winner": "CHI"
+        },
+        {
+          "conference": "east",
+          "round": "conference-finals",
+          "homeTeam": "CHI",
+          "homeWins": 4,
+          "awayTeam": "TOR",
+          "awayWins": 2,
+          "winner": "CHI"
+        },
+        {
+          "conference": "finals",
+          "round": "nba-finals",
+          "homeTeam": "LAC",
+          "homeWins": 3,
+          "awayTeam": "CHI",
+          "awayWins": 4,
+          "winner": "CHI"
+        }
+      ],
+      "champion": "CHI"
+    },
+    "integrity": {
+      "status": "consistent",
+      "description": "Classificações das 30 franquias e chaveamento transcritos das cinco capturas Extras 2008–09; ordenação pelos critérios do NBA 2K."
+    }
   }
 }

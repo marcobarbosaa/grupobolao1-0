@@ -146,6 +146,28 @@
         "year": 2007,
         "slug": "washington-wizards"
       }
+    },
+    "season-004": {
+      "ATL": {
+        "year": 2007,
+        "slug": "atlanta-hawks"
+      },
+      "CHA": {
+        "year": 2007,
+        "slug": "charlotte-bobcats"
+      },
+      "NO": {
+        "year": 2007,
+        "slug": "new-orleans-hornets"
+      },
+      "WAS": {
+        "year": 2007,
+        "slug": "washington-wizards"
+      },
+      "OKC": {
+        "year": 2008,
+        "slug": "oklahoma-city-thunder"
+      }
     }
   }
 }

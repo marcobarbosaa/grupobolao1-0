@@ -70,5 +70,42 @@
       "driveFileId": "1qGmZpRJQJmuFgxASZ_KGpLmnpKEeXFRj",
       "kind": "drive-image"
     }
+  ],
+  "season-004": [
+    {
+      "id": "drive-2008-west-lower",
+      "filename": "f969b771-b69a-4d97-9c94-762ca854f8a1.jpg",
+      "driveFileId": "18aRuyHf0KSV_A3KrnrNGvfyRc96G_chb",
+      "sha256": "9e35cd321d76ad54269cfe35bfa1472d7212a89bc38057706a4cc49f1d220d29",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2008-west-upper",
+      "filename": "28571c91-dcc7-4cef-b40b-26190c6dc07d.jpg",
+      "driveFileId": "1bEmYBTfPyT95DOI8aTK4fw8w3y_JIQ9P",
+      "sha256": "feffe9c25d106c1173e8a76c952f38b7c6be4f97b4e47a5264cfa397b2dbe21e",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2008-east-lower",
+      "filename": "ac91adaa-c360-4d06-840c-194574d09880.jpg",
+      "driveFileId": "1_584sRw820jWOi5nkoaqPos8omRWlsKI",
+      "sha256": "93c81629f16511677fa0f586ee9b63ae85b77f6cd85af2a5ae775446cda9ea25",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2008-east-upper",
+      "filename": "0d4f104b-c300-4d96-8710-7796d80e203f.jpg",
+      "driveFileId": "1TVJnPRiMAERqKf3o4nNvPxU9537qXRUf",
+      "sha256": "b414e9043417516a6c6fe467dda9a6ac2490e15b82fabb38530657fbc813da70",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2008-playoff-tree",
+      "filename": "b6e88adf-670f-4726-bf9b-398ea245a9d4.jpg",
+      "driveFileId": "15EFqEhpBPH5DGG0wjy_vXa-gfIlz77fS",
+      "sha256": "faafd31714b874d331f4b98b20b7a7011f4351bd440b5a6373547086ad9a9590",
+      "kind": "drive-image"
+    }
   ]
 }
