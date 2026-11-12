@@ -1,37 +1,39 @@
-# Temporada 04 — 2008–2009: levantamento de fontes
+# Temporada 04 — 2008–2009: inventário e publicação
 
-Origem: pasta **Bolão / Temporada 2008-2009** do Google Drive, verificada em 12/11/2026.
+Fonte atual: **Bolão / Temporada 2008-2009 (F)** no Google Drive, verificada em 12/11/2026.
+Pasta de origem: `1dZbByM4XpzRaPyE3S9HdRwbaLdMS5oM8`.
 
-**Situação: levantamento concluído; transcrição estatística e publicação pendentes.** Este documento **não** declara os números como aprovados ou publicados. Nenhuma estatística de jogador foi inferida a partir da quantidade de imagens.
+## Inventário da pasta (F)
 
-| Pasta | Imagens JPEG |
+| Subpasta | Arquivos JPEG |
 | --- | ---: |
-| Abel | 0 |
-| Binho | 0 |
-| Cerrote | 0 |
-| Dias | 11 |
-| Enzo | 7 |
-| Gam | 11 |
-| Guilherme | 7 |
-| Jonas | 9 |
-| Marco | 0 |
+| Abel | 3 |
+| Binho | 3 |
+| Cerrote | 3 |
+| Dias | 3 |
+| Enzo | 9 |
+| Gam | 7 |
+| Guilherme | 11 |
+| Jonas | 3 |
+| Marco | 3 |
 | Medeiros | 3 |
 | Nando | 3 |
-| Russo | 3 |
-| Tailan | 9 |
+| Russo | 7 |
+| Tailan | 3 |
 | Extras | 5 |
-| **Total** | **68** |
+| **Total** | **66** |
 
-A soma verificada das pastas é **68 imagens**: 63 de jogadores e 5 de Extras.
+## Publicação na main
 
-## Regras para a importação
+- `season-004`, edição **04**, temporada **2008–2009**.
+- **13 registros de temporada regular** (todos os jogadores), baseados em 39 imagens de estatísticas de carreira.
+- **8 registros agregados de playoffs** em que o total estava disponível nas imagens de carreira. A ausência de registro agregado dos outros atletas **não** significa ausência de participação.
+- **30 classificações de franquias**, divididas em 15 de Oeste e 15 de Leste, extraídas de quatro imagens da subpasta Extras.
+- **15 séries dos playoffs**, extraídas da quinta imagem Extras, incluindo **Chicago Bulls 4–3 Los Angeles Clippers** na final.
+- Capturas originais permanecem no Drive; no GitHub são registrados dados estruturados e identificadores/referências dos arquivos.
+- Metadados de fontes e versões mantidos em `src/data/statistics/season-004/` e na trilha `season-extras-sources.json`.
+- Escudos históricos e classificações integrados ao componente `SeasonExtras.tsx`.
 
-- Identificar a temporada como `season-004`, edição 04, 2008–2009.
-- Conferir individualmente as capturas, separando `regular`, `playoffs`, `first-round`, `quarterfinals`, `conference-finals` e `nba-finals` conforme os cabeçalhos das telas.
-- Telas com colunas parciais não constituem estatística completa; combinar somente capturas compatíveis do mesmo jogador e da mesma fase.
-- Não presumir eliminação em determinada fase, ausência de participação, zero estatístico ou classificação pela falta de capturas.
-- A pasta `Extras` contém cinco imagens, a revisar separadamente para classificação e chaveamento. Não inventar placares ou resultados.
-- Preservar as imagens privadas no Drive, sem colocá-las no repositório público.
-- Publicar dados de jogadores somente mediante revisão dos valores e validação do contrato em `docs/local-season-importer.md`; a publicação deverá atualizar as gerações e o `manifest.json` conforme o fluxo atual.
+**Escopo não concluído:** 22 capturas adicionais de Enzo (6), Gam (4), Guilherme (8) e Russo (4), a avaliar para possíveis estatísticas detalhadas por rodada de playoffs. Não atribuir a elas uma fase ou um número sem conferência explícita. Os oito registros publicados de playoffs são **agregados**, não por rodada.
 
-Este arquivo registra apenas o inventário de fontes, sem modificar dados históricos das temporadas 01–03.
+Este inventário substitui o levantamento anterior associado à pasta de nome semelhante sem o sufixo `(F)`. Nenhum dado da temporada 01–03 foi substituído.
