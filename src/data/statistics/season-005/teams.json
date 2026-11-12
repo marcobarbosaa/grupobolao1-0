@@ -1,0 +1,16 @@
+[
+  {
+    "id": "phoenix-suns",
+    "name": "Phoenix Suns",
+    "abbreviation": "PHX",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "dallas-mavericks",
+    "name": "Dallas Mavericks",
+    "abbreviation": "DAL",
+    "sport": "basquete",
+    "status": "active"
+  }
+]
