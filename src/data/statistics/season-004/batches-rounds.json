@@ -1,0 +1,33 @@
+[
+  {
+    "id": "batch-s04-drive-playoffs-rounds",
+    "status": "published",
+    "sourceIds": [
+      "src-s04-enzo-c6f1a8fd",
+      "src-s04-enzo-409f6d40",
+      "src-s04-enzo-2de1e4be",
+      "src-s04-enzo-bccfceb8",
+      "src-s04-enzo-509d9b27",
+      "src-s04-enzo-3f9443dd",
+      "src-s04-gam-mori-1c4e4cdc",
+      "src-s04-gam-mori-be0578ec",
+      "src-s04-gam-mori-8e31eda8",
+      "src-s04-gam-mori-467472ad",
+      "src-s04-guilherme-e4d5bbc1",
+      "src-s04-guilherme-4819e071",
+      "src-s04-guilherme-04139d4a",
+      "src-s04-guilherme-efa11ebb",
+      "src-s04-guilherme-e496aded",
+      "src-s04-guilherme-cc8a8e00",
+      "src-s04-guilherme-a33cc029",
+      "src-s04-guilherme-15de87f9",
+      "src-s04-russo-c17b95e2",
+      "src-s04-russo-918a13c6",
+      "src-s04-russo-ff547731",
+      "src-s04-russo-b2a6a79d"
+    ],
+    "createdAt": "2026-11-12T19:00:00.000Z",
+    "approvedAt": "2026-11-12T19:00:00.000Z",
+    "approvedBy": "Solicitação do usuário para publicar playoffs por fase da temporada 2008-2009 (12/11/2026)"
+  }
+]

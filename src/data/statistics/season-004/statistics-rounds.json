@@ -1,0 +1,519 @@
+[
+  {
+    "id": "stat-s04-conference-finals-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-004",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-enzo-c6f1a8fd",
+      "src-s04-enzo-409f6d40"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 31.3,
+        "ppg": 22.7,
+        "rpg": 4.2,
+        "apg": 2.8,
+        "spg": 0.3,
+        "bpg": 1,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 57.3,
+        "threePct": 53.8,
+        "ftPct": 73.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-quarterfinals-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-004",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-enzo-2de1e4be",
+      "src-s04-enzo-bccfceb8"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 31,
+        "ppg": 23.5,
+        "rpg": 5.3,
+        "apg": 1.5,
+        "spg": 0.8,
+        "bpg": 0.5,
+        "topg": 1
+      },
+      "percentages": {
+        "fgPct": 49.5,
+        "threePct": 38.5,
+        "ftPct": 78.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-first-round-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-004",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-enzo-509d9b27",
+      "src-s04-enzo-3f9443dd"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 31.5,
+        "ppg": 20.8,
+        "rpg": 4.5,
+        "apg": 3.7,
+        "spg": 0.8,
+        "bpg": 0.5,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 55.8,
+        "threePct": 54.5,
+        "ftPct": 73
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-quarterfinals-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-004",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "atlanta-hawks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-gam-mori-1c4e4cdc",
+      "src-s04-gam-mori-be0578ec"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 32.7,
+        "ppg": 25.8,
+        "rpg": 5,
+        "apg": 3.3,
+        "spg": 1,
+        "bpg": 0.5,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 47.1,
+        "threePct": 20,
+        "ftPct": 92.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-first-round-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-004",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "atlanta-hawks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-gam-mori-8e31eda8",
+      "src-s04-gam-mori-467472ad"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 32.5,
+        "ppg": 20.8,
+        "rpg": 7,
+        "apg": 3,
+        "spg": 0.5,
+        "bpg": 0.5,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 63.3,
+        "threePct": 0,
+        "ftPct": 77.8
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-nba-finals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-004",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-guilherme-e4d5bbc1",
+      "src-s04-guilherme-4819e071"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 38.9,
+        "ppg": 29.6,
+        "rpg": 8.6,
+        "apg": 5.4,
+        "spg": 2.3,
+        "bpg": 0.9,
+        "topg": 1.9
+      },
+      "percentages": {
+        "fgPct": 57.3,
+        "threePct": 45,
+        "ftPct": 71.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-conference-finals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-004",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-guilherme-04139d4a",
+      "src-s04-guilherme-efa11ebb"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 38.8,
+        "ppg": 29.3,
+        "rpg": 10.8,
+        "apg": 4.8,
+        "spg": 1.5,
+        "bpg": 1.2,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 51.3,
+        "threePct": 30.4,
+        "ftPct": 85.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-quarterfinals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-004",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-guilherme-e496aded",
+      "src-s04-guilherme-cc8a8e00"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 38.3,
+        "ppg": 30,
+        "rpg": 10.2,
+        "apg": 6,
+        "spg": 0.5,
+        "bpg": 0.5,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 64.8,
+        "threePct": 42.9,
+        "ftPct": 70.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-first-round-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-004",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "chicago-bulls",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-guilherme-a33cc029",
+      "src-s04-guilherme-15de87f9"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 37.2,
+        "ppg": 24.8,
+        "rpg": 7.5,
+        "apg": 4.5,
+        "spg": 1.2,
+        "bpg": 0.7,
+        "topg": 2.7
+      },
+      "percentages": {
+        "fgPct": 51.4,
+        "threePct": 52.9,
+        "ftPct": 75
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-quarterfinals-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-004",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "toronto-raptors",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-russo-c17b95e2",
+      "src-s04-russo-918a13c6"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 30.7,
+        "ppg": 21.8,
+        "rpg": 4.8,
+        "apg": 6.5,
+        "spg": 1.3,
+        "bpg": 0,
+        "topg": 1.8
+      },
+      "percentages": {
+        "fgPct": 51.7,
+        "threePct": 35.3,
+        "ftPct": 90
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s04-first-round-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-004",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "toronto-raptors",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s04-russo-ff547731",
+      "src-s04-russo-b2a6a79d"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 26.4,
+        "rpg": 5,
+        "apg": 6,
+        "spg": 1.6,
+        "bpg": 0.4,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 57.3,
+        "threePct": 42.3,
+        "ftPct": 79.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  }
+]
