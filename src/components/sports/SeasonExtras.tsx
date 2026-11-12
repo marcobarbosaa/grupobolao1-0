@@ -108,6 +108,8 @@ const teamNames: Record<string, string> = Object.fromEntries(
     ]),
 );
 
+teamNames.OKC = "Oklahoma City Thunder";
+
 const conferences: { id: Conference; label: string }[] = [
   { id: "west", label: "Oeste" },
   { id: "east", label: "Leste" },
