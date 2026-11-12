@@ -33,3 +33,16 @@ Há **36 capturas adicionais** nas pastas Jonas (6), Tailan (6), Gam (8), Enzo (
 Arquivos principais: `src/data/statistics/season-005/`, `src/data/statistics/manifest.json`, `src/data/statistics/season-extras.json`, `src/data/statistics/season-extras-sources.json` e `src/components/sports/SeasonExtras.tsx`.
 
 **Importante:** temporadas anteriores foram mantidas; não copiar nem tornar públicas as imagens de origem.
+
+
+## Complementação — playoffs por rodada (12/11/2026)
+
+As capturas antes apontadas como pendentes **foram conferidas e publicadas** em `src/data/statistics/season-005/statistics-rounds.json`.
+
+- **18 registros individuais por fase**: Jonas (3), Tailan (3), Gam Mori (4), Enzo (2), Dias (4), Guilherme (2).
+- **36 imagens JPEG** registradas em `sources-rounds.json` com identificadores do Drive e hashes SHA-256 verificáveis.
+- `batches-rounds.json` e `revisions-rounds.json` guardam a trilha de publicação; `manifest.json` referencia esses arquivos.
+- Fases: `first-round`, `quarterfinals`, `conference-finals` e `nba-finals` quando documentadas nas capturas.
+- Cada registro de rodada contém GP, GS, médias e aproveitamentos observados nos prints. Totais de arremessos e demais contagens **não foram fabricados** a partir de médias arredondadas.
+- Soma dos jogos e soma ponderada dos pontos por rodada confrontadas com o registro agregado de playoffs já publicado, dentro da precisão dos valores exibidos.
+- Rodadas sem print não foram preenchidas automaticamente. As imagens continuam privadas no Drive.
