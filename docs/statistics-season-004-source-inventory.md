@@ -20,9 +20,9 @@ Origem: pasta **Bolão / Temporada 2008-2009** do Google Drive, verificada em 12
 | Russo | 3 |
 | Tailan | 9 |
 | Extras | 5 |
-| **Total** | **81** |
+| **Total** | **68** |
 
-> **Nota de conferência:** total acima deve ser **81** (soma de 11+7+11+7+9+3+3+3+9+5). Não confundir com uma contagem preliminar anterior.
+A soma verificada das pastas é **68 imagens**: 63 de jogadores e 5 de Extras.
 
 ## Regras para a importação
 
