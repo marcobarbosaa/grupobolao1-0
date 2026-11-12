@@ -1,3 +1,4 @@
+import { publishedCatalog } from "../../lib/published-catalog";
 import { useState } from "react";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
@@ -5,7 +6,7 @@ import details2006 from "../../data/statistics/season-002/standings-details.json
 import details2007 from "../../data/statistics/season-003/standings-details.json";
 import "./SeasonExtras.css";
 
-type SeasonId = "season-001" | "season-002" | "season-003";
+type SeasonId = string;
 type Conference = "west" | "east";
 type View = "standings" | "playoffs";
 type RoundId = "first-round" | "quarterfinals" | "conference-finals" | "nba-finals";
@@ -13,12 +14,12 @@ type RoundId = "first-round" | "quarterfinals" | "conference-finals" | "nba-fina
 type Standing = {
   rank: number;
   team: string;
-  wins: number;
-  losses: number;
-  pct: number;
-  ppg: number;
-  papg: number;
-  diff: number;
+  wins?: number;
+  losses?: number;
+  pct?: number;
+  ppg?: number;
+  papg?: number;
+  diff?: number;
 };
 type StandingDetails = {
   gb: string;
@@ -40,35 +41,68 @@ type Match = {
 type SeasonRecord = {
   seasonId: string;
   year: string;
-  standings?: Record<Conference, Standing[]>;
-  playoffs: { matches: Match[]; champion: string };
+  standings?: Partial<Record<Conference, Standing[]>>;
+  playoffs?: { matches: Match[]; champion?: string };
 };
 type LogoDefinition = { year: number; slug: string };
 
-const seasons: Record<SeasonId, SeasonRecord> = archive;
-const fullStandings: Record<"season-002" | "season-003", Record<string, StandingDetails>> = {
+const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
+for (const [seasonId, data] of Object.entries(publishedCatalog.extras)) {
+  seasons[seasonId] = {
+    ...data,
+    seasonId,
+    year: publishedCatalog.seasons.find((s) => s.id === seasonId)?.year ?? seasonId,
+  };
+}
+const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-002": details2006,
   "season-003": details2007,
 };
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
-const logoOverrides: Record<SeasonId, Record<string, LogoDefinition>> =
-  historicalLogoData.seasonOverrides;
+const logoOverrides: Record<
+  SeasonId,
+  Record<string, LogoDefinition>
+> = historicalLogoData.seasonOverrides;
 const teamNames: Record<string, string> = Object.fromEntries(
-  Object.values(seasons["season-002"].standings ?? {}).flat().map((team) => [
-    team.team,
-    ({
-      ATL: "Atlanta Hawks", BOS: "Boston Celtics", CHA: "Charlotte Bobcats",
-      CHI: "Chicago Bulls", CLE: "Cleveland Cavaliers", DAL: "Dallas Mavericks",
-      DEN: "Denver Nuggets", DET: "Detroit Pistons", GS: "Golden State Warriors",
-      HOU: "Houston Rockets", IND: "Indiana Pacers", LAC: "Los Angeles Clippers",
-      LAL: "Los Angeles Lakers", MEM: "Memphis Grizzlies", MIA: "Miami Heat",
-      MIL: "Milwaukee Bucks", MIN: "Minnesota Timberwolves", NJN: "New Jersey Nets",
-      NO: "New Orleans Hornets", NY: "New York Knicks", ORL: "Orlando Magic",
-      PHI: "Philadelphia 76ers", PHX: "Phoenix Suns", POR: "Portland Trail Blazers",
-      SA: "San Antonio Spurs", SAC: "Sacramento Kings", SEA: "Seattle SuperSonics",
-      TOR: "Toronto Raptors", UTA: "Utah Jazz", WAS: "Washington Wizards",
-    } as Record<string, string>)[team.team] ?? team.team,
-  ]),
+  Object.values(seasons["season-002"].standings ?? {})
+    .flat()
+    .map((team) => [
+      team.team,
+      (
+        {
+          ATL: "Atlanta Hawks",
+          BOS: "Boston Celtics",
+          CHA: "Charlotte Bobcats",
+          CHI: "Chicago Bulls",
+          CLE: "Cleveland Cavaliers",
+          DAL: "Dallas Mavericks",
+          DEN: "Denver Nuggets",
+          DET: "Detroit Pistons",
+          GS: "Golden State Warriors",
+          HOU: "Houston Rockets",
+          IND: "Indiana Pacers",
+          LAC: "Los Angeles Clippers",
+          LAL: "Los Angeles Lakers",
+          MEM: "Memphis Grizzlies",
+          MIA: "Miami Heat",
+          MIL: "Milwaukee Bucks",
+          MIN: "Minnesota Timberwolves",
+          NJN: "New Jersey Nets",
+          NO: "New Orleans Hornets",
+          NY: "New York Knicks",
+          ORL: "Orlando Magic",
+          PHI: "Philadelphia 76ers",
+          PHX: "Phoenix Suns",
+          POR: "Portland Trail Blazers",
+          SA: "San Antonio Spurs",
+          SAC: "Sacramento Kings",
+          SEA: "Seattle SuperSonics",
+          TOR: "Toronto Raptors",
+          UTA: "Utah Jazz",
+          WAS: "Washington Wizards",
+        } as Record<string, string>
+      )[team.team] ?? team.team,
+    ]),
 );
 
 const conferences: { id: Conference; label: string }[] = [
@@ -82,7 +116,10 @@ const rounds: { id: RoundId; label: string }[] = [
 ];
 
 function historicalLogoSrc(code: string, seasonId: SeasonId): string | undefined {
-  const logo = logoOverrides[seasonId][code] ?? baseLogos[code];
+  const logo =
+    publishedCatalog.extras[seasonId]?.logos?.[code] ??
+    logoOverrides[seasonId]?.[code] ??
+    (Number(seasonId.slice(-3)) <= 3 ? baseLogos[code] : undefined);
   if (!logo) return undefined;
   const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
   return `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${extension}`;
@@ -127,9 +164,7 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
           className={`seasonextras-side${team.code === match.winner ? " is-winner" : ""}`}
         >
           <Logo code={team.code} seasonId={seasonId} />
-          <span className="seasonextras-side-name">
-            {teamNames[team.code] ?? team.code}
-          </span>
+          <span className="seasonextras-side-name">{teamNames[team.code] ?? team.code}</span>
           <strong>{team.wins}</strong>
         </div>
       ))}
@@ -137,16 +172,10 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
   );
 }
 
-function Standings({
-  seasonId,
-  season,
-}: {
-  seasonId: "season-002" | "season-003";
-  season: SeasonRecord;
-}) {
+function Standings({ seasonId, season }: { seasonId: SeasonId; season: SeasonRecord }) {
   const [conference, setConference] = useState<Conference>("west");
   const rows = season.standings?.[conference] ?? [];
-  const details = fullStandings[seasonId];
+  const details = fullStandings[seasonId] ?? {};
 
   return (
     <section className="seasonextras-panel" aria-label={`Classificação ${season.year}`}>
@@ -196,12 +225,9 @@ function Standings({
           </thead>
           <tbody>
             {rows.map((row) => {
-              const extra = details[row.team];
+              const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
               return (
-                <tr
-                  key={row.team}
-                  className={row.rank <= 8 ? "seasonextras-qualified" : ""}
-                >
+                <tr key={row.team} className={row.rank <= 8 ? "seasonextras-qualified" : ""}>
                   <td>{row.rank}</td>
                   <th scope="row">
                     <div className="seasonextras-team">
@@ -219,15 +245,15 @@ function Standings({
                   </th>
                   <td>{row.wins}</td>
                   <td>{row.losses}</td>
-                  <td>{row.pct.toFixed(3).replace(/^0/, "")}</td>
+                  <td>{row.pct?.toFixed(3).replace(/^0/, "") ?? "—"}</td>
                   <td>{extra?.gb ?? "—"}</td>
                   <td>{extra?.home ?? "—"}</td>
                   <td>{extra?.away ?? "—"}</td>
                   <td>{extra?.conference ?? "—"}</td>
                   <td>{extra?.division ?? "—"}</td>
-                  <td>{row.ppg.toFixed(1)}</td>
-                  <td>{row.papg.toFixed(1)}</td>
-                  <td>{row.diff.toFixed(1)}</td>
+                  <td>{row.ppg?.toFixed(1) ?? "—"}</td>
+                  <td>{row.papg?.toFixed(1) ?? "—"}</td>
+                  <td>{row.diff?.toFixed(1) ?? "—"}</td>
                   <td>{extra?.streak ?? "—"}</td>
                 </tr>
               );
@@ -236,17 +262,17 @@ function Standings({
         </table>
       </div>
       <p className="seasonextras-note">
-        P = classificado aos playoffs. Ordem da classificação preservada conforme
-        o NBA 2K, incluindo critérios de divisão. Os dados são do universo do
-        Grupo Bolão, não dos resultados históricos da NBA real.
+        P = classificado aos playoffs. Ordem da classificação preservada conforme o NBA 2K,
+        incluindo critérios de divisão. Os dados são do universo do Grupo Bolão, não dos resultados
+        históricos da NBA real.
       </p>
     </section>
   );
 }
 
 function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonRecord }) {
-  const final = season.playoffs.matches.find((match) => match.round === "nba-finals");
-  const winner = season.playoffs.champion;
+  const final = (season.playoffs?.matches ?? []).find((match) => match.round === "nba-finals");
+  const winner = season.playoffs?.champion;
   const runnerUp = final
     ? final.winner === final.homeTeam
       ? final.awayTeam
@@ -273,20 +299,21 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
         </div>
       </div>
 
-      <div className="seasonextras-champion">
-        <span className="seasonextras-kicker">CAMPEÃO NBA {season.year}</span>
-        <div>
-          <Logo code={winner} seasonId={seasonId} />
-          <strong>{teamNames[winner] ?? winner}</strong>
+      {winner && (
+        <div className="seasonextras-champion">
+          <span className="seasonextras-kicker">CAMPEÃO NBA {season.year}</span>
+          <div>
+            <Logo code={winner} seasonId={seasonId} />
+            <strong>{teamNames[winner] ?? winner}</strong>
+          </div>
+          {final && runnerUp && (
+            <span>
+              Final: {teamNames[winner] ?? winner} {championScore}–{runnerScore}{" "}
+              {teamNames[runnerUp] ?? runnerUp}
+            </span>
+          )}
         </div>
-        {final && runnerUp && (
-          <span>
-            Final: {teamNames[winner] ?? winner} {championScore}–{runnerScore}{" "}
-            {teamNames[runnerUp] ?? runnerUp}
-          </span>
-        )}
-      </div>
-
+      )}
       <div
         className="seasonextras-bracket"
         role="region"
@@ -313,7 +340,7 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
                   <div className="seasonextras-round" key={round.id}>
                     <h4>{round.label}</h4>
                     <div className="seasonextras-matches">
-                      {season.playoffs.matches
+                      {(season.playoffs?.matches ?? [])
                         .filter((match) => match.conference === side && match.round === round.id)
                         .map((match) => (
                           <Series
@@ -331,9 +358,9 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
         })}
       </div>
       <p className="seasonextras-note">
-        Os números ao lado das equipes indicam vitórias na série. Os escudos
-        correspondem à identidade histórica das franquias no período selecionado.
-        Em telas menores, deslize horizontalmente pelo chaveamento.
+        Os números ao lado das equipes indicam vitórias na série. Os escudos correspondem à
+        identidade histórica das franquias no período selecionado. Em telas menores, deslize
+        horizontalmente pelo chaveamento.
       </p>
     </section>
   );
@@ -342,6 +369,12 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
 export function SeasonExtras({ seasonId }: { seasonId: SeasonId }) {
   const [view, setView] = useState<View>("standings");
   const season = seasons[seasonId];
+  if (!season)
+    return (
+      <div className="seasonextras">
+        <p>Dados coletivos ainda não importados para esta temporada.</p>
+      </div>
+    );
   const hasStandings = season.standings !== undefined;
   const activeView: View = hasStandings ? view : "playoffs";
 
@@ -365,7 +398,7 @@ export function SeasonExtras({ seasonId }: { seasonId: SeasonId }) {
           Chaveamento {season.year}
         </button>
       </nav>
-      {activeView === "standings" && seasonId !== "season-001" ? (
+      {activeView === "standings" ? (
         <Standings key={seasonId} seasonId={seasonId} season={season} />
       ) : (
         <Playoffs seasonId={seasonId} season={season} />

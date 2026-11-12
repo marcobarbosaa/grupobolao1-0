@@ -127,6 +127,18 @@ export function validateDataset(input: unknown): ValidationResult {
     if (award.teamId) ref(teams, award.teamId, "awards." + i + ".teamId");
   });
 
+  const extrasIdentities = new Map<string, string>();
+  const extrasSeasons = new Map<string, string>();
+  data.extras.forEach((extra, i) => {
+    ref(seasons, extra.seasonId, "extras." + i + ".seasonId");
+    if (
+      (extrasIdentities.has(extra.id) && extrasIdentities.get(extra.id) !== extra.seasonId) ||
+      (extrasSeasons.has(extra.seasonId) && extrasSeasons.get(extra.seasonId) !== extra.id)
+    )
+      fail("extras." + i, "Extras identity must remain unique per season across revisions");
+    extrasIdentities.set(extra.id, extra.seasonId);
+    extrasSeasons.set(extra.seasonId, extra.id);
+  });
   const versions = new Map<string, { sourceIds: string[]; revision: number; path: string }>();
   const versionKey = (kind: string, id: string, revision: number) =>
     JSON.stringify([kind, id, revision]);
@@ -142,6 +154,7 @@ export function validateDataset(input: unknown): ValidationResult {
   };
   data.statistics.forEach((record, i) => addVersion(record.kind, record, "statistics." + i));
   data.awards.forEach((award, i) => addVersion("award", award, "awards." + i));
+  data.extras.forEach((extra, i) => addVersion("extras", extra, "extras." + i));
   const revisions = new Map<string, StatisticsDataset["revisions"][number]>();
   data.revisions.forEach((revision, i) => {
     const path = "revisions." + i;
@@ -241,6 +254,7 @@ export function validateAppendOnly(
     (row) => row.kind + ":" + row.id + ":" + row.revision,
     "statistics",
   );
+  retain(previous.extras ?? [], next.extras ?? [], (row) => row.id + ":" + row.revision, "extras");
   retain(previous.awards, next.awards, (row) => row.id + ":" + row.revision, "awards");
   retain(previous.revisions, next.revisions, (row) => row.id, "revisions");
   retain(previous.sources, next.sources, (row) => row.id, "sources");

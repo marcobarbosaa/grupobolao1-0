@@ -17,7 +17,8 @@
     "stats:import:review": "node scripts/statistics/imports/cli.ts review",
     "stats:import:approve": "node scripts/statistics/imports/cli.ts approve",
     "stats:import:publish": "node scripts/statistics/imports/cli.ts publish",
-    "stats:import:recover": "node scripts/statistics/imports/cli.ts recover"
+    "stats:import:recover": "node scripts/statistics/imports/cli.ts recover",
+    "stats:import:local": "node scripts/statistics/local/server.ts"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",

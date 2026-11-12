@@ -1,3 +1,4 @@
+import { seasonExtrasSchema } from "./extras.ts";
 import { z } from "zod";
 import { newRoster } from "../new-roster.ts";
 import { identifierSchema as id, playerIdSchema, seasonIdSchema } from "./identifiers.ts";
@@ -295,7 +296,7 @@ export const dataRevisionSchema = z
   .object({
     id,
     recordId: id,
-    recordKind: z.enum(["game", "phase", "award"]),
+    recordKind: z.enum(["game", "phase", "award", "extras"]),
     revision: revisionNumber,
     batchId: id,
     sourceIds: publishedSources,
@@ -338,6 +339,7 @@ export const manifestSchema = z
     sources: files.optional(),
     batches: files.optional(),
     revisions: files.optional(),
+    extras: files.optional(),
   })
   .strict()
   .superRefine((manifest, ctx) => {
@@ -357,6 +359,7 @@ export const manifestSchema = z
   });
 export const datasetSchema = z
   .object({
+    extras: z.array(seasonExtrasSchema).default([]),
     teams: z.array(teamSchema),
     seasons: z.array(seasonSchema),
     games: z.array(gameSchema),

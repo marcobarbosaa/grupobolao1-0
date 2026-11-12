@@ -1,3 +1,4 @@
+import { seasonExtrasSchema } from "../../src/lib/statistics/extras.ts";
 import { readFile, realpath, stat } from "node:fs/promises";
 import { isAbsolute, relative, resolve, sep } from "node:path";
 import { z } from "zod";
@@ -22,6 +23,7 @@ import {
 import type { StatisticsDataset } from "../../src/lib/statistics/types.ts";
 
 const fileSchemas = {
+  extras: z.array(seasonExtrasSchema),
   teams: z.array(teamSchema),
   seasons: z.array(seasonSchema),
   games: z.array(gameSchema),
@@ -75,6 +77,7 @@ export async function validateStatisticsDirectory(root: string): Promise<Validat
     };
   }
   const collections: Record<keyof typeof fileSchemas, unknown[]> = {
+    extras: [],
     teams: [],
     seasons: [],
     games: [],

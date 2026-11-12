@@ -1,5 +1,7 @@
 # Importação revisada — Entrega 03
 
+Este guia descreve o pipeline CLI de preparação, revisão, aprovação e publicação. O repositório também possui uma interface local para selecionar pastas, fazer revisão manual e usar OCR Tesseract opcional; para o fluxo operacional pela interface, consulte [Importador local de temporadas](local-season-importer.md). As limitações abaixo sobre OCR e upload referem-se ao pipeline CLI, não à interface local.
+
 ## Escopo e auditoria
 
 Base: main f129e01, que contém as Entregas 01/02 e a correção do workflow estatístico. Antes da implementação, os 89 testes existentes e o manifest vazio passaram. O pipeline reutiliza os schemas aprovados, validateDataset, validateAppendOnly, seleção de revisões e motor matemático. Não modifica fórmulas, cadastro, frontend ou dados públicos.

@@ -1,3 +1,4 @@
+import { seasonExtrasSchema } from "./extras.ts";
 import {
   candidateBatchSchema,
   aliasRegistrySchema,
@@ -184,6 +185,81 @@ export function reviewCandidate(
       const sourceIds = mapSources(item.sourceIds);
       const playerId = item.player ? resolveImportPlayer(item.player, aliases) : undefined;
       if (!item.seasonId) throw new Error("Season identification is missing");
+      if (item.kind === "season-extras") {
+        if (
+          item.player ||
+          item.values ||
+          item.phaseId ||
+          item.teamId ||
+          item.gameId ||
+          item.award ||
+          item.history ||
+          item.coverage ||
+          item.screen ||
+          item.scope ||
+          item.availability
+        )
+          throw new Error("Unexpected individual fields on season extras");
+        const previous = baseline.data.extras
+          .filter((e) => e.seasonId === item.seasonId)
+          .sort((a, b) => b.revision - a.revision)[0];
+        if (item.recordId && previous && item.recordId !== previous.id)
+          throw new Error("Extras record identity differs");
+        let row = seasonExtrasSchema.parse({
+          id: previous?.id ?? item.recordId ?? item.id,
+          seasonId: item.seasonId,
+          data: item.extras,
+          sourceIds,
+          revision: 1,
+        });
+        if (baseline.data.extras.some((e) => e.id === row.id && e.seasonId !== row.seasonId))
+          throw new Error("Extras ID already belongs to another season");
+        const key = "extras:" + item.seasonId;
+        if (seenRecords.has(key)) throw new Error("Duplicate extras candidate");
+        seenRecords.add(key);
+        const delta = previous ? differences(previous.data, row.data) : [];
+        const action = previous ? (delta.length ? "correction" : "duplicate") : "new";
+        if (action === "correction") {
+          delta.forEach((change) =>
+            report.conflicts.push({
+              itemId: item.id,
+              recordId: row.id,
+              ...change,
+              status: "conflict",
+              requiresReview: true,
+            }),
+          );
+          if (item.correction?.expectedRevision !== previous.revision)
+            throw new Error("Correction requires current expectedRevision and reason");
+          row = { ...row, revision: previous.revision + 1 };
+        } else if (item.correction) throw new Error("Correction without changed existing content");
+        report.changes.push({
+          itemId: item.id,
+          category: "extras",
+          recordId: row.id,
+          action,
+          sourceIds,
+          value: row,
+          missing: [],
+        });
+        if (action !== "duplicate") {
+          next.extras.push(row);
+          next.revisions.push({
+            id: batch.id + "-r-" + item.id,
+            recordId: row.id,
+            recordKind: "extras",
+            revision: row.revision,
+            sourceIds,
+            batchId: batch.id,
+            createdAt: batch.receivedAt,
+            ...(previous
+              ? { supersedesRevision: previous.revision, reason: item.correction!.reason }
+              : {}),
+          });
+        }
+        continue;
+      }
+      if (item.extras) throw new Error("Extras require season-extras kind");
       if (item.kind !== "award" && !playerId) throw new Error("Player identification is missing");
       if (item.kind === "team-history") {
         if (

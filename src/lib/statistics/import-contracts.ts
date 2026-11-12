@@ -1,3 +1,4 @@
+import { extrasContentSchema } from "./extras.ts";
 import { z } from "zod";
 import { identifierSchema as id, seasonIdSchema, playerIdSchema } from "./identifiers.ts";
 import { phaseIdSchema } from "./phases.ts";
@@ -25,7 +26,15 @@ const sourced = <T extends z.ZodTypeAny>(value: T) =>
 export const candidateItemSchema = z
   .object({
     id: id.max(40),
-    kind: z.enum(["season-summary", "phase-summary", "game-box-score", "award", "team-history"]),
+    kind: z.enum([
+      "season-summary",
+      "phase-summary",
+      "game-box-score",
+      "award",
+      "team-history",
+      "season-extras",
+    ]),
+    extras: extrasContentSchema.optional(),
     recordId: id.optional(),
     player: z.object({ id: id.optional(), name: text.optional() }).strict().optional(),
     seasonId: seasonIdSchema.optional(),
@@ -78,7 +87,7 @@ export const candidateBatchSchema = z
     sources: z
       .array(z.object({ source: importSourceSchema, path: inputPathSchema }).strict())
       .min(1)
-      .max(100),
+      .max(500),
     entities: z
       .object({
         teams: z.array(sourced(teamSchema)).max(100).default([]),

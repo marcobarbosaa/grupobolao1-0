@@ -1,3 +1,5 @@
+import { publishedSeasons, publishedCatalog, latestSeasonId } from "../../lib/published-catalog";
+import archive from "../../data/statistics/season-extras.json";
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
@@ -148,14 +150,50 @@ const season2006: readonly EditorialGroup[] = [
     ],
   },
 ];
-const seasons = [
-  { id: "season-002", name: "2006–07" },
-  { id: "season-001", name: "2005–06" },
-] as const;
+const seasons = [...publishedSeasons].reverse().map((s) => ({ id: s.id, name: s.year }));
+function publishedHighlights(id: string): readonly EditorialGroup[] {
+  const season = publishedSeasons.find((s) => s.id === id)!;
+  const records = publishedCatalog.records.filter((r) => r.kind === "phase" && r.seasonId === id);
+  const extras = publishedCatalog.extras[id] ?? archive[id as keyof typeof archive];
+  return [
+    {
+      id: "publicado",
+      label: season.title,
+      items: [
+        {
+          label: "01 / ARQUIVO",
+          headline: season.year,
+          description: season.title + " · registros aprovados.",
+          to: "/temporadas",
+        },
+        {
+          label: "02 / JOGADORES",
+          headline: new Set(records.map((r) => r.playerId)).size + " ATLETAS",
+          description: "Jogadores com registros nesta temporada.",
+          to: "/temporadas",
+        },
+        {
+          label: "03 / PLAYOFFS",
+          headline: extras?.playoffs?.champion ?? "CAMPANHAS",
+          description: extras?.playoffs?.champion
+            ? "Campeão registrado nos Extras da temporada."
+            : "Consulte as fases com dados publicados.",
+          to: "/temporadas",
+        },
+        {
+          label: "04 / CONFERÊNCIA",
+          headline: "ESTATÍSTICAS",
+          description: "Números individuais e coletivos, com procedência.",
+          to: "/temporadas",
+        },
+      ],
+    },
+  ];
+}
 
 export function CinematicHome() {
   const { playerIndex, setPlayerIndex, firstPlayer } = useLandingTheme()!;
-  const [seasonId, setSeasonId] = useState<(typeof seasons)[number]["id"]>("season-002");
+  const [seasonId, setSeasonId] = useState<string>(latestSeasonId);
   const [groupIndex, setGroupIndex] = useState(0);
   const [interacting, setInteracting] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(true);
@@ -169,7 +207,12 @@ export function CinematicHome() {
     return () => query.removeEventListener("change", update);
   }, []);
 
-  const groups = seasonId === "season-002" ? season2007 : season2006;
+  const groups =
+    seasonId === "season-002"
+      ? season2007
+      : seasonId === "season-001"
+        ? season2006
+        : publishedHighlights(seasonId);
   const group = groups[groupIndex % groups.length];
   useEffect(() => {
     if (interacting || reduceMotion || groups.length < 2) return;
