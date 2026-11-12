@@ -37,3 +37,16 @@ Pasta de origem: `1dZbByM4XpzRaPyE3S9HdRwbaLdMS5oM8`.
 **Escopo não concluído:** 22 capturas adicionais de Enzo (6), Gam (4), Guilherme (8) e Russo (4), a avaliar para possíveis estatísticas detalhadas por rodada de playoffs. Não atribuir a elas uma fase ou um número sem conferência explícita. Os oito registros publicados de playoffs são **agregados**, não por rodada.
 
 Este inventário substitui o levantamento anterior associado à pasta de nome semelhante sem o sufixo `(F)`. Nenhum dado da temporada 01–03 foi substituído.
+
+
+## Complementação — playoffs por rodada (12/11/2026)
+
+As capturas antes apontadas como pendentes **foram conferidas e publicadas** em `src/data/statistics/season-004/statistics-rounds.json`.
+
+- **11 registros individuais por fase**: Enzo (3), Gam Mori (2), Guilherme (4), Russo (2).
+- **22 imagens JPEG** registradas em `sources-rounds.json` com identificadores do Drive e hashes SHA-256 verificáveis.
+- `batches-rounds.json` e `revisions-rounds.json` guardam a trilha de publicação; `manifest.json` referencia esses arquivos.
+- Fases: `first-round`, `quarterfinals`, `conference-finals` e `nba-finals` quando documentadas nas capturas.
+- Cada registro de rodada contém GP, GS, médias e aproveitamentos observados nos prints. Totais de arremessos e demais contagens **não foram fabricados** a partir de médias arredondadas.
+- Soma dos jogos e soma ponderada dos pontos por rodada confrontadas com o registro agregado de playoffs já publicado, dentro da precisão dos valores exibidos.
+- Rodadas sem print não foram preenchidas automaticamente. As imagens continuam privadas no Drive.
