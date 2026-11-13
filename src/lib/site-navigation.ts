@@ -1,7 +1,7 @@
 export const siteNavigation = [
   { label: "Início", to: "/" },
   { label: "Jogadores", to: "/jogadores" },
-  { label: "Temporadas", to: "/temporadas" },
+  { label: "Liga", to: "/temporadas" },
   { label: "Hall da Fama", to: "/hall-da-fama" },
   { label: "Recordes", to: "/recordes" },
   { label: "Comparar", to: "/deep-analytics" },
