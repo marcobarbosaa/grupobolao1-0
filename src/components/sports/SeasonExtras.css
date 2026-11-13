@@ -30,3 +30,59 @@
   .seasonextras{padding:26px 12px 70px}
   .seasonextras-bracket{grid-template-columns:650px 165px 650px}
 }
+
+
+/* Liga 2.0 — cinematic competition design; scoped to the league archive. */
+.league-page{--league-gold:#edc782;--league-ink:#080e19;--league-edge:rgba(198,218,246,.16);min-height:calc(100dvh - 80px);background:radial-gradient(ellipse at 80% 4%,rgba(49,81,118,.28),transparent 42%),linear-gradient(155deg,#09111f 0%,#0b1322 48%,#070b14 100%);color:#f6f7fb;padding-bottom:70px;overflow:hidden}
+.league-hero{position:relative;max-width:1480px;margin:auto;padding:clamp(54px,7vw,108px) 24px 55px;isolation:isolate;border-bottom:1px solid var(--league-edge)}
+.league-hero:before{content:"";position:absolute;width:min(45vw,600px);height:min(45vw,600px);right:4%;top:-42%;z-index:-1;background:radial-gradient(circle,rgba(221,172,98,.15),transparent 65%);pointer-events:none}
+.league-eyebrow{font-size:11px!important;letter-spacing:.24em;font-weight:900;color:var(--league-gold)!important;margin:0 0 16px!important}
+.league-hero h1{font-weight:950;text-transform:uppercase;letter-spacing:-.055em;line-height:.9;font-size:clamp(46px,7.5vw,112px);max-width:1070px;margin:0 0 22px}
+.league-hero h1 span{color:var(--league-gold)}
+.league-hero-copy>p:last-child{font-size:clamp(13px,1.3vw,17px);color:#afbdd1;margin:0;max-width:620px}
+.league-hero-mark{position:absolute;right:2%;top:24%;font-weight:1000;font-size:clamp(120px,19vw,280px);line-height:1;letter-spacing:-.09em;color:rgba(200,223,255,.035);z-index:-1;user-select:none;pointer-events:none}
+.league-page .season-archive-controls{max-width:1480px;padding:22px 24px 0;margin:0 auto;gap:13px}
+.league-season-label{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.league-season-label span{letter-spacing:.18em;color:var(--league-gold);font-size:10px;font-weight:900}
+.league-season-label strong{font-size:12px;color:#bac8da}
+.league-page .season-archive-controls .seasonextras-toggle{gap:8px;margin:0}
+.league-page .season-archive-controls .seasonextras-toggle button{border:1px solid #3b4c62;background:#121e2f;color:#bdcde0;border-radius:8px;font-weight:800;padding:12px 16px}
+.league-page .season-archive-controls .seasonextras-toggle button[aria-pressed=true]{background:#e9c48b;border-color:#e9c48b;color:#151a24;box-shadow:0 0 28px rgba(226,177,103,.16)}
+.league-page .seasonextras{padding:26px 24px 70px;max-width:1480px}
+.league-page .seasonextras-nav{margin-bottom:16px;gap:8px}
+.league-page .seasonextras-nav button{font-weight:900;letter-spacing:.09em;text-transform:uppercase;border-radius:8px;background:#121e2e;border-color:#354960;color:#b7c8de;padding:13px 22px;font-size:12px}
+.league-page .seasonextras-nav button[aria-pressed=true]{background:#e9c48b;color:#171a22;border-color:#e9c48b}
+.league-page .seasonextras-panel{border-radius:16px;border:1px solid var(--league-edge);background:radial-gradient(ellipse at 90% 0%,rgba(46,76,107,.2),transparent 45%),linear-gradient(160deg,#111d2e,#0b1422);box-shadow:0 28px 76px rgba(0,0,0,.2);padding:clamp(18px,2.5vw,34px)}
+.league-page .seasonextras-header h2{font-size:clamp(32px,4.2vw,58px);font-weight:950;letter-spacing:-.055em;max-width:800px}
+.league-page .seasonextras-kicker{color:var(--league-gold)!important}
+.league-page .seasonextras-tablewrap{border-color:#34465e;border-radius:9px}
+.league-page .seasonextras-table{font-size:12px}
+.league-page .seasonextras-table thead{background:#1d2c42;color:#e7edf7}
+.league-page .seasonextras-table thead th{font-weight:900;letter-spacing:.07em}
+.league-page .seasonextras-table tbody tr{transition:background-color .18s}
+.league-page .seasonextras-table tbody tr:hover{background:#22354d}
+.league-page .seasonextras-qualified{background:rgba(74,117,155,.12)}
+.league-page .seasonextras-table tbody td:first-child{font-size:16px;font-weight:900;color:var(--league-gold)}
+.league-page .seasonextras-team{min-height:37px;gap:11px}
+.league-page .seasonextras-team>.seasonextras-logo{width:35px;height:35px}
+.league-standing-name{display:flex;flex-direction:column;gap:4px;align-items:flex-start;font-weight:800}
+.league-player-marks{display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-weight:700;max-width:100%}
+.league-player-chip{display:inline-flex;gap:4px;align-items:center;padding:3px 6px;border:1px solid rgba(234,192,122,.36);background:rgba(225,177,102,.11);border-radius:4px;color:#f3cf91!important;font-size:10px!important;line-height:1.2;text-decoration:none!important;max-width:140px;transition:background .2s,border-color .2s}
+.league-player-chip:hover,.league-player-chip:focus-visible{background:rgba(234,190,107,.24);border-color:#ecc47e;color:#fff!important}
+.league-player-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.league-player-marks.is-compact{margin-left:auto;max-width:68px;flex-shrink:1}
+.league-player-marks.is-compact .league-player-chip{padding:3px 4px;font-size:9px!important;max-width:68px;min-width:0}
+.league-page .seasonextras-side{min-height:37px;gap:5px}
+.league-page .seasonextras-side-name{font-weight:750}
+.league-page .seasonextras-series{border-radius:7px;background:#15243a;border-color:#3a4d65;transition:transform .2s,border-color .2s,box-shadow .2s}
+.league-page .seasonextras-series:hover{transform:translateY(-2px);border-color:#bd9860;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.league-page .seasonextras-side.is-winner{background:linear-gradient(90deg,rgba(182,140,66,.26),rgba(53,79,105,.44));color:#fff}
+.league-page .seasonextras-side.is-winner strong{color:#f6d596}
+.league-page .seasonextras-conference h3,.league-page .seasonextras-final h3{color:#f6cd89;font-weight:950}
+.league-page .seasonextras-round h4{color:#bacadc;font-size:11px;text-transform:uppercase;letter-spacing:.07em}
+.league-page .seasonextras-champion{max-width:570px;background:radial-gradient(ellipse at top,rgba(238,191,109,.19),transparent 75%),#101b29;border:1px solid #aa8250;box-shadow:0 12px 38px rgba(0,0,0,.23);padding:26px}
+.league-page .seasonextras-champion>div{flex-wrap:wrap}
+.league-page .seasonextras-champion strong{text-transform:uppercase;letter-spacing:-.025em}
+.league-page .seasonextras-note{color:#afbdd1}
+@media(max-width:700px){.league-hero{padding:48px 16px 37px}.league-hero h1{font-size:clamp(44px,11vw,69px)}.league-hero-mark{right:0;top:18%}.league-page .season-archive-controls{padding:20px 12px 0}.league-page .seasonextras{padding:22px 12px 48px}.league-page .seasonextras-panel{padding:16px}.league-page .seasonextras-nav button{flex:1;padding:12px 10px}.league-page .seasonextras-bracket{grid-template-columns:650px 165px 650px}.league-page .seasonextras-champion{padding:18px}.league-page .seasonextras-header h2{font-size:31px}}
+@media(prefers-reduced-motion:reduce){.league-page .seasonextras-series,.league-page .seasonextras-table tbody tr,.league-player-chip{transition:none}.league-page .seasonextras-series:hover{transform:none}}
