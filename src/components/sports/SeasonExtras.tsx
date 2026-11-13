@@ -9,6 +9,7 @@ import history004 from "../../data/statistics/season-004/teamHistory.json";
 import history005 from "../../data/statistics/season-005/teamHistory.json";
 import history006 from "../../data/statistics/season-006/teamHistory.json";
 import history007 from "../../data/statistics/season-007/teamHistory.json";
+import history008 from "../../data/statistics/season-008/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
@@ -63,7 +64,7 @@ const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
 const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-001": history001, "season-002": history002, "season-003": history003,
   "season-004": history004, "season-005": history005, "season-006": history006,
-  "season-007": history007,
+  "season-007": history007, "season-008": history008,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO", "sacramento-kings": "SAC",
@@ -163,6 +164,7 @@ const teamNames: Record<string, string> = Object.fromEntries(
 );
 
 teamNames.OKC = "Oklahoma City Thunder";
+teamNames.BKN = "Brooklyn Nets";
 
 const conferences: { id: Conference; label: string }[] = [
   { id: "west", label: "Oeste" },
@@ -178,7 +180,7 @@ function historicalLogoSrc(code: string, seasonId: SeasonId): string | undefined
   const logo =
     publishedCatalog.extras[seasonId]?.logos?.[code] ??
     logoOverrides[seasonId]?.[code] ??
-    (Number(seasonId.slice(-3)) <= 6 ? baseLogos[code] : undefined);
+    baseLogos[code];
   if (!logo) return undefined;
   const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
   return `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${extension}`;
