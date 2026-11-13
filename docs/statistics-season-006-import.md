@@ -12,9 +12,15 @@
 - **39 capturas consolidadas** de jogadores, com IDs privados do Google Drive e SHA-256 para auditoria, mais 5 imagens de Extras. Arquivos originais não são publicados.
 - Catálogo e tela de Temporadas atualizados para expor a sexta edição e seus escudos da época.
 
-## Escopo ainda não importado
+## Complementação — playoffs individuais por rodada (13/11/2026)
 
-Capturas adicionais de estatísticas **por rodada dos playoffs** presentes em determinadas pastas de jogadores não foram convertidas nesta remessa em registros `first-round`, `quarterfinals`, `conference-finals` ou `nba-finals`. Os números agregados de playoffs, quando disponíveis, foram publicados sem inferir desmembramentos.
+**18 registros individuais por fase** publicados em `season-006/statistics-rounds.json`: Jonas (4), Tailan (4), Gam Mori (3), Nando (3), Guilherme (2) e Matheus Medeiros (2). Fases registradas: `first-round`, `quarterfinals`, `conference-finals` e `nba-finals`, exclusivamente nas capturas existentes.
+
+Foram vinculadas **36 imagens JPEG do Drive** em `sources-rounds.json` com IDs e SHA-256, sem disponibilizar imagens privadas no GitHub. `batches-rounds.json` e `revisions-rounds.json` registram a trilha de importação. As 18 linhas foram registradas no catálogo (`manifest.json`).
+
+Cada registro contém GP, GS, médias e aproveitamentos visíveis nos prints; os totais de arremessos por fase não foram estimados a partir de médias arredondadas. A soma de jogos e a média ponderada dos pontos por fase foram confrontadas com os 6 registros agregados de playoffs já publicados.
+
+**Sem registros por rodada para Enzo e Dias:** as capturas consolidadas confirmam os playoffs, mas não foram localizadas capturas de fases individuais nas pastas respectivas nesta remessa.
 
 Colunas detalhadas de classificação (campanha em casa, fora, divisão, conferência, GB e sequência) não foram digitalizadas nesta remessa: a visualização mantém traços onde não existem dados estruturados.
 
