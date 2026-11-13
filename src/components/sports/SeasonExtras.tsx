@@ -239,8 +239,6 @@ function Standings({ seasonId, season }: { seasonId: SeasonId; season: SeasonRec
       <div className="seasonextras-header">
         <div>
           <p className="seasonextras-kicker">{season.year} / TEMPORADA REGULAR</p>
-          <h2>Disputa por cada posição.</h2>
-          <p>Classificação histórica, escudos de época e atletas do Grupo Bolão identificados por estrela.</p>
         </div>
         <div className="seasonextras-toggle" role="group" aria-label="Conferência">
           {conferences.map((option) => (
