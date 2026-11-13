@@ -1,71 +1,490 @@
 /* Player selection: self-contained single-screen experience, inherited team palette. */
 .site-shell:has(.player-select) {
-  --header-height:64px;
-  background:linear-gradient(112deg,var(--team-background-deep),var(--team-background),var(--team-background-deep));
-  height:100dvh; overflow:hidden;
+  --header-height: 64px;
+  --arena-scene-duration: 550ms;
+  background: linear-gradient(
+    112deg,
+    var(--team-background-deep),
+    var(--team-background),
+    var(--team-background-deep)
+  );
+  height: 100dvh;
+  overflow: hidden;
 }
-.site-shell:has(.player-select) .site-footer{display:none}
-.site-shell:has(.player-select) .app-main{min-height:0; height:calc(100dvh - var(--header-height));overflow:hidden}
-.site-shell:has(.player-select) .site-header{background:transparent;border:0;box-shadow:none;position:relative;z-index:20}
-.site-shell:has(.player-select) .site-header .brand-logo{width:44px;height:44px}
-.site-shell:has(.player-select) .site-header-inner{max-width:1600px;gap:24px;padding-inline:clamp(18px,3vw,58px)}
-.site-shell:has(.player-select) .desktop-navigation a{background:transparent;color:var(--team-text);font-size:11px;font-weight:800;text-transform:uppercase}
-.site-shell:has(.player-select) .desktop-navigation a[aria-current]::after{background:var(--team-focus)}
-.player-select{position:relative;height:100%;width:100%;color:var(--team-text);isolation:isolate;overflow:hidden;
-  background:radial-gradient(ellipse at 50% 55%,color-mix(in srgb,var(--team-primary) 37%,transparent),transparent 52%),
-  linear-gradient(112deg,var(--team-background-deep),var(--team-background),var(--team-background-deep));}
-.player-select__texture{position:absolute;inset:0;opacity:.28;pointer-events:none;background:repeating-linear-gradient(130deg,transparent 0 130px,#ffffff09 131px 132px,transparent 133px 156px)}
-.player-select__orbit{position:absolute;left:50%;top:44%;width:min(70vw,920px);aspect-ratio:1;border:4vw solid color-mix(in srgb,var(--team-secondary) 22%,transparent);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}
-.player-select__header{position:absolute;z-index:5;top:clamp(15px,3vh,35px);left:clamp(18px,5vw,95px);right:clamp(18px,5vw,95px);display:flex;justify-content:space-between;gap:12px;font-size:10px;letter-spacing:.16em;font-weight:800;color:var(--team-text-muted)}
-.player-select__backdrop{position:absolute;top:8%;width:100%;text-align:center;white-space:nowrap;font:italic 900 clamp(110px,22vw,420px)/1 var(--font-display);letter-spacing:-.07em;color:color-mix(in srgb,var(--team-primary) 60%,transparent);user-select:none;pointer-events:none}
-.player-select__stage{position:absolute;inset:0;z-index:2;touch-action:pan-y}
-.player-select__figure{position:absolute;left:50%;bottom:-5%;width:min(45vw,640px);height:94%;transform:translateX(-50%);transition:transform var(--selection-duration) ease,opacity var(--selection-duration) ease,filter var(--selection-duration) ease;pointer-events:none}
-.player-select__figure img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 25px var(--team-shadow))}
-.player-select__figure a,.player-select__figure button{display:block;width:100%;height:100%;cursor:pointer;pointer-events:auto;background:none;border:0;padding:0}
-.player-select__figure[data-position=center]{z-index:3;opacity:1;filter:none}
-.player-select__figure[data-position=left]{transform:translateX(-155%) scale(.76);z-index:1;opacity:.55;filter:brightness(.6)}
-.player-select__figure[data-position=right]{transform:translateX(55%) scale(.76);z-index:1;opacity:.55;filter:brightness(.6)}
-.player-select__figure[data-position=hidden]{opacity:0;visibility:hidden;transform:translateX(-50%) scale(.7)}
-.player-select__content{position:absolute;z-index:7;left:clamp(20px,5vw,95px);bottom:clamp(82px,14vh,150px);max-width:min(30vw,390px);text-shadow:0 3px 18px var(--team-shadow);pointer-events:none}
-.player-select__eyebrow{font-size:11px;letter-spacing:.2em;font-weight:850;color:var(--team-focus)}
-.player-select__content h1{font:italic 900 clamp(38px,5.3vw,86px)/.94 var(--font-display);text-transform:uppercase;overflow-wrap:anywhere;margin:12px 0}
-.player-select__content p{font-size:clamp(12px,1.2vw,16px);font-weight:650}
-.player-select__profile{pointer-events:auto;margin-top:22px;display:inline-flex;align-items:center;gap:18px;padding:14px 18px;text-decoration:none;font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--team-background-deep);background:var(--team-focus);border:1px solid var(--team-focus);transition:transform .2s ease,background .2s ease}
-.player-select__profile:hover,.player-select__profile:focus-visible{transform:translateY(-3px);background:#fff}
-.player-select__controls{position:absolute;z-index:8;right:clamp(20px,5vw,95px);bottom:clamp(80px,14vh,150px);display:flex;align-items:center;gap:14px}
-.player-select__controls button{width:54px;height:54px;display:grid;place-items:center;color:var(--team-text);background:var(--team-surface);border:1px solid var(--team-border);cursor:pointer;transition:background .2s,transform .2s}
-.player-select__controls button:hover,.player-select__controls button:focus-visible{background:var(--team-surface-hover);transform:translateY(-3px)}
-.player-select__controls span{display:flex;gap:9px;align-items:center;font-weight:800;font-size:13px;letter-spacing:.1em}
-.player-select__controls i{height:1px;width:24px;background:var(--team-focus)}
-.player-select__instruction{position:absolute;right:clamp(20px,5vw,95px);bottom:42px;font-size:10px;letter-spacing:.13em;color:var(--team-text-muted)}
-@media(max-width:900px){
-  .player-select__figure{width:65vw}
-  .player-select__figure[data-position=left]{transform:translateX(-115%) scale(.73)}
-  .player-select__figure[data-position=right]{transform:translateX(15%) scale(.73)}
-  .player-select__content{max-width:42vw;bottom:95px}
-  .player-select__controls{bottom:95px}
+.site-shell:has(.player-select) .site-footer {
+  display: none;
 }
-@media(max-width:700px){
-  .site-shell:has(.player-select){--header-height:56px}
-  .player-select__header{top:14px;font-size:8px}
-  .player-select__header span{display:none}
-  .player-select__backdrop{top:18%;font-size:clamp(64px,23vw,140px)}
-  .player-select__figure{width:105vw;height:73%;bottom:14%}
-  .player-select__figure[data-position=left]{transform:translateX(-112%) scale(.8)}
-  .player-select__figure[data-position=right]{transform:translateX(12%) scale(.8)}
-  .player-select__content{left:16px;right:16px;bottom:85px;max-width:none;text-align:left}
-  .player-select__content h1{font-size:clamp(32px,9vw,62px);max-width:68%;margin:6px 0}
-  .player-select__content p{font-size:12px}
-  .player-select__profile{margin-top:12px;padding:11px 13px;font-size:10px}
-  .player-select__controls{right:12px;bottom:95px;gap:6px;flex-direction:column}
-  .player-select__controls button{width:40px;height:40px}
-  .player-select__controls span{font-size:10px}
-  .player-select__controls i{width:12px}
-  .player-select__instruction{display:none}
+.site-shell:has(.player-select) .app-main {
+  min-height: 0;
+  height: calc(100dvh - var(--header-height));
+  overflow: hidden;
 }
-@media(max-height:610px) and (min-width:701px){
-  .player-select__figure{height:90%}
-  .player-select__content,.player-select__controls{bottom:32px}
-  .player-select__backdrop{top:2%}
+.site-shell:has(.player-select) .site-header {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 20;
 }
-@media(prefers-reduced-motion:reduce){.player-select__figure,.player-select__controls button,.player-select__profile{transition:none!important}}
+.site-shell:has(.player-select) .site-header .brand-logo {
+  width: 44px;
+  height: 44px;
+}
+.site-shell:has(.player-select) .site-header-inner {
+  max-width: 1600px;
+  gap: 24px;
+  padding-inline: clamp(18px, 3vw, 58px);
+}
+.site-shell:has(.player-select) .desktop-navigation a {
+  background: transparent;
+  color: var(--team-text);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.site-shell:has(.player-select) .desktop-navigation a[aria-current]::after {
+  background: var(--team-focus);
+}
+.player-select {
+  touch-action: manipulation;
+  --selection-duration: 550ms;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: var(--team-text);
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 73% 70%,
+      color-mix(in srgb, var(--team-glow) 30%, transparent),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 28% 45%,
+      color-mix(in srgb, var(--team-primary) 52%, transparent),
+      transparent 64%
+    ),
+    linear-gradient(
+      112deg,
+      var(--team-background-deep),
+      var(--team-background),
+      var(--team-background-deep)
+    );
+}
+.player-select__texture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    130deg,
+    transparent 0 130px,
+    #ffffff09 131px 132px,
+    transparent 133px 156px
+  );
+}
+.player-select__backdrop {
+  position: absolute;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  font: italic 900 clamp(110px, 22vw, 420px)/1 var(--font-display);
+  letter-spacing: -0.07em;
+  color: color-mix(in srgb, var(--team-primary) 22%, transparent);
+  user-select: none;
+  pointer-events: none;
+}
+.player-select__stage {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  touch-action: pan-y;
+}
+.player-select__figure {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: min(45vw, 640px);
+  height: 96%;
+  transform: translateX(-50%);
+  transition:
+    transform var(--selection-duration) cubic-bezier(0.22, 0.68, 0.25, 1),
+    opacity var(--selection-duration) cubic-bezier(0.22, 0.68, 0.25, 1),
+    filter var(--selection-duration) cubic-bezier(0.22, 0.68, 0.25, 1);
+  pointer-events: none;
+}
+.player-select__figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 16px 25px var(--team-shadow));
+}
+.player-select__figure a,
+.player-select__figure button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.player-select__figure[data-position="center"] {
+  z-index: 3;
+  opacity: 1;
+  filter: none;
+}
+.player-select__figure[data-position="left"] {
+  transform: translateX(-155%) scale(0.76);
+  z-index: 1;
+  opacity: 0.5;
+  filter: brightness(0.56) contrast(0.9);
+}
+.player-select__figure[data-position="right"] {
+  transform: translateX(55%) scale(0.76);
+  z-index: 1;
+  opacity: 0.5;
+  filter: brightness(0.56) contrast(0.9);
+}
+.player-select__figure[data-position="hidden"] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) scale(0.7);
+}
+.player-select__content {
+  position: absolute;
+  z-index: 7;
+  left: clamp(20px, 5vw, 95px);
+  bottom: clamp(82px, 14vh, 150px);
+  width: min(30vw, 390px);
+  text-shadow: 0 3px 18px var(--team-shadow);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s;
+}
+.player-select__content h2 {
+  font: italic 900 clamp(30px, 4vw, 64px)/0.94 var(--font-display);
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  margin: 12px 0;
+}
+.player-select__content p {
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 650;
+}
+.player-select__profile {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--team-text);
+  border-bottom: 1px solid var(--team-focus);
+}
+.player-select__profile svg {
+  transition: transform 0.2s ease;
+}
+.player-select__profile:focus-visible svg {
+  transform: translate(3px, -3px);
+}
+.player-select__content::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at 30% 60%,
+    color-mix(in srgb, var(--team-background-deep) 90%, transparent),
+    transparent 75%
+  );
+  pointer-events: none;
+}
+.player-select:has(.player-select__figure[data-position="center"]:focus-within)
+  .player-select__content,
+.player-select__content:focus-within {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/* Keep the CTA reachable by keyboard even while its panel is visually concealed. */
+.player-select__content .player-select__profile {
+  visibility: visible;
+}
+.player-select__content:not(:hover):not(:focus-within) {
+  transition-delay: 0.08s;
+}
+.player-select__figure[data-position="center"]:focus-within {
+  filter: brightness(1.06);
+}
+.player-select__crests {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.player-select__crests img {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: min(56vw, 660px);
+  height: 78%;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(0.94);
+  opacity: 0;
+  transition:
+    opacity var(--selection-duration) ease,
+    transform var(--selection-duration) ease;
+  filter: saturate(0.75);
+}
+.player-select__crests img[data-active="true"] {
+  opacity: 0.18;
+  transform: translate(-50%, -50%) scale(1);
+}
+.player-select__team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.player-select__team img {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.player-select__details {
+  letter-spacing: 0.12em;
+  color: var(--team-focus);
+}
+.player-select__controls b {
+  animation: selection-count 0.22s ease;
+  font-variant-numeric: tabular-nums;
+}
+@keyframes selection-count {
+  from {
+    opacity: 0.3;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.player-select__controls {
+  position: absolute;
+  z-index: 8;
+  right: clamp(20px, 5vw, 95px);
+  bottom: clamp(80px, 14vh, 150px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.player-select__controls button {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  color: var(--team-text);
+  background: var(--team-surface);
+  border: 1px solid var(--team-border);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.player-select__controls button:hover,
+.player-select__controls button:focus-visible {
+  background: var(--team-surface-hover);
+  transform: translateY(-3px);
+}
+.player-select__controls span {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+.player-select__controls i {
+  height: 1px;
+  width: 24px;
+  background: var(--team-focus);
+}
+.player-select__instruction {
+  position: absolute;
+  right: clamp(20px, 5vw, 95px);
+  bottom: 42px;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: var(--team-text-muted);
+}
+@media (max-width: 900px) {
+  .player-select__figure {
+    width: 85vw;
+  }
+  .player-select__figure[data-position="left"] {
+    transform: translateX(-115%) scale(0.73);
+  }
+  .player-select__figure[data-position="right"] {
+    transform: translateX(15%) scale(0.73);
+  }
+  .player-select__content {
+    width: 38vw;
+    bottom: 95px;
+  }
+  .player-select__controls {
+    bottom: 95px;
+  }
+}
+@media (max-width: 700px) {
+  .site-shell:has(.player-select) {
+    --header-height: 56px;
+  }
+  .player-select__backdrop {
+    top: 18%;
+    font-size: clamp(64px, 23vw, 140px);
+  }
+  .player-select__figure {
+    width: 125vw;
+    height: 74%;
+    bottom: 23%;
+  }
+  .player-select__figure[data-position="left"] {
+    transform: translateX(-98%) scale(0.72);
+  }
+  .player-select__figure[data-position="right"] {
+    transform: translateX(-2%) scale(0.72);
+  }
+  .player-select__content {
+    left: 20px;
+    bottom: 24px;
+    width: calc(100% - 100px);
+    text-align: left;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+  .player-select__content h2 {
+    font-size: clamp(26px, 7vw, 42px);
+    margin: 6px 0;
+  }
+  .player-select__content p {
+    font-size: 12px;
+  }
+  .player-select__profile {
+    margin-top: 12px;
+    padding: 11px 13px;
+    font-size: 10px;
+  }
+  .player-select__controls {
+    right: 16px;
+    bottom: 30px;
+    gap: 6px;
+    flex-direction: column;
+  }
+  .player-select__controls button {
+    width: 40px;
+    height: 40px;
+  }
+  .player-select__controls span {
+    font-size: 10px;
+  }
+  .player-select__controls i {
+    width: 12px;
+  }
+  .player-select__instruction {
+    display: none;
+  }
+}
+@media (max-height: 610px) and (min-width: 701px) {
+  .player-select__figure {
+    height: 90%;
+  }
+  .player-select__content,
+  .player-select__controls {
+    bottom: 32px;
+  }
+  .player-select__backdrop {
+    top: 2%;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .player-select__content {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 700px) {
+  .player-select__crests img {
+    width: 90vw;
+    top: 36%;
+    height: 64%;
+  }
+  .player-select__content p {
+    margin: 5px 0;
+  }
+  .player-select__profile {
+    margin-top: 4px;
+  }
+}
+@media (max-height: 480px) {
+  .site-shell:has(.player-select) {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  .site-shell:has(.player-select) .app-main {
+    height: 440px;
+    overflow: visible;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-shell:has(.player-select) {
+    --arena-scene-duration: 0ms;
+  }
+  .player-select {
+    --selection-duration: 0ms;
+  }
+  .player-select * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .player-select__profile:hover svg {
+    transform: translate(3px, -3px);
+  }
+  .player-select:has(.player-select__figure[data-position="center"]:hover) .player-select__content,
+  .player-select__content:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .player-select__figure[data-position="center"]:hover {
+    filter: brightness(1.06);
+  }
+  .player-select:has(.player-select__figure[data-position="center"]:hover)
+    .player-select__crests
+    img[data-active="true"],
+  .player-select:has(.player-select__content:hover) .player-select__crests img[data-active="true"] {
+    opacity: 0.2;
+  }
+}
