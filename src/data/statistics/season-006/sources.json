@@ -11,7 +11,8 @@
       "season": "season-006",
       "playerId": "jonas",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "d26c1a1085f48574476fab735bad539e86b003a8a20798a4a0c9ea9e3b22a5bb"
   },
   {
     "id": "src-s06-jonas-2",
@@ -25,7 +26,8 @@
       "season": "season-006",
       "playerId": "jonas",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "90a3f4801951c5fee61c30243c8288f0cba43c6d4959a747e8dbef67a71c3d74"
   },
   {
     "id": "src-s06-jonas-3",
@@ -39,7 +41,8 @@
       "season": "season-006",
       "playerId": "jonas",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "72067132f86fe91bb57138300cb66038534e6ba46ec649a8d09c61b676d3990a"
   },
   {
     "id": "src-s06-tailan-1",
@@ -53,7 +56,8 @@
       "season": "season-006",
       "playerId": "tailan",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "4b298024879b1b246bbffd39d98df95c3d3aec1a7125446f272970ae9bcba0cb"
   },
   {
     "id": "src-s06-tailan-2",
@@ -67,7 +71,8 @@
       "season": "season-006",
       "playerId": "tailan",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "bda490c58f44b023a25f657027a6765cad389e9729141bc3068b78c6e874778c"
   },
   {
     "id": "src-s06-tailan-3",
@@ -81,7 +86,8 @@
       "season": "season-006",
       "playerId": "tailan",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "84ba0fa5af3136da0e90a9db562ff77ed40febc00939fc718211837fb34d58f3"
   },
   {
     "id": "src-s06-cristiano-ronaldo-1",
@@ -95,7 +101,8 @@
       "season": "season-006",
       "playerId": "cristiano-ronaldo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "694669a1128c9d7688ee3a9da55d86b9a03d5bc2c8f84d972416939222cbe30f"
   },
   {
     "id": "src-s06-cristiano-ronaldo-2",
@@ -109,7 +116,8 @@
       "season": "season-006",
       "playerId": "cristiano-ronaldo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "c88d1be2bf9f6ae8df611edd79e76608c02086ed8876569bdcfe0a7cda1ca703"
   },
   {
     "id": "src-s06-cristiano-ronaldo-3",
@@ -123,7 +131,8 @@
       "season": "season-006",
       "playerId": "cristiano-ronaldo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "4dc11df1d317331dbbc7185f87f7b5b55cc5fbd5704dbc06ce18135697ffc15d"
   },
   {
     "id": "src-s06-fabio-carvalho-1",
@@ -137,7 +146,8 @@
       "season": "season-006",
       "playerId": "fabio-carvalho",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "d522dc860e168fe6532958bb13f71e06102ba754794bcb7597e693f034694426"
   },
   {
     "id": "src-s06-fabio-carvalho-2",
@@ -151,7 +161,8 @@
       "season": "season-006",
       "playerId": "fabio-carvalho",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "eaa02574a9d71ed3cfa7df6e7fbf3b7f2d74de64ee7b123dae061117f8499712"
   },
   {
     "id": "src-s06-fabio-carvalho-3",
@@ -165,7 +176,8 @@
       "season": "season-006",
       "playerId": "fabio-carvalho",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "5639cb6a78991728a7040700691612dcf097d0859eb4e9dbba7b4d82d1230f53"
   },
   {
     "id": "src-s06-russo-1",
@@ -179,7 +191,8 @@
       "season": "season-006",
       "playerId": "russo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "6daba5407054c881a2569ed864fccd0faf8a1b353dcd34a98fde4b94fcfc68f3"
   },
   {
     "id": "src-s06-russo-2",
@@ -193,7 +206,8 @@
       "season": "season-006",
       "playerId": "russo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "f6820a499405bfa9f584edb681c0f6f7ede9625c4d19dff35a9c7aa97e52bfeb"
   },
   {
     "id": "src-s06-russo-3",
@@ -207,7 +221,8 @@
       "season": "season-006",
       "playerId": "russo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "1601ed8b331e0ca58d1d1dd57c53b76cfe05fdf3aceaf3caf65f9970c1da42c7"
   },
   {
     "id": "src-s06-marco-barbosa-1",
@@ -221,7 +236,8 @@
       "season": "season-006",
       "playerId": "marco-barbosa",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "533f82c3fb9296c8609bd5238e4f97527519d64194401948d965120bd73ca94c"
   },
   {
     "id": "src-s06-marco-barbosa-2",
@@ -235,7 +251,8 @@
       "season": "season-006",
       "playerId": "marco-barbosa",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "37335ea037edb9e488771d62a33e51175fe104def50379d25551bfdc9d4737bd"
   },
   {
     "id": "src-s06-marco-barbosa-3",
@@ -249,7 +266,8 @@
       "season": "season-006",
       "playerId": "marco-barbosa",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "38f3fa4fd7411de7875147296a530bd2dc9f7a399b1e79218a74810dd7e7d503"
   },
   {
     "id": "src-s06-gam-mori-1",
@@ -263,7 +281,8 @@
       "season": "season-006",
       "playerId": "gam-mori",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "0a2d12951fab4ea81622aa0c8a95cf0d7f0f3b2d25ae6bcc517a58c0f38d06a0"
   },
   {
     "id": "src-s06-gam-mori-2",
@@ -277,7 +296,8 @@
       "season": "season-006",
       "playerId": "gam-mori",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "4db348276dc34dabb021ed22387acf3bf1505e95f89022fe3f3648a5114149c1"
   },
   {
     "id": "src-s06-gam-mori-3",
@@ -291,7 +311,8 @@
       "season": "season-006",
       "playerId": "gam-mori",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "ebfb1998c3a43b0ff2d4c8f690350a820607d7f1c912a410c5ce98f35edf431b"
   },
   {
     "id": "src-s06-enzo-1",
@@ -305,7 +326,8 @@
       "season": "season-006",
       "playerId": "enzo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "f99e3024cba5f2c19bb23f2b5b4243b5c497d77684dc3dbdf25bdf8839cab7af"
   },
   {
     "id": "src-s06-enzo-2",
@@ -319,7 +341,8 @@
       "season": "season-006",
       "playerId": "enzo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "9bf73e2b61b9cd5d47b5d50be8aaa5f8d48b354c60860ab187682c79f9e02e0c"
   },
   {
     "id": "src-s06-enzo-3",
@@ -333,7 +356,8 @@
       "season": "season-006",
       "playerId": "enzo",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "a230141d7f1b29b996ec7c916c199412e770139ebbdd831304878eef0c0c8c4c"
   },
   {
     "id": "src-s06-dias-1",
@@ -347,7 +371,8 @@
       "season": "season-006",
       "playerId": "dias",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "4d6efa7df0bb715231f9d9ba13ab22a0da86836133bd147f339655883f74080a"
   },
   {
     "id": "src-s06-dias-2",
@@ -361,7 +386,8 @@
       "season": "season-006",
       "playerId": "dias",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "c6de1ae8fed21659056ee7d4877903d83f6e305b8e6686b77cb936d19a4ced70"
   },
   {
     "id": "src-s06-dias-3",
@@ -375,7 +401,8 @@
       "season": "season-006",
       "playerId": "dias",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "b015f6f3b5cd61da92fdb752376cb5770413b2f0a8c3ba842481b3fe243fa6b4"
   },
   {
     "id": "src-s06-nando-1",
@@ -389,7 +416,8 @@
       "season": "season-006",
       "playerId": "nando",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "8b578741ed256314f3417ff921aa139bb0557a278f716a8607c155455b17e388"
   },
   {
     "id": "src-s06-nando-2",
@@ -403,7 +431,8 @@
       "season": "season-006",
       "playerId": "nando",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "6b47e66383c0ccd22d49fba39edf9c728a1429139a9a7310e9a641501648d0a9"
   },
   {
     "id": "src-s06-nando-3",
@@ -417,7 +446,8 @@
       "season": "season-006",
       "playerId": "nando",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "f116d536b59464bdefc0be8208e279822c7dd0645fe4104ee0bcaf9a735decfb"
   },
   {
     "id": "src-s06-guilherme-1",
@@ -431,7 +461,8 @@
       "season": "season-006",
       "playerId": "guilherme",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "5263535761bc22960236d0f23c675d6e123ddf0bdcfed082ce9ec5a2fcd3da37"
   },
   {
     "id": "src-s06-guilherme-2",
@@ -445,7 +476,8 @@
       "season": "season-006",
       "playerId": "guilherme",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "bf44ad174ad77f3b6dc374660b148311a5ac1ed73ea5d62cdab7cad3e54292fa"
   },
   {
     "id": "src-s06-guilherme-3",
@@ -459,7 +491,8 @@
       "season": "season-006",
       "playerId": "guilherme",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "f302aa8600e3ccc83a5c2e21acb137c69947857c8a565bd55edb1e8475bdb212"
   },
   {
     "id": "src-s06-matheus-medeiros-1",
@@ -473,7 +506,8 @@
       "season": "season-006",
       "playerId": "matheus-medeiros",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "690fc54deae4655c9e2276003c9329ee2ab5d8985da5caf35191689e174462f6"
   },
   {
     "id": "src-s06-matheus-medeiros-2",
@@ -487,7 +521,8 @@
       "season": "season-006",
       "playerId": "matheus-medeiros",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "6f93b3f8c05135a08b85f60f50a33ab746560fdaaf172e2f296efbec6295e9a0"
   },
   {
     "id": "src-s06-matheus-medeiros-3",
@@ -501,7 +536,8 @@
       "season": "season-006",
       "playerId": "matheus-medeiros",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "ff642f1981d56d4d7a1d3cdb9d94a07d5a37c601541282802f59535acd148501"
   },
   {
     "id": "src-s06-abel-1",
@@ -515,7 +551,8 @@
       "season": "season-006",
       "playerId": "abel",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "185335bc15c55a9e7a7c4f69b1be39660547faf1491389021fea8a2f59a971a4"
   },
   {
     "id": "src-s06-abel-2",
@@ -529,7 +566,8 @@
       "season": "season-006",
       "playerId": "abel",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "80621f9e77da3e8a1fc789d94f018529fc89b202ab7d80dd1b45a56718bc11f8"
   },
   {
     "id": "src-s06-abel-3",
@@ -543,6 +581,7 @@
       "season": "season-006",
       "playerId": "abel",
       "originalStoredPublicly": false
-    }
+    },
+    "contentHash": "8e0b64801e03e9bb6537b3afddaf845dd52f30f9e8806f9555fb8956c8aad68f"
   }
 ]
