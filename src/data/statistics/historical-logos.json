@@ -261,5 +261,135 @@
         "slug": "brooklyn-nets"
       }
     }
+  },
+  "logos2015": {
+    "ATL": {
+      "year": 2015,
+      "slug": "atlanta-hawks"
+    },
+    "BOS": {
+      "year": 1996,
+      "slug": "boston-celtics"
+    },
+    "BKN": {
+      "year": 2012,
+      "slug": "brooklyn-nets"
+    },
+    "CHA": {
+      "year": 2014,
+      "slug": "charlotte-hornets"
+    },
+    "CHI": {
+      "year": 1966,
+      "slug": "chicago-bulls"
+    },
+    "CLE": {
+      "year": 2010,
+      "slug": "cleveland-cavaliers"
+    },
+    "DAL": {
+      "year": 2001,
+      "slug": "dallas-mavericks"
+    },
+    "DEN": {
+      "year": 2008,
+      "slug": "denver-nuggets"
+    },
+    "DET": {
+      "year": 2005,
+      "slug": "detroit-pistons"
+    },
+    "GS": {
+      "year": 2010,
+      "slug": "golden-state-warriors"
+    },
+    "HOU": {
+      "year": 2003,
+      "slug": "houston-rockets"
+    },
+    "IND": {
+      "year": 2005,
+      "slug": "indiana-pacers"
+    },
+    "LAC": {
+      "year": 2015,
+      "slug": "los-angeles-clippers"
+    },
+    "LAL": {
+      "year": 2001,
+      "slug": "los-angeles-lakers"
+    },
+    "MEM": {
+      "year": 2004,
+      "slug": "memphis-grizzlies"
+    },
+    "MIA": {
+      "year": 1999,
+      "slug": "miami-heat"
+    },
+    "MIL": {
+      "year": 2015,
+      "slug": "milwaukee-bucks"
+    },
+    "MIN": {
+      "year": 2008,
+      "slug": "minnesota-timberwolves"
+    },
+    "NO": {
+      "year": 2008,
+      "slug": "new-orleans-hornets"
+    },
+    "NY": {
+      "year": 2011,
+      "slug": "new-york-knicks"
+    },
+    "OKC": {
+      "year": 2008,
+      "slug": "oklahoma-city-thunder"
+    },
+    "ORL": {
+      "year": 2010,
+      "slug": "orlando-magic"
+    },
+    "PHI": {
+      "year": 2015,
+      "slug": "philadelphia-76ers"
+    },
+    "PHX": {
+      "year": 2013,
+      "slug": "phoenix-suns"
+    },
+    "POR": {
+      "year": 2004,
+      "slug": "portland-trail-blazers"
+    },
+    "SAC": {
+      "year": 1994,
+      "slug": "sacramento-kings"
+    },
+    "SA": {
+      "year": 2002,
+      "slug": "san-antonio-spurs"
+    },
+    "TOR": {
+      "year": 2015,
+      "slug": "toronto-raptors"
+    },
+    "UTA": {
+      "year": 2010,
+      "slug": "utah-jazz"
+    },
+    "WAS": {
+      "year": 2014,
+      "slug": "washington-wizards"
+    },
+    "NJN": {
+      "year": 1997,
+      "slug": "new-jersey-nets"
+    },
+    "SEA": {
+      "year": 2001,
+      "slug": "seattle-supersonics"
+    }
   }
 }
