@@ -1,0 +1,51 @@
+[
+  {
+    "id": "season-008",
+    "edition": 8,
+    "label": "2012–13 · Temporada 08",
+    "sport": "basquete",
+    "status": "completed",
+    "phases": [
+      {
+        "id": "regular",
+        "name": "Temporada regular",
+        "order": 0,
+        "type": "stage"
+      },
+      {
+        "id": "playoffs",
+        "name": "Playoffs",
+        "order": 1,
+        "type": "aggregate"
+      },
+      {
+        "id": "first-round",
+        "name": "Primeira rodada",
+        "order": 2,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "quarterfinals",
+        "name": "Quartas de final",
+        "order": 3,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "conference-finals",
+        "name": "Finais de conferência",
+        "order": 4,
+        "type": "stage",
+        "parentId": "playoffs"
+      },
+      {
+        "id": "nba-finals",
+        "name": "Finais da NBA",
+        "order": 5,
+        "type": "stage",
+        "parentId": "playoffs"
+      }
+    ]
+  }
+]
