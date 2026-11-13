@@ -262,5 +262,33 @@
       "src-s07-eb418516"
     ],
     "createdAt": "2026-11-13T18:00:00.000Z"
+  },
+  {
+    "id": "rev-stat-s07-first-round-cristiano-ronaldo-1",
+    "recordId": "stat-s07-first-round-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s07-playoffs-rounds-2011-12",
+    "sourceIds": [
+      "src-s07-56011307",
+      "src-s07-4a09eebf",
+      "src-s07-24fab76c"
+    ],
+    "createdAt": "2026-11-13T17:46:00.000Z",
+    "reason": "Confirmado pelo usuário: eliminado no First Round, de modo que o agregado de playoffs corresponde integralmente à primeira rodada."
+  },
+  {
+    "id": "rev-stat-s07-first-round-marco-barbosa-1",
+    "recordId": "stat-s07-first-round-marco-barbosa",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s07-playoffs-rounds-2011-12",
+    "sourceIds": [
+      "src-s07-b567f590",
+      "src-s07-a2736059",
+      "src-s07-4ba24fa1"
+    ],
+    "createdAt": "2026-11-13T17:46:00.000Z",
+    "reason": "Confirmado pelo usuário: eliminado no First Round, de modo que o agregado de playoffs corresponde integralmente à primeira rodada."
   }
 ]
