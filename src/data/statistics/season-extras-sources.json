@@ -228,5 +228,52 @@
       "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
       "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
     }
+  ],
+  "season-008": [
+    {
+      "id": "drive-s08-extra-1",
+      "filename": "249dd0c6-50e8-4249-98ea-a5f2d80bfaae.jpg",
+      "driveFileId": "1pzVXteIzoLkCrTKTtBBJ4Xb7L5Edg0Jd",
+      "sha256": "c4d48500ad7e407012c5ba96ab5066deb57e856370b23b4687df9a2ef5ca5596",
+      "kind": "playoff-bracket",
+      "driveFolderId": "1f0CcOFIezMpYPG1SDQaZtORpnI4RwiBF",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)/Extras"
+    },
+    {
+      "id": "drive-s08-extra-2",
+      "filename": "ea5f3f7b-adf6-42c7-985e-e86f1e92df1b.jpg",
+      "driveFileId": "1DxgvYvv0Odt5BbjLFyjN096bpOt-gdV_",
+      "sha256": "a393b3463c017bcb5275d405dcd2fec304f4917dbb3ac9693ede03bc3d0fbe67",
+      "kind": "standings",
+      "driveFolderId": "1f0CcOFIezMpYPG1SDQaZtORpnI4RwiBF",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)/Extras"
+    },
+    {
+      "id": "drive-s08-extra-3",
+      "filename": "adc34624-8bf5-4814-870f-9a5021503fe5.jpg",
+      "driveFileId": "19_4C3C4S0Y35uzh4bpKvBAdtSvrl27rO",
+      "sha256": "3191c98b05a507b09157c5d834eb7d48648022d7feafe6449f4ea721478cd793",
+      "kind": "standings",
+      "driveFolderId": "1f0CcOFIezMpYPG1SDQaZtORpnI4RwiBF",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)/Extras"
+    },
+    {
+      "id": "drive-s08-extra-4",
+      "filename": "6f52cfdb-d8f9-4ada-a898-fad7bfa076fb.jpg",
+      "driveFileId": "15i0prijs03Bm_Coax6U2lhei2JY3-QPx",
+      "sha256": "edfb5045054aa2ebe8ef303555155e51b0720ed281f9ca216126fc42eb1bd284",
+      "kind": "standings",
+      "driveFolderId": "1f0CcOFIezMpYPG1SDQaZtORpnI4RwiBF",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)/Extras"
+    },
+    {
+      "id": "drive-s08-extra-5",
+      "filename": "c8c84025-3c47-40c3-8e3a-78e60c5d6568.jpg",
+      "driveFileId": "1MAOr67sMvVnh33CvQb0JQqca2oJu5K02",
+      "sha256": "f87e531d6add813b1176a48b1133e8f6bede44d25ae35f8f22f610f60350383a",
+      "kind": "standings",
+      "driveFolderId": "1f0CcOFIezMpYPG1SDQaZtORpnI4RwiBF",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)/Extras"
+    }
   ]
 }
