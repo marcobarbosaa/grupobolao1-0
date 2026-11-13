@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-11-13T14:52:00.000Z",
+  "generatedAt": "2026-11-13T16:36:00.000Z",
   "seasons": [
     "season-001/seasons.json",
     "season-002/seasons.json",
@@ -20,7 +20,8 @@
     "season-005/statistics.json",
     "season-004/statistics-rounds.json",
     "season-005/statistics-rounds.json",
-    "season-006/statistics.json"
+    "season-006/statistics.json",
+    "season-006/statistics-rounds.json"
   ],
   "games": [],
   "awards": [],
@@ -47,7 +48,8 @@
     "season-005/sources.json",
     "season-004/sources-rounds.json",
     "season-005/sources-rounds.json",
-    "season-006/sources.json"
+    "season-006/sources.json",
+    "season-006/sources-rounds.json"
   ],
   "batches": [
     "season-001/batches.json",
@@ -59,7 +61,8 @@
     "season-005/batches.json",
     "season-004/batches-rounds.json",
     "season-005/batches-rounds.json",
-    "season-006/batches.json"
+    "season-006/batches.json",
+    "season-006/batches-rounds.json"
   ],
   "revisions": [
     "season-001/revisions.json",
@@ -71,6 +74,7 @@
     "season-005/revisions.json",
     "season-004/revisions-rounds.json",
     "season-005/revisions-rounds.json",
-    "season-006/revisions.json"
+    "season-006/revisions.json",
+    "season-006/revisions-rounds.json"
   ]
 }
