@@ -46,7 +46,7 @@ function LandingShell({ children }: { children: ReactNode }) {
 /** The owner unmounts on navigation: no CSS variables or carousel state leak to other routes. */
 export function SiteShell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
-  return pathname === "/" ? (
+  return (pathname === "/" || /^\/jogadores\/?$/.test(pathname)) ? (
     <LandingShell>{children}</LandingShell>
   ) : (
     <div className="site-shell">{children}</div>
