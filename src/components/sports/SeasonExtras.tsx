@@ -7,6 +7,7 @@ import history002 from "../../data/statistics/season-002/teamHistory.json";
 import history003 from "../../data/statistics/season-003/teamHistory.json";
 import history004 from "../../data/statistics/season-004/teamHistory.json";
 import history005 from "../../data/statistics/season-005/teamHistory.json";
+import history006 from "../../data/statistics/season-006/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
@@ -60,7 +61,7 @@ const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
 // Historical affiliation is season-scoped; never infer it from a player's current uniform.
 const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-001": history001, "season-002": history002, "season-003": history003,
-  "season-004": history004, "season-005": history005,
+  "season-004": history004, "season-005": history005, "season-006": history006,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO", "sacramento-kings": "SAC",
@@ -175,7 +176,7 @@ function historicalLogoSrc(code: string, seasonId: SeasonId): string | undefined
   const logo =
     publishedCatalog.extras[seasonId]?.logos?.[code] ??
     logoOverrides[seasonId]?.[code] ??
-    (Number(seasonId.slice(-3)) <= 5 ? baseLogos[code] : undefined);
+    (Number(seasonId.slice(-3)) <= 6 ? baseLogos[code] : undefined);
   if (!logo) return undefined;
   const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
   return `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${extension}`;
