@@ -1,0 +1,782 @@
+[
+  {
+    "id": "src-s08-c45e6b69",
+    "kind": "screenshot",
+    "fileName": "c45e6b69-bd3a-4e0f-ae6d-74a955b77dd2.jpg",
+    "contentHash": "cfa63bddbf48b2e397fed900eab25f096c53d61e3b172aa695d09e5fb9d4fa87",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1ppzcWA5YhUww-fVVRWMp-4C5OCQ88yUk",
+      "driveFolderId": "1XxpyjL4AZ-RHgXIJRmzLniFF_DdR_olR",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-cb5cd91c",
+    "kind": "screenshot",
+    "fileName": "cb5cd91c-3330-44fa-972b-bfcec7ac2c1e.jpg",
+    "contentHash": "6a49ebbf8e88390cc87e1cda1b0bb06d87f3a95cdc8141b8edbea14830a02a10",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1DF3PlXvr2HLm9qxQEWq-GOd5x3ZtP-Y_",
+      "driveFolderId": "1XxpyjL4AZ-RHgXIJRmzLniFF_DdR_olR",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-1a761018",
+    "kind": "screenshot",
+    "fileName": "1a761018-f513-44d4-aca8-899a1ade2959.jpg",
+    "contentHash": "8ebeac6af8416f9b05e217661198f1dc1282e0661f488d0570bb83abce4879c7",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1Jgj6T7KYLNmk8rjrdh2nyuB_J6p_l8K0",
+      "driveFolderId": "1XxpyjL4AZ-RHgXIJRmzLniFF_DdR_olR",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-a010bf08",
+    "kind": "screenshot",
+    "fileName": "a010bf08-1083-41ce-ac21-f6cc578f3080.jpg",
+    "contentHash": "96b5abd1f251106dae36d9707084d13f7247dc7de784d6d1e5f5c95abd33126a",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1ftNMlc2pdjL-rA6IthhxPPn0bJ-uQrB_",
+      "driveFolderId": "1XxpyjL4AZ-RHgXIJRmzLniFF_DdR_olR",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "jonas",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-15e7a85b",
+    "kind": "screenshot",
+    "fileName": "15e7a85b-8bc8-4c55-8a26-d1f00fa3052f.jpg",
+    "contentHash": "d0ef336a9436ef3553601651ab014e3fabe77b06c9045409dd0a9a17222dffbe",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1vaSFTBLLhGZjTVo_hstOP2pG61a9nZTf",
+      "driveFolderId": "1stcD0_-ZyCp6LRVqM3f9vY8VgtgtVGck",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-f22f5540",
+    "kind": "screenshot",
+    "fileName": "f22f5540-7eae-499e-af37-8df0ebfc3b6d.jpg",
+    "contentHash": "7b893fba36c21bcf5a7d7cd9d64a5573f3e03d896ef2561bcfeec079ce2d5b26",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1hCIpwpaB9A-0t5pNNuCLZdE6nI5WQ4Nm",
+      "driveFolderId": "1stcD0_-ZyCp6LRVqM3f9vY8VgtgtVGck",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-ff7e0ef0",
+    "kind": "screenshot",
+    "fileName": "ff7e0ef0-4cce-4d1f-b81f-f6859f8ae465.jpg",
+    "contentHash": "897fc72aa81f0461995cc0ae443b32a322a65977b2bfd306b7fc90a7cca10fc1",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "126RFmWpypYWg_wDAyHTR3LbHZyGnFB4q",
+      "driveFolderId": "1stcD0_-ZyCp6LRVqM3f9vY8VgtgtVGck",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-6cae1fb0",
+    "kind": "screenshot",
+    "fileName": "6cae1fb0-3c6e-4e01-a9c9-3afde5ef8074.jpg",
+    "contentHash": "5b03cff8ea8d8f5c6dde24f4ea0741d9be36ce39de0000bc8de041f47f8cfb48",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1o2G_SckmN2R3lOiNLiQArxuenSsfLv7L",
+      "driveFolderId": "1stcD0_-ZyCp6LRVqM3f9vY8VgtgtVGck",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "tailan",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-fe39c6d0",
+    "kind": "screenshot",
+    "fileName": "fe39c6d0-99ea-4846-bcdc-82fe41c5d055.jpg",
+    "contentHash": "e415b7118de7aa8f517294cc71f45a2de3e9c7bb94644e03b883ff0c354da387",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1A5M9M1dYXCllKqOm7zJZo0f3z6Fhgz8k",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-fdb3cfd5",
+    "kind": "screenshot",
+    "fileName": "fdb3cfd5-b4d1-4a61-a49a-a4b9452ca233.jpg",
+    "contentHash": "b1b1d61b9c302d80c0da195f577efa277c77032b02968f6a29ab9b722a97bbdf",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1OgEjVyyRaqENSsiXD-eMLcBDcfC9ZvD8",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-9f9fafb0",
+    "kind": "screenshot",
+    "fileName": "9f9fafb0-022e-4229-9731-997135ec23da.jpg",
+    "contentHash": "6770af72cbd2dd0131f2b2def910b9b0c0cba7633b35847a95df69733aba68f1",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1GrXOq_U6RCD2ftLTxd3sbpRpAq70psMe",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-5167577f",
+    "kind": "screenshot",
+    "fileName": "5167577f-4df0-49fe-8072-9c9208d1eff0.jpg",
+    "contentHash": "dfa1f59fee2d3183ac2fb3f130201bc90d58c7a275e4983c0ac1be078e17ed44",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "16qjqZRTIoVkIHlFnVM_Mg6If9fsGYTHn",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-f4aac844",
+    "kind": "screenshot",
+    "fileName": "f4aac844-b002-4c2f-9aac-02a42a876d78.jpg",
+    "contentHash": "c775eac3e7016eb0644b7cfca96132ec0ac115411fa4b92f56fc3701b12dec67",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1cV1c4sQozV3_7kyI_9MZ-55YCiE65e_K",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-5157adf2",
+    "kind": "screenshot",
+    "fileName": "5157adf2-b6aa-4812-b316-1f754efdc36e.jpg",
+    "contentHash": "4dc5cb71dbb5a957f006c4bf2cfde8d134d83dad684e35b1427c77e28aca2732",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1qrB1gR8-ITyX_HSgN2WHvhFFhJHkFn3G",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-8690e3df",
+    "kind": "screenshot",
+    "fileName": "8690e3df-8c8a-4458-afb8-8633c3ef1a9d.jpg",
+    "contentHash": "69b2697d84171b1efe1182ec97d0c3c09950c2fe4b192a30e3bee9af8a420a4a",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1OoVtEh1H7eojU04EefJvdzPtLXbPPOX0",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-ea1f9c2e",
+    "kind": "screenshot",
+    "fileName": "ea1f9c2e-5600-4321-a4a0-07d945095a89.jpg",
+    "contentHash": "06c3bd654269cbe0927c5bc2c46bf17d3d194ec94c23a5cc7fc6f585cd062b3e",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1s9oy3T72x-sx2CKcpUdjIBeHS_nK-buu",
+      "driveFolderId": "1fp-oogaBuWCa4ZW5T8-bIkjdKsdqa2hp",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "cristiano-ronaldo",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-9798621f",
+    "kind": "screenshot",
+    "fileName": "9798621f-3e0a-4537-a72a-92799fe44a2a.jpg",
+    "contentHash": "8a2995b7e4de822c3d396f1b808fd9f1610935d0034a468b9c7e666a7f60ea41",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1JhCO48_nWGPanTo-DueiTDtY1lID6O7w",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-e29cf168",
+    "kind": "screenshot",
+    "fileName": "e29cf168-8ba4-4d75-813e-3aa4c52e2e13.jpg",
+    "contentHash": "a9c119b613d792038d504fed08b0b271652da8596d9f8df28a73213f93295fdc",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1QBi7NCM1h5kEs_9BxQu1-wZKYT6MCcB6",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-0afb082c",
+    "kind": "screenshot",
+    "fileName": "0afb082c-0c34-487b-9472-2a5de1d91853.jpg",
+    "contentHash": "eacc3034601b908e16d6495e3fd3b7afc0fa2365ca55ed0b69172c5300c0017e",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "17mKSbNoUamlmrwZFEm5PxUbAOYFJhAxJ",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-59ea43c5",
+    "kind": "screenshot",
+    "fileName": "59ea43c5-be4c-4d2b-8a6d-92bdd8c3242b.jpg",
+    "contentHash": "6032924cb4ad71940275a425d8132002ee057edde1d23f07d472f4e3918107f8",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1uMI7oznVEG7AfHS1VEBCWPPXacZKwvog",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-7225e39e",
+    "kind": "screenshot",
+    "fileName": "7225e39e-3948-4b1c-8c34-b0c461564226.jpg",
+    "contentHash": "7968bae70c74284083433758e540ab735b8978fd49dff161082ebb4cb89d742b",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "13aeMOnmfOI_VLtAZBrlFnmnv42wJM2mo",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-10228802",
+    "kind": "screenshot",
+    "fileName": "10228802-f5b7-47f4-a2d0-eadad2934c3b.jpg",
+    "contentHash": "1c178773aabd289610b843ee56623c53eb1ebd278a2576760d1246c42a67cad0",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1i1zoLiC2eJDvN38GFve7turvod7TlVTu",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-4f2ae3d7",
+    "kind": "screenshot",
+    "fileName": "4f2ae3d7-38ba-493b-a5c8-a1d38a13c41c.jpg",
+    "contentHash": "8d154dee76d38d3e6a2ca2180a0df57df838737b8c29f0e7c2209ea656cfcc9c",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1yt4MirfYwQi9YAfSaa_c3e9Bj6r-P7fW",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-e9724a76",
+    "kind": "screenshot",
+    "fileName": "e9724a76-1828-45e6-b0e6-ac5526767a72.jpg",
+    "contentHash": "5906918554af5aa013fc5171e29aae9a0d7f38a08ebeb24274c9a9b979c6bfc9",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1AFETsJfWLciy2ZjMnFJNcs2kMp9ik1d9",
+      "driveFolderId": "1x-kWxzqt_rp1W7XjAfs8VyBJrGxJ_iRB",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "fabio-carvalho",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-980340e2",
+    "kind": "screenshot",
+    "fileName": "980340e2-6b0a-4d0e-9eae-840ad91629d4.jpg",
+    "contentHash": "b9910dc5cefdafb31cf446249650dfc6afdf0c8122030a3cce1a2e080acfece6",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1txGUAorzv6e0353yDZmEw_jUlVO4Ks7H",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-875f9837",
+    "kind": "screenshot",
+    "fileName": "875f9837-833f-44ae-9274-99aa5b5cbeb8.jpg",
+    "contentHash": "7049dff488ae3073317a174deabba3325bf28fe9bad3bbfc134ce5ab285fc374",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1Bw4gZ7GsJf79CiJoBvD5_2-RxbilvcLm",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-f9fba7bd",
+    "kind": "screenshot",
+    "fileName": "f9fba7bd-125e-41d4-9c85-65aefb8b67b8.jpg",
+    "contentHash": "8fd128043e7347503e735c6f1b336d287c0f2c5261842155c0a46224ebcc6e92",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1pmbeITZ4PDhiXCQscobqfQzv-bvb0C2O",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-c5498e3f",
+    "kind": "screenshot",
+    "fileName": "c5498e3f-f888-4b20-b0a5-145409036489.jpg",
+    "contentHash": "8d8fd3f9ac3ad9590b8ac4d4af1a471b89dd081f86eb9991ebd7bc94958a2a07",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1tHLGk_ZpQl6qSX2AeQvQWctjUBVH0n0v",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-b5601492",
+    "kind": "screenshot",
+    "fileName": "b5601492-374f-4d13-b347-09e0a56d3bb2.jpg",
+    "contentHash": "6d20c837a525d35cfef462f62e2cf6505d09c948d91d132ef126873106c542c9",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1iO88e0_Yd6PRKFhjplJyzxGVgAb4FBaq",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-a331be99",
+    "kind": "screenshot",
+    "fileName": "a331be99-2fcc-49a2-9aa3-175bcd9ec03a.jpg",
+    "contentHash": "d62cbfb3e00232509af2a8c99c5ddf332d63a8f8220cc784759c82723f97646d",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "131BTkUeNoueDjTGwK9IAD0aaA-16NgPN",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-cedc9b6b",
+    "kind": "screenshot",
+    "fileName": "cedc9b6b-6c0e-4c5c-8b5d-3b566dee9f2f.jpg",
+    "contentHash": "ac64ac0cee4ba3617aac43b33ecdae77f18b329b121a1b9b68887ffc7a458ab2",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1zUIEPy6ZaQ152QO0Tv5rQ8emFD_mezMQ",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-e44bb704",
+    "kind": "screenshot",
+    "fileName": "e44bb704-a181-49a7-9208-62547729cf0c.jpg",
+    "contentHash": "cb65139f5ecec9f5d7d15c7b09e4b903d9ba370be7c705bcd53722b693a8f8b0",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1Fy-8oTKFOnfFCOSuibZ7yo-qo8JcJWAb",
+      "driveFolderId": "15YOE1Vtnlabx-DhH_TP8e-D1x9bder8A",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "gam-mori",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-325e48b9",
+    "kind": "screenshot",
+    "fileName": "325e48b9-0c7e-41f3-9a68-647d63df6b39.jpg",
+    "contentHash": "501548b3efce486add4a51c7df3837b3519d1f8841e401f3a81f0ba95abc3f2f",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1fgnOiffTe7C3qEWluuPv8njs7fdW5jUv",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-84ad2586",
+    "kind": "screenshot",
+    "fileName": "84ad2586-6f00-4af9-a1b2-f3e1da3a2f16.jpg",
+    "contentHash": "7cb1150b928f3282724e7448cf95bb36daff26a3160a7cdd06f5822d2af6d8f4",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1JyBDdQin8mppQSs-SPQI7cLhpiaFxgBw",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-bc94c6f4",
+    "kind": "screenshot",
+    "fileName": "bc94c6f4-9354-4003-a235-07fe9ef7f784.jpg",
+    "contentHash": "1a80d026a4ff600ceb3850c7cbbc382bfefc5d6d7bd756afab2e3b980b5e67a4",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1T2sObvkE_phiUa0wPlQzWXAPIjnugyB3",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-3b03d9cb",
+    "kind": "screenshot",
+    "fileName": "3b03d9cb-8456-4185-b20e-5e3ffde98adb.jpg",
+    "contentHash": "2a61af67fdff4a7fa13fa7dc476966ab340bdcb43c5be7970c205c269692aede",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1p5xNh6mN-XpdykiDrcnJJkOnXjGhb0yX",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-7b852428",
+    "kind": "screenshot",
+    "fileName": "7b852428-dced-410e-af93-b0155d5e06e6.jpg",
+    "contentHash": "daeffa4c8e07b7f1da313301b41e1b7da3da90d37cf1f21b2d878ef2ad40f48a",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1OQnQe06veAWRl9zLT4HZorPQYnfTnH5T",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-13e82aa0",
+    "kind": "screenshot",
+    "fileName": "13e82aa0-f7ee-4100-9d4a-232c35138952.jpg",
+    "contentHash": "6ab99592d914f65b1253d3c6522e805597f411bfefa1399c743188db2b7d9056",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1nUhSEHm91QJ0KpzFzmT5rAXjeQ6dBWwV",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-c361d76f",
+    "kind": "screenshot",
+    "fileName": "c361d76f-fa52-4ac5-abd8-5a59f456156b.jpg",
+    "contentHash": "d2167fbdc42cc0741bf2554490cf352ce448b0d3c31f2f63c372c2b6cab296db",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1RbSn8V8vPwo6qThLlOEojiSEjYA-ZBx6",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-ebeb5481",
+    "kind": "screenshot",
+    "fileName": "ebeb5481-ce81-42c4-8785-fbbfed1a47ec.jpg",
+    "contentHash": "57a5b61360abf198bd7a2d31fd41281677c46681d6f3171777a866af49b35d5c",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1aAcIan4PeRHfjrIWq50KkKzotqABlRhj",
+      "driveFolderId": "1_sycLVTYllzMS4pqF6cPLtFumD3iKGjQ",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "nando",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-5cf8b750",
+    "kind": "screenshot",
+    "fileName": "5cf8b750-311a-4271-ae17-de5671eba903.jpg",
+    "contentHash": "eaeb42f8188c4215d798efd32e21dc6e877fbbed2fd8e15ed98bb83d5e229769",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1A7kXDOS5aakV6a8SkvEUREKOLxm4EwWN",
+      "driveFolderId": "17jKiSmDfK0Eps3xGmQlm30h1wLsmWd5F",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-6fcfccf8",
+    "kind": "screenshot",
+    "fileName": "6fcfccf8-6d62-406f-995b-485fab278e93.jpg",
+    "contentHash": "ee1b966e2c3d4e67fd3d39625939d1f0878044e790550e83d0af779ec3a30ecc",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1tEZYvyU5K5UeyBkFn35HaHOKkB1Ql_yJ",
+      "driveFolderId": "17jKiSmDfK0Eps3xGmQlm30h1wLsmWd5F",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-33495c22",
+    "kind": "screenshot",
+    "fileName": "33495c22-c8bb-492e-b68e-c19a4657f055.jpg",
+    "contentHash": "21940b76ba22eb28507f85e8041f1edc6f798a06e691e8fc4ad3e7b02fa9dabc",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1bQJPRO3a_a1LTA6njK47oUG8c-kfkP6_",
+      "driveFolderId": "17jKiSmDfK0Eps3xGmQlm30h1wLsmWd5F",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-f85a0615",
+    "kind": "screenshot",
+    "fileName": "f85a0615-4de4-428d-b1cd-69898eaa8dba.jpg",
+    "contentHash": "15c5463df4287005ee00f6f547645fbd10d21e8fb69498b559487c2ae06e765d",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1Sw8i5zTy7fDkjo4-og2NVRoTGBSRCt46",
+      "driveFolderId": "17jKiSmDfK0Eps3xGmQlm30h1wLsmWd5F",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "guilherme",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-458eb6e4",
+    "kind": "screenshot",
+    "fileName": "458eb6e4-4be8-4a58-9c0f-afe813d9ac95.jpg",
+    "contentHash": "fb758dbc1e219c79cf5896922a756f1dcef3b3a2697fb658dd335a2fe2058b51",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1wooxT4PKYaZMa4UakWFhSb302eFxWOl6",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-18fd2a26",
+    "kind": "screenshot",
+    "fileName": "18fd2a26-c5ca-48c9-b7e9-94b63ed80afe.jpg",
+    "contentHash": "c4401f4ca1fa4dd719911c9f1b011e234b7a7d78d6d1c8648707295e3ce9b430",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1_-c5qudKh5NNGAsEWvw94FZ4vDsrOhgL",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-3902a9ae",
+    "kind": "screenshot",
+    "fileName": "3902a9ae-edda-4f22-8802-0d3a28278d6c.jpg",
+    "contentHash": "e7ff0c9f30408991a7dcd27d7993403bfbf7d900a6373e539e1bbecddf9f753c",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1cc0BGDRWBNr1xsQSicruDjw5JzqU5-ZW",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-64a0a674",
+    "kind": "screenshot",
+    "fileName": "64a0a674-e402-469a-aa76-2973fcdc8151.jpg",
+    "contentHash": "0606b91e55daabd90e88f4e30e049ba2367c195175ea84ccd689ab6cd6631e1f",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1aPbjOuyeyjja7MX2vLZqtfEq3X7TDyCg",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-5fdfcb0d",
+    "kind": "screenshot",
+    "fileName": "5fdfcb0d-63be-4cad-9457-ba5d97055536.jpg",
+    "contentHash": "2a6352664f1da15b480a20e59853126b35f0fc9c2cc65a5554c6b8a73622a7d2",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1A2T9FirTQDrSOTCYQymw0tOqaXtDdTRn",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-afc06ff8",
+    "kind": "screenshot",
+    "fileName": "afc06ff8-da01-464c-967b-b1e5b777c619.jpg",
+    "contentHash": "1bc5da275ca90aed04e33112f40687a79190dbe4bcb0218dd447987c47473ac7",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1brKoLUDSCLS3o4V3DTvFv67VF347H5xg",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-58b97848",
+    "kind": "screenshot",
+    "fileName": "58b97848-f97f-4840-973f-2eb7f5f2f8a7.jpg",
+    "contentHash": "7a22e91404b5b46434bc2e7c87e38e5f44a6f51033b857d0da06e909b6ba7bd4",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1VsmX773vjTTgrz6JAUQAOJ1BKyRs99J6",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s08-ba6d898d",
+    "kind": "screenshot",
+    "fileName": "ba6d898d-087a-4809-bf64-4401df7bfffe.jpg",
+    "contentHash": "241933375c6f5ff2fe8b9a590f34c0c90d26b22b7868a0046758d769940f7b8e",
+    "receivedAt": "2026-11-13T19:15:00.000Z",
+    "metadata": {
+      "driveFileId": "1n--P4FsR949Y_gOZ5_q0hWJtFr0H22Fn",
+      "driveFolderId": "10x9-71c9j0iAm4RrU6PjsrAr-WRV_PFU",
+      "source": "Google Drive Primary: Bolão/Temporada 2012-2013 (F)",
+      "season": "season-008",
+      "playerId": "matheus-medeiros",
+      "originalStoredPublicly": false
+    }
+  }
+]
