@@ -362,5 +362,19 @@
       "src-s08-2b2ac78c"
     ],
     "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-dias-1",
+    "recordId": "stat-s08-first-round-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-dias-first-round-confirmation",
+    "sourceIds": [
+      "src-s08-1020f1d1",
+      "src-s08-34eac71b",
+      "src-s08-0ff1d2f9"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z",
+    "reason": "Atribuição da fase First Round confirmada pelo usuário; preservados os números originais do agregado de playoffs."
   }
 ]
