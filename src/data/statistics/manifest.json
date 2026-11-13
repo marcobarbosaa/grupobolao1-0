@@ -31,7 +31,8 @@
   "teams": [
     "season-001/teams.json",
     "season-001/teams-02.json",
-    "season-005/teams.json"
+    "season-005/teams.json",
+    "season-007/teams.json"
   ],
   "teamHistory": [
     "season-001/teamHistory.json",
