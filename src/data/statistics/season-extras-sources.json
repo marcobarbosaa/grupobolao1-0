@@ -144,5 +144,42 @@
       "sha256": "ba0d234e4fdbc19df2d8b3b669eef5af6d2242fe4952d00958363853851d42cc",
       "kind": "drive-image"
     }
+  ],
+  "season-006": [
+    {
+      "id": "drive-2010-playoff-tree",
+      "filename": "b306d199-bdba-4ed8-8bc5-b5c7d26e1662.jpg",
+      "driveFileId": "1Fpm86FrL6wa-mZZZEwhgSNstpImahr5H",
+      "sha256": "92338f75eb404d705439ef3e075995b278f80cd07cf655afd35709df59ec2283",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2010-east-upper",
+      "filename": "1f5a0966-7f1f-43a8-8e3a-ba5dc0908c76.jpg",
+      "driveFileId": "1D4fIvpwX3XB8pDv32w7w-JRU3PFuNH-w",
+      "sha256": "4d127fd352956c10e3283ecb7ab00bb8cf1e0fc8e849998896cd379b4df7cc48",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2010-east-lower",
+      "filename": "c45e69b2-890b-4aac-9aa6-463c00d5b683.jpg",
+      "driveFileId": "15I2xCQe9nqyos0dPidvA2GY_E1oImBnn",
+      "sha256": "fad63a3ab88aeb8a5cd7674aa29a1e2bcc475db018803e93e84871289ffb7be4",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2010-west-upper",
+      "filename": "43f5b18e-9ce3-4fcd-bd00-0079187251dc.jpg",
+      "driveFileId": "1O-mNFzz8IZu4Ktwa8VIg8WanJz63OLpT",
+      "sha256": "c0aed70405f2fbf55cecd36796af9215642924963bbcd05e1df7b765e7d070d7",
+      "kind": "drive-image"
+    },
+    {
+      "id": "drive-2010-west-lower",
+      "filename": "485ac8dc-ad47-4a5f-a513-9625ccdd356b.jpg",
+      "driveFileId": "1nYtlm3xFRTKv_48v5-0HVz3BXAYrGM1p",
+      "sha256": "049ce5f1af8341d66d58b0eff4986157aa192b01fd3103ed10465afd5a1a0511",
+      "kind": "drive-image"
+    }
   ]
 }
