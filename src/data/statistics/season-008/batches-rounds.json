@@ -71,5 +71,17 @@
     "createdAt": "2026-11-13T19:15:00.000Z",
     "approvedAt": "2026-11-13T19:15:00.000Z",
     "approvedBy": "Solicitação do usuário em 13/11/2026 para importar Temporada 2012-2013 (F) na main"
+  },
+  {
+    "id": "batch-s08-dias-first-round-confirmation",
+    "status": "published",
+    "sourceIds": [
+      "src-s08-1020f1d1",
+      "src-s08-34eac71b",
+      "src-s08-0ff1d2f9"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z",
+    "approvedAt": "2026-11-13T19:15:00.000Z",
+    "approvedBy": "Confirmação expressa do usuário de que os cinco jogos de Dias nos playoffs de 2012–2013 pertencem ao First Round"
   }
 ]
