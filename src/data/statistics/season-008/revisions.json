@@ -1,0 +1,340 @@
+[
+  {
+    "id": "rev-stat-s08-regular-jonas-1",
+    "recordId": "stat-s08-regular-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-65823929",
+      "src-s08-f2ab8bb3",
+      "src-s08-cd8f8441"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-jonas-1",
+    "recordId": "stat-s08-playoffs-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-65823929",
+      "src-s08-f2ab8bb3",
+      "src-s08-cd8f8441"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-tailan-1",
+    "recordId": "stat-s08-regular-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-81803f4d",
+      "src-s08-b117e6eb",
+      "src-s08-ae5368b5"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-tailan-1",
+    "recordId": "stat-s08-playoffs-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-81803f4d",
+      "src-s08-b117e6eb",
+      "src-s08-ae5368b5"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-cristiano-ronaldo-1",
+    "recordId": "stat-s08-regular-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-13cebeb6",
+      "src-s08-0a2654e0",
+      "src-s08-b7ce9e80"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-cristiano-ronaldo-1",
+    "recordId": "stat-s08-playoffs-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-13cebeb6",
+      "src-s08-0a2654e0",
+      "src-s08-b7ce9e80"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-fabio-carvalho-1",
+    "recordId": "stat-s08-regular-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-35e645e5",
+      "src-s08-085603bf",
+      "src-s08-b384abda"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-fabio-carvalho-1",
+    "recordId": "stat-s08-playoffs-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-35e645e5",
+      "src-s08-085603bf",
+      "src-s08-b384abda"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-russo-1",
+    "recordId": "stat-s08-regular-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-b4b3d1ca",
+      "src-s08-a985fa7d",
+      "src-s08-3e12bca0"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-russo-1",
+    "recordId": "stat-s08-playoffs-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-b4b3d1ca",
+      "src-s08-a985fa7d",
+      "src-s08-3e12bca0"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-marco-barbosa-1",
+    "recordId": "stat-s08-regular-marco-barbosa",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-4e23ec06",
+      "src-s08-437ed95a",
+      "src-s08-3584bb7e"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-marco-barbosa-1",
+    "recordId": "stat-s08-playoffs-marco-barbosa",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-4e23ec06",
+      "src-s08-437ed95a",
+      "src-s08-3584bb7e"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-gam-mori-1",
+    "recordId": "stat-s08-regular-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-c6f19e1c",
+      "src-s08-9d0c36e1",
+      "src-s08-1d1550cf"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-gam-mori-1",
+    "recordId": "stat-s08-playoffs-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-c6f19e1c",
+      "src-s08-9d0c36e1",
+      "src-s08-1d1550cf"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-enzo-1",
+    "recordId": "stat-s08-regular-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-f0bfd15d",
+      "src-s08-62874e1e",
+      "src-s08-1844b090"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-enzo-1",
+    "recordId": "stat-s08-playoffs-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-f0bfd15d",
+      "src-s08-62874e1e",
+      "src-s08-1844b090"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-dias-1",
+    "recordId": "stat-s08-regular-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-1020f1d1",
+      "src-s08-34eac71b",
+      "src-s08-0ff1d2f9"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-dias-1",
+    "recordId": "stat-s08-playoffs-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-1020f1d1",
+      "src-s08-34eac71b",
+      "src-s08-0ff1d2f9"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-nando-1",
+    "recordId": "stat-s08-regular-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-18055105",
+      "src-s08-50b877f0",
+      "src-s08-5e9b2c4c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-nando-1",
+    "recordId": "stat-s08-playoffs-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-18055105",
+      "src-s08-50b877f0",
+      "src-s08-5e9b2c4c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-guilherme-1",
+    "recordId": "stat-s08-regular-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-1861e837",
+      "src-s08-70232021",
+      "src-s08-873e8414"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-guilherme-1",
+    "recordId": "stat-s08-playoffs-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-1861e837",
+      "src-s08-70232021",
+      "src-s08-873e8414"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-matheus-medeiros-1",
+    "recordId": "stat-s08-regular-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-ebd93a63",
+      "src-s08-f576959a",
+      "src-s08-2f567be8"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-matheus-medeiros-1",
+    "recordId": "stat-s08-playoffs-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-ebd93a63",
+      "src-s08-f576959a",
+      "src-s08-2f567be8"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-regular-abel-1",
+    "recordId": "stat-s08-regular-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-63fb7eb4",
+      "src-s08-9fac6052",
+      "src-s08-2b2ac78c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-playoffs-abel-1",
+    "recordId": "stat-s08-playoffs-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-career-2012-13",
+    "sourceIds": [
+      "src-s08-63fb7eb4",
+      "src-s08-9fac6052",
+      "src-s08-2b2ac78c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  }
+]
