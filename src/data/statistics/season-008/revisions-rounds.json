@@ -1,0 +1,366 @@
+[
+  {
+    "id": "rev-stat-s08-quarterfinals-jonas-1",
+    "recordId": "stat-s08-quarterfinals-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-c45e6b69",
+      "src-s08-cb5cd91c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-jonas-1",
+    "recordId": "stat-s08-first-round-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-1a761018",
+      "src-s08-a010bf08"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-tailan-1",
+    "recordId": "stat-s08-quarterfinals-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-15e7a85b",
+      "src-s08-f22f5540"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-tailan-1",
+    "recordId": "stat-s08-first-round-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-ff7e0ef0",
+      "src-s08-6cae1fb0"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-nba-finals-cristiano-ronaldo-1",
+    "recordId": "stat-s08-nba-finals-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-fe39c6d0",
+      "src-s08-fdb3cfd5"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-conference-finals-cristiano-ronaldo-1",
+    "recordId": "stat-s08-conference-finals-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-9f9fafb0",
+      "src-s08-5167577f"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-cristiano-ronaldo-1",
+    "recordId": "stat-s08-quarterfinals-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-f4aac844",
+      "src-s08-5157adf2"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-cristiano-ronaldo-1",
+    "recordId": "stat-s08-first-round-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-8690e3df",
+      "src-s08-ea1f9c2e"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-nba-finals-fabio-carvalho-1",
+    "recordId": "stat-s08-nba-finals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-9798621f",
+      "src-s08-e29cf168"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-conference-finals-fabio-carvalho-1",
+    "recordId": "stat-s08-conference-finals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-0afb082c",
+      "src-s08-59ea43c5"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-fabio-carvalho-1",
+    "recordId": "stat-s08-quarterfinals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-7225e39e",
+      "src-s08-10228802"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-fabio-carvalho-1",
+    "recordId": "stat-s08-first-round-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-4f2ae3d7",
+      "src-s08-e9724a76"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-nba-finals-gam-mori-1",
+    "recordId": "stat-s08-nba-finals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-980340e2",
+      "src-s08-875f9837"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-conference-finals-gam-mori-1",
+    "recordId": "stat-s08-conference-finals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-f9fba7bd",
+      "src-s08-c5498e3f"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-gam-mori-1",
+    "recordId": "stat-s08-quarterfinals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-b5601492",
+      "src-s08-a331be99"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-gam-mori-1",
+    "recordId": "stat-s08-first-round-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-cedc9b6b",
+      "src-s08-e44bb704"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-nba-finals-nando-1",
+    "recordId": "stat-s08-nba-finals-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-325e48b9",
+      "src-s08-84ad2586"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-conference-finals-nando-1",
+    "recordId": "stat-s08-conference-finals-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-bc94c6f4",
+      "src-s08-3b03d9cb"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-nando-1",
+    "recordId": "stat-s08-quarterfinals-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-7b852428",
+      "src-s08-13e82aa0"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-nando-1",
+    "recordId": "stat-s08-first-round-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-c361d76f",
+      "src-s08-ebeb5481"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-guilherme-1",
+    "recordId": "stat-s08-quarterfinals-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-5cf8b750",
+      "src-s08-6fcfccf8"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-guilherme-1",
+    "recordId": "stat-s08-first-round-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-33495c22",
+      "src-s08-f85a0615"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-nba-finals-matheus-medeiros-1",
+    "recordId": "stat-s08-nba-finals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-458eb6e4",
+      "src-s08-18fd2a26"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-conference-finals-matheus-medeiros-1",
+    "recordId": "stat-s08-conference-finals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-3902a9ae",
+      "src-s08-64a0a674"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-quarterfinals-matheus-medeiros-1",
+    "recordId": "stat-s08-quarterfinals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-5fdfcb0d",
+      "src-s08-afc06ff8"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-matheus-medeiros-1",
+    "recordId": "stat-s08-first-round-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-58b97848",
+      "src-s08-ba6d898d"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-russo-1",
+    "recordId": "stat-s08-first-round-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-b4b3d1ca",
+      "src-s08-a985fa7d",
+      "src-s08-3e12bca0"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-marco-barbosa-1",
+    "recordId": "stat-s08-first-round-marco-barbosa",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-4e23ec06",
+      "src-s08-437ed95a",
+      "src-s08-3584bb7e"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-enzo-1",
+    "recordId": "stat-s08-first-round-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-f0bfd15d",
+      "src-s08-62874e1e",
+      "src-s08-1844b090"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  },
+  {
+    "id": "rev-stat-s08-first-round-abel-1",
+    "recordId": "stat-s08-first-round-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s08-playoff-rounds-2012-13",
+    "sourceIds": [
+      "src-s08-63fb7eb4",
+      "src-s08-9fac6052",
+      "src-s08-2b2ac78c"
+    ],
+    "createdAt": "2026-11-13T19:15:00.000Z"
+  }
+]
