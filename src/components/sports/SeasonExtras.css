@@ -86,3 +86,21 @@
 .league-page .seasonextras-note{color:#afbdd1}
 @media(max-width:700px){.league-hero{padding:48px 16px 37px}.league-hero h1{font-size:clamp(44px,11vw,69px)}.league-hero-mark{right:0;top:18%}.league-page .season-archive-controls{padding:20px 12px 0}.league-page .seasonextras{padding:22px 12px 48px}.league-page .seasonextras-panel{padding:16px}.league-page .seasonextras-nav button{flex:1;padding:12px 10px}.league-page .seasonextras-bracket{grid-template-columns:650px 165px 650px}.league-page .seasonextras-champion{padding:18px}.league-page .seasonextras-header h2{font-size:31px}}
 @media(prefers-reduced-motion:reduce){.league-page .seasonextras-series,.league-page .seasonextras-table tbody tr,.league-player-chip{transition:none}.league-page .seasonextras-series:hover{transform:none}}
+
+/* PR #21 refinement: minimal controls and no oversized editorial hero. */
+.league-page .season-archive-controls{padding-top:22px;gap:0}
+.league-page .season-archive-controls .seasonextras-toggle{gap:8px}
+.league-page .season-archive-controls .seasonextras-toggle button{
+  padding:10px 14px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+  border-radius:8px;background:#121e2e;color:#b7c8de;border-color:#354960;
+}
+.league-page .season-archive-controls .seasonextras-toggle button[aria-pressed=true]{
+  background:#e9c48b;color:#171a22;border-color:#e9c48b;
+}
+.league-page .seasonextras{padding-top:14px}
+.league-page .seasonextras-header{margin-bottom:14px;align-items:center}
+.league-page .seasonextras-header .seasonextras-kicker{margin:0}
+@media(max-width:700px){
+  .league-page .season-archive-controls{padding-top:14px}
+  .league-page .season-archive-controls .seasonextras-toggle button{padding:10px 8px;font-size:11px}
+}
