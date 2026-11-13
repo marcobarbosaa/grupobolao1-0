@@ -181,5 +181,52 @@
       "sha256": "049ce5f1af8341d66d58b0eff4986157aa192b01fd3103ed10465afd5a1a0511",
       "kind": "drive-image"
     }
+  ],
+  "season-007": [
+    {
+      "id": "drive-s07-extra-1",
+      "filename": "5c9a7a0c-628b-4871-a8d5-c27886f02b93.jpg",
+      "driveFileId": "1kk1SjN-EkNxeEFxClmDyjAFT1LMSbIPh",
+      "sha256": "b58585ea98bd64eb76c237a87444702e6ac1e062ac816a9fb8f27446259a2a4a",
+      "kind": "standings",
+      "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
+      "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
+    },
+    {
+      "id": "drive-s07-extra-2",
+      "filename": "dcd8bc98-c792-417a-b059-88a8f5e20eb4.jpg",
+      "driveFileId": "1bgIf7kyaPW-LHqfGNgj8KBpoOLDUbxgw",
+      "sha256": "70c3b608dec8cc6254b8a43bef4de1bf35105982fc204c179443785b9880e610",
+      "kind": "standings",
+      "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
+      "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
+    },
+    {
+      "id": "drive-s07-extra-3",
+      "filename": "5f5577e8-dba6-4d95-90be-1e64183e6937.jpg",
+      "driveFileId": "1CS_T7jJktoaq2Mg23EdJndcKvuDPmHWA",
+      "sha256": "d663e772ce6194e79688bf9b07f5affd7c4115e2cad98845eef36c59d83e8d86",
+      "kind": "standings",
+      "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
+      "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
+    },
+    {
+      "id": "drive-s07-extra-4",
+      "filename": "64673137-b9c4-4e89-9ee3-a0e958ff28cb.jpg",
+      "driveFileId": "1YnUuSx7yxQiab_laSaVjF0Q4cUG1Bkkn",
+      "sha256": "9ed2612cca581562ec5c1ddb478d1433f6ed2a8e7ea68576653c36aff97b664d",
+      "kind": "standings",
+      "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
+      "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
+    },
+    {
+      "id": "drive-s07-extra-5",
+      "filename": "72b3f643-774a-4369-b377-6efa5916aa02.jpg",
+      "driveFileId": "13DCO0GKw8Eu1QU0myX8MkJyPPq6uJiFt",
+      "sha256": "1aa1af3418c75b5834cb66a9a1346d1a49bc565e85551b607d3834b9cdf9b3bd",
+      "kind": "playoff-bracket",
+      "driveFolderId": "12HuTu53NJJNhRufAWDV8dOUCM2ZxlhqO",
+      "source": "Google Drive Primary: Bolão/Temporada 2011-2012 (F)/Extras"
+    }
   ]
 }
