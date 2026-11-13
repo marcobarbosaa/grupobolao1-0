@@ -14,9 +14,9 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", update);
   }, [pathname]);
   return (
-    <header className="site-header" data-integrated={pathname === "/" && !scrolled}>
+    <header className="site-header" data-integrated={(pathname === "/" || /^\/jogadores\/?$/.test(pathname)) && !scrolled}>
       <div className="site-header-inner">
-        <Brand symbolOnly={pathname === "/"} />
+        <Brand symbolOnly={pathname === "/" || /^\/jogadores\/?$/.test(pathname)} />
         <MainNavigation />
         <MobileMenu />
       </div>
