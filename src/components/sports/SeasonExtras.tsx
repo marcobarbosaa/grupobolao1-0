@@ -120,6 +120,9 @@ const logoOverrides: Record<
   SeasonId,
   Record<string, LogoDefinition>
 > = historicalLogoData.seasonOverrides;
+// A single 2015-era visual reference for the league archive; franchise names
+// that no longer existed in 2015 retain the last relevant historical emblem.
+const logos2015: Record<string, LogoDefinition> = historicalLogoData.logos2015;
 const teamNames: Record<string, string> = Object.fromEntries(
   Object.values(seasons["season-002"].standings ?? {})
     .flat()
@@ -178,12 +181,15 @@ const rounds: { id: RoundId; label: string }[] = [
 
 function historicalLogoSrc(code: string, seasonId: SeasonId): string | undefined {
   const logo =
+    logos2015[code] ??
     publishedCatalog.extras[seasonId]?.logos?.[code] ??
     logoOverrides[seasonId]?.[code] ??
     baseLogos[code];
   if (!logo) return undefined;
+  // logoCDN's actual image host/path (the old i.logocdn.com/nba path fails).
+  // The year is when the emblem version started, not the season on screen.
   const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
-  return `https://i.logocdn.com/nba/${logo.year}/${logo.slug}${extension}`;
+  return `https://assets.logocdn.com/images/sports/nba/${logo.year}/${logo.slug}${extension}`;
 }
 
 function Logo({ code, seasonId }: { code: string; seasonId: SeasonId }) {
