@@ -1032,5 +1032,133 @@
       "threePct": 1,
       "ftPct": 1
     }
+  },
+  {
+    "id": "stat-s07-first-round-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-007",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "denver-nuggets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s07-56011307",
+      "src-s07-4a09eebf",
+      "src-s07-24fab76c"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5,
+        "minutes": 185,
+        "points": 114,
+        "rebounds": 25,
+        "assists": 27,
+        "steals": 7,
+        "blocks": 0,
+        "turnovers": 18,
+        "fgm": 47,
+        "fga": 88,
+        "threePm": 4,
+        "threePa": 14,
+        "ftm": 16,
+        "fta": 23,
+        "fouls": 9,
+        "doubleDoubles": 0,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 22.8,
+        "rpg": 5,
+        "apg": 5.4,
+        "spg": 1.4,
+        "bpg": 0,
+        "topg": 3.6
+      },
+      "percentages": {
+        "fgPct": 53.4,
+        "threePct": 28.6,
+        "ftPct": 69.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s07-first-round-marco-barbosa",
+    "kind": "phase",
+    "playerId": "marco-barbosa",
+    "seasonId": "season-007",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "miami-heat",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s07-b567f590",
+      "src-s07-a2736059",
+      "src-s07-4ba24fa1"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5,
+        "minutes": 190,
+        "points": 96,
+        "rebounds": 33,
+        "assists": 19,
+        "steals": 12,
+        "blocks": 6,
+        "turnovers": 20,
+        "fgm": 34,
+        "fga": 71,
+        "threePm": 9,
+        "threePa": 18,
+        "ftm": 19,
+        "fta": 21,
+        "fouls": 12,
+        "doubleDoubles": 0,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 38,
+        "ppg": 19.2,
+        "rpg": 6.6,
+        "apg": 3.8,
+        "spg": 2.4,
+        "bpg": 1.2,
+        "topg": 4
+      },
+      "percentages": {
+        "fgPct": 47.9,
+        "threePct": 50,
+        "ftPct": 90.5
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
   }
 ]
