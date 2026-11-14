@@ -14,3 +14,49 @@
 .cinematic-player-stage{min-height:min(690px,calc(100svh - 100px))}
 .cinematic-player-content:empty{display:none}
 @media(max-width:520px){.cinematic-player{padding-top:4px;padding-bottom:24px}.cinematic-player-stage{min-height:680px}}
+
+
+/* Full-viewport player routes: remove the reserved space for the hidden global
+   header, and suppress the global footer without affecting other routes. */
+body:has(.cinematic-player) .app-main {
+  padding-top: 0;
+  min-height: 100svh;
+}
+body:has(.cinematic-player) .site-footer {
+  display: none;
+}
+
+/* Keep the compact scene navigation at the top and anchor the statistic strip
+   to the bottom of the available viewport on overview and compact scenes. */
+.cinematic-player {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.cinematic-player-shell {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100svh - 50px);
+}
+.cinematic-player-stage {
+  flex: 1 0 auto;
+  min-height: max(510px, calc(100svh - 112px));
+}
+.cinematic-player-content:empty {
+  display: none;
+}
+@media (max-width: 850px) {
+  .cinematic-player-stage {
+    min-height: max(570px, calc(100svh - 130px));
+  }
+}
+@media (max-width: 520px) {
+  .cinematic-player-shell {
+    min-height: calc(100svh - 28px);
+  }
+  .cinematic-player-stage {
+    min-height: max(610px, calc(100svh - 110px));
+  }
+}
