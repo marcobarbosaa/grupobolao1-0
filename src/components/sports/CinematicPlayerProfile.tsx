@@ -1,6 +1,6 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
 import { selectionRoster } from "../../lib/player-selection-identity";
 import { publishedCatalog, publishedSeasons, latestSeasonId } from "../../lib/published-catalog";
 import type { BolaoPlayer } from "../../lib/new-roster";
