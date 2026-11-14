@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
 
 import { CinematicHome } from "../home/CinematicHome";
-import { ProfileStatistics } from "./PublishedStatistics";
+import { CinematicPlayerProfile } from "./CinematicPlayerProfile";
 
 type PortraitVariant = "card" | "profile";
 
@@ -86,22 +86,7 @@ export function GenerationRoster({ compact = false }: { compact?: boolean }) {
 }
 
 export function GenerationProfile({ player }: { player: BolaoPlayer }) {
-  return (
-    <div className="generation-profile">
-      <Link to="/jogadores" className="text-link">
-        ← Voltar aos jogadores
-      </Link>
-      <section className="generation-profile-hero">
-        <NewPortrait player={player} priority variant="profile" />
-        <div className="generation-profile-copy">
-          <h1>{player.name}</h1>
-          <p className="generation-team">{player.team}</p>
-          <p>Nova geração da Central do Bolão.</p>
-        </div>
-      </section>
-      <ProfileStatistics player={player} />
-    </div>
-  );
+  return <CinematicPlayerProfile player={player} />;
 }
 
 export function GenerationPending({ title, description }: { title: string; description: string }) {
