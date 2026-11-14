@@ -13,6 +13,7 @@ export function SiteHeader() {
     window.addEventListener("scroll", update, { passive: true });
     return () => window.removeEventListener("scroll", update);
   }, [pathname]);
+  if (/^\/jogadores\/[^/]+\/?$/.test(pathname)) return null;
   return (
     <header className="site-header" data-integrated={(pathname === "/" || /^\/jogadores\/?$/.test(pathname)) && !scrolled}>
       <div className="site-header-inner">
