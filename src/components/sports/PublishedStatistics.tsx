@@ -128,8 +128,8 @@ function KeyMetrics({ record }: { record: PhaseRecord }) {
     </div>
   );
 }
-export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
-  const [seasonId, setSeasonId] = useState<SeasonId>(latestSeasonId);
+export function ProfileStatistics({ player, mode = "all", initialSeasonId = latestSeasonId }: { player: BolaoPlayer; mode?: "all" | "regular" | "playoffs"; initialSeasonId?: SeasonId }) {
+  const [seasonId, setSeasonId] = useState<SeasonId>(initialSeasonId);
   const year = years.find((y) => y.id === seasonId)!;
   const records = recordsFor(player.id, seasonId);
   const regular = records.find((record) => record.phaseId === "regular");
@@ -143,7 +143,7 @@ export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
   return (
     <section className="published-stats" aria-label="Estatísticas do jogador">
       <ChooseSeason value={seasonId} onChange={setSeasonId} />
-      {!regular ? (
+      {mode !== "playoffs" && (!regular ? (
         <div className="generation-empty">
           <h2>ESTATÍSTICAS EM BREVE.</h2>
           <p>Os registros dessa temporada ainda não foram importados.</p>
@@ -202,8 +202,8 @@ export function ProfileStatistics({ player }: { player: BolaoPlayer }) {
             rankings ou pontuações artificiais.
           </p>
         </>
-      )}
-      {summary && (
+      ))}
+      {mode !== "regular" && summary && (
         <div className="published-playoffs" aria-label="Campanha de playoffs">
           <div className="published-stats-head">
             <div>
