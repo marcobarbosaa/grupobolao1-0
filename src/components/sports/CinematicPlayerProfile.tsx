@@ -136,18 +136,7 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
             </div>)}
           </div>
         </section>
-        <div className="cinematic-player-controls">
-          <button type="button" onClick={() => changeScene(scene - 1)} disabled={scene === 0} aria-label="Seção anterior"><ArrowLeft size={18}/></button>
-          <span>{scenes[scene].label}</span>
-          <button type="button" onClick={() => changeScene(scene + 1)} disabled={scene === scenes.length - 1} aria-label="Próxima seção"><ArrowRight size={18}/></button>
-        </div>
         <section className="cinematic-player-content" aria-label="Informações detalhadas">
-          {scene === 0 && (
-            <div className="cinematic-player-intro">
-              <div><span>PERFIL DO ATLETA</span><h2>{player.name}</h2><p>Explore os números de cada temporada, as campanhas de playoffs e o legado estatístico do atleta.</p></div>
-              <button type="button" onClick={() => changeScene(1)}>EXPLORAR TEMPORADAS <ArrowRight size={17}/></button>
-            </div>
-          )}
           {(scene === 1 || scene === 2) && (
             <>
               <button className="cinematic-player-expand" type="button" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
