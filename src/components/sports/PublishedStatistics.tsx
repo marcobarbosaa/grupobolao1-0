@@ -33,10 +33,9 @@ function reachedStages(playerId: string, seasonId: SeasonId): string[] {
       []
     );
   }
-  const rounds = recordsFor(playerId, seasonId).filter(
-    (record) => record.phaseId !== "regular" && record.phaseId !== "playoffs",
-  );
-  return rounds.map((record) => record.phaseId);
+  return recordsFor(playerId, seasonId)
+    .filter((record) => record.phaseId !== "regular" && record.phaseId !== "playoffs")
+    .map((record) => record.phaseId);
 }
 function ChooseSeason({ value, onChange }: { value: SeasonId; onChange: (id: SeasonId) => void }) {
   return (
@@ -127,6 +126,48 @@ function KeyMetrics({ record }: { record: PhaseRecord }) {
     </div>
   );
 }
+function PlayoffPhaseStrip({ phase, record }: { phase: string; record?: PhaseRecord }) {
+  const averagesForPhase = record?.stats.averages ?? {};
+  const percentages = record?.stats.percentages ?? {};
+  const primaryMetrics = [
+    ["MPG", "MINUTOS", averages(averagesForPhase.mpg)],
+    ["PPG", "PONTOS", averages(averagesForPhase.ppg)],
+    ["RPG", "REBOTES", averages(averagesForPhase.rpg)],
+    ["APG", "ASSISTÊNCIAS", averages(averagesForPhase.apg)],
+  ] as const;
+  const efficiencyMetrics = [
+    ["SPG", "ROUBOS", averages(averagesForPhase.spg)],
+    ["BPG", "BLOQUEIOS", averages(averagesForPhase.bpg)],
+    ["TOPG", "TURNOVERS", averages(averagesForPhase.topg)],
+    ["FG%", "ARREMESSOS", percents(percentages.fgPct)],
+    ["3P%", "TRÊS PONTOS", percents(percentages.threePct)],
+    ["FT%", "LANCES LIVRES", percents(percentages.ftPct)],
+  ] as const;
+  return (
+    <article className="published-round-strip" data-phase={phase}>
+      <header className="published-round-strip__phase">
+        <h4>{phaseName[phase] ?? phase}</h4>
+        <p>{integers(record?.stats.totals?.gp)} jogos disputados</p>
+      </header>
+      <dl className="published-round-strip__metrics published-round-strip__metrics--primary" aria-label="Médias principais">
+        {primaryMetrics.map(([metric, label, value]) => (
+          <div key={metric} data-metric={metric}>
+            <dt>{metric}<span>{label}</span></dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+      <dl className="published-round-strip__metrics published-round-strip__metrics--efficiency" aria-label="Eficiência e defesa">
+        {efficiencyMetrics.map(([metric, label, value]) => (
+          <div key={metric} data-metric={metric}>
+            <dt>{metric}<span>{label}</span></dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </article>
+  );
+}
 export function ProfileStatistics({ player, mode = "all", initialSeasonId = latestSeasonId, seasonId: controlledSeasonId, onSeasonChange }: { player: BolaoPlayer; mode?: "all" | "regular" | "playoffs"; initialSeasonId?: SeasonId; seasonId?: SeasonId; onSeasonChange?: (id: SeasonId) => void }) {
   const [localSeasonId, setLocalSeasonId] = useState<SeasonId>(initialSeasonId);
   const seasonId = controlledSeasonId ?? localSeasonId;
@@ -134,13 +175,19 @@ export function ProfileStatistics({ player, mode = "all", initialSeasonId = late
   const year = years.find((y) => y.id === seasonId)!;
   const records = recordsFor(player.id, seasonId);
   const regular = records.find((record) => record.phaseId === "regular");
-  const stages = reachedStages(player.id, seasonId);
   const rounds = records
     .filter((record) => record.phaseId !== "regular")
     .sort((a, b) => phaseOrder.indexOf(a.phaseId) - phaseOrder.indexOf(b.phaseId));
   const summary =
     rounds.find((record) => record.phaseId === "playoffs") ??
     rounds.find((record) => record.phaseId === "first-round");
+  const stages = reachedStages(player.id, seasonId)
+    .filter((phase) => phaseOrder.includes(phase) && phase !== "playoffs")
+    .sort((a, b) => phaseOrder.indexOf(a) - phaseOrder.indexOf(b));
+  const stageEntries = stages.map((phase) => ({
+    phase,
+    record: rounds.find((record) => record.phaseId === phase),
+  }));
   return (
     <section className="published-stats" aria-label="Estatísticas do jogador">
       <ChooseSeason value={seasonId} onChange={setSeasonId} />
@@ -204,45 +251,30 @@ export function ProfileStatistics({ player, mode = "all", initialSeasonId = late
           </p>
         </>
       ))}
-      {mode !== "regular" && summary && (
+      {mode !== "regular" && (summary || stageEntries.length > 0) && (
         <div className="published-playoffs" aria-label="Campanha de playoffs">
           <div className="published-stats-head">
             <div>
               <span className="published-eyebrow">{year.title.toUpperCase()} · PÓS-TEMPORADA</span>
               <h2>PLAYOFFS.</h2>
-              <p>{integers(summary.stats.totals?.gp)} jogos disputados no total</p>
+              {summary && <p>{integers(summary.stats.totals?.gp)} jogos disputados no total</p>}
             </div>
           </div>
-          <KeyMetrics record={summary} />
-          <section className="published-stats-card published-playoffs-summary">
-            <h3>TOTAIS E MÉDIAS DOS PLAYOFFS</h3>
-            <StatList record={summary} includeAverages />
-          </section>
+          {summary && (
+            <>
+              <KeyMetrics record={summary} />
+              <section className="published-stats-card published-playoffs-summary">
+                <h3>TOTAIS E MÉDIAS DOS PLAYOFFS</h3>
+                <StatList record={summary} includeAverages />
+              </section>
+            </>
+          )}
           <section className="published-rounds">
             <h3>RODADAS DISPUTADAS</h3>
-            <div className="published-stage-list">
-              {stages.map((phase) => {
-                const stageRecord = rounds.find((record) => record.phaseId === phase);
-                return (
-                  <article className="published-round-card" key={phase}>
-                    <h4>{phaseName[phase] ?? phase}</h4>
-                    {stageRecord ? (
-                      <>
-                        <p>
-                          {integers(stageRecord.stats.totals?.gp)} jogos ·{" "}
-                          {averages(stageRecord.stats.averages?.ppg)} PPG
-                        </p>
-                        <StatList record={stageRecord} includeAverages />
-                      </>
-                    ) : (
-                      <p>
-                        Rodada disputada. Os totais e as médias específicos desta fase ainda não
-                        foram individualmente consolidados.
-                      </p>
-                    )}
-                  </article>
-                );
-              })}
+            <div className="published-round-strips">
+              {stageEntries.map(({ phase, record }) => (
+                <PlayoffPhaseStrip key={phase} phase={phase} record={record} />
+              ))}
             </div>
             <p className="published-footnote">
               O consolidado de playoffs representa a campanha inteira: não deve ser somado novamente

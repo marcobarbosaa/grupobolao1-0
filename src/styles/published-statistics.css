@@ -41,23 +41,33 @@
 .published-playoffs-summary .published-stats-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
 .published-rounds{margin-top:25px}
 .published-rounds>h3{font:800 clamp(22px,2.5vw,36px)/1 var(--font-display);margin-bottom:15px}
-.published-round-card{background:#171a20;border:1px solid rgba(255,255,255,.11);padding:23px;margin-bottom:12px}
-.published-round-card h4{font-size:19px;font-weight:800;color:#fff;margin-bottom:7px}
-.published-round-card>p:not(.published-note){color:#f38c81;font-size:13px;margin-bottom:17px}
-.published-round-card .published-stats-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 25px}
-@media(max-width:700px){.published-playoffs-summary .published-stats-list,.published-round-card .published-stats-list{grid-template-columns:1fr}}
+.published-round-strips{display:grid;gap:12px}
 
 
-/* Season switcher and stage visibility, shared by 2005–06 and 2006–07. */
+/* Season switcher, shared by 2005–06 and 2006–07. */
 .published-season-toggle{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 32px}
 .published-season-toggle button{background:#181b21;border:1px solid rgba(255,255,255,.18);padding:13px 18px;color:#e6e7eb;cursor:pointer;text-align:left;font-weight:750;font-size:13px;transition:border-color .15s,background .15s}
 .published-season-toggle button span{display:block;color:#aab0bc;font-size:11px;margin-top:5px}
 .published-season-toggle button.is-active{background:#302023;border-color:#e8796e;color:#fff}
 .published-season-toggle button:focus-visible{outline:2px solid #fa9a8e;outline-offset:3px}
-.published-stage-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
-.published-round-card{margin:0}
-.published-round-card>p:not(.published-note){line-height:1.5}
-@media(max-width:650px){.published-stage-list{grid-template-columns:1fr}.published-season-toggle button{flex:1 1 140px}}
+@media(max-width:650px){.published-season-toggle button{flex:1 1 140px}}
+
+.published-round-strip{position:relative;display:grid;grid-template-columns:minmax(0,22fr) minmax(0,38fr) minmax(0,40fr);align-items:stretch;min-height:112px;padding:16px 22px;background:var(--team-surface);border:1px solid var(--team-border);border-radius:12px;overflow:hidden}
+.published-round-strip::before{content:"";position:absolute;inset:18px auto 18px 0;width:3px;background:var(--team-primary)}
+.published-round-strip__phase{display:flex;flex-direction:column;justify-content:center;min-width:0;padding-right:18px}
+.published-round-strip__phase h4{margin:0;color:var(--team-text);font-size:18px;font-weight:800;line-height:1.2;text-transform:uppercase;overflow-wrap:anywhere}
+.published-round-strip__phase p{margin:8px 0 0;color:var(--team-text-muted);font-size:12px;line-height:1.3}
+.published-round-strip__metrics{display:grid;align-items:center;min-width:0;margin:0;padding:0 16px;list-style:none}
+.published-round-strip__metrics--primary{grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--team-border)}
+.published-round-strip__metrics--efficiency{grid-template-columns:repeat(6,minmax(0,1fr));border-left:1px solid var(--team-border);padding-right:0}
+.published-round-strip__metrics>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0;text-align:center}
+.published-round-strip__metrics dt{display:flex;flex-direction:column;gap:3px;color:var(--team-text-muted);font-size:10px;font-weight:800;line-height:1.2;text-transform:uppercase}
+.published-round-strip__metrics dt span{font-size:10px;font-weight:600;white-space:normal}
+.published-round-strip__metrics dd{margin:0;color:var(--team-text);font-size:clamp(18px,1.8vw,25px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.published-round-strip__metrics--efficiency dd{font-size:clamp(16px,1.45vw,20px)}
+@media(max-width:1200px){.published-round-strip{grid-template-columns:minmax(170px,22fr) minmax(0,78fr);grid-template-areas:"phase primary" "phase efficiency";padding:14px 18px}.published-round-strip__phase{grid-area:phase;grid-row:span 2;border-right:1px solid var(--team-border);justify-content:center}.published-round-strip__metrics--primary{grid-area:primary;border-left:0;padding:9px 0 12px 14px}.published-round-strip__metrics--efficiency{grid-area:efficiency;border-left:0;border-top:1px solid color-mix(in srgb,var(--team-border) 65%,transparent);padding:12px 0 9px 14px}}
+@media(max-width:899px){.published-round-strip{grid-template-columns:minmax(0,1fr);grid-template-areas:"phase" "primary" "efficiency";gap:0;padding:14px 16px}.published-round-strip__phase{grid-area:phase;grid-row:auto;border-right:0;border-bottom:1px solid var(--team-border);padding:0 0 12px}.published-round-strip__metrics--primary{grid-area:primary;padding:14px 0}.published-round-strip__metrics--efficiency{grid-area:efficiency;padding:12px 0 2px}}
+@media(max-width:599px){.published-round-strip{padding:12px 14px}.published-round-strip__metrics--primary{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:16px}.published-round-strip__metrics--efficiency{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:16px}.published-round-strip__metrics dd{font-size:20px}.published-round-strip__metrics--efficiency dd{font-size:17px}.published-round-strip__metrics dt{font-size:10px}.published-round-strip__metrics dt span{font-size:10px}}
 
 /* Expanded player statistics use the selected franchise palette and available profile width. */
 .cinematic-player-shell>.cinematic-player-content{max-width:1480px;width:100%}
