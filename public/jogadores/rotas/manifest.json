@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "sourceFolder": "https://drive.google.com/drive/folders/1-Gh_4tkPoZKGG9TKaZdSNIWbZvk1PslF",
+  "note": "Períodos 'em_diante' são abertos porque a pasta do Drive não indica temporada final. Não presumir time após trocas posteriores sem fonte. Identificação dos times foi extraída dos nomes dos arquivos, ainda sujeita à validação visual.",
+  "records": [
+    {
+      "player": "abel",
+      "period": "2005-2006_a_2008-2009",
+      "team": "Sacramento Kings",
+      "asset": "/jogadores/rotas/abel/2005-2006_a_2008-2009.png",
+      "originalName": "Abel_Kings.png",
+      "driveSource": "https://drive.google.com/file/d/194QGvobsr5YVngOJhj5tb-NgU60SN1tg/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "abel",
+      "period": "2009-2010_em_diante",
+      "team": "Phoenix Suns",
+      "asset": "/jogadores/rotas/abel/2009-2010_em_diante.png",
+      "originalName": "Abel_Suns.png",
+      "driveSource": "https://drive.google.com/file/d/1IEFMjTbbZXEYKdGhmHiaXqd9OIc3i7Qx/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "binho",
+      "period": "2005-2006_a_2011-2012",
+      "team": "New Orleans Hornets",
+      "asset": "/jogadores/rotas/binho/2005-2006_a_2011-2012.png",
+      "originalName": "Binho_Hornets.png",
+      "driveSource": "https://drive.google.com/file/d/1WB6LW1-CNFn3kSbUh01V34BTOditpMkl/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "binho",
+      "period": "2012-2013_em_diante",
+      "team": "Denver Nuggets",
+      "asset": "/jogadores/rotas/binho/2012-2013_em_diante.png",
+      "originalName": "Campeão dos Nuggets com Troféus da NBA.png",
+      "driveSource": "https://drive.google.com/file/d/1Ce7BifYKqHCLELAqm7_VATwl5egoXfaR/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "cristiano-ronaldo",
+      "period": "2005-2006_a_2008-2009",
+      "team": "Indiana Pacers",
+      "asset": "/jogadores/rotas/cristiano-ronaldo/2005-2006_a_2008-2009.png",
+      "originalName": "01_Pacers_22.png",
+      "driveSource": "https://drive.google.com/file/d/1Puv880OzD_fBKutAMpBtjmpOcjs-vc23/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "cristiano-ronaldo",
+      "period": "2009-2010",
+      "team": "Phoenix Suns",
+      "asset": "/jogadores/rotas/cristiano-ronaldo/2009-2010.png",
+      "originalName": "Retrato Heroico com Camisa Suns 22.png",
+      "driveSource": "https://drive.google.com/file/d/1jHePmVwkJ21gldfXn71wacYzifCyPtOi/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "cristiano-ronaldo",
+      "period": "2010-2011_em_diante",
+      "team": "Denver Nuggets",
+      "asset": "/jogadores/rotas/cristiano-ronaldo/2010-2011_em_diante.png",
+      "originalName": "Campeão beija o troféu do Nuggets.png",
+      "driveSource": "https://drive.google.com/file/d/1IVBm9GDzM8v3L-bz1hUmeAABvK2-sGj2/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "dias",
+      "period": "2005-2006_a_2008-2009",
+      "team": "Detroit Pistons",
+      "asset": "/jogadores/rotas/dias/2005-2006_a_2008-2009.png",
+      "originalName": "02_Pistons_31.png",
+      "driveSource": "https://drive.google.com/file/d/1fAL2wwWEO11yK3A1wI7AFWJqq1rDq2PC/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "dias",
+      "period": "2009-2010_a_2012-2013",
+      "team": "Dallas Mavericks",
+      "asset": "/jogadores/rotas/dias/2009-2010_a_2012-2013.png",
+      "originalName": "Jogador do Dallas com Troféu da NBA.png",
+      "driveSource": "https://drive.google.com/file/d/1WLSCB07q8AMBYOVirE72JNBp0EkUOE9G/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "enzo",
+      "period": "2005-2006_em_diante",
+      "team": "San Antonio Spurs",
+      "asset": "/jogadores/rotas/enzo/2005-2006_em_diante.png",
+      "originalName": "08_Spurs_43.png",
+      "driveSource": "https://drive.google.com/file/d/1HfroIuv_HsNEbGAUR3uPGj42QaH5OXNA/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "gam",
+      "period": "2005-2006_a_2011-2012",
+      "team": "Atlanta Hawks",
+      "asset": "/jogadores/rotas/gam/2005-2006_a_2011-2012.png",
+      "originalName": "Campeão Hawks com Troféus Dourados.png",
+      "driveSource": "https://drive.google.com/file/d/1U_mouO1fUxBU3Z9Ha8Qf4rqf96biiJxO/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "gam",
+      "period": "2012-2013_em_diante",
+      "team": "Philadelphia 76ers",
+      "asset": "/jogadores/rotas/gam/2012-2013_em_diante.png",
+      "originalName": "Jogador dos 76ers em pose heroica.png",
+      "driveSource": "https://drive.google.com/file/d/1_1KvtdusekDVduWVVSZqJxVvp7CjYQCM/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "guilherme",
+      "period": "2005-2006_em_diante",
+      "team": "Chicago Bulls",
+      "asset": "/jogadores/rotas/guilherme/2005-2006_em_diante.png",
+      "originalName": "Campeão dos Bulls com Dois Troféus.png",
+      "driveSource": "https://drive.google.com/file/d/14oG5jLCDMWQhS1F82IPAoz6D9yTwND8T/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "jonas",
+      "period": "2005-2006_em_diante",
+      "team": "New York Knicks",
+      "asset": "/jogadores/rotas/jonas/2005-2006_em_diante.png",
+      "originalName": "Jogador dos Knicks Exibe Três Anéis.png",
+      "driveSource": "https://drive.google.com/file/d/1A-Sg20dJO9WcUR_jtkbuoR4NkTo8MDp5/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "marco",
+      "period": "2005-2006_a_2010-2011",
+      "team": "Denver Nuggets",
+      "asset": "/jogadores/rotas/marco/2005-2006_a_2010-2011.png",
+      "originalName": "03_Nuggets_46.png",
+      "driveSource": "https://drive.google.com/file/d/1xaXphBaBZBHULpqC7XPgwpypLUFbU-_z/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "marco",
+      "period": "2011-2012_em_diante",
+      "team": "Miami Heat",
+      "asset": "/jogadores/rotas/marco/2011-2012_em_diante.png",
+      "originalName": "Atleta do Miami Heat em destaque.png",
+      "driveSource": "https://drive.google.com/file/d/1KNZKZvSCcRzrF3G9_i3jUKAQbyjJqCuA/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "medeiros",
+      "period": "2005-2006_em_diante",
+      "team": "Philadelphia 76ers",
+      "asset": "/jogadores/rotas/medeiros/2005-2006_em_diante.png",
+      "originalName": "Jogador dos 76ers com Barba Marcante.png",
+      "driveSource": "https://drive.google.com/file/d/1lgNU4K_HdtQ3nymZPBYr4DxjeoTf0-5J/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "nando",
+      "period": "2005-2006_a_2011-2012",
+      "team": "Houston Rockets",
+      "asset": "/jogadores/rotas/nando/2005-2006_a_2011-2012.png",
+      "originalName": "Jogador dos Rockets em Pose Heroica.png",
+      "driveSource": "https://drive.google.com/file/d/1SmpMjKVkfA-S21BobszvA9dHyP-g6xAG/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "nando",
+      "period": "2012-2013_em_diante",
+      "team": null,
+      "asset": "/jogadores/rotas/nando/2012-2013_em_diante.png",
+      "originalName": "Campeão com Dois Troféus da NBA.png",
+      "driveSource": "https://drive.google.com/file/d/1U7rz24RSZ_gjfP0Z-2FZ-6SbPr-k28Au/view",
+      "verification": "team_needs_visual_confirmation"
+    },
+    {
+      "player": "russo",
+      "period": "2005-2006_em_diante",
+      "team": "Toronto Raptors",
+      "asset": "/jogadores/rotas/russo/2005-2006_em_diante.png",
+      "originalName": "06_Raptors_7.png",
+      "driveSource": "https://drive.google.com/file/d/1LpWvg6W-UnUMKQrRAF9tBtNWRZyeSztI/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "tailan",
+      "period": "2005-2006_a_2008-2009",
+      "team": "Minnesota Timberwolves",
+      "asset": "/jogadores/rotas/tailan/2005-2006_a_2008-2009.png",
+      "originalName": "04_Timberwolves_6.png",
+      "driveSource": "https://drive.google.com/file/d/1zLo-L7GNE2bvwIRfjc05iIpDdT9buRKh/view",
+      "verification": "team_identified_from_filename"
+    },
+    {
+      "player": "tailan",
+      "period": "2009-2010_em_diante",
+      "team": null,
+      "asset": "/jogadores/rotas/tailan/2009-2010_em_diante.png",
+      "originalName": "Campeão com Dois Troféus Larry O’Brien.png",
+      "driveSource": "https://drive.google.com/file/d/1-YDzyPISYvGFJc70wpmMY42W_9L9m1pp/view",
+      "verification": "team_needs_visual_confirmation"
+    }
+  ]
+}
