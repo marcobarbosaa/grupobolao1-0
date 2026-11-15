@@ -163,16 +163,16 @@
       "asset": "/jogadores/rotas/nando/2005-2006_a_2011-2012.png",
       "originalName": "Jogador dos Rockets em Pose Heroica.png",
       "driveSource": "https://drive.google.com/file/d/1SmpMjKVkfA-S21BobszvA9dHyP-g6xAG/view",
-      "verification": "team_identified_from_filename"
+      "verification": "team_and_period_manually_confirmed_by_user"
     },
     {
       "player": "nando",
       "period": "2012-2013_em_diante",
-      "team": null,
+      "team": "Denver Nuggets",
       "asset": "/jogadores/rotas/nando/2012-2013_em_diante.png",
       "originalName": "Campeão com Dois Troféus da NBA.png",
       "driveSource": "https://drive.google.com/file/d/1U7rz24RSZ_gjfP0Z-2FZ-6SbPr-k28Au/view",
-      "verification": "team_needs_visual_confirmation"
+      "verification": "team_and_period_manually_confirmed_by_user"
     },
     {
       "player": "russo",
@@ -190,16 +190,16 @@
       "asset": "/jogadores/rotas/tailan/2005-2006_a_2008-2009.png",
       "originalName": "04_Timberwolves_6.png",
       "driveSource": "https://drive.google.com/file/d/1zLo-L7GNE2bvwIRfjc05iIpDdT9buRKh/view",
-      "verification": "team_identified_from_filename"
+      "verification": "team_and_period_manually_confirmed_by_user"
     },
     {
       "player": "tailan",
       "period": "2009-2010_em_diante",
-      "team": null,
+      "team": "New York Knicks",
       "asset": "/jogadores/rotas/tailan/2009-2010_em_diante.png",
       "originalName": "Campeão com Dois Troféus Larry O’Brien.png",
       "driveSource": "https://drive.google.com/file/d/1-YDzyPISYvGFJc70wpmMY42W_9L9m1pp/view",
-      "verification": "team_needs_visual_confirmation"
+      "verification": "team_and_period_manually_confirmed_by_user"
     }
   ]
 }

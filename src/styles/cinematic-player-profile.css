@@ -60,3 +60,27 @@ body:has(.cinematic-player) .site-footer {
     min-height: max(610px, calc(100svh - 110px));
   }
 }
+
+/* The whole scene follows the selected historical identity. */
+@property --profile-primary { syntax: "<color>"; inherits: true; initial-value: #64748b; }
+@property --profile-accent { syntax: "<color>"; inherits: true; initial-value: #e2e8f0; }
+@property --profile-deep { syntax: "<color>"; inherits: true; initial-value: #0f172a; }
+@property --profile-glow { syntax: "<color>"; inherits: true; initial-value: #1e293b; }
+.cinematic-player { transition: --profile-primary .6s, --profile-accent .6s, --profile-deep .6s, --profile-glow .6s; }
+.cinematic-player-art .historical-portrait { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease; }
+.cinematic-player-art .historical-portrait[data-active="true"] { opacity: 1; }
+.cinematic-player-scoreboard,
+.cinematic-player-details .published-key-card,
+.cinematic-player-details .published-stats-card,
+.cinematic-player-year select { background: color-mix(in srgb, var(--profile-deep) 92%, transparent); border-color: color-mix(in srgb, var(--profile-primary) 55%, transparent); }
+.cinematic-player-details .published-season-link { color: var(--profile-accent); }
+.cinematic-player-details { --primary: var(--profile-primary); --accent: var(--profile-accent); }
+@media (prefers-reduced-motion: reduce) { .cinematic-player { transition: none; } }
+
+/* On phones the information precedes the portrait, keeping text off the face. */
+@media (max-width: 520px) {
+  .cinematic-player-stage { display: grid; grid-template-rows: auto 370px auto; min-height: 0; align-items: stretch; }
+  .cinematic-player-info { grid-row: 1; padding: 30px 12px 24px; }
+  .cinematic-player-stage .cinematic-player-art { grid-row: 2; position: relative; top: auto; right: auto; width: 100%; height: 370px; opacity: 1; }
+  .cinematic-player-scoreboard { grid-row: 3; position: relative; }
+}

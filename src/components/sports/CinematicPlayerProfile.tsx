@@ -1,9 +1,10 @@
 import { useMemo, useState, type CSSProperties } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ChevronDown, ChevronUp } from "lucide-react";
-import { selectionRoster } from "../../lib/player-selection-identity";
+import { getPlayerAppearance } from "../../lib/player-selection-identity";
 import { publishedCatalog, publishedSeasons, latestSeasonId } from "../../lib/published-catalog";
 import type { BolaoPlayer } from "../../lib/new-roster";
+import { HistoricalPortrait } from "./HistoricalPortrait";
 import { ProfileStatistics } from "./PublishedStatistics";
 import "../../styles/cinematic-player-profile.css";
 
@@ -21,12 +22,12 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
   const [scene, setScene] = useState(0);
   const [seasonId, setSeasonId] = useState(latestSeasonId);
   const [expanded, setExpanded] = useState(false);
-  const [photoFailed, setPhotoFailed] = useState(false);
-  const identity = selectionRoster.find((item) => item.id === player.id);
-  const team = identity?.team ?? player.team;
-  const palette = identity?.identity;
-  const photo = identity?.selectionPortrait ?? player.portrait;
-  const all = publishedCatalog.records.filter((record) => record.kind === "phase" && record.playerId === player.id);
+  const identity = getPlayerAppearance(player.id, seasonId);
+  const team = identity.team;
+  const palette = identity.identity;
+  const photo = identity.image;
+
+  const all = publishedCatalog.records.filter((record) => record.kind === "phase").filter((record) => record.playerId === player.id);
   const current = all.find((record) => record.seasonId === seasonId && record.phaseId === "regular");
   const currentPlayoffs = all.find((record) => record.seasonId === seasonId && record.phaseId === "playoffs")
     ?? all.find((record) => record.seasonId === seasonId && record.phaseId === "first-round");
@@ -73,6 +74,7 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
           ["3P%", number(show?.stats.percentages?.threePct, 1)],
         ];
   const theme = {
+    ...identity.theme,
     "--profile-primary": palette?.primary ?? "#5a9cb8",
     "--profile-accent": palette?.light ?? "#7dc8db",
     "--profile-deep": palette?.deep ?? "#0a131a",
@@ -100,14 +102,14 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
         <section className={`cinematic-player-stage cinematic-player-stage--${scenes[scene].id}`}
           aria-labelledby="cinematic-player-heading">
           <div className="cinematic-player-ghost" aria-hidden="true">
-            {!photoFailed && <img src={photo} alt="" />}
+            {photo && <img src={photo} alt="" />}
           </div>
           <div className="cinematic-player-info">
             <span className="cinematic-player-eyebrow">CENTRAL DO BOLÃO / {scenes[scene].eyebrow}</span>
             <p className="cinematic-player-firstname">{player.name.split(" ").slice(0, -1).join(" ") || player.name}</p>
             <h1 id="cinematic-player-heading">{scene === 0 ? (player.name.split(" ").at(-1) ?? player.name) : scenes[scene].title}</h1>
             <div className="cinematic-player-identity">
-              {identity?.crest && <img src={identity.crest} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
+              {identity?.crest && <img key={identity.crest} src={identity.crest} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
               <div>
                 <strong>{team}</strong>
                 <span>{identity?.number ? `#${identity.number} · ` : ""}{player.name}</span>
@@ -128,7 +130,7 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
             )}
           </div>
           <div className="cinematic-player-art" aria-hidden="true">
-            {!photoFailed ? <img src={photo} alt="" onError={() => setPhotoFailed(true)} /> : <span>{player.name}</span>}
+            <HistoricalPortrait playerId={player.id} image={photo} name={player.name} />
           </div>
           <div className="cinematic-player-scoreboard" aria-label="Indicadores do jogador">
             {stats.map(([label, value]) => <div key={label} className="cinematic-player-stat">
@@ -142,7 +144,7 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
               <button className="cinematic-player-expand" type="button" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
                 {expanded ? "OCULTAR ESTATÍSTICAS COMPLETAS" : "VER ESTATÍSTICAS COMPLETAS"} {expanded ? <ChevronUp size={18}/> : <ChevronDown size={18}/>}
               </button>
-              {expanded && <div className="cinematic-player-details"><ProfileStatistics key={seasonId} player={player} mode={scene === 1 ? "regular" : "playoffs"} initialSeasonId={seasonId}/></div>}
+              {expanded && <div className="cinematic-player-details"><ProfileStatistics key={seasonId} player={player} mode={scene === 1 ? "regular" : "playoffs"} seasonId={seasonId} onSeasonChange={setSeasonId}/></div>}
             </>
           )}
           {scene === 3 && <div className="cinematic-player-career-details">

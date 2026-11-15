@@ -1,25 +1,78 @@
 import { newRoster } from "./new-roster";
+import manifest, { localCrests } from "virtual:bolao-player-history";
+import logoData from "../data/statistics/historical-logos.json";
+import { publishedSeasons, publishedCatalog } from "./published-catalog";
+import { latestAppearanceSeason, resolvePlayerAppearance } from "./player-history";
 import { createLandingTheme } from "./landing-team-themes";
 
-// Presentation only: audited against the approved selection PNGs, not season records.
-const presentation: Record<string, { team?: string; number: string; file?: string }> = {
-  "fabio-carvalho": { number: "44" },
-  abel: { team: "Phoenix Suns", number: "0" },
-  "gam-mori": { number: "24" },
-  "marco-barbosa": { number: "46" },
-  "cristiano-ronaldo": { team: "Denver Nuggets", number: "22" },
-  dias: { team: "Dallas Mavericks", number: "31" },
-  russo: { number: "7" },
-  jonas: { number: "13" },
-  enzo: { number: "43" },
-  tailan: { team: "New York Knicks", number: "6" },
-  "matheus-medeiros": { number: "35", file: "medeiros" },
-  nando: { number: "28" },
-  guilherme: { number: "39" },
+const numbers: Record<string, string> = {
+  "fabio-carvalho": "44",
+  abel: "0",
+  "gam-mori": "24",
+  "marco-barbosa": "46",
+  "cristiano-ronaldo": "22",
+  dias: "31",
+  russo: "7",
+  jonas: "13",
+  enzo: "43",
+  tailan: "6",
+  "matheus-medeiros": "35",
+  nando: "28",
+  guilherme: "39",
 };
 
 // Deliberate art direction per represented franchise (13 players, 11 franchises).
 export const selectionTeams = {
+  "Miami Heat": {
+    code: "MIA",
+    primary: "#C92044",
+    secondary: "#F9A33B",
+    accent: "#FFD395",
+    base: "#461525",
+    deep: "#17080F",
+    light: "#ED5267",
+    logo: "heat",
+  },
+  "Indiana Pacers": {
+    code: "IND",
+    primary: "#2365A0",
+    secondary: "#FDBB30",
+    accent: "#FFE19A",
+    base: "#142D48",
+    deep: "#071321",
+    light: "#6BA3D4",
+    logo: "pacers",
+  },
+  "Sacramento Kings": {
+    code: "SAC",
+    primary: "#8252B4",
+    secondary: "#63727A",
+    accent: "#DDC6F5",
+    base: "#301D49",
+    deep: "#100B1C",
+    light: "#AE82D5",
+    logo: "kings",
+  },
+  "Detroit Pistons": {
+    code: "DET",
+    primary: "#D42C49",
+    secondary: "#2366B7",
+    accent: "#C9DEFA",
+    base: "#42192C",
+    deep: "#160D1C",
+    light: "#E96277",
+    logo: "pistons",
+  },
+  "Minnesota Timberwolves": {
+    code: "MIN",
+    primary: "#287BA0",
+    secondary: "#33865D",
+    accent: "#B7E5D2",
+    base: "#153645",
+    deep: "#07171F",
+    light: "#5CA8C1",
+    logo: "timberwolves",
+  },
   "New Orleans Hornets": {
     code: "NO",
     primary: "#008DA8",
@@ -132,28 +185,54 @@ export const selectionTeams = {
   },
 } as const;
 
-export const selectionRoster = newRoster.map((player) => {
-  const visual = presentation[player.id];
-  const team = visual?.team ?? player.team;
-  const identity = selectionTeams[team as keyof typeof selectionTeams];
+const neutral = {
+  code: "",
+  primary: "#64748B",
+  secondary: "#334155",
+  accent: "#E2E8F0",
+  base: "#1E293B",
+  deep: "#0F172A",
+  light: "#94A3B8",
+  logo: "",
+};
+export const referenceSeason = latestAppearanceSeason(publishedSeasons)?.id ?? "";
+export function getPlayerAppearance(playerId: string, season = referenceSeason) {
+  const appearance = resolvePlayerAppearance(manifest.records, publishedSeasons, playerId, season);
+  const identity = selectionTeams[appearance.team as keyof typeof selectionTeams] ?? neutral;
+  const base = logoData.base as Record<string, { year: number; slug: string }>;
+  const overrides = logoData.seasonOverrides as Record<
+    string,
+    Record<string, { year: number; slug: string }>
+  >;
+  const logo =
+    publishedCatalog.extras[appearance.seasonId ?? ""]?.logos?.[identity.code] ??
+    overrides[appearance.seasonId ?? ""]?.[identity.code] ??
+    base[identity.code];
+  const extension = ["BOS", "CHI", "MIA"].includes(identity.code) ? ".svg" : "@3x.png";
+  const localCrest = logo
+    ? `/jogadores/escudos/historicos/${logo.year}/${logo.slug}${extension}`
+    : undefined;
   return {
-    ...player,
-    team,
-    number: visual?.number,
-    selectionPortrait: `/jogadores/selecao/${visual?.file ?? player.id}.png`,
+    ...appearance,
     identity,
-    crest: `/jogadores/escudos/${identity.logo}.${identity.code === "CHI" ? "svg" : "png"}`,
+    number: numbers[playerId],
+    crest:
+      localCrest &&
+      (localCrests.includes(localCrest)
+        ? localCrest
+        : `https://assets.logocdn.com/images/sports/nba/${logo.year}/${logo.slug}${extension}`),
+    theme: {
+      ...createLandingTheme(identity),
+      "--team-background": identity.base,
+      "--team-background-deep": identity.deep,
+      "--team-glow": identity.light,
+    },
   };
+}
+export const selectionRoster = newRoster.map((player) => {
+  const appearance = getPlayerAppearance(player.id);
+  return { ...player, ...appearance, selectionPortrait: appearance.image };
 });
-
 export function getSelectionTheme(index: number) {
-  const palette = selectionRoster[index].identity;
-  return {
-    ...createLandingTheme(palette),
-    "--team-background": palette.base,
-    "--team-background-deep": palette.deep,
-    "--team-glow": palette.light,
-    "--team-text": "#FFFFFF",
-    "--team-text-muted": "#E0E5EC",
-  };
+  return selectionRoster[index].theme;
 }

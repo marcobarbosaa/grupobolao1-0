@@ -128,8 +128,10 @@ function KeyMetrics({ record }: { record: PhaseRecord }) {
     </div>
   );
 }
-export function ProfileStatistics({ player, mode = "all", initialSeasonId = latestSeasonId }: { player: BolaoPlayer; mode?: "all" | "regular" | "playoffs"; initialSeasonId?: SeasonId }) {
-  const [seasonId, setSeasonId] = useState<SeasonId>(initialSeasonId);
+export function ProfileStatistics({ player, mode = "all", initialSeasonId = latestSeasonId, seasonId: controlledSeasonId, onSeasonChange }: { player: BolaoPlayer; mode?: "all" | "regular" | "playoffs"; initialSeasonId?: SeasonId; seasonId?: SeasonId; onSeasonChange?: (id: SeasonId) => void }) {
+  const [localSeasonId, setLocalSeasonId] = useState<SeasonId>(initialSeasonId);
+  const seasonId = controlledSeasonId ?? localSeasonId;
+  const setSeasonId = onSeasonChange ?? setLocalSeasonId;
   const year = years.find((y) => y.id === seasonId)!;
   const records = recordsFor(player.id, seasonId);
   const regular = records.find((record) => record.phaseId === "regular");

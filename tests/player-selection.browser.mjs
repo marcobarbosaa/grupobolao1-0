@@ -7,10 +7,10 @@ const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 
 const output = "artifacts/players-review";
 await mkdir(output, { recursive: true });
 const expected = {
-  "fabio-carvalho": ["New Orleans Hornets", "44"],
+  "fabio-carvalho": ["Denver Nuggets", "44"],
   abel: ["Phoenix Suns", "0"],
-  "gam-mori": ["Atlanta Hawks", "24"],
-  "marco-barbosa": ["Denver Nuggets", "46"],
+  "gam-mori": ["Philadelphia 76ers", "24"],
+  "marco-barbosa": ["Miami Heat", "46"],
   "cristiano-ronaldo": ["Denver Nuggets", "22"],
   dias: ["Dallas Mavericks", "31"],
   russo: ["Toronto Raptors", "7"],
@@ -18,7 +18,7 @@ const expected = {
   enzo: ["San Antonio Spurs", "43"],
   tailan: ["New York Knicks", "6"],
   "matheus-medeiros": ["Philadelphia 76ers", "35"],
-  nando: ["Houston Rockets", "28"],
+  nando: ["Denver Nuggets", "28"],
   guilherme: ["Chicago Bulls", "39"],
 };
 const errors = [];
@@ -65,7 +65,7 @@ try {
       .locator('.player-select__crests [data-active="true"]')
       .evaluate((img) => img.decode());
     if (id === "matheus-medeiros")
-      assert.match(await center.locator("img").getAttribute("src"), /\/medeiros.png$/);
+      assert.match(await center.locator("img").getAttribute("src"), /\/rotas\/medeiros\/2005-2006_em_diante.png$/);
     if (["abel", "guilherme", "gam-mori"].includes(id)) {
       await page.screenshot({ path: `${output}/palette-${id}.png` });
     }
@@ -106,7 +106,7 @@ try {
   assert.equal(await page.locator(".arena-home").count(), 1);
   assert.equal(
     await page.locator(".site-shell").getAttribute("data-landing-team"),
-    "Houston Rockets",
+    "Denver Nuggets",
   );
 
   const touch = await browser.newContext({

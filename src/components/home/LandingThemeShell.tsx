@@ -9,7 +9,7 @@ import {
 } from "react";
 import { useLocation } from "@tanstack/react-router";
 import { newRoster } from "../../lib/new-roster";
-import { getLandingTheme, INITIAL_PROTAGONIST_ID } from "../../lib/landing-team-themes";
+import { INITIAL_PROTAGONIST_ID } from "../../lib/landing-team-themes";
 import "./LandingTheme.css";
 import { getSelectionTheme, selectionRoster } from "../../lib/player-selection-identity";
 
@@ -21,14 +21,14 @@ const LandingThemeContext = createContext<{
 } | null>(null);
 export const useLandingTheme = () => useContext(LandingThemeContext);
 
-function LandingShell({ children, selection }: { children: ReactNode; selection: boolean }) {
+function LandingShell({ children }: { children: ReactNode }) {
   const firstPlayer = Math.max(
     newRoster.findIndex((player) => player.id === INITIAL_PROTAGONIST_ID),
     0,
   );
   const [playerIndex, setPlayerIndex] = useState(firstPlayer);
   const [portalContainer, setPortalContainer] = useState<HTMLDivElement | null>(null);
-  const player = (selection ? selectionRoster : newRoster)[playerIndex];
+  const player = selectionRoster[playerIndex];
   return (
     <LandingThemeContext.Provider
       value={{ playerIndex, setPlayerIndex, firstPlayer, portalContainer }}
@@ -38,9 +38,7 @@ function LandingShell({ children, selection }: { children: ReactNode; selection:
         className="site-shell"
         data-landing-team={player.team}
         style={
-          (selection
-            ? getSelectionTheme(playerIndex)
-            : getLandingTheme(player.team)) as CSSProperties
+          getSelectionTheme(playerIndex) as CSSProperties
         }
       >
         {children}
@@ -52,7 +50,7 @@ function LandingShell({ children, selection }: { children: ReactNode; selection:
 export function SiteShell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
   return pathname === "/" || /^\/jogadores\/?$/.test(pathname) ? (
-    <LandingShell selection={pathname !== "/"}>{children}</LandingShell>
+    <LandingShell>{children}</LandingShell>
   ) : (
     <div className="site-shell">{children}</div>
   );

@@ -9,7 +9,7 @@ import {
   ChartNoAxesColumnIncreasing,
   CalendarDays,
 } from "lucide-react";
-import { newRoster } from "../../lib/new-roster";
+import { selectionRoster as newRoster } from "../../lib/player-selection-identity";
 import "./CinematicHome.css";
 import { useLandingTheme } from "./LandingThemeShell";
 
@@ -246,11 +246,9 @@ export function CinematicHome() {
 
       {newRoster.map((player, index) => {
         const active = index === playerIndex;
-        const landingImage = `/jogadores/landing/${player.id}.png`;
-        const portraitSource = brokenPortraits.includes(`${player.id}:landing`)
-          ? player.portrait
-          : landingImage;
-        const missingPortrait = brokenPortraits.includes(`${player.id}:original`);
+        const landingImage = player.selectionPortrait;
+        const portraitSource = landingImage;
+        const missingPortrait = !portraitSource || brokenPortraits.includes(player.id);
         return (
           <div
             key={player.id}
@@ -274,7 +272,7 @@ export function CinematicHome() {
                   onError={() =>
                     setBrokenPortraits((current) => [
                       ...current,
-                      `${player.id}:${portraitSource === landingImage ? "landing" : "original"}`,
+                      player.id,
                     ])
                   }
                 />

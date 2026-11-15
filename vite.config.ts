@@ -7,4 +7,6 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { statisticsCatalogPlugin } from "./scripts/statistics/catalog-plugin";
 
-export default defineConfig({ vite: { plugins: [statisticsCatalogPlugin()] } });
+import { playerHistoryPlugin } from "./scripts/player-history-plugin";
+
+export default defineConfig({ vite: { plugins: [statisticsCatalogPlugin(), playerHistoryPlugin()] } });
