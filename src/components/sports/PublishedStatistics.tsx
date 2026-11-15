@@ -96,9 +96,8 @@ function StatList({
       ["FT%", percents(p.ftPct)],
     );
   return (
-    <dl className="published-stats-list">
+    <dl className="published-stats-list published-totals-list">
       {entries
-        .filter(([, value]) => value !== "—")
         .map(([label, value]) => (
           <div key={label}>
             <dt>{label}</dt>
@@ -170,7 +169,7 @@ export function ProfileStatistics({ player, mode = "all", initialSeasonId = late
           <div className="published-stats-sections">
             <div className="published-stats-card">
               <h3>EFICIÊNCIA E DEFESA</h3>
-              <dl className="published-stats-list">
+              <dl className="published-stats-list published-efficiency-list">
                 {(
                   [
                     ["Roubos por jogo", averages(regular.stats.averages?.spg)],

@@ -107,6 +107,65 @@ try {
       );
     }
   }
+  await page.goto((process.env.BASE_URL || "http://localhost:8080") + "/jogadores/marco-barbosa", {
+    waitUntil: "networkidle",
+  });
+  await page.getByRole("button", { name: "Temporadas", exact: true }).click();
+  await page.locator("#cinematic-season").selectOption("season-004");
+  await page.getByRole("button", { name: /VER ESTATÍSTICAS COMPLETAS/ }).click();
+  const expectedTotals = [
+    "GP",
+    "GS",
+    "MIN",
+    "PTS",
+    "REB",
+    "AST",
+    "STL",
+    "BLK",
+    "TO",
+    "FGM",
+    "FGA",
+    "3PM",
+    "3PA",
+    "FTM",
+    "FTA",
+  ];
+  for (const [width, height, expectedColumns] of [
+    [1440, 900, [6, 5]],
+    [768, 1024, [3, 3]],
+    [390, 844, [2, 2]],
+  ]) {
+    await page.setViewportSize({ width, height });
+    const layout = await page.evaluate(() => {
+      const efficiency = document.querySelector(".published-efficiency-list");
+      const totals = document.querySelector(".published-totals-list");
+      const columns = (element) => getComputedStyle(element).gridTemplateColumns.split(" ").length;
+      const labels = [...totals.querySelectorAll("dt")].map((element) => element.textContent);
+      return {
+        columns: [columns(efficiency), columns(totals)],
+        labels,
+        populatedValues: [...totals.querySelectorAll("dd")].every((element) =>
+          element.textContent.trim(),
+        ),
+        noOverflow: document.documentElement.scrollWidth <= innerWidth,
+        contentWidth: document.querySelector(".cinematic-player-content").getBoundingClientRect()
+          .width,
+        tilesFit: [
+          ...document.querySelectorAll(".published-efficiency-list>div,.published-totals-list>div"),
+        ].every((element) => element.scrollWidth <= element.clientWidth + 1),
+      };
+    });
+    assert.deepEqual(layout.columns, expectedColumns);
+    assert.equal(layout.labels.length, 15);
+    assert.ok(
+      expectedTotals.every((label) => layout.labels.some((text) => text.includes(`(${label})`))),
+    );
+    assert.equal(layout.populatedValues, true);
+    assert.equal(layout.noOverflow, true);
+    if (width >= 1366) assert.ok(layout.contentWidth > 1200);
+    assert.equal(layout.tilesFit, true);
+    await page.screenshot({ path: `artifacts/players-review/statistics-${width}.png` });
+  }
   for (const [width, height] of [
     [1440, 900],
     [1366, 768],
