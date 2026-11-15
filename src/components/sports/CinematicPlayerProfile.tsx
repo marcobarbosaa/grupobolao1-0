@@ -76,9 +76,12 @@ export function CinematicPlayerProfile({ player }: { player: BolaoPlayer }) {
   const theme = {
     ...identity.theme,
     "--profile-primary": palette?.primary ?? "#5a9cb8",
-    "--profile-accent": palette?.light ?? "#7dc8db",
-    "--profile-deep": palette?.deep ?? "#0a131a",
-    "--profile-glow": palette?.base ?? "#183544",
+    "--profile-secondary": palette?.secondary ?? "#334155",
+    "--profile-accent": palette?.accent ?? "#7dc8db",
+    "--profile-deep": palette?.background ?? "#0a131a",
+    "--profile-surface": palette?.surface ?? "#183544",
+    "--profile-glow": palette?.accent ?? "#7dc8db",
+    "--profile-text-on-primary": identity.theme["--team-text-on-primary"] ?? "#101418",
   } as CSSProperties;
   function changeScene(next: number) {
     setScene(Math.max(0, Math.min(scenes.length - 1, next)));

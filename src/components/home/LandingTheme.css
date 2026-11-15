@@ -48,6 +48,11 @@
   inherits: true;
   initial-value: #090c12;
 }
+@property --team-text-on-primary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #101418;
+}
 @property --team-glow {
   syntax: "<color>";
   inherits: true;
@@ -77,7 +82,7 @@
   --gold: var(--team-focus);
   --champagne: var(--team-focus);
   --signal-red: var(--team-primary);
-  --arena-scene-duration: 1200ms;
+  --arena-scene-duration: 600ms;
   transition:
     --team-primary var(--arena-scene-duration) ease,
     --team-secondary var(--arena-scene-duration) ease,
@@ -89,6 +94,7 @@
     --team-border var(--arena-scene-duration) ease,
     --team-text var(--arena-scene-duration) ease,
     --team-text-muted var(--arena-scene-duration) ease,
+    --team-text-on-primary var(--arena-scene-duration) ease,
     --team-glow var(--arena-scene-duration) ease,
     --team-shadow var(--arena-scene-duration) ease,
     --team-focus var(--arena-scene-duration) ease;

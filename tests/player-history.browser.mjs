@@ -7,6 +7,16 @@ const page = await browser.newPage({
   reducedMotion: "reduce",
 });
 const errors = [];
+const expectedPrimary = {
+  "Denver Nuggets": "#FEC524",
+  "Miami Heat": "#98002E",
+  "Houston Rockets": "#CE1141",
+  "Minnesota Timberwolves": "#78BE20",
+  "New York Knicks": "#F58426",
+  "Indiana Pacers": "#FDBB30",
+  "Phoenix Suns": "#E56020",
+  "San Antonio Spurs": "#C4CED4",
+};
 page.on("pageerror", (e) => errors.push(e.message));
 page.on("response", (r) => {
   if (r.status() >= 400) errors.push(`${r.status()} ${r.url()}`);
@@ -43,6 +53,7 @@ try {
         ["season-006", "Denver Nuggets"],
       ],
     ],
+    ["enzo", [["season-001", "San Antonio Spurs"]]],
   ]) {
     await page.goto((process.env.BASE_URL || "http://localhost:8080") + "/jogadores/" + id, {
       waitUntil: "networkidle",
@@ -58,10 +69,24 @@ try {
           .querySelector('.historical-portrait[data-active="true"]')
           .getAttribute("src"),
         crest: document.querySelector(".cinematic-player-identity img").getAttribute("src"),
-        color: document
-          .querySelector(".cinematic-player")
-          .style.getPropertyValue("--profile-primary"),
+        color: getComputedStyle(document.querySelector(".cinematic-player"))
+          .getPropertyValue("--profile-primary")
+          .trim(),
+        palette: Object.fromEntries(
+          ["background", "surface", "primary", "secondary", "accent"].map((token) => [
+            token,
+            getComputedStyle(document.querySelector(".cinematic-player"))
+              .getPropertyValue(`--team-${token}`)
+              .trim(),
+          ]),
+        ),
+        textOnPrimary: getComputedStyle(document.querySelector(".cinematic-player"))
+          .getPropertyValue("--team-text-on-primary")
+          .trim(),
       }));
+      assert.equal(state.palette.primary, expectedPrimary[team]);
+      assert.ok(Object.values(state.palette).every(Boolean));
+      if (team === "San Antonio Spurs") assert.equal(state.textOnPrimary, "#101418");
       if (previous) {
         assert.notEqual(state.image, previous.image);
         assert.notEqual(state.crest, previous.crest);
