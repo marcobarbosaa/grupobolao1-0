@@ -289,6 +289,10 @@ input:focus-visible {
   .site-header .brand-logo {
     width: 260px;
   }
+  .site-header .brand-logo--symbol {
+    width: 48px;
+    height: 48px;
+  }
   .desktop-navigation a {
     padding-inline: 12px;
   }
@@ -316,6 +320,10 @@ input:focus-visible {
   .mobile-menu-top .brand-logo {
     width: clamp(190px, 61vw, 260px);
     height: 42px;
+  }
+  .site-header .brand-logo--symbol {
+    width: 48px;
+    height: 48px;
   }
   .page-header {
     display: block;

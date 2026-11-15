@@ -6,6 +6,7 @@ import { MobileMenu } from "./MobileMenu";
 
 export function SiteHeader() {
   const { pathname } = useLocation();
+  const compact = pathname === "/" || /^\/(jogadores|temporadas)\/?$/.test(pathname);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 48);
@@ -15,9 +16,9 @@ export function SiteHeader() {
   }, [pathname]);
   if (/^\/jogadores\/[^/]+\/?$/.test(pathname)) return null;
   return (
-    <header className="site-header" data-integrated={(pathname === "/" || /^\/jogadores\/?$/.test(pathname)) && !scrolled}>
+    <header className="site-header" data-integrated={compact && !scrolled}>
       <div className="site-header-inner">
-        <Brand symbolOnly={pathname === "/" || /^\/jogadores\/?$/.test(pathname)} />
+        <Brand symbolOnly={compact} />
         <MainNavigation />
         <MobileMenu />
       </div>

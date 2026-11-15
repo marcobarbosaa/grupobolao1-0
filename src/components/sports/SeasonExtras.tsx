@@ -240,8 +240,12 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
   );
 }
 
-function Standings({ seasonId, season }: { seasonId: SeasonId; season: SeasonRecord }) {
-  const [conference, setConference] = useState<Conference>("west");
+function Standings({ seasonId, season, conference, onConferenceChange }: {
+  seasonId: SeasonId;
+  season: SeasonRecord;
+  conference: Conference;
+  onConferenceChange: (conference: Conference) => void;
+}) {
   const rows = season.standings?.[conference] ?? [];
   const details = fullStandings[seasonId] ?? {};
 
@@ -257,7 +261,7 @@ function Standings({ seasonId, season }: { seasonId: SeasonId; season: SeasonRec
               key={option.id}
               type="button"
               aria-pressed={conference === option.id}
-              onClick={() => setConference(option.id)}
+              onClick={() => onConferenceChange(option.id)}
             >
               {option.label}
             </button>
@@ -360,8 +364,7 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
       <div className="seasonextras-header">
         <div>
           <p className="seasonextras-kicker">{season.year} / PÓS-TEMPORADA</p>
-          <h2>O caminho até a glória.</h2>
-          <p>Oeste e Leste se encontram na grande final. As estrelas identificam nossos jogadores.</p>
+          <h2>CHAVEAMENTO</h2>
         </div>
       </div>
 
@@ -433,8 +436,21 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
   );
 }
 
-export function SeasonExtras({ seasonId }: { seasonId: SeasonId }) {
-  const [view, setView] = useState<View>("standings");
+export function SeasonExtras({
+  seasonId,
+  view,
+  conference,
+  onSeasonChange,
+  onViewChange,
+  onConferenceChange,
+}: {
+  seasonId: SeasonId;
+  view: View;
+  conference: Conference;
+  onSeasonChange: (seasonId: SeasonId) => void;
+  onViewChange: (view: View) => void;
+  onConferenceChange: (conference: Conference) => void;
+}) {
   const season = seasons[seasonId];
   if (!season)
     return (
@@ -447,26 +463,43 @@ export function SeasonExtras({ seasonId }: { seasonId: SeasonId }) {
 
   return (
     <div className="seasonextras">
-      <nav className="seasonextras-nav" aria-label="Classificação e playoffs">
-        {hasStandings && (
+      <div className="seasonextras-controlbar">
+        <nav className="seasonextras-nav" aria-label="Classificação e playoffs">
+          {hasStandings && (
+            <button
+              type="button"
+              aria-pressed={activeView === "standings"}
+              onClick={() => onViewChange("standings")}
+            >
+              Classificação
+            </button>
+          )}
           <button
             type="button"
-            aria-pressed={activeView === "standings"}
-            onClick={() => setView("standings")}
+            aria-pressed={activeView === "playoffs"}
+            onClick={() => onViewChange("playoffs")}
           >
-            Classificação
+            Playoffs
           </button>
-        )}
-        <button
-          type="button"
-          aria-pressed={activeView === "playoffs"}
-          onClick={() => setView("playoffs")}
-        >
-          Playoffs
-        </button>
-      </nav>
+        </nav>
+        <label className="league-season-select">
+          <span>Temporada</span>
+          <select value={seasonId} onChange={(event) => onSeasonChange(event.target.value)}>
+            {publishedCatalog.seasons.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.title} · {option.year}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
       {activeView === "standings" ? (
-        <Standings key={seasonId} seasonId={seasonId} season={season} />
+        <Standings
+          seasonId={seasonId}
+          season={season}
+          conference={conference}
+          onConferenceChange={onConferenceChange}
+        />
       ) : (
         <Playoffs seasonId={seasonId} season={season} />
       )}

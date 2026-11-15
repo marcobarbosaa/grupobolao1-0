@@ -62,6 +62,66 @@ try {
       report.routes.push({ route, width, title: await page.title() });
     }
   }
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto(base + "/temporadas?season=season-002&view=standings&conference=east", {
+    waitUntil: "networkidle",
+  });
+  assert.equal(await page.locator(".site-header .brand-logo--symbol").count(), 1);
+  assert.equal(await page.getByRole("link", { name: "Liga" }).getAttribute("aria-current"), "page");
+  const seasonSelect = page.getByLabel("Temporada", { exact: true });
+  assert.equal(await seasonSelect.locator("option").count(), 8);
+  assert.equal(await seasonSelect.inputValue(), "season-002");
+  assert.equal(
+    await page.getByRole("button", { name: "Leste" }).getAttribute("aria-pressed"),
+    "true",
+  );
+  assert.equal(await page.locator(".seasonextras-table thead th").count(), 14);
+  await seasonSelect.selectOption("season-003");
+  assert.equal(new URL(page.url()).searchParams.get("view"), "standings");
+  assert.equal(new URL(page.url()).searchParams.get("conference"), "east");
+  assert.equal(
+    await page.getByRole("button", { name: "Leste" }).getAttribute("aria-pressed"),
+    "true",
+  );
+  await page.getByRole("button", { name: "Playoffs" }).click();
+  assert.equal(new URL(page.url()).searchParams.get("season"), "season-003");
+  assert.equal(new URL(page.url()).searchParams.get("view"), "playoffs");
+  assert.equal(await page.locator(".seasonextras-bracket").count(), 1);
+  await page.goBack();
+  await page.waitForURL(/view=standings/);
+  assert.equal(new URL(page.url()).searchParams.get("conference"), "east");
+  await page.goBack();
+  await page.waitForURL(/season=season-002/);
+  assert.equal(await seasonSelect.inputValue(), "season-002");
+  await page.goForward();
+  await page.waitForURL(/season=season-003/);
+  await page.goForward();
+  await page.waitForURL(/view=playoffs/);
+  for (const option of await seasonSelect.locator("option").all()) {
+    const seasonId = await option.getAttribute("value");
+    await seasonSelect.selectOption(seasonId);
+    assert.equal(await seasonSelect.inputValue(), seasonId);
+    assert.equal(new URL(page.url()).searchParams.get("view"), "playoffs");
+  }
+  for (const width of [1440, 1024, 768, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    const controls = await page.evaluate(() => {
+      const bar = document.querySelector(".seasonextras-controlbar");
+      const tabs = bar.querySelector(".seasonextras-nav").getBoundingClientRect();
+      const select = bar.querySelector(".league-season-select").getBoundingClientRect();
+      return {
+        pageFits: document.documentElement.scrollWidth <= innerWidth,
+        controlsFit: bar.scrollWidth <= bar.clientWidth,
+        sideBySide: tabs.right <= select.left + 1,
+        brandWidth: document.querySelector(".site-header .brand-logo").getBoundingClientRect()
+          .width,
+      };
+    });
+    assert.equal(controls.pageFits, true, `Liga page overflow at ${width}px`);
+    assert.equal(controls.controlsFit, true, `Liga controls overflow at ${width}px`);
+    assert.ok(controls.brandWidth <= 64, `Compact Liga brand expanded at ${width}px`);
+    if (width >= 1200) assert.equal(controls.sideBySide, true);
+  }
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(base, { waitUntil: "networkidle" });
   const trigger = page.getByRole("button", { name: "Abrir menu de navegação" });

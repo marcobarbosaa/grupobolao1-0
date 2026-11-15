@@ -104,3 +104,35 @@
   .league-page .season-archive-controls{padding-top:14px}
   .league-page .season-archive-controls .seasonextras-toggle button{padding:10px 8px;font-size:11px}
 }
+
+.league-section-heading{max-width:1480px;margin:0 auto;padding:24px 24px 0;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.league-section-heading p{margin:0 0 5px;color:#edc782;font-size:10px;font-weight:850;letter-spacing:.18em}
+.league-section-heading h1{margin:0;color:#f6f7fb;font-size:28px;font-weight:800;line-height:1.15}
+.league-section-heading>span{padding-bottom:3px;color:#bac8da;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.league-page .seasonextras{padding-top:14px}
+.league-page .seasonextras-controlbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.league-page .seasonextras-nav{align-items:center;margin:0;gap:8px}
+.league-page .seasonextras-nav button{padding:10px 18px;transition:background-color .22s ease,border-color .22s ease,color .22s ease}
+.league-page .seasonextras-header h2{max-width:none;margin:0;font-size:22px;line-height:1.2;letter-spacing:.08em}
+.league-page .league-season-select{display:flex;align-items:center;gap:11px;color:#edc782;font-size:10px;font-weight:850;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+.league-page .league-season-select select{min-width:210px;max-width:100%;padding:11px 38px 11px 13px;border:1px solid #435671;border-radius:8px;background:#111b2b;color:#f2f5fa;font:inherit;font-size:13px;font-weight:700;line-height:1.2;letter-spacing:0;text-transform:none;cursor:pointer}
+.league-page .league-season-select select:focus-visible{outline:2px solid #edc782;outline-offset:3px}
+.league-page .league-season-select option{background:#111b2b;color:#f2f5fa}
+@media(max-width:900px){
+  .league-section-heading{padding:20px 20px 0}
+  .league-page .seasonextras{padding:12px 20px 56px}
+  .league-page .seasonextras-controlbar{gap:12px}
+  .league-page .league-season-select select{min-width:185px}
+}
+@media(max-width:600px){
+  .league-section-heading{align-items:start;padding:17px 14px 0;gap:10px}
+  .league-section-heading h1{font-size:23px}
+  .league-section-heading>span{font-size:10px;text-align:right;white-space:normal}
+  .league-page .seasonextras{padding:10px 12px 44px}
+  .league-page .seasonextras-controlbar{align-items:stretch;flex-direction:column;gap:10px;margin-bottom:12px}
+  .league-page .seasonextras-nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .league-page .seasonextras-nav button{min-width:0;padding:10px 8px;font-size:11px}
+  .league-page .league-season-select{justify-content:space-between;gap:10px}
+  .league-page .league-season-select select{min-width:0;flex:1;padding:10px 30px 10px 10px;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.league-page .seasonextras-nav button{transition:none}}
