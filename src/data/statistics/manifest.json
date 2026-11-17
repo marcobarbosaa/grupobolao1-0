@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-11-17T13:08:00.000Z",
+  "generatedAt": "2026-11-17T15:30:00.000Z",
   "seasons": [
     "season-001/seasons.json",
     "season-002/seasons.json",
@@ -10,7 +10,8 @@
     "season-006/seasons.json",
     "season-007/seasons.json",
     "season-008/seasons.json",
-    "season-009/seasons.json"
+    "season-009/seasons.json",
+    "season-010/seasons.json"
   ],
   "statistics": [
     "season-001/statistics.json",
@@ -30,7 +31,9 @@
     "season-008/statistics.json",
     "season-008/statistics-rounds.json",
     "season-009/statistics.json",
-    "season-009/statistics-rounds.json"
+    "season-009/statistics-rounds.json",
+    "season-010/statistics.json",
+    "season-010/statistics-rounds.json"
   ],
   "games": [],
   "awards": [],
@@ -38,7 +41,8 @@
     "season-001/teams.json",
     "season-001/teams-02.json",
     "season-005/teams.json",
-    "season-007/teams.json"
+    "season-007/teams.json",
+    "season-010/teams.json"
   ],
   "teamHistory": [
     "season-001/teamHistory.json",
@@ -50,7 +54,8 @@
     "season-006/teamHistory.json",
     "season-007/teamHistory.json",
     "season-008/teamHistory.json",
-    "season-009/teamHistory.json"
+    "season-009/teamHistory.json",
+    "season-010/teamHistory.json"
   ],
   "sources": [
     "season-001/sources.json",
@@ -68,7 +73,9 @@
     "season-008/sources.json",
     "season-008/sources-rounds.json",
     "season-009/sources.json",
-    "season-009/sources-rounds.json"
+    "season-009/sources-rounds.json",
+    "season-010/sources.json",
+    "season-010/sources-rounds.json"
   ],
   "batches": [
     "season-001/batches.json",
@@ -87,7 +94,9 @@
     "season-008/batches.json",
     "season-008/batches-rounds.json",
     "season-009/batches.json",
-    "season-009/batches-rounds.json"
+    "season-009/batches-rounds.json",
+    "season-010/batches.json",
+    "season-010/batches-rounds.json"
   ],
   "revisions": [
     "season-001/revisions.json",
@@ -106,6 +115,8 @@
     "season-008/revisions.json",
     "season-008/revisions-rounds.json",
     "season-009/revisions.json",
-    "season-009/revisions-rounds.json"
+    "season-009/revisions-rounds.json",
+    "season-010/revisions.json",
+    "season-010/revisions-rounds.json"
   ]
 }
