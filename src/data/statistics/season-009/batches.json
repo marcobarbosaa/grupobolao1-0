@@ -1,0 +1,49 @@
+[
+  {
+    "id": "batch-s09-part-1",
+    "seasonId": "season-009",
+    "status": "approved",
+    "recordIds": [
+      "stat-s09-regular-jonas",
+      "stat-s09-playoffs-jonas",
+      "stat-s09-regular-tailan",
+      "stat-s09-playoffs-tailan",
+      "stat-s09-regular-cristiano-ronaldo",
+      "stat-s09-playoffs-cristiano-ronaldo",
+      "stat-s09-regular-fabio-carvalho",
+      "stat-s09-playoffs-fabio-carvalho",
+      "stat-s09-regular-russo",
+      "stat-s09-playoffs-russo",
+      "stat-s09-regular-marco-barbosa",
+      "stat-s09-playoffs-marco-barbosa",
+      "stat-s09-regular-gam-mori",
+      "stat-s09-regular-enzo",
+      "stat-s09-playoffs-enzo",
+      "stat-s09-regular-dias",
+      "stat-s09-regular-nando",
+      "stat-s09-playoffs-nando",
+      "stat-s09-regular-guilherme",
+      "stat-s09-playoffs-guilherme",
+      "stat-s09-regular-matheus-medeiros",
+      "stat-s09-regular-abel"
+    ],
+    "sourceIds": [
+      "src-s09-career-jonas",
+      "src-s09-career-tailan",
+      "src-s09-career-cristiano-ronaldo",
+      "src-s09-career-fabio-carvalho",
+      "src-s09-career-russo",
+      "src-s09-career-marco-barbosa",
+      "src-s09-career-gam-mori",
+      "src-s09-career-enzo",
+      "src-s09-career-dias",
+      "src-s09-career-nando",
+      "src-s09-career-guilherme",
+      "src-s09-career-matheus-medeiros",
+      "src-s09-career-abel"
+    ],
+    "createdAt": "2026-11-17T13:08:00.000Z",
+    "approvedAt": "2026-11-17T13:08:00.000Z",
+    "approvedBy": "Solicitação explícita do usuário em 17/11/2026 para publicar 2013–2014 na main em duas partes"
+  }
+]
