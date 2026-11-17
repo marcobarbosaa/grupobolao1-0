@@ -1,0 +1,24 @@
+[
+  {
+    "id": "batch-s10-career",
+    "status": "published",
+    "sourceIds": [
+      "src-s10-career-jonas",
+      "src-s10-career-tailan",
+      "src-s10-career-cristiano-ronaldo",
+      "src-s10-career-fabio-carvalho",
+      "src-s10-career-russo",
+      "src-s10-career-marco-barbosa",
+      "src-s10-career-gam-mori",
+      "src-s10-career-enzo",
+      "src-s10-career-dias",
+      "src-s10-career-nando",
+      "src-s10-career-guilherme",
+      "src-s10-career-matheus-medeiros",
+      "src-s10-career-abel"
+    ],
+    "createdAt": "2026-11-17T15:30:00.000Z",
+    "approvedAt": "2026-11-17T15:30:00.000Z",
+    "approvedBy": "Solicitação do usuário em 17/11/2026 para importar a temporada 2014-2015 (F) na main"
+  }
+]
