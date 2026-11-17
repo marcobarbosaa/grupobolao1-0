@@ -1,0 +1,262 @@
+[
+  {
+    "id": "revision-s09-jonas-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-jonas",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-jonas-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-jonas-first-round",
+    "statisticId": "stat-s09-first-round-jonas",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-jonas-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-tailan-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-tailan",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-tailan-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-tailan-first-round",
+    "statisticId": "stat-s09-first-round-tailan",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-tailan-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-cristiano-ronaldo-nba-finals",
+    "statisticId": "stat-s09-nba-finals-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-cristiano-ronaldo-nba-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-cristiano-ronaldo-conference-finals",
+    "statisticId": "stat-s09-conference-finals-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-cristiano-ronaldo-conference-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-cristiano-ronaldo-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-cristiano-ronaldo-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-cristiano-ronaldo-first-round",
+    "statisticId": "stat-s09-first-round-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-cristiano-ronaldo-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-fabio-carvalho-nba-finals",
+    "statisticId": "stat-s09-nba-finals-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-fabio-carvalho-nba-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-fabio-carvalho-conference-finals",
+    "statisticId": "stat-s09-conference-finals-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-fabio-carvalho-conference-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-fabio-carvalho-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-fabio-carvalho-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-fabio-carvalho-first-round",
+    "statisticId": "stat-s09-first-round-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-fabio-carvalho-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-russo-nba-finals",
+    "statisticId": "stat-s09-nba-finals-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-russo-nba-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-russo-conference-finals",
+    "statisticId": "stat-s09-conference-finals-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-russo-conference-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-russo-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-russo-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-russo-first-round",
+    "statisticId": "stat-s09-first-round-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-russo-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-marco-barbosa-first-round",
+    "statisticId": "stat-s09-first-round-marco-barbosa",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-marco-barbosa-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-marco-barbosa-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-marco-barbosa",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-marco-barbosa-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-enzo-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-enzo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-enzo-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-enzo-first-round",
+    "statisticId": "stat-s09-first-round-enzo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-enzo-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-nando-nba-finals",
+    "statisticId": "stat-s09-nba-finals-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-nando-nba-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-nando-conference-finals",
+    "statisticId": "stat-s09-conference-finals-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-nando-conference-finals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-nando-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-nando-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-nando-first-round",
+    "statisticId": "stat-s09-first-round-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-nando-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-guilherme-quarterfinals",
+    "statisticId": "stat-s09-quarterfinals-guilherme",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-guilherme-quarterfinals"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  },
+  {
+    "id": "revision-s09-guilherme-first-round",
+    "statisticId": "stat-s09-first-round-guilherme",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-guilherme-first-round"
+    ],
+    "batchId": "batch-s09-part-2",
+    "reason": "Médias e aproveitamentos por rodada transcritos das duas capturas específicas"
+  }
+]
