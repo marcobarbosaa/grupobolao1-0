@@ -1,0 +1,16 @@
+[
+  {
+    "id": "batch-s009-extras",
+    "sourceIds": [
+      "src-s009-extras-1",
+      "src-s009-extras-2",
+      "src-s009-extras-3",
+      "src-s009-extras-4",
+      "src-s009-extras-5"
+    ],
+    "status": "published",
+    "createdAt": "2026-11-17T15:55:00.000Z",
+    "approvedAt": "2026-11-17T15:55:00.000Z",
+    "approvedBy": "Solicitação explícita do usuário para publicar Extras das temporadas 09 e 10"
+  }
+]
