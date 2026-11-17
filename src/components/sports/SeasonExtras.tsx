@@ -10,6 +10,8 @@ import history005 from "../../data/statistics/season-005/teamHistory.json";
 import history006 from "../../data/statistics/season-006/teamHistory.json";
 import history007 from "../../data/statistics/season-007/teamHistory.json";
 import history008 from "../../data/statistics/season-008/teamHistory.json";
+import history009 from "../../data/statistics/season-009/teamHistory.json";
+import history010 from "../../data/statistics/season-010/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
@@ -65,6 +67,7 @@ const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-001": history001, "season-002": history002, "season-003": history003,
   "season-004": history004, "season-005": history005, "season-006": history006,
   "season-007": history007, "season-008": history008,
+  "season-009": history009, "season-010": history010,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO", "sacramento-kings": "SAC",
@@ -75,6 +78,8 @@ const historicalTeamCodes: Record<string, string> = {
   "san-antonio-spurs": "SA", "minnesota-timberwolves": "MIN",
   "philadelphia-76ers": "PHI", "houston-rockets": "HOU",
   "chicago-bulls": "CHI",
+  "orlando-magic": "ORL", "milwaukee-bucks": "MIL",
+  "brooklyn-nets": "BKN", "new-orleans-pelicans": "NO",
 };
 function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
   return (histories[seasonId] ?? [])
@@ -302,7 +307,11 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
                   <th scope="row">
                     <div className="seasonextras-team">
                       <Logo code={row.team} seasonId={seasonId} />
-                      <span className="league-standing-name">{teamNames[row.team] ?? row.team}<PlayerMarks seasonId={seasonId} teamCode={row.team} /></span>
+                      <span className="league-standing-name">{seasonId === "season-010" && row.team === "CHA"
+                        ? "Charlotte Hornets"
+                        : (seasonId === "season-009" || seasonId === "season-010") && row.team === "NO"
+                          ? "New Orleans Pelicans"
+                          : teamNames[row.team] ?? row.team}<PlayerMarks seasonId={seasonId} teamCode={row.team} /></span>
                       {row.rank <= 8 && (
                         <span
                           className="seasonextras-playoff-label"
