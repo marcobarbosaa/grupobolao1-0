@@ -46,7 +46,7 @@ test("new-generation gallery actually uses the card framing variant", () => {
   );
   const styles = readFileSync(new URL("../src/styles/new-generation.css", import.meta.url), "utf8");
   assert.match(component, /<NewPortrait player=\{player\} variant="card"\s*\/>/);
-  assert.match(component, /<NewPortrait player=\{player\} priority variant="profile"\s*\/>/);
+  assert.match(component, /<CinematicPlayerProfile player=\{player\}\s*\/>/);
   assert.match(styles, /\.generation-portrait--card img\s*\{[^}]*object-fit:\s*contain/);
   assert.match(styles, /\.generation-portrait--profile img\s*\{[^}]*object-fit:\s*contain/);
 });
@@ -86,7 +86,8 @@ test("all thirteen landing portraits are packaged and the old side copy is remov
   for (const id of ids) {
     assert.ok(existsSync(new URL(`../public/jogadores/landing/${id}.png`, import.meta.url)), id);
   }
-  assert.match(landing, /\/jogadores\/landing\/\$\{player\.id\}\.png/);
+  assert.match(landing, /const landingImage = player\.selectionPortrait/);
+  assert.match(landing, /src=\{portraitSource\}/);
   assert.doesNotMatch(landing, /arena-home__side-copy|BASQUETE<\/span>|ESTATÍSTICAS<\/span>|LEGADO<\/span>/);
   assert.doesNotMatch(css, /arena-home__side-copy/);
   assert.match(css, /object-fit:\s*contain/);
