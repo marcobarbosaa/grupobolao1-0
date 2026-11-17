@@ -1,32 +1,7 @@
 [
   {
     "id": "batch-s09-part-1",
-    "seasonId": "season-009",
-    "status": "approved",
-    "recordIds": [
-      "stat-s09-regular-jonas",
-      "stat-s09-playoffs-jonas",
-      "stat-s09-regular-tailan",
-      "stat-s09-playoffs-tailan",
-      "stat-s09-regular-cristiano-ronaldo",
-      "stat-s09-playoffs-cristiano-ronaldo",
-      "stat-s09-regular-fabio-carvalho",
-      "stat-s09-playoffs-fabio-carvalho",
-      "stat-s09-regular-russo",
-      "stat-s09-playoffs-russo",
-      "stat-s09-regular-marco-barbosa",
-      "stat-s09-playoffs-marco-barbosa",
-      "stat-s09-regular-gam-mori",
-      "stat-s09-regular-enzo",
-      "stat-s09-playoffs-enzo",
-      "stat-s09-regular-dias",
-      "stat-s09-regular-nando",
-      "stat-s09-playoffs-nando",
-      "stat-s09-regular-guilherme",
-      "stat-s09-playoffs-guilherme",
-      "stat-s09-regular-matheus-medeiros",
-      "stat-s09-regular-abel"
-    ],
+    "status": "published",
     "sourceIds": [
       "src-s09-career-jonas",
       "src-s09-career-tailan",
