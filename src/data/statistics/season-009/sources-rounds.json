@@ -2,7 +2,7 @@
   {
     "id": "src-s09-jonas-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (52914808…jpg, 676ee5c0…jpg)",
+    "fileName": "52914808…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1UTbluUebKVit_Rx6J1846_wYw33qscD4",
@@ -10,18 +10,16 @@
       "season": "season-009",
       "playerId": "jonas",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "52914808",
-        "676ee5c0"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "52914808, 676ee5c0"
+    },
+    "contentHash": "147bd026210eb571aeaca3e98396f76c1a3f361280be89cf09c78291bb70922a"
   },
   {
     "id": "src-s09-jonas-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (9819bed9…jpg, 435684ec…jpg)",
+    "fileName": "9819bed9…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1UTbluUebKVit_Rx6J1846_wYw33qscD4",
@@ -29,18 +27,16 @@
       "season": "season-009",
       "playerId": "jonas",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "9819bed9",
-        "435684ec"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "9819bed9, 435684ec"
+    },
+    "contentHash": "3bff6112e87b3fc0e442cfcf428291e18f0bcdd6f480d317f770d4cf1cff999c"
   },
   {
     "id": "src-s09-tailan-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (12a26bd0…jpg, 7467439e…jpg)",
+    "fileName": "12a26bd0…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "19cXheR_TgTjF9wtcliIbNwR95dXweDw0",
@@ -48,18 +44,16 @@
       "season": "season-009",
       "playerId": "tailan",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "12a26bd0",
-        "7467439e"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "12a26bd0, 7467439e"
+    },
+    "contentHash": "b251f3d56b24c37d967dd5b4ff0bbf203f13a6e1b423f1d7b170c0ba252caada"
   },
   {
     "id": "src-s09-tailan-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (b2141032…jpg, 018d33c4…jpg)",
+    "fileName": "b2141032…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "19cXheR_TgTjF9wtcliIbNwR95dXweDw0",
@@ -67,18 +61,16 @@
       "season": "season-009",
       "playerId": "tailan",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "b2141032",
-        "018d33c4"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "b2141032, 018d33c4"
+    },
+    "contentHash": "f07907908b0dcdf170fac010c607e083b4f26b4832c34b633f632be1bd5f0aee"
   },
   {
     "id": "src-s09-cristiano-ronaldo-nba-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (29f313d6…jpg, d1c36e51…jpg)",
+    "fileName": "29f313d6…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1LQlPRg1rJBt-XV8rqjy8CT8FMkZYOz1b",
@@ -86,18 +78,16 @@
       "season": "season-009",
       "playerId": "cristiano-ronaldo",
       "phaseId": "nba-finals",
-      "captureFileNamePrefixes": [
-        "29f313d6",
-        "d1c36e51"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "29f313d6, d1c36e51"
+    },
+    "contentHash": "baef8f6a87e54a9dcedaa56000ac76736d4d8540a8eb03d3c1ca57945a71d7ce"
   },
   {
     "id": "src-s09-cristiano-ronaldo-conference-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (8a9f00f1…jpg, 00ae8ec9…jpg)",
+    "fileName": "8a9f00f1…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1LQlPRg1rJBt-XV8rqjy8CT8FMkZYOz1b",
@@ -105,18 +95,16 @@
       "season": "season-009",
       "playerId": "cristiano-ronaldo",
       "phaseId": "conference-finals",
-      "captureFileNamePrefixes": [
-        "8a9f00f1",
-        "00ae8ec9"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "8a9f00f1, 00ae8ec9"
+    },
+    "contentHash": "83c097502bd6d050a1bf2faa68c0b86639373e77b098e8559dcd376ee91245b7"
   },
   {
     "id": "src-s09-cristiano-ronaldo-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (e2e1b0e1…jpg, 63aca188…jpg)",
+    "fileName": "e2e1b0e1…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1LQlPRg1rJBt-XV8rqjy8CT8FMkZYOz1b",
@@ -124,18 +112,16 @@
       "season": "season-009",
       "playerId": "cristiano-ronaldo",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "e2e1b0e1",
-        "63aca188"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "e2e1b0e1, 63aca188"
+    },
+    "contentHash": "15965b8ec190e6cc02785ee2c13ae62a77e0e8c95c9c2d2315386378c2211e53"
   },
   {
     "id": "src-s09-cristiano-ronaldo-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (38ff122e…jpg, 8dca8081…jpg)",
+    "fileName": "38ff122e…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1LQlPRg1rJBt-XV8rqjy8CT8FMkZYOz1b",
@@ -143,18 +129,16 @@
       "season": "season-009",
       "playerId": "cristiano-ronaldo",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "38ff122e",
-        "8dca8081"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "38ff122e, 8dca8081"
+    },
+    "contentHash": "43de98a77c37cec7340d5d60ed03cff2103cb2c3b2a25398afa758580f00237a"
   },
   {
     "id": "src-s09-fabio-carvalho-nba-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (fc1471e2…jpg, acb81d6f…jpg)",
+    "fileName": "fc1471e2…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "195NJDzLkkwdOvf0jj1VGYGTA6Ao9vir9",
@@ -162,18 +146,16 @@
       "season": "season-009",
       "playerId": "fabio-carvalho",
       "phaseId": "nba-finals",
-      "captureFileNamePrefixes": [
-        "fc1471e2",
-        "acb81d6f"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "fc1471e2, acb81d6f"
+    },
+    "contentHash": "65a3b1da1bb7344ec90e2c61c509db718ddd5bd797bc616b780feb549b9b55df"
   },
   {
     "id": "src-s09-fabio-carvalho-conference-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (44b82951…jpg, 0ca753f7…jpg)",
+    "fileName": "44b82951…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "195NJDzLkkwdOvf0jj1VGYGTA6Ao9vir9",
@@ -181,18 +163,16 @@
       "season": "season-009",
       "playerId": "fabio-carvalho",
       "phaseId": "conference-finals",
-      "captureFileNamePrefixes": [
-        "44b82951",
-        "0ca753f7"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "44b82951, 0ca753f7"
+    },
+    "contentHash": "61db25e041616815844293f0a3555c1affe12ca8ca4b277f6d93ba6e3cb9fc9f"
   },
   {
     "id": "src-s09-fabio-carvalho-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (51a73151…jpg, fa2931cb…jpg)",
+    "fileName": "51a73151…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "195NJDzLkkwdOvf0jj1VGYGTA6Ao9vir9",
@@ -200,18 +180,16 @@
       "season": "season-009",
       "playerId": "fabio-carvalho",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "51a73151",
-        "fa2931cb"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "51a73151, fa2931cb"
+    },
+    "contentHash": "4f1f0fe0a0826a3847d937308cef3b0ccfcc9fcf6aa6bb7c02cd8934fba1470a"
   },
   {
     "id": "src-s09-fabio-carvalho-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (6558fd03…jpg, 07154eb5…jpg)",
+    "fileName": "6558fd03…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "195NJDzLkkwdOvf0jj1VGYGTA6Ao9vir9",
@@ -219,18 +197,16 @@
       "season": "season-009",
       "playerId": "fabio-carvalho",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "6558fd03",
-        "07154eb5"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "6558fd03, 07154eb5"
+    },
+    "contentHash": "72326b773818ef9bc27ac7632e47497c065570fde4913d32d95702c4180f56b6"
   },
   {
     "id": "src-s09-russo-nba-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (1c1657d2…jpg, 6e200c38…jpg)",
+    "fileName": "1c1657d2…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1WTcaunm5AOyEMFg3K0wfamS1ik9wmn9_",
@@ -238,18 +214,16 @@
       "season": "season-009",
       "playerId": "russo",
       "phaseId": "nba-finals",
-      "captureFileNamePrefixes": [
-        "1c1657d2",
-        "6e200c38"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "1c1657d2, 6e200c38"
+    },
+    "contentHash": "f06ea109638a328ef5363ef928be3a96cfdffd9f04950410a3385836b3db24f6"
   },
   {
     "id": "src-s09-russo-conference-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (0602e98b…jpg, d0b171ad…jpg)",
+    "fileName": "0602e98b…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1WTcaunm5AOyEMFg3K0wfamS1ik9wmn9_",
@@ -257,18 +231,16 @@
       "season": "season-009",
       "playerId": "russo",
       "phaseId": "conference-finals",
-      "captureFileNamePrefixes": [
-        "0602e98b",
-        "d0b171ad"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "0602e98b, d0b171ad"
+    },
+    "contentHash": "c30a3a9001bf1c36231708639a04ff1b878b9d8657ff91d78a6f3a55b3a4f274"
   },
   {
     "id": "src-s09-russo-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (6dab285a…jpg, 799baaa3…jpg)",
+    "fileName": "6dab285a…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1WTcaunm5AOyEMFg3K0wfamS1ik9wmn9_",
@@ -276,18 +248,16 @@
       "season": "season-009",
       "playerId": "russo",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "6dab285a",
-        "799baaa3"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "6dab285a, 799baaa3"
+    },
+    "contentHash": "da26f428b7cc45282d3bfac60cfdf36304a6fdbed1121f1276aa930f83918cc6"
   },
   {
     "id": "src-s09-russo-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (074f5d16…jpg, da9c9d09…jpg)",
+    "fileName": "074f5d16…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1WTcaunm5AOyEMFg3K0wfamS1ik9wmn9_",
@@ -295,18 +265,16 @@
       "season": "season-009",
       "playerId": "russo",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "074f5d16",
-        "da9c9d09"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "074f5d16, da9c9d09"
+    },
+    "contentHash": "b8551a7e7e699b08942410236c8dff491c3e68837eadad06904bb99e73c0d1bb"
   },
   {
     "id": "src-s09-marco-barbosa-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (50695c9a…jpg, 57bd6392…jpg)",
+    "fileName": "50695c9a…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1FGz8bI_wKcmj-AeOsR9CtwxWFNCcObs_",
@@ -314,18 +282,16 @@
       "season": "season-009",
       "playerId": "marco-barbosa",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "50695c9a",
-        "57bd6392"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "50695c9a, 57bd6392"
+    },
+    "contentHash": "c4cf579b65928483bef98c87aed6c6bde15da3a99a3544d472bf852b374d6224"
   },
   {
     "id": "src-s09-marco-barbosa-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (3bf21e63…jpg, 4f8e4443…jpg)",
+    "fileName": "3bf21e63…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1FGz8bI_wKcmj-AeOsR9CtwxWFNCcObs_",
@@ -333,18 +299,16 @@
       "season": "season-009",
       "playerId": "marco-barbosa",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "3bf21e63",
-        "4f8e4443"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "3bf21e63, 4f8e4443"
+    },
+    "contentHash": "b1bbbc95d206134f8243937b092da4c10a256327275810ae57312512524a855f"
   },
   {
     "id": "src-s09-enzo-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (ce12de6e…jpg, aea2e491…jpg)",
+    "fileName": "ce12de6e…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1sBfX2PzilMDa7d9zVc09N5w5SUDT3z7H",
@@ -352,18 +316,16 @@
       "season": "season-009",
       "playerId": "enzo",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "ce12de6e",
-        "aea2e491"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "ce12de6e, aea2e491"
+    },
+    "contentHash": "0b72fe7da3bfbe79eeac6dfb461f8e4176ec04100cff05c1d1a2738b34a74db9"
   },
   {
     "id": "src-s09-enzo-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (94db04b2…jpg, 960622e2…jpg)",
+    "fileName": "94db04b2…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "1sBfX2PzilMDa7d9zVc09N5w5SUDT3z7H",
@@ -371,18 +333,16 @@
       "season": "season-009",
       "playerId": "enzo",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "94db04b2",
-        "960622e2"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "94db04b2, 960622e2"
+    },
+    "contentHash": "641de10fb3c3b7ab6982a6c3a950be0286fe73a2ec71cb9ebfd19faa99002993"
   },
   {
     "id": "src-s09-nando-nba-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (0588f533…jpg, b69c09aa…jpg)",
+    "fileName": "0588f533…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "14Q6qFSbxuqtrUSxjAXO3WaUqvFD2ypdx",
@@ -390,18 +350,16 @@
       "season": "season-009",
       "playerId": "nando",
       "phaseId": "nba-finals",
-      "captureFileNamePrefixes": [
-        "0588f533",
-        "b69c09aa"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "0588f533, b69c09aa"
+    },
+    "contentHash": "98bd1ae793c2c37bcd44d43f6b362df7454ced51cc6c25eddb83045b7e67002d"
   },
   {
     "id": "src-s09-nando-conference-finals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (27bf5846…jpg, d0d64178…jpg)",
+    "fileName": "27bf5846…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "14Q6qFSbxuqtrUSxjAXO3WaUqvFD2ypdx",
@@ -409,18 +367,16 @@
       "season": "season-009",
       "playerId": "nando",
       "phaseId": "conference-finals",
-      "captureFileNamePrefixes": [
-        "27bf5846",
-        "d0d64178"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "27bf5846, d0d64178"
+    },
+    "contentHash": "13bb857e5de28004c6ba997f52cfd516c3a08c896d7a7a6faacb10465b4a9853"
   },
   {
     "id": "src-s09-nando-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (745c8ede…jpg, 42c59d5b…jpg)",
+    "fileName": "745c8ede…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "14Q6qFSbxuqtrUSxjAXO3WaUqvFD2ypdx",
@@ -428,18 +384,16 @@
       "season": "season-009",
       "playerId": "nando",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "745c8ede",
-        "42c59d5b"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "745c8ede, 42c59d5b"
+    },
+    "contentHash": "06c14ab448e0209787daa450ebba272f40c1bc01fd4d2668e1da9d7ef4434481"
   },
   {
     "id": "src-s09-nando-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (d04d70e1…jpg, cb449afb…jpg)",
+    "fileName": "d04d70e1…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "14Q6qFSbxuqtrUSxjAXO3WaUqvFD2ypdx",
@@ -447,18 +401,16 @@
       "season": "season-009",
       "playerId": "nando",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "d04d70e1",
-        "cb449afb"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "d04d70e1, cb449afb"
+    },
+    "contentHash": "3a83161b3d276ec92b7363bb396a2cdb46a2a7d0430b573b42b3875036b403e1"
   },
   {
     "id": "src-s09-guilherme-quarterfinals",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (3a38e0e6…jpg, 995e0959…jpg)",
+    "fileName": "3a38e0e6…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "10tXle9X_8JQgd9neXc0pS7jp545AQqNd",
@@ -466,18 +418,16 @@
       "season": "season-009",
       "playerId": "guilherme",
       "phaseId": "quarterfinals",
-      "captureFileNamePrefixes": [
-        "3a38e0e6",
-        "995e0959"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "3a38e0e6, 995e0959"
+    },
+    "contentHash": "93f0aa74f478af0ef412dabc5fc7fb51c60753585214736acadca4b905cf5305"
   },
   {
     "id": "src-s09-guilherme-first-round",
     "kind": "screenshot",
-    "fileName": "capturas de rodada (4196b72e…jpg, 3dca46b9…jpg)",
+    "fileName": "4196b72e…jpg (captura original no Drive)",
     "receivedAt": "2026-11-17T13:08:00.000Z",
     "metadata": {
       "driveFolderId": "10tXle9X_8JQgd9neXc0pS7jp545AQqNd",
@@ -485,12 +435,10 @@
       "season": "season-009",
       "playerId": "guilherme",
       "phaseId": "first-round",
-      "captureFileNamePrefixes": [
-        "4196b72e",
-        "3dca46b9"
-      ],
       "originalStoredPublicly": false,
-      "referenceType": "duas capturas originais por fase; sem hashes inferidos"
-    }
+      "referenceType": "SHA-256 da primeira captura JPEG da fase; segunda captura identificada por prefixo",
+      "captureFileNamePrefixes": "4196b72e, 3dca46b9"
+    },
+    "contentHash": "0a6bd10588936af178671c217aa6d29a23cd275b76e9a3a9259b3ff3d7e1fed7"
   }
 ]
