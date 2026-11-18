@@ -1,0 +1,34 @@
+{
+  "version": "season-002-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "calendar": {
+    "startDate": "2006-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "divisions": [
+    { "id": "west-synthetic-1", "conference": "west", "teams": ["PHX", "SA", "LAL", "GS", "DEN"] },
+    { "id": "west-synthetic-2", "conference": "west", "teams": ["MIN", "NO", "LAC", "MEM", "HOU"] },
+    {
+      "id": "west-synthetic-3",
+      "conference": "west",
+      "teams": ["SEA", "POR", "DAL", "SAC", "UTA"]
+    },
+    { "id": "east-synthetic-1", "conference": "east", "teams": ["DET", "ORL", "NY", "CHI", "CHA"] },
+    {
+      "id": "east-synthetic-2",
+      "conference": "east",
+      "teams": ["WAS", "BOS", "TOR", "MIL", "IND"]
+    },
+    { "id": "east-synthetic-3", "conference": "east", "teams": ["CLE", "PHI", "MIA", "NJN", "ATL"] }
+  ]
+}

@@ -18,7 +18,10 @@
     "stats:import:approve": "node scripts/statistics/imports/cli.ts approve",
     "stats:import:publish": "node scripts/statistics/imports/cli.ts publish",
     "stats:import:recover": "node scripts/statistics/imports/cli.ts recover",
-    "stats:import:local": "node scripts/statistics/local/server.ts"
+    "stats:import:local": "node scripts/statistics/local/server.ts",
+    "liga-viva:generate": "node scripts/liga-viva/cli.ts generate",
+    "liga-viva:validate": "node scripts/liga-viva/cli.ts validate",
+    "liga-viva:test": "node --test tests/liga-viva/*.test.mjs"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
@@ -93,6 +96,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
+    "glpk.js": "^5.0.0",
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
