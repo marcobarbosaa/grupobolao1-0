@@ -130,7 +130,7 @@ const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
 ];
 function hasStandingsDetailValue(key: keyof StandingDetails, value: string | undefined): boolean {
   if (value === undefined || value === "") return false;
-  if (key === "conference" || key === "division") return /^\\d+-\\d+$/.test(value);
+  if (key === "conference" || key === "division") return /^\d+-\d+$/.test(value);
   return true;
 }
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
