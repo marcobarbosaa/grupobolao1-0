@@ -1,0 +1,242 @@
+{
+  "UTA": {
+    "gb": "—",
+    "home": "31-10",
+    "away": "28-13",
+    "conference": "37-15",
+    "division": "13-3",
+    "streak": "Won 6"
+  },
+  "DEN": {
+    "gb": "1.0",
+    "home": "31-10",
+    "away": "27-14",
+    "conference": "36-16",
+    "division": "12-4",
+    "streak": "Won 2"
+  },
+  "SAC": {
+    "gb": "7.0",
+    "home": "26-15",
+    "away": "26-15",
+    "conference": "34-18",
+    "division": "13-3",
+    "streak": "Won 3"
+  },
+  "DAL": {
+    "gb": "3.0",
+    "home": "32-9",
+    "away": "24-17",
+    "conference": "38-14",
+    "division": "13-3",
+    "streak": "Won 1"
+  },
+  "PHX": {
+    "gb": "14.0",
+    "home": "23-18",
+    "away": "22-19",
+    "conference": "30-22",
+    "division": "7-9",
+    "streak": "Won 3"
+  },
+  "SA": {
+    "gb": "15.0",
+    "home": "20-21",
+    "away": "24-17",
+    "conference": "26-26",
+    "division": "7-9",
+    "streak": "Won 2"
+  },
+  "OKC": {
+    "gb": "15.0",
+    "home": "27-14",
+    "away": "17-24",
+    "conference": "23-29",
+    "division": "6-10",
+    "streak": "Won 2"
+  },
+  "MEM": {
+    "gb": "17.0",
+    "home": "21-20",
+    "away": "21-20",
+    "conference": "24-28",
+    "division": "5-11",
+    "streak": "Lost 5"
+  },
+  "GS": {
+    "gb": "17.0",
+    "home": "26-15",
+    "away": "16-25",
+    "conference": "24-28",
+    "division": "8-8",
+    "streak": "Lost 1"
+  },
+  "LAL": {
+    "gb": "20.0",
+    "home": "21-20",
+    "away": "18-23",
+    "conference": "19-33",
+    "division": "5-11",
+    "streak": "Lost 1"
+  },
+  "NO": {
+    "gb": "21.0",
+    "home": "22-19",
+    "away": "16-25",
+    "conference": "24-28",
+    "division": "10-6",
+    "streak": "Won 2"
+  },
+  "LAC": {
+    "gb": "23.0",
+    "home": "22-19",
+    "away": "14-27",
+    "conference": "21-31",
+    "division": "7-9",
+    "streak": "Lost 2"
+  },
+  "MIN": {
+    "gb": "25.0",
+    "home": "22-19",
+    "away": "12-29",
+    "conference": "22-30",
+    "division": "5-11",
+    "streak": "Lost 2"
+  },
+  "POR": {
+    "gb": "27.0",
+    "home": "18-23",
+    "away": "14-27",
+    "conference": "20-32",
+    "division": "4-12",
+    "streak": "Lost 3"
+  },
+  "HOU": {
+    "gb": "36.0",
+    "home": "14-27",
+    "away": "9-32",
+    "conference": "12-40",
+    "division": "5-11",
+    "streak": "Won 1"
+  },
+  "IND": {
+    "gb": "—",
+    "home": "30-11",
+    "away": "27-14",
+    "conference": "38-14",
+    "division": "12-4",
+    "streak": "Won 4"
+  },
+  "CHI": {
+    "gb": "2.0",
+    "home": "28-13",
+    "away": "27-14",
+    "conference": "35-17",
+    "division": "11-5",
+    "streak": "Won 1"
+  },
+  "MIA": {
+    "gb": "21.0",
+    "home": "21-20",
+    "away": "15-26",
+    "conference": "29-23",
+    "division": "12-4",
+    "streak": "Lost 1"
+  },
+  "TOR": {
+    "gb": "4.0",
+    "home": "30-11",
+    "away": "23-18",
+    "conference": "37-15",
+    "division": "11-5",
+    "streak": "Lost 4"
+  },
+  "DET": {
+    "gb": "8.0",
+    "home": "29-12",
+    "away": "20-21",
+    "conference": "29-23",
+    "division": "7-9",
+    "streak": "Won 3"
+  },
+  "NY": {
+    "gb": "12.0",
+    "home": "25-16",
+    "away": "20-21",
+    "conference": "32-20",
+    "division": "8-8",
+    "streak": "Lost 2"
+  },
+  "BOS": {
+    "gb": "13.0",
+    "home": "26-15",
+    "away": "18-23",
+    "conference": "30-22",
+    "division": "9-7",
+    "streak": "Won 4"
+  },
+  "PHI": {
+    "gb": "17.0",
+    "home": "20-21",
+    "away": "20-21",
+    "conference": "25-27",
+    "division": "5-11",
+    "streak": "Lost 2"
+  },
+  "MIL": {
+    "gb": "18.0",
+    "home": "25-16",
+    "away": "14-27",
+    "conference": "28-24",
+    "division": "8-8",
+    "streak": "Lost 2"
+  },
+  "BKN": {
+    "gb": "20.0",
+    "home": "20-21",
+    "away": "17-24",
+    "conference": "26-26",
+    "division": "7-9",
+    "streak": "Lost 3"
+  },
+  "ATL": {
+    "gb": "21.0",
+    "home": "19-22",
+    "away": "17-24",
+    "conference": "22-30",
+    "division": "11-5",
+    "streak": "Lost 1"
+  },
+  "CHA": {
+    "gb": "21.0",
+    "home": "21-20",
+    "away": "15-26",
+    "conference": "22-30",
+    "division": "7-9",
+    "streak": "Lost 3"
+  },
+  "WAS": {
+    "gb": "31.0",
+    "home": "17-24",
+    "away": "9-32",
+    "conference": "17-35",
+    "division": "5-11",
+    "streak": "Won 1"
+  },
+  "CLE": {
+    "gb": "36.0",
+    "home": "17-24",
+    "away": "4-37",
+    "conference": "12-40",
+    "division": "2-14",
+    "streak": "Lost 2"
+  },
+  "ORL": {
+    "gb": "45.0",
+    "home": "7-34",
+    "away": "5-36",
+    "conference": "8-44",
+    "division": "5-11",
+    "streak": "Won 1"
+  }
+}

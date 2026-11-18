@@ -19,6 +19,7 @@ import details2006 from "../../data/statistics/season-002/standings-details.json
 import details2007 from "../../data/statistics/season-003/standings-details.json";
 import details2008 from "../../data/statistics/season-004/standings-details.json";
 import details2009 from "../../data/statistics/season-005/standings-details.json";
+import details2013 from "../../data/statistics/season-008/standings-details.json";
 import "./SeasonExtras.css";
 
 type SeasonId = string;
@@ -120,6 +121,7 @@ const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-003": details2007,
   "season-004": details2008,
   "season-005": details2009,
+  "season-008": details2013,
 };
 const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
   { key: "gb", label: "GB" },
