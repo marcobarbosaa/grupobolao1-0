@@ -1,0 +1,133 @@
+{
+  "source": "user-uploaded ZIP archives",
+  "seasons": {
+    "2010-2011": [
+      {
+        "file": "dcd8bc98-c792-417a-b059-88a8f5e20eb4.jpg",
+        "sha256": "70c3b608dec8cc6254b8a43bef4de1bf35105982fc204c179443785b9880e610",
+        "size": 291040,
+        "kind": "image"
+      },
+      {
+        "file": "72b3f643-774a-4369-b377-6efa5916aa02.jpg",
+        "sha256": "1aa1af3418c75b5834cb66a9a1346d1a49bc565e85551b607d3834b9cdf9b3bd",
+        "size": 313970,
+        "kind": "image"
+      },
+      {
+        "file": "5c9a7a0c-628b-4871-a8d5-c27886f02b93.jpg",
+        "sha256": "b58585ea98bd64eb76c237a87444702e6ac1e062ac816a9fb8f27446259a2a4a",
+        "size": 287343,
+        "kind": "image"
+      },
+      {
+        "file": "5f5577e8-dba6-4d95-90be-1e64183e6937.jpg",
+        "sha256": "d663e772ce6194e79688bf9b07f5affd7c4115e2cad98845eef36c59d83e8d86",
+        "size": 284312,
+        "kind": "image"
+      },
+      {
+        "file": "64673137-b9c4-4e89-9ee3-a0e958ff28cb.jpg",
+        "sha256": "9ed2612cca581562ec5c1ddb478d1433f6ed2a8e7ea68576653c36aff97b664d",
+        "size": 285275,
+        "kind": "image"
+      }
+    ],
+    "2011-2012": [
+      {
+        "file": "1f5a0966-7f1f-43a8-8e3a-ba5dc0908c76.jpg",
+        "sha256": "4d127fd352956c10e3283ecb7ab00bb8cf1e0fc8e849998896cd379b4df7cc48",
+        "size": 281270,
+        "kind": "image"
+      },
+      {
+        "file": "485ac8dc-ad47-4a5f-a513-9625ccdd356b.jpg",
+        "sha256": "049ce5f1af8341d66d58b0eff4986157aa192b01fd3103ed10465afd5a1a0511",
+        "size": 286216,
+        "kind": "image"
+      },
+      {
+        "file": "43f5b18e-9ce3-4fcd-bd00-0079187251dc.jpg",
+        "sha256": "c0aed70405f2fbf55cecd36796af9215642924963bbcd05e1df7b765e7d070d7",
+        "size": 290056,
+        "kind": "image"
+      },
+      {
+        "file": "c45e69b2-890b-4aac-9aa6-463c00d5b683.jpg",
+        "sha256": "fad63a3ab88aeb8a5cd7674aa29a1e2bcc475db018803e93e84871289ffb7be4",
+        "size": 274464,
+        "kind": "image"
+      },
+      {
+        "file": "b306d199-bdba-4ed8-8bc5-b5c7d26e1662.jpg",
+        "sha256": "92338f75eb404d705439ef3e075995b278f80cd07cf655afd35709df59ec2283",
+        "size": 312930,
+        "kind": "image"
+      }
+    ],
+    "2012-2013": [
+      {
+        "file": "6f52cfdb-d8f9-4ada-a898-fad7bfa076fb.jpg",
+        "sha256": "edfb5045054aa2ebe8ef303555155e51b0720ed281f9ca216126fc42eb1bd284",
+        "size": 282744,
+        "kind": "image"
+      },
+      {
+        "file": "ea5f3f7b-adf6-42c7-985e-e86f1e92df1b.jpg",
+        "sha256": "a393b3463c017bcb5275d405dcd2fec304f4917dbb3ac9693ede03bc3d0fbe67",
+        "size": 283839,
+        "kind": "image"
+      },
+      {
+        "file": "adc34624-8bf5-4814-870f-9a5021503fe5.jpg",
+        "sha256": "3191c98b05a507b09157c5d834eb7d48648022d7feafe6449f4ea721478cd793",
+        "size": 284961,
+        "kind": "image"
+      },
+      {
+        "file": "249dd0c6-50e8-4249-98ea-a5f2d80bfaae.jpg",
+        "sha256": "c4d48500ad7e407012c5ba96ab5066deb57e856370b23b4687df9a2ef5ca5596",
+        "size": 314555,
+        "kind": "image"
+      },
+      {
+        "file": "c8c84025-3c47-40c3-8e3a-78e60c5d6568.jpg",
+        "sha256": "f87e531d6add813b1176a48b1133e8f6bede44d25ae35f8f22f610f60350383a",
+        "size": 282230,
+        "kind": "image"
+      }
+    ],
+    "2015-2016": [
+      {
+        "file": "e509cbb0-00af-4d58-8c06-75bff9dd36b0.jpg",
+        "sha256": "4323214a6c08083b3762b4d4d4dae5e6f22b2bc9b7478138da0a34090897207c",
+        "size": 276657,
+        "kind": "image"
+      },
+      {
+        "file": "5ab94718-6bac-444b-872e-0bbd2143bedf.jpg",
+        "sha256": "8951b4c36c78053d3e40bbaf43e93b35bdc9afd096efbce8af2b49b98e917a2e",
+        "size": 317849,
+        "kind": "image"
+      },
+      {
+        "file": "1385c79f-d399-43ea-8653-a932f7375f8d.jpg",
+        "sha256": "e6e15874bc01c230499bf4d94329444802497a4e37f981579926c24e5bf4f39b",
+        "size": 280119,
+        "kind": "image"
+      },
+      {
+        "file": "ab7b5cac-5ec2-45d0-aa14-7b229c8f573a.jpg",
+        "sha256": "946b2cde2823beaa3a4f7eb1f0456745a3a3247caf7eba96bc5afded99ee6a77",
+        "size": 281812,
+        "kind": "image"
+      },
+      {
+        "file": "32811b2b-1aa5-488b-9000-be04852e0e68.jpg",
+        "sha256": "5a2bfe417942333c76d9f6be1cb8e50c01b5e66dbb67addd5094e7d4f1a5e54b",
+        "size": 282128,
+        "kind": "image"
+      }
+    ]
+  }
+}
