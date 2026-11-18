@@ -15,6 +15,15 @@
     "conferenceNonDivisionExtraGamesPerTeam": 6,
     "interConferenceGamesPerOpponent": 2
   },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
   "divisions": [
     { "id": "west-synthetic-1", "conference": "west", "teams": ["PHX", "SA", "LAL", "GS", "DEN"] },
     { "id": "west-synthetic-2", "conference": "west", "teams": ["MIN", "NO", "LAC", "MEM", "HOU"] },

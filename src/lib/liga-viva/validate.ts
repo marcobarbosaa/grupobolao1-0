@@ -10,6 +10,13 @@ export type ValidationReport = {
   valid: boolean;
   errors: string[];
   totals: { teams: number; games: number; wins: number; losses: number };
+  scoring?: {
+    totalPointsFor: number;
+    totalPointsAgainst: number;
+    minTeamScore: number;
+    maxTeamScore: number;
+    maxMargin: number;
+  };
   coverage: {
     overall: boolean;
     homeAway: boolean;
@@ -20,6 +27,15 @@ export type ValidationReport = {
 };
 
 const integer = (value: unknown) => Number.isSafeInteger(value) && Number(value) >= 0;
+
+function pointTotalBounds(average: number, games: number, precision: number) {
+  const scale = 10 ** precision;
+  const roundedAverage = Math.round(average * scale);
+  return {
+    min: Math.ceil((games * (2 * roundedAverage - 1)) / (2 * scale)),
+    max: Math.ceil((games * (2 * roundedAverage + 1)) / (2 * scale)) - 1,
+  };
+}
 
 export function validateSeasonTarget(target: SeasonTarget, rules: SeasonRules): string[] {
   const errors: string[] = [];
@@ -46,6 +62,24 @@ export function validateSeasonTarget(target: SeasonTarget, rules: SeasonRules): 
     errors.push(
       "Fixed division and interconference series must allow equal home games for both teams",
     );
+  const hasScoringTargets = target.teams.some((team) => team?.scoring !== undefined);
+  if (hasScoringTargets && target.teams.some((team) => !team?.scoring))
+    errors.push("Scoring targets must include both averages for every team or none");
+  if (hasScoringTargets && !rules.scoring)
+    errors.push("Scoring targets require versioned synthetic score rules");
+  if (rules.scoring) {
+    const scoringValues = Object.values(rules.scoring);
+    if (scoringValues.some((value) => !integer(value)))
+      errors.push("Synthetic scoring rules must be nonnegative integers");
+    if (
+      rules.scoring.displayPrecision > 3 ||
+      rules.scoring.maxPointsPerTeam < rules.scoring.minPointsPerTeam ||
+      rules.scoring.maxDeviationFromPairedAverage < 0 ||
+      rules.scoring.maxCombinedPoints < rules.scoring.minCombinedPoints ||
+      rules.scoring.maxMargin < 1
+    )
+      errors.push("Synthetic scoring bounds are inconsistent");
+  }
 
   const teamIds = target.teams.map((team) => team?.teamId);
   if (teamIds.some((id) => typeof id !== "string" || !id))
@@ -84,6 +118,33 @@ export function validateSeasonTarget(target: SeasonTarget, rules: SeasonRules): 
       divisionLosses: team.divisionRecord?.losses,
     })) {
       if (!integer(value)) errors.push(`${team.teamId}: ${field} is missing or invalid`);
+    }
+    if (team.scoring) {
+      for (const [field, value] of Object.entries(team.scoring)) {
+        if (!Number.isFinite(value) || value < 0)
+          errors.push(`${team.teamId}: ${field} is missing or invalid`);
+        if (
+          rules.scoring &&
+          Math.abs(
+            value * 10 ** rules.scoring.displayPrecision -
+              Math.round(value * 10 ** rules.scoring.displayPrecision),
+          ) > 1e-8
+        )
+          errors.push(`${team.teamId}: ${field} exceeds configured display precision`);
+      }
+      if (rules.scoring) {
+        for (const [field, average] of Object.entries(team.scoring)) {
+          const targetRange = pointTotalBounds(
+            average,
+            rules.schedule.gamesPerTeam,
+            rules.scoring.displayPrecision,
+          );
+          const lowestPossible = rules.schedule.gamesPerTeam * rules.scoring.minPointsPerTeam;
+          const highestPossible = rules.schedule.gamesPerTeam * rules.scoring.maxPointsPerTeam;
+          if (targetRange.max < lowestPossible || targetRange.min > highestPossible)
+            errors.push(`${team.teamId}: ${field} cannot fit the configured score range`);
+        }
+      }
     }
     if (
       ![team.home, team.away, team.conferenceRecord, team.divisionRecord].every(
@@ -206,6 +267,34 @@ export function validateSeasonTarget(target: SeasonTarget, rules: SeasonRules): 
     errors.push(`Home game targets total ${homeGames}, expected ${expectedLeagueGames}`);
   if (awayGames !== expectedLeagueGames)
     errors.push(`Away game targets total ${awayGames}, expected ${expectedLeagueGames}`);
+  if (hasScoringTargets && rules.scoring) {
+    const forRanges = target.teams.map((team) =>
+      pointTotalBounds(
+        team.scoring!.pointsForPerGame,
+        rules.schedule.gamesPerTeam,
+        rules.scoring!.displayPrecision,
+      ),
+    );
+    const againstRanges = target.teams.map((team) =>
+      pointTotalBounds(
+        team.scoring!.pointsAgainstPerGame,
+        rules.schedule.gamesPerTeam,
+        rules.scoring!.displayPrecision,
+      ),
+    );
+    const totalFor = {
+      min: forRanges.reduce((sum, range) => sum + range.min, 0),
+      max: forRanges.reduce((sum, range) => sum + range.max, 0),
+    };
+    const totalAgainst = {
+      min: againstRanges.reduce((sum, range) => sum + range.min, 0),
+      max: againstRanges.reduce((sum, range) => sum + range.max, 0),
+    };
+    if (Math.max(totalFor.min, totalAgainst.min) > Math.min(totalFor.max, totalAgainst.max))
+      errors.push(
+        "League scoring averages have no shared integer total for points for and against",
+      );
+  }
   return [...new Set(errors)];
 }
 
@@ -221,6 +310,8 @@ type TeamTally = {
   conferenceLosses: number;
   divisionWins: number;
   divisionLosses: number;
+  pointsFor: number;
+  pointsAgainst: number;
 };
 
 function emptyTally(): TeamTally {
@@ -236,6 +327,8 @@ function emptyTally(): TeamTally {
     conferenceLosses: 0,
     divisionWins: 0,
     divisionLosses: 0,
+    pointsFor: 0,
+    pointsAgainst: 0,
   };
 }
 
@@ -264,6 +357,7 @@ export function validateReconstruction(
   const start = new Date(`${reconstruction.rules.calendar.startDate}T00:00:00.000Z`);
   const games = Array.isArray(reconstruction.games) ? reconstruction.games : [];
   const totalLeagueGames = games.length;
+  const hasScoringTargets = target.teams.some((team) => team.scoring !== undefined);
 
   if (reconstruction.seasonId !== target.seasonId)
     errors.push("Reconstruction seasonId does not match target");
@@ -314,6 +408,50 @@ export function validateReconstruction(
     if (game.loser !== expectedLoser) errors.push(`${game.id}: result is not reciprocal`);
     if (game.provenance !== "synthetic-constrained")
       errors.push(`${game.id}: missing synthetic provenance`);
+    if (hasScoringTargets) {
+      const scoreRules = reconstruction.rules.scoring;
+      if (
+        !scoreRules ||
+        !integer(game.homeScore) ||
+        !integer(game.awayScore) ||
+        game.scoreProvenance !== "synthetic-constrained"
+      ) {
+        errors.push(`${game.id}: synthetic integer scores or score provenance are missing`);
+      } else {
+        const homeScore = game.homeScore as number;
+        const awayScore = game.awayScore as number;
+        const homeTarget = home.scoring;
+        const awayTarget = away.scoring;
+        if (!homeTarget || !awayTarget) {
+          errors.push(`${game.id}: scoring target is missing for a participant`);
+        } else {
+          const expectedHome = (homeTarget.pointsForPerGame + awayTarget.pointsAgainstPerGame) / 2;
+          const expectedAway = (awayTarget.pointsForPerGame + homeTarget.pointsAgainstPerGame) / 2;
+          if (
+            Math.abs(homeScore - expectedHome) > scoreRules.maxDeviationFromPairedAverage ||
+            Math.abs(awayScore - expectedAway) > scoreRules.maxDeviationFromPairedAverage
+          )
+            errors.push(`${game.id}: score is outside the configured paired-average band`);
+        }
+        const margin = Math.abs(homeScore - awayScore);
+        const combined = homeScore + awayScore;
+        if (
+          homeScore < scoreRules.minPointsPerTeam ||
+          homeScore > scoreRules.maxPointsPerTeam ||
+          awayScore < scoreRules.minPointsPerTeam ||
+          awayScore > scoreRules.maxPointsPerTeam
+        )
+          errors.push(`${game.id}: team score is outside configured bounds`);
+        if (combined < scoreRules.minCombinedPoints || combined > scoreRules.maxCombinedPoints)
+          errors.push(`${game.id}: combined score is outside configured bounds`);
+        if (game.winner === game.homeTeam ? homeScore <= awayScore : awayScore <= homeScore)
+          errors.push(`${game.id}: score winner differs from the fixed game result`);
+        if (margin > scoreRules.maxMargin)
+          errors.push(`${game.id}: score margin exceeds configured limit`);
+      }
+    } else if (game.homeScore !== undefined || game.awayScore !== undefined) {
+      errors.push(`${game.id}: scores exist without observed team scoring targets`);
+    }
 
     const day = new Date(`${game.date}T00:00:00.000Z`);
     const dayIndex = Math.floor((day.getTime() - start.getTime()) / 86_400_000);
@@ -342,6 +480,14 @@ export function validateReconstruction(
 
     const homeTally = tallies.get(game.homeTeam)!;
     const awayTally = tallies.get(game.awayTeam)!;
+    if (integer(game.homeScore) && integer(game.awayScore)) {
+      const homeScore = game.homeScore as number;
+      const awayScore = game.awayScore as number;
+      homeTally.pointsFor += homeScore;
+      homeTally.pointsAgainst += awayScore;
+      awayTally.pointsFor += awayScore;
+      awayTally.pointsAgainst += homeScore;
+    }
     homeTally.games += 1;
     awayTally.games += 1;
     if (game.winner === game.homeTeam) {
@@ -433,6 +579,29 @@ export function validateReconstruction(
     }
     const pct = tally.games ? Math.round((tally.wins / tally.games) * 1000) / 1000 : 0;
     if (pct !== team.pct) errors.push(`${team.teamId}: percentage ${pct}, expected ${team.pct}`);
+    if (team.scoring && reconstruction.rules.scoring) {
+      const pointsForRange = pointTotalBounds(
+        team.scoring.pointsForPerGame,
+        rules.gamesPerTeam,
+        reconstruction.rules.scoring.displayPrecision,
+      );
+      const pointsAgainstRange = pointTotalBounds(
+        team.scoring.pointsAgainstPerGame,
+        rules.gamesPerTeam,
+        reconstruction.rules.scoring.displayPrecision,
+      );
+      if (tally.pointsFor < pointsForRange.min || tally.pointsFor > pointsForRange.max)
+        errors.push(
+          `${team.teamId}: points-for average does not match the observed rounded target`,
+        );
+      if (
+        tally.pointsAgainst < pointsAgainstRange.min ||
+        tally.pointsAgainst > pointsAgainstRange.max
+      )
+        errors.push(
+          `${team.teamId}: points-against average does not match the observed rounded target`,
+        );
+    }
   }
 
   const totalWins = [...tallies.values()].reduce((sum, tally) => sum + tally.wins, 0);
@@ -441,6 +610,39 @@ export function validateReconstruction(
     errors.push(`League results are not reciprocal (${totalWins} wins, ${totalLosses} losses)`);
   if (totalWins !== totalLeagueGames || totalLosses !== totalLeagueGames)
     errors.push("League game totals do not match recalculated wins and losses");
+  const totalPointsFor = [...tallies.values()].reduce((sum, tally) => sum + tally.pointsFor, 0);
+  const totalPointsAgainst = [...tallies.values()].reduce(
+    (sum, tally) => sum + tally.pointsAgainst,
+    0,
+  );
+  const scoredGames = games.filter((game) => integer(game.homeScore) && integer(game.awayScore));
+  const scoringSummary = hasScoringTargets
+    ? {
+        totalPointsFor,
+        totalPointsAgainst,
+        minTeamScore: Math.min(
+          ...scoredGames.flatMap((game) => [game.homeScore as number, game.awayScore as number]),
+        ),
+        maxTeamScore: Math.max(
+          ...scoredGames.flatMap((game) => [game.homeScore as number, game.awayScore as number]),
+        ),
+        maxMargin: Math.max(
+          ...scoredGames.map((game) =>
+            Math.abs((game.homeScore as number) - (game.awayScore as number)),
+          ),
+        ),
+      }
+    : undefined;
+  if (totalPointsFor !== totalPointsAgainst)
+    errors.push("League points for and against are not reciprocal");
+  if (
+    hasScoringTargets &&
+    (!reconstruction.scoreAssignment ||
+      reconstruction.scoreAssignment.status !== "feasible" ||
+      reconstruction.scoreAssignment.displayPrecision !==
+        reconstruction.rules.scoring?.displayPrecision)
+  )
+    errors.push("Scoring optimization metadata is missing or inconsistent");
 
   const observedStandings = new Map(
     (Array.isArray(reconstruction.standings) ? reconstruction.standings : []).map((standing) => [
@@ -475,9 +677,10 @@ export function validateReconstruction(
       wins: totalWins,
       losses: totalLosses,
     },
+    ...(scoringSummary ? { scoring: scoringSummary } : {}),
     coverage: {
       overall: errors.every(
-        (error) => !/overall|wins|losses|games|percentage|classification/.test(error),
+        (error) => !/overall|wins|losses|games|percentage|classification|points|score/i.test(error),
       ),
       homeAway: errors.every((error) => !/home|away|mando/i.test(error)),
       conference: errors.every((error) => !/conference/i.test(error)),

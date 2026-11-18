@@ -22,6 +22,7 @@ async function generate(seed: string, outputPath: string) {
         seed: reconstruction.seed,
         valid: report.valid,
         ...report.totals,
+        ...(report.scoring ? { scoring: report.scoring } : {}),
       },
       null,
       2,

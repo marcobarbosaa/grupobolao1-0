@@ -21,6 +21,36 @@ test("season-002 produces 1,230 validated, seeded synthetic games", async () => 
   assert.equal(generated.report.valid, true, generated.report.errors.join("\n"));
   assert.equal(generated.reconstruction.games.length, 1230);
   assert.deepEqual(generated.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(
+    generated.report.scoring.totalPointsFor,
+    generated.report.scoring.totalPointsAgainst,
+  );
+  assert.equal(
+    generated.reconstruction.games.filter(
+      (game) => Number.isSafeInteger(game.homeScore) && Number.isSafeInteger(game.awayScore),
+    ).length,
+    1230,
+  );
+  assert.ok(
+    generated.reconstruction.games.every(
+      (game) => game.scoreProvenance === "synthetic-constrained",
+    ),
+  );
+  for (const team of pilot.target.teams) {
+    const teamGames = generated.reconstruction.games.filter(
+      (game) => game.homeTeam === team.teamId || game.awayTeam === team.teamId,
+    );
+    const pointsFor = teamGames.reduce(
+      (sum, game) => sum + (game.homeTeam === team.teamId ? game.homeScore : game.awayScore),
+      0,
+    );
+    const pointsAgainst = teamGames.reduce(
+      (sum, game) => sum + (game.homeTeam === team.teamId ? game.awayScore : game.homeScore),
+      0,
+    );
+    assert.equal(Math.round((pointsFor / 82) * 10) / 10, team.scoring.pointsForPerGame);
+    assert.equal(Math.round((pointsAgainst / 82) * 10) / 10, team.scoring.pointsAgainstPerGame);
+  }
   assert.deepEqual(generated.reconstruction.games, repeated.reconstruction.games);
   assert.equal(generated.reconstruction.reconstructionId, repeated.reconstruction.reconstructionId);
   assert.equal(
@@ -170,6 +200,91 @@ test("a different short-season format is generated and validated", async () => {
   });
   assert.equal(result.report.valid, true, result.report.errors.join("\n"));
   assert.equal(result.reconstruction.games.length, 2);
+});
+
+test("integer synthetic scores preserve winners and satisfy rounded scoring targets", async () => {
+  const rules = {
+    version: "short-scoring-season-1",
+    provenance: "synthetic-constrained",
+    calendar: { startDate: "2030-01-01", days: 8 },
+    schedule: {
+      gamesPerTeam: 2,
+      homeGamesPerTeam: 1,
+      conferenceGamesPerTeam: 2,
+      divisionGamesPerTeam: 2,
+      gamesPerDivisionOpponent: 2,
+      conferenceNonDivisionBaseGames: 0,
+      conferenceNonDivisionExtraGamesPerTeam: 0,
+      interConferenceGamesPerOpponent: 0,
+    },
+    scoring: {
+      displayPrecision: 1,
+      minPointsPerTeam: 70,
+      maxPointsPerTeam: 160,
+      maxDeviationFromPairedAverage: 16,
+      minCombinedPoints: 150,
+      maxCombinedPoints: 260,
+      maxMargin: 40,
+    },
+    divisions: [{ id: "north", conference: "west", teams: ["A", "B"] }],
+  };
+  const target = {
+    seasonId: "short-scoring-season",
+    label: "Short scoring fixture",
+    teams: ["A", "B"].map((teamId, index) => ({
+      teamId,
+      conference: "west",
+      rank: index + 1,
+      wins: 1,
+      losses: 1,
+      pct: 0.5,
+      home: { wins: 1, losses: 0 },
+      away: { wins: 0, losses: 1 },
+      conferenceRecord: { wins: 1, losses: 1 },
+      divisionRecord: { wins: 1, losses: 1 },
+      scoring: { pointsForPerGame: 100, pointsAgainstPerGame: 100 },
+    })),
+  };
+  const result = await reconstructSeason({
+    target,
+    rules,
+    seed: 11,
+    inputHash: "d".repeat(64),
+    generatedAt: fixedTime,
+  });
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.ok(result.reconstruction.games.every((game) => Number.isSafeInteger(game.homeScore)));
+  assert.ok(result.reconstruction.games.every((game) => Number.isSafeInteger(game.awayScore)));
+  assert.ok(
+    result.reconstruction.games.every((game) =>
+      game.winner === game.homeTeam
+        ? game.homeScore > game.awayScore
+        : game.awayScore > game.homeScore,
+    ),
+  );
+
+  const wrongScore = structuredClone(result.reconstruction);
+  wrongScore.games[0].homeScore = wrongScore.games[0].awayScore;
+  assert.ok(
+    validateReconstruction(target, wrongScore).errors.some((error) =>
+      error.includes("score winner differs"),
+    ),
+  );
+});
+
+test("impossible scoring averages are rejected before optimization", async () => {
+  const { target, rules, inputHash } = await loadPilotSeason();
+  const impossible = structuredClone(target);
+  impossible.teams[0].scoring.pointsForPerGame = 200;
+  assert.ok(
+    validateSeasonTarget(impossible, rules).some((error) =>
+      error.includes("cannot fit the configured score range"),
+    ),
+  );
+  await assert.rejects(
+    reconstructSeason({ target: impossible, rules, seed: 1, inputHash }),
+    ReconstructionInputError,
+  );
 });
 
 test("mathematically impossible result constraints fail without post-generation correction", async () => {

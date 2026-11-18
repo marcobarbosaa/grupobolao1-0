@@ -1,4 +1,5 @@
 export type RecordTarget = { wins: number; losses: number };
+export type ScoringTarget = { pointsForPerGame: number; pointsAgainstPerGame: number };
 
 export type LeagueTeamTarget = {
   teamId: string;
@@ -11,6 +12,7 @@ export type LeagueTeamTarget = {
   away: RecordTarget;
   conferenceRecord: RecordTarget;
   divisionRecord: RecordTarget;
+  scoring?: ScoringTarget;
 };
 
 export type SeasonTarget = {
@@ -35,6 +37,15 @@ export type SeasonRules = {
     conferenceNonDivisionExtraGamesPerTeam: number;
     interConferenceGamesPerOpponent: number;
   };
+  scoring?: {
+    displayPrecision: number;
+    minPointsPerTeam: number;
+    maxPointsPerTeam: number;
+    maxDeviationFromPairedAverage: number;
+    minCombinedPoints: number;
+    maxCombinedPoints: number;
+    maxMargin: number;
+  };
   divisions: Division[];
 };
 
@@ -48,6 +59,9 @@ export type SyntheticGame = {
   awayTeam: string;
   winner: string;
   loser: string;
+  homeScore?: number;
+  awayScore?: number;
+  scoreProvenance?: "synthetic-constrained";
   provenance: "synthetic-constrained";
 };
 
@@ -61,7 +75,7 @@ export type ReconstructedStanding = {
 };
 
 export type Reconstruction = {
-  schemaVersion: "1.0";
+  schemaVersion: "1.1";
   seasonId: string;
   reconstructionId: string;
   algorithmVersion: string;
@@ -74,6 +88,11 @@ export type Reconstruction = {
   games: SyntheticGame[];
   standings: ReconstructedStanding[];
   optimization: { method: string; objective: number; optimal: boolean };
+  scoreAssignment?: {
+    method: string;
+    status: "feasible";
+    displayPrecision: number;
+  };
   validation: {
     status: "validated";
     checkedAt: string;

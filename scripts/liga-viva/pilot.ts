@@ -41,6 +41,10 @@ export async function loadPilotSeason() {
         away: parseRecord(source.away, row.team, "away"),
         conferenceRecord: parseRecord(source.conference, row.team, "conference"),
         divisionRecord: parseRecord(source.division, row.team, "division"),
+        scoring: {
+          pointsForPerGame: row.ppg,
+          pointsAgainstPerGame: row.papg,
+        },
       });
     }
   }

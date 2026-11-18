@@ -9,7 +9,7 @@ import type {
   SyntheticGame,
 } from "./types.ts";
 
-export const ALGORITHM_VERSION = "liga-viva-milp-1.0.0";
+export const ALGORITHM_VERSION = "liga-viva-milp-1.1.0";
 
 export class ReconstructionInputError extends Error {
   readonly issues: string[];
@@ -54,6 +54,35 @@ function fixedConstraint(
   glpk: Awaited<ReturnType<typeof GLPK>>,
 ) {
   return { name, vars, bnds: { type: glpk.GLP_FX, lb: value, ub: value } };
+}
+
+function boundedConstraint(
+  name: string,
+  vars: { name: string; coef: number }[],
+  lower: number,
+  upper: number,
+  glpk: Awaited<ReturnType<typeof GLPK>>,
+) {
+  if (lower === upper) return { name, vars, bnds: { type: glpk.GLP_FX, lb: lower, ub: upper } };
+  return { name, vars, bnds: { type: glpk.GLP_DB, lb: lower, ub: upper } };
+}
+
+function upperConstraint(
+  name: string,
+  vars: { name: string; coef: number }[],
+  upper: number,
+  glpk: Awaited<ReturnType<typeof GLPK>>,
+) {
+  return { name, vars, bnds: { type: glpk.GLP_UP, lb: 0, ub: upper } };
+}
+
+function pointTotalBounds(average: number, games: number, precision: number) {
+  const scale = 10 ** precision;
+  const roundedAverage = Math.round(average * scale);
+  return {
+    min: Math.ceil((games * (2 * roundedAverage - 1)) / (2 * scale)),
+    max: Math.ceil((games * (2 * roundedAverage + 1)) / (2 * scale)) - 1,
+  };
 }
 
 type Matchup = { teamA: string; teamB: string; games: number; homeGamesA: number };
@@ -367,6 +396,150 @@ async function solveResults(
   };
 }
 
+async function solveScores(
+  target: SeasonTarget,
+  rules: SeasonRules,
+  games: { homeTeam: string; awayTeam: string; winner: string }[],
+) {
+  const scoreRules = rules.scoring!;
+  const glpk = await GLPK();
+  const generals: string[] = [];
+  const bounds: { name: string; type: number; ub: number; lb: number }[] = [];
+  const objective: { name: string; coef: number }[] = [];
+  const subjectTo: ReturnType<typeof fixedConstraint>[] = [];
+  const teamById = new Map(target.teams.map((team) => [team.teamId, team]));
+  const pointFor = new Map(
+    target.teams.map((team) => [team.teamId, [] as { name: string; coef: number }[]]),
+  );
+  const pointAgainst = new Map(
+    target.teams.map((team) => [team.teamId, [] as { name: string; coef: number }[]]),
+  );
+
+  games.forEach((game, index) => {
+    const homeScore = `home_score_${index}`;
+    const awayScore = `away_score_${index}`;
+    const homeTarget = teamById.get(game.homeTeam)!.scoring!;
+    const awayTarget = teamById.get(game.awayTeam)!.scoring!;
+    const expectedHome = (homeTarget.pointsForPerGame + awayTarget.pointsAgainstPerGame) / 2;
+    const expectedAway = (awayTarget.pointsForPerGame + homeTarget.pointsAgainstPerGame) / 2;
+    const homeMinimum = Math.max(
+      scoreRules.minPointsPerTeam,
+      Math.ceil(expectedHome - scoreRules.maxDeviationFromPairedAverage),
+    );
+    const homeMaximum = Math.min(
+      scoreRules.maxPointsPerTeam,
+      Math.floor(expectedHome + scoreRules.maxDeviationFromPairedAverage),
+    );
+    const awayMinimum = Math.max(
+      scoreRules.minPointsPerTeam,
+      Math.ceil(expectedAway - scoreRules.maxDeviationFromPairedAverage),
+    );
+    const awayMaximum = Math.min(
+      scoreRules.maxPointsPerTeam,
+      Math.floor(expectedAway + scoreRules.maxDeviationFromPairedAverage),
+    );
+    generals.push(homeScore, awayScore);
+    bounds.push(
+      {
+        name: homeScore,
+        type: glpk.GLP_DB,
+        lb: homeMinimum,
+        ub: homeMaximum,
+      },
+      {
+        name: awayScore,
+        type: glpk.GLP_DB,
+        lb: awayMinimum,
+        ub: awayMaximum,
+      },
+    );
+    objective.push({ name: homeScore, coef: 0 }, { name: awayScore, coef: 0 });
+    subjectTo.push(
+      boundedConstraint(
+        `combined_score_${index}`,
+        [
+          { name: homeScore, coef: 1 },
+          { name: awayScore, coef: 1 },
+        ],
+        scoreRules.minCombinedPoints,
+        scoreRules.maxCombinedPoints,
+        glpk,
+      ),
+    );
+    const winnerScore = game.winner === game.homeTeam ? homeScore : awayScore;
+    const loserScore = game.winner === game.homeTeam ? awayScore : homeScore;
+    subjectTo.push(
+      boundedConstraint(
+        `winner_margin_${index}`,
+        [
+          { name: winnerScore, coef: 1 },
+          { name: loserScore, coef: -1 },
+        ],
+        1,
+        scoreRules.maxMargin,
+        glpk,
+      ),
+    );
+    pointFor.get(game.homeTeam)!.push({ name: homeScore, coef: 1 });
+    pointAgainst.get(game.homeTeam)!.push({ name: awayScore, coef: 1 });
+    pointFor.get(game.awayTeam)!.push({ name: awayScore, coef: 1 });
+    pointAgainst.get(game.awayTeam)!.push({ name: homeScore, coef: 1 });
+  });
+
+  for (const team of target.teams) {
+    const points = team.scoring!;
+    const scored = pointTotalBounds(
+      points.pointsForPerGame,
+      rules.schedule.gamesPerTeam,
+      scoreRules.displayPrecision,
+    );
+    const allowed = pointTotalBounds(
+      points.pointsAgainstPerGame,
+      rules.schedule.gamesPerTeam,
+      scoreRules.displayPrecision,
+    );
+    subjectTo.push(
+      boundedConstraint(
+        `points_for_${team.teamId}`,
+        pointFor.get(team.teamId)!,
+        scored.min,
+        scored.max,
+        glpk,
+      ),
+      boundedConstraint(
+        `points_against_${team.teamId}`,
+        pointAgainst.get(team.teamId)!,
+        allowed.min,
+        allowed.max,
+        glpk,
+      ),
+    );
+  }
+
+  const result = await glpk.solve(
+    {
+      name: "conditioned_synthetic_scores",
+      objective: { direction: glpk.GLP_MIN, name: "feasibility_only", vars: objective },
+      subjectTo,
+      bounds,
+      generals,
+    },
+    { msglev: glpk.GLP_MSG_OFF, presol: true, tmlim: 60 },
+  );
+  if (![glpk.GLP_OPT, glpk.GLP_FEAS].includes(result.result.status))
+    throw new ReconstructionInfeasibleError(
+      result.result.status === glpk.GLP_NOFEAS
+        ? "Observed scoring averages have no compatible integer scores (GLPK proved infeasibility)"
+        : `Score solver did not find a validated incumbent before stopping (GLPK status ${result.result.status})`,
+    );
+  return {
+    homeScores: games.map((_, index) => Math.round(result.result.vars[`home_score_${index}`] ?? 0)),
+    awayScores: games.map((_, index) => Math.round(result.result.vars[`away_score_${index}`] ?? 0)),
+    solverStatus:
+      result.result.status === glpk.GLP_OPT ? ("optimal" as const) : ("feasible" as const),
+  };
+}
+
 function assignCalendar(
   fixtures: { homeTeam: string; awayTeam: string; winner: string }[],
   rules: SeasonRules,
@@ -504,6 +677,8 @@ export async function reconstructSeason(options: {
     rules,
     seed,
   );
+  const hasScoringTargets = target.teams.some((team) => team.scoring !== undefined);
+  const solvedScores = hasScoringTargets ? await solveScores(target, rules, calendar) : undefined;
   const start = new Date(`${rules.calendar.startDate}T00:00:00.000Z`);
   const games: SyntheticGame[] = calendar.map((fixture, index) => {
     const date = new Date(start.getTime() + fixture.dayIndex * 86_400_000)
@@ -519,6 +694,13 @@ export async function reconstructSeason(options: {
       awayTeam: fixture.awayTeam,
       winner: fixture.winner,
       loser: fixture.winner === fixture.homeTeam ? fixture.awayTeam : fixture.homeTeam,
+      ...(solvedScores
+        ? {
+            homeScore: solvedScores.homeScores[index],
+            awayScore: solvedScores.awayScores[index],
+            scoreProvenance: "synthetic-constrained" as const,
+          }
+        : {}),
       provenance: "synthetic-constrained",
     };
   });
@@ -538,7 +720,7 @@ export async function reconstructSeason(options: {
   const reconstructionKey = `${target.seasonId}:${seed}:${inputHash}:${ALGORITHM_VERSION}:${JSON.stringify(rules)}`;
   const reconstructionId = `lv-${createHash("sha256").update(reconstructionKey).digest("hex").slice(0, 16)}`;
   const reconstruction: Reconstruction = {
-    schemaVersion: "1.0",
+    schemaVersion: "1.1",
     seasonId: target.seasonId,
     reconstructionId,
     algorithmVersion: ALGORITHM_VERSION,
@@ -560,6 +742,16 @@ export async function reconstructSeason(options: {
       objective: solved.objective,
       optimal: solved.optimal,
     },
+    ...(solvedScores
+      ? {
+          scoreAssignment: {
+            method:
+              "GLPK integer feasibility model with fixed winners, rounded team scoring bands, and paired-average score limits",
+            status: "feasible",
+            displayPrecision: rules.scoring!.displayPrecision,
+          },
+        }
+      : {}),
     validation: {
       status: "validated",
       checkedAt: options.generatedAt ?? new Date().toISOString(),
