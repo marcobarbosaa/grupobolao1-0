@@ -128,6 +128,11 @@ const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
   { key: "division", label: "Divisão" },
   { key: "streak", label: "Sequência" },
 ];
+function hasStandingsDetailValue(key: keyof StandingDetails, value: string | undefined): boolean {
+  if (value === undefined || value === "") return false;
+  if (key === "conference" || key === "division") return /^\\d+-\\d+$/.test(value);
+  return true;
+}
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
 const logoOverrides: Record<
   SeasonId,
@@ -265,7 +270,7 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
     .filter(({ key }) =>
       rows.some((row) => {
         const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
-        return extra[key] === undefined;
+        return !hasStandingsDetailValue(key, extra[key]);
       }),
     )
     .map(({ label }) => label);
@@ -344,8 +349,8 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
                   <td>{extra?.gb ?? "—"}</td>
                   <td>{extra?.home ?? "—"}</td>
                   <td>{extra?.away ?? "—"}</td>
-                  <td>{extra?.conference ?? "—"}</td>
-                  <td>{extra?.division ?? "—"}</td>
+                  <td>{hasStandingsDetailValue("conference", extra?.conference) ? extra?.conference : "—"}</td>
+                  <td>{hasStandingsDetailValue("division", extra?.division) ? extra?.division : "—"}</td>
                   <td>{row.ppg?.toFixed(1) ?? "—"}</td>
                   <td>{row.papg?.toFixed(1) ?? "—"}</td>
                   <td>{row.diff?.toFixed(1) ?? "—"}</td>
