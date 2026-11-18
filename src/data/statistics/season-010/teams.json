@@ -1,0 +1,16 @@
+[
+  {
+    "id": "orlando-magic",
+    "name": "Orlando Magic",
+    "abbreviation": "ORL",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "milwaukee-bucks",
+    "name": "Milwaukee Bucks",
+    "abbreviation": "MIL",
+    "sport": "basquete",
+    "status": "active"
+  }
+]

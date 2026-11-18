@@ -1,0 +1,36 @@
+[
+  {
+    "id": "batch-s11-rounds",
+    "status": "published",
+    "sourceIds": [
+      "src-s11-abel-4",
+      "src-s11-abel-5",
+      "src-s11-abel-6",
+      "src-s11-abel-7",
+      "src-s11-fabio-carvalho-11",
+      "src-s11-fabio-carvalho-12",
+      "src-s11-fabio-carvalho-13",
+      "src-s11-fabio-carvalho-14",
+      "src-s11-gam-mori-52",
+      "src-s11-gam-mori-53",
+      "src-s11-gam-mori-54",
+      "src-s11-gam-mori-55",
+      "src-s11-gam-mori-56",
+      "src-s11-gam-mori-57",
+      "src-s11-matheus-medeiros-18",
+      "src-s11-matheus-medeiros-19",
+      "src-s11-matheus-medeiros-20",
+      "src-s11-matheus-medeiros-21",
+      "src-s11-matheus-medeiros-22",
+      "src-s11-matheus-medeiros-23",
+      "src-s11-russo-base",
+      "src-s11-russo-1",
+      "src-s11-russo-24",
+      "src-s11-russo-25",
+      "src-s11-russo-injury-user-confirmation"
+    ],
+    "createdAt": "2026-11-17T18:40:36Z",
+    "approvedAt": "2026-11-17T18:40:36Z",
+    "approvedBy": "Solicitação explícita do usuário em 17/11/2026 e confirmação da lesão de Russo."
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "revision-s09-regular-jonas",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-jonas"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-jonas",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-jonas",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-jonas"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-jonas",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-tailan",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-tailan"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-tailan",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-tailan",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-tailan"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-tailan",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-cristiano-ronaldo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-cristiano-ronaldo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-cristiano-ronaldo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-cristiano-ronaldo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-cristiano-ronaldo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-fabio-carvalho"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-fabio-carvalho",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-fabio-carvalho",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-fabio-carvalho"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-fabio-carvalho",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-russo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-russo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-russo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-russo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-russo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-marco-barbosa",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-marco-barbosa"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-marco-barbosa",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-marco-barbosa",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-marco-barbosa"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-marco-barbosa",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-gam-mori",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-gam-mori"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-gam-mori",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-enzo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-enzo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-enzo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-enzo",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-enzo"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-enzo",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-dias",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-dias"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-dias",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-nando"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-nando",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-nando",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-nando"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-nando",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-guilherme",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-guilherme"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-guilherme",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-playoffs-guilherme",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-guilherme"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-playoffs-guilherme",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-matheus-medeiros",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-matheus-medeiros"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-matheus-medeiros",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  },
+  {
+    "id": "revision-s09-regular-abel",
+    "revision": 1,
+    "sourceIds": [
+      "src-s09-career-abel"
+    ],
+    "batchId": "batch-s09-part-1",
+    "reason": "Transcrição das capturas de carreira da temporada 2013–2014; conferidos totais, médias e arremessos",
+    "recordId": "stat-s09-regular-abel",
+    "recordKind": "phase",
+    "createdAt": "2026-11-17T13:08:00.000Z"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "src-s011-extras-1",
+    "kind": "screenshot",
+    "fileName": "Temporada 2015-2016(1).zip#Extras/conferencia-leste.jpg",
+    "contentHash": "e6e15874bc01c230499bf4d94329444802497a4e37f981579926c24e5bf4f39b",
+    "receivedAt": "2026-11-18T16:10:00.000Z",
+    "metadata": {
+      "source": "Upload do usuário: Temporada 2015-2016(1).zip",
+      "seasonId": "season-011",
+      "archiveEntry": "Extras/conferencia-leste.jpg",
+      "sizeBytes": 280119,
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s011-extras-2",
+    "kind": "screenshot",
+    "fileName": "Temporada 2015-2016(1).zip#Extras/conferencia-leste2.jpg",
+    "contentHash": "946b2cde2823beaa3a4f7eb1f0456745a3a3247caf7eba96bc5afded99ee6a77",
+    "receivedAt": "2026-11-18T16:10:00.000Z",
+    "metadata": {
+      "source": "Upload do usuário: Temporada 2015-2016(1).zip",
+      "seasonId": "season-011",
+      "archiveEntry": "Extras/conferencia-leste2.jpg",
+      "sizeBytes": 281812,
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s011-extras-3",
+    "kind": "screenshot",
+    "fileName": "Temporada 2015-2016(1).zip#Extras/conferencia-oeste.jpg",
+    "contentHash": "5a2bfe417942333c76d9f6be1cb8e50c01b5e66dbb67addd5094e7d4f1a5e54b",
+    "receivedAt": "2026-11-18T16:10:00.000Z",
+    "metadata": {
+      "source": "Upload do usuário: Temporada 2015-2016(1).zip",
+      "seasonId": "season-011",
+      "archiveEntry": "Extras/conferencia-oeste.jpg",
+      "sizeBytes": 282128,
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s011-extras-4",
+    "kind": "screenshot",
+    "fileName": "Temporada 2015-2016(1).zip#Extras/conferencia-oeste2.jpg",
+    "contentHash": "4323214a6c08083b3762b4d4d4dae5e6f22b2bc9b7478138da0a34090897207c",
+    "receivedAt": "2026-11-18T16:10:00.000Z",
+    "metadata": {
+      "source": "Upload do usuário: Temporada 2015-2016(1).zip",
+      "seasonId": "season-011",
+      "archiveEntry": "Extras/conferencia-oeste2.jpg",
+      "sizeBytes": 276657,
+      "originalStoredPublicly": false
+    }
+  },
+  {
+    "id": "src-s011-extras-5",
+    "kind": "screenshot",
+    "fileName": "Temporada 2015-2016(1).zip#Extras/playoffs.jpg",
+    "contentHash": "8951b4c36c78053d3e40bbaf43e93b35bdc9afd096efbce8af2b49b98e917a2e",
+    "receivedAt": "2026-11-18T16:10:00.000Z",
+    "metadata": {
+      "source": "Upload do usuário: Temporada 2015-2016(1).zip",
+      "seasonId": "season-011",
+      "archiveEntry": "Extras/playoffs.jpg",
+      "sizeBytes": 317849,
+      "originalStoredPublicly": false
+    }
+  }
+]

@@ -22,6 +22,6 @@ Cada registro contém GP, GS, médias e aproveitamentos visíveis nos prints; os
 
 **Sem registros por rodada para Enzo e Dias:** as capturas consolidadas confirmam os playoffs, mas não foram localizadas capturas de fases individuais nas pastas respectivas nesta remessa.
 
-Colunas detalhadas de classificação (campanha em casa, fora, divisão, conferência, GB e sequência) não foram digitalizadas nesta remessa: a visualização mantém traços onde não existem dados estruturados.
+**Complementação coletiva (18/11/2026):** as capturas de `Temporada 2010-2011(1).zip` foram conferidas visualmente e os seis campos complementares (GB, Casa, Fora, campanha de Conferência, Divisão e Sequência) foram registrados para as 30 equipes em `season-006/standings-details.json`. As vitórias, derrotas, aproveitamento, PPG, PAPG, saldo, posições, equipes e as 15 séries de playoffs já publicadas foram preservadas sem substituição. Os splits Casa/Fora foram reconciliados com a campanha total de cada franquia.
 
 Arquivos: `src/data/statistics/season-006/`, `src/data/statistics/season-extras.json`, `src/data/statistics/season-extras-sources.json`, `src/data/statistics/manifest.json` e `src/components/sports/SeasonExtras.tsx`.

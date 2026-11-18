@@ -1,0 +1,242 @@
+{
+  "DAL": {
+    "gb": "--",
+    "home": "31-10",
+    "away": "28-13",
+    "conference": "39-13",
+    "division": "11-5",
+    "streak": "W5"
+  },
+  "LAC": {
+    "gb": "2.0",
+    "home": "32-9",
+    "away": "25-16",
+    "conference": "35-17",
+    "division": "9-7",
+    "streak": "W3"
+  },
+  "OKC": {
+    "gb": "13.0",
+    "home": "28-13",
+    "away": "18-23",
+    "conference": "27-25",
+    "division": "9-7",
+    "streak": "W1"
+  },
+  "HOU": {
+    "gb": "5.0",
+    "home": "32-9",
+    "away": "22-19",
+    "conference": "33-19",
+    "division": "9-7",
+    "streak": "L1"
+  },
+  "GS": {
+    "gb": "11.0",
+    "home": "29-12",
+    "away": "19-22",
+    "conference": "30-22",
+    "division": "10-6",
+    "streak": "L1"
+  },
+  "SA": {
+    "gb": "11.0",
+    "home": "28-13",
+    "away": "20-21",
+    "conference": "29-23",
+    "division": "8-8",
+    "streak": "W2"
+  },
+  "MEM": {
+    "gb": "12.0",
+    "home": "22-19",
+    "away": "25-16",
+    "conference": "29-23",
+    "division": "8-8",
+    "streak": "L1"
+  },
+  "LAL": {
+    "gb": "14.0",
+    "home": "25-16",
+    "away": "20-21",
+    "conference": "27-25",
+    "division": "12-4",
+    "streak": "W1"
+  },
+  "POR": {
+    "gb": "18.0",
+    "home": "21-20",
+    "away": "20-21",
+    "conference": "24-28",
+    "division": "10-6",
+    "streak": "W1"
+  },
+  "DEN": {
+    "gb": "22.0",
+    "home": "24-17",
+    "away": "13-28",
+    "conference": "22-30",
+    "division": "7-9",
+    "streak": "W5"
+  },
+  "SAC": {
+    "gb": "22.0",
+    "home": "24-17",
+    "away": "13-28",
+    "conference": "23-29",
+    "division": "6-10",
+    "streak": "L2"
+  },
+  "UTA": {
+    "gb": "22.0",
+    "home": "20-21",
+    "away": "17-24",
+    "conference": "21-31",
+    "division": "7-9",
+    "streak": "W4"
+  },
+  "MIN": {
+    "gb": "23.0",
+    "home": "21-20",
+    "away": "15-26",
+    "conference": "24-28",
+    "division": "7-9",
+    "streak": "W2"
+  },
+  "NO": {
+    "gb": "31.0",
+    "home": "15-26",
+    "away": "13-28",
+    "conference": "12-40",
+    "division": "4-12",
+    "streak": "W1"
+  },
+  "PHX": {
+    "gb": "37.0",
+    "home": "12-29",
+    "away": "10-31",
+    "conference": "15-37",
+    "division": "3-13",
+    "streak": "L5"
+  },
+  "PHI": {
+    "gb": "--",
+    "home": "29-12",
+    "away": "25-16",
+    "conference": "32-20",
+    "division": "10-6",
+    "streak": "W1"
+  },
+  "ATL": {
+    "gb": "--",
+    "home": "32-9",
+    "away": "22-19",
+    "conference": "38-14",
+    "division": "12-4",
+    "streak": "W1"
+  },
+  "CHI": {
+    "gb": "6.0",
+    "home": "22-19",
+    "away": "26-15",
+    "conference": "33-19",
+    "division": "13-3",
+    "streak": "L1"
+  },
+  "ORL": {
+    "gb": "1.0",
+    "home": "27-14",
+    "away": "26-15",
+    "conference": "37-15",
+    "division": "11-5",
+    "streak": "L1"
+  },
+  "NY": {
+    "gb": "1.0",
+    "home": "26-15",
+    "away": "27-14",
+    "conference": "32-20",
+    "division": "7-9",
+    "streak": "L2"
+  },
+  "BOS": {
+    "gb": "7.0",
+    "home": "28-13",
+    "away": "19-22",
+    "conference": "37-15",
+    "division": "10-6",
+    "streak": "L3"
+  },
+  "NJN": {
+    "gb": "12.0",
+    "home": "22-19",
+    "away": "20-21",
+    "conference": "28-24",
+    "division": "9-7",
+    "streak": "W1"
+  },
+  "WAS": {
+    "gb": "13.0",
+    "home": "24-17",
+    "away": "17-24",
+    "conference": "28-24",
+    "division": "7-9",
+    "streak": "L1"
+  },
+  "MIA": {
+    "gb": "17.0",
+    "home": "20-21",
+    "away": "17-24",
+    "conference": "22-30",
+    "division": "6-10",
+    "streak": "L3"
+  },
+  "CLE": {
+    "gb": "21.0",
+    "home": "16-25",
+    "away": "17-24",
+    "conference": "20-32",
+    "division": "8-8",
+    "streak": "W2"
+  },
+  "CHA": {
+    "gb": "22.0",
+    "home": "20-21",
+    "away": "12-29",
+    "conference": "19-33",
+    "division": "4-12",
+    "streak": "W3"
+  },
+  "IND": {
+    "gb": "22.0",
+    "home": "19-22",
+    "away": "13-28",
+    "conference": "20-32",
+    "division": "10-6",
+    "streak": "L4"
+  },
+  "MIL": {
+    "gb": "28.0",
+    "home": "19-22",
+    "away": "7-34",
+    "conference": "18-34",
+    "division": "6-10",
+    "streak": "L1"
+  },
+  "TOR": {
+    "gb": "29.0",
+    "home": "14-27",
+    "away": "11-30",
+    "conference": "17-35",
+    "division": "4-12",
+    "streak": "L3"
+  },
+  "DET": {
+    "gb": "43.0",
+    "home": "4-37",
+    "away": "7-34",
+    "conference": "9-43",
+    "division": "3-13",
+    "streak": "L1"
+  }
+}

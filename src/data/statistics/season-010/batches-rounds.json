@@ -1,0 +1,37 @@
+[
+  {
+    "id": "batch-s10-rounds",
+    "status": "published",
+    "sourceIds": [
+      "src-s10-nba-finals-jonas",
+      "src-s10-conference-finals-jonas",
+      "src-s10-quarterfinals-jonas",
+      "src-s10-first-round-jonas",
+      "src-s10-nba-finals-tailan",
+      "src-s10-conference-finals-tailan",
+      "src-s10-quarterfinals-tailan",
+      "src-s10-first-round-tailan",
+      "src-s10-nba-finals-cristiano-ronaldo",
+      "src-s10-conference-finals-cristiano-ronaldo",
+      "src-s10-quarterfinals-cristiano-ronaldo",
+      "src-s10-first-round-cristiano-ronaldo",
+      "src-s10-quarterfinals-fabio-carvalho",
+      "src-s10-first-round-fabio-carvalho",
+      "src-s10-quarterfinals-russo",
+      "src-s10-first-round-russo",
+      "src-s10-conference-finals-gam-mori",
+      "src-s10-quarterfinals-gam-mori",
+      "src-s10-first-round-gam-mori",
+      "src-s10-nba-finals-guilherme",
+      "src-s10-conference-finals-guilherme",
+      "src-s10-quarterfinals-guilherme",
+      "src-s10-first-round-guilherme",
+      "src-s10-conference-finals-matheus-medeiros",
+      "src-s10-quarterfinals-matheus-medeiros",
+      "src-s10-first-round-matheus-medeiros"
+    ],
+    "createdAt": "2026-11-17T15:30:00.000Z",
+    "approvedAt": "2026-11-17T15:30:00.000Z",
+    "approvedBy": "Solicitação do usuário em 17/11/2026 para importar playoffs individuais 2014-2015 (F) na main"
+  }
+]

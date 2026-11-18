@@ -10,12 +10,18 @@ import history005 from "../../data/statistics/season-005/teamHistory.json";
 import history006 from "../../data/statistics/season-006/teamHistory.json";
 import history007 from "../../data/statistics/season-007/teamHistory.json";
 import history008 from "../../data/statistics/season-008/teamHistory.json";
+import history009 from "../../data/statistics/season-009/teamHistory.json";
+import history010 from "../../data/statistics/season-010/teamHistory.json";
+import history011 from "../../data/statistics/season-011/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
 import details2007 from "../../data/statistics/season-003/standings-details.json";
 import details2008 from "../../data/statistics/season-004/standings-details.json";
 import details2009 from "../../data/statistics/season-005/standings-details.json";
+import details2010 from "../../data/statistics/season-006/standings-details.json";
+import details2011 from "../../data/statistics/season-007/standings-details.json";
+import details2013 from "../../data/statistics/season-008/standings-details.json";
 import "./SeasonExtras.css";
 
 type SeasonId = string;
@@ -70,6 +76,9 @@ const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-006": history006,
   "season-007": history007,
   "season-008": history008,
+  "season-009": history009,
+  "season-010": history010,
+  "season-011": history011,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO",
@@ -87,6 +96,10 @@ const historicalTeamCodes: Record<string, string> = {
   "philadelphia-76ers": "PHI",
   "houston-rockets": "HOU",
   "chicago-bulls": "CHI",
+  "orlando-magic": "ORL",
+  "milwaukee-bucks": "MIL",
+  "brooklyn-nets": "BKN",
+  "new-orleans-pelicans": "NO",
 };
 function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
   return (histories[seasonId] ?? [])
@@ -136,7 +149,23 @@ const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-003": details2007,
   "season-004": details2008,
   "season-005": details2009,
+  "season-006": details2010,
+  "season-007": details2011,
+  "season-008": details2013,
 };
+const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
+  { key: "gb", label: "GB" },
+  { key: "home", label: "Casa" },
+  { key: "away", label: "Fora" },
+  { key: "conference", label: "Conferência" },
+  { key: "division", label: "Divisão" },
+  { key: "streak", label: "Sequência" },
+];
+function hasStandingsDetailValue(key: keyof StandingDetails, value: string | undefined): boolean {
+  if (value === undefined || value === "") return false;
+  if (key === "conference" || key === "division") return /^\d+-\d+$/.test(value);
+  return true;
+}
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
 const logoOverrides: Record<
   SeasonId,
@@ -192,7 +221,7 @@ export function LeagueTeamBadge({ code, seasonId }: { code: string; seasonId: Se
   return (
     <span className="league-round-team">
       <Logo code={code} seasonId={seasonId} />
-      <span>{teamNames[code] ?? code}</span>
+      <span>{teamDisplayName(code, seasonId)}</span>
       <small>{code}</small>
     </span>
   );
@@ -202,6 +231,17 @@ const SyntheticSeason = lazy(() => import("./SyntheticSeason"));
 
 teamNames.OKC = "Oklahoma City Thunder";
 teamNames.BKN = "Brooklyn Nets";
+
+function teamDisplayName(code: string, seasonId: SeasonId) {
+  if ((seasonId === "season-010" || seasonId === "season-011") && code === "CHA")
+    return "Charlotte Hornets";
+  if (
+    (seasonId === "season-009" || seasonId === "season-010" || seasonId === "season-011") &&
+    code === "NO"
+  )
+    return "New Orleans Pelicans";
+  return teamNames[code] ?? code;
+}
 
 const conferences: { id: Conference; label: string }[] = [
   { id: "west", label: "Oeste" },
@@ -257,7 +297,7 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
   return (
     <article
       className="seasonextras-series"
-      aria-label={`${teamNames[match.homeTeam] ?? match.homeTeam} ${match.homeWins}, ${teamNames[match.awayTeam] ?? match.awayTeam} ${match.awayWins}`}
+      aria-label={`${teamDisplayName(match.homeTeam, seasonId)} ${match.homeWins}, ${teamDisplayName(match.awayTeam, seasonId)} ${match.awayWins}`}
     >
       {teams.map((team) => (
         <div
@@ -265,7 +305,7 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
           className={`seasonextras-side${team.code === match.winner ? " is-winner" : ""}`}
         >
           <Logo code={team.code} seasonId={seasonId} />
-          <span className="seasonextras-side-name">{teamNames[team.code] ?? team.code}</span>
+          <span className="seasonextras-side-name">{teamDisplayName(team.code, seasonId)}</span>
           <PlayerMarks seasonId={seasonId} teamCode={team.code} compact />
           <strong>{team.wins}</strong>
         </div>
@@ -287,6 +327,14 @@ function Standings({
 }) {
   const rows = season.standings?.[conference] ?? [];
   const details = fullStandings[seasonId] ?? {};
+  const missingDetailLabels = detailFieldLabels
+    .filter(({ key }) =>
+      rows.some((row) => {
+        const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
+        return !hasStandingsDetailValue(key, extra[key]);
+      }),
+    )
+    .map(({ label }) => label);
 
   return (
     <section className="seasonextras-panel" aria-label={`Classificação ${season.year}`}>
@@ -342,7 +390,7 @@ function Standings({
                     <div className="seasonextras-team">
                       <Logo code={row.team} seasonId={seasonId} />
                       <span className="league-standing-name">
-                        {teamNames[row.team] ?? row.team}
+                        {teamDisplayName(row.team, seasonId)}
                         <PlayerMarks seasonId={seasonId} teamCode={row.team} />
                       </span>
                       {row.rank <= 8 && (
@@ -361,8 +409,14 @@ function Standings({
                   <td>{extra?.gb ?? "—"}</td>
                   <td>{extra?.home ?? "—"}</td>
                   <td>{extra?.away ?? "—"}</td>
-                  <td>{extra?.conference ?? "—"}</td>
-                  <td>{extra?.division ?? "—"}</td>
+                  <td>
+                    {hasStandingsDetailValue("conference", extra?.conference)
+                      ? extra?.conference
+                      : "—"}
+                  </td>
+                  <td>
+                    {hasStandingsDetailValue("division", extra?.division) ? extra?.division : "—"}
+                  </td>
                   <td>{row.ppg?.toFixed(1) ?? "—"}</td>
                   <td>{row.papg?.toFixed(1) ?? "—"}</td>
                   <td>{row.diff?.toFixed(1) ?? "—"}</td>
@@ -378,6 +432,13 @@ function Standings({
         perfil). Ordem preservada conforme o NBA 2K, incluindo critérios de divisão. Os dados são do
         universo do Grupo Bolão, não dos resultados históricos da NBA real.
       </p>
+      {missingDetailLabels.length > 0 && (
+        <p className="seasonextras-note seasonextras-data-warning" role="status">
+          <strong>Dados complementares pendentes:</strong> {missingDetailLabels.join(", ")}. Os
+          campos indicados ainda não foram publicados para esta temporada; os traços na tabela não
+          representam zero.
+        </p>
+      )}
     </section>
   );
 }
@@ -415,13 +476,13 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
           <span className="seasonextras-kicker">CAMPEÃO NBA {season.year}</span>
           <div>
             <Logo code={winner} seasonId={seasonId} />
-            <strong>{teamNames[winner] ?? winner}</strong>
+            <strong>{teamDisplayName(winner, seasonId)}</strong>
             <PlayerMarks seasonId={seasonId} teamCode={winner} />
           </div>
           {final && runnerUp && (
             <span>
-              Final: {teamNames[winner] ?? winner} {championScore}–{runnerScore}{" "}
-              {teamNames[runnerUp] ?? runnerUp}
+              Final: {teamDisplayName(winner, seasonId)} {championScore}–{runnerScore}{" "}
+              {teamDisplayName(runnerUp, seasonId)}
             </span>
           )}
         </div>
@@ -509,6 +570,8 @@ export function SeasonExtras({
       </div>
     );
   const hasStandings = season.standings !== undefined;
+  const hasPlayoffs = (season.playoffs?.matches?.length ?? 0) > 0;
+  const hasCollectiveData = hasStandings || hasPlayoffs;
   const hasReconstruction = seasonId === "season-002";
   const activeView: View =
     view === "reconstruction" && !hasReconstruction
@@ -532,13 +595,15 @@ export function SeasonExtras({
               Classificação
             </button>
           )}
-          <button
-            type="button"
-            aria-pressed={activeView === "playoffs"}
-            onClick={() => onViewChange("playoffs")}
-          >
-            Playoffs
-          </button>
+          {hasPlayoffs && (
+            <button
+              type="button"
+              aria-pressed={activeView === "playoffs"}
+              onClick={() => onViewChange("playoffs")}
+            >
+              Playoffs
+            </button>
+          )}
           {hasReconstruction && (
             <button
               type="button"
@@ -571,6 +636,13 @@ export function SeasonExtras({
             onTeamChange={onTeamChange}
           />
         </Suspense>
+      ) : !hasCollectiveData ? (
+        <section className="seasonextras-panel" aria-live="polite">
+          <p className="seasonextras-note">
+            Classificação e chaveamento ainda não foram publicados para {season.year}. As
+            estatísticas individuais desta temporada podem estar disponíveis em outras áreas.
+          </p>
+        </section>
       ) : activeView === "standings" ? (
         <Standings
           seasonId={seasonId}
