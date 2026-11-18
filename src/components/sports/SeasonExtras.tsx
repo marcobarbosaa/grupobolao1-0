@@ -12,6 +12,7 @@ import history007 from "../../data/statistics/season-007/teamHistory.json";
 import history008 from "../../data/statistics/season-008/teamHistory.json";
 import history009 from "../../data/statistics/season-009/teamHistory.json";
 import history010 from "../../data/statistics/season-010/teamHistory.json";
+import history011 from "../../data/statistics/season-011/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
@@ -67,7 +68,7 @@ const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-001": history001, "season-002": history002, "season-003": history003,
   "season-004": history004, "season-005": history005, "season-006": history006,
   "season-007": history007, "season-008": history008,
-  "season-009": history009, "season-010": history010,
+  "season-009": history009, "season-010": history010, "season-011": history011,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO", "sacramento-kings": "SAC",
@@ -495,6 +496,8 @@ export function SeasonExtras({
       </div>
     );
   const hasStandings = season.standings !== undefined;
+  const hasPlayoffs = (season.playoffs?.matches?.length ?? 0) > 0;
+  const hasCollectiveData = hasStandings || hasPlayoffs;
   const activeView: View = hasStandings ? view : "playoffs";
 
   return (
@@ -529,7 +532,11 @@ export function SeasonExtras({
           </select>
         </label>
       </div>
-      {activeView === "standings" ? (
+      {!hasCollectiveData ? (
+        <section className="seasonextras-panel" aria-live="polite">
+          <p className="seasonextras-note">Classificação e chaveamento ainda não foram publicados para {season.year}. As estatísticas individuais desta temporada podem estar disponíveis em outras áreas.</p>
+        </section>
+      ) : activeView === "standings" ? (
         <Standings
           seasonId={seasonId}
           season={season}
