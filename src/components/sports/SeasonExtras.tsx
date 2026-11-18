@@ -19,6 +19,8 @@ import details2006 from "../../data/statistics/season-002/standings-details.json
 import details2007 from "../../data/statistics/season-003/standings-details.json";
 import details2008 from "../../data/statistics/season-004/standings-details.json";
 import details2009 from "../../data/statistics/season-005/standings-details.json";
+import details2010 from "../../data/statistics/season-006/standings-details.json";
+import details2011 from "../../data/statistics/season-007/standings-details.json";
 import details2013 from "../../data/statistics/season-008/standings-details.json";
 import "./SeasonExtras.css";
 
@@ -121,6 +123,8 @@ const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-003": details2007,
   "season-004": details2008,
   "season-005": details2009,
+  "season-006": details2010,
+  "season-007": details2011,
   "season-008": details2013,
 };
 const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
@@ -331,9 +335,9 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
                   <th scope="row">
                     <div className="seasonextras-team">
                       <Logo code={row.team} seasonId={seasonId} />
-                      <span className="league-standing-name">{seasonId === "season-010" && row.team === "CHA"
+                      <span className="league-standing-name">{(seasonId === "season-010" || seasonId === "season-011") && row.team === "CHA"
                         ? "Charlotte Hornets"
-                        : (seasonId === "season-009" || seasonId === "season-010") && row.team === "NO"
+                        : (seasonId === "season-009" || seasonId === "season-010" || seasonId === "season-011") && row.team === "NO"
                           ? "New Orleans Pelicans"
                           : teamNames[row.team] ?? row.team}<PlayerMarks seasonId={seasonId} teamCode={row.team} /></span>
                       {row.rank <= 8 && (

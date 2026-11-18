@@ -1,46 +1,39 @@
-# Auditoria de cobertura — Extras de classificações (2015–16 e anteriores)
+# Auditoria de cobertura — Extras de classificações (18/11/2026)
 
-Auditoria realizada em 18/11/2026 com leitura dos dados publicados na branch `main`, do catálogo histórico, das fontes indexadas e da lógica de renderização de `SeasonExtras.tsx`.
+Auditoria atualizada após conferência visual dos ZIPs fornecidos nesta solicitação e comparação com a branch `main`.
 
 ## Resultado por temporada
 
 | ID | Ano | Classificação | Playoffs | Detalhes complementares |
-|---|---|---|---:|---|
+|---|---|---:|---:|---|
 | season-001 | 2005–06 | Não publicada | 15 séries | Apenas chaveamento |
-| season-002 | 2006–07 | 30 equipes | 15 séries | Completo (arquivo de detalhes por equipe) |
-| season-003 | 2007–08 | 30 equipes | 15 séries | Completo (arquivo de detalhes por equipe) |
-| season-004 | 2008–09 | 30 equipes | 15 séries | Completo (arquivo de detalhes por equipe) |
-| season-005 | 2009–10 | 30 equipes | 15 séries | Completo (arquivo de detalhes por equipe) |
-| season-006 | 2010–11 | 30 equipes | 15 séries | **Pendente** |
-| season-007 | 2011–12 | 30 equipes | 15 séries | **Pendente** |
-| season-008 | 2012–13 | 30 equipes | 15 séries | **Pendente** |
+| season-002 | 2006–07 | 30 equipes | 15 séries | Completo |
+| season-003 | 2007–08 | 30 equipes | 15 séries | Completo |
+| season-004 | 2008–09 | 30 equipes | 15 séries | Completo |
+| season-005 | 2009–10 | 30 equipes | 15 séries | Completo |
+| season-006 | 2010–11 | 30 equipes | 15 séries | Completo; detalhes em `season-006/standings-details.json` |
+| season-007 | 2011–12 | 30 equipes | 15 séries | Completo; detalhes em `season-007/standings-details.json` |
+| season-008 | 2012–13 | 30 equipes | 15 séries | Campos complementares pendentes |
 | season-009 | 2013–14 | 30 equipes | 15 séries | Completo, campos incorporados nas linhas |
 | season-010 | 2014–15 | 30 equipes | 15 séries | Completo, campos incorporados nas linhas |
-| season-011 | 2015–16 | — | — | Extras ainda não importados |
+| season-011 | 2015–16 | 30 equipes | 15 séries | Completo em `season-011/extras.json` |
 
-## Campos da tabela
+## Estrutura e integração
 
-A interface apresenta os campos: posição, equipe, vitórias, derrotas, aproveitamento, GB, Casa, Fora, Conferência, Divisão, PPG, PAPG, saldo e sequência.
+A tabela da Liga apresenta posição, equipe, vitórias, derrotas, aproveitamento, GB, Casa, Fora, campanha de Conferência, Divisão, PPG, PAPG, saldo e sequência.
 
-Os registros publicados em seasons 006–008 incluem posição, conferência, equipe, vitórias, derrotas, aproveitamento, PPG, PAPG e saldo. As seis colunas complementares (GB, Casa, Fora, registro de Conferência, Divisão e Sequência) não estão presentes nos JSONs dessas três temporadas. O campo `conference` que existe nesses registros contém apenas a etiqueta de conferência (`west`/`east`), não a campanha; o renderizador passou a validar o formato de campanha e não mostrar a etiqueta como se fosse um record.
+- Em 2010/11 e 2011/12, os seis campos complementares foram registrados em sidecars separados, seguindo a arquitetura existente usada nas temporadas antigas. `SeasonExtras.tsx` associa os arquivos por temporada, sem conflitar com a propriedade de conferência usada para separar Oeste e Leste nas linhas base.
+- Em 2015/16, classificação e playoffs foram adicionados ao catálogo de Extras via manifesto. Cada linha contém os seis campos complementares.
+- A renderização usa a mesma estrutura Classificação/Playoffs e os mesmos componentes existentes; não houve reformulação visual.
+- Os nomes de franquias Charlotte e New Orleans na classificação de 2015/16 respeitam a identidade histórica Hornets/Pelicans daquele período.
 
-O repositório, contudo, possui cinco referências de captura de Extras para cada uma das temporadas 006, 007 e 008 — quatro capturas das classificações e uma captura da chave de playoffs. Os dados completos das imagens não puderam ser conferidos nesta sessão.
+## Verificações realizadas
 
-## Alteração visual publicada
+- 30 equipes e 15 séries preexistentes preservadas em cada uma das temporadas 2010/11 e 2011/12.
+- Todos os 30 registros de detalhes em cada sidecar foram associados a uma equipe única; os splits Casa/Fora reconciliam com vitórias e derrotas da classificação.
+- 2015/16: 15 equipes por conferência, 30 códigos de equipe únicos, 15 séries e campeão Toronto Raptors.
+- Aproveitamentos, campanhas de Casa/Fora, saldos e progressão dos vencedores foram validados por verificações independentes antes da publicação.
+- As capturas de origem de 2015/16 possuem SHA-256 registrado em `season-011/sources-extras.json`; lote e revisão estão publicados e referenciados no manifesto.
+- Nenhum arquivo de estatísticas individuais ou de temporadas fora do escopo foi incluído na complementação.
 
-`SeasonExtras.tsx` agora identifica dinamicamente os campos complementares ausentes na conferência selecionada e mostra um aviso explicativo. O aviso não altera nem inventa estatísticas; indica que o traço representa dado ainda não publicado, e não zero.
-
-## Restrição de fonte
-
-O conector Google Drive estava indisponível por restrição administrativa nesta sessão. Os IDs das capturas estão registrados no `season-extras-sources.json`, mas o conteúdo visual dos arquivos não pôde ser reaberto. A classificação fictícia MyNBA não pode ser completada com dados da NBA real ou inferências.
-
-Para completar a extração de seasons 006–008 e importar season-011, é necessário recuperar as imagens de Extras do Drive (ou disponibilizar novamente as capturas). Não foram criados valores estimados.
-
-## Verificação
-
-- 30 equipes e 15 séries de playoffs nos registros de standings seasons 002–010.
-- seasons 002–005: 30 detalhes complementares por temporada.
-- seasons 009–010: campos complementares embutidos nas linhas da classificação.
-- seasons 006–008: somente campos básicos; 5 fontes indexadas por temporada.
-- season-011: estatísticas individuais importadas previamente, mas nenhum registro de Extras.
-- Build e teste visual de produção não executados nesta sessão.
+O build do projeto e o teste visual em navegador não foram executados nesta sessão; a validação descrita acima é estrutural e numérica, não substitui a verificação pós-deploy.

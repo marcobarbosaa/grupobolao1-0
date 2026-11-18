@@ -21,3 +21,8 @@ Origem: Google Drive Primary → Bolão → Temporada 2011-2012 (F).
 - **Abel:** a pasta tem um print específico das quartas de final (cinco jogos) e prints do agregado dos playoffs (dez jogos). A primeira rodada não foi publicada separadamente porque não havia captura específica; não se inferiram suas estatísticas.
 - **Cristiano Ronaldo (Denver Nuggets) e Marco Barbosa (Miami Heat):** confirmação expressa do usuário de eliminação no First Round (ambos em cinco jogos), coerente com o chaveamento. Por isso os totais agregados de playoffs são também registrados em `first-round` com os mesmos dados e capturas, sem inventar ou duplicar partidas. Confirmado em 13/11/2026.
 - Dados visíveis são referentes ao universo Grupo Bolão NBA 2K, não à temporada histórica real da NBA. Não foram executados testes de interface em navegador nesta sessão.
+
+
+## Complementação coletiva (18/11/2026)
+
+As cinco imagens de `Temporada 2011-2012(1).zip` foram revistas visualmente. Os seis campos complementares (GB, Casa, Fora, campanha de Conferência, Divisão e Sequência) foram adicionados para as 30 equipes em `season-007/standings-details.json`. Os dados-base da classificação e as 15 séries de playoffs existentes, incluindo a final New York Knicks 4–2 Dallas Mavericks, foram preservados. As campanhas de Casa/Fora foram reconciliadas com vitórias e derrotas de cada registro. Nenhuma estatística individual foi alterada.

@@ -3,38 +3,6 @@
   "seasons": {
     "2010-2011": [
       {
-        "file": "dcd8bc98-c792-417a-b059-88a8f5e20eb4.jpg",
-        "sha256": "70c3b608dec8cc6254b8a43bef4de1bf35105982fc204c179443785b9880e610",
-        "size": 291040,
-        "kind": "standings"
-      },
-      {
-        "file": "72b3f643-774a-4369-b377-6efa5916aa02.jpg",
-        "sha256": "1aa1af3418c75b5834cb66a9a1346d1a49bc565e85551b607d3834b9cdf9b3bd",
-        "size": 313970,
-        "kind": "playoff-tree"
-      },
-      {
-        "file": "5c9a7a0c-628b-4871-a8d5-c27886f02b93.jpg",
-        "sha256": "b58585ea98bd64eb76c237a87444702e6ac1e062ac816a9fb8f27446259a2a4a",
-        "size": 287343,
-        "kind": "standings"
-      },
-      {
-        "file": "5f5577e8-dba6-4d95-90be-1e64183e6937.jpg",
-        "sha256": "d663e772ce6194e79688bf9b07f5affd7c4115e2cad98845eef36c59d83e8d86",
-        "size": 284312,
-        "kind": "standings"
-      },
-      {
-        "file": "64673137-b9c4-4e89-9ee3-a0e958ff28cb.jpg",
-        "sha256": "9ed2612cca581562ec5c1ddb478d1433f6ed2a8e7ea68576653c36aff97b664d",
-        "size": 285275,
-        "kind": "standings"
-      }
-    ],
-    "2011-2012": [
-      {
         "file": "1f5a0966-7f1f-43a8-8e3a-ba5dc0908c76.jpg",
         "sha256": "4d127fd352956c10e3283ecb7ab00bb8cf1e0fc8e849998896cd379b4df7cc48",
         "size": 281270,
@@ -63,6 +31,38 @@
         "sha256": "92338f75eb404d705439ef3e075995b278f80cd07cf655afd35709df59ec2283",
         "size": 312930,
         "kind": "playoff-tree"
+      }
+    ],
+    "2011-2012": [
+      {
+        "file": "dcd8bc98-c792-417a-b059-88a8f5e20eb4.jpg",
+        "sha256": "70c3b608dec8cc6254b8a43bef4de1bf35105982fc204c179443785b9880e610",
+        "size": 291040,
+        "kind": "standings"
+      },
+      {
+        "file": "72b3f643-774a-4369-b377-6efa5916aa02.jpg",
+        "sha256": "1aa1af3418c75b5834cb66a9a1346d1a49bc565e85551b607d3834b9cdf9b3bd",
+        "size": 313970,
+        "kind": "playoff-tree"
+      },
+      {
+        "file": "5c9a7a0c-628b-4871-a8d5-c27886f02b93.jpg",
+        "sha256": "b58585ea98bd64eb76c237a87444702e6ac1e062ac816a9fb8f27446259a2a4a",
+        "size": 287343,
+        "kind": "standings"
+      },
+      {
+        "file": "5f5577e8-dba6-4d95-90be-1e64183e6937.jpg",
+        "sha256": "d663e772ce6194e79688bf9b07f5affd7c4115e2cad98845eef36c59d83e8d86",
+        "size": 284312,
+        "kind": "standings"
+      },
+      {
+        "file": "64673137-b9c4-4e89-9ee3-a0e958ff28cb.jpg",
+        "sha256": "9ed2612cca581562ec5c1ddb478d1433f6ed2a8e7ea68576653c36aff97b664d",
+        "size": 285275,
+        "kind": "standings"
       }
     ],
     "2012-2013": [

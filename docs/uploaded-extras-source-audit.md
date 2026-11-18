@@ -23,3 +23,15 @@ O usuário confirmou que os ZIPs chamados `Temporada 2010-2011.zip` e `Temporada
 - Os ZIPs 2012–13 e 2015–16 permanecem associados aos seus respectivos anos.
 
 O inventário foi corrigido para registrar a correspondência correta. Esta atualização resolve a divergência de identificação, mas a transcrição numérica das colunas complementares ainda está em andamento.
+
+
+
+## Retificação da remessa recebida em 18/11/2026
+
+Os três ZIPs anexados nesta execução foram verificados pelo conteúdo visual e pelos hashes reais dos cinco arquivos de cada pasta `Extras`. Nesta remessa, os nomes dos arquivos correspondem aos anos solicitados:
+
+- `Temporada 2010-2011(1).zip`: campanha do Philadelphia 76ers 54–28 e Dallas Mavericks 59–23; fontes associadas a `season-006`.
+- `Temporada 2011-2012(1).zip`: campanha do Chicago Bulls 65–17 e Dallas Mavericks 61–21; fontes associadas a `season-007`.
+- `Temporada 2015-2016(1).zip`: classificação das duas conferências e chave terminando em Toronto 4–3 Dallas; fontes associadas a `season-011`.
+
+A associação anterior dos dois primeiros ZIPs estava invertida em relação a estes nomes recebidos. O inventário de fontes foi alinhado aos conteúdos verificados nesta remessa, preservando os arquivos de 2012–13 e 2015–16.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-11-17T18:45:46.722Z",
+  "generatedAt": "2026-11-18T16:10:00.000Z",
   "seasons": [
     "season-001/seasons.json",
     "season-002/seasons.json",
@@ -83,7 +83,8 @@
     "season-009/sources-extras.json",
     "season-010/sources-extras.json",
     "season-011/sources.json",
-    "season-011/sources-rounds.json"
+    "season-011/sources-rounds.json",
+    "season-011/sources-extras.json"
   ],
   "batches": [
     "season-001/batches.json",
@@ -108,7 +109,8 @@
     "season-009/batches-extras.json",
     "season-010/batches-extras.json",
     "season-011/batches.json",
-    "season-011/batches-rounds.json"
+    "season-011/batches-rounds.json",
+    "season-011/batches-extras.json"
   ],
   "revisions": [
     "season-001/revisions.json",
@@ -133,10 +135,12 @@
     "season-009/revisions-extras.json",
     "season-010/revisions-extras.json",
     "season-011/revisions.json",
-    "season-011/revisions-rounds.json"
+    "season-011/revisions-rounds.json",
+    "season-011/revisions-extras.json"
   ],
   "extras": [
     "season-009/extras.json",
-    "season-010/extras.json"
+    "season-010/extras.json",
+    "season-011/extras.json"
   ]
 }

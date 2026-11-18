@@ -1,0 +1,16 @@
+[
+  {
+    "id": "batch-s011-extras",
+    "sourceIds": [
+      "src-s011-extras-1",
+      "src-s011-extras-2",
+      "src-s011-extras-3",
+      "src-s011-extras-4",
+      "src-s011-extras-5"
+    ],
+    "status": "published",
+    "createdAt": "2026-11-18T16:10:00.000Z",
+    "approvedAt": "2026-11-18T16:10:00.000Z",
+    "approvedBy": "Solicitação explícita do usuário para complementar os Extras de 2010/11, 2011/12 e importar 2015/16"
+  }
+]
