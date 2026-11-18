@@ -22,7 +22,7 @@ Auditoria realizada em 18/11/2026 com leitura dos dados publicados na branch `ma
 
 A interface apresenta os campos: posição, equipe, vitórias, derrotas, aproveitamento, GB, Casa, Fora, Conferência, Divisão, PPG, PAPG, saldo e sequência.
 
-Os registros publicados em seasons 006–008 incluem posição, conferência, equipe, vitórias, derrotas, aproveitamento, PPG, PAPG e saldo. As seis colunas complementares (GB, Casa, Fora, Conferência, Divisão e Sequência) não estão presentes nos JSONs dessas três temporadas.
+Os registros publicados em seasons 006–008 incluem posição, conferência, equipe, vitórias, derrotas, aproveitamento, PPG, PAPG e saldo. As seis colunas complementares (GB, Casa, Fora, registro de Conferência, Divisão e Sequência) não estão presentes nos JSONs dessas três temporadas. O campo `conference` que existe nesses registros contém apenas a etiqueta de conferência (`west`/`east`), não a campanha; o renderizador passou a validar o formato de campanha e não mostrar a etiqueta como se fosse um record.
 
 O repositório, contudo, possui cinco referências de captura de Extras para cada uma das temporadas 006, 007 e 008 — quatro capturas das classificações e uma captura da chave de playoffs. Os dados completos das imagens não puderam ser conferidos nesta sessão.
 
