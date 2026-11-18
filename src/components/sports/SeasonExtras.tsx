@@ -120,6 +120,14 @@ const fullStandings: Record<string, Record<string, StandingDetails>> = {
   "season-004": details2008,
   "season-005": details2009,
 };
+const detailFieldLabels: { key: keyof StandingDetails; label: string }[] = [
+  { key: "gb", label: "GB" },
+  { key: "home", label: "Casa" },
+  { key: "away", label: "Fora" },
+  { key: "conference", label: "Conferência" },
+  { key: "division", label: "Divisão" },
+  { key: "streak", label: "Sequência" },
+];
 const baseLogos: Record<string, LogoDefinition> = historicalLogoData.base;
 const logoOverrides: Record<
   SeasonId,
@@ -253,6 +261,14 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
 }) {
   const rows = season.standings?.[conference] ?? [];
   const details = fullStandings[seasonId] ?? {};
+  const missingDetailLabels = detailFieldLabels
+    .filter(({ key }) =>
+      rows.some((row) => {
+        const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
+        return extra[key] === undefined;
+      }),
+    )
+    .map(({ label }) => label);
 
   return (
     <section className="seasonextras-panel" aria-label={`Classificação ${season.year}`}>
@@ -345,6 +361,12 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
         incluindo critérios de divisão. Os dados são do universo do Grupo Bolão, não dos resultados
         históricos da NBA real.
       </p>
+      {missingDetailLabels.length > 0 && (
+        <p className="seasonextras-note seasonextras-data-warning" role="status">
+          <strong>Dados complementares pendentes:</strong> {missingDetailLabels.join(", ")}.
+          Os campos indicados ainda não foram publicados para esta temporada; os traços na tabela não representam zero.
+        </p>
+      )}
     </section>
   );
 }
