@@ -1,5 +1,5 @@
 import { publishedCatalog } from "../../lib/published-catalog";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { newRoster } from "../../lib/new-roster";
 import history001 from "../../data/statistics/season-001/teamHistory.json";
@@ -20,7 +20,7 @@ import "./SeasonExtras.css";
 
 type SeasonId = string;
 type Conference = "west" | "east";
-type View = "standings" | "playoffs";
+type View = "standings" | "playoffs" | "reconstruction";
 type RoundId = "first-round" | "quarterfinals" | "conference-finals" | "nba-finals";
 
 type Standing = {
@@ -62,18 +62,30 @@ const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
 
 // Historical affiliation is season-scoped; never infer it from a player's current uniform.
 const histories: Record<string, { playerId: string; teamId: string }[]> = {
-  "season-001": history001, "season-002": history002, "season-003": history003,
-  "season-004": history004, "season-005": history005, "season-006": history006,
-  "season-007": history007, "season-008": history008,
+  "season-001": history001,
+  "season-002": history002,
+  "season-003": history003,
+  "season-004": history004,
+  "season-005": history005,
+  "season-006": history006,
+  "season-007": history007,
+  "season-008": history008,
 };
 const historicalTeamCodes: Record<string, string> = {
-  "new-orleans-hornets": "NO", "sacramento-kings": "SAC",
-  "atlanta-hawks": "ATL", "denver-nuggets": "DEN",
-  "indiana-pacers": "IND", "phoenix-suns": "PHX",
-  "detroit-pistons": "DET", "dallas-mavericks": "DAL",
-  "toronto-raptors": "TOR", "new-york-knicks": "NY",
-  "san-antonio-spurs": "SA", "minnesota-timberwolves": "MIN",
-  "philadelphia-76ers": "PHI", "houston-rockets": "HOU",
+  "new-orleans-hornets": "NO",
+  "sacramento-kings": "SAC",
+  "atlanta-hawks": "ATL",
+  "denver-nuggets": "DEN",
+  "indiana-pacers": "IND",
+  "phoenix-suns": "PHX",
+  "detroit-pistons": "DET",
+  "dallas-mavericks": "DAL",
+  "toronto-raptors": "TOR",
+  "new-york-knicks": "NY",
+  "san-antonio-spurs": "SA",
+  "minnesota-timberwolves": "MIN",
+  "philadelphia-76ers": "PHI",
+  "houston-rockets": "HOU",
   "chicago-bulls": "CHI",
 };
 function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
@@ -82,19 +94,29 @@ function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
     .map((row) => newRoster.find((player) => player.id === row.playerId))
     .filter((player): player is (typeof newRoster)[number] => Boolean(player));
 }
-function PlayerMarks({ seasonId, teamCode, compact = false }: {
-  seasonId: SeasonId; teamCode: string; compact?: boolean;
+function PlayerMarks({
+  seasonId,
+  teamCode,
+  compact = false,
+}: {
+  seasonId: SeasonId;
+  teamCode: string;
+  compact?: boolean;
 }) {
   const players = bolaoPlayers(seasonId, teamCode);
   if (!players.length) return null;
   return (
     <span className={compact ? "league-player-marks is-compact" : "league-player-marks"}>
       {players.map((player) => (
-        <Link key={player.id} to="/jogadores/$id" params={{ id: player.id }}
+        <Link
+          key={player.id}
+          to="/jogadores/$id"
+          params={{ id: player.id }}
           className="league-player-chip"
           title={`Grupo Bolão · ${player.name} · ${teamCode} · ${seasonId}`}
           aria-label={`Abrir perfil de ${player.name}`}
-          onClick={(event) => event.stopPropagation()}>
+          onClick={(event) => event.stopPropagation()}
+        >
           <span aria-hidden="true">★</span>
           <span className="league-player-name">{player.name}</span>
         </Link>
@@ -123,7 +145,7 @@ const logoOverrides: Record<
 // A single 2015-era visual reference for the league archive; franchise names
 // that no longer existed in 2015 retain the last relevant historical emblem.
 const logos2015: Record<string, LogoDefinition> = historicalLogoData.logos2015;
-const teamNames: Record<string, string> = Object.fromEntries(
+export const teamNames: Record<string, string> = Object.fromEntries(
   Object.values(seasons["season-002"].standings ?? {})
     .flat()
     .map((team) => [
@@ -165,6 +187,18 @@ const teamNames: Record<string, string> = Object.fromEntries(
       )[team.team] ?? team.team,
     ]),
 );
+
+export function LeagueTeamBadge({ code, seasonId }: { code: string; seasonId: SeasonId }) {
+  return (
+    <span className="league-round-team">
+      <Logo code={code} seasonId={seasonId} />
+      <span>{teamNames[code] ?? code}</span>
+      <small>{code}</small>
+    </span>
+  );
+}
+
+const SyntheticSeason = lazy(() => import("./SyntheticSeason"));
 
 teamNames.OKC = "Oklahoma City Thunder";
 teamNames.BKN = "Brooklyn Nets";
@@ -240,7 +274,12 @@ function Series({ match, seasonId }: { match: Match; seasonId: SeasonId }) {
   );
 }
 
-function Standings({ seasonId, season, conference, onConferenceChange }: {
+function Standings({
+  seasonId,
+  season,
+  conference,
+  onConferenceChange,
+}: {
   seasonId: SeasonId;
   season: SeasonRecord;
   conference: Conference;
@@ -302,7 +341,10 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
                   <th scope="row">
                     <div className="seasonextras-team">
                       <Logo code={row.team} seasonId={seasonId} />
-                      <span className="league-standing-name">{teamNames[row.team] ?? row.team}<PlayerMarks seasonId={seasonId} teamCode={row.team} /></span>
+                      <span className="league-standing-name">
+                        {teamNames[row.team] ?? row.team}
+                        <PlayerMarks seasonId={seasonId} teamCode={row.team} />
+                      </span>
                       {row.rank <= 8 && (
                         <span
                           className="seasonextras-playoff-label"
@@ -332,9 +374,9 @@ function Standings({ seasonId, season, conference, onConferenceChange }: {
         </table>
       </div>
       <p className="seasonextras-note">
-        P = classificado aos playoffs. ★ = atleta do Grupo Bolão (clique no nome para abrir o perfil). Ordem preservada conforme o NBA 2K,
-        incluindo critérios de divisão. Os dados são do universo do Grupo Bolão, não dos resultados
-        históricos da NBA real.
+        P = classificado aos playoffs. ★ = atleta do Grupo Bolão (clique no nome para abrir o
+        perfil). Ordem preservada conforme o NBA 2K, incluindo critérios de divisão. Os dados são do
+        universo do Grupo Bolão, não dos resultados históricos da NBA real.
       </p>
     </section>
   );
@@ -428,9 +470,9 @@ function Playoffs({ seasonId, season }: { seasonId: SeasonId; season: SeasonReco
         })}
       </div>
       <p className="seasonextras-note">
-        Os números ao lado das equipes indicam vitórias na série. ★ identifica atletas do Grupo Bolão naquela temporada. Os escudos correspondem à
-        identidade histórica das franquias no período selecionado. Em telas menores, deslize
-        horizontalmente pelo chaveamento.
+        Os números ao lado das equipes indicam vitórias na série. ★ identifica atletas do Grupo
+        Bolão naquela temporada. Os escudos correspondem à identidade histórica das franquias no
+        período selecionado. Em telas menores, deslize horizontalmente pelo chaveamento.
       </p>
     </section>
   );
@@ -443,6 +485,10 @@ export function SeasonExtras({
   onSeasonChange,
   onViewChange,
   onConferenceChange,
+  round,
+  team,
+  onRoundChange,
+  onTeamChange,
 }: {
   seasonId: SeasonId;
   view: View;
@@ -450,6 +496,10 @@ export function SeasonExtras({
   onSeasonChange: (seasonId: SeasonId) => void;
   onViewChange: (view: View) => void;
   onConferenceChange: (conference: Conference) => void;
+  round: number;
+  team?: string;
+  onRoundChange: (round: number) => void;
+  onTeamChange: (team?: string) => void;
 }) {
   const season = seasons[seasonId];
   if (!season)
@@ -459,12 +509,20 @@ export function SeasonExtras({
       </div>
     );
   const hasStandings = season.standings !== undefined;
-  const activeView: View = hasStandings ? view : "playoffs";
+  const hasReconstruction = seasonId === "season-002";
+  const activeView: View =
+    view === "reconstruction" && !hasReconstruction
+      ? hasStandings
+        ? "standings"
+        : "playoffs"
+      : hasStandings
+        ? view
+        : "playoffs";
 
   return (
     <div className="seasonextras">
       <div className="seasonextras-controlbar">
-        <nav className="seasonextras-nav" aria-label="Classificação e playoffs">
+        <nav className="seasonextras-nav" aria-label="Visualizações da temporada">
           {hasStandings && (
             <button
               type="button"
@@ -481,6 +539,15 @@ export function SeasonExtras({
           >
             Playoffs
           </button>
+          {hasReconstruction && (
+            <button
+              type="button"
+              aria-pressed={activeView === "reconstruction"}
+              onClick={() => onViewChange("reconstruction")}
+            >
+              Liga Viva
+            </button>
+          )}
         </nav>
         <label className="league-season-select">
           <span>Temporada</span>
@@ -493,7 +560,18 @@ export function SeasonExtras({
           </select>
         </label>
       </div>
-      {activeView === "standings" ? (
+      {activeView === "reconstruction" ? (
+        <Suspense
+          fallback={<p className="seasonextras-note">Carregando reconstrução sintética…</p>}
+        >
+          <SyntheticSeason
+            round={round}
+            team={team}
+            onRoundChange={onRoundChange}
+            onTeamChange={onTeamChange}
+          />
+        </Suspense>
+      ) : activeView === "standings" ? (
         <Standings
           seasonId={seasonId}
           season={season}

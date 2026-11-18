@@ -85,4 +85,6 @@ Antes de aplicar o núcleo a outras temporadas, ainda é preciso fornecer fontes
 
 ## Diretriz para a próxima interface
 
-Diretriz aprovada pelo usuário para a futura visualização: avançar uma rodada por vez, sem apresentar uma partida por data como unidade de navegação; oferecer filtro por equipe; não oferecer filtro por conferência, pois as equipes se enfrentam entre conferências. Essa interface ainda não está implementada neste commit.
+Diretriz aprovada pelo usuário e aplicada à visualização em `src/components/sports/SyntheticSeason.tsx`: avançar uma rodada por vez, reunir várias partidas na mesma rodada, oferecer filtro por equipe e não oferecer filtro por conferência.
+
+Para a apresentação do piloto, uma rodada agrupa dois dias consecutivos da agenda sintética (85 rodadas, normalmente 14–16 partidas). As datas permanecem visíveis em cada partida, mas não são a unidade de navegação e os agrupamentos não alegam equivalência com rodadas históricas. A classificação acumulada inclui todas as partidas até a rodada selecionada; o filtro de equipe limita a lista de jogos e destaca a equipe na tabela, sem excluir outros clubes da classificação. A aba, a rodada e a equipe selecionada são persistidas nos parâmetros `view`, `round` e `team` da URL.
