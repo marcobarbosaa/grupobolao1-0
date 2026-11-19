@@ -1,0 +1,825 @@
+[
+  {
+    "id": "stat-s12-regular-abel",
+    "kind": "phase",
+    "playerId": "abel",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "phoenix-suns",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-abel-career-1",
+      "src-s12-abel-career-2"
+    ],
+    "stats": {
+      "totals": {
+        "points": 1158,
+        "rebounds": 713,
+        "assists": 119,
+        "steals": 32,
+        "blocks": 98,
+        "turnovers": 76,
+        "fgm": 421,
+        "fga": 777,
+        "threePm": 0,
+        "threePa": 0
+      },
+      "averages": {
+        "mpg": 33.1,
+        "ppg": 20.7,
+        "rpg": 12.7,
+        "apg": 2.1,
+        "spg": 0.6,
+        "bpg": 1.7,
+        "topg": 1.4
+      },
+      "percentages": {
+        "fgPct": 54.2,
+        "threePct": 0,
+        "ftPct": 74
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-binho-career-1",
+      "src-s12-binho-career-2",
+      "src-s12-binho-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 82,
+        "minutes": 2585,
+        "points": 1843,
+        "rebounds": 994,
+        "assists": 232,
+        "steals": 74,
+        "blocks": 161,
+        "turnovers": 161,
+        "fgm": 683,
+        "fga": 1171,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 477,
+        "fta": 607,
+        "fouls": 223,
+        "doubleDoubles": 58,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 31.5,
+        "ppg": 22.5,
+        "rpg": 12.1,
+        "apg": 2.8,
+        "spg": 0.9,
+        "bpg": 2,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 58.3,
+        "threePct": 0,
+        "ftPct": 78.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "denver-nuggets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-cerrote-career-1",
+      "src-s12-cerrote-career-2",
+      "src-s12-cerrote-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 82,
+        "gs": 82,
+        "minutes": 2852,
+        "points": 2249,
+        "rebounds": 481,
+        "assists": 563,
+        "steals": 172,
+        "blocks": 7,
+        "turnovers": 236,
+        "fgm": 798,
+        "fga": 1504,
+        "threePm": 111,
+        "threePa": 252,
+        "ftm": 542,
+        "fta": 650,
+        "fouls": 201,
+        "doubleDoubles": 17,
+        "tripleDoubles": 1
+      },
+      "averages": {
+        "mpg": 34.8,
+        "ppg": 27.4,
+        "rpg": 5.9,
+        "apg": 6.9,
+        "spg": 2.1,
+        "bpg": 0.1,
+        "topg": 2.9
+      },
+      "percentages": {
+        "fgPct": 53.1,
+        "threePct": 44,
+        "ftPct": 83.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-career-1",
+      "src-s12-dias-career-2",
+      "src-s12-dias-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 80,
+        "gs": 80,
+        "minutes": 2964,
+        "points": 2032,
+        "rebounds": 245,
+        "assists": 720,
+        "steals": 97,
+        "blocks": 2,
+        "turnovers": 226,
+        "fgm": 691,
+        "fga": 1479,
+        "threePm": 214,
+        "threePa": 474,
+        "ftm": 436,
+        "fta": 523,
+        "fouls": 233,
+        "doubleDoubles": 33,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 25.4,
+        "rpg": 3.1,
+        "apg": 9,
+        "spg": 1.2,
+        "bpg": 0,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 46.7,
+        "threePct": 45.1,
+        "ftPct": 83.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-enzo",
+    "kind": "phase",
+    "playerId": "enzo",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "san-antonio-spurs",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-enzo-career-1",
+      "src-s12-enzo-career-2",
+      "src-s12-enzo-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 62,
+        "gs": 62,
+        "minutes": 2021,
+        "points": 1369,
+        "rebounds": 428,
+        "assists": 188,
+        "steals": 68,
+        "blocks": 42,
+        "turnovers": 147,
+        "fgm": 478,
+        "fga": 989,
+        "threePm": 105,
+        "threePa": 266,
+        "ftm": 308,
+        "fta": 364,
+        "fouls": 159,
+        "doubleDoubles": 12,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 32.6,
+        "ppg": 22.1,
+        "rpg": 6.9,
+        "apg": 3,
+        "spg": 1.1,
+        "bpg": 0.7,
+        "topg": 2.4
+      },
+      "percentages": {
+        "fgPct": 48.3,
+        "threePct": 39.5,
+        "ftPct": 84.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-career-1",
+      "src-s12-gam-career-2",
+      "src-s12-gam-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 72,
+        "gs": 72,
+        "minutes": 2316,
+        "points": 1628,
+        "rebounds": 321,
+        "assists": 349,
+        "steals": 86,
+        "blocks": 27,
+        "turnovers": 157,
+        "fgm": 584,
+        "fga": 1068,
+        "threePm": 42,
+        "threePa": 91,
+        "ftm": 418,
+        "fta": 453,
+        "fouls": 172,
+        "doubleDoubles": 6,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 32.2,
+        "ppg": 22.6,
+        "rpg": 4.5,
+        "apg": 4.8,
+        "spg": 1.2,
+        "bpg": 0.4,
+        "topg": 2.2
+      },
+      "percentages": {
+        "fgPct": 54.7,
+        "threePct": 46.2,
+        "ftPct": 92.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-career-1",
+      "src-s12-guilherme-career-2",
+      "src-s12-guilherme-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 65,
+        "gs": 65,
+        "minutes": 2137,
+        "points": 1486,
+        "rebounds": 522,
+        "assists": 261,
+        "steals": 83,
+        "blocks": 40,
+        "turnovers": 137,
+        "fgm": 503,
+        "fga": 977,
+        "threePm": 143,
+        "threePa": 393,
+        "ftm": 337,
+        "fta": 410,
+        "fouls": 225,
+        "doubleDoubles": 19,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 32.9,
+        "ppg": 22.9,
+        "rpg": 8,
+        "apg": 4,
+        "spg": 1.3,
+        "bpg": 0.6,
+        "topg": 2.1
+      },
+      "percentages": {
+        "fgPct": 51.5,
+        "threePct": 36.4,
+        "ftPct": 82.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-jonas",
+    "kind": "phase",
+    "playerId": "jonas",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-jonas-career-1",
+      "src-s12-jonas-career-2",
+      "src-s12-jonas-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 62,
+        "gs": 62,
+        "minutes": 2082,
+        "points": 1593,
+        "rebounds": 670,
+        "assists": 211,
+        "steals": 61,
+        "blocks": 62,
+        "turnovers": 106,
+        "fgm": 544,
+        "fga": 1064,
+        "threePm": 180,
+        "threePa": 439,
+        "ftm": 325,
+        "fta": 390,
+        "fouls": 153,
+        "doubleDoubles": 42,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 33.6,
+        "ppg": 25.7,
+        "rpg": 10.8,
+        "apg": 3.4,
+        "spg": 1,
+        "bpg": 1,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 51.1,
+        "threePct": 41,
+        "ftPct": 83.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-marco-barbosa",
+    "kind": "phase",
+    "playerId": "marco-barbosa",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "atlanta-hawks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-marco-career-1",
+      "src-s12-marco-career-2",
+      "src-s12-marco-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 64,
+        "gs": 64,
+        "minutes": 2032,
+        "points": 1488,
+        "rebounds": 384,
+        "assists": 201,
+        "steals": 99,
+        "blocks": 37,
+        "turnovers": 129,
+        "fgm": 500,
+        "fga": 984,
+        "threePm": 152,
+        "threePa": 342,
+        "ftm": 336,
+        "fta": 404,
+        "fouls": 149,
+        "doubleDoubles": 11,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 31.7,
+        "ppg": 23.3,
+        "rpg": 6,
+        "apg": 3.1,
+        "spg": 1.5,
+        "bpg": 0.6,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 50.8,
+        "threePct": 44.4,
+        "ftPct": 83.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-medeiros-career-1",
+      "src-s12-medeiros-career-2",
+      "src-s12-medeiros-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 75,
+        "gs": 75,
+        "minutes": 2544,
+        "points": 1651,
+        "rebounds": 874,
+        "assists": 223,
+        "steals": 65,
+        "blocks": 103,
+        "turnovers": 148,
+        "fgm": 628,
+        "fga": 1143,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 395,
+        "fta": 529,
+        "fouls": 192,
+        "doubleDoubles": 55,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 33.9,
+        "ppg": 22,
+        "rpg": 11.7,
+        "apg": 3,
+        "spg": 0.9,
+        "bpg": 1.4,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 54.9,
+        "threePct": 0,
+        "ftPct": 74.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-nando",
+    "kind": "phase",
+    "playerId": "nando",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "milwaukee-bucks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 72,
+        "gs": 72,
+        "minutes": 2203,
+        "points": 1780,
+        "rebounds": 883,
+        "assists": 201,
+        "steals": 69,
+        "blocks": 109,
+        "turnovers": 141,
+        "fgm": 585,
+        "fga": 1108,
+        "threePm": 73,
+        "threePa": 186,
+        "ftm": 537,
+        "fta": 583,
+        "fouls": 198,
+        "doubleDoubles": 54,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 30.6,
+        "ppg": 24.7,
+        "rpg": 12.3,
+        "apg": 2.8,
+        "spg": 1,
+        "bpg": 1.5,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 52.8,
+        "threePct": 39.2,
+        "ftPct": 92.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "detroit-pistons",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-russo-career-1",
+      "src-s12-russo-career-2",
+      "src-s12-russo-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 79,
+        "gs": 79,
+        "minutes": 2727,
+        "points": 2041,
+        "rebounds": 355,
+        "assists": 610,
+        "steals": 109,
+        "blocks": 28,
+        "turnovers": 232,
+        "fgm": 656,
+        "fga": 1225,
+        "threePm": 237,
+        "threePa": 535,
+        "ftm": 492,
+        "fta": 534,
+        "fouls": 229,
+        "doubleDoubles": 19,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 34.5,
+        "ppg": 25.8,
+        "rpg": 4.5,
+        "apg": 7.7,
+        "spg": 1.4,
+        "bpg": 0.4,
+        "topg": 2.9
+      },
+      "percentages": {
+        "fgPct": 53.6,
+        "threePct": 44.3,
+        "ftPct": 92.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  },
+  {
+    "id": "stat-s12-regular-tailan",
+    "kind": "phase",
+    "playerId": "tailan",
+    "seasonId": "season-012",
+    "phaseId": "regular",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-tailan-career-1",
+      "src-s12-tailan-career-2",
+      "src-s12-tailan-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 74,
+        "gs": 74,
+        "minutes": 2232,
+        "points": 1839,
+        "rebounds": 309,
+        "assists": 265,
+        "steals": 89,
+        "blocks": 45,
+        "turnovers": 145,
+        "fgm": 622,
+        "fga": 1137,
+        "threePm": 175,
+        "threePa": 415,
+        "ftm": 420,
+        "fta": 465,
+        "fouls": 239,
+        "doubleDoubles": 1,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 30.2,
+        "ppg": 24.9,
+        "rpg": 4.2,
+        "apg": 3.6,
+        "spg": 1.2,
+        "bpg": 0.6,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 54.7,
+        "threePct": 42.2,
+        "ftPct": 90.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    }
+  }
+]
