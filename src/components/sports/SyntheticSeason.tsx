@@ -42,6 +42,24 @@ export default function SyntheticSeason({
     rounds,
     activeRoundNumber,
   );
+  const clinchedTeams = new Set<string>();
+  const gamesPerTeam = reconstruction.rules.schedule.gamesPerTeam;
+  for (const conferenceId of ["east", "west"] as const) {
+    const conferenceStandings = progress.filter(
+      (standing) => standing.conference === conferenceId,
+    );
+    const teamsOutsidePlayoffs = conferenceStandings.slice(8);
+    const bestPossibleOutsideWins = Math.max(
+      ...teamsOutsidePlayoffs.map(
+        (standing) => standing.wins + Math.max(0, gamesPerTeam - standing.gamesPlayed),
+      ),
+    );
+    conferenceStandings.slice(0, 8).forEach((standing) => {
+      // A team is clinched only when every team currently outside the top 8
+      // has a strictly lower maximum possible win total (ties remain undecided).
+      if (standing.wins > bestPossibleOutsideWins) clinchedTeams.add(standing.teamId);
+    });
+  }
   const roundDates = [activeRound.games[0].date, activeRound.games.at(-1)!.date];
   const dateLabel =
     roundDates[0] === roundDates[1]
@@ -147,7 +165,7 @@ export default function SyntheticSeason({
                 >
                   {game.awayScore}
                 </strong>
-                <LeagueTeamBadge code={game.awayTeam} seasonId={reconstruction.seasonId} showPlayerMarks />
+                <LeagueTeamBadge code={game.awayTeam} seasonId={reconstruction.seasonId} showPlayerMarks playerMarksBefore />
                 <span className="synthetic-result-label">{homeWon ? "Mandante" : "Visitante"}</span>
               </article>
             );
@@ -221,6 +239,15 @@ export default function SyntheticSeason({
                               teamCode={standing.teamId}
                               compact
                             />
+                            {clinchedTeams.has(standing.teamId) && (
+                              <span
+                                className="synthetic-clinch-indicator"
+                                title="Classificado matematicamente para os playoffs"
+                                aria-label="Classificado matematicamente para os playoffs"
+                              >
+                                <span aria-hidden="true">✓</span> CLINCHED
+                              </span>
+                            )}
                           </div>
                         </th>
                         <td>{standing.gamesPlayed}</td>
