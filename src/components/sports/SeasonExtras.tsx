@@ -231,24 +231,30 @@ export function LeagueTeamBadge({
   code,
   seasonId,
   showPlayerMarks = false,
-  playerMarksBefore = false,
+  showCode = true,
+  isAway = false,
+  venueLabel,
 }: {
   code: string;
   seasonId: SeasonId;
   showPlayerMarks?: boolean;
-  playerMarksBefore?: boolean;
+  showCode?: boolean;
+  isAway?: boolean;
+  venueLabel?: string;
 }) {
   const playerMarks = showPlayerMarks ? (
     <PlayerMarks seasonId={seasonId} teamCode={code} compact />
   ) : null;
 
   return (
-    <span className={playerMarksBefore ? "league-round-team is-away" : "league-round-team"}>
-      {playerMarksBefore && playerMarks}
-      <Logo code={code} seasonId={seasonId} />
-      <span>{teamDisplayName(code, seasonId)}</span>
-      <small>{code}</small>
-      {!playerMarksBefore && playerMarks}
+    <span className={isAway ? "league-round-team is-away" : "league-round-team"}>
+      <span className="league-round-team-identity">
+        <Logo code={code} seasonId={seasonId} />
+        <span>{teamDisplayName(code, seasonId)}</span>
+        {showCode && <small>{code}</small>}
+      </span>
+      {playerMarks}
+      {venueLabel && <small className="synthetic-team-role">{venueLabel}</small>}
     </span>
   );
 }

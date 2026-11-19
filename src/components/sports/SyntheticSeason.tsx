@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { BadgeCheck, ChevronLeft, ChevronRight } from "lucide-react";
 import reconstructionData from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
 import {
   buildSyntheticRounds,
@@ -45,9 +45,7 @@ export default function SyntheticSeason({
   const clinchedTeams = new Set<string>();
   const gamesPerTeam = reconstruction.rules.schedule.gamesPerTeam;
   for (const conferenceId of ["east", "west"] as const) {
-    const conferenceStandings = progress.filter(
-      (standing) => standing.conference === conferenceId,
-    );
+    const conferenceStandings = progress.filter((standing) => standing.conference === conferenceId);
     const teamsOutsidePlayoffs = conferenceStandings.slice(8);
     const bestPossibleOutsideWins = Math.max(
       ...teamsOutsidePlayoffs.map(
@@ -151,22 +149,34 @@ export default function SyntheticSeason({
                 aria-label={`${teamNames[game.homeTeam] ?? game.homeTeam} ${game.homeScore}, ${teamNames[game.awayTeam] ?? game.awayTeam} ${game.awayScore}; vencedor ${teamNames[game.winner] ?? game.winner}`}
               >
                 <time dateTime={game.date}>{formatDate(game.date)}</time>
-                <LeagueTeamBadge code={game.homeTeam} seasonId={reconstruction.seasonId} showPlayerMarks />
-                <strong
-                  className={homeWon ? "synthetic-game-score is-winner" : "synthetic-game-score"}
-                >
-                  {game.homeScore}
-                </strong>
-                <span className="synthetic-score-separator" aria-hidden="true">
-                  –
-                </span>
+                <LeagueTeamBadge
+                  code={game.awayTeam}
+                  seasonId={reconstruction.seasonId}
+                  showPlayerMarks
+                  showCode={false}
+                  isAway
+                  venueLabel="Visitante"
+                />
                 <strong
                   className={!homeWon ? "synthetic-game-score is-winner" : "synthetic-game-score"}
                 >
                   {game.awayScore}
                 </strong>
-                <LeagueTeamBadge code={game.awayTeam} seasonId={reconstruction.seasonId} showPlayerMarks playerMarksBefore />
-                <span className="synthetic-result-label">{homeWon ? "Mandante" : "Visitante"}</span>
+                <span className="synthetic-score-separator" aria-hidden="true">
+                  –
+                </span>
+                <strong
+                  className={homeWon ? "synthetic-game-score is-winner" : "synthetic-game-score"}
+                >
+                  {game.homeScore}
+                </strong>
+                <LeagueTeamBadge
+                  code={game.homeTeam}
+                  seasonId={reconstruction.seasonId}
+                  showPlayerMarks
+                  showCode={false}
+                  venueLabel="Mandante"
+                />
               </article>
             );
           })}
@@ -245,7 +255,7 @@ export default function SyntheticSeason({
                                 title="Classificado matematicamente para os playoffs"
                                 aria-label="Classificado matematicamente para os playoffs"
                               >
-                                <span aria-hidden="true">✓</span> CLINCHED
+                                <BadgeCheck size={17} strokeWidth={2.2} aria-hidden="true" />
                               </span>
                             )}
                           </div>

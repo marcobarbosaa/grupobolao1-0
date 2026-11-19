@@ -132,7 +132,7 @@
 
 .synthetic-game-row {
   display: grid;
-  grid-template-columns: 72px minmax(170px, 1fr) 42px 12px 42px minmax(170px, 1fr) 66px;
+  grid-template-columns: 72px minmax(170px, 1fr) 42px 12px 42px minmax(170px, 1fr);
   align-items: center;
   gap: 10px;
   min-height: 58px;
@@ -156,7 +156,15 @@
   font-weight: 700;
 }
 
-.league-round-team > span:nth-child(2) {
+.league-round-team-identity {
+  display: flex;
+  min-width: 0;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.league-round-team-identity > span:nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -189,10 +197,11 @@
   text-align: center;
 }
 
-.synthetic-result-label {
+.synthetic-team-role {
   color: #8999ad;
   font-size: 9px;
-  text-align: right;
+  font-weight: 750;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 
@@ -373,8 +382,7 @@
     height: 23px;
   }
 
-  .league-round-team small,
-  .synthetic-result-label {
+  .league-round-team small:not(.synthetic-team-role) {
     display: none;
   }
 
@@ -398,40 +406,40 @@
 }
 
 
-/* Liga Viva: visitante com os atletas junto ao placar e classificação matemática. */
+/* Liga Viva: visitante à esquerda, alinhado pelo lado do placar. */
+.league-round-team.is-away {
+  flex-direction: row-reverse;
+}
+
+.league-round-team:not(.is-away) {
+  justify-content: flex-start;
+}
+
+.league-round-team:not(.is-away) .league-player-marks {
+  margin-left: 0;
+}
+
 .league-round-team.is-away .league-player-marks {
   margin-left: 0;
   margin-right: 0;
 }
 .synthetic-clinch-indicator {
-  display: inline-flex;
+  display: inline-grid;
+  width: 27px;
+  height: 27px;
   flex: 0 0 auto;
-  align-items: center;
-  gap: 4px;
+  place-items: center;
   margin-left: 5px;
-  padding: 4px 7px;
-  border: 1px solid rgba(120, 211, 164, .62);
-  border-radius: 4px;
-  background: linear-gradient(110deg, rgba(41, 111, 83, .42), rgba(31, 75, 67, .24));
-  color: #a9f0c8;
-  font-size: 8px;
-  font-weight: 950;
-  letter-spacing: .09em;
-  line-height: 1;
-  box-shadow: 0 0 0 rgba(120, 211, 164, 0);
-  animation: synthetic-clinch-enter .65s cubic-bezier(.2,.8,.2,1) both,
-    synthetic-clinch-glow 2.8s ease-in-out .65s infinite;
-}
-.synthetic-clinch-indicator > span {
-  font-size: 11px;
+  border: 1px solid rgba(223, 190, 129, .68);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, rgba(245, 216, 161, .24), rgba(36, 100, 75, .4));
+  color: #f3d396;
+  box-shadow: inset 0 0 0 2px rgba(8, 15, 24, .45), 0 0 12px rgba(120, 211, 164, .12);
+  animation: synthetic-clinch-enter .5s cubic-bezier(.2,.8,.2,1) both;
 }
 @keyframes synthetic-clinch-enter {
-  from { opacity: 0; transform: translateY(5px) scale(.88); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-@keyframes synthetic-clinch-glow {
-  0%, 100% { box-shadow: 0 0 0 rgba(120, 211, 164, 0); }
-  50% { box-shadow: 0 0 13px rgba(120, 211, 164, .18); }
+  from { opacity: 0; transform: scale(.82); }
+  to { opacity: 1; transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
   .synthetic-clinch-indicator {
