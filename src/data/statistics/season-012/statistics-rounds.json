@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "stat-s12-first-round-abel",
+    "kind": "phase",
+    "playerId": "abel",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "phoenix-suns",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-abel-phase-53",
+      "src-s12-abel-phase-54"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 19.3,
+        "rpg": 15.5,
+        "apg": 3.5,
+        "spg": 0.3,
+        "bpg": 1.5,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 52.1,
+        "threePct": 0,
+        "ftPct": 73
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-abel-phase-53",
+        "src-s12-abel-phase-54"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-abel",
+    "kind": "phase",
+    "playerId": "abel",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "phoenix-suns",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-abel-phase-56",
+      "src-s12-abel-phase-55"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 36.3,
+        "ppg": 19.4,
+        "rpg": 14.4,
+        "apg": 3.3,
+        "spg": 1,
+        "bpg": 1.4,
+        "topg": 2.1
+      },
+      "percentages": {
+        "fgPct": 52.7,
+        "threePct": 0,
+        "ftPct": 76.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-abel-phase-56",
+        "src-s12-abel-phase-55"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-abel",
+    "kind": "phase",
+    "playerId": "abel",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "phoenix-suns",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-abel-phase-57",
+      "src-s12-abel-phase-58"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 38.2,
+        "ppg": 22.2,
+        "rpg": 18,
+        "apg": 2.2,
+        "spg": 1.2,
+        "bpg": 2,
+        "topg": 2.6
+      },
+      "percentages": {
+        "fgPct": 49.3,
+        "threePct": 0,
+        "ftPct": 73.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-abel-phase-57",
+        "src-s12-abel-phase-58"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-first-round-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-14",
+      "src-s12-fabio-carvalho-phase-15"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 30,
+        "ppg": 18.6,
+        "rpg": 9.7,
+        "apg": 3,
+        "spg": 0.4,
+        "bpg": 2.1,
+        "topg": 1.4
+      },
+      "percentages": {
+        "fgPct": 56.1,
+        "threePct": 0,
+        "ftPct": 80.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-fabio-carvalho-phase-14",
+        "src-s12-fabio-carvalho-phase-15"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-17",
+      "src-s12-fabio-carvalho-phase-16"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 31,
+        "ppg": 16.5,
+        "rpg": 10.5,
+        "apg": 3.3,
+        "spg": 0.7,
+        "bpg": 4,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 57.8,
+        "threePct": 0,
+        "ftPct": 63.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-fabio-carvalho-phase-17",
+        "src-s12-fabio-carvalho-phase-16"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-18",
+      "src-s12-fabio-carvalho-phase-19"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 31.2,
+        "ppg": 17.5,
+        "rpg": 10.5,
+        "apg": 2,
+        "spg": 1.7,
+        "bpg": 1.7,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 45.5,
+        "threePct": 0,
+        "ftPct": 92.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-fabio-carvalho-phase-18",
+        "src-s12-fabio-carvalho-phase-19"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 6
+    }
+  },
+  {
+    "id": "stat-s12-nba-finals-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-21",
+      "src-s12-fabio-carvalho-phase-20"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 30.4,
+        "ppg": 12,
+        "rpg": 9.2,
+        "apg": 2,
+        "spg": 0.8,
+        "bpg": 1.4,
+        "topg": 1.6
+      },
+      "percentages": {
+        "fgPct": 40,
+        "threePct": 0,
+        "ftPct": 61.5
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-fabio-carvalho-phase-21",
+        "src-s12-fabio-carvalho-phase-20"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-first-round-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "denver-nuggets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-cristiano-ronaldo-phase-40",
+      "src-s12-cristiano-ronaldo-phase-41"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 38.5,
+        "ppg": 35,
+        "rpg": 6,
+        "apg": 7.5,
+        "spg": 2.8,
+        "bpg": 0,
+        "topg": 3.8
+      },
+      "percentages": {
+        "fgPct": 64.5,
+        "threePct": 58.8,
+        "ftPct": 84.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-cristiano-ronaldo-phase-40",
+        "src-s12-cristiano-ronaldo-phase-41"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "denver-nuggets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-cristiano-ronaldo-phase-43",
+      "src-s12-cristiano-ronaldo-phase-42"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 38.3,
+        "ppg": 27.3,
+        "rpg": 4.5,
+        "apg": 5.7,
+        "spg": 1.7,
+        "bpg": 0,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 48.6,
+        "threePct": 58.3,
+        "ftPct": 91.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-cristiano-ronaldo-phase-43",
+        "src-s12-cristiano-ronaldo-phase-42"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-first-round-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-phase-22",
+      "src-s12-dias-phase-23"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 40.6,
+        "ppg": 27.3,
+        "rpg": 2.7,
+        "apg": 10,
+        "spg": 1.3,
+        "bpg": 0,
+        "topg": 3.7
+      },
+      "percentages": {
+        "fgPct": 52.4,
+        "threePct": 60.5,
+        "ftPct": 82.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-dias-phase-22",
+        "src-s12-dias-phase-23"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-phase-25",
+      "src-s12-dias-phase-24"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 38.3,
+        "ppg": 23.8,
+        "rpg": 4.2,
+        "apg": 11.3,
+        "spg": 1.3,
+        "bpg": 0,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 50,
+        "threePct": 20,
+        "ftPct": 66.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-dias-phase-25",
+        "src-s12-dias-phase-24"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-first-round-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-mori-phase-3",
+      "src-s12-gam-mori-phase-4"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 33.4,
+        "ppg": 24.4,
+        "rpg": 4,
+        "apg": 4.7,
+        "spg": 0.9,
+        "bpg": 0.6,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 55.4,
+        "threePct": 50,
+        "ftPct": 91.5
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-gam-mori-phase-3",
+        "src-s12-gam-mori-phase-4"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-mori-phase-6",
+      "src-s12-gam-mori-phase-5"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 36.7,
+        "ppg": 28.8,
+        "rpg": 4.5,
+        "apg": 7.8,
+        "spg": 1.5,
+        "bpg": 0.5,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 66.2,
+        "threePct": 60,
+        "ftPct": 91.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-gam-mori-phase-6",
+        "src-s12-gam-mori-phase-5"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-mori-phase-7",
+      "src-s12-gam-mori-phase-8"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 35,
+        "ppg": 18.5,
+        "rpg": 4.8,
+        "apg": 7,
+        "spg": 1,
+        "bpg": 0.5,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 42.4,
+        "threePct": 33.3,
+        "ftPct": 97
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-gam-mori-phase-7",
+        "src-s12-gam-mori-phase-8"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 6
+    }
+  },
+  {
+    "id": "stat-s12-nba-finals-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-mori-phase-10",
+      "src-s12-gam-mori-phase-9"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 35,
+        "ppg": 25.2,
+        "rpg": 4.6,
+        "apg": 4.6,
+        "spg": 1.6,
+        "bpg": 0.2,
+        "topg": 3.2
+      },
+      "percentages": {
+        "fgPct": 52,
+        "threePct": 50,
+        "ftPct": 95.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-gam-mori-phase-10",
+        "src-s12-gam-mori-phase-9"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-first-round-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-phase-29",
+      "src-s12-guilherme-phase-30"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 37.9,
+        "ppg": 24.4,
+        "rpg": 8.6,
+        "apg": 4.1,
+        "spg": 2.1,
+        "bpg": 1,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 48.1,
+        "threePct": 40,
+        "ftPct": 90.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-guilherme-phase-29",
+        "src-s12-guilherme-phase-30"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-phase-32",
+      "src-s12-guilherme-phase-31"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 34,
+        "ppg": 35,
+        "rpg": 10.7,
+        "apg": 4.5,
+        "spg": 1.3,
+        "bpg": 1.3,
+        "topg": 1.7
+      },
+      "percentages": {
+        "fgPct": 64.1,
+        "threePct": 39.3,
+        "ftPct": 82.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-guilherme-phase-32",
+        "src-s12-guilherme-phase-31"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-phase-33",
+      "src-s12-guilherme-phase-34"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 33.4,
+        "ppg": 18,
+        "rpg": 8.6,
+        "apg": 4.2,
+        "spg": 2.2,
+        "bpg": 0.8,
+        "topg": 2.4
+      },
+      "percentages": {
+        "fgPct": 38,
+        "threePct": 19.4,
+        "ftPct": 79.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-guilherme-phase-33",
+        "src-s12-guilherme-phase-34"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-nba-finals-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-phase-36",
+      "src-s12-guilherme-phase-35"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 23.8,
+        "rpg": 6.2,
+        "apg": 4.2,
+        "spg": 2,
+        "bpg": 1.8,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 48.1,
+        "threePct": 41.9,
+        "ftPct": 79.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-guilherme-phase-36",
+        "src-s12-guilherme-phase-35"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-first-round-jonas",
+    "kind": "phase",
+    "playerId": "jonas",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-jonas-phase-8",
+      "src-s12-jonas-phase-9"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 35,
+        "ppg": 29,
+        "rpg": 11.3,
+        "apg": 3.5,
+        "spg": 0.5,
+        "bpg": 1,
+        "topg": 1.2
+      },
+      "percentages": {
+        "fgPct": 55.9,
+        "threePct": 41.9,
+        "ftPct": 89.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-jonas-phase-8",
+        "src-s12-jonas-phase-9"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 6
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-jonas",
+    "kind": "phase",
+    "playerId": "jonas",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-jonas-phase-10",
+      "src-s12-jonas-phase-11"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 35.8,
+        "ppg": 26.3,
+        "rpg": 11.8,
+        "apg": 3.3,
+        "spg": 0.5,
+        "bpg": 0.7,
+        "topg": 0.7
+      },
+      "percentages": {
+        "fgPct": 56.9,
+        "threePct": 48,
+        "ftPct": 82.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-jonas-phase-10",
+        "src-s12-jonas-phase-11"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-first-round-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-62",
+      "src-s12-matheus-medeiros-phase-63"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7
+      },
+      "averages": {
+        "mpg": 37.4,
+        "ppg": 29.9,
+        "rpg": 14.4,
+        "apg": 2.1,
+        "spg": 0.7,
+        "bpg": 1.7,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 53.5,
+        "threePct": 0,
+        "ftPct": 72.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-matheus-medeiros-phase-62",
+        "src-s12-matheus-medeiros-phase-63"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-65",
+      "src-s12-matheus-medeiros-phase-64"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 36.5,
+        "ppg": 28.8,
+        "rpg": 13.2,
+        "apg": 1.7,
+        "spg": 1,
+        "bpg": 0.7,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 61.3,
+        "threePct": 0,
+        "ftPct": 74.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-matheus-medeiros-phase-65",
+        "src-s12-matheus-medeiros-phase-64"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-66",
+      "src-s12-matheus-medeiros-phase-67"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 26.3,
+        "rpg": 13.7,
+        "apg": 2.3,
+        "spg": 1.2,
+        "bpg": 1.7,
+        "topg": 2.2
+      },
+      "percentages": {
+        "fgPct": 60.8,
+        "threePct": 0,
+        "ftPct": 74.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-matheus-medeiros-phase-66",
+        "src-s12-matheus-medeiros-phase-67"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 6
+    }
+  },
+  {
+    "id": "stat-s12-nba-finals-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-69",
+      "src-s12-matheus-medeiros-phase-68"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 36.8,
+        "ppg": 18.4,
+        "rpg": 12.2,
+        "apg": 3.2,
+        "spg": 2,
+        "bpg": 2,
+        "topg": 2.4
+      },
+      "percentages": {
+        "fgPct": 49.3,
+        "threePct": 0,
+        "ftPct": 87
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-matheus-medeiros-phase-69",
+        "src-s12-matheus-medeiros-phase-68"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-first-round-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "detroit-pistons",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-russo-phase-48",
+      "src-s12-russo-phase-47"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 36,
+        "ppg": 31,
+        "rpg": 3,
+        "apg": 8.2,
+        "spg": 2.6,
+        "bpg": 0.4,
+        "topg": 2.2
+      },
+      "percentages": {
+        "fgPct": 51.5,
+        "threePct": 52.1,
+        "ftPct": 88.2
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-russo-phase-48",
+        "src-s12-russo-phase-47"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "detroit-pistons",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-russo-phase-50",
+      "src-s12-russo-phase-49"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 37.5,
+        "ppg": 25.8,
+        "rpg": 4.7,
+        "apg": 8,
+        "spg": 1.3,
+        "bpg": 0.3,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 51.5,
+        "threePct": 46.7,
+        "ftPct": 86.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-russo-phase-50",
+        "src-s12-russo-phase-49"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  },
+  {
+    "id": "stat-s12-first-round-tailan",
+    "kind": "phase",
+    "playerId": "tailan",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-tailan-phase-15",
+      "src-s12-tailan-phase-16"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 6,
+        "gs": 6
+      },
+      "averages": {
+        "mpg": 30.3,
+        "ppg": 28.7,
+        "rpg": 1.8,
+        "apg": 4.2,
+        "spg": 1.2,
+        "bpg": 0.2,
+        "topg": 1.5
+      },
+      "percentages": {
+        "fgPct": 58,
+        "threePct": 60,
+        "ftPct": 88.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-tailan-phase-15",
+        "src-s12-tailan-phase-16"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 6
+    }
+  },
+  {
+    "id": "stat-s12-quarterfinals-tailan",
+    "kind": "phase",
+    "playerId": "tailan",
+    "seasonId": "season-012",
+    "phaseId": "quarterfinals",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-tailan-phase-18",
+      "src-s12-tailan-phase-17"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 4,
+        "gs": 4
+      },
+      "averages": {
+        "mpg": 32.5,
+        "ppg": 24.8,
+        "rpg": 3.8,
+        "apg": 2.3,
+        "spg": 0.3,
+        "bpg": 0.3,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 56.9,
+        "threePct": 40,
+        "ftPct": 80.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-tailan-phase-18",
+        "src-s12-tailan-phase-17"
+      ],
+      "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
+      "expectedGames": 4
+    }
+  }
+]

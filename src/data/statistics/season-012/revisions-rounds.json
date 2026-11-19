@@ -1,0 +1,350 @@
+[
+  {
+    "id": "rev-stat-s12-first-round-abel-r1",
+    "recordId": "stat-s12-first-round-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-abel-phase-53",
+      "src-s12-abel-phase-54"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-abel-r1",
+    "recordId": "stat-s12-quarterfinals-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-abel-phase-56",
+      "src-s12-abel-phase-55"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-abel-r1",
+    "recordId": "stat-s12-conference-finals-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-abel-phase-57",
+      "src-s12-abel-phase-58"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-fabio-carvalho-r1",
+    "recordId": "stat-s12-first-round-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-14",
+      "src-s12-fabio-carvalho-phase-15"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-fabio-carvalho-r1",
+    "recordId": "stat-s12-quarterfinals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-17",
+      "src-s12-fabio-carvalho-phase-16"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-fabio-carvalho-r1",
+    "recordId": "stat-s12-conference-finals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-18",
+      "src-s12-fabio-carvalho-phase-19"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-nba-finals-fabio-carvalho-r1",
+    "recordId": "stat-s12-nba-finals-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-fabio-carvalho-phase-21",
+      "src-s12-fabio-carvalho-phase-20"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-cristiano-ronaldo-r1",
+    "recordId": "stat-s12-first-round-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-cristiano-ronaldo-phase-40",
+      "src-s12-cristiano-ronaldo-phase-41"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-cristiano-ronaldo-r1",
+    "recordId": "stat-s12-quarterfinals-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-cristiano-ronaldo-phase-43",
+      "src-s12-cristiano-ronaldo-phase-42"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-dias-r1",
+    "recordId": "stat-s12-first-round-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-dias-phase-22",
+      "src-s12-dias-phase-23"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-dias-r1",
+    "recordId": "stat-s12-quarterfinals-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-dias-phase-25",
+      "src-s12-dias-phase-24"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-gam-mori-r1",
+    "recordId": "stat-s12-first-round-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-gam-mori-phase-3",
+      "src-s12-gam-mori-phase-4"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-gam-mori-r1",
+    "recordId": "stat-s12-quarterfinals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-gam-mori-phase-6",
+      "src-s12-gam-mori-phase-5"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-gam-mori-r1",
+    "recordId": "stat-s12-conference-finals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-gam-mori-phase-7",
+      "src-s12-gam-mori-phase-8"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-nba-finals-gam-mori-r1",
+    "recordId": "stat-s12-nba-finals-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-gam-mori-phase-10",
+      "src-s12-gam-mori-phase-9"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-guilherme-r1",
+    "recordId": "stat-s12-first-round-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-guilherme-phase-29",
+      "src-s12-guilherme-phase-30"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-guilherme-r1",
+    "recordId": "stat-s12-quarterfinals-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-guilherme-phase-32",
+      "src-s12-guilherme-phase-31"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-guilherme-r1",
+    "recordId": "stat-s12-conference-finals-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-guilherme-phase-33",
+      "src-s12-guilherme-phase-34"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-nba-finals-guilherme-r1",
+    "recordId": "stat-s12-nba-finals-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-guilherme-phase-36",
+      "src-s12-guilherme-phase-35"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-jonas-r1",
+    "recordId": "stat-s12-first-round-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-jonas-phase-8",
+      "src-s12-jonas-phase-9"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-jonas-r1",
+    "recordId": "stat-s12-quarterfinals-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-jonas-phase-10",
+      "src-s12-jonas-phase-11"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-matheus-medeiros-r1",
+    "recordId": "stat-s12-first-round-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-62",
+      "src-s12-matheus-medeiros-phase-63"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-matheus-medeiros-r1",
+    "recordId": "stat-s12-quarterfinals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-65",
+      "src-s12-matheus-medeiros-phase-64"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-matheus-medeiros-r1",
+    "recordId": "stat-s12-conference-finals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-66",
+      "src-s12-matheus-medeiros-phase-67"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-nba-finals-matheus-medeiros-r1",
+    "recordId": "stat-s12-nba-finals-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-matheus-medeiros-phase-69",
+      "src-s12-matheus-medeiros-phase-68"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-russo-r1",
+    "recordId": "stat-s12-first-round-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-russo-phase-48",
+      "src-s12-russo-phase-47"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-russo-r1",
+    "recordId": "stat-s12-quarterfinals-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-russo-phase-50",
+      "src-s12-russo-phase-49"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-tailan-r1",
+    "recordId": "stat-s12-first-round-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-tailan-phase-15",
+      "src-s12-tailan-phase-16"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-quarterfinals-tailan-r1",
+    "recordId": "stat-s12-quarterfinals-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-rounds",
+    "sourceIds": [
+      "src-s12-tailan-phase-18",
+      "src-s12-tailan-phase-17"
+    ],
+    "createdAt": "2026-11-19T20:00:00Z"
+  }
+]
