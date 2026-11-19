@@ -242,6 +242,7 @@ export function LeagueTeamBadge({
   showPlayerMarks = false,
   showCode = true,
   isAway = false,
+  mobileName,
   venueLabel,
 }: {
   code: string;
@@ -249,6 +250,7 @@ export function LeagueTeamBadge({
   showPlayerMarks?: boolean;
   showCode?: boolean;
   isAway?: boolean;
+  mobileName?: string;
   venueLabel?: string;
 }) {
   const playerMarks = showPlayerMarks ? (
@@ -257,9 +259,23 @@ export function LeagueTeamBadge({
 
   return (
     <span className={isAway ? "league-round-team is-away" : "league-round-team"}>
-      <span className="league-round-team-identity">
+      <span className="league-round-team-identity" aria-label={teamDisplayName(code, seasonId)}>
         <Logo code={code} seasonId={seasonId} />
-        <span>{teamDisplayName(code, seasonId)}</span>
+        <span
+          className="league-round-team-name is-full-name"
+          title={teamDisplayName(code, seasonId)}
+        >
+          {teamDisplayName(code, seasonId)}
+        </span>
+        {mobileName && (
+          <span
+            className="league-round-team-name is-mobile-name"
+            title={teamDisplayName(code, seasonId)}
+            aria-label={teamDisplayName(code, seasonId)}
+          >
+            {mobileName}
+          </span>
+        )}
         {showCode && <small>{code}</small>}
       </span>
       {playerMarks}

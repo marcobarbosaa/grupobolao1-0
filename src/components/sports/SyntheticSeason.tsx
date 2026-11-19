@@ -23,6 +23,38 @@ const calendarDays = Array.from({ length: reconstruction.rules.calendar.days }, 
 const teamOptions = reconstruction.standings
   .map((team) => team.teamId)
   .sort((first, second) => (teamNames[first] ?? first).localeCompare(teamNames[second] ?? second));
+const mobileTeamNames: Record<string, string> = {
+  ATL: "Hawks",
+  BOS: "Celtics",
+  CHA: "Bobcats",
+  CHI: "Bulls",
+  CLE: "Cavs",
+  DAL: "Mavs",
+  DEN: "Nuggets",
+  DET: "Pistons",
+  GS: "Warriors",
+  HOU: "Rockets",
+  IND: "Pacers",
+  LAC: "Clippers",
+  LAL: "Lakers",
+  MEM: "Grizzlies",
+  MIA: "Heat",
+  MIL: "Bucks",
+  MIN: "Wolves",
+  NJN: "Nets",
+  NO: "Hornets",
+  NY: "Knicks",
+  ORL: "Magic",
+  PHI: "76ers",
+  PHX: "Suns",
+  POR: "Blazers",
+  SAC: "Kings",
+  SA: "Spurs",
+  SEA: "Sonics",
+  TOR: "Raptors",
+  UTA: "Jazz",
+  WAS: "Wizards",
+};
 const formatDate = (value: string | Date) =>
   new Intl.DateTimeFormat("pt-BR", {
     day: "2-digit",
@@ -208,6 +240,7 @@ export default function SyntheticSeason({
                         seasonId={reconstruction.seasonId}
                         showPlayerMarks
                         showCode={false}
+                        mobileName={mobileTeamNames[game.awayTeam]}
                         venueLabel="Visitante"
                       />
                       <strong
@@ -240,6 +273,7 @@ export default function SyntheticSeason({
                         seasonId={reconstruction.seasonId}
                         showPlayerMarks
                         showCode={false}
+                        mobileName={mobileTeamNames[game.homeTeam]}
                         venueLabel="Mandante"
                       />
                     </div>
