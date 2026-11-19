@@ -6,7 +6,7 @@ import {
   filterSyntheticRoundGames,
 } from "../../lib/liga-viva/presentation";
 import type { Reconstruction } from "../../lib/liga-viva/types";
-import { LeagueTeamBadge, teamNames } from "./SeasonExtras";
+import { LeagueTeamBadge, PlayerMarks, teamNames } from "./SeasonExtras";
 import "./SyntheticSeason.css";
 
 const reconstruction = reconstructionData as unknown as Reconstruction;
@@ -52,12 +52,7 @@ export default function SyntheticSeason({
     <section className="synthetic-season" aria-label="Liga Viva: temporada reconstruída">
       <header className="synthetic-season-header">
         <div>
-          <p className="seasonextras-kicker">RECONSTRUÇÃO SINTÉTICA · NÃO HISTÓRICA</p>
           <h2>Temporada regular</h2>
-          <p className="synthetic-season-disclaimer">
-            Jogos, datas e placares foram gerados para esta reconstrução; não representam partidas
-            realmente disputadas.
-          </p>
         </div>
         <span className="synthetic-season-total">1.230 partidas · 2006–07</span>
       </header>
@@ -127,11 +122,6 @@ export default function SyntheticSeason({
           {visibleGames.length} de {activeRound.games.length} jogos
         </span>
       </div>
-      <p className="synthetic-round-note">
-        Cada rodada de visualização reúne dois dias consecutivos da agenda sintética. Os dias e os
-        agrupamentos também não são históricos.
-      </p>
-
       {visibleGames.length ? (
         <div className="synthetic-game-list" aria-label={`Partidas da rodada ${activeRoundNumber}`}>
           {visibleGames.map((game) => {
@@ -178,51 +168,77 @@ export default function SyntheticSeason({
             </p>
             <h3>Classificação acumulada</h3>
           </div>
-          <span>Desempates oficiais não simulados</span>
         </header>
-        <div
-          className="synthetic-standings-scroll"
-          role="region"
-          tabIndex={0}
-          aria-label="Classificação acumulada; tabela rolável"
-        >
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Equipe</th>
-                <th scope="col">J</th>
-                <th scope="col">V</th>
-                <th scope="col">D</th>
-                <th scope="col">%</th>
-                <th scope="col">PF</th>
-                <th scope="col">PA</th>
-                <th scope="col">Saldo</th>
-              </tr>
-            </thead>
-            <tbody>
-              {progress.map((standing) => (
-                <tr
-                  key={standing.teamId}
-                  className={standing.teamId === selectedTeam ? "is-filtered-team" : ""}
-                >
-                  <th scope="row">
-                    <LeagueTeamBadge code={standing.teamId} seasonId={reconstruction.seasonId} />
-                  </th>
-                  <td>{standing.gamesPlayed}</td>
-                  <td>{standing.wins}</td>
-                  <td>{standing.losses}</td>
-                  <td>{standing.gamesPlayed ? standing.pct.toFixed(3).replace(/^0/, "") : "—"}</td>
-                  <td>{formatInteger(standing.pointsFor)}</td>
-                  <td>{formatInteger(standing.pointsAgainst)}</td>
-                  <td>
-                    {standing.pointDifferential > 0 ? "+" : ""}
-                    {formatInteger(standing.pointDifferential)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {(
+          [
+            { id: "east", label: "Conferência Leste" },
+            { id: "west", label: "Conferência Oeste" },
+          ] as const
+        ).map((conference) => (
+          <section
+            className={`synthetic-conference synthetic-conference-${conference.id}`}
+            key={conference.id}
+            aria-label={conference.label}
+          >
+            <h4>{conference.label}</h4>
+            <div
+              className="synthetic-standings-scroll"
+              role="region"
+              tabIndex={0}
+              aria-label={`${conference.label}; tabela rolável`}
+            >
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Equipe</th>
+                    <th scope="col">J</th>
+                    <th scope="col">V</th>
+                    <th scope="col">D</th>
+                    <th scope="col">%</th>
+                    <th scope="col">PF</th>
+                    <th scope="col">PA</th>
+                    <th scope="col">Saldo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {progress
+                    .filter((standing) => standing.conference === conference.id)
+                    .map((standing) => (
+                      <tr
+                        key={standing.teamId}
+                        className={standing.teamId === selectedTeam ? "is-filtered-team" : ""}
+                      >
+                        <th scope="row">
+                          <div className="synthetic-standing-team">
+                            <LeagueTeamBadge
+                              code={standing.teamId}
+                              seasonId={reconstruction.seasonId}
+                            />
+                            <PlayerMarks
+                              seasonId={reconstruction.seasonId}
+                              teamCode={standing.teamId}
+                            />
+                          </div>
+                        </th>
+                        <td>{standing.gamesPlayed}</td>
+                        <td>{standing.wins}</td>
+                        <td>{standing.losses}</td>
+                        <td>
+                          {standing.gamesPlayed ? standing.pct.toFixed(3).replace(/^0/, "") : "—"}
+                        </td>
+                        <td>{formatInteger(standing.pointsFor)}</td>
+                        <td>{formatInteger(standing.pointsAgainst)}</td>
+                        <td>
+                          {standing.pointDifferential > 0 ? "+" : ""}
+                          {formatInteger(standing.pointDifferential)}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
       </section>
     </section>
   );

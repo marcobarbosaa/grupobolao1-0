@@ -107,7 +107,7 @@ function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
     .map((row) => newRoster.find((player) => player.id === row.playerId))
     .filter((player): player is (typeof newRoster)[number] => Boolean(player));
 }
-function PlayerMarks({
+export function PlayerMarks({
   seasonId,
   teamCode,
   compact = false,

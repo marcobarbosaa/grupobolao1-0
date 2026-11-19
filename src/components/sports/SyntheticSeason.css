@@ -20,15 +20,6 @@
   line-height: 1.15;
 }
 
-.synthetic-season-disclaimer,
-.synthetic-standings-header > span {
-  max-width: 720px;
-  margin: 0;
-  color: #bdc9d9;
-  font-size: 13px;
-  line-height: 1.55;
-}
-
 .synthetic-season-total {
   flex: 0 0 auto;
   color: #edc782;
@@ -135,13 +126,6 @@
   font-size: 16px;
 }
 
-.synthetic-round-note {
-  margin: 0 0 14px;
-  color: #8293a9;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
 .synthetic-game-list {
   border-top: 1px solid #34465e;
 }
@@ -234,9 +218,31 @@
   font-size: 19px;
 }
 
-.synthetic-standings-header > span {
-  font-size: 11px;
-  text-align: right;
+.synthetic-standings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.synthetic-standings-header {
+  grid-column: 1 / -1;
+}
+
+.synthetic-conference h4 {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #4a5d76;
+  border-bottom: 0;
+  background: linear-gradient(100deg, rgba(68, 104, 142, .34), rgba(17, 28, 44, .7));
+  color: #f4d3a0;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.synthetic-conference-west h4 {
+  background: linear-gradient(100deg, rgba(115, 75, 55, .34), rgba(17, 28, 44, .7));
 }
 
 .synthetic-standings-scroll {
@@ -280,6 +286,18 @@
 
 .synthetic-standings tbody th {
   font-weight: 600;
+}
+
+.synthetic-standing-team {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.synthetic-standing-team .league-player-marks {
+  padding-left: 38px;
 }
 
 .synthetic-standings tbody tr.is-filtered-team {
@@ -358,8 +376,8 @@
     font-size: 15px;
   }
 
-  .synthetic-standings-header > span {
-    text-align: left;
+  .synthetic-standings {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
