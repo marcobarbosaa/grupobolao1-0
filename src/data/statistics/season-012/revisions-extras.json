@@ -1,0 +1,17 @@
+[
+  {
+    "id": "rev-extras-s012-1",
+    "recordId": "extras-s012",
+    "recordKind": "extras",
+    "revision": 1,
+    "batchId": "batch-s012-extras",
+    "sourceIds": [
+      "src-s012-extras-1",
+      "src-s012-extras-2",
+      "src-s012-extras-3",
+      "src-s012-extras-4",
+      "src-s012-extras-5"
+    ],
+    "createdAt": "2026-11-19T19:45:00Z"
+  }
+]

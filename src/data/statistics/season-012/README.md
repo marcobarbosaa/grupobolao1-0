@@ -1,19 +1,19 @@
-# Temporada 2016–2017 — importação inicial
+# Temporada 2016–2017 — importação parcial publicada
 
-## Publicado nesta revisão
+## Publicado na `main`
 
-- Temporada 12, edição 2016–17, configurada com as mesmas fases estatísticas das edições anteriores.
-- 13 registros individuais da temporada regular, vinculados às equipes mostradas nas capturas.
-- 13 vínculos de histórico jogador/equipe.
-- 38 capturas da seção Career Stats registradas como fontes, com SHA-256 calculado sobre os bytes originais do ZIP.
-- 12 jogadores têm GP, GS, minutos, contagens e médias/percentuais transcritos. Abel tem duas capturas Career Stats: médias e parte das contagens; os campos não visíveis foram deixados ausentes.
+- Temporada 12 (2016–17), com os 13 registros individuais da temporada regular.
+- Histórico de equipe para os 13 jogadores.
+- 38 capturas Career Stats auditadas por SHA-256.
+- Extras coletivos publicados: classificação das 15 equipes do Oeste e das 15 equipes do Leste, incluindo campanha, aproveitamento, jogos em casa/fora, conferência/divisão, pontos por jogo, pontos sofridos, saldo e sequência.
+- Chaveamento com as 15 séries, até a NBA Finals; Dallas Mavericks campeão sobre Philadelphia 76ers por 4–1.
+- As 5 capturas da pasta Extras foram registradas com hashes SHA-256.
 
 ## Ainda não publicado
 
-- Estatísticas detalhadas de playoffs por rodada: as imagens correspondentes estão no ZIP, mas precisam ser transcritas e revisadas separadamente. Não foi usado o agregado de carreira como se fosse o total de 2016–17.
-- Classificações coletivas e chaveamento da pasta Extras: 5 capturas ainda não incorporadas.
-- Abel: não há, nas duas capturas Career Stats, GP, GS, minutos totais, FTM/FTA, faltas, duplos-duplos ou triplos-duplos. Não foram estimados.
+- Estatísticas individuais detalhadas de playoffs por rodada: as capturas correspondentes estão no ZIP, mas ainda precisam ser transcritas e revisadas. Não foi usado o agregado de carreira como se fosse total da edição 2016–17.
+- Abel: nas duas capturas Career Stats não aparecem GP, GS, minutos totais, FTM/FTA, faltas, duplos-duplos ou triplos-duplos. Esses campos ficaram ausentes, não zerados nem estimados.
 
-## Regras de transcrição
+## Procedência e precisão
 
-Os valores publicados seguem as telas Career Stats 16–17. Médias arredondadas não foram convertidas em totais; campos não visíveis não foram preenchidos com zero. As imagens originais permanecem fora do repositório; a auditoria usa nome, caminho no ZIP e hash SHA-256.
+As imagens originais não foram publicadas no repositório. Os registros preservam nome, caminho no ZIP, tamanho e hash SHA-256 para conferência. Médias arredondadas não foram convertidas em totais; campos não visíveis não foram preenchidos.

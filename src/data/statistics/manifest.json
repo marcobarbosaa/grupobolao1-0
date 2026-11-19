@@ -88,7 +88,8 @@
     "season-011/sources.json",
     "season-011/sources-rounds.json",
     "season-011/sources-extras.json",
-    "season-012/sources.json"
+    "season-012/sources.json",
+    "season-012/sources-extras.json"
   ],
   "batches": [
     "season-001/batches.json",
@@ -115,7 +116,8 @@
     "season-011/batches.json",
     "season-011/batches-rounds.json",
     "season-011/batches-extras.json",
-    "season-012/batches.json"
+    "season-012/batches.json",
+    "season-012/batches-extras.json"
   ],
   "revisions": [
     "season-001/revisions.json",
@@ -142,11 +144,13 @@
     "season-011/revisions.json",
     "season-011/revisions-rounds.json",
     "season-011/revisions-extras.json",
-    "season-012/revisions.json"
+    "season-012/revisions.json",
+    "season-012/revisions-extras.json"
   ],
   "extras": [
     "season-009/extras.json",
     "season-010/extras.json",
-    "season-011/extras.json"
+    "season-011/extras.json",
+    "season-012/extras.json"
   ]
 }
