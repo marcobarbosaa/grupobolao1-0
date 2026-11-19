@@ -10,6 +10,7 @@ type LeagueSearch = {
   view?: LeagueView;
   conference?: Conference;
   round?: number;
+  day?: number;
   team?: string;
 };
 
@@ -35,6 +36,12 @@ export const Route = createFileRoute("/temporadas")({
       round:
         Number.isSafeInteger(Number(search.round)) && Number(search.round) >= 1
           ? Number(search.round)
+          : undefined,
+      day:
+        Number.isSafeInteger(Number(search.day)) &&
+        Number(search.day) >= 0 &&
+        Number(search.day) < 170
+          ? Number(search.day)
           : undefined,
       team:
         typeof search.team === "string" && /^[A-Z]{2,3}$/.test(search.team)
@@ -73,12 +80,15 @@ function LeagueArchive() {
         view={view}
         conference={conference}
         round={search.round ?? 1}
-        onRoundChange={(round) => updateSearch({ round })}
+        dayIndex={search.day}
+        onRoundChange={(round) => updateSearch({ round, day: undefined })}
+        onDayChange={(day) => updateSearch({ day, round: Math.floor(day / 2) + 1 })}
         onSeasonChange={(season) =>
           updateSearch({
             season,
             view: "standings",
             round: undefined,
+            day: undefined,
             team: undefined,
           })
         }

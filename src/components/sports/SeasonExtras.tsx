@@ -729,7 +729,9 @@ export function SeasonExtras({
   view,
   conference,
   round,
+  dayIndex,
   onRoundChange,
+  onDayChange,
   onSeasonChange,
   onViewChange,
   onConferenceChange,
@@ -740,7 +742,9 @@ export function SeasonExtras({
   view: View;
   conference: Conference;
   round: number;
+  dayIndex?: number;
   onRoundChange: (round: number) => void;
+  onDayChange: (dayIndex: number) => void;
   onSeasonChange: (seasonId: SeasonId) => void;
   onViewChange: (view: View) => void;
   onConferenceChange: (conference: Conference) => void;
@@ -818,8 +822,10 @@ export function SeasonExtras({
         >
           <SyntheticSeason
             round={round}
+            dayIndex={dayIndex}
             team={team}
             onRoundChange={onRoundChange}
+            onDayChange={onDayChange}
             onTeamChange={onTeamChange}
           />
         </Suspense>
