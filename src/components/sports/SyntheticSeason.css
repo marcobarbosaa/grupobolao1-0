@@ -259,7 +259,7 @@
 
 .synthetic-standings table {
   width: 100%;
-  min-width: 640px;
+  min-width: 680px;
   border-collapse: collapse;
   font-size: 12px;
   font-variant-numeric: tabular-nums;
@@ -280,7 +280,8 @@
   text-transform: uppercase;
 }
 
-.synthetic-standings th:first-child {
+.synthetic-standings th:first-child,
+.synthetic-standings th:nth-child(2) {
   text-align: left;
 }
 
@@ -288,16 +289,25 @@
   font-weight: 600;
 }
 
+.synthetic-standing-rank {
+  color: #f2d19a;
+  font-weight: 850;
+  text-align: center !important;
+  font-variant-numeric: tabular-nums;
+}
+
 .synthetic-standing-team {
   display: flex;
   min-width: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
 }
 
-.synthetic-standing-team .league-player-marks {
-  padding-left: 38px;
+.synthetic-standing-team .league-player-marks,
+.league-round-team .league-player-marks {
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .synthetic-standings tbody tr.is-filtered-team {
