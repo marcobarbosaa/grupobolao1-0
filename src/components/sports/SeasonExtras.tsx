@@ -107,6 +107,13 @@ function bolaoPlayers(seasonId: SeasonId, teamCode: string) {
     .map((row) => newRoster.find((player) => player.id === row.playerId))
     .filter((player): player is (typeof newRoster)[number] => Boolean(player));
 }
+const syntheticPlayerNames: Record<string, string> = {
+  "matheus-medeiros": "Medeiros",
+  "marco-barbosa": "Marco",
+  "cristiano-ronaldo": "Cerrote",
+  "fabio-carvalho": "Binho",
+};
+
 export function PlayerMarks({
   seasonId,
   teamCode,
@@ -120,20 +127,23 @@ export function PlayerMarks({
   if (!players.length) return null;
   return (
     <span className={compact ? "league-player-marks is-compact" : "league-player-marks"}>
-      {players.map((player) => (
-        <Link
-          key={player.id}
-          to="/jogadores/$id"
-          params={{ id: player.id }}
-          className="league-player-chip"
-          title={`Grupo Bolão · ${player.name} · ${teamCode} · ${seasonId}`}
-          aria-label={`Abrir perfil de ${player.name}`}
-          onClick={(event) => event.stopPropagation()}
-        >
-          <span aria-hidden="true">★</span>
-          <span className="league-player-name">{player.name}</span>
-        </Link>
-      ))}
+      {players.map((player) => {
+        const displayName = syntheticPlayerNames[player.id] ?? player.name;
+        return (
+          <Link
+            key={player.id}
+            to="/jogadores/$id"
+            params={{ id: player.id }}
+            className="league-player-chip"
+            title={`Grupo Bolão · ${player.name} · ${teamCode} · ${seasonId}`}
+            aria-label={`Abrir perfil de ${player.name}`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <span aria-hidden="true">★</span>
+            <span className="league-player-name">{displayName}</span>
+          </Link>
+        );
+      })}
     </span>
   );
 }
@@ -217,12 +227,21 @@ export const teamNames: Record<string, string> = Object.fromEntries(
     ]),
 );
 
-export function LeagueTeamBadge({ code, seasonId }: { code: string; seasonId: SeasonId }) {
+export function LeagueTeamBadge({
+  code,
+  seasonId,
+  showPlayerMarks = false,
+}: {
+  code: string;
+  seasonId: SeasonId;
+  showPlayerMarks?: boolean;
+}) {
   return (
     <span className="league-round-team">
       <Logo code={code} seasonId={seasonId} />
       <span>{teamDisplayName(code, seasonId)}</span>
       <small>{code}</small>
+      {showPlayerMarks && <PlayerMarks seasonId={seasonId} teamCode={code} compact />}
     </span>
   );
 }
