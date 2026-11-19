@@ -1,0 +1,44 @@
+{
+  "version": "season-011-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "unconstrainedDivisionRecords": [
+    {
+      "divisionId": "southwest-2015",
+      "observedWins": 38,
+      "observedLosses": 42,
+      "expectedWins": 40,
+      "reason": "Os cinco registros publicados da Southwest somam 38-42 em 80 jogos-equipe; resultados recíprocos em 40 partidas exigem 40-40. Os registros originais são preservados e os resultados dessa divisão não são condicionados individualmente."
+    }
+  ],
+  "calendar": {
+    "startDate": "2015-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
+  "divisions": [
+    { "id": "southwest-2015", "conference": "west", "teams": ["DAL", "HOU", "MEM", "NO", "SA"] },
+    { "id": "northwest-2015", "conference": "west", "teams": ["DEN", "MIN", "OKC", "POR", "UTA"] },
+    { "id": "pacific-2015", "conference": "west", "teams": ["GS", "LAC", "LAL", "PHX", "SAC"] },
+    { "id": "atlantic-2015", "conference": "east", "teams": ["BOS", "BKN", "NY", "PHI", "TOR"] },
+    { "id": "central-2015", "conference": "east", "teams": ["CHI", "CLE", "DET", "IND", "MIL"] },
+    { "id": "southeast-2015", "conference": "east", "teams": ["ATL", "CHA", "MIA", "ORL", "WAS"] }
+  ]
+}

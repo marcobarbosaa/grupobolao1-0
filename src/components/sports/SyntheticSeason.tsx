@@ -1,28 +1,10 @@
 import { CalendarDays, ChevronLeft, ChevronRight, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-import reconstructionData from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
 import { buildSyntheticRounds, filterSyntheticRoundGames } from "../../lib/liga-viva/presentation";
 import type { Reconstruction } from "../../lib/liga-viva/types";
 import { LeagueTeamBadge, teamNames } from "./SeasonExtras";
 import "./SyntheticSeason.css";
 
-const reconstruction = reconstructionData as unknown as Reconstruction;
-const rounds = buildSyntheticRounds(reconstruction);
-const calendarDays = Array.from({ length: reconstruction.rules.calendar.days }, (_, dayIndex) => {
-  const date = new Date(
-    new Date(`${reconstruction.rules.calendar.startDate}T00:00:00.000Z`).getTime() +
-      dayIndex * 86_400_000,
-  );
-  return {
-    dayIndex,
-    date,
-    isoDate: date.toISOString().slice(0, 10),
-    gameCount: reconstruction.games.filter((game) => game.dayIndex === dayIndex).length,
-  };
-});
-const teamOptions = reconstruction.standings
-  .map((team) => team.teamId)
-  .sort((first, second) => (teamNames[first] ?? first).localeCompare(teamNames[second] ?? second));
 const mobileTeamNames: Record<string, string> = {
   ATL: "Hawks",
   BOS: "Celtics",
@@ -71,6 +53,7 @@ const formatMonth = (date: Date) =>
   );
 
 export default function SyntheticSeason({
+  reconstruction,
   round,
   dayIndex,
   team,
@@ -78,6 +61,7 @@ export default function SyntheticSeason({
   onDayChange,
   onTeamChange,
 }: {
+  reconstruction: Reconstruction;
   round: number;
   dayIndex?: number;
   team?: string;
@@ -85,6 +69,22 @@ export default function SyntheticSeason({
   onDayChange: (dayIndex: number) => void;
   onTeamChange: (team?: string) => void;
 }) {
+  const rounds = buildSyntheticRounds(reconstruction);
+  const calendarDays = Array.from({ length: reconstruction.rules.calendar.days }, (_, dayIndex) => {
+    const date = new Date(
+      new Date(`${reconstruction.rules.calendar.startDate}T00:00:00.000Z`).getTime() +
+        dayIndex * 86_400_000,
+    );
+    return {
+      dayIndex,
+      date,
+      isoDate: date.toISOString().slice(0, 10),
+      gameCount: reconstruction.games.filter((game) => game.dayIndex === dayIndex).length,
+    };
+  });
+  const teamOptions = reconstruction.standings
+    .map((team) => team.teamId)
+    .sort((first, second) => (teamNames[first] ?? first).localeCompare(teamNames[second] ?? second));
   const activeRoundNumber =
     dayIndex === undefined
       ? Math.max(1, Math.min(rounds.length, Math.trunc(round) || 1))
@@ -214,6 +214,20 @@ export default function SyntheticSeason({
           {visibleGames.length === 1 ? "jogo" : "jogos"}
         </p>
       </div>
+
+      {reconstruction.seasonId === "season-007" && (
+        <p className="synthetic-season-note">
+          Dados da liga local Grupo Bolão NBA 2K, com 82 jogos por equipe; não representa a NBA
+          real de 2011–12, que teve 66 jogos. Agenda e resultados são sintéticos.
+        </p>
+      )}
+      {reconstruction.seasonId === "season-011" && (
+        <p className="synthetic-season-note">
+          Os registros divisionais publicados da Southwest somam 38–42, mas o calendário exige
+          40–40. Os dados originais foram preservados; resultados divisionais dessa divisão não
+          foram usados como restrição.
+        </p>
+      )}
 
       {visibleGames.length ? (
         <div

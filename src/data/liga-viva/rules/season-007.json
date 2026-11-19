@@ -1,0 +1,44 @@
+{
+  "version": "season-007-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "normalizations": [
+    {
+      "teamId": "IND",
+      "field": "divisionRecord",
+      "sourceValue": "6-12",
+      "normalizedValue": "6-10",
+      "reason": "A fonte mostra 18 jogos divisionais, incompatíveis com o calendário recíproco configurado de 16 por equipe; preservam-se as 6 vitórias observadas e normalizam-se as derrotas para fechar a campanha."
+    }
+  ],
+  "calendar": {
+    "startDate": "2011-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
+  "divisions": [
+    { "id": "southwest-2011", "conference": "west", "teams": ["DAL", "HOU", "MEM", "NO", "SA"] },
+    { "id": "northwest-2011", "conference": "west", "teams": ["DEN", "MIN", "OKC", "POR", "UTA"] },
+    { "id": "pacific-2011", "conference": "west", "teams": ["GS", "LAC", "LAL", "PHX", "SAC"] },
+    { "id": "atlantic-2011", "conference": "east", "teams": ["BOS", "NJN", "NY", "PHI", "TOR"] },
+    { "id": "central-2011", "conference": "east", "teams": ["CHI", "CLE", "DET", "IND", "MIL"] },
+    { "id": "southeast-2011", "conference": "east", "teams": ["ATL", "CHA", "MIA", "ORL", "WAS"] }
+  ]
+}

@@ -348,6 +348,9 @@ async function solveResults(
       ),
     );
 
+    const divisionId = divisionByTeam.get(team.teamId);
+    if (rules.unconstrainedDivisionRecords?.some((entry) => entry.divisionId === divisionId))
+      continue;
     const divisionGames = games.flatMap((game, index) => {
       const opponentId =
         game.homeTeam === team.teamId

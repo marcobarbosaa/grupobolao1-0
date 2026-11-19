@@ -15,7 +15,16 @@ import history009 from "../../data/statistics/season-009/teamHistory.json";
 import history010 from "../../data/statistics/season-010/teamHistory.json";
 import history011 from "../../data/statistics/season-011/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
-import reconstructionData from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
+import reconstructionData002 from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
+import reconstructionData003 from "../../data/liga-viva/reconstructions/season-003-seed-pilot.json";
+import reconstructionData004 from "../../data/liga-viva/reconstructions/season-004-seed-pilot.json";
+import reconstructionData005 from "../../data/liga-viva/reconstructions/season-005-seed-pilot.json";
+import reconstructionData006 from "../../data/liga-viva/reconstructions/season-006-seed-pilot.json";
+import reconstructionData007 from "../../data/liga-viva/reconstructions/season-007-seed-pilot.json";
+import reconstructionData008 from "../../data/liga-viva/reconstructions/season-008-seed-pilot.json";
+import reconstructionData009 from "../../data/liga-viva/reconstructions/season-009-seed-pilot.json";
+import reconstructionData010 from "../../data/liga-viva/reconstructions/season-010-seed-pilot.json";
+import reconstructionData011 from "../../data/liga-viva/reconstructions/season-011-seed-pilot.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
 import details2007 from "../../data/statistics/season-003/standings-details.json";
@@ -45,6 +54,9 @@ type Standing = {
   ppg?: number;
   papg?: number;
   diff?: number;
+  gamesPlayed?: number;
+  pointsFor?: number;
+  pointsAgainst?: number;
 };
 type StandingDetails = {
   gb: string;
@@ -72,8 +84,18 @@ type SeasonRecord = {
 type LogoDefinition = { year: number; slug: string };
 
 const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
-const reconstruction = reconstructionData as unknown as Reconstruction;
-const reconstructionRounds = buildSyntheticRounds(reconstruction);
+const reconstructions: Record<string, Reconstruction> = {
+  "season-002": reconstructionData002 as unknown as Reconstruction,
+  "season-003": reconstructionData003 as unknown as Reconstruction,
+  "season-004": reconstructionData004 as unknown as Reconstruction,
+  "season-005": reconstructionData005 as unknown as Reconstruction,
+  "season-006": reconstructionData006 as unknown as Reconstruction,
+  "season-007": reconstructionData007 as unknown as Reconstruction,
+  "season-008": reconstructionData008 as unknown as Reconstruction,
+  "season-009": reconstructionData009 as unknown as Reconstruction,
+  "season-010": reconstructionData010 as unknown as Reconstruction,
+  "season-011": reconstructionData011 as unknown as Reconstruction,
+};
 
 // Historical affiliation is season-scoped; never infer it from a player's current uniform.
 const histories: Record<string, { playerId: string; teamId: string }[]> = {
@@ -387,14 +409,20 @@ function Standings({
   onRoundChange: (round: number) => void;
 }) {
   const [trackingMode, setTrackingMode] = useState<"final" | "round">("final");
-  const canTrackRounds = seasonId === reconstruction.seasonId;
+  const reconstruction = reconstructions[seasonId];
+  const reconstructionRounds = reconstruction ? buildSyntheticRounds(reconstruction) : [];
+  const canTrackRounds = reconstruction !== undefined;
   const isRoundMode = trackingMode === "round" && canTrackRounds;
-  const activeRound = Math.max(1, Math.min(reconstructionRounds.length, round));
+  const activeRound = Math.max(1, Math.min(reconstructionRounds.length || 1, round));
   const progress = canTrackRounds
-    ? calculateStandingsThroughRound(reconstruction.standings, reconstructionRounds, activeRound)
+    ? calculateStandingsThroughRound(
+        reconstruction!.standings,
+        reconstructionRounds,
+        activeRound,
+      )
     : [];
   const clinchedTeams = new Set<string>();
-  if (isRoundMode) {
+  if (isRoundMode && reconstruction) {
     const gamesPerTeam = reconstruction.rules.schedule.gamesPerTeam;
     for (const conferenceId of ["east", "west"] as const) {
       const conferenceStandings = progress.filter(
@@ -599,7 +627,13 @@ function Standings({
                     <>
                       <td>{row.pointsFor}</td>
                       <td>{row.pointsAgainst}</td>
-                      <td>{row.gamesPlayed ? row.pointsFor - row.pointsAgainst : "—"}</td>
+                      <td>
+                        {row.gamesPlayed &&
+                        row.pointsFor !== undefined &&
+                        row.pointsAgainst !== undefined
+                          ? row.pointsFor - row.pointsAgainst
+                          : "—"}
+                      </td>
                     </>
                   ) : (
                     <>
@@ -764,9 +798,7 @@ export function SeasonExtras({
   onSeasonChange: (seasonId: SeasonId) => void;
   onViewChange: (view: View) => void;
   onConferenceChange: (conference: Conference) => void;
-  round: number;
   team?: string;
-  onRoundChange: (round: number) => void;
   onTeamChange: (team?: string) => void;
 }) {
   const season = seasons[seasonId];
@@ -779,7 +811,7 @@ export function SeasonExtras({
   const hasStandings = season.standings !== undefined;
   const hasPlayoffs = (season.playoffs?.matches?.length ?? 0) > 0;
   const hasCollectiveData = hasStandings || hasPlayoffs;
-  const hasReconstruction = seasonId === "season-002";
+  const hasReconstruction = reconstructions[seasonId] !== undefined;
   const activeView: View =
     view === "rounds" && !hasReconstruction
       ? hasStandings
@@ -837,6 +869,7 @@ export function SeasonExtras({
           fallback={<p className="seasonextras-note">Carregando reconstrução sintética…</p>}
         >
           <SyntheticSeason
+            reconstruction={reconstructions[seasonId]!}
             round={round}
             dayIndex={dayIndex}
             team={team}

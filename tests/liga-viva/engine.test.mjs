@@ -59,6 +59,219 @@ test("season-002 produces 1,230 validated, seeded synthetic games", async () => 
   );
 });
 
+test("season-003 reconstructs the 2007-08 standings with its historical divisions", async () => {
+  const season = await loadPilotSeason("season-003");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-003-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-003");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-004 reconstructs the 2008-09 standings with its historical divisions", async () => {
+  const season = await loadPilotSeason("season-004");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-004-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-004");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-005 reconstructs the 2009-10 standings with its historical divisions", async () => {
+  const season = await loadPilotSeason("season-005");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-005-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-005");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-006 reconstructs the 2010-11 standings with its historical divisions", async () => {
+  const season = await loadPilotSeason("season-006");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-006-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-006");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-007 records the Indiana source normalization and validates the local 82-game season", async () => {
+  const season = await loadPilotSeason("season-007");
+  const indiana = season.target.teams.find((team) => team.teamId === "IND");
+  const normalization = season.rules.normalizations?.find((entry) => entry.teamId === "IND");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-007-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.deepEqual(indiana.divisionRecord, { wins: 6, losses: 10 });
+  assert.equal(normalization.sourceValue, "6-12");
+  assert.equal(normalization.normalizedValue, "6-10");
+  assert.equal(result.reconstruction.seasonId, "season-007");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+});
+
+test("season-008 reconstructs the 2012-13 standings with its historical divisions", async () => {
+  const season = await loadPilotSeason("season-008");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-008-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-008");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-009 reconstructs standings directly from its audited extras snapshot", async () => {
+  const season = await loadPilotSeason("season-009");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-009-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-009");
+  assert.match(season.target.label, /2013.*Temporada 09/);
+  assert.equal(season.sourcePaths.some((path) => path.endsWith("season-009\\extras.json")), true);
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-010 reconstructs standings directly from its audited extras snapshot", async () => {
+  const season = await loadPilotSeason("season-010");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-010-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-010");
+  assert.match(season.target.label, /2014.*Temporada 10/);
+  assert.equal(season.sourcePaths.some((path) => path.endsWith("season-010\\extras.json")), true);
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
+test("season-011 preserves the Southwest source mismatch and reports partial division coverage", async () => {
+  const season = await loadPilotSeason("season-011");
+  const southwest = season.target.teams.filter((team) =>
+    season.rules.divisions[0].teams.includes(team.teamId),
+  );
+  const exception = season.rules.unconstrainedDivisionRecords?.[0];
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-011-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(southwest.reduce((sum, team) => sum + team.divisionRecord.wins, 0), 38);
+  assert.equal(southwest.reduce((sum, team) => sum + team.divisionRecord.losses, 0), 42);
+  assert.equal(exception.expectedWins, 40);
+  assert.equal(result.reconstruction.seasonId, "season-011");
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.equal(result.report.coverage.division, false);
+  assert.equal(result.report.coverage.homeAway, true);
+  assert.equal(result.report.coverage.conference, true);
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+});
+
 test("another seed can select a different valid reconstruction", async () => {
   const alternate = await reconstructSeason({
     ...pilot,

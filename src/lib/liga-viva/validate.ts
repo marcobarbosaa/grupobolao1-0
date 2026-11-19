@@ -203,7 +203,28 @@ export function validateSeasonTarget(target: SeasonTarget, rules: SeasonRules): 
         sum + (Number.isSafeInteger(team.divisionRecord?.wins) ? team.divisionRecord.wins : 0),
       0,
     );
-    if (actualDivisionWins !== expectedDivisionWins)
+    const unconstrained = rules.unconstrainedDivisionRecords?.find(
+      (entry) => entry.divisionId === division.id,
+    );
+    if (unconstrained) {
+      const actualDivisionLosses = members.reduce(
+        (sum, team) =>
+          sum + (Number.isSafeInteger(team.divisionRecord?.losses) ? team.divisionRecord.losses : 0),
+        0,
+      );
+      if (
+        !integer(unconstrained.observedWins) ||
+        !integer(unconstrained.observedLosses) ||
+        !integer(unconstrained.expectedWins) ||
+        !unconstrained.reason.trim() ||
+        unconstrained.expectedWins !== expectedDivisionWins ||
+        actualDivisionWins !== unconstrained.observedWins ||
+        actualDivisionLosses !== unconstrained.observedLosses ||
+        unconstrained.observedWins + unconstrained.observedLosses !==
+          members.length * rules.schedule.divisionGamesPerTeam
+      )
+        errors.push(`${division.id}: unconstrained division metadata does not match observed records`);
+    } else if (actualDivisionWins !== expectedDivisionWins)
       errors.push(
         `${division.id}: division wins total ${actualDivisionWins}, expected ${expectedDivisionWins} from reciprocal games`,
       );
@@ -560,6 +581,9 @@ export function validateReconstruction(
     );
   for (const team of target.teams) {
     const tally = tallies.get(team.teamId)!;
+    const unconstrainedDivision = reconstruction.rules.unconstrainedDivisionRecords?.some(
+      (entry) => entry.divisionId === divisions.get(team.teamId),
+    );
     const expected: [string, number, number][] = [
       ["games", tally.games, team.wins + team.losses],
       ["wins", tally.wins, team.wins],
@@ -570,9 +594,11 @@ export function validateReconstruction(
       ["away losses", tally.awayLosses, team.away.losses],
       ["conference wins", tally.conferenceWins, team.conferenceRecord.wins],
       ["conference losses", tally.conferenceLosses, team.conferenceRecord.losses],
-      ["division wins", tally.divisionWins, team.divisionRecord.wins],
-      ["division losses", tally.divisionLosses, team.divisionRecord.losses],
     ];
+    if (!unconstrainedDivision) {
+      expected.push(["division wins", tally.divisionWins, team.divisionRecord.wins]);
+      expected.push(["division losses", tally.divisionLosses, team.divisionRecord.losses]);
+    }
     for (const [label, actual, expectedValue] of expected) {
       if (actual !== expectedValue)
         errors.push(`${team.teamId}: ${label} ${actual}, expected ${expectedValue}`);
@@ -684,7 +710,9 @@ export function validateReconstruction(
       ),
       homeAway: errors.every((error) => !/home|away|mando/i.test(error)),
       conference: errors.every((error) => !/conference/i.test(error)),
-      division: errors.every((error) => !/division/i.test(error)),
+      division:
+        !reconstruction.rules.unconstrainedDivisionRecords?.length &&
+        errors.every((error) => !/division/i.test(error)),
       observedRankOrder: "preserved-not-derived",
     },
   };

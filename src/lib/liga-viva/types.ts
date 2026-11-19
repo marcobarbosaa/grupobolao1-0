@@ -26,6 +26,20 @@ export type Division = { id: string; conference: string; teams: string[] };
 export type SeasonRules = {
   version: string;
   provenance: "synthetic-constrained";
+  normalizations?: {
+    teamId: string;
+    field: "divisionRecord";
+    sourceValue: string;
+    normalizedValue: string;
+    reason: string;
+  }[];
+  unconstrainedDivisionRecords?: {
+    divisionId: string;
+    observedWins: number;
+    observedLosses: number;
+    expectedWins: number;
+    reason: string;
+  }[];
   calendar: { startDate: string; days: number };
   schedule: {
     gamesPerTeam: number;

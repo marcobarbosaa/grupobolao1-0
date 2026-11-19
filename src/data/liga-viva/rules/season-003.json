@@ -1,0 +1,35 @@
+{
+  "version": "season-003-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "calendar": {
+    "startDate": "2007-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
+  "divisions": [
+    { "id": "southwest-2007", "conference": "west", "teams": ["SA", "NO", "HOU", "DAL", "MEM"] },
+    { "id": "northwest-2007", "conference": "west", "teams": ["POR", "DEN", "MIN", "UTA", "SEA"] },
+    { "id": "pacific-2007", "conference": "west", "teams": ["LAL", "PHX", "GS", "SAC", "LAC"] },
+    { "id": "atlantic-2007", "conference": "east", "teams": ["BOS", "NJN", "NY", "PHI", "TOR"] },
+    { "id": "central-2007", "conference": "east", "teams": ["CHI", "CLE", "DET", "IND", "MIL"] },
+    { "id": "southeast-2007", "conference": "east", "teams": ["MIA", "ATL", "ORL", "WAS", "CHA"] }
+  ]
+}

@@ -20,6 +20,7 @@
     "stats:import:recover": "node scripts/statistics/imports/cli.ts recover",
     "stats:import:local": "node scripts/statistics/local/server.ts",
     "liga-viva:generate": "node scripts/liga-viva/cli.ts generate",
+    "liga-viva:generate-season": "node scripts/liga-viva/cli.ts generate-season",
     "liga-viva:validate": "node scripts/liga-viva/cli.ts validate",
     "liga-viva:test": "node --test tests/liga-viva/*.test.mjs"
   },

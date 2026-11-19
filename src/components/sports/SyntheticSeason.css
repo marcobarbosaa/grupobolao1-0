@@ -776,6 +776,15 @@
   font-variant-numeric: tabular-nums;
 }
 
+.synthetic-season-note {
+  margin: 0 4px 12px;
+  padding: 8px 12px;
+  border-left: 2px solid #d4ae69;
+  color: #d3dce7;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .synthetic-game-list {
   display: grid;
   gap: 12px;

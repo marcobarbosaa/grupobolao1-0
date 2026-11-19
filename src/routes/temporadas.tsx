@@ -28,7 +28,20 @@ export const Route = createFileRoute("/temporadas")({
           : undefined;
     return {
       season,
-      view: requestedView === "rounds" && season !== "season-002" ? undefined : requestedView,
+      view:
+        requestedView === "rounds" &&
+        season !== "season-002" &&
+        season !== "season-003" &&
+        season !== "season-004" &&
+        season !== "season-005" &&
+        season !== "season-006" &&
+        season !== "season-007" &&
+        season !== "season-008" &&
+        season !== "season-009" &&
+        season !== "season-010" &&
+        season !== "season-011"
+          ? undefined
+          : requestedView,
       conference:
         search.conference === "east" || search.conference === "west"
           ? search.conference

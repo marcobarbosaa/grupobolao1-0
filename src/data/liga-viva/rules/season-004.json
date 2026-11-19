@@ -1,0 +1,35 @@
+{
+  "version": "season-004-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "calendar": {
+    "startDate": "2008-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
+  "divisions": [
+    { "id": "southwest-2008", "conference": "west", "teams": ["SA", "NO", "HOU", "DAL", "MEM"] },
+    { "id": "northwest-2008", "conference": "west", "teams": ["DEN", "MIN", "POR", "OKC", "UTA"] },
+    { "id": "pacific-2008", "conference": "west", "teams": ["LAL", "PHX", "GS", "LAC", "SAC"] },
+    { "id": "atlantic-2008", "conference": "east", "teams": ["BOS", "NJN", "NY", "PHI", "TOR"] },
+    { "id": "central-2008", "conference": "east", "teams": ["CLE", "CHI", "DET", "IND", "MIL"] },
+    { "id": "southeast-2008", "conference": "east", "teams": ["ATL", "CHA", "MIA", "ORL", "WAS"] }
+  ]
+}

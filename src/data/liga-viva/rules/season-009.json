@@ -1,0 +1,35 @@
+{
+  "version": "season-009-synthetic-rules-1.0.0",
+  "provenance": "synthetic-constrained",
+  "calendar": {
+    "startDate": "2013-10-01",
+    "days": 170
+  },
+  "schedule": {
+    "gamesPerTeam": 82,
+    "homeGamesPerTeam": 41,
+    "conferenceGamesPerTeam": 52,
+    "divisionGamesPerTeam": 16,
+    "gamesPerDivisionOpponent": 4,
+    "conferenceNonDivisionBaseGames": 3,
+    "conferenceNonDivisionExtraGamesPerTeam": 6,
+    "interConferenceGamesPerOpponent": 2
+  },
+  "scoring": {
+    "displayPrecision": 1,
+    "minPointsPerTeam": 70,
+    "maxPointsPerTeam": 160,
+    "maxDeviationFromPairedAverage": 16,
+    "minCombinedPoints": 150,
+    "maxCombinedPoints": 260,
+    "maxMargin": 40
+  },
+  "divisions": [
+    { "id": "southwest-2013", "conference": "west", "teams": ["DAL", "HOU", "MEM", "NO", "SA"] },
+    { "id": "northwest-2013", "conference": "west", "teams": ["DEN", "MIN", "OKC", "POR", "UTA"] },
+    { "id": "pacific-2013", "conference": "west", "teams": ["GS", "LAC", "LAL", "PHX", "SAC"] },
+    { "id": "atlantic-2013", "conference": "east", "teams": ["BOS", "BKN", "NY", "PHI", "TOR"] },
+    { "id": "central-2013", "conference": "east", "teams": ["CHI", "CLE", "DET", "IND", "MIL"] },
+    { "id": "southeast-2013", "conference": "east", "teams": ["ATL", "CHA", "MIA", "ORL", "WAS"] }
+  ]
+}
