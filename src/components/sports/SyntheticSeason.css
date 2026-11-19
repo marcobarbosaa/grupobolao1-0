@@ -4,15 +4,7 @@
 }
 
 .synthetic-season-header,
-.synthetic-standings-header {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.synthetic-season-header h2,
-.synthetic-standings-header h3 {
+.synthetic-season-header h2 {
   margin: 7px 0 8px;
   color: #f6f7fb;
   font-size: 24px;
@@ -211,131 +203,13 @@
   font-size: 14px;
 }
 
-.synthetic-standings {
-  margin-top: 36px;
-  border-top: 1px solid rgba(198, 218, 246, 0.16);
-  padding-top: 20px;
-}
-
-.synthetic-standings-header {
-  align-items: end;
-  margin-bottom: 14px;
-}
-
-.synthetic-standings-header h3 {
-  margin-bottom: 0;
-  font-size: 19px;
-}
-
-.synthetic-standings {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.synthetic-standings-header {
-  grid-column: 1 / -1;
-}
-
-.synthetic-conference h4 {
-  margin: 0;
-  padding: 12px 14px;
-  border: 1px solid #4a5d76;
-  border-bottom: 0;
-  background: linear-gradient(100deg, rgba(68, 104, 142, .34), rgba(17, 28, 44, .7));
-  color: #f4d3a0;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-.synthetic-conference-west h4 {
-  background: linear-gradient(100deg, rgba(115, 75, 55, .34), rgba(17, 28, 44, .7));
-}
-
-.synthetic-standings-scroll {
-  overflow-x: auto;
-  border-top: 1px solid #34465e;
-  border-bottom: 1px solid #34465e;
-  scrollbar-width: thin;
-}
-
-.synthetic-standings-scroll:focus-visible {
-  outline: 2px solid #edc782;
-  outline-offset: 3px;
-}
-
-.synthetic-standings table {
-  width: 100%;
-  min-width: 680px;
-  border-collapse: collapse;
-  font-size: 12px;
-  font-variant-numeric: tabular-nums;
-}
-
-.synthetic-standings th,
-.synthetic-standings td {
-  padding: 8px 10px;
-  border-bottom: 1px solid rgba(198, 218, 246, 0.1);
-  text-align: right;
-  white-space: nowrap;
-}
-
-.synthetic-standings thead th {
-  color: #91a2b8;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.synthetic-standings th:first-child,
-.synthetic-standings th:nth-child(2) {
-  text-align: left;
-}
-
-.synthetic-standings tbody th {
-  font-weight: 600;
-}
-
-.synthetic-standing-rank {
-  color: #f2d19a;
-  font-weight: 850;
-  text-align: center !important;
-  font-variant-numeric: tabular-nums;
-}
-
-.synthetic-standing-team {
-  display: flex;
-  min-width: 0;
-  flex-direction: row;
-  align-items: center;
-  gap: 7px;
-}
-
-.synthetic-standing-team .league-player-marks,
 .league-round-team .league-player-marks {
   flex: 0 1 auto;
   min-width: 0;
 }
 
-.synthetic-standings tbody tr.is-filtered-team {
-  background: rgba(237, 199, 130, 0.1);
-}
-
-.synthetic-standings tbody tr:last-child th,
-.synthetic-standings tbody tr:last-child td {
-  border-bottom: 0;
-}
-
 @media (max-width: 700px) {
   .synthetic-season-header,
-  .synthetic-standings-header {
-    align-items: start;
-    flex-direction: column;
-    gap: 8px;
-  }
-
   .synthetic-season-header h2 {
     font-size: 21px;
   }
@@ -394,9 +268,6 @@
     font-size: 15px;
   }
 
-  .synthetic-standings {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

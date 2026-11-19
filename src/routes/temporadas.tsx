@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SeasonExtras } from "../components/sports/SeasonExtras";
 import "../components/sports/SeasonExtras.css";
 
-type LeagueView = "standings" | "playoffs" | "reconstruction";
+type LeagueView = "standings" | "playoffs" | "rounds";
 type Conference = "west" | "east";
 type LeagueSearch = {
   season?: string;
@@ -20,13 +20,14 @@ export const Route = createFileRoute("/temporadas")({
         ? search.season
         : undefined;
     const requestedView =
-      search.view === "playoffs" || search.view === "reconstruction" || search.view === "standings"
+      search.view === "playoffs" || search.view === "rounds" || search.view === "standings"
         ? search.view
-        : undefined;
+        : search.view === "reconstruction"
+          ? "rounds"
+          : undefined;
     return {
       season,
-      view:
-        requestedView === "reconstruction" && season !== "season-002" ? undefined : requestedView,
+      view: requestedView === "rounds" && season !== "season-002" ? undefined : requestedView,
       conference:
         search.conference === "east" || search.conference === "west"
           ? search.conference
@@ -61,7 +62,7 @@ function LeagueArchive() {
       <header className="league-section-heading">
         <div>
           <p>LIGA</p>
-          <h1>{view === "reconstruction" ? "Liga Viva" : "Classificações e Playoffs"}</h1>
+          <h1>{view === "rounds" ? "Rodadas" : "Classificações e Playoffs"}</h1>
         </div>
         <span>
           {season.title} · {season.year}
@@ -71,6 +72,8 @@ function LeagueArchive() {
         seasonId={seasonId}
         view={view}
         conference={conference}
+        round={search.round ?? 1}
+        onRoundChange={(round) => updateSearch({ round })}
         onSeasonChange={(season) =>
           updateSearch({
             season,
@@ -81,9 +84,7 @@ function LeagueArchive() {
         }
         onViewChange={(nextView) => updateSearch({ view: nextView })}
         onConferenceChange={(nextConference) => updateSearch({ conference: nextConference })}
-        round={search.round ?? 1}
         team={search.team}
-        onRoundChange={(round) => updateSearch({ round })}
         onTeamChange={(team) => updateSearch({ team })}
       />
     </main>

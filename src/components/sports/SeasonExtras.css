@@ -120,9 +120,19 @@ body:has(.league-page .synthetic-season) .site-footer{display:none}
 .league-page .league-season-select select{min-width:210px;max-width:100%;padding:11px 38px 11px 13px;border:1px solid #435671;border-radius:8px;background:#111b2b;color:#f2f5fa;font:inherit;font-size:13px;font-weight:700;line-height:1.2;letter-spacing:0;text-transform:none;cursor:pointer}
 .league-page .league-season-select select:focus-visible{outline:2px solid #edc782;outline-offset:3px}
 .league-page .league-season-select option{background:#111b2b;color:#f2f5fa}
+.league-page .seasonextras-standings-controls{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.league-page .seasonextras-round-picker{display:flex;align-items:center;gap:6px;padding:4px;border:1px solid #354960;border-radius:8px;background:#101a29}
+.league-page .seasonextras-round-picker button{display:grid;width:32px;height:32px;place-items:center;border:1px solid transparent;border-radius:5px;background:#172439;color:#dbe5f2;cursor:pointer}
+.league-page .seasonextras-round-picker button:hover:not(:disabled){border-color:#e9c48b;color:#e9c48b}
+.league-page .seasonextras-round-picker button:disabled{opacity:.35;cursor:default}
+.league-page .seasonextras-round-picker button:focus-visible,.league-page .seasonextras-round-picker select:focus-visible{outline:2px solid #edc782;outline-offset:2px}
+.league-page .seasonextras-round-picker label{display:flex;align-items:center;gap:6px;color:#edc782;font-size:10px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.league-page .seasonextras-round-picker select{min-width:58px;padding:7px 8px;border:1px solid #435671;border-radius:5px;background:#111b2b;color:#f2f5fa;font:inherit;font-size:12px;letter-spacing:0;text-transform:none}
 @media(max-width:900px){
   .league-section-heading{padding:20px 20px 0}
   .league-page .seasonextras{padding:12px 20px 56px}
+  .league-page .seasonextras-header{align-items:flex-start}
+  .league-page .seasonextras-standings-controls{justify-content:flex-start;width:100%}
   .league-page .seasonextras-controlbar{gap:12px}
   .league-page .league-season-select select{min-width:185px}
 }

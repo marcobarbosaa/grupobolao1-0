@@ -1,12 +1,8 @@
-import { BadgeCheck, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import reconstructionData from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
-import {
-  buildSyntheticRounds,
-  calculateStandingsThroughRound,
-  filterSyntheticRoundGames,
-} from "../../lib/liga-viva/presentation";
+import { buildSyntheticRounds, filterSyntheticRoundGames } from "../../lib/liga-viva/presentation";
 import type { Reconstruction } from "../../lib/liga-viva/types";
-import { LeagueTeamBadge, PlayerMarks, teamNames } from "./SeasonExtras";
+import { LeagueTeamBadge, teamNames } from "./SeasonExtras";
 import "./SyntheticSeason.css";
 
 const reconstruction = reconstructionData as unknown as Reconstruction;
@@ -14,7 +10,6 @@ const rounds = buildSyntheticRounds(reconstruction);
 const teamOptions = reconstruction.standings
   .map((team) => team.teamId)
   .sort((first, second) => (teamNames[first] ?? first).localeCompare(teamNames[second] ?? second));
-const formatInteger = (value: number) => new Intl.NumberFormat("pt-BR").format(value);
 const formatDate = (value: string) =>
   new Intl.DateTimeFormat("pt-BR", {
     day: "2-digit",
@@ -37,27 +32,6 @@ export default function SyntheticSeason({
   const activeRound = rounds[activeRoundNumber - 1];
   const selectedTeam = teamOptions.includes(team ?? "") ? team : undefined;
   const visibleGames = filterSyntheticRoundGames(activeRound, selectedTeam);
-  const progress = calculateStandingsThroughRound(
-    reconstruction.standings,
-    rounds,
-    activeRoundNumber,
-  );
-  const clinchedTeams = new Set<string>();
-  const gamesPerTeam = reconstruction.rules.schedule.gamesPerTeam;
-  for (const conferenceId of ["east", "west"] as const) {
-    const conferenceStandings = progress.filter((standing) => standing.conference === conferenceId);
-    const teamsOutsidePlayoffs = conferenceStandings.slice(8);
-    const bestPossibleOutsideWins = Math.max(
-      ...teamsOutsidePlayoffs.map(
-        (standing) => standing.wins + Math.max(0, gamesPerTeam - standing.gamesPlayed),
-      ),
-    );
-    conferenceStandings.slice(0, 8).forEach((standing) => {
-      // A team is clinched only when every team currently outside the top 8
-      // has a strictly lower maximum possible win total (ties remain undecided).
-      if (standing.wins > bestPossibleOutsideWins) clinchedTeams.add(standing.teamId);
-    });
-  }
   const roundDates = [activeRound.games[0].date, activeRound.games.at(-1)!.date];
   const dateLabel =
     roundDates[0] === roundDates[1]
@@ -65,10 +39,10 @@ export default function SyntheticSeason({
       : `${formatDate(roundDates[0])}–${formatDate(roundDates[1])}`;
 
   return (
-    <section className="synthetic-season" aria-label="Liga Viva: temporada reconstruída">
+    <section className="synthetic-season" aria-label="Rodadas da temporada reconstruída">
       <header className="synthetic-season-header">
         <div>
-          <h2>Temporada regular</h2>
+          <h2>Rodadas</h2>
         </div>
         <span className="synthetic-season-total">1.230 partidas · 2006–07</span>
       </header>
@@ -184,102 +158,6 @@ export default function SyntheticSeason({
       ) : (
         <p className="synthetic-empty-state">Esta equipe não joga nesta rodada.</p>
       )}
-
-      <section
-        className="synthetic-standings"
-        aria-label={`Classificação acumulada após a rodada ${activeRoundNumber}`}
-      >
-        <header className="synthetic-standings-header">
-          <div>
-            <p className="seasonextras-kicker">
-              APÓS A RODADA {String(activeRoundNumber).padStart(2, "0")}
-            </p>
-            <h3>Classificação acumulada</h3>
-          </div>
-        </header>
-        {(
-          [
-            { id: "east", label: "Conferência Leste" },
-            { id: "west", label: "Conferência Oeste" },
-          ] as const
-        ).map((conference) => (
-          <section
-            className={`synthetic-conference synthetic-conference-${conference.id}`}
-            key={conference.id}
-            aria-label={conference.label}
-          >
-            <h4>{conference.label}</h4>
-            <div
-              className="synthetic-standings-scroll"
-              role="region"
-              tabIndex={0}
-              aria-label={`${conference.label}; tabela rolável`}
-            >
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Equipe</th>
-                    <th scope="col">J</th>
-                    <th scope="col">V</th>
-                    <th scope="col">D</th>
-                    <th scope="col">%</th>
-                    <th scope="col">PF</th>
-                    <th scope="col">PA</th>
-                    <th scope="col">Saldo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {progress
-                    .filter((standing) => standing.conference === conference.id)
-                    .map((standing, index) => (
-                      <tr
-                        key={standing.teamId}
-                        className={standing.teamId === selectedTeam ? "is-filtered-team" : ""}
-                      >
-                        <td className="synthetic-standing-rank">{index + 1}º</td>
-                        <th scope="row">
-                          <div className="synthetic-standing-team">
-                            <LeagueTeamBadge
-                              code={standing.teamId}
-                              seasonId={reconstruction.seasonId}
-                            />
-                            <PlayerMarks
-                              seasonId={reconstruction.seasonId}
-                              teamCode={standing.teamId}
-                              compact
-                            />
-                            {clinchedTeams.has(standing.teamId) && (
-                              <span
-                                className="synthetic-clinch-indicator"
-                                title="Classificado matematicamente para os playoffs"
-                                aria-label="Classificado matematicamente para os playoffs"
-                              >
-                                <BadgeCheck size={17} strokeWidth={2.2} aria-hidden="true" />
-                              </span>
-                            )}
-                          </div>
-                        </th>
-                        <td>{standing.gamesPlayed}</td>
-                        <td>{standing.wins}</td>
-                        <td>{standing.losses}</td>
-                        <td>
-                          {standing.gamesPlayed ? standing.pct.toFixed(3).replace(/^0/, "") : "—"}
-                        </td>
-                        <td>{formatInteger(standing.pointsFor)}</td>
-                        <td>{formatInteger(standing.pointsAgainst)}</td>
-                        <td>
-                          {standing.pointDifferential > 0 ? "+" : ""}
-                          {formatInteger(standing.pointDifferential)}
-                        </td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        ))}
-      </section>
     </section>
   );
 }

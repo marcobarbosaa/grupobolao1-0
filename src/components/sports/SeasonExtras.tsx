@@ -1,4 +1,5 @@
 import { publishedCatalog } from "../../lib/published-catalog";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { lazy, Suspense, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { newRoster } from "../../lib/new-roster";
@@ -14,6 +15,7 @@ import history009 from "../../data/statistics/season-009/teamHistory.json";
 import history010 from "../../data/statistics/season-010/teamHistory.json";
 import history011 from "../../data/statistics/season-011/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
+import reconstructionData from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
 import details2007 from "../../data/statistics/season-003/standings-details.json";
@@ -22,11 +24,16 @@ import details2009 from "../../data/statistics/season-005/standings-details.json
 import details2010 from "../../data/statistics/season-006/standings-details.json";
 import details2011 from "../../data/statistics/season-007/standings-details.json";
 import details2013 from "../../data/statistics/season-008/standings-details.json";
+import {
+  buildSyntheticRounds,
+  calculateStandingsThroughRound,
+} from "../../lib/liga-viva/presentation";
+import type { Reconstruction } from "../../lib/liga-viva/types";
 import "./SeasonExtras.css";
 
 type SeasonId = string;
 type Conference = "west" | "east";
-type View = "standings" | "playoffs" | "reconstruction";
+type View = "standings" | "playoffs" | "rounds";
 type RoundId = "first-round" | "quarterfinals" | "conference-finals" | "nba-finals";
 
 type Standing = {
@@ -65,6 +72,8 @@ type SeasonRecord = {
 type LogoDefinition = { year: number; slug: string };
 
 const seasons: Record<SeasonId, SeasonRecord> = { ...archive };
+const reconstruction = reconstructionData as unknown as Reconstruction;
+const reconstructionRounds = buildSyntheticRounds(reconstruction);
 
 // Historical affiliation is season-scoped; never infer it from a player's current uniform.
 const histories: Record<string, { playerId: string; teamId: string }[]> = {
@@ -351,40 +360,150 @@ function Standings({
   season,
   conference,
   onConferenceChange,
+  round,
+  onRoundChange,
 }: {
   seasonId: SeasonId;
   season: SeasonRecord;
   conference: Conference;
   onConferenceChange: (conference: Conference) => void;
+  round: number;
+  onRoundChange: (round: number) => void;
 }) {
-  const rows = season.standings?.[conference] ?? [];
+  const [trackingMode, setTrackingMode] = useState<"final" | "round">("final");
+  const canTrackRounds = seasonId === reconstruction.seasonId;
+  const isRoundMode = trackingMode === "round" && canTrackRounds;
+  const activeRound = Math.max(1, Math.min(reconstructionRounds.length, round));
+  const progress = canTrackRounds
+    ? calculateStandingsThroughRound(reconstruction.standings, reconstructionRounds, activeRound)
+    : [];
+  const clinchedTeams = new Set<string>();
+  if (isRoundMode) {
+    const gamesPerTeam = reconstruction.rules.schedule.gamesPerTeam;
+    for (const conferenceId of ["east", "west"] as const) {
+      const conferenceStandings = progress.filter(
+        (standing) => standing.conference === conferenceId,
+      );
+      const bestPossibleOutsideWins = Math.max(
+        ...conferenceStandings
+          .slice(8)
+          .map((standing) => standing.wins + Math.max(0, gamesPerTeam - standing.gamesPlayed)),
+      );
+      conferenceStandings.slice(0, 8).forEach((standing) => {
+        if (standing.wins > bestPossibleOutsideWins) clinchedTeams.add(standing.teamId);
+      });
+    }
+  }
+  const rows = isRoundMode
+    ? progress
+        .filter((standing) => standing.conference === conference)
+        .map((standing, index) => ({
+          rank: index + 1,
+          team: standing.teamId,
+          wins: standing.wins,
+          losses: standing.losses,
+          pct: standing.pct,
+          ppg: standing.gamesPlayed ? standing.pointsFor / standing.gamesPlayed : undefined,
+          papg: standing.gamesPlayed ? standing.pointsAgainst / standing.gamesPlayed : undefined,
+          diff: standing.gamesPlayed
+            ? (standing.pointsFor - standing.pointsAgainst) / standing.gamesPlayed
+            : undefined,
+          gamesPlayed: standing.gamesPlayed,
+          pointsFor: standing.pointsFor,
+          pointsAgainst: standing.pointsAgainst,
+        }))
+    : (season.standings?.[conference] ?? []);
   const details = fullStandings[seasonId] ?? {};
-  const missingDetailLabels = detailFieldLabels
-    .filter(({ key }) =>
-      rows.some((row) => {
-        const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
-        return !hasStandingsDetailValue(key, extra[key]);
-      }),
-    )
-    .map(({ label }) => label);
+  const missingDetailLabels = isRoundMode
+    ? []
+    : detailFieldLabels
+        .filter(({ key }) =>
+          rows.some((row) => {
+            const extra = details[row.team] ?? (row as unknown as Partial<StandingDetails>);
+            return !hasStandingsDetailValue(key, extra[key]);
+          }),
+        )
+        .map(({ label }) => label);
 
   return (
     <section className="seasonextras-panel" aria-label={`Classificação ${season.year}`}>
       <div className="seasonextras-header">
         <div>
-          <p className="seasonextras-kicker">{season.year} / TEMPORADA REGULAR</p>
+          <p className="seasonextras-kicker">
+            {season.year} / {isRoundMode ? `APÓS A RODADA ${activeRound}` : "TEMPORADA REGULAR"}
+          </p>
         </div>
-        <div className="seasonextras-toggle" role="group" aria-label="Conferência">
-          {conferences.map((option) => (
-            <button
-              key={option.id}
-              type="button"
-              aria-pressed={conference === option.id}
-              onClick={() => onConferenceChange(option.id)}
+        <div className="seasonextras-standings-controls">
+          {canTrackRounds && (
+            <div className="seasonextras-toggle" role="group" aria-label="Período da classificação">
+              <button
+                type="button"
+                aria-pressed={trackingMode === "final"}
+                onClick={() => setTrackingMode("final")}
+              >
+                Final
+              </button>
+              <button
+                type="button"
+                aria-pressed={trackingMode === "round"}
+                onClick={() => setTrackingMode("round")}
+              >
+                Por rodada
+              </button>
+            </div>
+          )}
+          {isRoundMode && (
+            <div
+              className="seasonextras-round-picker"
+              aria-label="Selecionar rodada da classificação"
             >
-              {option.label}
-            </button>
-          ))}
+              <button
+                type="button"
+                aria-label="Rodada anterior"
+                title="Rodada anterior"
+                disabled={activeRound === 1}
+                onClick={() => onRoundChange(activeRound - 1)}
+              >
+                <ChevronLeft size={17} aria-hidden="true" />
+              </button>
+              <label>
+                <span>Rodada</span>
+                <select
+                  value={activeRound}
+                  onChange={(event) => onRoundChange(Number(event.target.value))}
+                  aria-label="Selecionar rodada da classificação"
+                >
+                  {reconstructionRounds.map((option) => (
+                    <option key={option.number} value={option.number}>
+                      {String(option.number).padStart(2, "0")}
+                    </option>
+                  ))}
+                </select>
+                <span>de {reconstructionRounds.length}</span>
+              </label>
+              <button
+                type="button"
+                aria-label="Próxima rodada"
+                title="Próxima rodada"
+                disabled={activeRound === reconstructionRounds.length}
+                onClick={() => onRoundChange(activeRound + 1)}
+              >
+                <ChevronRight size={17} aria-hidden="true" />
+              </button>
+            </div>
+          )}
+          <div className="seasonextras-toggle" role="group" aria-label="Conferência">
+            {conferences.map((option) => (
+              <button
+                key={option.id}
+                type="button"
+                aria-pressed={conference === option.id}
+                onClick={() => onConferenceChange(option.id)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
       <div
@@ -398,18 +517,29 @@ function Standings({
             <tr>
               <th scope="col">#</th>
               <th scope="col">Time</th>
+              {isRoundMode && <th scope="col">J</th>}
               <th scope="col">V</th>
               <th scope="col">D</th>
               <th scope="col">%</th>
-              <th scope="col">GB</th>
-              <th scope="col">Casa</th>
-              <th scope="col">Fora</th>
-              <th scope="col">Conf.</th>
-              <th scope="col">Div.</th>
-              <th scope="col">PPG</th>
-              <th scope="col">PAPG</th>
-              <th scope="col">Saldo</th>
-              <th scope="col">Seq.</th>
+              {isRoundMode ? (
+                <>
+                  <th scope="col">PF</th>
+                  <th scope="col">PA</th>
+                  <th scope="col">Saldo</th>
+                </>
+              ) : (
+                <>
+                  <th scope="col">GB</th>
+                  <th scope="col">Casa</th>
+                  <th scope="col">Fora</th>
+                  <th scope="col">Conf.</th>
+                  <th scope="col">Div.</th>
+                  <th scope="col">PPG</th>
+                  <th scope="col">PAPG</th>
+                  <th scope="col">Saldo</th>
+                  <th scope="col">Seq.</th>
+                </>
+              )}
             </tr>
           </thead>
           <tbody>
@@ -425,34 +555,57 @@ function Standings({
                         {teamDisplayName(row.team, seasonId)}
                         <PlayerMarks seasonId={seasonId} teamCode={row.team} />
                       </span>
-                      {row.rank <= 8 && (
+                      {isRoundMode ? (
+                        clinchedTeams.has(row.team) && (
+                          <span
+                            className="seasonextras-playoff-label"
+                            title="Classificado matematicamente para os playoffs"
+                            aria-label="Classificado matematicamente para os playoffs"
+                          >
+                            P
+                          </span>
+                        )
+                      ) : row.rank <= 8 ? (
                         <span
                           className="seasonextras-playoff-label"
                           title="Classificado aos playoffs"
                         >
                           P
                         </span>
-                      )}
+                      ) : null}
                     </div>
                   </th>
+                  {isRoundMode && <td>{row.gamesPlayed}</td>}
                   <td>{row.wins}</td>
                   <td>{row.losses}</td>
                   <td>{row.pct?.toFixed(3).replace(/^0/, "") ?? "—"}</td>
-                  <td>{extra?.gb ?? "—"}</td>
-                  <td>{extra?.home ?? "—"}</td>
-                  <td>{extra?.away ?? "—"}</td>
-                  <td>
-                    {hasStandingsDetailValue("conference", extra?.conference)
-                      ? extra?.conference
-                      : "—"}
-                  </td>
-                  <td>
-                    {hasStandingsDetailValue("division", extra?.division) ? extra?.division : "—"}
-                  </td>
-                  <td>{row.ppg?.toFixed(1) ?? "—"}</td>
-                  <td>{row.papg?.toFixed(1) ?? "—"}</td>
-                  <td>{row.diff?.toFixed(1) ?? "—"}</td>
-                  <td>{extra?.streak ?? "—"}</td>
+                  {isRoundMode ? (
+                    <>
+                      <td>{row.pointsFor}</td>
+                      <td>{row.pointsAgainst}</td>
+                      <td>{row.gamesPlayed ? row.pointsFor - row.pointsAgainst : "—"}</td>
+                    </>
+                  ) : (
+                    <>
+                      <td>{extra?.gb ?? "—"}</td>
+                      <td>{extra?.home ?? "—"}</td>
+                      <td>{extra?.away ?? "—"}</td>
+                      <td>
+                        {hasStandingsDetailValue("conference", extra?.conference)
+                          ? extra?.conference
+                          : "—"}
+                      </td>
+                      <td>
+                        {hasStandingsDetailValue("division", extra?.division)
+                          ? extra?.division
+                          : "—"}
+                      </td>
+                      <td>{row.ppg?.toFixed(1) ?? "—"}</td>
+                      <td>{row.papg?.toFixed(1) ?? "—"}</td>
+                      <td>{row.diff?.toFixed(1) ?? "—"}</td>
+                      <td>{extra?.streak ?? "—"}</td>
+                    </>
+                  )}
                 </tr>
               );
             })}
@@ -460,9 +613,9 @@ function Standings({
         </table>
       </div>
       <p className="seasonextras-note">
-        P = classificado aos playoffs. ★ = atleta do Grupo Bolão (clique no nome para abrir o
-        perfil). Ordem preservada conforme o NBA 2K, incluindo critérios de divisão. Os dados são do
-        universo do Grupo Bolão, não dos resultados históricos da NBA real.
+        {isRoundMode
+          ? "Classificação calculada pelos resultados sintéticos até a rodada selecionada. ★ identifica atletas do Grupo Bolão."
+          : "P = classificado aos playoffs. ★ = atleta do Grupo Bolão (clique no nome para abrir o perfil). Ordem preservada conforme o NBA 2K, incluindo critérios de divisão. Os dados são do universo do Grupo Bolão, não dos resultados históricos da NBA real."}
       </p>
       {missingDetailLabels.length > 0 && (
         <p className="seasonextras-note seasonextras-data-warning" role="status">
@@ -575,17 +728,19 @@ export function SeasonExtras({
   seasonId,
   view,
   conference,
+  round,
+  onRoundChange,
   onSeasonChange,
   onViewChange,
   onConferenceChange,
-  round,
   team,
-  onRoundChange,
   onTeamChange,
 }: {
   seasonId: SeasonId;
   view: View;
   conference: Conference;
+  round: number;
+  onRoundChange: (round: number) => void;
   onSeasonChange: (seasonId: SeasonId) => void;
   onViewChange: (view: View) => void;
   onConferenceChange: (conference: Conference) => void;
@@ -606,7 +761,7 @@ export function SeasonExtras({
   const hasCollectiveData = hasStandings || hasPlayoffs;
   const hasReconstruction = seasonId === "season-002";
   const activeView: View =
-    view === "reconstruction" && !hasReconstruction
+    view === "rounds" && !hasReconstruction
       ? hasStandings
         ? "standings"
         : "playoffs"
@@ -639,10 +794,10 @@ export function SeasonExtras({
           {hasReconstruction && (
             <button
               type="button"
-              aria-pressed={activeView === "reconstruction"}
-              onClick={() => onViewChange("reconstruction")}
+              aria-pressed={activeView === "rounds"}
+              onClick={() => onViewChange("rounds")}
             >
-              Liga Viva
+              Rodadas
             </button>
           )}
         </nav>
@@ -657,7 +812,7 @@ export function SeasonExtras({
           </select>
         </label>
       </div>
-      {activeView === "reconstruction" ? (
+      {activeView === "rounds" ? (
         <Suspense
           fallback={<p className="seasonextras-note">Carregando reconstrução sintética…</p>}
         >
@@ -681,6 +836,8 @@ export function SeasonExtras({
           season={season}
           conference={conference}
           onConferenceChange={onConferenceChange}
+          round={round}
+          onRoundChange={onRoundChange}
         />
       ) : (
         <Playoffs seasonId={seasonId} season={season} />
