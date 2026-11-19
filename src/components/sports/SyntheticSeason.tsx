@@ -133,7 +133,7 @@ export default function SyntheticSeason({
                 aria-label={`${teamNames[game.homeTeam] ?? game.homeTeam} ${game.homeScore}, ${teamNames[game.awayTeam] ?? game.awayTeam} ${game.awayScore}; vencedor ${teamNames[game.winner] ?? game.winner}`}
               >
                 <time dateTime={game.date}>{formatDate(game.date)}</time>
-                <LeagueTeamBadge code={game.homeTeam} seasonId={reconstruction.seasonId} />
+                <LeagueTeamBadge code={game.homeTeam} seasonId={reconstruction.seasonId} showPlayerMarks />
                 <strong
                   className={homeWon ? "synthetic-game-score is-winner" : "synthetic-game-score"}
                 >
@@ -147,7 +147,7 @@ export default function SyntheticSeason({
                 >
                   {game.awayScore}
                 </strong>
-                <LeagueTeamBadge code={game.awayTeam} seasonId={reconstruction.seasonId} />
+                <LeagueTeamBadge code={game.awayTeam} seasonId={reconstruction.seasonId} showPlayerMarks />
                 <span className="synthetic-result-label">{homeWon ? "Mandante" : "Visitante"}</span>
               </article>
             );
@@ -190,6 +190,7 @@ export default function SyntheticSeason({
               <table>
                 <thead>
                   <tr>
+                    <th scope="col">#</th>
                     <th scope="col">Equipe</th>
                     <th scope="col">J</th>
                     <th scope="col">V</th>
@@ -203,11 +204,12 @@ export default function SyntheticSeason({
                 <tbody>
                   {progress
                     .filter((standing) => standing.conference === conference.id)
-                    .map((standing) => (
+                    .map((standing, index) => (
                       <tr
                         key={standing.teamId}
                         className={standing.teamId === selectedTeam ? "is-filtered-team" : ""}
                       >
+                        <td className="synthetic-standing-rank">{index + 1}º</td>
                         <th scope="row">
                           <div className="synthetic-standing-team">
                             <LeagueTeamBadge
@@ -217,6 +219,7 @@ export default function SyntheticSeason({
                             <PlayerMarks
                               seasonId={reconstruction.seasonId}
                               teamCode={standing.teamId}
+                              compact
                             />
                           </div>
                         </th>
