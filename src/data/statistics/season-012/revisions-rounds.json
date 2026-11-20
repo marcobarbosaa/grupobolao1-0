@@ -395,5 +395,120 @@
       "src-s12-dias-nba-finals-synthetic"
     ],
     "createdAt": "2026-11-20T20:20:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-abel-r1",
+    "recordId": "stat-s12-playoffs-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-abel-career-1",
+      "src-s12-abel-career-2"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-fabio-carvalho-r1",
+    "recordId": "stat-s12-playoffs-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-binho-career-1",
+      "src-s12-binho-career-2",
+      "src-s12-binho-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-cristiano-ronaldo-r1",
+    "recordId": "stat-s12-playoffs-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-cerrote-career-1",
+      "src-s12-cerrote-career-2",
+      "src-s12-cerrote-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-gam-mori-r1",
+    "recordId": "stat-s12-playoffs-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-gam-career-1",
+      "src-s12-gam-career-2"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-guilherme-r1",
+    "recordId": "stat-s12-playoffs-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-guilherme-career-1",
+      "src-s12-guilherme-career-2",
+      "src-s12-guilherme-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-jonas-r1",
+    "recordId": "stat-s12-playoffs-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-jonas-career-1",
+      "src-s12-jonas-career-2",
+      "src-s12-jonas-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-matheus-medeiros-r1",
+    "recordId": "stat-s12-playoffs-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-medeiros-career-1",
+      "src-s12-medeiros-career-2",
+      "src-s12-medeiros-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-russo-r1",
+    "recordId": "stat-s12-playoffs-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-russo-career-1",
+      "src-s12-russo-career-2",
+      "src-s12-russo-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-tailan-r1",
+    "recordId": "stat-s12-playoffs-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-playoffs-career-consolidated",
+    "sourceIds": [
+      "src-s12-tailan-career-1",
+      "src-s12-tailan-career-2",
+      "src-s12-tailan-career-3"
+    ],
+    "createdAt": "2026-11-20T21:00:00Z"
   }
 ]
