@@ -2536,5 +2536,79 @@
       "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
       "expectedGames": 10
     }
+  },
+  {
+    "id": "stat-s12-playoffs-nando",
+    "kind": "phase",
+    "playerId": "nando",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "milwaukee-bucks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7,
+        "minutes": 224,
+        "points": 176,
+        "rebounds": 61,
+        "assists": 20,
+        "steals": 6,
+        "blocks": 8,
+        "turnovers": 4,
+        "fgm": 63,
+        "fga": 120,
+        "threePm": 6,
+        "threePa": 18,
+        "ftm": 44,
+        "fta": 49,
+        "fouls": 28,
+        "doubleDoubles": 2,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 32,
+        "ppg": 25.1,
+        "rpg": 8.7,
+        "apg": 2.9,
+        "spg": 0.9,
+        "bpg": 1.1,
+        "topg": 0.6
+      },
+      "percentages": {
+        "fgPct": 52.5,
+        "threePct": 33.3,
+        "ftPct": 89.8
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-nando-career-1",
+        "src-s12-nando-career-2",
+        "src-s12-nando-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats. Como Milwaukee foi eliminado no First Round, os sete jogos do consolidado correspondem integralmente à primeira rodada; não há fases posteriores.",
+      "expectedGames": 7
+    }
   }
 ]
