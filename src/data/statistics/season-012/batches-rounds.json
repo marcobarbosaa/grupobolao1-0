@@ -117,5 +117,17 @@
     "createdAt": "2026-11-20T21:00:00Z",
     "approvedAt": "2026-11-20T21:00:00Z",
     "approvedBy": "Marco Barbosa — solicitação explícita de complementação dos consolidados de playoffs em 20/11/2026"
+  },
+  {
+    "id": "batch-s12-nando-playoffs-consolidated",
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3"
+    ],
+    "status": "published",
+    "createdAt": "2026-11-20T21:15:00Z",
+    "approvedAt": "2026-11-20T21:15:00Z",
+    "approvedBy": "Marco Barbosa — solicitação explícita de consolidação dos playoffs em 20/11/2026"
   }
 ]
