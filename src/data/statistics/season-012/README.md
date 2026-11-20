@@ -4,7 +4,7 @@
 
 - Temporada 12 (2016–17) configurada com Temporada regular, Playoffs, Primeira rodada, Quartas, Finais de conferência e Finais da NBA.
 - 13 registros individuais da temporada regular e 13 vínculos de histórico jogador/equipe.
-- 42 registros estatísticos por fase/consolidado de playoffs, incluindo 11 consolidados gerais de Career Stats e as fases registradas.
+- 43 registros estatísticos por fase/consolidado de playoffs, incluindo 11 consolidados gerais de Career Stats e as fases registradas.
 - 30 posições de classificação (15 por conferência), com campanhas, aproveitamento, casa/fora, conferência/divisão, pontos por jogo, pontos sofridos, saldo e sequência.
 - 15 séries do chaveamento dos playoffs, até a NBA Finals; Dallas Mavericks campeão sobre Philadelphia 76ers por 4–1.
 - 101 capturas do ZIP inventariadas: 38 imagens de Career Stats, 58 imagens de fases e 5 imagens de Extras. Todas as imagens incorporadas possuem SHA-256 calculado sobre os bytes originais.
@@ -43,7 +43,7 @@ Os registros por fase guardam os GP/GS e as médias/percentuais exibidos quando 
 
 ## Consolidados gerais de playoffs — Career Stats
 
-Foram publicados os consolidados das capturas Career Stats para Abel, Fábio Carvalho, Cristiano Ronaldo, Dias, Gam Mori, Guilherme, Jonas, Matheus Medeiros, Nando, Russo e Tailan. Os totais e médias são independentes dos registros por rodada; o site apresenta o consolidado uma única vez, sem somá-lo novamente às fases. Para Abel, campos ausentes na captura permanecem sem valor. Marco Barbosa e Enzo não têm campanha de playoffs registrada porque suas equipes não se classificaram.
+Foram publicados os consolidados das capturas Career Stats para Abel, Fábio Carvalho, Cristiano Ronaldo, Dias, Gam Mori, Guilherme, Jonas, Matheus Medeiros, Nando, Russo e Tailan. Os totais e médias são independentes dos registros por rodada; o site apresenta o consolidado uma única vez, sem somá-lo novamente às fases. No caso de Nando, o consolidado de sete jogos coincide integralmente com o First Round, pois Milwaukee foi eliminado nessa etapa. Para Abel, campos ausentes na captura permanecem sem valor. Marco Barbosa e Enzo não têm campanha de playoffs registrada porque suas equipes não se classificaram.
 
 ## Imagens históricas — 2016–2017
 
