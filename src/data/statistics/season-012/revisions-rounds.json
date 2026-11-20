@@ -346,5 +346,54 @@
       "src-s12-tailan-phase-17"
     ],
     "createdAt": "2026-11-19T20:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-dias-r1",
+    "recordId": "stat-s12-playoffs-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-nando-dias-playoffs",
+    "sourceIds": [
+      "src-s12-dias-career-1",
+      "src-s12-dias-career-2",
+      "src-s12-dias-career-3"
+    ],
+    "createdAt": "2026-11-20T20:20:00Z"
+  },
+  {
+    "id": "rev-stat-s12-first-round-nando-r1",
+    "recordId": "stat-s12-first-round-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-nando-dias-playoffs",
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3",
+      "src-s012-extras-5"
+    ],
+    "createdAt": "2026-11-20T20:20:00Z"
+  },
+  {
+    "id": "rev-stat-s12-conference-finals-dias-r1",
+    "recordId": "stat-s12-conference-finals-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-nando-dias-playoffs",
+    "sourceIds": [
+      "src-s12-dias-conference-finals-synthetic"
+    ],
+    "createdAt": "2026-11-20T20:20:00Z"
+  },
+  {
+    "id": "rev-stat-s12-nba-finals-dias-r1",
+    "recordId": "stat-s12-nba-finals-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-nando-dias-playoffs",
+    "sourceIds": [
+      "src-s12-dias-nba-finals-synthetic"
+    ],
+    "createdAt": "2026-11-20T20:20:00Z"
   }
 ]

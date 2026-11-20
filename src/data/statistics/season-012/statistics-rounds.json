@@ -1622,5 +1622,263 @@
       "note": "Capturas de NBA 2K com partidas e médias desta fase; totais de pontos e arremessos por fase não foram exibidos e não são inferidos.",
       "expectedGames": 4
     }
+  },
+  {
+    "id": "stat-s12-playoffs-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-career-1",
+      "src-s12-dias-career-2",
+      "src-s12-dias-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 21,
+        "gs": 21,
+        "minutes": 847,
+        "points": 565,
+        "rebounds": 63,
+        "assists": 225,
+        "steals": 22,
+        "blocks": 0,
+        "turnovers": 67,
+        "fgm": 198,
+        "fga": 399,
+        "threePm": 53,
+        "threePa": 121,
+        "ftm": 116,
+        "fta": 141,
+        "fouls": 63,
+        "doubleDoubles": 14,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 40.3,
+        "ppg": 26.9,
+        "rpg": 3,
+        "apg": 10.7,
+        "spg": 1,
+        "bpg": 0,
+        "topg": 3.2
+      },
+      "percentages": {
+        "fgPct": 49.6,
+        "threePct": 43.8,
+        "ftPct": 82.3
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "partial",
+      "sourceIds": [
+        "src-s12-dias-career-1",
+        "src-s12-dias-career-2",
+        "src-s12-dias-career-3"
+      ],
+      "note": "Consolidado geral da linha Playoffs nas telas Career Stats: 21 GP. O total coincide com os 21 jogos do caminho de Dallas em 2016–17 (7 + 4 + 5 + 5) e é usado como referência consolidada desta campanha, conforme orientação do usuário.",
+      "expectedGames": 21
+    }
+  },
+  {
+    "id": "stat-s12-first-round-nando",
+    "kind": "phase",
+    "playerId": "nando",
+    "seasonId": "season-012",
+    "phaseId": "first-round",
+    "scope": "team",
+    "teamId": "milwaukee-bucks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3",
+      "src-s012-extras-5"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 7,
+        "gs": 7,
+        "minutes": 224,
+        "points": 176,
+        "rebounds": 61,
+        "assists": 20,
+        "steals": 6,
+        "blocks": 8,
+        "turnovers": 4,
+        "fgm": 63,
+        "fga": 120,
+        "threePm": 6,
+        "threePa": 18,
+        "ftm": 44,
+        "fta": 49,
+        "fouls": 28,
+        "doubleDoubles": 2,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 32,
+        "ppg": 25.1,
+        "rpg": 8.7,
+        "apg": 2.9,
+        "spg": 0.9,
+        "bpg": 1.1,
+        "topg": 0.6
+      },
+      "percentages": {
+        "fgPct": 52.5,
+        "threePct": 33.3,
+        "ftPct": 89.8
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-nando-career-1",
+        "src-s12-nando-career-2",
+        "src-s12-nando-career-3",
+        "src-s012-extras-5"
+      ],
+      "note": "A linha Playoffs do Career Stats registra 7 jogos e fornece totais, médias e aproveitamentos. Milwaukee disputou uma série de 7 jogos no First Round e foi eliminado pelo Philadelphia 76ers; o usuário confirmou que essa é a única fase de Nando nesta temporada. O consolidado foi alocado ao First Round, sem inventar fases posteriores.",
+      "expectedGames": 7
+    }
+  },
+  {
+    "id": "stat-s12-conference-finals-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "conference-finals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-conference-finals-synthetic"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 40.9,
+        "ppg": 28,
+        "rpg": 2.6,
+        "apg": 11,
+        "spg": 0.6,
+        "bpg": 0,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 47,
+        "threePct": 40,
+        "ftPct": 88
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "partial",
+      "sourceIds": [
+        "src-s12-dias-conference-finals-synthetic"
+      ],
+      "note": "DADOS FICTÍCIOS — reconstrução solicitada e autorizada pelo usuário. Os 5 jogos da rodada vêm do chaveamento; as médias e os percentuais foram estimados para que a média ponderada por GP das quatro fases arredonde para o consolidado Playoffs de Career Stats de Dias (40,3 MPG; 26,9 PPG; 3,0 RPG; 10,7 APG; 1,0 SPG; 0,0 BPG; 3,2 TOPG; 49,6 FG%; 43,8 3P%; 82,3 FT%). Estes números não são boxescores observados.",
+      "expectedGames": 5
+    }
+  },
+  {
+    "id": "stat-s12-nba-finals-dias",
+    "kind": "phase",
+    "playerId": "dias",
+    "seasonId": "season-012",
+    "phaseId": "nba-finals",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-dias-nba-finals-synthetic"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 5,
+        "gs": 5
+      },
+      "averages": {
+        "mpg": 41,
+        "ppg": 27.8,
+        "rpg": 2.8,
+        "apg": 11,
+        "spg": 0.8,
+        "bpg": 0,
+        "topg": 3
+      },
+      "percentages": {
+        "fgPct": 48,
+        "threePct": 43.3,
+        "ftPct": 88.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "partial",
+      "sourceIds": [
+        "src-s12-dias-nba-finals-synthetic"
+      ],
+      "note": "DADOS FICTÍCIOS — reconstrução solicitada e autorizada pelo usuário. Os 5 jogos da rodada vêm do chaveamento; as médias e os percentuais foram estimados para que a média ponderada por GP das quatro fases arredonde para o consolidado Playoffs de Career Stats de Dias (40,3 MPG; 26,9 PPG; 3,0 RPG; 10,7 APG; 1,0 SPG; 0,0 BPG; 3,2 TOPG; 49,6 FG%; 43,8 3P%; 82,3 FT%). Estes números não são boxescores observados.",
+      "expectedGames": 5
+    }
   }
 ]

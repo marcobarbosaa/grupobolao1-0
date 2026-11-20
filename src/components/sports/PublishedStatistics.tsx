@@ -165,6 +165,12 @@ function PlayoffPhaseStrip({ phase, record }: { phase: string; record?: PhaseRec
           </div>
         ))}
       </dl>
+      {record?.coverage?.note.startsWith("DADOS FICTÍCIOS") && (
+        <p className="published-note">
+          <strong>RECONSTRUÇÃO FICTÍCIA:</strong> médias e percentuais estimados, não correspondem a
+          boxescores observados.
+        </p>
+      )}
     </article>
   );
 }

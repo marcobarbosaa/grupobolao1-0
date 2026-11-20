@@ -926,5 +926,39 @@
       "playerId": "tailan",
       "originalStoredPublicly": false
     }
+  },
+  {
+    "id": "src-s12-dias-conference-finals-synthetic",
+    "kind": "manual-record",
+    "fileName": "Reconstrução fictícia autorizada — Dias — Conference Finals 2016–17",
+    "contentHash": "b5338868d4ae77ed6f5a50613130c35c73f135cb10905b07901bdbf85f7543d9",
+    "receivedAt": "2026-11-20T20:20:00Z",
+    "metadata": {
+      "source": "Solicitação explícita do usuário em 20/11/2026",
+      "seasonId": "season-012",
+      "playerId": "dias",
+      "phaseId": "conference-finals",
+      "synthetic": true,
+      "userAuthorized": true,
+      "derivedFrom": "src-s12-dias-career-1;src-s12-dias-career-2;src-s12-dias-career-3;src-s12-dias-phase-22;src-s12-dias-phase-23;src-s12-dias-phase-24;src-s12-dias-phase-25",
+      "method": "Médias estimadas para que a média ponderada por GP das quatro fases arredonde para a linha geral Playoffs do Career Stats."
+    }
+  },
+  {
+    "id": "src-s12-dias-nba-finals-synthetic",
+    "kind": "manual-record",
+    "fileName": "Reconstrução fictícia autorizada — Dias — NBA Finals 2016–17",
+    "contentHash": "c4adc08fae01773eeb58c9f978f7e4f46f13a0e39c80ae261bb2aa2302cf87f9",
+    "receivedAt": "2026-11-20T20:20:00Z",
+    "metadata": {
+      "source": "Solicitação explícita do usuário em 20/11/2026",
+      "seasonId": "season-012",
+      "playerId": "dias",
+      "phaseId": "nba-finals",
+      "synthetic": true,
+      "userAuthorized": true,
+      "derivedFrom": "src-s12-dias-career-1;src-s12-dias-career-2;src-s12-dias-career-3;src-s12-dias-phase-22;src-s12-dias-phase-23;src-s12-dias-phase-24;src-s12-dias-phase-25",
+      "method": "Médias estimadas para que a média ponderada por GP das quatro fases arredonde para a linha geral Playoffs do Career Stats."
+    }
   }
 ]
