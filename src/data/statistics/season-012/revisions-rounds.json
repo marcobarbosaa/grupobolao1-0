@@ -510,5 +510,18 @@
       "src-s12-tailan-career-3"
     ],
     "createdAt": "2026-11-20T21:00:00Z"
+  },
+  {
+    "id": "rev-stat-s12-playoffs-nando-r1",
+    "recordId": "stat-s12-playoffs-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "batchId": "batch-s12-nando-dias-playoffs",
+    "sourceIds": [
+      "src-s12-nando-career-1",
+      "src-s12-nando-career-2",
+      "src-s12-nando-career-3"
+    ],
+    "createdAt": "2026-11-20T21:10:00Z"
   }
 ]
