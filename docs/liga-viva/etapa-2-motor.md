@@ -2,7 +2,7 @@
 
 ## Escopo e proveniência
 
-O motor é um domínio isolado em `src/lib/liga-viva/`, sem integração com o catálogo de estatísticas individuais, sem edição das classificações observadas e sem alterações aos dados de playoffs. As temporadas 002 (2006–07) a 011 (2015–16) têm reconstruções próprias, derivadas de seus snapshots coletivos publicados; temporadas 002–008 usam `season-extras.json` e os sidecars disponíveis, enquanto S09–S11 usam diretamente seus arquivos `extras.json` auditados.
+O motor é um domínio isolado em `src/lib/liga-viva/`, sem integração com o catálogo de estatísticas individuais, sem edição das classificações observadas e sem alterações aos dados de playoffs. As temporadas 002 (2006–07) a 012 (2016–17) têm reconstruções próprias, derivadas de seus snapshots coletivos publicados; temporadas 002–008 usam `season-extras.json` e os sidecars disponíveis, enquanto S09–S12 usam diretamente seus arquivos `extras.json` auditados.
 
 Cada partida gerada recebe `provenance: synthetic-constrained`; os placares gerados também recebem `scoreProvenance: synthetic-constrained`. Eles não são resultados históricos. O arquivo persistido fica no catálogo próprio `src/data/liga-viva/reconstructions/`, com seed, versão do algoritmo e regras, instante de geração, hash SHA-256 das três entradas (classificação, detalhes e regras), agenda, resultados, placares e validação.
 
@@ -24,6 +24,7 @@ Cada partida gerada recebe `provenance: synthetic-constrained`; os placares gera
 - `src/data/liga-viva/rules/season-009.json` e `src/data/liga-viva/reconstructions/season-009-seed-pilot.json`: reconstrução sintética condicionada aos Extras auditados da temporada local 2013–14.
 - `src/data/liga-viva/rules/season-010.json` e `src/data/liga-viva/reconstructions/season-010-seed-pilot.json`: reconstrução sintética condicionada aos Extras auditados da temporada local 2014–15.
 - `src/data/liga-viva/rules/season-011.json` e `src/data/liga-viva/reconstructions/season-011-seed-pilot.json`: reconstrução sintética da temporada local 2015–16, com cobertura divisional parcial explicitada.
+- `src/data/liga-viva/rules/season-012.json` e `src/data/liga-viva/reconstructions/season-012-seed-pilot.json`: reconstrução sintética condicionada aos Extras auditados da temporada local 2016–17.
 
 ## Algoritmo
 
@@ -99,6 +100,12 @@ A temporada 10 usa diretamente `src/data/statistics/season-010/extras.json`. O s
 
 A reconstrução contém 1.230 partidas sintéticas em 85 rodadas. Resultados, placares, datas e confrontos específicos não são alegados como históricos; a ordem final publicada permanece preservada.
 
+## Temporada 12 — 2016–17 (MyNBA local)
+
+A temporada 12 usa diretamente `src/data/statistics/season-012/extras.json`. Os 30 registros incluem campanhas, casa/fora, conferência/divisão e médias de pontos; os splits fecham com W-L, cada conferência soma 390 vitórias e cada divisão 40. O hash da reconstrução cobre o Extra auditado e as regras versionadas.
+
+A reconstrução contém 1.230 partidas sintéticas em 85 rodadas. A classificação final observada é preservada; datas, confrontos, vencedores e placares são sintéticos e não representam os resultados históricos jogo a jogo.
+
 ## Temporada 11 — 2015–16 (MyNBA local)
 
 A temporada 11 usa diretamente `src/data/statistics/season-011/extras.json`. As campanhas totais, casa/fora, conferência e pontuação são condicionadas aos valores observados. Há uma divergência que impede impor todas as linhas divisionais: os registros Southwest (DAL, HOU, MEM, NO, SA) somam 38 vitórias e 42 derrotas em 80 jogos-equipe, enquanto 40 partidas recíprocas exigem 40 vitórias e 40 derrotas. Não há evidência para identificar qual linha individual deve ser corrigida.
@@ -142,6 +149,7 @@ npm run liga-viva:generate-season -- season-008 season-008-stage-8-2026
 npm run liga-viva:generate-season -- season-009 season-009-stage-9-2026
 npm run liga-viva:generate-season -- season-010 season-010-stage-10-2026
 npm run liga-viva:generate-season -- season-011 season-011-stage-11-2026
+npm run liga-viva:generate-season -- season-012 season-012-stage-12-2026
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-002-seed-pilot.json
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-003-seed-pilot.json
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-004-seed-pilot.json
@@ -152,6 +160,7 @@ npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-008-seed
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-009-seed-pilot.json
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-010-seed-pilot.json
 npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-011-seed-pilot.json
+npm run liga-viva:validate -- src/data/liga-viva/reconstructions/season-012-seed-pilot.json
 npm run liga-viva:test
 npx tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --allowImportingTsExtensions --strict --skipLibCheck src/lib/liga-viva/types.ts src/lib/liga-viva/validate.ts src/lib/liga-viva/engine.ts scripts/liga-viva/pilot.ts scripts/liga-viva/cli.ts
 ```

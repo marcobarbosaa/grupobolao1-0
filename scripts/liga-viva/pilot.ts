@@ -15,12 +15,14 @@ const supportedSeasonIds: readonly string[] = [
   "season-009",
   "season-010",
   "season-011",
+  "season-012",
 ];
-const extrasSnapshotSeasonIds = ["season-009", "season-010", "season-011"];
+const extrasSnapshotSeasonIds = ["season-009", "season-010", "season-011", "season-012"];
 const fallbackSeasonLabels: Record<string, string> = {
   "season-009": "2013–14 · Temporada 09",
   "season-010": "2014–15 · Temporada 10",
   "season-011": "2015–16 · Temporada 11",
+  "season-012": "2016–17 · Temporada 12",
 };
 
 function parseRecord(value: unknown, teamId: string, field: string): RecordTarget {

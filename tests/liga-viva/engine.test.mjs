@@ -272,6 +272,32 @@ test("season-011 preserves the Southwest source mismatch and reports partial div
   assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
 });
 
+test("season-012 reconstructs standings directly from its audited extras snapshot", async () => {
+  const season = await loadPilotSeason("season-012");
+  const result = await reconstructSeason({
+    ...season,
+    seed: "season-012-regression-test",
+    generatedAt: fixedTime,
+  });
+
+  assert.equal(result.reconstruction.seasonId, "season-012");
+  assert.match(season.target.label, /2016.*Temporada 12/);
+  assert.equal(season.sourcePaths.some((path) => path.endsWith("season-012\\extras.json")), true);
+  assert.equal(result.report.valid, true, result.report.errors.join("\n"));
+  assert.deepEqual(result.report.totals, { teams: 30, games: 1230, wins: 1230, losses: 1230 });
+  assert.equal(result.report.scoring.totalPointsFor, result.report.scoring.totalPointsAgainst);
+  assert.deepEqual(
+    season.rules.divisions.map((division) =>
+      division.teams.reduce(
+        (sum, teamId) =>
+          sum + season.target.teams.find((team) => team.teamId === teamId).divisionRecord.wins,
+        0,
+      ),
+    ),
+    [40, 40, 40, 40, 40, 40],
+  );
+});
+
 test("another seed can select a different valid reconstruction", async () => {
   const alternate = await reconstructSeason({
     ...pilot,

@@ -16,6 +16,7 @@ const defaultSeason8Output = "src/data/liga-viva/reconstructions/season-008-seed
 const defaultSeason9Output = "src/data/liga-viva/reconstructions/season-009-seed-pilot.json";
 const defaultSeason10Output = "src/data/liga-viva/reconstructions/season-010-seed-pilot.json";
 const defaultSeason11Output = "src/data/liga-viva/reconstructions/season-011-seed-pilot.json";
+const defaultSeason12Output = "src/data/liga-viva/reconstructions/season-012-seed-pilot.json";
 
 async function generate(seasonId: string, seed: string, outputPath: string) {
   const { target, rules, inputHash } = await loadPilotSeason(seasonId);
@@ -73,7 +74,9 @@ export async function runCli(args: string[]) {
                           ? defaultSeason10Output
                           : seasonId === "season-011"
                             ? defaultSeason11Output
-                            : defaultOutput);
+                            : seasonId === "season-012"
+                              ? defaultSeason12Output
+                              : defaultOutput);
     return generate(seasonId, seed, outputPath);
   }
   if (command === "validate") return validate(value === "season-002-stage-2" ? path : value);

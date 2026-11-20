@@ -14,6 +14,7 @@ import history008 from "../../data/statistics/season-008/teamHistory.json";
 import history009 from "../../data/statistics/season-009/teamHistory.json";
 import history010 from "../../data/statistics/season-010/teamHistory.json";
 import history011 from "../../data/statistics/season-011/teamHistory.json";
+import history012 from "../../data/statistics/season-012/teamHistory.json";
 import archive from "../../data/statistics/season-extras.json";
 import reconstructionData002 from "../../data/liga-viva/reconstructions/season-002-seed-pilot.json";
 import reconstructionData003 from "../../data/liga-viva/reconstructions/season-003-seed-pilot.json";
@@ -25,6 +26,7 @@ import reconstructionData008 from "../../data/liga-viva/reconstructions/season-0
 import reconstructionData009 from "../../data/liga-viva/reconstructions/season-009-seed-pilot.json";
 import reconstructionData010 from "../../data/liga-viva/reconstructions/season-010-seed-pilot.json";
 import reconstructionData011 from "../../data/liga-viva/reconstructions/season-011-seed-pilot.json";
+import reconstructionData012 from "../../data/liga-viva/reconstructions/season-012-seed-pilot.json";
 import historicalLogoData from "../../data/statistics/historical-logos.json";
 import details2006 from "../../data/statistics/season-002/standings-details.json";
 import details2007 from "../../data/statistics/season-003/standings-details.json";
@@ -54,6 +56,12 @@ type Standing = {
   ppg?: number;
   papg?: number;
   diff?: number;
+  gb?: string;
+  home?: string;
+  away?: string;
+  conferenceRecord?: string;
+  divisionRecord?: string;
+  streak?: string;
   gamesPlayed?: number;
   pointsFor?: number;
   pointsAgainst?: number;
@@ -95,6 +103,7 @@ const reconstructions: Record<string, Reconstruction> = {
   "season-009": reconstructionData009 as unknown as Reconstruction,
   "season-010": reconstructionData010 as unknown as Reconstruction,
   "season-011": reconstructionData011 as unknown as Reconstruction,
+  "season-012": reconstructionData012 as unknown as Reconstruction,
 };
 
 // Historical affiliation is season-scoped; never infer it from a player's current uniform.
@@ -110,6 +119,7 @@ const histories: Record<string, { playerId: string; teamId: string }[]> = {
   "season-009": history009,
   "season-010": history010,
   "season-011": history011,
+  "season-012": history012,
 };
 const historicalTeamCodes: Record<string, string> = {
   "new-orleans-hornets": "NO",
@@ -419,6 +429,7 @@ function Standings({
         reconstruction!.standings,
         reconstructionRounds,
         activeRound,
+        reconstruction!.rules.divisions,
       )
     : [];
   const clinchedTeams = new Set<string>();
@@ -447,6 +458,11 @@ function Standings({
           wins: standing.wins,
           losses: standing.losses,
           pct: standing.pct,
+          gb: standing.gamesBehind === 0 ? "--" : standing.gamesBehind.toFixed(1),
+          home: `${standing.homeRecord.wins}-${standing.homeRecord.losses}`,
+          away: `${standing.awayRecord.wins}-${standing.awayRecord.losses}`,
+          conferenceRecord: `${standing.conferenceRecord.wins}-${standing.conferenceRecord.losses}`,
+          divisionRecord: `${standing.divisionRecord.wins}-${standing.divisionRecord.losses}`,
           ppg: standing.gamesPlayed ? standing.pointsFor / standing.gamesPlayed : undefined,
           papg: standing.gamesPlayed ? standing.pointsAgainst / standing.gamesPlayed : undefined,
           diff: standing.gamesPlayed
@@ -455,6 +471,7 @@ function Standings({
           gamesPlayed: standing.gamesPlayed,
           pointsFor: standing.pointsFor,
           pointsAgainst: standing.pointsAgainst,
+          streak: standing.streak,
         }))
     : (season.standings?.[conference] ?? []);
   const details = fullStandings[seasonId] ?? {};
@@ -567,9 +584,17 @@ function Standings({
               <th scope="col">%</th>
               {isRoundMode ? (
                 <>
+                  <th scope="col">GB</th>
+                  <th scope="col">Casa</th>
+                  <th scope="col">Fora</th>
+                  <th scope="col">Conf.</th>
+                  <th scope="col">Div.</th>
                   <th scope="col">PF</th>
                   <th scope="col">PA</th>
+                  <th scope="col">PPG</th>
+                  <th scope="col">PAPG</th>
                   <th scope="col">Saldo</th>
+                  <th scope="col">Seq.</th>
                 </>
               ) : (
                 <>
@@ -625,15 +650,23 @@ function Standings({
                   <td>{row.pct?.toFixed(3).replace(/^0/, "") ?? "—"}</td>
                   {isRoundMode ? (
                     <>
+                      <td>{row.gb}</td>
+                      <td>{row.home}</td>
+                      <td>{row.away}</td>
+                      <td>{row.conferenceRecord}</td>
+                      <td>{row.divisionRecord}</td>
                       <td>{row.pointsFor}</td>
                       <td>{row.pointsAgainst}</td>
+                      <td>{row.ppg?.toFixed(1) ?? "—"}</td>
+                      <td>{row.papg?.toFixed(1) ?? "—"}</td>
                       <td>
                         {row.gamesPlayed &&
                         row.pointsFor !== undefined &&
                         row.pointsAgainst !== undefined
-                          ? row.pointsFor - row.pointsAgainst
+                          ? ((row.pointsFor - row.pointsAgainst) / row.gamesPlayed).toFixed(1)
                           : "—"}
                       </td>
+                      <td>{row.streak}</td>
                     </>
                   ) : (
                     <>

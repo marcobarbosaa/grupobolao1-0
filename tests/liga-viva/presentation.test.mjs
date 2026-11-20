@@ -6,6 +6,7 @@ import {
   calculateStandingsThroughRound,
   filterSyntheticRoundGames,
 } from "../../src/lib/liga-viva/presentation.ts";
+import { loadPilotSeason } from "../../scripts/liga-viva/pilot.ts";
 
 const reconstruction = JSON.parse(
   readFileSync(
@@ -77,6 +78,40 @@ test("cumulative standings include only games through the selected round", () =>
     259321,
   );
   assert.ok(firstRound.every((team) => team.gamesPlayed <= team.wins + team.losses));
+});
+
+test("full simulated standings derive all final-table fields from played games", async () => {
+  const season = await loadPilotSeason("season-002");
+  const rounds = buildSyntheticRounds(reconstruction);
+  const progress = calculateStandingsThroughRound(
+    reconstruction.standings,
+    rounds,
+    rounds.length,
+    reconstruction.rules.divisions,
+  );
+
+  for (const target of season.target.teams) {
+    const actual = progress.find((team) => team.teamId === target.teamId);
+    assert.ok(actual);
+    assert.equal(actual.wins, target.wins);
+    assert.equal(actual.losses, target.losses);
+    assert.deepEqual(actual.homeRecord, target.home);
+    assert.deepEqual(actual.awayRecord, target.away);
+    assert.deepEqual(actual.conferenceRecord, target.conferenceRecord);
+    assert.deepEqual(actual.divisionRecord, target.divisionRecord);
+    assert.equal(Math.round((actual.pointsFor / actual.gamesPlayed) * 10) / 10, target.scoring.pointsForPerGame);
+    assert.equal(
+      Math.round((actual.pointsAgainst / actual.gamesPlayed) * 10) / 10,
+      target.scoring.pointsAgainstPerGame,
+    );
+    assert.match(actual.streak, /^[WL]\d+$/);
+  }
+
+  for (const conference of ["east", "west"]) {
+    const conferenceRows = progress.filter((team) => team.conference === conference);
+    assert.equal(conferenceRows[0].gamesBehind, 0);
+    assert.ok(conferenceRows.every((team) => team.gamesBehind >= 0));
+  }
 });
 
 test("team filter returns only the selected team's games across both conferences", () => {

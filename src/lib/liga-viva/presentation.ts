@@ -14,6 +14,12 @@ export type ProgressStanding = {
   wins: number;
   losses: number;
   pct: number;
+  gamesBehind: number;
+  homeRecord: { wins: number; losses: number };
+  awayRecord: { wins: number; losses: number };
+  conferenceRecord: { wins: number; losses: number };
+  divisionRecord: { wins: number; losses: number };
+  streak: string;
   pointsFor: number;
   pointsAgainst: number;
   pointDifferential: number;
@@ -69,7 +75,12 @@ export function calculateStandingsThroughRound(
   standings: ReconstructedStanding[],
   rounds: SyntheticRound[],
   throughRound: number,
+  divisions: { id: string; teams: string[] }[] = [],
 ): ProgressStanding[] {
+  const divisionByTeam = new Map<string, string>();
+  for (const division of divisions)
+    for (const teamId of division.teams) divisionByTeam.set(teamId, division.id);
+
   const progress = new Map<string, ProgressStanding>(
     standings.map((standing) => [
       standing.teamId,
@@ -80,12 +91,25 @@ export function calculateStandingsThroughRound(
         wins: 0,
         losses: 0,
         pct: 0,
+        gamesBehind: 0,
+        homeRecord: { wins: 0, losses: 0 },
+        awayRecord: { wins: 0, losses: 0 },
+        conferenceRecord: { wins: 0, losses: 0 },
+        divisionRecord: { wins: 0, losses: 0 },
+        streak: "—",
         pointsFor: 0,
         pointsAgainst: 0,
         pointDifferential: 0,
       },
     ]),
   );
+  const streaks = new Map<string, { result: "W" | "L"; count: number }>();
+
+  const addStreakResult = (teamId: string, result: "W" | "L") => {
+    const previous = streaks.get(teamId);
+    const count = previous?.result === result ? previous.count + 1 : 1;
+    streaks.set(teamId, { result, count });
+  };
 
   for (const round of rounds) {
     if (round.number > throughRound) break;
@@ -95,13 +119,44 @@ export function calculateStandingsThroughRound(
       if (!home || !away) continue;
       home.gamesPlayed += 1;
       away.gamesPlayed += 1;
-      if (game.winner === game.homeTeam) {
+      const homeWon = game.winner === game.homeTeam;
+      if (homeWon) {
         home.wins += 1;
         away.losses += 1;
       } else if (game.winner === game.awayTeam) {
         away.wins += 1;
         home.losses += 1;
       }
+      if (homeWon) {
+        home.homeRecord.wins += 1;
+        away.awayRecord.losses += 1;
+      } else {
+        home.homeRecord.losses += 1;
+        away.awayRecord.wins += 1;
+      }
+      if (home.conference === away.conference) {
+        if (homeWon) {
+          home.conferenceRecord.wins += 1;
+          away.conferenceRecord.losses += 1;
+        } else {
+          home.conferenceRecord.losses += 1;
+          away.conferenceRecord.wins += 1;
+        }
+      }
+      if (
+        divisionByTeam.get(game.homeTeam) &&
+        divisionByTeam.get(game.homeTeam) === divisionByTeam.get(game.awayTeam)
+      ) {
+        if (homeWon) {
+          home.divisionRecord.wins += 1;
+          away.divisionRecord.losses += 1;
+        } else {
+          home.divisionRecord.losses += 1;
+          away.divisionRecord.wins += 1;
+        }
+      }
+      addStreakResult(game.homeTeam, homeWon ? "W" : "L");
+      addStreakResult(game.awayTeam, homeWon ? "L" : "W");
       if (Number.isSafeInteger(game.homeScore) && Number.isSafeInteger(game.awayScore)) {
         home.pointsFor += game.homeScore!;
         home.pointsAgainst += game.awayScore!;
@@ -111,16 +166,34 @@ export function calculateStandingsThroughRound(
     }
   }
 
-  return [...progress.values()]
-    .map((team) => ({
+  const standingsThroughRound = [...progress.values()].map((team) => ({
       ...team,
       pct: team.gamesPlayed ? team.wins / team.gamesPlayed : 0,
+      streak: streaks.has(team.teamId)
+        ? `${streaks.get(team.teamId)!.result}${streaks.get(team.teamId)!.count}`
+        : "—",
       pointDifferential: team.pointsFor - team.pointsAgainst,
-    }))
-    .sort(
-      (first, second) =>
-        second.pct - first.pct ||
-        second.wins - first.wins ||
-        first.teamId.localeCompare(second.teamId),
-    );
+  }));
+  const conferenceLeaders = new Map<string, ProgressStanding>();
+  for (const team of standingsThroughRound) {
+    const currentLeader = conferenceLeaders.get(team.conference);
+    if (
+      !currentLeader ||
+      team.pct > currentLeader.pct ||
+      (team.pct === currentLeader.pct && team.wins > currentLeader.wins)
+    )
+      conferenceLeaders.set(team.conference, team);
+  }
+  for (const team of standingsThroughRound) {
+    const leader = conferenceLeaders.get(team.conference)!;
+    team.gamesBehind =
+      (leader.wins - team.wins + team.losses - leader.losses) / 2;
+  }
+
+  return standingsThroughRound.sort(
+    (first, second) =>
+      second.pct - first.pct ||
+      second.wins - first.wins ||
+      first.teamId.localeCompare(second.teamId),
+  );
 }
