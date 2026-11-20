@@ -35,6 +35,7 @@ const teamIdentityMetadata = {
   "Toronto Raptors": { code: "TOR", logo: "raptors" },
   "New York Knicks": { code: "NY", logo: "knicks" },
   "San Antonio Spurs": { code: "SA", logo: "spurs" },
+  "Milwaukee Bucks": { code: "MIL", logo: "bucks" },
   "Philadelphia 76ers": { code: "PHI", logo: "76ers" },
   "Houston Rockets": { code: "HOU", logo: "rockets" },
   "Chicago Bulls": { code: "CHI", logo: "bulls" },

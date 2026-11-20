@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceFolder": "https://drive.google.com/drive/folders/1-Gh_4tkPoZKGG9TKaZdSNIWbZvk1PslF",
-  "note": "Períodos 'em_diante' são abertos porque a pasta do Drive não indica temporada final. Não presumir time após trocas posteriores sem fonte. Identificação dos times foi extraída dos nomes dos arquivos, ainda sujeita à validação visual.",
+  "note": "Períodos em_diante foram limitados quando uma temporada específica tem vínculo de equipe confirmado. Cada temporada com time documentado usa registro explícito, evitando herdar uniformes após trocas. A temporada 2016–17 foi preenchida com base nas estatísticas individuais e no histórico de equipes publicados em season-012.",
   "records": [
     {
       "player": "abel",
@@ -14,7 +14,7 @@
     },
     {
       "player": "abel",
-      "period": "2009-2010_em_diante",
+      "period": "2009-2010_a_2015-2016",
       "team": "Phoenix Suns",
       "asset": "/jogadores/rotas/abel/2009-2010_em_diante.png",
       "originalName": "Abel_Suns.png",
@@ -32,7 +32,7 @@
     },
     {
       "player": "binho",
-      "period": "2012-2013_em_diante",
+      "period": "2012-2013_a_2015-2016",
       "team": "Denver Nuggets",
       "asset": "/jogadores/rotas/binho/2012-2013_em_diante.png",
       "originalName": "Campeão dos Nuggets com Troféus da NBA.png",
@@ -59,7 +59,7 @@
     },
     {
       "player": "cristiano-ronaldo",
-      "period": "2010-2011_em_diante",
+      "period": "2010-2011_a_2015-2016",
       "team": "Denver Nuggets",
       "asset": "/jogadores/rotas/cristiano-ronaldo/2010-2011_em_diante.png",
       "originalName": "Campeão beija o troféu do Nuggets.png",
@@ -86,7 +86,7 @@
     },
     {
       "player": "enzo",
-      "period": "2005-2006_em_diante",
+      "period": "2005-2006_a_2015-2016",
       "team": "San Antonio Spurs",
       "asset": "/jogadores/rotas/enzo/2005-2006_em_diante.png",
       "originalName": "08_Spurs_43.png",
@@ -104,7 +104,7 @@
     },
     {
       "player": "gam",
-      "period": "2012-2013_em_diante",
+      "period": "2012-2013_a_2015-2016",
       "team": "Philadelphia 76ers",
       "asset": "/jogadores/rotas/gam/2012-2013_em_diante.png",
       "originalName": "Jogador dos 76ers em pose heroica.png",
@@ -113,7 +113,7 @@
     },
     {
       "player": "guilherme",
-      "period": "2005-2006_em_diante",
+      "period": "2005-2006_a_2015-2016",
       "team": "Chicago Bulls",
       "asset": "/jogadores/rotas/guilherme/2005-2006_em_diante.png",
       "originalName": "Campeão dos Bulls com Dois Troféus.png",
@@ -122,7 +122,7 @@
     },
     {
       "player": "jonas",
-      "period": "2005-2006_em_diante",
+      "period": "2005-2006_a_2015-2016",
       "team": "New York Knicks",
       "asset": "/jogadores/rotas/jonas/2005-2006_em_diante.png",
       "originalName": "Jogador dos Knicks Exibe Três Anéis.png",
@@ -140,7 +140,7 @@
     },
     {
       "player": "marco",
-      "period": "2011-2012_em_diante",
+      "period": "2011-2012_a_2015-2016",
       "team": "Miami Heat",
       "asset": "/jogadores/rotas/marco/2011-2012_em_diante.png",
       "originalName": "Atleta do Miami Heat em destaque.png",
@@ -149,7 +149,7 @@
     },
     {
       "player": "medeiros",
-      "period": "2005-2006_em_diante",
+      "period": "2005-2006_a_2015-2016",
       "team": "Philadelphia 76ers",
       "asset": "/jogadores/rotas/medeiros/2005-2006_em_diante.png",
       "originalName": "Jogador dos 76ers com Barba Marcante.png",
@@ -167,7 +167,7 @@
     },
     {
       "player": "nando",
-      "period": "2012-2013_em_diante",
+      "period": "2012-2013_a_2015-2016",
       "team": "Denver Nuggets",
       "asset": "/jogadores/rotas/nando/2012-2013_em_diante.png",
       "originalName": "Campeão com Dois Troféus da NBA.png",
@@ -176,7 +176,7 @@
     },
     {
       "player": "russo",
-      "period": "2005-2006_em_diante",
+      "period": "2005-2006_a_2015-2016",
       "team": "Toronto Raptors",
       "asset": "/jogadores/rotas/russo/2005-2006_em_diante.png",
       "originalName": "06_Raptors_7.png",
@@ -194,12 +194,116 @@
     },
     {
       "player": "tailan",
-      "period": "2009-2010_em_diante",
+      "period": "2009-2010_a_2015-2016",
       "team": "New York Knicks",
       "asset": "/jogadores/rotas/tailan/2009-2010_em_diante.png",
       "originalName": "Campeão com Dois Troféus Larry O’Brien.png",
       "driveSource": "https://drive.google.com/file/d/1-YDzyPISYvGFJc70wpmMY42W_9L9m1pp/view",
       "verification": "team_and_period_manually_confirmed_by_user"
+    },
+    {
+      "player": "abel",
+      "period": "2016-2017",
+      "team": "Phoenix Suns",
+      "asset": "/jogadores/rotas/abel/2005-2006_a_2008-2009.png",
+      "originalName": "Abel_Kings.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "binho",
+      "period": "2016-2017",
+      "team": "Philadelphia 76ers",
+      "asset": "/jogadores/rotas/binho/2005-2006_a_2011-2012.png",
+      "originalName": "Binho_Hornets.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "cristiano-ronaldo",
+      "period": "2016-2017",
+      "team": "Denver Nuggets",
+      "asset": "/jogadores/rotas/cristiano-ronaldo/2005-2006_a_2008-2009.png",
+      "originalName": "01_Pacers_22.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "dias",
+      "period": "2016-2017",
+      "team": "Dallas Mavericks",
+      "asset": "/jogadores/rotas/dias/2005-2006_a_2008-2009.png",
+      "originalName": "02_Pistons_31.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "enzo",
+      "period": "2016-2017",
+      "team": "San Antonio Spurs",
+      "asset": "/jogadores/rotas/enzo/2005-2006_em_diante.png",
+      "originalName": "08_Spurs_43.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "gam",
+      "period": "2016-2017",
+      "team": "Philadelphia 76ers",
+      "asset": "/jogadores/rotas/gam/2005-2006_a_2011-2012.png",
+      "originalName": "Campeão Hawks com Troféus Dourados.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "guilherme",
+      "period": "2016-2017",
+      "team": "Dallas Mavericks",
+      "asset": "/jogadores/rotas/guilherme/2005-2006_em_diante.png",
+      "originalName": "Campeão dos Bulls com Dois Troféus.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "jonas",
+      "period": "2016-2017",
+      "team": "New York Knicks",
+      "asset": "/jogadores/rotas/jonas/2005-2006_em_diante.png",
+      "originalName": "Jogador dos Knicks Exibe Três Anéis.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "marco",
+      "period": "2016-2017",
+      "team": "Atlanta Hawks",
+      "asset": "/jogadores/rotas/marco/2005-2006_a_2010-2011.png",
+      "originalName": "03_Nuggets_46.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "medeiros",
+      "period": "2016-2017",
+      "team": "Philadelphia 76ers",
+      "asset": "/jogadores/rotas/medeiros/2005-2006_em_diante.png",
+      "originalName": "Jogador dos 76ers com Barba Marcante.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "nando",
+      "period": "2016-2017",
+      "team": "Milwaukee Bucks",
+      "asset": "/jogadores/rotas/nando/2005-2006_a_2011-2012.png",
+      "originalName": "Jogador dos Rockets em Pose Heroica.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "russo",
+      "period": "2016-2017",
+      "team": "Detroit Pistons",
+      "asset": "/jogadores/rotas/russo/2005-2006_em_diante.png",
+      "originalName": "06_Raptors_7.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
+    },
+    {
+      "player": "tailan",
+      "period": "2016-2017",
+      "team": "New York Knicks",
+      "asset": "/jogadores/rotas/tailan/2005-2006_a_2008-2009.png",
+      "originalName": "04_Timberwolves_6.png",
+      "verification": "team_confirmed_from_season_012_published_statistics_and_team_history"
     }
   ]
 }

@@ -84,6 +84,13 @@ export const teamPalettes = {
     secondary: "#8F1D31",
     accent: "#F1C66D",
   },
+  "Milwaukee Bucks": {
+    background: "#071B12",
+    surface: "#123B2A",
+    primary: "#00471B",
+    secondary: "#EEE1C6",
+    accent: "#0077C0",
+  },
   "Philadelphia 76ers": {
     background: "#081427",
     surface: "#152C4E",

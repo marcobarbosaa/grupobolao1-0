@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import phaseProgression from "../../data/statistics/season-002/progression.json";
 import { publishedCatalog, publishedSeasons, latestSeasonId } from "../../lib/published-catalog";
 import { newRoster, type BolaoPlayer } from "../../lib/new-roster";
+import { getPlayerAppearance } from "../../lib/player-selection-identity";
 import "../../styles/published-statistics.css";
 
 const approved = publishedCatalog.records.filter((record) => record.kind === "phase");
@@ -332,6 +333,7 @@ export function SeasonStatistics({
         {newRoster.map((player) => {
           const record = byPlayer.get(player.id);
           const a = record?.stats.averages;
+          const historicalTeam = getPlayerAppearance(player.id, seasonId).team;
           return (
             <Link
               to="/jogadores/$id"
@@ -343,7 +345,7 @@ export function SeasonStatistics({
             >
               <img src={player.portrait} alt="" loading="lazy" />
               <div className="published-season-player-copy">
-                <span>{player.team}</span>
+                <span>{historicalTeam}</span>
                 <h2>{player.name}</h2>
                 {record ? (
                   <p>
