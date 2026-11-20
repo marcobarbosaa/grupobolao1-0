@@ -516,7 +516,7 @@
     "recordId": "stat-s12-playoffs-nando",
     "recordKind": "phase",
     "revision": 1,
-    "batchId": "batch-s12-nando-dias-playoffs",
+    "batchId": "batch-s12-nando-playoffs-consolidated",
     "sourceIds": [
       "src-s12-nando-career-1",
       "src-s12-nando-career-2",
