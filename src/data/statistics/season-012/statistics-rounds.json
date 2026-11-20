@@ -1880,5 +1880,661 @@
       "note": "DADOS FICTÍCIOS — reconstrução solicitada e autorizada pelo usuário. Os 5 jogos da rodada vêm do chaveamento; as médias e os percentuais foram estimados para que a média ponderada por GP das quatro fases arredonde para o consolidado Playoffs de Career Stats de Dias (40,3 MPG; 26,9 PPG; 3,0 RPG; 10,7 APG; 1,0 SPG; 0,0 BPG; 3,2 TOPG; 49,6 FG%; 43,8 3P%; 82,3 FT%). Estes números não são boxescores observados.",
       "expectedGames": 5
     }
+  },
+  {
+    "id": "stat-s12-playoffs-abel",
+    "kind": "phase",
+    "playerId": "abel",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "phoenix-suns",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-abel-career-1",
+      "src-s12-abel-career-2"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 16,
+        "gs": 16,
+        "points": 324,
+        "rebounds": 253,
+        "assists": 48,
+        "steals": 14,
+        "blocks": 26,
+        "turnovers": 35,
+        "fgm": 109,
+        "fga": 212,
+        "threePm": 0,
+        "threePa": 0
+      },
+      "averages": {
+        "mpg": 37.1,
+        "ppg": 20.2,
+        "rpg": 15.8,
+        "apg": 3,
+        "spg": 0.9,
+        "bpg": 1.6,
+        "topg": 2.2
+      },
+      "percentages": {
+        "fgPct": 51.4,
+        "threePct": 0,
+        "ftPct": 74.6
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "partial",
+      "sourceIds": [
+        "src-s12-abel-career-1",
+        "src-s12-abel-career-2"
+      ],
+      "note": "Linha Playoffs das duas capturas Career Stats. GP/GS conferidos pela soma das três rodadas registradas. As capturas disponíveis não mostram minutos totais, FTM/FTA, faltas nem DD/TD; esses campos permanecem ausentes.",
+      "expectedGames": 16
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-fabio-carvalho",
+    "kind": "phase",
+    "playerId": "fabio-carvalho",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-binho-career-1",
+      "src-s12-binho-career-2",
+      "src-s12-binho-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 22,
+        "gs": 22,
+        "minutes": 673,
+        "points": 361,
+        "rebounds": 219,
+        "assists": 56,
+        "steals": 20,
+        "blocks": 48,
+        "turnovers": 35,
+        "fgm": 138,
+        "fga": 280,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 85,
+        "fta": 109,
+        "fouls": 61,
+        "doubleDoubles": 7,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 30.6,
+        "ppg": 16.4,
+        "rpg": 10,
+        "apg": 2.5,
+        "spg": 0.9,
+        "bpg": 2.2,
+        "topg": 1.6
+      },
+      "percentages": {
+        "fgPct": 49.3,
+        "threePct": 0,
+        "ftPct": 78
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-binho-career-1",
+        "src-s12-binho-career-2",
+        "src-s12-binho-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 22
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-cristiano-ronaldo",
+    "kind": "phase",
+    "playerId": "cristiano-ronaldo",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "denver-nuggets",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-cerrote-career-1",
+      "src-s12-cerrote-career-2",
+      "src-s12-cerrote-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 8,
+        "gs": 8,
+        "minutes": 307,
+        "points": 249,
+        "rebounds": 42,
+        "assists": 53,
+        "steals": 18,
+        "blocks": 0,
+        "turnovers": 22,
+        "fgm": 84,
+        "fga": 148,
+        "threePm": 17,
+        "threePa": 29,
+        "ftm": 64,
+        "fta": 73,
+        "fouls": 21,
+        "doubleDoubles": 1,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 38.4,
+        "ppg": 31.1,
+        "rpg": 5.3,
+        "apg": 6.6,
+        "spg": 2.3,
+        "bpg": 0,
+        "topg": 2.8
+      },
+      "percentages": {
+        "fgPct": 56.8,
+        "threePct": 58.6,
+        "ftPct": 87.7
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-cerrote-career-1",
+        "src-s12-cerrote-career-2",
+        "src-s12-cerrote-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 8
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-gam-mori",
+    "kind": "phase",
+    "playerId": "gam-mori",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-gam-career-1",
+      "src-s12-gam-career-2"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 22,
+        "gs": 22,
+        "minutes": 766,
+        "points": 523,
+        "rebounds": 98,
+        "assists": 129,
+        "steals": 26,
+        "blocks": 10,
+        "turnovers": 56,
+        "fgm": 179,
+        "fga": 336,
+        "threePm": 12,
+        "threePa": 24,
+        "ftm": 153,
+        "fta": 163,
+        "fouls": 61,
+        "doubleDoubles": 1,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 34.8,
+        "ppg": 23.8,
+        "rpg": 4.5,
+        "apg": 5.9,
+        "spg": 1.2,
+        "bpg": 0.5,
+        "topg": 2.5
+      },
+      "percentages": {
+        "fgPct": 53.3,
+        "threePct": 50,
+        "ftPct": 93.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-gam-career-1",
+        "src-s12-gam-career-2"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 22
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-guilherme",
+    "kind": "phase",
+    "playerId": "guilherme",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "dallas-mavericks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-guilherme-career-1",
+      "src-s12-guilherme-career-2",
+      "src-s12-guilherme-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 21,
+        "gs": 21,
+        "minutes": 753,
+        "points": 520,
+        "rebounds": 177,
+        "assists": 89,
+        "steals": 41,
+        "blocks": 25,
+        "turnovers": 48,
+        "fgm": 169,
+        "fga": 342,
+        "threePm": 52,
+        "threePa": 147,
+        "ftm": 130,
+        "fta": 154,
+        "fouls": 80,
+        "doubleDoubles": 9,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 35.9,
+        "ppg": 24.8,
+        "rpg": 8.4,
+        "apg": 4.2,
+        "spg": 2,
+        "bpg": 1.2,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 49.4,
+        "threePct": 35.4,
+        "ftPct": 84.4
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-guilherme-career-1",
+        "src-s12-guilherme-career-2",
+        "src-s12-guilherme-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 21
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-jonas",
+    "kind": "phase",
+    "playerId": "jonas",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-jonas-career-1",
+      "src-s12-jonas-career-2",
+      "src-s12-jonas-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 10,
+        "gs": 10,
+        "minutes": 353,
+        "points": 279,
+        "rebounds": 115,
+        "assists": 34,
+        "steals": 5,
+        "blocks": 9,
+        "turnovers": 10,
+        "fgm": 94,
+        "fga": 167,
+        "threePm": 30,
+        "threePa": 68,
+        "ftm": 61,
+        "fta": 70,
+        "fouls": 27,
+        "doubleDoubles": 7,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 35.3,
+        "ppg": 27.9,
+        "rpg": 11.5,
+        "apg": 3.4,
+        "spg": 0.5,
+        "bpg": 0.9,
+        "topg": 1
+      },
+      "percentages": {
+        "fgPct": 56.3,
+        "threePct": 44.1,
+        "ftPct": 87.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-jonas-career-1",
+        "src-s12-jonas-career-2",
+        "src-s12-jonas-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 10
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-matheus-medeiros",
+    "kind": "phase",
+    "playerId": "matheus-medeiros",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "philadelphia-76ers",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-medeiros-career-1",
+      "src-s12-medeiros-career-2",
+      "src-s12-medeiros-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 22,
+        "gs": 22,
+        "minutes": 814,
+        "points": 574,
+        "rebounds": 297,
+        "assists": 52,
+        "steals": 26,
+        "blocks": 35,
+        "turnovers": 51,
+        "fgm": 217,
+        "fga": 387,
+        "threePm": 0,
+        "threePa": 0,
+        "ftm": 140,
+        "fta": 187,
+        "fouls": 59,
+        "doubleDoubles": 18,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 37,
+        "ppg": 26.1,
+        "rpg": 13.5,
+        "apg": 2.4,
+        "spg": 1.2,
+        "bpg": 1.6,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 56.1,
+        "threePct": 0,
+        "ftPct": 74.9
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-medeiros-career-1",
+        "src-s12-medeiros-career-2",
+        "src-s12-medeiros-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 22
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-russo",
+    "kind": "phase",
+    "playerId": "russo",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "detroit-pistons",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-russo-career-1",
+      "src-s12-russo-career-2",
+      "src-s12-russo-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 9,
+        "gs": 9,
+        "minutes": 330,
+        "points": 258,
+        "rebounds": 34,
+        "assists": 73,
+        "steals": 18,
+        "blocks": 3,
+        "turnovers": 21,
+        "fgm": 85,
+        "fga": 165,
+        "threePm": 39,
+        "threePa": 78,
+        "ftm": 49,
+        "fta": 56,
+        "fouls": 21,
+        "doubleDoubles": 2,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 36.7,
+        "ppg": 28.7,
+        "rpg": 3.8,
+        "apg": 8.1,
+        "spg": 2,
+        "bpg": 0.3,
+        "topg": 2.3
+      },
+      "percentages": {
+        "fgPct": 51.5,
+        "threePct": 50,
+        "ftPct": 87.5
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-russo-career-1",
+        "src-s12-russo-career-2",
+        "src-s12-russo-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 9
+    }
+  },
+  {
+    "id": "stat-s12-playoffs-tailan",
+    "kind": "phase",
+    "playerId": "tailan",
+    "seasonId": "season-012",
+    "phaseId": "playoffs",
+    "scope": "team",
+    "teamId": "new-york-knicks",
+    "availability": "available",
+    "revision": 1,
+    "sourceIds": [
+      "src-s12-tailan-career-1",
+      "src-s12-tailan-career-2",
+      "src-s12-tailan-career-3"
+    ],
+    "stats": {
+      "totals": {
+        "gp": 10,
+        "gs": 10,
+        "minutes": 312,
+        "points": 271,
+        "rebounds": 26,
+        "assists": 34,
+        "steals": 8,
+        "blocks": 2,
+        "turnovers": 20,
+        "fgm": 91,
+        "fga": 158,
+        "threePm": 26,
+        "threePa": 50,
+        "ftm": 63,
+        "fta": 74,
+        "fouls": 36,
+        "doubleDoubles": 0,
+        "tripleDoubles": 0
+      },
+      "averages": {
+        "mpg": 31.2,
+        "ppg": 27.1,
+        "rpg": 2.6,
+        "apg": 3.4,
+        "spg": 0.8,
+        "bpg": 0.2,
+        "topg": 2
+      },
+      "percentages": {
+        "fgPct": 57.6,
+        "threePct": 52,
+        "ftPct": 85.1
+      }
+    },
+    "displayPrecision": {
+      "mpg": 1,
+      "ppg": 1,
+      "rpg": 1,
+      "apg": 1,
+      "spg": 1,
+      "bpg": 1,
+      "topg": 1,
+      "fgPct": 1,
+      "threePct": 1,
+      "ftPct": 1
+    },
+    "coverage": {
+      "status": "complete",
+      "sourceIds": [
+        "src-s12-tailan-career-1",
+        "src-s12-tailan-career-2",
+        "src-s12-tailan-career-3"
+      ],
+      "note": "Consolidado copiado da linha Playoffs nas capturas Career Stats do NBA 2K26; totais e médias conferidos no material original.",
+      "expectedGames": 10
+    }
   }
 ]
