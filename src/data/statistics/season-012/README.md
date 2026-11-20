@@ -4,7 +4,7 @@
 
 - Temporada 12 (2016–17) configurada com Temporada regular, Playoffs, Primeira rodada, Quartas, Finais de conferência e Finais da NBA.
 - 13 registros individuais da temporada regular e 13 vínculos de histórico jogador/equipe.
-- 33 registros estatísticos por fase/consolidado de playoffs, incluindo os complementos de Nando e Dias.
+- 42 registros estatísticos por fase/consolidado de playoffs, incluindo 11 consolidados gerais de Career Stats e as fases registradas.
 - 30 posições de classificação (15 por conferência), com campanhas, aproveitamento, casa/fora, conferência/divisão, pontos por jogo, pontos sofridos, saldo e sequência.
 - 15 séries do chaveamento dos playoffs, até a NBA Finals; Dallas Mavericks campeão sobre Philadelphia 76ers por 4–1.
 - 101 capturas do ZIP inventariadas: 38 imagens de Career Stats, 58 imagens de fases e 5 imagens de Extras. Todas as imagens incorporadas possuem SHA-256 calculado sobre os bytes originais.
@@ -39,3 +39,12 @@ A média ponderada pelo número de jogos das quatro linhas arredonda para os val
 ## Precisão e procedência
 
 Os registros por fase guardam os GP/GS e as médias/percentuais exibidos quando havia captura. Os totais de arremessos por fase não foram inferidos de médias arredondadas. Os totais consolidados de Career Stats permanecem separados das médias sintéticas por fase. As imagens originais não foram adicionadas ao repositório: cada fonte tem nome, pasta no ZIP, tamanho e hash SHA-256 para auditoria.
+
+
+## Consolidados gerais de playoffs — Career Stats
+
+Foram publicados os consolidados das capturas Career Stats para Abel, Fábio Carvalho, Cristiano Ronaldo, Dias, Gam Mori, Guilherme, Jonas, Matheus Medeiros, Nando, Russo e Tailan. Os totais e médias são independentes dos registros por rodada; o site apresenta o consolidado uma única vez, sem somá-lo novamente às fases. Para Abel, campos ausentes na captura permanecem sem valor. Marco Barbosa e Enzo não têm campanha de playoffs registrada porque suas equipes não se classificaram.
+
+## Imagens históricas — 2016–2017
+
+Os vínculos de imagem foram corrigidos onde já existia um retrato do próprio jogador com o uniforme correspondente: Abel (Suns), Cristiano Ronaldo (Nuggets), Dias (Mavericks), Gam Mori (76ers) e Tailan (Knicks). Os arquivos corretos para Fábio Carvalho (76ers), Guilherme (Mavericks), Marco Barbosa (Hawks), Nando (Bucks) e Russo (Pistons) não estão presentes no repositório atual; os retratos antigos foram preservados para evitar substituir um jogador por outro. Esses cinco ainda precisam dos respectivos arquivos de imagem corretos.
