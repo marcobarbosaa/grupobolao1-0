@@ -99,14 +99,15 @@ function formatValue(value: number, metricId: string, mode: RecordsMode) {
   return isPercentage ? `${formatted}%` : formatted;
 }
 
-function seasonLabel(entry: RankedRecord, metricId?: string) {
+function seasonLabel(entry: RankedRecord, metricId?: string, perspective?: RecordsPerspective) {
   if (metricId === "scoring-leads") {
     const count = entry.seasonIds.length;
     return `${count} temporada${count === 1 ? "" : "s"} na liderança`;
   }
   const season = entry.seasonId ? seasonById.get(entry.seasonId) : undefined;
   if (season) return `${season.title} · ${season.year}`;
-  if (entry.seasonIds.length > 1) return `Carreira · ${entry.seasonIds.length} temporadas`;
+  if (entry.seasonIds.length > 1)
+    return `${perspective === "playoffs" ? "Playoffs" : "Carreira"} · ${entry.seasonIds.length} temporadas`;
   return entry.seasonIds[0]
     ? (seasonById.get(entry.seasonIds[0])?.title ?? "Temporada")
     : "Carreira";
@@ -125,7 +126,15 @@ function initials(name: string) {
 function PlayerPortrait({ entry, large = false }: { entry: RankedRecord; large?: boolean }) {
   const details = playerDetails(entry);
   return (
-    <span className={large ? "records-portrait records-portrait--large" : "records-portrait"}>
+    <span
+      className={[
+        "records-portrait",
+        details.image && "records-portrait--with-image",
+        large && "records-portrait--large",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       {details.image ? (
         <img src={details.image} alt="" loading="lazy" decoding="async" />
       ) : (
@@ -154,6 +163,7 @@ export function RecordsArchive() {
   const [category, setCategory] = useState<RecordCategory>("scoring");
   const [metricId, setMetricId] = useState("points");
   const [mode, setMode] = useState<RecordsMode>("total");
+  const [aggregateSeasons, setAggregateSeasons] = useState(false);
   const [seasonId, setSeasonId] = useState("all");
   const [phaseId, setPhaseId] = useState("playoffs");
   const [search, setSearch] = useState("");
@@ -170,8 +180,9 @@ export function RecordsArchive() {
         mode: activeMode,
         seasonId: seasonId === "all" ? undefined : seasonId,
         phaseId: perspective === "playoffs" ? phaseId : undefined,
+        aggregateSeasons: activeMode === "average" && aggregateSeasons,
       }),
-    [perspective, metricId, activeMode, seasonId, phaseId],
+    [perspective, metricId, activeMode, seasonId, phaseId, aggregateSeasons],
   );
   const filtered = useMemo(() => {
     const term = search.trim().toLocaleLowerCase();
@@ -390,6 +401,27 @@ export function RecordsArchive() {
             </button>
           </div>
         )}
+        {canAverage &&
+          activeMode === "average" &&
+          (perspective === "regular" || perspective === "playoffs") &&
+          seasonId === "all" && (
+            <div className="records-mode" role="group" aria-label="Agrupamento das médias">
+              <button
+                type="button"
+                aria-pressed={!aggregateSeasons}
+                onClick={() => setAggregateSeasons(false)}
+              >
+                Por temporada
+              </button>
+              <button
+                type="button"
+                aria-pressed={aggregateSeasons}
+                onClick={() => setAggregateSeasons(true)}
+              >
+                Geral
+              </button>
+            </div>
+          )}
       </section>
 
       <div className="records-results-meta">
@@ -400,6 +432,11 @@ export function RecordsArchive() {
           {filtered.length} {filtered.length === 1 ? "registro" : "registros"}
         </span>
       </div>
+      {filtered.some((entry) => entry.approximate) && (
+        <p className="records-approximation">
+          Média geral aproximada: ponderada pelos jogos a partir das médias arredondadas publicadas.
+        </p>
+      )}
 
       {coLeaders.length > 0 ? (
         <section
@@ -429,7 +466,7 @@ export function RecordsArchive() {
                 </PlayerLink>
                 <p className="records-feature-subtitle">
                   {playerDetails(coLeaders[0]).team} <span>·</span>{" "}
-                  {seasonLabel(coLeaders[0], metricId)}
+                  {seasonLabel(coLeaders[0], metricId, perspective)}
                 </p>
               </>
             ) : (
@@ -440,7 +477,7 @@ export function RecordsArchive() {
                       <PlayerPortrait entry={entry} />
                       {playerDetails(entry).name}
                     </PlayerLink>
-                    <span>{seasonLabel(entry, metricId)}</span>
+                    <span>{seasonLabel(entry, metricId, perspective)}</span>
                   </li>
                 ))}
               </ul>
@@ -521,7 +558,9 @@ export function RecordsArchive() {
                     {details.team}
                   </span>
                 </div>
-                <span className="records-row-season">{seasonLabel(entry, metricId)}</span>
+                <span className="records-row-season">
+                  {seasonLabel(entry, metricId, perspective)}
+                </span>
                 <span className="records-row-games">
                   {entry.games === undefined ? "—" : `${entry.games} J`}
                 </span>

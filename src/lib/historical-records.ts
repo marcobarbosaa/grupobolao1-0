@@ -151,6 +151,7 @@ export interface RankedRecord {
   games?: number;
   value: number;
   rank: number;
+  approximate?: boolean;
 }
 
 export interface LeaderboardOptions {
@@ -159,6 +160,7 @@ export interface LeaderboardOptions {
   mode: RecordsMode;
   seasonId?: string;
   phaseId?: string;
+  aggregateSeasons?: boolean;
 }
 
 function phaseRecords(records: readonly StatisticalRecord[]): PhaseRecord[] {
@@ -198,25 +200,26 @@ function careerValue(
   rows: PhaseRecord[],
   metric: RecordMetric,
   mode: RecordsMode,
-): { value: number; games?: number } | undefined {
+  playoff: boolean,
+): { value: number; games?: number; approximate?: boolean } | undefined {
   if (metric.id === "seasons" || metric.id === "playoff-seasons") return { value: rows.length };
 
   if (metric.percentageKey && metric.madeKey && metric.attemptsKey) {
     const made = rows.map((record) => total(record, metric.madeKey!));
     const attempts = rows.map((record) => total(record, metric.attemptsKey!));
     const games = sumAvailable(rows.map((record) => total(record, "gp")));
-    const playoff = rows.some((record) => record.phaseId === "playoffs");
+    const isPlayoff = playoff || rows.some((record) => record.phaseId === "playoffs");
     const seasonSample = rows.length === 1;
-    const minGames = seasonSample ? (playoff ? 10 : 25) : playoff ? 20 : 82;
+    const minGames = seasonSample ? (isPlayoff ? 10 : 25) : isPlayoff ? 20 : 82;
     const minAttempts = seasonSample
       ? metric.id === "fgPct"
-        ? playoff
+        ? isPlayoff
           ? 50
           : 100
-        : playoff
+        : isPlayoff
           ? 25
           : 50
-      : playoff
+      : isPlayoff
         ? metric.id === "fgPct"
           ? 100
           : 50
@@ -240,9 +243,23 @@ function careerValue(
   if (mode === "average") {
     if (!games || metric.totalKey === "gp" || metric.totalKey === "gs") return undefined;
     const numerator = sumAvailable(totals);
-    if (numerator === undefined) return undefined;
-    const result = calculateAverage(numerator, games);
-    return result.status === "available" ? { value: result.value, games } : undefined;
+    if (numerator !== undefined) {
+      const result = calculateAverage(numerator, games);
+      return result.status === "available" ? { value: result.value, games } : undefined;
+    }
+    if (!metric.averageKey) return undefined;
+    const weightedValues = rows.map((record) => {
+      const recordGames = total(record, "gp");
+      const average = record.stats.averages?.[metric.averageKey!];
+      if (recordGames === undefined || average === undefined) return undefined;
+      return average * recordGames;
+    });
+    if (weightedValues.some((value) => value === undefined)) return undefined;
+    const weightedTotal = weightedValues.reduce<number>((sum, value) => sum + value!, 0);
+    const result = calculateAverage(weightedTotal, games);
+    return result.status === "available"
+      ? { value: result.value, games, approximate: true }
+      : undefined;
   }
   const value = sumAvailable(totals);
   if (value === undefined) return undefined;
@@ -254,7 +271,7 @@ function seasonValue(
   metric: RecordMetric,
   mode: RecordsMode,
   playoff: boolean,
-): { value: number; games?: number } | undefined {
+): { value: number; games?: number; approximate?: boolean } | undefined {
   const games = total(record, "gp");
   if (metric.id === "seasons" || metric.id === "playoff-seasons") return { value: 1, games };
 
@@ -337,7 +354,7 @@ function entryFor(
 ): RankedRecord | undefined {
   if (!rows.length) return undefined;
   const result = aggregate
-    ? careerValue(rows, metric, mode)
+    ? careerValue(rows, metric, mode, playoff)
     : seasonValue(rows[0], metric, mode, playoff);
   if (!result) return undefined;
 
@@ -353,6 +370,7 @@ function entryFor(
     games: result.games,
     value: result.value,
     rank: 0,
+    approximate: result.approximate,
   };
 }
 
@@ -424,7 +442,11 @@ export function getHistoricalLeaderboard(
   );
   const aggregate =
     (options.perspective === "career" && !options.seasonId) ||
-    (options.perspective === "playoffs" && phaseId === "playoffs" && !options.seasonId);
+    (options.perspective === "playoffs" &&
+      !options.seasonId &&
+      ((phaseId === "playoffs" && options.mode !== "average") ||
+        (options.mode === "average" && options.aggregateSeasons))) ||
+    (options.perspective === "regular" && options.aggregateSeasons && !options.seasonId);
   const playoff = options.perspective === "playoffs";
   const candidates: RankedRecord[] = [];
 
