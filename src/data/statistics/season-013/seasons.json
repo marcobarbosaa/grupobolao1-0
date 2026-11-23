@@ -1,0 +1,23 @@
+[
+  {
+    "id": "season-013",
+    "edition": 13,
+    "label": "2017–18 · Temporada 13",
+    "sport": "basquete",
+    "status": "completed",
+    "phases": [
+      {
+        "id": "regular",
+        "name": "Temporada regular",
+        "order": 0,
+        "type": "stage"
+      },
+      {
+        "id": "playoffs",
+        "name": "Playoffs",
+        "order": 1,
+        "type": "aggregate"
+      }
+    ]
+  }
+]

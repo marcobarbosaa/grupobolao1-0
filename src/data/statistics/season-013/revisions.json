@@ -1,0 +1,288 @@
+[
+  {
+    "id": "rev-stat-s13-regular-jonas-r1",
+    "recordId": "stat-s13-regular-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-jonas-career-1",
+      "src-s13-jonas-career-2",
+      "src-s13-jonas-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-jonas-r1",
+    "recordId": "stat-s13-playoffs-jonas",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-jonas-career-1",
+      "src-s13-jonas-career-2",
+      "src-s13-jonas-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-tailan-r1",
+    "recordId": "stat-s13-regular-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-tailan-career-1",
+      "src-s13-tailan-career-2",
+      "src-s13-tailan-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-tailan-r1",
+    "recordId": "stat-s13-playoffs-tailan",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-tailan-career-1",
+      "src-s13-tailan-career-2",
+      "src-s13-tailan-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-dias-r1",
+    "recordId": "stat-s13-regular-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-dias-career-1",
+      "src-s13-dias-career-2",
+      "src-s13-dias-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-dias-r1",
+    "recordId": "stat-s13-playoffs-dias",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-dias-career-1",
+      "src-s13-dias-career-2",
+      "src-s13-dias-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-guilherme-r1",
+    "recordId": "stat-s13-regular-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-guilherme-career-1",
+      "src-s13-guilherme-career-2",
+      "src-s13-guilherme-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-guilherme-r1",
+    "recordId": "stat-s13-playoffs-guilherme",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-guilherme-career-1",
+      "src-s13-guilherme-career-2",
+      "src-s13-guilherme-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-cristiano-ronaldo-r1",
+    "recordId": "stat-s13-regular-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-cristiano-ronaldo-career-1",
+      "src-s13-cristiano-ronaldo-career-2",
+      "src-s13-cristiano-ronaldo-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-cristiano-ronaldo-r1",
+    "recordId": "stat-s13-playoffs-cristiano-ronaldo",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-cristiano-ronaldo-career-1",
+      "src-s13-cristiano-ronaldo-career-2",
+      "src-s13-cristiano-ronaldo-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-russo-r1",
+    "recordId": "stat-s13-regular-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-russo-career-1",
+      "src-s13-russo-career-2",
+      "src-s13-russo-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-russo-r1",
+    "recordId": "stat-s13-playoffs-russo",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-russo-career-1",
+      "src-s13-russo-career-2",
+      "src-s13-russo-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-enzo-r1",
+    "recordId": "stat-s13-regular-enzo",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-enzo-career-1",
+      "src-s13-enzo-career-2",
+      "src-s13-enzo-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-abel-r1",
+    "recordId": "stat-s13-regular-abel",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-abel-career-1",
+      "src-s13-abel-career-2",
+      "src-s13-abel-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-matheus-medeiros-r1",
+    "recordId": "stat-s13-regular-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-matheus-medeiros-career-1",
+      "src-s13-matheus-medeiros-career-2",
+      "src-s13-matheus-medeiros-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-matheus-medeiros-r1",
+    "recordId": "stat-s13-playoffs-matheus-medeiros",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-matheus-medeiros-career-1",
+      "src-s13-matheus-medeiros-career-2",
+      "src-s13-matheus-medeiros-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-fabio-carvalho-r1",
+    "recordId": "stat-s13-regular-fabio-carvalho",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-fabio-carvalho-career-1",
+      "src-s13-fabio-carvalho-career-2",
+      "src-s13-fabio-carvalho-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-gam-mori-r1",
+    "recordId": "stat-s13-regular-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-gam-mori-career-1",
+      "src-s13-gam-mori-career-2",
+      "src-s13-gam-mori-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-gam-mori-r1",
+    "recordId": "stat-s13-playoffs-gam-mori",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-gam-mori-career-1",
+      "src-s13-gam-mori-career-2",
+      "src-s13-gam-mori-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-nando-r1",
+    "recordId": "stat-s13-regular-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-nando-career-1",
+      "src-s13-nando-career-2",
+      "src-s13-nando-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-playoffs-nando-r1",
+    "recordId": "stat-s13-playoffs-nando",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-nando-career-1",
+      "src-s13-nando-career-2",
+      "src-s13-nando-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  },
+  {
+    "id": "rev-stat-s13-regular-marco-barbosa-r1",
+    "recordId": "stat-s13-regular-marco-barbosa",
+    "recordKind": "phase",
+    "revision": 1,
+    "sourceIds": [
+      "src-s13-marco-barbosa-career-1",
+      "src-s13-marco-barbosa-career-2",
+      "src-s13-marco-barbosa-career-3"
+    ],
+    "batchId": "batch-s13-career-general",
+    "createdAt": "2026-11-23T12:40:00Z"
+  }
+]

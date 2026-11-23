@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-11-19T20:00:00.000Z",
+  "generatedAt": "2026-11-23T12:40:00Z",
   "seasons": [
     "season-001/seasons.json",
     "season-002/seasons.json",
@@ -13,7 +13,8 @@
     "season-009/seasons.json",
     "season-010/seasons.json",
     "season-011/seasons.json",
-    "season-012/seasons.json"
+    "season-012/seasons.json",
+    "season-013/seasons.json"
   ],
   "statistics": [
     "season-001/statistics.json",
@@ -39,7 +40,8 @@
     "season-011/statistics.json",
     "season-011/statistics-rounds.json",
     "season-012/statistics.json",
-    "season-012/statistics-rounds.json"
+    "season-012/statistics-rounds.json",
+    "season-013/statistics.json"
   ],
   "games": [],
   "awards": [],
@@ -48,7 +50,8 @@
     "season-001/teams-02.json",
     "season-005/teams.json",
     "season-007/teams.json",
-    "season-010/teams.json"
+    "season-010/teams.json",
+    "season-013/teams.json"
   ],
   "teamHistory": [
     "season-001/teamHistory.json",
@@ -63,7 +66,8 @@
     "season-009/teamHistory.json",
     "season-010/teamHistory.json",
     "season-011/teamHistory.json",
-    "season-012/teamHistory.json"
+    "season-012/teamHistory.json",
+    "season-013/teamHistory.json"
   ],
   "sources": [
     "season-001/sources.json",
@@ -91,7 +95,8 @@
     "season-011/sources-extras.json",
     "season-012/sources.json",
     "season-012/sources-extras.json",
-    "season-012/sources-rounds.json"
+    "season-012/sources-rounds.json",
+    "season-013/sources.json"
   ],
   "batches": [
     "season-001/batches.json",
@@ -120,7 +125,8 @@
     "season-011/batches-extras.json",
     "season-012/batches.json",
     "season-012/batches-extras.json",
-    "season-012/batches-rounds.json"
+    "season-012/batches-rounds.json",
+    "season-013/batches.json"
   ],
   "revisions": [
     "season-001/revisions.json",
@@ -149,7 +155,8 @@
     "season-011/revisions-extras.json",
     "season-012/revisions.json",
     "season-012/revisions-extras.json",
-    "season-012/revisions-rounds.json"
+    "season-012/revisions-rounds.json",
+    "season-013/revisions.json"
   ],
   "extras": [
     "season-009/extras.json",

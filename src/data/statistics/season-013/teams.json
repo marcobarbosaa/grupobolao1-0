@@ -1,0 +1,65 @@
+[
+  {
+    "id": "new-york-knicks",
+    "name": "New York Knicks",
+    "abbreviation": "NY",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "dallas-mavericks",
+    "name": "Dallas Mavericks",
+    "abbreviation": "DAL",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "denver-nuggets",
+    "name": "Denver Nuggets",
+    "abbreviation": "DEN",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "detroit-pistons",
+    "name": "Detroit Pistons",
+    "abbreviation": "DET",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "san-antonio-spurs",
+    "name": "San Antonio Spurs",
+    "abbreviation": "SA",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "phoenix-suns",
+    "name": "Phoenix Suns",
+    "abbreviation": "PHX",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "philadelphia-76ers",
+    "name": "Philadelphia 76ers",
+    "abbreviation": "PHI",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "milwaukee-bucks",
+    "name": "Milwaukee Bucks",
+    "abbreviation": "MIL",
+    "sport": "basquete",
+    "status": "active"
+  },
+  {
+    "id": "atlanta-hawks",
+    "name": "Atlanta Hawks",
+    "abbreviation": "ATL",
+    "sport": "basquete",
+    "status": "active"
+  }
+]
