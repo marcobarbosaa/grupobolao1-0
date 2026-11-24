@@ -248,6 +248,7 @@ export const importSourceSchema = z
     kind: z.enum(["screenshot", "manual-record", "document"]),
     fileName: text,
     contentHash: z.string().regex(/^[a-f0-9]{64}$/, "Expected lowercase SHA-256"),
+    size: z.number().int().nonnegative().safe().optional(),
     capturedAt: eventDate.optional(),
     receivedAt: timestamp,
     metadata: z.record(metadataValue),

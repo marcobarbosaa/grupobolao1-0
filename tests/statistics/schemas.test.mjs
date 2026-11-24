@@ -118,6 +118,9 @@ test("sources and revisions enforce audit structure", () => {
     importSourceSchema.safeParse({ ...source, contentHash: "not-a-sha256" }).success,
     false,
   );
+  assert.equal(importSourceSchema.safeParse({ ...source, size: 222772 }).success, true);
+  assert.equal(importSourceSchema.safeParse({ ...source, size: -1 }).success, false);
+  assert.equal(importSourceSchema.safeParse({ ...source, size: 1.5 }).success, false);
   const revision = publishedDataset().revisions[0];
   assert.equal(dataRevisionSchema.safeParse({ ...revision, revision: 2 }).success, false);
   assert.equal(dataRevisionSchema.safeParse({ ...revision, supersedesRevision: 1 }).success, false);
