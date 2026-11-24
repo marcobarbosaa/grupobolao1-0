@@ -83,7 +83,7 @@ export function getPlayerAppearance(playerId: string, season = referenceSeason) 
 }
 export const selectionRoster = newRoster.map((player) => {
   const appearance = getPlayerAppearance(player.id);
-  return { ...player, ...appearance, selectionPortrait: appearance.image };
+  return { ...player, ...appearance, selectionPortrait: appearance.image ?? player.portrait };
 });
 export function getSelectionTheme(index: number) {
   return selectionRoster[index].theme;

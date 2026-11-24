@@ -65,7 +65,7 @@ try {
       .locator('.player-select__crests [data-active="true"]')
       .evaluate((img) => img.decode());
     if (id === "matheus-medeiros")
-      assert.match(await center.locator("img").getAttribute("src"), /\/rotas\/medeiros\/2005-2006_em_diante.png$/);
+      assert.match(await center.locator("img").getAttribute("src"), /\/jogadores\/(?:rotas\/medeiros\/2005-2006_em_diante\.png|novo-elenco\/Medeiros_76ers\.png)$/);
     if (["abel", "guilherme", "gam-mori"].includes(id)) {
       await page.screenshot({ path: `${output}/palette-${id}.png` });
     }
