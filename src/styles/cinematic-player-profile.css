@@ -76,6 +76,278 @@ body:has(.cinematic-player) .site-footer {
 .cinematic-player-details { --primary: var(--profile-primary); --primary-foreground: var(--profile-text-on-primary); --accent: var(--profile-accent); }
 @media (prefers-reduced-motion: reduce) { .cinematic-player { transition: none; } }
 
+.cinematic-player-stage--biography {
+  min-height: min(460px, 55vh);
+}
+.cinematic-player-stage--biography .cinematic-player-art {
+  right: -9%;
+  width: 52%;
+  opacity: 0.56;
+}
+.cinematic-player-stage--biography .cinematic-player-info {
+  width: 62%;
+  padding-block: 62px;
+}
+.player-biography {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 66px clamp(4px, 2vw, 24px) 28px;
+}
+.player-biography-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+.player-biography-kicker,
+.player-biography-chapter-number {
+  color: var(--profile-accent);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+.player-biography-heading h2 {
+  margin: 12px 0 0;
+  font: 800 clamp(32px, 4vw, 54px)/0.98 var(--font-display);
+  text-transform: uppercase;
+}
+.player-biography-heading > p {
+  max-width: 240px;
+  margin: 0 0 4px;
+  color: #b6c0c8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.player-biography-photo {
+  min-width: 0;
+  margin: 0;
+}
+.player-biography-photo-placeholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  aspect-ratio: 2.15 / 1;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--profile-accent) 32%, transparent);
+  background:
+    linear-gradient(135deg, transparent 48%, color-mix(in srgb, var(--profile-accent) 8%, transparent) 48.2% 48.6%, transparent 48.8%),
+    radial-gradient(ellipse at 68% 34%, color-mix(in srgb, var(--profile-primary) 36%, transparent), transparent 44%),
+    linear-gradient(120deg, color-mix(in srgb, var(--profile-surface) 85%, #101316), #111519 76%);
+}
+.player-biography-photo-placeholder > span {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  color: #ffffff56;
+  font: 800 clamp(50px, 8vw, 110px)/1 var(--font-display);
+}
+.player-biography-photo-placeholder > b {
+  z-index: 1;
+  padding: 9px 12px;
+  border: 1px solid #ffffff3d;
+  background: #1014189c;
+  color: #e0e5e9;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.player-biography-photo-placeholder > i {
+  position: absolute;
+  right: 12%;
+  bottom: -34%;
+  width: 28%;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--profile-accent) 24%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--profile-accent) 9%, transparent);
+}
+.player-biography-photo-placeholder > i + i {
+  right: 18%;
+  bottom: -48%;
+  width: 44%;
+  border-radius: 48% 48% 0 0;
+}
+.player-biography-photo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 10px;
+  color: #d3dae0;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+.player-biography-photo figcaption span {
+  color: #9da9b3;
+  font-weight: 500;
+}
+.player-biography-chapter {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 680px);
+  gap: 22px;
+  margin: 74px auto;
+}
+.player-biography-chapter-number {
+  padding-top: 7px;
+  border-top: 1px solid var(--profile-primary);
+}
+.player-biography-chapter h3 {
+  margin: 0 0 16px;
+  font: 750 25px/1.1 var(--font-display);
+  text-transform: uppercase;
+}
+.player-biography-chapter p {
+  margin: 0;
+  color: #bbc4cc;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.player-biography-chapter p + p {
+  margin-top: 14px;
+}
+.player-biography-quote {
+  position: relative;
+  max-width: 760px;
+  margin: 76px auto;
+  padding: 25px 32px 26px;
+  border-left: 2px solid var(--profile-accent);
+  background: color-mix(in srgb, var(--profile-surface) 52%, transparent);
+}
+.player-biography-quote > span {
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  color: var(--profile-accent);
+  font: 700 54px/1 var(--font-display);
+  opacity: 0.55;
+}
+.player-biography-quote p {
+  margin: 0;
+  padding-left: 24px;
+  font: 600 20px/1.55 var(--font-display);
+}
+.player-biography-quote cite {
+  display: block;
+  margin: 14px 0 0 24px;
+  color: #aab5bf;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.14em;
+}
+.player-biography-photo-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 66px);
+  margin: 76px 0;
+}
+.player-biography-photo--portrait .player-biography-photo-placeholder {
+  aspect-ratio: 0.82 / 1;
+}
+.player-biography-chapter--compact {
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 17px;
+  margin: 0;
+}
+.player-biography-chapter--final {
+  margin-top: 82px;
+}
+.player-biography-photo--closing {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.player-biography-photo--closing .player-biography-photo-placeholder {
+  aspect-ratio: 2.6 / 1;
+}
+.cinematic-player button:focus-visible,
+.cinematic-player select:focus-visible,
+.cinematic-player a:focus-visible {
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .cinematic-player-stage--biography .cinematic-player-info {
+    width: 76%;
+  }
+  .cinematic-player-stage--biography .cinematic-player-art {
+    right: -22%;
+    width: 67%;
+    opacity: 0.38;
+  }
+  .player-biography {
+    padding-top: 46px;
+  }
+  .player-biography-heading {
+    display: block;
+  }
+  .player-biography-heading > p {
+    margin-top: 16px;
+  }
+  .player-biography-chapter {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    margin-block: 54px;
+  }
+  .player-biography-photo-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    margin-block: 54px;
+  }
+  .player-biography-photo--portrait {
+    max-width: 360px;
+  }
+  .player-biography-chapter--compact {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+  .player-biography-quote {
+    margin-block: 54px;
+    padding: 22px 18px;
+  }
+}
+@media (max-width: 520px) {
+  .cinematic-player-stage--biography {
+    min-height: max(540px, calc(100svh - 110px));
+  }
+  .cinematic-player-stage--biography .cinematic-player-info {
+    width: 100%;
+  }
+  .cinematic-player-stage--biography .cinematic-player-art {
+    right: -13%;
+    width: 100%;
+    opacity: 0.48;
+  }
+  .player-biography {
+    padding: 38px 2px 12px;
+  }
+  .player-biography-heading h2 {
+    font-size: 34px;
+  }
+  .player-biography-photo-placeholder {
+    min-height: 170px;
+    aspect-ratio: 1.35 / 1;
+  }
+  .player-biography-photo--portrait .player-biography-photo-placeholder {
+    aspect-ratio: 1.05 / 1;
+  }
+  .player-biography-photo--closing .player-biography-photo-placeholder {
+    aspect-ratio: 1.5 / 1;
+  }
+  .player-biography-photo-placeholder > b {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+  .player-biography-chapter h3 {
+    font-size: 21px;
+  }
+  .player-biography-chapter p {
+    font-size: 12px;
+  }
+  .player-biography-quote p {
+    font-size: 17px;
+  }
+}
+
 /* On phones the information precedes the portrait, keeping text off the face. */
 @media (max-width: 520px) {
   .cinematic-player-stage { display: grid; grid-template-rows: auto 370px auto; min-height: 0; align-items: stretch; }
