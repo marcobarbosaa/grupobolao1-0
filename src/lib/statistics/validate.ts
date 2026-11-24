@@ -32,7 +32,15 @@ export function validateDataset(input: unknown): ValidationResult {
     return map;
   }
   index(getRegisteredPlayers(), "players");
-  const teams = index(data.teams, "teams");
+  // Team IDs are global identities and may be repeated in season snapshots.
+  // Identical declarations are harmless; conflicting declarations remain invalid.
+  const teams = new Map<string, (typeof data.teams)[number]>();
+  data.teams.forEach((team, i) => {
+    const existing = teams.get(team.id);
+    if (existing && canonical(existing) !== canonical(team))
+      fail("teams." + i + ".id", "Conflicting duplicate team ID: " + team.id);
+    else if (!existing) teams.set(team.id, team);
+  });
   const seasons = index(data.seasons, "seasons");
   const games = index(data.games, "games");
   const sources = index(data.sources, "sources");

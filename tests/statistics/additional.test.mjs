@@ -17,6 +17,16 @@ test("event dates preserve day precision, but audit timestamps remain precise", 
     false,
   );
 });
+test("identical team declarations across season snapshots are deduplicated; conflicts are rejected", () => {
+  const data = publishedDataset();
+  data.teams.push({ ...data.teams[0] });
+  assert.equal(validateDataset(data).success, true);
+  data.teams.push({ ...data.teams[0], name: "Conflicting team name" });
+  const result = validateDataset(data);
+  assert.equal(result.success, false);
+  assert.ok(result.issues.some((issue) => issue.message.includes("Conflicting duplicate team ID")));
+});
+
 test("several games between the same teams work without dates", () => {
   const data = publishedDataset();
   data.games.push({ ...data.games[0], id: "game-b" });
