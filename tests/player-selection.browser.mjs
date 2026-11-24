@@ -7,12 +7,12 @@ const browser = await chromium.launch({ channel: process.env.BROWSER_CHANNEL || 
 const output = "artifacts/players-review";
 await mkdir(output, { recursive: true });
 const expected = {
-  "fabio-carvalho": ["Denver Nuggets", "44"],
-  abel: ["Phoenix Suns", "0"],
-  "gam-mori": ["Philadelphia 76ers", "24"],
-  "marco-barbosa": ["Miami Heat", "46"],
-  "cristiano-ronaldo": ["Denver Nuggets", "22"],
-  dias: ["Dallas Mavericks", "31"],
+  "fabio-carvalho": ["New Orleans Hornets", "44"],
+  abel: ["Sacramento Kings", "0"],
+  "gam-mori": ["Atlanta Hawks", "24"],
+  "marco-barbosa": ["Denver Nuggets", "46"],
+  "cristiano-ronaldo": ["Indiana Pacers", "22"],
+  dias: ["Detroit Pistons", "31"],
   russo: ["Toronto Raptors", "7"],
   jonas: ["New York Knicks", "13"],
   enzo: ["San Antonio Spurs", "43"],
@@ -21,6 +21,10 @@ const expected = {
   nando: ["Denver Nuggets", "28"],
   guilherme: ["Chicago Bulls", "39"],
 };
+const expectedPortrait = (id) => ({
+  tailan: "/jogadores/rotas/tailan/2009-2010_em_diante.png",
+  nando: "/jogadores/rotas/nando/2012-2013_em_diante.png",
+}[id] ?? `/jogadores/landing/${id}.png`);
 const errors = [];
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
@@ -60,12 +64,15 @@ try {
     );
     assert.equal(await center.locator("a").getAttribute("href"), `/jogadores/${id}`);
     assert.equal(await panel.locator("a").getAttribute("href"), `/jogadores/${id}`);
+    assert.equal(
+      await center.locator("img").getAttribute("src"),
+      expectedPortrait(id),
+      `approved portrait for ${id}`,
+    );
     await center.locator("img").evaluate((img) => img.decode());
     await page
       .locator('.player-select__crests [data-active="true"]')
       .evaluate((img) => img.decode());
-    if (id === "matheus-medeiros")
-      assert.match(await center.locator("img").getAttribute("src"), /\/jogadores\/(?:rotas\/medeiros\/2005-2006_em_diante\.png|novo-elenco\/Medeiros_76ers\.png)$/);
     if (["abel", "guilherme", "gam-mori"].includes(id)) {
       await page.screenshot({ path: `${output}/palette-${id}.png` });
     }

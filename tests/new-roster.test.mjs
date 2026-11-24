@@ -93,3 +93,18 @@ test("all thirteen landing portraits are packaged and the old side copy is remov
   assert.match(css, /object-fit:\s*contain/);
   assert.match(css, /\.site-shell:has\(\.arena-home\) \.site-header/);
 });
+
+const presentationSource = readFileSync(
+  new URL("../src/lib/player-selection-identity.ts", import.meta.url),
+  "utf8",
+);
+test("home and player selector use approved roster portraits and preserve team identity", () => {
+  assert.ok(presentationSource.includes('`/jogadores/landing/${player.id}.png`'));
+  assert.ok(presentationSource.includes('tailan: "New York Knicks"'));
+  assert.ok(presentationSource.includes('nando: "Denver Nuggets"'));
+  assert.ok(presentationSource.includes('tailan: "/jogadores/rotas/tailan/2009-2010_em_diante.png"'));
+  assert.ok(presentationSource.includes('nando: "/jogadores/rotas/nando/2012-2013_em_diante.png"'));
+  assert.doesNotMatch(presentationSource, /selectionPortrait: appearance\.image \?\? player\.portrait/);
+  assert.ok(existsSync(new URL("../public/jogadores/rotas/tailan/2009-2010_em_diante.png", import.meta.url)));
+  assert.ok(existsSync(new URL("../public/jogadores/rotas/nando/2012-2013_em_diante.png", import.meta.url)));
+});

@@ -81,9 +81,45 @@ export function getPlayerAppearance(playerId: string, season = referenceSeason) 
     theme: createLandingTheme(palette),
   };
 }
+// The home carousel and player selector use the approved roster artwork,
+ // independent from the season-specific portrait resolver used by historical pages.
+const rosterTeamOverrides: Partial<Record<string, LandingTeam>> = {
+  tailan: "New York Knicks",
+  nando: "Denver Nuggets",
+};
+
+const rosterPortraitOverrides: Record<string, string> = {
+  tailan: "/jogadores/rotas/tailan/2009-2010_em_diante.png",
+  nando: "/jogadores/rotas/nando/2012-2013_em_diante.png",
+};
+
+function rosterCrest(team: LandingTeam) {
+  const { code } = teamIdentityMetadata[team];
+  const base = logoData.base as Record<string, { year: number; slug: string }>;
+  const logo = base[code];
+  if (!logo) return undefined;
+  const extension = ["BOS", "CHI", "MIA"].includes(code) ? ".svg" : "@3x.png";
+  const localCrest = `/jogadores/escudos/historicos/${logo.year}/${logo.slug}${extension}`;
+  return localCrests.includes(localCrest)
+    ? localCrest
+    : `https://assets.logocdn.com/images/sports/nba/${logo.year}/${logo.slug}${extension}`;
+}
+
 export const selectionRoster = newRoster.map((player) => {
-  const appearance = getPlayerAppearance(player.id);
-  return { ...player, ...appearance, selectionPortrait: appearance.image ?? player.portrait };
+  const team = (rosterTeamOverrides[player.id] ?? player.team) as LandingTeam;
+  const palette = getTeamTheme(team);
+  const portrait =
+    rosterPortraitOverrides[player.id] ?? `/jogadores/landing/${player.id}.png`;
+  return {
+    ...player,
+    team,
+    image: portrait,
+    number: numbers[player.id],
+    identity: { ...palette, ...teamIdentityMetadata[team] },
+    crest: rosterCrest(team),
+    theme: createLandingTheme(palette),
+    selectionPortrait: portrait,
+  };
 });
 export function getSelectionTheme(index: number) {
   return selectionRoster[index].theme;
